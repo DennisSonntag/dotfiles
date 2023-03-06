@@ -1,0 +1,218 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  PatcherTweaker (Patcher-1.8.1 (1.8.9).jar)
+  FMLLoadingPlugin (Scrollable Tooltips-1.4 (1.8.9).jar)
+  SkyblockAddonsLoadingPlugin (SkyblockAddons-1.7.0-beta.16915-for-MC-1.8.9.jar)
+  ModTweaker (Patcher-1.8.1 (1.8.9).jar)
+Contact their authors BEFORE contacting forge
+
+// Who set us up the TNT?
+
+Time: 2/24/23 1:27 AM
+Description: Rendering screen
+
+java.lang.NullPointerException: Rendering screen
+	at io.github.moulberry.notenoughupdates.NEUManager.getLoreReplacements(NEUManager.java:1211)
+	at io.github.moulberry.notenoughupdates.NEUManager.getLoreReplacements(NEUManager.java:1352)
+	at io.github.moulberry.notenoughupdates.NEUManager.jsonToStack(NEUManager.java:1422)
+	at io.github.moulberry.notenoughupdates.NEUManager.jsonToStack(NEUManager.java:1379)
+	at io.github.moulberry.notenoughupdates.NEUManager.jsonToStack(NEUManager.java:1375)
+	at io.github.moulberry.notenoughupdates.NEUManager.jsonToStack(NEUManager.java:1371)
+	at io.github.moulberry.notenoughupdates.miscgui.GuiInvButtonEditor.getStack(GuiInvButtonEditor.java:245)
+	at io.github.moulberry.notenoughupdates.miscgui.GuiInvButtonEditor.renderIcon(GuiInvButtonEditor.java:198)
+	at io.github.moulberry.notenoughupdates.NEUEventListener.onGuiScreenDrawPre(NEUEventListener.java:1054)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_25_NEUEventListener_onGuiScreenDrawPre_Pre.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:49)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:310)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1436)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1051)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:349)
+	at net.minecraft.client.main.Main.main(SourceFile:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at gg.essential.loader.stage2.relaunch.Relaunch.relaunch(Relaunch.java:124)
+	at gg.essential.loader.stage2.EssentialLoader.preloadEssential(EssentialLoader.java:168)
+	at gg.essential.loader.stage2.EssentialLoader.loadPlatform(EssentialLoader.java:114)
+	at gg.essential.loader.stage2.EssentialLoaderBase.load(EssentialLoaderBase.java:191)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at gg.essential.loader.stage1.EssentialLoaderBase.load(EssentialLoaderBase.java:110)
+	at gg.essential.loader.stage1.EssentialSetupTweaker.<init>(EssentialSetupTweaker.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at gg.essential.loader.stage0.EssentialSetupTweaker.loadStage1(EssentialSetupTweaker.java:53)
+	at gg.essential.loader.stage0.EssentialSetupTweaker.<init>(EssentialSetupTweaker.java:26)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:98)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:88)
+	at org.prismlauncher.EntryPoint.listen(EntryPoint.java:126)
+	at org.prismlauncher.EntryPoint.main(EntryPoint.java:71)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at io.github.moulberry.notenoughupdates.NEUManager.getLoreReplacements(NEUManager.java:1211)
+	at io.github.moulberry.notenoughupdates.NEUManager.getLoreReplacements(NEUManager.java:1352)
+	at io.github.moulberry.notenoughupdates.NEUManager.jsonToStack(NEUManager.java:1422)
+	at io.github.moulberry.notenoughupdates.NEUManager.jsonToStack(NEUManager.java:1379)
+	at io.github.moulberry.notenoughupdates.NEUManager.jsonToStack(NEUManager.java:1375)
+	at io.github.moulberry.notenoughupdates.NEUManager.jsonToStack(NEUManager.java:1371)
+	at io.github.moulberry.notenoughupdates.miscgui.GuiInvButtonEditor.getStack(GuiInvButtonEditor.java:245)
+	at io.github.moulberry.notenoughupdates.miscgui.GuiInvButtonEditor.renderIcon(GuiInvButtonEditor.java:198)
+	at io.github.moulberry.notenoughupdates.NEUEventListener.onGuiScreenDrawPre(NEUEventListener.java:1054)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_25_NEUEventListener_onGuiScreenDrawPre_Pre.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:49)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:310)
+
+-- Screen render details --
+Details:
+	Screen name: net.minecraft.client.gui.inventory.GuiInventory
+	Mouse location: Scaled: (480, 299). Absolute: (960, 600)
+	Screen size: Scaled: (960, 600). Absolute: (1920, 1200). Scale factor of 2
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 2 total; [EntityPlayerSP['Dennis_mps'/11005, l='MpServer', x=-0.90, y=91.59, z=-124.09], EntityOtherPlayerMP['t1sm'/11006, l='MpServer', x=-0.91, y=104.30, z=-124.09]]
+	Chunk stats: MultiplayerChunkCache: 225, 225
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: -6.00,71.00,17.00 - World: (-6,71,17), Chunk: (at 10,4,1 in -1,1; contains blocks -16,0,16 to -1,255,31), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 2170 game time, 6001 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 16 total; [EntityOtherPlayerMP['§aJacob '/11009, l='MpServer', x=5.50, y=72.00, z=-18.09], EntityOtherPlayerMP['§9Tia the Fairy'/11010, l='MpServer', x=5.50, y=72.00, z=-15.09], EntityPlayerSP['Dennis_mps'/11005, l='MpServer', x=-0.90, y=91.59, z=-124.09], EntityOtherPlayerMP['§aJacob '/11009, l='MpServer', x=0.00, y=0.00, z=0.00], EntityOtherPlayerMP['§9Tia the Fairy'/11010, l='MpServer', x=0.00, y=0.00, z=0.00], EntityOtherPlayerMP['§9Tia the Fairy'/11010, l='MpServer', x=5.50, y=72.00, z=-15.09], EntityOtherPlayerMP['t1sm'/11006, l='MpServer', x=-0.91, y=104.30, z=-124.09], EntityArmorStand['Armor Stand'/11042, l='MpServer', x=-48.00, y=70.00, z=-96.00], EntityArmorStand['Armor Stand'/11043, l='MpServer', x=-48.00, y=69.63, z=-96.00], EntityArmorStand['Armor Stand'/11046, l='MpServer', x=48.00, y=70.00, z=-96.00], EntityArmorStand['Armor Stand'/11047, l='MpServer', x=48.00, y=69.63, z=-96.00], EntityArmorStand['Armor Stand'/11048, l='MpServer', x=0.00, y=70.00, z=-144.00], EntityArmorStand['Armor Stand'/11049, l='MpServer', x=0.00, y=69.63, z=-144.00], EntityOtherPlayerMP['§aJacob '/11009, l='MpServer', x=5.50, y=72.00, z=-18.09], EntityOtherPlayerMP['03214q2kr3'/11024, l='MpServer', x=-7.50, y=71.00, z=-6.50], EntityOtherPlayerMP['t1sm'/11006, l='MpServer', x=-0.91, y=104.30, z=-124.09]]
+	Retry entities: 0 total; []
+	Server brand: Hypixel BungeeCord (1.3.13) <- vanilla
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:402)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2536)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:370)
+	at net.minecraft.client.main.Main.main(SourceFile:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at gg.essential.loader.stage2.relaunch.Relaunch.relaunch(Relaunch.java:124)
+	at gg.essential.loader.stage2.EssentialLoader.preloadEssential(EssentialLoader.java:168)
+	at gg.essential.loader.stage2.EssentialLoader.loadPlatform(EssentialLoader.java:114)
+	at gg.essential.loader.stage2.EssentialLoaderBase.load(EssentialLoaderBase.java:191)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at gg.essential.loader.stage1.EssentialLoaderBase.load(EssentialLoaderBase.java:110)
+	at gg.essential.loader.stage1.EssentialSetupTweaker.<init>(EssentialSetupTweaker.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at gg.essential.loader.stage0.EssentialSetupTweaker.loadStage1(EssentialSetupTweaker.java:53)
+	at gg.essential.loader.stage0.EssentialSetupTweaker.<init>(EssentialSetupTweaker.java:26)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:98)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:88)
+	at org.prismlauncher.EntryPoint.listen(EntryPoint.java:126)
+	at org.prismlauncher.EntryPoint.main(EntryPoint.java:71)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Linux (amd64) version 6.1.12-zen1-1-zen
+	Java Version: 1.8.0_362, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 749561504 bytes (714 MB) / 2291138560 bytes (2185 MB) up to 3817865216 bytes (3641 MB)
+	JVM Flags: 2 total; -Xms512m -Xmx4096m
+	IntCache: cache: 0, tcache: 74, allocated: 13, tallocated: 95
+	FML: MCP 9.19 Powered by Forge 11.15.1.2318 Optifine OptiFine_1.8.9_HD_U_M5 10 mods loaded, 10 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State  | ID                   | Version      | Source                                           |
+	| ------ | -------------------- | ------------ | ------------------------------------------------ |
+	| UCHIJA | mcp                  | 9.19         | minecraft.jar                                    |
+	| UCHIJA | FML                  | 8.0.99.99    | forge-1.8.9-11.15.1.2318-1.8.9-universal.jar     |
+	| UCHIJA | Forge                | 11.15.1.2318 | forge-1.8.9-11.15.1.2318-1.8.9-universal.jar     |
+	| UCHIJA | essential            | 1.0.0        | Essential (forge_1.8.9).jar                      |
+	| UCHIJA | apec                 | 1.10.1       | Apec-1.10.1.jar                                  |
+	| UCHIJA | notenoughupdates     | 2.0.0-REL    | NotEnoughUpdates-2.0.0.jar                       |
+	| UCHIJA | patcher              | 1.8.1        | Patcher-1.8.1 (1.8.9).jar                        |
+	| UCHIJA | text_overflow_scroll | 1.4.0        | Scrollable Tooltips-1.4 (1.8.9).jar              |
+	| UCHIJA | skyblockaddons       | 1.7.0-beta.1 | SkyblockAddons-1.7.0-beta.16915-for-MC-1.8.9.jar |
+	| UCHIJA | timechanger          | 2.1          | TimeChanger-2.2.1.jar                            |
+
+	Loaded coremods (and transformers): 
+PatcherTweaker (Patcher-1.8.1 (1.8.9).jar)
+  club.sk1er.patcher.tweaker.ClassTransformer
+FMLLoadingPlugin (Scrollable Tooltips-1.4 (1.8.9).jar)
+  club.sk1er.mods.scrollabletooltips.forge.ClassTransformer
+SkyblockAddonsLoadingPlugin (SkyblockAddons-1.7.0-beta.16915-for-MC-1.8.9.jar)
+  codes.biscuit.skyblockaddons.tweaker.SkyblockAddonsTransformer
+ModTweaker (Patcher-1.8.1 (1.8.9).jar)
+  club.sk1er.patcher.tweaker.other.ModClassTransformer
+	GL info: ' Vendor: 'Intel' Version: '4.6 (Compatibility Profile) Mesa 22.3.5' Renderer: 'Mesa Intel(R) Xe Graphics (TGL GT2)'
+	Launched Version: 1.8.9
+	LWJGL: 2.9.4
+	OpenGL: Mesa Intel(R) Xe Graphics (TGL GT2) GL version 4.6 (Compatibility Profile) Mesa 22.3.5, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: MobPacket 1.8.9 1.4.zip, FurfSkyReborn.zip
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 8x 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+	OptiFine Version: OptiFine_1.8.9_HD_U_M5
+	OptiFine Build: 20210124-163719
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6 (Compatibility Profile) Mesa 22.3.5
+	OpenGlRenderer: Mesa Intel(R) Xe Graphics (TGL GT2)
+	OpenGlVendor: Intel
+	CpuCount: 8

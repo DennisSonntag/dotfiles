@@ -1,0 +1,22 @@
+{
+  "minecraft:recipes/misc/charcoal": {
+    "criteria": {
+      "has_log": "2023-01-02 15:19:04 -0700"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:snowy_taiga": "2023-01-02 15:12:39 -0700",
+      "minecraft:snowy_beach": "2023-01-02 15:12:51 -0700"
+    },
+    "done": false
+  },
+  "minecraft:recipes/building_blocks/birch_planks": {
+    "criteria": {
+      "has_logs": "2023-01-02 15:19:04 -0700"
+    },
+    "done": true
+  },
+  "DataVersion": 3218
+}

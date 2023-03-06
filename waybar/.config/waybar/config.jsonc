@@ -1,0 +1,116 @@
+{
+  "layer": "top",
+  "modules-left": ["battery", "cpu", "memory", "hyprland/window"],
+  "modules-center": ["wlr/workspaces"],
+  "modules-right": [
+    "custom/spotify",
+    "tray",
+    "pulseaudio",
+    "custom/weather",
+    "clock"
+  ],
+  "hyprland/window": {
+    "format": "{}"
+  },
+  "battery": {
+    "bat": "BAT0",
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25
+  },
+  "custom/weather": {
+    "tooltip": true,
+    "format": "{}",
+    "interval": 30,
+    "exec": "~/.config/waybar/weather.py",
+    "return-type": "json"
+  },
+  "clock": {
+    "format": "{:%H:%M}  ",
+    "interval": 1,
+    "format-alt": "{:%A, %B %d, %Y (%R:%S)}  ",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "custom/spotify": {
+    "format": "{}  ",
+    "max-length": 60,
+    "interval": 1,
+    "return-type": "json",
+    "exec": "~/.config/waybar/meta.py",
+    "on-click": "~/.config/waybar/controls.sh",
+    "on-scroll-up": "~/.config/waybar/controls.sh next",
+    "on-scroll-down": "~/.config/waybar/controls.sh previous",
+    "signal": 5,
+    "smooth-scrolling-threshold": 1.0
+  },
+  // "custom/spotify": {
+  //   "format": "{}  ",
+  //   "max-length": 60,
+  //   "interval": 30,
+  //   "return-type": "json",
+  //   "exec": "~/.config/waybar/metadata.sh",
+  //   "on-click": "~/.config/waybar/controls.sh",
+  //   "on-scroll-up": "~/.config/waybar/controls.sh next",
+  //   "on-scroll-down": "~/.config/waybar/controls.sh previous",
+  //   "signal": 5,
+  //   "smooth-scrolling-threshold": 1.0
+  // },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "tooltip": false,
+    "format-muted": " Muted",
+    "on-click": "pamixer -t",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["奄", "奔", "墳"]
+    }
+  },
+  "wlr/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "on-click": "activate"
+    //"format": "{icon}",
+    // "persistent_workspaces": {
+    //   "1": [],
+    //   "2": [],
+    //   "3": [],
+    //   "4": [],
+    //   "5": [],
+    //   "6": [],
+    //   "7": [],
+    //   "8": [],
+    //   "9": [],
+    //   "10": []
+    // }
+  },
+  "tray": {
+    "icon-size": 20,
+    "spacing": 10
+  },
+  "network": {
+    "tooltip": false,
+    "format-wifi": " {essid} {ipaddr}",
+    "format-ethernet": " {ipaddr}"
+  },
+  "cpu": {
+    "tooltip": false,
+    "format": " {}%"
+  },
+  "memory": {
+    "tooltip": false,
+    "format": " {}%"
+  }
+}

@@ -1,0 +1,139 @@
+    0.015 D <> Log initialized.
+    0.015 D <> No migration needed from "PolyMC"
+    0.015 D <> No migration needed from "MultiMC"
+    0.015 D "Prism Launcher" , (c) 2013-2021  "Prism Launcher Contributors\n© 2021-2022 PolyMC Contributors \n© 2012-2021 MultiMC Contributors"
+    0.015 D Version                    :  "6.1"
+    0.015 D Git commit                 :  "cb8c389303fe774003b49919a8ef6ded55e1c2b8"
+    0.015 D Git refspec                :  ""
+    0.015 D Work dir before adjustment :  "/home/dennis"
+    0.015 D Work dir after adjustment  :  "/home/dennis/.local/share/PrismLauncher"
+    0.015 D Adjusted by                :  "Persistent data path"
+    0.015 D Binary path                :  "/usr/bin"
+    0.015 D Application root path      :  "/usr"
+    0.015 D <> Paths set.
+    0.016 D Copied settings from "polymc.cfg" to "prismlauncher.cfg"
+    0.026 D Detected default console font: "FreeMono" , substitutions: ""
+    0.031 D <> Settings loaded.
+    0.033 D Detecting proxy settings...
+    0.033 D Using no proxy is an option!
+    0.033 D <> Network done.
+    0.037 D Your language is "en_US"
+    0.037 D <> Translations loaded.
+    0.039 D Started watching  "/home/dennis/.local/share/PrismLauncher/icons"
+    0.040 D Sorting icon list...
+    0.043 D <> Instance icons intialized.
+    0.043 D [Theme] <> Icon themes initialized.
+    0.043 D [Theme] <> Initializing Widget Themes
+    0.043 D [Theme] Determining System Theme...
+    0.043 D [Theme] System theme seems to be: "qt6ct-style"
+    0.043 D [Theme] Considering theme from theme factory: "qt6ct-style"
+    0.043 D [Theme] System theme has been determined to be: "qt6ct-style"
+    0.043 D [Theme] Loading Built-in Theme: "system"
+    0.043 D [Theme] Loading Built-in Theme: "dark"
+    0.043 D [Theme] Loading Built-in Theme: "bright"
+    0.043 D [Theme] Theme Folder Path:  "/home/dennis/.local/share/PrismLauncher/themes"
+    0.043 D [Theme] Loading JSON Theme from: "/home/dennis/.local/share/PrismLauncher/themes/custom/theme.json"
+    0.044 D [Theme] <> Widget themes initialized.
+    0.044 D Instance path              :  "instances"
+    0.044 D Loading Instances...
+    0.044 D Discovering instances in "/home/dennis/.local/share/PrismLauncher/instances"
+    0.044 D Found instance ID "1.8.9"
+    0.044 D Found instance ID "1.19.3"
+    0.044 D Will load group list now.
+    0.044 D Group list loaded.
+    0.045 D Loaded instance  "Skyblock 1.8.9"  from  "/home/dennis/.local/share/PrismLauncher/instances/1.8.9"
+    0.046 D Loaded instance  "Survival 1.19.3"  from  "/home/dennis/.local/share/PrismLauncher/instances/1.19.3"
+    0.046 D <> Instances loaded.
+    0.046 D Loading accounts...
+    0.046 D AccountList: Queued default account with internal ID  "43e4e4a92e3a4e6687218dff053004f5"  to refresh first
+    0.046 D Task "MSASilent(0x5592d2880f90)" starting for the first time
+    0.046 D AuthFlow: "Logging in with Microsoft account."
+    0.046 D DeviceFlow::refresh: Token: ... "WkWGg$$"
+    0.058 D RefreshSchedule: Processing account  "Speed6511"  with internal ID  "43e4e4a92e3a4e6687218dff053004f5"
+    0.058 D <> Accounts loaded.
+    0.060 D <> Cache initialized.
+    0.060 D Downloading Translations Index...
+    0.060 W Removing cache entry because of old age!
+    0.060 D Task "NetJob(Translations Index)" starting for the first time
+    0.061 D <> Icon theme set.
+    0.061 D [Theme] applying theme "Dark"
+    0.061 D <> Application theme set.
+    0.111 D Reloading news.
+    0.111 D Task "NetJob(News RSS Feed)" starting for the first time
+    0.111 D Task "ComponentUpdateTask(0x5592d2a23970)" starting for the first time
+    0.111 D Loading components
+    0.117 D Component list save is scheduled for "Survival 1.19.3"
+    0.122 D Resolving dependencies
+    0.122 D "Req: net.fabricmc.intermediary" Is met.
+    0.122 D "Req: net.minecraft == 1.19.3" Is met.
+    0.122 D "Req: org.lwjgl3" Is met.
+    0.122 D Task "ComponentUpdateTask(0x5592d2a23970)" succeeded
+    0.122 D Component list update/resolve task succeeded for "Survival 1.19.3"
+    0.134 D <> Main window shown.
+    0.135 D Task "Net::Download(0x5592d29093f0)" starting for the first time
+    0.135 D Downloading  "https://i18n.prismlauncher.org/index_v2.json"
+    0.135 D Task "Net::Download(0x5592d2a1e9e0)" starting for the first time
+    0.135 D Downloading  "https://prismlauncher.org/feed/feed.xml"
+    0.155 D Dir changed: "/home/dennis/.local/share/PrismLauncher/translations"
+    0.179 D Download succeeded: "https://i18n.prismlauncher.org/index_v2.json"
+    0.179 D Task "NetJob(Translations Index)" succeeded
+    0.179 D Got translations index!
+    0.181 D Dir changed: "/home/dennis/.local/share/PrismLauncher/translations"
+    0.551 D Download succeeded: "https://prismlauncher.org/feed/feed.xml"
+    0.551 D Task "NetJob(News RSS Feed)" succeeded
+    0.551 D Finished loading RSS feed.
+    0.555 D Loaded news entry "Prism Launcher Release 6.1, now available"
+    0.555 D Loaded news entry "Prism Launcher Release 6.0, now available"
+    0.555 D Loaded news entry "Prism Launcher Release 5.2, now available"
+    0.555 D Loaded news entry "Prism Launcher Release 5.1, now available"
+    0.555 D Loaded news entry "Prism Launcher Release 5.0, now available"
+    0.555 D Loaded news entry "PolyMC Update 1.4.2, now available"
+    0.555 D Loaded news entry "PolyMC Update 1.4.1, now available"
+    0.555 D Loaded news entry "PolyMC Update 1.4.0, now available"
+    0.555 D Loaded news entry "PolyMC Update 1.3.2, now available"
+    0.555 D Loaded news entry "PolyMC Update 1.3.1, now available"
+    0.555 D Loaded news entry "PolyMC Update 1.3.0, now available"
+    0.555 D Loaded news entry "PolyMC Update 1.2.2, now available (CurseForge Hotfix)"
+    0.555 D Loaded news entry "PolyMC Update 1.2.1, now available"
+    0.555 D Loaded news entry "PolyMC Update 1.2.0, now available"
+    0.555 D Loaded news entry "PolyMC Update 1.1.1, now available"
+    0.555 D Loaded news entry "PolyMC Update 1.1.0, now available"
+    0.555 D Loaded news entry "Moving on"
+    0.555 D Loaded news entry "Modrinth support and Mod downloading"
+    0.555 D Loaded news entry "New maintainers and step down."
+    0.555 D News loading succeeded.
+    1.289 D DeviceFlow::setLinked: true
+    1.289 D AuthFlow: "Logging in as an Xbox user."
+    1.289 D First layer of XBox auth ... commencing.
+    1.289 D New token expires in QDateTime(2023-02-01 07:51:12.297 UTC Qt::UTC) seconds
+    2.153 D Parsing "UToken" :
+    2.153 D "UToken" is valid.
+    2.153 D AuthFlow: "Getting authorization to access Xbox services."
+    2.153 D Getting authorization token for  "http://xboxlive.com"
+    2.448 D Parsing "Xbox" :
+    2.449 D "Xbox" is valid.
+    2.449 D AuthFlow: "Getting authorization to access Mojang services."
+    2.449 D Getting authorization token for  "rp://api.minecraftservices.com/"
+    2.544 D Parsing "Mojang" :
+    2.544 D "Mojang" is valid.
+    2.544 D AuthFlow: "Accessing Mojang services."
+    2.544 D Getting Minecraft access token...
+    2.787 D Parsing Mojang response...
+    2.787 D Mojang response is valid.
+    2.787 D AuthFlow: "Fetching Xbox profile."
+    2.788 D Getting Xbox profile...
+    3.211 D AuthFlow: "Determining game ownership."
+    3.211 D Getting entitlements...
+    3.543 D Opening directory "instances"
+    3.594 D Parsing Minecraft entitlements...
+    3.594 D AuthFlow: "Fetching the Minecraft profile."
+    3.693 D Parsing Minecraft profile...
+    3.693 D AuthFlow: "Getting skin."
+    3.820 D Task "MSASilent(0x5592d2880f90)" succeeded
+    3.820 D Writing account list to "accounts.json"
+    3.820 D Building JSON data structure.
+    3.820 D Building account array.
+    3.820 D Writing account list to file.
+    3.830 D Saved account list to "accounts.json"
+    3.831 D RefreshSchedule: Background account refresh succeeded
+    4.871 D Component list save performed now for "Survival 1.19.3"
