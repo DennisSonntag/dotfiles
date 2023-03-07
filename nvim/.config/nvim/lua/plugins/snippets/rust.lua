@@ -66,54 +66,11 @@ local function cs(trigger, nodes, opts) --{{{
 	end
 
 	table.insert(target_table, snippet) -- insert snippet into appropriate table
-end                                  --}}}
+end --}}}
 
 -- Start Refactoring --
--- cs("ue", fmt([[
--- type PropTypes = {
--- 	{} : {};
--- }
---
--- const {}:FC<> = ({{ {} }}) => {
---
--- 	return (
--- 		<>
--- 			{}
--- 		</>
--- 	)
---
--- }
---
--- export default {};
--- ]],
--- { i(1, ""), i(2, "") }))
-cs("comp", fmt([[
-import {{ FC }} from 'react';
-
-type PropTypes = {{
-	{}: {};
-}};
-
-const {}: FC<PropTypes> = ({{ {} }}) => {{
-	{}
-	return (
-		<>
-			{}
-		</>
-	);
-}};
-
-export default {};
-]],
-	{
-		i(1, "typeName"),
-		i(2, "Type"),
-		i(3, "CompName"),
-		rep(1),
-		i(4, ""),
-		i(5, ""),
-		rep(3)
-	}))
+cs("print", fmt('print!("{}");', { i(1, "") }))
+cs("println", fmt('println!("{}");', { i(1, "") }))
 
 -- End Refactoring --
 

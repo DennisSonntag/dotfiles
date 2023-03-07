@@ -29,9 +29,18 @@ return {
 
 		local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
+
+
+		local function contains(list, x)
+			for _, v in pairs(list) do
+				if v == x then return true end
+			end
+			return false
+		end
+
 		cmp.setup({
 			window = {
-				completion = cmp.config.window.bordered(),
+				completion = cmp.config.window.bordered({ scrollbar = false, side_padding = 1 }),
 				documentation = cmp.config.window.bordered(),
 			},
 			snippet = {
@@ -73,14 +82,20 @@ return {
 				{
 					name = "nvim_lsp",
 					entry_filter = function(entry, ctx)
-						-- if entry:get_word() == "log" then
-						-- 	return false
-						-- end
+						if contains({ "javascript", "typescript", "typescriptreact", "javascriptreact" }, ctx.filetype) then
+							if entry:get_word() == "log" then
+								return false
+							end
+						elseif ctx.filetype == "rust" then
+							if contains({ "println!", "print!" }, entry:get_word()) then
+								return false
+							end
+						end
 						return true
 					end
 				},
 				{ name = 'luasnip' },
-				{ name = 'buffer' },
+				{ name = 'buffer',  keyword_length = 5 },
 				{ name = 'npm' },
 				{ name = 'nvim_lua' },
 				{
