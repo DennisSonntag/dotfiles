@@ -13,6 +13,7 @@ return {
 		local status, cmp = pcall(require, "cmp")
 		if (not status) then return end
 
+
 		local status2, lspkind = pcall(require, "lspkind")
 		if (not status2) then return end
 
@@ -22,10 +23,31 @@ return {
 		npm.setup({})
 
 		local status4, luasnip = pcall(require, "luasnip")
+
 		if (not status4) then return end
 
 		local cmp_select = { behavior = cmp.SelectBehavior.Select }
-		--
+
+		function getAllData(t, prevData)
+			-- if prevData == nil, start empty, otherwise start with prevData
+			local data = prevData or {}
+
+			-- copy all the attributes from t
+			for k, v in pairs(t) do
+				data[k] = data[k] or v
+			end
+
+			-- get t's metatable, or exit if not existing
+			local mt = getmetatable(t)
+			if type(mt) ~= 'table' then return data end
+
+			-- get the __index from mt, or exit if not table
+			local index = mt.__index
+			if type(index) ~= 'table' then return data end
+
+			-- include the data from index into data, recursively, and return
+			return getAllData(index, data)
+		end
 
 		cmp.setup({
 			window = {
@@ -68,7 +90,20 @@ return {
 				}),
 			}),
 			sources = cmp.config.sources({
-				{ name = 'nvim_lsp' },
+				{
+					name = "nvim_lsp",
+					entry_filter = function(entry, ctx)
+						-- print(entry)
+						-- for i, v in ipairs(entry) do print(v) end
+						print(getAllData(entry))
+
+
+
+
+
+						return true
+					end
+				},
 				{ name = 'luasnip' },
 				{ name = 'buffer' },
 				{ name = 'npm' },

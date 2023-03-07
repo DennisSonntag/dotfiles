@@ -13,6 +13,7 @@ return {
 			cmd = { "typescript-language-server", "--stdio" }
 		}
 
+
 		lsp.astro.setup{
 			cmd = { "astro-ls", "--stdio" },
 			filetypes = { "astro" },
