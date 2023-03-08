@@ -1,6 +1,9 @@
 return {
 	"declancm/maximize.nvim",
 	config = function()
-		require("maximize").setup()
+		local status, maximize = pcall(require, "maximize")
+		if (not status) then return end
+
+		maximize.setup()
 	end
 }

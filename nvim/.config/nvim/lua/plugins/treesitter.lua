@@ -6,9 +6,15 @@ return {
 	},
 	build = ":TSUpdate",
 	config = function()
-		require('nvim-ts-autotag').setup()
+		local status, auto_tag = pcall(require, "nvim-ts-autotag")
+		if (not status) then return end
 
-		require("nvim-treesitter.configs").setup({
+		auto_tag.setup()
+
+		local status2, treesitter = pcall(require, "nvim-treesitter.configs")
+		if (not status2) then return end
+
+		treesitter.setup({
 			ensure_installed = "all",
 			autotag = {
 				enable = true,

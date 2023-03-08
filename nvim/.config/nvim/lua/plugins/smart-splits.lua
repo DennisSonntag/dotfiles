@@ -1,13 +1,16 @@
 return {
 	"mrjones2014/smart-splits.nvim",
 	config = function()
-		require("smart-splits").setup({
+		local status, smart_splits = pcall(require, "smart-splits")
+		if (not status) then return end
+
+		smart_splits.setup({
 			-- Ignored filetypes (only while resizing)
 			ignored_filetypes = {
 				'nofile',
 				'quickfix',
 				'prompt',
-			-- place the cursor on the same row of the *screen*
+				-- place the cursor on the same row of the *screen*
 			},
 			-- Ignored buffer types (only while resizing)
 			ignored_buftypes = { 'NvimTree' },

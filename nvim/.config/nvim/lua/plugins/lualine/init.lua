@@ -2,19 +2,10 @@ return {
 	"nvim-lualine/lualine.nvim",
 	event = { "BufReadPost", "BufNewFile" },
 	config = function()
-		local lualine = require "lualine"
+		local status, lualine = pcall(require, "lualine")
+		if (not status) then return end
 
 		local statusline = require "plugins.lualine.default"
-
-		-- if vim.g.dull_style == "slime" then
-		--   statusline = require "plugins.lualine.slime"
-		-- elseif vim.g.dull_style == "sunset" then
-		--   statusline = require "plugins.lualine.sunset"
-		-- elseif vim.g.dull_style == "night" then
-		--   statusline = require "plugins.lualine.night"
-		-- else
-		-- statusline = require "plugins.lualine.default"
-		-- end
 
 		lualine.setup {
 			options = {

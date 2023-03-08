@@ -86,7 +86,13 @@ return {
 							if entry:get_word() == "log" then
 								return false
 							end
-						elseif ctx.filetype == "rust" then
+						end
+						if contains({ "typescriptreact", "javascriptreact" }, ctx.filetype)  then
+							if entry:get_word() == "class" then
+								return false
+							end
+						end
+						if ctx.filetype == "rust" then
 							if contains({ "println!", "print!" }, entry:get_word()) then
 								return false
 							end

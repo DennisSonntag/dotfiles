@@ -22,16 +22,6 @@ keymap("n", "<leader>ts", function()
 	vim.opt.spell = not (vim.opt.spell:get())
 end)
 
---Enable/Disable Codeium
-keymap("n", "<leader>ce", function()
-	vim.cmd("Codeium Enable")
-end)
-
-keymap("n", "<leader>cd", function()
-	vim.cmd("Codeium Disable")
-end)
-
-
 --Keep current seach centerd
 keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
@@ -65,14 +55,15 @@ keymap("n", "<C-q>", "<cmd>q<CR>")
 --Replace hovering word
 keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
---Folds
--- keymap("n", "<A-f>", function() require('fold-cycle').toggle_all() end)
+
+local status, smart_splits = pcall(require, "smart-splits")
+if (not status) then return end
 
 -- Splits
-keymap('n', '<A-h>', require('smart-splits').resize_left)
-keymap('n', '<A-j>', require('smart-splits').resize_down)
-keymap('n', '<A-k>', require('smart-splits').resize_up)
-keymap('n', '<A-l>', require('smart-splits').resize_right)
+keymap('n', '<A-h>', smart_splits.resize_left)
+keymap('n', '<A-j>', smart_splits.resize_down)
+keymap('n', '<A-k>', smart_splits.resize_up)
+keymap('n', '<A-l>', smart_splits.resize_right)
 
 keymap("n", "<leader>sv", "<cmd>vsplit<CR>")
 keymap("n", "<leader>sh", "<cmd>split<CR>")

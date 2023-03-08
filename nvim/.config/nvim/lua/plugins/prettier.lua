@@ -1,7 +1,10 @@
 return {
 	"MunifTanjim/prettier.nvim",
 	config = function()
-		require("prettier").setup {
+		local status, prettier = pcall(require, "prettier")
+		if (not status) then return end
+
+		prettier.setup {
 			bin = "prettierd",
 			filetypes = {
 				"css",

@@ -2,7 +2,10 @@ return {
 	'glepnir/lspsaga.nvim',
 	event = 'BufRead',
 	config = function()
-		require('lspsaga').setup({
+		local status, saga = pcall(require, "lspsaga")
+		if (not status) then return end
+
+		saga.setup({
 			symbol_in_winbar = {
 				enable = false,
 			},
@@ -32,17 +35,12 @@ return {
 					normal_bg = '#14161f',
 					--title background color
 					title_bg = '#5DE4C2',
-
 					red = '#e95678',
 					magenta = '#b33076',
-
 					-- orange = '#FF8700',
 					orange = '#ffffff',
-
 					yellow = '#f7bb3b',
-
 					green = '#afd700',
-
 					cyan = '#36d0e0',
 					blue = '#61afef',
 					purple = '#CBA6F7',
@@ -56,13 +54,31 @@ return {
 		local keymap = vim.keymap.set
 
 		local opts = { noremap = true, silent = true }
+
+		local status2, builtin = pcall(require, "telescope.builtin")
+		if (not status2) then return end
+
+
 		keymap('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
+
 		keymap('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
-		keymap('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts)
+
+		-- keymap('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts)
+		keymap('n', 'gd', function()
+			builtin.lsp_definitions()
+		end, opts)
+
+		keymap('n', 'gr', function()
+			-- builtin.lsp_definitions()
+			builtin.lsp_references()
+		end, opts)
+
 		keymap('i', '<C-k>', function() vim.lsp.buf.signature_help() end, opts)
-		keymap('n', 'gp', '<Cmd>Lspsaga peek_definition<CR>', opts)
-		-- keymap('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
-		keymap('n', '<F2>', '<Cmd>Lspsaga rename<CR>', opts)
+
+		-- keymap('n', 'gp', '<Cmd>Lspsaga peek_definition<CR>', opts)
+
+		-- keymap('n', '<F2>', '<Cmd>Lspsaga rename<CR>', opts)
+		keymap('n', '<F2>', vim.lsp.buf.rename, opts)
 		keymap({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
 	end
 }

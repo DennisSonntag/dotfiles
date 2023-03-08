@@ -1,4 +1,6 @@
-local ls = require("luasnip") --{{{
+local status, ls = pcall(require, "luasnip")
+if (not status) then return end
+
 local s = ls.s
 local i = ls.i
 local t = ls.t

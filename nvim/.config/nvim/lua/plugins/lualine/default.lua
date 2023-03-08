@@ -109,7 +109,7 @@ M.diagnostics = {
 	update_in_insert = false,
 	always_visible = true,
 	color = { fg = "#BBC2CF", bg = "#000F10" },
-	separator = { right = "" },
+	separator = { right = "" },
 }
 
 M.diff = {
@@ -122,7 +122,7 @@ M.diff = {
 	},
 	cond = hide_in_width,
 	color = { fg = "#BBC2CF", bg = "#000F10" },
-	separator = { left = "" },
+	separator = { left = "" },
 }
 M.branch = {
 	"branch",
@@ -174,7 +174,7 @@ M.lsp = {
 	end,
 
 	color = { fg = "#BBC2CF", bg = "#000F10" },
-	separator = { left = "", right = "" },
+    separator = { left = '', right = '' },
 }
 
 M.progress = {
@@ -187,8 +187,9 @@ M.progress = {
 		return chars[index]
 	end,
 	color = { fg = "#BBC2CF", bg = "#000F10" },
-	separator = { left = "" },
+	separator = { left = "" },
 }
+
 
 M.total_lines = {
 	function()
@@ -213,7 +214,7 @@ M.filetype = {
 	"filetype",
 	color = { fg = "#BBC2CF", bg = "#000F10" },
 	pading = 0,
-	separator = { left = "" },
+	separator = { left = "" },
 }
 
 return M

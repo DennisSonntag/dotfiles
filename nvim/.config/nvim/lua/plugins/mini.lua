@@ -3,9 +3,20 @@ return {
 	version = false,
 	dependencies = { "echasnovski/mini.cursorword", "echasnovski/mini.move", "echasnovski/mini.surround" },
 	config = function()
-		require('mini.cursorword').setup()
-		require('mini.move').setup()
-		require('mini.surround').setup(
+		local status, cursorword = pcall(require, "mini.cursorword")
+		if (not status) then return end
+
+		cursorword.setup()
+
+		local status2, move = pcall(require, "mini.move")
+		if (not status2) then return end
+
+		move.setup()
+
+		local status3, surround = pcall(require, "mini.surround")
+		if (not status3) then return end
+
+		surround.setup(
 		-- No need to copy this inside `setup()`. Will be used automatically.
 			{
 				-- Add custom surroundings to be used on top of builtin ones. For more

@@ -1,7 +1,10 @@
 return {
 	"luukvbaal/statuscol.nvim",
 	config = function()
-		require("statuscol").setup()
+		local status, statuscol = pcall(require, "statuscol")
+		if (not status) then return end
+
+		statuscol.setup()
 		if _G.StatusColumn then
 			return
 		end
@@ -26,7 +29,6 @@ return {
 					vim.cmd.execute("'" .. lnum .. "fold" .. state .. "'")
 				end
 			},
-
 			display = {
 				fold = function()
 					if vim.v.wrap then
@@ -55,7 +57,6 @@ return {
 					return icon
 				end
 			},
-
 			sections = {
 				sign_column = {
 					[[%s]]
@@ -80,7 +81,6 @@ return {
 					[[ ]],
 				},
 			},
-
 			build = function(tbl)
 				local statuscolumn = {}
 
@@ -94,7 +94,6 @@ return {
 
 				return table.concat(statuscolumn)
 			end,
-
 			set_window = function(value)
 				vim.defer_fn(function()
 					vim.api.nvim_win_set_option(vim.api.nvim_get_current_win(), "statuscolumn", value)
@@ -118,6 +117,5 @@ return {
 			local hl = 'DiagnosticSign' .. type
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = '' })
 		end
-
 	end
 }

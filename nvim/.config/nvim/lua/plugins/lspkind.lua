@@ -1,7 +1,10 @@
 return {
 	"onsails/lspkind.nvim",
 	config = function()
-		require("lspkind").init({
+		local status, lspkind = pcall(require, "lspkind")
+		if (not status) then return end
+
+		lspkind.init({
 			-- enables text annotations
 			--
 			-- default: true

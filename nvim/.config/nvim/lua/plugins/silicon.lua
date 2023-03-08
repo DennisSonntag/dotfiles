@@ -1,7 +1,8 @@
 return {
 	"narutoxy/silicon.lua",
 	config = function()
-		local silicon = require('silicon')
+		local status, silicon = pcall(require, "silicon")
+		if (not status) then return end
 
 		silicon.setup({
 			theme = "auto",

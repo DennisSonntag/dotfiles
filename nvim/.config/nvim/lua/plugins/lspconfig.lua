@@ -14,14 +14,27 @@ return {
 			cmd = { "typescript-language-server", "--stdio" }
 		}
 
+		local capabilitiesHtml = vim.lsp.protocol.make_client_capabilities()
 
-		lsp.astro.setup{
+		capabilitiesHtml.textDocument.completion.completionItem.snippetSupport = true
+		-- Disable formattting for html lsp
+		capabilitiesHtml.document_formatting = false
+
+
+		lsp.html.setup {
+			capabilities = capabilitiesHtml,
+			cmd = { "vscode-html-language-server", "--stdio" },
+			filetypes = { "html", "typescriptreact", "javascriptreact" },
+		}
+
+
+		lsp.astro.setup {
 			cmd = { "astro-ls", "--stdio" },
 			filetypes = { "astro" },
 		}
 
-		lsp.bashls.setup{
-			cmd ={ "bash-language-server", "start" },
+		lsp.bashls.setup {
+			cmd = { "bash-language-server", "start" },
 			filetypes = { "sh" }
 		}
 

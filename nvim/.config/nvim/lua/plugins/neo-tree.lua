@@ -1,7 +1,10 @@
 return {
 	"nvim-neo-tree/neo-tree.nvim",
 	config = function()
-		require("neo-tree").setup({
+		local status, neotree = pcall(require, "neo-tree")
+		if (not status) then return end
+
+		neotree.setup({
 			popup_border_style = "rounded",
 
 			close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab popup_border_style = "rounded", enable_git_status = true, enable_diagnostics = true, sort_case_insensitive = false, -- used when sorting files and directories in the tree sort_function = nil, -- use a custom function for sorting files and directories in the tree -- sort_function = function (a,b) if a.type == b.type then return a.path > b.path else
