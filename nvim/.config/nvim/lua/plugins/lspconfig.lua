@@ -4,12 +4,50 @@ return {
 		local status, lsp = pcall(require, "lspconfig")
 		if (not status) then return end
 
+
+		local on_attach = function(client, bufnr)
+			local keymap = vim.keymap.set
+
+			local opts = { noremap = true, silent = true }
+
+			local status2, builtin = pcall(require, "telescope.builtin")
+			if (not status2) then return end
+
+			local bufopts = { noremap = true, silent = true, buffer = bufnr }
+
+
+			keymap('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
+
+			keymap('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
+
+			-- keymap('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts)
+			keymap('n', 'gd', vim.lsp.buf.definition, bufopts)
+			-- keymap('n', 'gd', function()
+			-- 	builtin.lsp_definitions()
+			-- end, opts)
+
+			keymap('n', 'gr', function()
+				-- builtin.lsp_definitions()
+				builtin.lsp_references()
+			end, opts)
+
+			keymap('i', '<C-k>', function() vim.lsp.buf.signature_help() end, opts)
+
+			-- keymap('n', 'gp', '<Cmd>Lspsaga peek_definition<CR>', opts)
+
+			-- keymap('n', '<F2>', '<Cmd>Lspsaga rename<CR>', opts)
+			keymap('n', '<F2>', vim.lsp.buf.rename, opts)
+			keymap({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
+			keymap("n", "<leader>lf", function() vim.lsp.buf.format() end)
+		end
+
 		local capabilities = require('cmp_nvim_lsp').default_capabilities()
 		-- local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities.offsetEncoding = { "utf-16" }
 		capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 		lsp.tsserver.setup {
+			on_attach = on_attach,
 			filetypes = { "typescript", "typescriptreact", "typescript.tsx", },
 			cmd = { "typescript-language-server", "--stdio" }
 		}
@@ -29,21 +67,25 @@ return {
 
 
 		lsp.astro.setup {
+			on_attach = on_attach,
 			cmd = { "astro-ls", "--stdio" },
 			filetypes = { "astro" },
 		}
 
 		lsp.bashls.setup {
+			on_attach = on_attach,
 			cmd = { "bash-language-server", "start" },
 			filetypes = { "sh" }
 		}
 
 		lsp.cssls.setup {
+			on_attach = on_attach,
 			capabilities = capabilities,
 			filetypes = { "css", "scss", "less" }
 		}
 
 		lsp.lua_ls.setup {
+			on_attach = on_attach,
 			settings = {
 				Lua = {
 					diagnostics = {
@@ -60,6 +102,7 @@ return {
 		}
 
 		lsp.pyright.setup({
+			on_attach = on_attach,
 			python = {
 				analysis = {
 					autoSearchPaths = true,
@@ -70,12 +113,14 @@ return {
 		})
 
 		lsp.clangd.setup({
+			on_attach = on_attach,
 			capabilities = capabilities,
 			cmd = { "clangd" },
 			filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
 		})
 
 		lsp.rust_analyzer.setup {
+			on_attach = on_attach,
 			cmd = {
 				"rustup", "run", "stable", "rust-analyzer"
 			},
@@ -90,6 +135,7 @@ return {
 		}
 
 		lsp.tailwindcss.setup({
+			on_attach = on_attach,
 		})
 	end
 }

@@ -50,36 +50,5 @@ return {
 				kind = {},
 			},
 		})
-
-		local keymap = vim.keymap.set
-
-		local opts = { noremap = true, silent = true }
-
-		local status2, builtin = pcall(require, "telescope.builtin")
-		if (not status2) then return end
-
-
-		keymap('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
-
-		keymap('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
-
-		-- keymap('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts)
-		keymap('n', 'gd', function()
-			builtin.lsp_definitions()
-		end, opts)
-
-		keymap('n', 'gr', function()
-			-- builtin.lsp_definitions()
-			builtin.lsp_references()
-		end, opts)
-
-		keymap('i', '<C-k>', function() vim.lsp.buf.signature_help() end, opts)
-
-		-- keymap('n', 'gp', '<Cmd>Lspsaga peek_definition<CR>', opts)
-
-		-- keymap('n', '<F2>', '<Cmd>Lspsaga rename<CR>', opts)
-		keymap('n', '<F2>', vim.lsp.buf.rename, opts)
-		keymap({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
-		keymap("n", "<leader>lf", function() vim.lsp.buf.format() end)
 	end
 }
