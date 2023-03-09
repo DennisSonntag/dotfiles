@@ -80,5 +80,6 @@ return {
 		-- keymap('n', '<F2>', '<Cmd>Lspsaga rename<CR>', opts)
 		keymap('n', '<F2>', vim.lsp.buf.rename, opts)
 		keymap({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
+		keymap("n", "<leader>lf", function() vim.lsp.buf.format() end)
 	end
 }

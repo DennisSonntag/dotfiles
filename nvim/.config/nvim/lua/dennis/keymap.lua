@@ -5,17 +5,12 @@ keymap("n", "<C-j>", "<C-w>j")
 keymap("n", "<C-k>", "<C-w>k")
 keymap("n", "<C-l>", "<C-w>l")
 
--- keymap("v", "J", ":m '>+1<CR>gv=gv")
--- keymap("v", "K", ":m '<-2<CR>gv=gv")
-
 keymap("n", "<C-d>", "<C-d>zz")
 keymap("n", "<C-u>", "<C-u>zz")
 keymap("n", "G", "Gzz")
 
 --Open LazyGit
 keymap('n', '<leader>g', ':FloatermNew --height=0.95 --width=0.95 lazygit<CR>')
-
-
 
 -- Toggle Spelling
 keymap("n", "<leader>ts", function()
@@ -25,17 +20,6 @@ end)
 --Keep current seach centerd
 keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
-
-keymap("n", "<C-w>", function() require('bufdelete').bufwipeout() end)
-
-keymap("n", "<leader>e", "<cmd>Neotree toggle float<CR>")
-keymap("n", "<leader>fg", " <cmd>Telescope live_grep<CR>")
-keymap("n", "<leader>fb", " <cmd>Telescope buffers<CR>")
-keymap("n", "<leader>fh", " <cmd>Telescope help_tags<CR>")
-
-
-keymap("n", "<leader>lf", function() vim.lsp.buf.format() end)
-
 
 -- greatest remap ever
 keymap("x", "<leader>p", [["_dP]])
@@ -55,22 +39,9 @@ keymap("n", "<C-q>", "<cmd>q<CR>")
 --Replace hovering word
 keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-
-local status, smart_splits = pcall(require, "smart-splits")
-if (not status) then return end
-
--- Splits
-keymap('n', '<A-h>', smart_splits.resize_left)
-keymap('n', '<A-j>', smart_splits.resize_down)
-keymap('n', '<A-k>', smart_splits.resize_up)
-keymap('n', '<A-l>', smart_splits.resize_right)
-
 keymap("n", "<leader>sv", "<cmd>vsplit<CR>")
 keymap("n", "<leader>sh", "<cmd>split<CR>")
 keymap("n", "<leader>se", "<C-w>=")
 keymap("n", "<leader>ss", "<C-w>R")
 keymap("n", "<leader>stv", "<C-w>t<C-w>H")
 keymap("n", "<leader>sth", "<C-w>t<C-w>K")
-keymap("n", "<leader>sm", function() require('maximize').toggle() end)
-
--- keymap("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>")
