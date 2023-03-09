@@ -43,13 +43,14 @@ return {
 					i(1)
 				})),
 				s("af", fmt([[
-					const {} = () => {{
+					const {} = ({}) => {{
 						{}
 					}};
 					]]
 				, {
 					i(1, "name"),
-					i(2),
+					i(2, "param"),
+					i(3),
 				})),
 				s("for", fmt([[
 					for (let {} = 0; {} < {}; {}++) {{
@@ -86,7 +87,7 @@ return {
 						{}
 					}}{}
 				]], { i(1, "condition"), i(2), i(3) })),
-				s("elseif", fmt([[
+				s("elif", fmt([[
 					else if ({}) {{
 						{}
 					}}{}
@@ -126,14 +127,55 @@ return {
 				s("imp", fmt([[
 					import {} from '{}';
 				]], { i(1, "item"), i(2, "lib") })),
+				s("case", fmt([[
+					case {}:
+						{}
+						break;
+				]], { i(1), i(2) })),
+				s("switch", fmt([[
+					switch ({}) {{
+						case {}:
+						{}
+						break;
+						default:
+						{}
+						break;
+					}}
+				]], { i(1), i(2), i(3), i(4) })),
 			})
 		end
+		ls.add_snippets("typescriptreact", {
+			s("comp", fmt([[
+				import type {{ FC }} from 'react';
+
+				type PropTypes = {{
+					{}: {};
+				}};
+
+				const {}: FC<PropTypes> = ({{ {} }}) => {{
+					return (
+						{}
+					);
+				}};
+
+				export default {};
+			]]
+			, {
+				i(1, "prop"),
+				i(2, "type"),
+				i(3, "Component"),
+				rep(1),
+				i(4),
+				rep(3)
+			})),
+		})
 
 		for _, lang in ipairs({ "typescriptreact", "javascriptreact" }) do
 			ls.add_snippets(lang, {
-				s("us", fmt("const [var, set{}] = useState({});", {
+				s("us", fmt("const [{}, set{}] = useState({});", {
 					i(1, "Var"),
-					i(2)
+					i(2, "Var"),
+					i(3)
 				})),
 				s("class", fmt("className=\"{}\"", {
 					i(1)
@@ -151,7 +193,7 @@ return {
 			})
 		end
 
-		for _, lang in ipairs({ "typescriptreact", "javascriptreact", "html" }) do
+		for _, lang in ipairs({ "typescriptreact", "javascriptreact", "html", "astro" }) do
 			ls.add_snippets(lang, {
 				s("doctype",
 					fmt("<!DOCTYPE>{}", { i(1), })),

@@ -16,16 +16,16 @@ return {
 
 		local capabilitiesHtml = vim.lsp.protocol.make_client_capabilities()
 
-		capabilitiesHtml.textDocument.completion.completionItem.snippetSupport = true
-		-- Disable formattting for html lsp
-		capabilitiesHtml.document_formatting = false
+		-- capabilitiesHtml.textDocument.completion.completionItem.snippetSupport = true
+		-- -- Disable formattting for html lsp
+		-- capabilitiesHtml.document_formatting = false
 
 
-		lsp.html.setup {
-			capabilities = capabilitiesHtml,
-			cmd = { "vscode-html-language-server", "--stdio" },
-			filetypes = { "html", "typescriptreact", "javascriptreact" },
-		}
+		-- lsp.html.setup {
+		-- 	capabilities = capabilitiesHtml,
+		-- 	cmd = { "vscode-html-language-server", "--stdio" },
+		-- 	filetypes = { "html", "typescriptreact", "javascriptreact" },
+		-- }
 
 
 		lsp.astro.setup {

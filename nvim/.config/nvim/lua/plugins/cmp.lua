@@ -83,11 +83,11 @@ return {
 					name = "nvim_lsp",
 					entry_filter = function(entry, ctx)
 						if contains({ "javascript", "typescript", "typescriptreact", "javascriptreact" }, ctx.filetype) then
-							if entry:get_word() == "log" then
+							if contains({ "log", "switch", "case" }, entry:get_word()) then
 								return false
 							end
 						end
-						if contains({ "typescriptreact", "javascriptreact" }, ctx.filetype)  then
+						if contains({ "typescriptreact", "javascriptreact" }, ctx.filetype) then
 							if entry:get_word() == "class" then
 								return false
 							end
