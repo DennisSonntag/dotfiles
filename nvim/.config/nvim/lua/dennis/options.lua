@@ -10,6 +10,10 @@ o.smartindent = true
 o.cursorline = true
 -- o.cursorcolumn = true
 o.splitbelow = true
+
+o.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
+o.sidescrolloff = 8 -- Columns of context
+
 o.cmdheight = 0
 o.splitright = true
 o.timeoutlen = 1000

@@ -2,7 +2,7 @@ return {
 	'echasnovski/mini.nvim',
 	version = false,
 	event = 'BufRead',
-	dependencies = { "echasnovski/mini.cursorword", "echasnovski/mini.move", "echasnovski/mini.surround" },
+	dependencies = { "echasnovski/mini.cursorword", "echasnovski/mini.move", "echasnovski/mini.surround", "echasnovski/mini.pairs" },
 	config = function()
 		local status, cursorword = pcall(require, "mini.cursorword")
 		if (not status) then return end
@@ -16,6 +16,12 @@ return {
 
 		local status3, surround = pcall(require, "mini.surround")
 		if (not status3) then return end
+
+		local status4, pairs = pcall(require, "mini.pairs")
+		if (not status4) then return end
+
+		pairs.setup()
+
 
 		surround.setup(
 		-- No need to copy this inside `setup()`. Will be used automatically.
