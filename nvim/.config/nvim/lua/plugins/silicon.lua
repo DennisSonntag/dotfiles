@@ -1,5 +1,6 @@
 return {
 	"narutoxy/silicon.lua",
+	event = "VeryLazy",
 	config = function()
 		local status, silicon = pcall(require, "silicon")
 		if (not status) then return end

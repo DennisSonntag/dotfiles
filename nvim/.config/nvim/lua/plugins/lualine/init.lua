@@ -5,7 +5,7 @@ return {
 		local status, lualine = pcall(require, "lualine")
 		if (not status) then return end
 
-		local statusline = require "plugins.lualine.default"
+		local statusline = require("plugins.lualine.default")
 
 		lualine.setup {
 			options = {

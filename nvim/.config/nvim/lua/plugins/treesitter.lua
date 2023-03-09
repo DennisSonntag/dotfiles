@@ -1,5 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	event = 'BufRead',
 	dependencies = {
 		"p00f/nvim-ts-rainbow",
 		"windwp/nvim-ts-autotag"

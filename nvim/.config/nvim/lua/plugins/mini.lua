@@ -1,6 +1,7 @@
 return {
 	'echasnovski/mini.nvim',
 	version = false,
+	event = 'BufRead',
 	dependencies = { "echasnovski/mini.cursorword", "echasnovski/mini.move", "echasnovski/mini.surround" },
 	config = function()
 		local status, cursorword = pcall(require, "mini.cursorword")

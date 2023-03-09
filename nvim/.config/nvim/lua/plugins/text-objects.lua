@@ -1,5 +1,6 @@
 return {
 	"chrisgrieser/nvim-various-textobjs",
+	event = 'BufRead',
 	config = function()
 		local status, textobjs = pcall(require, "various-textobjs")
 		if (not status) then return end

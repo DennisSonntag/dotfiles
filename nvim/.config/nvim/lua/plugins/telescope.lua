@@ -4,14 +4,17 @@ return {
 		local status, builtin = pcall(require, "telescope.builtin")
 		if (not status) then return end
 
-		vim.keymap.set('n', '<C-p>', function() builtin.git_files({ hidden = true }) end)
-		vim.keymap.set('n', '<leader>ff', function() builtin.find_files({ hidden = true }) end)
+		local keymap = vim.keymap.set
 
-		vim.keymap.set("n", "<leader>fg", " <cmd>Telescope live_grep<CR>")
-		vim.keymap.set("n", "<leader>fb", " <cmd>Telescope buffers<CR>")
-		vim.keymap.set("n", "<leader>fh", " <cmd>Telescope help_tags<CR>")
+		keymap('n', '<C-p>', function() builtin.git_files({ hidden = true }) end)
+		keymap('n', '<leader>ff', function() builtin.find_files({ hidden = true }) end)
+		keymap("n", "<leader>fw", "<cmd>Telescope tailiscope<cr>")
 
-		vim.keymap.set('n', '<leader>ps', function()
+		keymap("n", "<leader>fg", " <cmd>Telescope live_grep<CR>")
+		keymap("n", "<leader>fb", " <cmd>Telescope buffers<CR>")
+		keymap("n", "<leader>fh", " <cmd>Telescope help_tags<CR>")
+
+		keymap('n', '<leader>ps', function()
 			builtin.grep_string({ search = vim.fn.input("Grep > ") });
 		end)
 

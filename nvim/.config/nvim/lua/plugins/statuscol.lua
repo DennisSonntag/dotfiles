@@ -1,5 +1,6 @@
 return {
 	"luukvbaal/statuscol.nvim",
+	event = 'BufRead',
 	config = function()
 		local status, statuscol = pcall(require, "statuscol")
 		if (not status) then return end
