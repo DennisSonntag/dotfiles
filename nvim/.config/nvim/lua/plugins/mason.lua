@@ -1,5 +1,4 @@
 return {
-
 	{
 		"williamboman/mason.nvim",
 		config = function()
@@ -7,6 +6,64 @@ return {
 			if (not status) then return end
 
 			mason.setup()
+		end
+	},
+	{
+		"jay-babu/mason-null-ls.nvim",
+		event = 'BufRead',
+		dependencies = { "jose-elias-alvarez/null-ls.nvim" },
+		config = function()
+			local status, mason_null_ls = pcall(require, "mason-null-ls")
+			if (not status) then return end
+
+			local status2, null_ls = pcall(require, "null-ls")
+			if (not status2) then return end
+
+			mason_null_ls.setup({
+				automatic_setup = true,
+				automatic_installation = true,
+				ensure_installed = { "black", "prettierd", "eslint_d", "clang-format" }
+			})
+
+			mason_null_ls.setup_handlers {
+				function(source_name, methods)
+					-- all sources with no handler get passed here
+
+					-- To keep the original functionality of `automatic_setup = true`,
+					-- please add the below.
+					require("mason-null-ls.automatic_setup")(source_name, methods)
+				end,
+			}
+
+			null_ls.setup({
+				sources = {
+					null_ls.builtins.formatting.prettierd.with({
+						env = {
+							PRETTIERD_DEFAULT_CONFIG = vim.fn.expand("~/.prettierrc.json"),
+						},
+						filetypes = { "astro", "javascript", "javascriptreact", "typescript", "typescriptreact", "vue",
+							"css", "scss", "less", "html", "json", "jsonc", "yaml", "markdown", "markdown.mdx",
+							"graphql",
+							"handlebars" },
+					}),
+					-- null_ls.builtins.formatting.rustfmt,
+					-- null_ls.builtins.formatting.clang_format,
+					-- null_ls.builtins.formatting.black,
+					null_ls.builtins.diagnostics.eslint_d.with({
+						diagnostics_format = '[eslint] #{m}\n(#{c})'
+					}),
+				}
+			})
+
+			local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
+			vim.api.nvim_create_user_command(
+				'DisableLspFormatting',
+				function()
+					vim.api.nvim_clear_autocmds({ group = augroup, buffer = 0 })
+				end,
+				{ nargs = 0 }
+			)
 		end
 	},
 	{
@@ -38,19 +95,9 @@ return {
 
 
 				keymap('n', 'gd', vim.lsp.buf.definition, bufopts)
-				-- keymap('n', 'gd', function()
-				-- 	builtin.lsp_definitions()
-				-- end, opts)
-
 				keymap('n', 'gr', function()
 					builtin.lsp_references()
 				end, opts)
-
-				-- keymap('i', '<C-k>', function() vim.lsp.buf.signature_help() end, opts)
-
-				-- keymap('n', 'gp', '<Cmd>Lspsaga peek_definition<CR>', opts)
-
-				-- keymap('n', '<F2>', '<Cmd>Lspsaga rename<CR>', opts)
 				keymap('n', '<F2>', vim.lsp.buf.rename, opts)
 				keymap({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
 				keymap("n", "<leader>lf", function() vim.lsp.buf.format() end)
@@ -71,14 +118,14 @@ return {
 					}
 				end,
 
-					["rust_analyzer"] = function()
+				["rust_analyzer"] = function()
 					lsp.rust_analyzer.setup {
 						on_attach = on_attach,
 						cmd = {
 							"rustup", "run", "stable", "rust-analyzer"
 						},
 						settings = {
-								["rust-analyzer"] = {
+							["rust-analyzer"] = {
 								checkOnSave = {
 									command = "clippy",
 								},
@@ -86,7 +133,7 @@ return {
 						},
 					}
 				end,
-					["pyright"] = function()
+				["pyright"] = function()
 					lsp.pyright.setup({
 						on_attach = on_attach,
 						python = {
@@ -98,7 +145,7 @@ return {
 						}
 					})
 				end,
-					["lua_ls"] = function()
+				["lua_ls"] = function()
 					lsp.lua_ls.setup {
 						on_attach = on_attach,
 						settings = {
@@ -119,5 +166,4 @@ return {
 			}
 		end
 	}
-
 }

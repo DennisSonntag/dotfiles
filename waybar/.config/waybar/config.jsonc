@@ -2,23 +2,23 @@
 	"layer": "top",
 	"modules-left": [
 		"battery",
-		"custom/cap-left",
 		"cpu",
 		"custom/cap-left",
 		"memory",
-		"custom/cap-left",
-		"hyprland/window",
-		"custom/cap-left"
+		"custom/cap-left-mid",
+		"hyprland/window"
 	],
 	"modules-center": [
-		"wlr/workspaces"
+		"custom/cap-right",
+		"wlr/workspaces",
+		"custom/cap-left"
 	],
 	"modules-right": [
 		"custom/spotify",
 		"tray",
-		"custom/cap-right",
+		"custom/cap-right-light",
 		"pulseaudio",
-		"custom/cap-right",
+		"custom/cap-right-mid",
 		"custom/weather",
 		"custom/cap-right",
 		"clock"
@@ -68,18 +68,6 @@
 		"signal": 5,
 		"smooth-scrolling-threshold": 1.0
 	},
-	// "custom/spotify": {
-	//   "format": "{}  ",
-	//   "max-length": 60,
-	//   "interval": 30,
-	//   "return-type": "json",
-	//   "exec": "~/.config/waybar/metadata.sh",
-	//   "on-click": "~/.config/waybar/controls.sh",
-	//   "on-scroll-up": "~/.config/waybar/controls.sh next",
-	//   "on-scroll-down": "~/.config/waybar/controls.sh previous",
-	//   "signal": 5,
-	//   "smooth-scrolling-threshold": 1.0
-	// },
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
 		"tooltip": false,
@@ -102,19 +90,6 @@
 			]
 		}
 	},
-	"custom/cap-left": {
-		"tooltip": false,
-		"format": ""
-	},
-	"custom/cap-right": {
-		"tooltip": false,
-		"format": ""
-	},
-	"wlr/workspaces": {
-		"disable-scroll": true,
-		"all-outputs": false,
-		"on-click": "activate"
-	},
 	"tray": {
 		"icon-size": 20,
 		"spacing": 10
@@ -131,5 +106,34 @@
 	"memory": {
 		"tooltip": false,
 		"format": " {}%"
+	},
+	"wlr/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": false,
+		"on-click": "activate"
+	},
+	"custom/cap-right": {
+		"tooltip": false,
+		"format": ""
+	},
+	"custom/cap-left": {
+		"tooltip": false,
+		"format": ""
+	},
+	"custom/cap-right-mid": {
+		"tooltip": false,
+		"format": ""
+	},
+	"custom/cap-left-mid": {
+		"tooltip": false,
+		"format": ""
+	},
+	"custom/cap-right-light": {
+		"tooltip": false,
+		"format": ""
+	},
+	"custom/cap-left-light": {
+		"tooltip": false,
+		"format": ""
 	}
 }
