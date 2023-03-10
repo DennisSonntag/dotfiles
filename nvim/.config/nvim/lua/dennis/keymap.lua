@@ -1,5 +1,11 @@
 local keymap = vim.keymap.set
 
+
+keymap("n", "<Left>", "<Nop>")
+keymap("n", "<Down>", "<Nop>")
+keymap("n", "<Up>", "<Nop>")
+keymap("n", "<Right>", "<Nop>")
+
 keymap("n", "<C-h>", "<C-w>h")
 keymap("n", "<C-j>", "<C-w>j")
 keymap("n", "<C-k>", "<C-w>k")
@@ -20,6 +26,7 @@ end)
 --Keep current seach centerd
 keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
+
 
 -- greatest remap ever
 keymap("x", "<leader>p", [["_dP]])
