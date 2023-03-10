@@ -15,7 +15,6 @@ return {
 			local status, cmp = pcall(require, "cmp")
 			if (not status) then return end
 
-
 			local status2, lspkind = pcall(require, "lspkind")
 			if (not status2) then return end
 
@@ -144,6 +143,7 @@ return {
 	{
 		"onsails/lspkind.nvim",
 		event = 'BufRead',
+		after = "hrsh7th/nvim-cmp",
 		config = function()
 			local status, lspkind = pcall(require, "lspkind")
 			if (not status) then return end

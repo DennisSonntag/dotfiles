@@ -1,5 +1,6 @@
 return {
 	"mrjones2014/smart-splits.nvim",
+	event = "WinEnter",
 	config = function()
 		local status, smart_splits = pcall(require, "smart-splits")
 		if (not status) then return end
