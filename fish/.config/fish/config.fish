@@ -68,9 +68,11 @@ alias ls="lsd"
 alias lsl="lsd -1"
 alias la="lsd -A"
 alias lal="lsd -1A"
-alias ga="git add ."
+alias ga="git add"
+alias gaa="git add ."
 alias gc="git commit -m"
 alias gpush="git push origin master"
+alias gpushm="git push origin master"
 alias gpull="git pull"
 alias c="clear"
 alias ccd="cd;clear"
@@ -93,14 +95,25 @@ end
 function clear-cache 
 	doas pacman -Scc --noconfirm
 	paru -Scc --noconfirm
+	cargo cache -a
+	trash-emtpy
+	doas pacman -Rcns (pacman -Qdtq)
 end
 
 function full-update
-	clear-cache
 	mirror
 	doas pacman -Syyu --noconfirm
 	paru -Syyu --noconfirm
-	doas pacman -Rcns (pacman -Qdtq)
+	rustup update stable
+	rustup update nightly
+	cargo install-update -a
+	bob sync
+	bob install nightly
+	bob use nightly
+	nvm install latest
+	nvm install lts
+	nvm use lts
+	clear-cache
 end
 
 set PATH $HOME/.cargo/bin $PATH
@@ -116,22 +129,22 @@ end
 
 # Functions needed for !! and !$
 function __history_previous_command
-  switch (commandline -t)
-  case "!"
-    commandline -t $history[1]; commandline -f repaint
-  case "*"
-    commandline -i !
-  end
+	switch (commandline -t)
+	case "!"
+		commandline -t $history[1]; commandline -f repaint
+	case "*"
+		commandline -i !
+	end
 end
 
 function __history_previous_command_arguments
-  switch (commandline -t)
-  case "!"
-    commandline -t ""
-    commandline -f history-token-search-backward
-  case "*"
-    commandline -i '$'
-  end
+	switch (commandline -t)
+	case "!"
+		commandline -t ""
+		commandline -f history-token-search-backward
+	case "*"
+		commandline -i '$'
+	end
 end
 
 function beans
