@@ -16,7 +16,8 @@ return {
 		if (not status2) then return end
 
 		treesitter.setup({
-			ensure_installed = "all",
+			ensure_installed = { "javascript", "typescript", "lua", "c", "cpp",
+				"css", "json", "bash", "rust", "html", "java", "prisma", "python", "dockerfile", "toml", "tsx", "make" },
 			autotag = {
 				enable = true,
 			},

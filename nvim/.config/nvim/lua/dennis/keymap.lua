@@ -15,9 +15,6 @@ keymap("n", "<C-d>", "<C-d>zz")
 keymap("n", "<C-u>", "<C-u>zz")
 keymap("n", "G", "Gzz")
 
---Open LazyGit
-keymap('n', '<leader>g', ':FloatermNew --height=0.95 --width=0.95 lazygit<CR>')
-
 -- Toggle Spelling
 keymap("n", "<leader>ts", function()
 	vim.opt.spell = not (vim.opt.spell:get())

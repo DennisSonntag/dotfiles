@@ -1,8 +1,6 @@
 return {
 	--Required for a bunch of plugins
 	"nvim-lua/plenary.nvim",
-	-- "dstein64/vim-startuptime",
-	{ "voldikss/vim-floaterm", event = "VeryLazy" },
 
 	--Get good kid
 	-- { "ThePrimeagen/vim-be-good", event = "VeryLazy" },
