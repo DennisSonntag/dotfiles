@@ -8,8 +8,7 @@ return {
 		local status, barbecue = pcall(require, "barbecue")
 		if (not status) then return end
 
-		barbecue.setup(
-			{
+		barbecue.setup({
 				---whether to show/use navic in the winbar
 				---@type boolean
 				show_navic = true,
@@ -86,8 +85,7 @@ return {
 					Operator = "",
 					TypeParameter = "",
 					Object = "",
-				},
-			}
-		)
+				}
+			})
 	end
 }

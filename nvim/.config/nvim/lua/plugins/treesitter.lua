@@ -18,7 +18,7 @@ return {
 		treesitter.setup({
 			ensure_installed = { "javascript", "typescript", "lua", "c", "cpp",
 				"css", "json", "bash", "rust", "html", "java", "prisma", "python", "dockerfile", "toml", "tsx", "make",
-				"markdown", "markdown_inline" },
+				"markdown", "markdown_inline", "vim", "yaml", "toml", "fish", "astro", "comment" },
 			autotag = {
 				enable = true,
 			},

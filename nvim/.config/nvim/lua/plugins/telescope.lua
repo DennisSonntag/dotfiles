@@ -13,6 +13,7 @@ return {
 		keymap("n", "<leader>fg", " <cmd>Telescope live_grep<CR>")
 		keymap("n", "<leader>fb", " <cmd>Telescope buffers<CR>")
 		keymap("n", "<leader>fh", " <cmd>Telescope help_tags<CR>")
+		keymap("n", "<leader>fs", " <cmd>Telescope spell_suggest<CR>")
 
 		keymap('n', '<leader>ps', function()
 			builtin.grep_string({ search = vim.fn.input("Grep > ") });
