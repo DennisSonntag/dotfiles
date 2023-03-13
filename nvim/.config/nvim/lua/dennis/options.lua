@@ -1,6 +1,7 @@
 local o = vim.opt
 
 o.undodir = os.getenv("HOME") .. "/.vim/undodir"
+o.fillchars = { eob = " " }
 o.spelllang = { 'en_us' }
 o.relativenumber = true
 o.termguicolors = true
@@ -11,6 +12,7 @@ o.cursorline = true
 o.splitbelow = true
 o.splitright = true
 o.timeoutlen = 1000
+o.copyindent = true
 o.sidescrolloff = 8
 o.incsearch = true
 o.swapfile = false

@@ -4,10 +4,8 @@ local autocmd = vim.api.nvim_create_autocmd
 autocmd({ "FileType" }, {
 	pattern = { "qf", "help", "man", "lspinfo", "spectre_panel", "lir" },
 	callback = function()
-		vim.cmd([[
-			nnoremap <silent> <buffer> q :close<CR>
-			set nobuflisted
-		]])
+		vim.keymap.set("n", "q", "<cmd>close<CR>", { silent = true })
+		vim.opt.nobuflisted = true
 	end,
 })
 
@@ -15,7 +13,13 @@ autocmd({ "FileType" }, {
 autocmd({ "User" }, {
 	pattern = { "AlphaReady" },
 	callback = function()
-		vim.cmd("set laststatus=0 | autocmd BufUnload <buffer> set laststatus=3")
+		vim.opt.laststatus = 0
+	end,
+})
+
+autocmd({ "BufUnload" }, {
+	callback = function()
+		vim.opt.laststatus = 3
 	end,
 })
 
@@ -28,19 +32,17 @@ autocmd({ "FileType" }, {
 	end,
 })
 
-vim.cmd("autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif")
-
 -- Fixes Autocomment
 autocmd({ "BufWinEnter" }, {
 	callback = function()
-		vim.cmd("set formatoptions-=cro")
+		vim.opt.formatoptions = "cro"
 	end,
 })
 
 --Center on insert mode
 autocmd({ "InsertEnter" }, {
 	callback = function()
-		vim.cmd("norm zz")
+		vim.cmd.norm("zz")
 	end,
 })
 
@@ -48,24 +50,5 @@ autocmd({ "InsertEnter" }, {
 autocmd({ "TextYankPost" }, {
 	callback = function()
 		vim.highlight.on_yank { higroup = "Visual", timeout = 200 }
-	end,
-})
-
---Center on insert mode
-autocmd({ "BufEnter" }, {
-	callback = function()
-		vim.wo.fillchars = "eob: "
-	end,
-})
-
-
---Open Alpha when buffer empty
-vim.api.nvim_create_autocmd("User", {
-	pattern = "BDeletePost*",
-	callback = function(event)
-		local fallback_ft = vim.api.nvim_buf_get_option(event.buf, "filetype")
-		if fallback_ft == "" then
-			vim.cmd("Alpha")
-		end
 	end,
 })
