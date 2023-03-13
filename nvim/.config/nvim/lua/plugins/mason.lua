@@ -46,9 +46,6 @@ return {
 							"graphql",
 							"handlebars" },
 					}),
-					-- null_ls.builtins.formatting.rustfmt,
-					-- null_ls.builtins.formatting.clang_format,
-					-- null_ls.builtins.formatting.black,
 					null_ls.builtins.diagnostics.eslint_d.with({
 						diagnostics_format = '[eslint] #{m}\n(#{c})'
 					}),
@@ -83,24 +80,23 @@ return {
 			local on_attach = function(client, bufnr)
 				local keymap = vim.keymap.set
 
-				local opts = { noremap = true, silent = true }
-
 				local status3, builtin = pcall(require, "telescope.builtin")
 				if (not status3) then return end
 
 				local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
+				keymap('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', bufopts)
 
-				keymap('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
+				keymap('n', 'gd', builtin.lsp_definitions, bufopts)
 
+				keymap('n', 'gr', builtin.lsp_references, bufopts)
 
-				keymap('n', 'gd', vim.lsp.buf.definition, bufopts)
-				keymap('n', 'gr', function()
-					builtin.lsp_references()
-				end, opts)
-				keymap('n', '<F2>', vim.lsp.buf.rename, opts)
-				keymap({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
-				keymap("n", "<leader>lf", function() vim.lsp.buf.format() end)
+				keymap("n", "gp", "<cmd>Lspsaga diagnostic_jump_prev<CR>", bufopts)
+				keymap("n", "gn", "<cmd>Lspsaga diagnostic_jump_next<CR>", bufopts)
+
+				keymap('n', '<F2>', vim.lsp.buf.rename, bufopts)
+				keymap({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>", bufopts)
+				keymap("n", "<leader>lf", function() vim.lsp.buf.format { async = true } end, bufopts)
 			end
 
 			mason_lsp.setup({
@@ -110,16 +106,15 @@ return {
 					"pyright", "jdtls" },
 			})
 
-			mason_lsp.setup_handlers {
+			mason_lsp.setup_handlers({
 				function(server_name) -- default handler (optional)
-					require("lspconfig")[server_name].setup {
+					lsp[server_name].setup({
 						on_attach = on_attach,
 						capabilities = capabilities,
-					}
+					})
 				end,
-
 				["rust_analyzer"] = function()
-					lsp.rust_analyzer.setup {
+					lsp.rust_analyzer.setup({
 						on_attach = on_attach,
 						cmd = {
 							"rustup", "run", "stable", "rust-analyzer"
@@ -131,7 +126,7 @@ return {
 								},
 							},
 						},
-					}
+					})
 				end,
 				["pyright"] = function()
 					lsp.pyright.setup({
@@ -146,7 +141,7 @@ return {
 					})
 				end,
 				["lua_ls"] = function()
-					lsp.lua_ls.setup {
+					lsp.lua_ls.setup({
 						on_attach = on_attach,
 						settings = {
 							Lua = {
@@ -161,9 +156,9 @@ return {
 								}
 							}
 						}
-					}
+					})
 				end
-			}
+			})
 		end
 	}
 }

@@ -96,7 +96,7 @@ function clear-cache
 	doas pacman -Scc --noconfirm
 	paru -Scc --noconfirm
 	cargo cache -a
-	trash-emtpy
+	trash-empty
 	doas pacman -Rcns (pacman -Qdtq)
 end
 

@@ -7,7 +7,7 @@ return {
 		local keymap = vim.keymap.set
 
 		keymap('n', '<C-p>', function() builtin.git_files({ hidden = true }) end)
-		keymap('n', '<leader>ff', function() builtin.find_files({ hidden = true }) end)
+		keymap('n', 'F', function() builtin.find_files({ hidden = true }) end)
 		keymap("n", "<leader>fw", "<cmd>Telescope tailiscope<cr>")
 
 		keymap("n", "<leader>fg", " <cmd>Telescope live_grep<CR>")
@@ -21,16 +21,16 @@ return {
 		local status2, telescope = pcall(require, "telescope")
 		if (not status2) then return end
 
-		telescope.setup {
+		telescope.setup({
 			defaults = {
 				mappings = {
 					i = {
-							["<C-k>"] = "move_selection_previous",
-							["<C-j>"] = "move_selection_next",
-							["<esc>"] = require('telescope.actions').close,
+						["<C-k>"] = "move_selection_previous",
+						["<C-j>"] = "move_selection_next",
+						["<esc>"] = require('telescope.actions').close,
 					}
 				}
 			},
-		}
+		})
 	end
 }

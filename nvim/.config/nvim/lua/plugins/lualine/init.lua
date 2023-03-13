@@ -7,7 +7,7 @@ return {
 
 		local statusline = require("plugins.lualine.default")
 
-		lualine.setup {
+		lualine.setup({
 			options = {
 				globalstatus = true,
 				icons_enabled = true,
@@ -49,6 +49,6 @@ return {
 				lualine_y = {},
 				lualine_z = {},
 			},
-		}
+		})
 	end,
 }

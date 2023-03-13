@@ -7,6 +7,6 @@ return {
 
 		maximize.setup()
 
-		vim.keymap.set("n", "<leader>sm", function() maximize.toggle() end)
+		vim.keymap.set("n", "<leader>sm", maximize.toggle)
 	end
 }

@@ -203,13 +203,6 @@ M.percent = {
 	color = { fg = "#BBC2CF", bg = "#000F10" },
 }
 
--- local spaces = {
---   function()
---     return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
---   end,
---   color = { fg = "#ECBE7B", bg = "gray18" },
--- }
-
 M.filetype = {
 	"filetype",
 	color = { fg = "#BBC2CF", bg = "#000F10" },

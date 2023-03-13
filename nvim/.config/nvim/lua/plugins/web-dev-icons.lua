@@ -5,7 +5,7 @@ return {
 		local status, web_devicons = pcall(require, "nvim-web-devicons")
 		if (not status) then return end
 
-		web_devicons.setup {
+		web_devicons.setup({
 			-- your personnal icons can go here (to override)
 			-- you can specify color or cterm_color instead of specifying both of them
 			-- DevIcon will be appended to `name`
@@ -31,7 +31,7 @@ return {
 			-- same as `override` but specifically for overrides by filename
 			-- takes effect when `strict` is true
 			override_by_filename = {
-					[".gitignore"] = {
+				[".gitignore"] = {
 					icon = "",
 					color = "#f1502f",
 					name = "Gitignore"
@@ -40,12 +40,12 @@ return {
 			-- same as `override` but specifically for overrides by extension
 			-- takes effect when `strict` is true
 			override_by_extension = {
-					["log"] = {
+				["log"] = {
 					icon = "",
 					color = "#81e043",
 					name = "Log"
 				}
 			},
-		}
+		})
 	end
 }

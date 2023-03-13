@@ -1,35 +1,30 @@
 local o = vim.opt
-local g = vim.g
 
 o.undodir = os.getenv("HOME") .. "/.vim/undodir"
+o.spelllang = { 'en_us' }
 o.relativenumber = true
 o.termguicolors = true
 o.errorbells = false
--- g.mapleader = " "
+o.signcolumn = "yes"
 o.smartindent = true
 o.cursorline = true
--- o.cursorcolumn = true
 o.splitbelow = true
-
-o.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
-o.sidescrolloff = 8 -- Columns of context
-
-o.cmdheight = 0
 o.splitright = true
 o.timeoutlen = 1000
+o.sidescrolloff = 8
 o.incsearch = true
-o.showtabline = 0
 o.swapfile = false
 o.hlsearch = false
-o.undofile = true o.updatetime = 50
+o.undofile = true
+o.updatetime = 50
 o.softtabstop = 4
+o.showtabline = 0
 o.shiftwidth = 4
 o.backup = false
+o.scrolloff = 8
+o.cmdheight = 0
 o.hidden = true
 o.wrap = false
 o.tabstop = 4
 o.mouse = "a"
 o.nu = true
-
---Spelling
-vim.opt.spelllang = { 'en_us' }

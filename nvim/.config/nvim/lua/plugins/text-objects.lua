@@ -5,8 +5,10 @@ return {
 		local status, textobjs = pcall(require, "various-textobjs")
 		if (not status) then return end
 
+
+		local keymap = vim.keymap.set
 		textobjs.setup({ useDefaultKeymaps = true })
-		vim.keymap.set({ "o", "x" }, "as", function() textobjs.subword(false) end)
-		vim.keymap.set({ "o", "x" }, "is", function() textobjs.subword(true) end)
+		keymap({ "o", "x" }, "as", function() textobjs.subword(false) end)
+		keymap({ "o", "x" }, "is", function() textobjs.subword(true) end)
 	end
 }

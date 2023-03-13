@@ -6,13 +6,15 @@ return {
 
 		local opts = { noremap = true, silent = true }
 
-		vim.keymap.set("n", "<leader>a", mark.add_file)
-		vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
+		local keymap = vim.keymap.set
 
-		vim.keymap.set("n", "<A-1>", function() ui.nav_file(1) end, opts)
-		vim.keymap.set("n", "<A-2>", function() ui.nav_file(2) end, opts)
-		vim.keymap.set("n", "<A-3>", function() ui.nav_file(3) end, opts)
-		vim.keymap.set("n", "<A-4>", function() ui.nav_file(4) end, opts)
-		vim.keymap.set("n", "<A-5>", function() ui.nav_file(5) end, opts)
+		keymap("n", "<leader>a", mark.add_file)
+		keymap("n", "<C-e>", ui.toggle_quick_menu)
+
+		keymap("n", "<A-1>", function() ui.nav_file(1) end, opts)
+		keymap("n", "<A-2>", function() ui.nav_file(2) end, opts)
+		keymap("n", "<A-3>", function() ui.nav_file(3) end, opts)
+		keymap("n", "<A-4>", function() ui.nav_file(4) end, opts)
+		keymap("n", "<A-5>", function() ui.nav_file(5) end, opts)
 	end
 }

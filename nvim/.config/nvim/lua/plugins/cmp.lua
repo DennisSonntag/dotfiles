@@ -49,13 +49,13 @@ return {
 					end,
 				},
 				mapping = cmp.mapping.preset.insert({
-						['<C-d>'] = cmp.mapping.scroll_docs(-4),
-						['<C-f>'] = cmp.mapping.scroll_docs(4),
-						['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
-						['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
-						['<C-Space>'] = cmp.mapping.complete(),
-						['<C-e>'] = cmp.mapping.close(),
-						["<C-n>"] = cmp.mapping(function(fallback)
+					['<C-d>'] = cmp.mapping.scroll_docs(-4),
+					['<C-f>'] = cmp.mapping.scroll_docs(4),
+					['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
+					['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
+					['<C-Space>'] = cmp.mapping.complete(),
+					['<C-e>'] = cmp.mapping.close(),
+					["<C-n>"] = cmp.mapping(function(fallback)
 						-- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
 						-- they way you will only jump inside the snippet region
 						if luasnip.expand_or_jumpable() then
@@ -64,7 +64,7 @@ return {
 							fallback()
 						end
 					end, { "i", "s" }),
-						["<C-p>"] = cmp.mapping(function(fallback)
+					["<C-p>"] = cmp.mapping(function(fallback)
 						-- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
 						-- they way you will only jump inside the snippet region
 						if luasnip.jumpable(-1) then
@@ -73,7 +73,7 @@ return {
 							fallback()
 						end
 					end, { "i", "s" }),
-						['<Tab>'] = cmp.mapping.confirm({
+					['<Tab>'] = cmp.mapping.confirm({
 						behavior = cmp.ConfirmBehavior.Replace,
 						select = true
 					}),
@@ -134,10 +134,10 @@ return {
 				}
 			})
 
-			vim.cmd [[
-  set completeopt=menuone,noinsert,noselect
-  highlight! default link CmpItemKind CmpItemMenuDefault
-]]
+			vim.cmd([[
+				set completeopt=menuone,noinsert,noselect
+				highlight! default link CmpItemKind CmpItemMenuDefault
+			]])
 		end
 	},
 	{

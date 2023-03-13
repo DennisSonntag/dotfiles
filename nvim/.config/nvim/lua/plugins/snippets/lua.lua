@@ -67,42 +67,12 @@ local function cs(trigger, nodes, opts) --{{{
 	end
 
 	table.insert(target_table, snippet) -- insert snippet into appropriate table
-end                                  --}}}
+end
 
 -- Start Refactoring --
 
--- cs("myFirstSnippet",
--- 	fmt(
--- 		[[
--- 		local {} = function({})
--- 			{}
--- 		end
--- 		]]
--- 	)
--- 	,
--- 	{
--- 		i(1, "name"),
--- 		i(2, "params"),
--- 		i(3, "body"),
--- 	}
--- )
 
-cs("cmd", fmt([[
-
-vim.cmd({}) 
-
-]], { i(1, "") }))
-
-cs("snipTest",
-	{
-		t("sup"),
-		t("beans"),
-		t("test"),
-	}
-)
-
-
-
+cs("cmd", fmt("vim.cmd({})", { i(1, "") }))
 
 
 -- End Refactoring --

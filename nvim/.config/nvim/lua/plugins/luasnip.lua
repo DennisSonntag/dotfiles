@@ -174,7 +174,7 @@ return {
 		for _, lang in ipairs({ "typescriptreact", "javascriptreact" }) do
 			ls.add_snippets(lang, {
 				s("us", fmt("const [{}, set{}] = useState({});", {
-					i(1, "Var"),
+					i(1, "var"),
 					i(2, "Var"),
 					i(3)
 				})),

@@ -1,6 +1,10 @@
 return {
 	--Required for a bunch of plugins
 	"nvim-lua/plenary.nvim",
+	{
+		"NTBBloodbath/color-converter.nvim",
+		event = 'BufRead',
+	},
 
 	--Get good kid
 	-- { "ThePrimeagen/vim-be-good", event = "VeryLazy" },

@@ -2,7 +2,8 @@ return {
 	'echasnovski/mini.nvim',
 	version = false,
 	event = 'BufRead',
-	dependencies = { "echasnovski/mini.cursorword", "echasnovski/mini.move", "echasnovski/mini.surround", "echasnovski/mini.pairs" },
+	dependencies = { "echasnovski/mini.cursorword", "echasnovski/mini.move", "echasnovski/mini.surround",
+		"echasnovski/mini.pairs" },
 	config = function()
 		local status, cursorword = pcall(require, "mini.cursorword")
 		if (not status) then return end
@@ -14,18 +15,15 @@ return {
 
 		move.setup()
 
-		local status3, surround = pcall(require, "mini.surround")
-		if (not status3) then return end
-
 		local status4, pairs = pcall(require, "mini.pairs")
 		if (not status4) then return end
 
 		pairs.setup()
 
+		local status3, surround = pcall(require, "mini.surround")
+		if (not status3) then return end
 
-		surround.setup(
-		-- No need to copy this inside `setup()`. Will be used automatically.
-			{
+		surround.setup({
 				-- Add custom surroundings to be used on top of builtin ones. For more
 				-- information with examples, see `:h MiniSurround.config`.
 				custom_surroundings = nil,
@@ -54,9 +52,6 @@ return {
 				-- 'cover_or_nearest', 'next', 'prev', 'nearest'. For more details,
 				-- see `:h MiniSurround.config`.
 				search_method = 'cover',
-			}
-
-
-		)
+			})
 	end
 }
