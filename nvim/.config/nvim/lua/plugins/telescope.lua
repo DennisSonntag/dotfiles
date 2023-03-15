@@ -15,10 +15,6 @@ return {
 		keymap("n", "<leader>fh", " <cmd>Telescope help_tags<CR>")
 		keymap("n", "<leader>fs", " <cmd>Telescope spell_suggest<CR>")
 
-		keymap('n', '<leader>ps', function()
-			builtin.grep_string({ search = vim.fn.input("Grep > ") });
-		end)
-
 		local status2, telescope = pcall(require, "telescope")
 		if (not status2) then return end
 

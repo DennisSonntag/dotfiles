@@ -1,4 +1,6 @@
 local autocmd = vim.api.nvim_create_autocmd
+local augroup = vim.api.nvim_create_augroup
+local DennisGroup = augroup('dennis', {})
 
 -- Use 'q' to quit from common plugins
 autocmd({ "FileType" }, {
@@ -32,6 +34,13 @@ autocmd({ "FileType" }, {
 	end,
 })
 
+autocmd({ "FileType" }, {
+	pattern = { "gitcommit" },
+	callback = function()
+		vim.opt.colorcolumn = "80"
+	end,
+})
+
 -- Fixes Autocomment
 autocmd({ "BufWinEnter" }, {
 	callback = function()
@@ -49,6 +58,14 @@ autocmd({ "InsertEnter" }, {
 -- Highlight Yanked Text
 autocmd({ "TextYankPost" }, {
 	callback = function()
-		vim.highlight.on_yank { higroup = "Visual", timeout = 200 }
+		vim.highlight.on_yank { higroup = "Visual", timeout = 50 }
 	end,
+})
+
+
+--Remove Trailing whitespace
+autocmd({ "BufWritePre" }, {
+	group = DennisGroup,
+	pattern = "*",
+	command = [[%s/\s\+$//e]],
 })

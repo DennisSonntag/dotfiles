@@ -86,16 +86,18 @@ return {
 				local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
 				keymap('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', bufopts)
+				keymap("n", "<leader>k", "<cmd>Lspsaga hover_doc ++keep<CR>", bufopts)
 
-				keymap('n', 'gd', builtin.lsp_definitions, bufopts)
+				keymap('n', 'ld', builtin.lsp_definitions, bufopts)
 
-				keymap('n', 'gr', builtin.lsp_references, bufopts)
+				keymap('n', 'lr', builtin.lsp_references, bufopts)
 
-				keymap("n", "gp", "<cmd>Lspsaga diagnostic_jump_prev<CR>", bufopts)
-				keymap("n", "gn", "<cmd>Lspsaga diagnostic_jump_next<CR>", bufopts)
+				keymap("n", "lp", "<cmd>Lspsaga diagnostic_jump_prev<CR>", bufopts)
+				keymap("n", "ln", "<cmd>Lspsaga diagnostic_jump_next<CR>", bufopts)
+				keymap("n", "<leader>ld", vim.diagnostic.open_float, bufopts)
 
-				keymap('n', '<F2>', vim.lsp.buf.rename, bufopts)
-				keymap({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>", bufopts)
+				keymap('n', '<leader>lr', vim.lsp.buf.rename, bufopts)
+				keymap({ "n", "v" }, "<leader>la", "<cmd>Lspsaga code_action<CR>", bufopts)
 				keymap("n", "<leader>lf", function() vim.lsp.buf.format { async = true } end, bufopts)
 			end
 
@@ -113,23 +115,9 @@ return {
 						capabilities = capabilities,
 					})
 				end,
-				["rust_analyzer"] = function()
-					lsp.rust_analyzer.setup({
-						on_attach = on_attach,
-						cmd = {
-							"rustup", "run", "stable", "rust-analyzer"
-						},
-						settings = {
-							["rust-analyzer"] = {
-								checkOnSave = {
-									command = "clippy",
-								},
-							},
-						},
-					})
-				end,
 				["pyright"] = function()
 					lsp.pyright.setup({
+						capabilities = capabilities,
 						on_attach = on_attach,
 						python = {
 							analysis = {

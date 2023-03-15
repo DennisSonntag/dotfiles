@@ -5,6 +5,7 @@ return {
 		"NTBBloodbath/color-converter.nvim",
 		event = 'BufRead',
 	},
+	"tpope/vim-fugitive",
 
 	--Get good kid
 	-- { "ThePrimeagen/vim-be-good", event = "VeryLazy" },

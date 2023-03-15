@@ -63,17 +63,20 @@ alias nm="doas nmtui"
 alias np="ping 1.1.1.1"
 alias n="pnpm"
 alias v="nvim"
+alias t="tmux"
 alias ..="cd .."
 alias ls="lsd"
 alias lsl="lsd -1"
 alias la="lsd -A"
 alias lal="lsd -1A"
+
 alias ga="git add"
-alias gaa="git add ."
 alias gc="git commit -m"
+alias gl="git log --graph --oneline --decorate"
 alias gpush="git push origin master"
 alias gpushm="git push origin master"
 alias gpull="git pull"
+
 alias c="clear"
 alias ccd="cd;clear"
 alias rm="trash"
@@ -82,17 +85,17 @@ alias bu="doas brillo -u 150000 -q -A 10"
 alias mirror="doas reflector -p https -l 50 --sort rate --verbose --save /etc/pacman.d/mirrorlist"
 alias prc="wget -O .prettierrc.json https://pastebin.com/raw/qhk1hkEB"
 
-function gfpull 
+function gfpull
 	git fetch --all
 	git reset --hard origin/master
 end
 
-function take 
+function take
 	mkdir -p $argv
 	cd $argv
 end
 
-function clear-cache 
+function clear-cache
 	doas pacman -Scc --noconfirm
 	paru -Scc --noconfirm
 	cargo cache -a
