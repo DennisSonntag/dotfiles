@@ -6,6 +6,7 @@ return {
 		event = 'BufRead',
 	},
 	"tpope/vim-fugitive",
+	"MunifTanjim/nui.nvim",
 
 	--Get good kid
 	-- { "ThePrimeagen/vim-be-good", event = "VeryLazy" },

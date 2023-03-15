@@ -20,8 +20,7 @@ return {
 			if (not status2) then return end
 
 			mason_null_ls.setup({
-				automatic_setup = true,
-				automatic_installation = true,
+				automatic_setup = true, automatic_installation = true,
 				ensure_installed = { "black", "prettierd", "eslint_d", "clang-format" }
 			})
 

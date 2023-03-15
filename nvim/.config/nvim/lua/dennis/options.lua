@@ -5,7 +5,6 @@ o.undofile = true
 o.swapfile = false
 o.backup = false
 
-
 o.scrolloff = 8
 o.sidescrolloff = 8
 
@@ -36,7 +35,7 @@ o.timeoutlen = 1000
 o.updatetime = 50
 
 o.showtabline = 0
-o.cmdheight = 0
+o.cmdheight = 1
 o.hidden = true
 o.wrap = false
 o.mouse = "a"

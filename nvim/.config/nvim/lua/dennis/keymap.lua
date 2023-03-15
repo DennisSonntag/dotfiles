@@ -49,7 +49,6 @@ keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 keymap("n", "<C-s>", [[:%s/\(.*\)/\1]])
 
 --Git
-
 keymap("n", "<leader>gl", function()
 	vim.cmd.Git('log --graph --oneline --decorate')
 end)
@@ -61,3 +60,16 @@ end)
 keymap("n", "<leader>gc", function()
 	vim.cmd.Git('commit')
 end)
+
+-- Split stufff
+keymap("n", "<leader>sv", "<cmd>vsplit<CR>")
+keymap("n", "<leader>sh", "<cmd>split<CR>")
+keymap("n", "<leader>se", "<C-w>=")
+keymap("n", "<leader>ss", "<C-w>R")
+keymap("n", "<leader>stv", "<C-w>t<C-w>H")
+keymap("n", "<leader>sth", "<C-w>t<C-w>K")
+
+keymap("n", "<A-Left>", "3 0 <C-w>>")
+keymap("n", "<A-Right>", "3 0 <C-w><")
+keymap("n", "<A-Down>", "3 0 <C-w>-")
+keymap("n", "<A-Up>", "3 0 <C-w>+")
