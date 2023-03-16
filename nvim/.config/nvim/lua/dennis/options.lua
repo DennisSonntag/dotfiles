@@ -1,4 +1,14 @@
 local o = vim.opt
+local g = vim.g
+
+g.netrw_banner = 0
+g.netrw_liststyle = 3
+g.netrw_show_icons = 1
+-- g.WebDevIconsUnicodeDecorateFolderNodes = 1
+-- g.WebDevIconsUnicodeDecorateFileNodes = 1
+-- g.WebDevIconsUnicodeGlyphDoubleWidth = 1
+
+
 
 o.undodir = os.getenv("HOME") .. "/.vim/undodir"
 o.undofile = true

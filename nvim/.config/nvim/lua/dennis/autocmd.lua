@@ -1,13 +1,33 @@
 local autocmd = vim.api.nvim_create_autocmd
-local augroup = vim.api.nvim_create_augroup
-local DennisGroup = augroup('dennis', {})
+local keymap = vim.keymap.set
 
 -- Use 'q' to quit from common plugins
 autocmd({ "FileType" }, {
 	pattern = { "qf", "help", "man", "lspinfo", "spectre_panel", "lir" },
 	callback = function()
-		vim.keymap.set("n", "q", "<cmd>close<CR>", { silent = true })
+		keymap("n", "q", "<cmd>close<CR>", { silent = true })
 		vim.opt.nobuflisted = true
+	end,
+})
+
+-- Netrw keymaps
+autocmd({ "FileType" }, {
+	pattern = { "netrw" },
+	callback = function()
+		local opts = { noremap = true, silent = true }
+		-- Create a new file
+		keymap('n', 'a', '<cmd>e %:h/', opts)
+
+		-- Rename a file or directory
+		keymap('n', 'r', '<cmd>call netrw#Rename()<CR>', opts)
+
+		-- Create a new directory
+		keymap('n', 'd', '<cmd>call netrw#Mkdir()<CR>', opts)
+
+		-- Move or copy a file or directory
+		keymap('n', 'm', '<cmd>call netrw#Move()<CR>', opts)
+
+		keymap('n', 'dd', ':call netrw#NetrwDelete()<CR>', opts)
 	end,
 })
 
@@ -61,4 +81,3 @@ autocmd({ "TextYankPost" }, {
 		vim.highlight.on_yank { higroup = "Visual", timeout = 50 }
 	end,
 })
-
