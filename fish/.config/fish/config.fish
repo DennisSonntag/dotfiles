@@ -113,7 +113,6 @@ function full-update
 	rustup update stable
 	rustup update nightly
 	cargo install-update -a
-	bob sync
 	bob install nightly
 	bob use nightly
 	nvm install latest

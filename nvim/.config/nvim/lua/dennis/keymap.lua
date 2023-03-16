@@ -6,6 +6,56 @@ keymap("n", "<Down>", "<Nop>")
 keymap("n", "<Up>", "<Nop>")
 keymap("n", "<Right>", "<Nop>")
 
+--File tree
+-- Define a global variable to track whether netrw is open
+vim.g.NetrwIsOpen = false
+
+-- Define a function to toggle netrw
+function ToggleNetrw()
+	if vim.g.NetrwIsOpen then
+		local i = vim.fn.bufnr("$")
+		while i >= 1 do
+			if vim.fn.getbufvar(i, "&filetype") == "netrw" then
+				vim.cmd("bwipeout " .. i)
+			end
+			i = i - 1
+		end
+		vim.g.NetrwIsOpen = false
+	else
+		vim.g.NetrwIsOpen = true
+		-- vim.cmd("Lexplore")
+		vim.cmd("Lexplore")
+	end
+end
+
+-- Define a global variable to track whether netrw is open
+vim.g.NetrwIsOpen = false
+
+-- Define a function to toggle netrw
+function ToggleNetrw()
+  if vim.g.NetrwIsOpen then
+    local i = vim.fn.bufnr("$")
+    while i >= 1 do
+      if vim.fn.getbufvar(i, "&filetype") == "netrw" then
+        vim.cmd("bwipeout " .. i)
+      end
+      i = i - 1
+    end
+    vim.g.NetrwIsOpen = false
+  else
+    vim.g.NetrwIsOpen = true
+    vim.cmd("ex")
+  end
+end
+
+-- Map a key to toggle netrw
+vim.api.nvim_set_keymap("n", "<C-E>", ":lua ToggleNetrw()<CR>", { silent = true })
+
+
+-- Map a key to toggle netrw
+keymap("n", "<leader>pv", ToggleNetrw)
+
+
 
 -- window shmovment
 keymap("n", "<C-h>", "<C-w>h")

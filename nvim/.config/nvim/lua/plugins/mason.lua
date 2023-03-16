@@ -20,7 +20,8 @@ return {
 			if (not status2) then return end
 
 			mason_null_ls.setup({
-				automatic_setup = true, automatic_installation = true,
+				automatic_setup = true,
+				automatic_installation = true,
 				ensure_installed = { "black", "prettierd", "eslint_d", "clang-format" }
 			})
 
@@ -93,7 +94,11 @@ return {
 
 				keymap("n", "lp", "<cmd>Lspsaga diagnostic_jump_prev<CR>", bufopts)
 				keymap("n", "ln", "<cmd>Lspsaga diagnostic_jump_next<CR>", bufopts)
-				keymap("n", "<leader>ld", vim.diagnostic.open_float, bufopts)
+
+				-- keymap("n", "<leader>ld", vim.diagnostic.open_float, bufopts)
+				keymap("n", "<leader>sc", "<cmd>Lspsaga show_cursor_diagnostics<CR>", bufopts)
+				keymap("n", "<leader>sb", "<cmd>Lspsaga show_buf_diagnostics<CR>", bufopts)
+				keymap("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>",bufopts)
 
 				keymap('n', '<leader>lr', vim.lsp.buf.rename, bufopts)
 				keymap({ "n", "v" }, "<leader>la", "<cmd>Lspsaga code_action<CR>", bufopts)
