@@ -70,11 +70,14 @@ alias lsl="lsd -1"
 alias la="lsd -A"
 alias lal="lsd -1A"
 
+
+# Git
 alias ga="git add"
-alias gc="git commit -m"
+alias gc="git commit"
 alias gl="git log --graph --oneline --decorate"
+alias gdif="git diff"
 alias gpush="git push origin master"
-alias gpushm="git push origin master"
+alias gpushm="git push origin main"
 alias gpull="git pull"
 
 alias c="clear"

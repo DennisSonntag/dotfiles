@@ -11,7 +11,12 @@ if [[ -z $selected ]]; then
     exit 0
 fi
 
-selected_name=$(basename "$selected" | tr . _)
+# Prompt user to enter session name
+read -p "Enter Tmux session name (default: $(basename "$selected" | tr . _)): " session_name
+session_name=${session_name:-$(basename "$selected" | tr . _)}
+
+
+# selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then

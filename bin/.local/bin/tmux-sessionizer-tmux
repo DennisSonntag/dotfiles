@@ -11,16 +11,27 @@ if [[ -z $selected ]]; then
     exit 0
 fi
 
-selected_name=$(basename "$selected" | tr . _)
+# Prompt user to enter session name
+read -p "Enter Tmux session name (default: $(basename "$selected" | tr . _)): " session_name
+session_name=${session_name:-$(basename "$selected" | tr . _)}
+
+
+# selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s $selected_name -c $selected
+    # tmux new-session -s $selected_name -c $selected
+    # echo $selected_name
+    # tmux new-session -s $selected_name -c "cd $selected"
+    tmux new-session -s $selected_name -
     exit 0
 fi
 
 if ! tmux has-session -t=$selected_name 2> /dev/null; then
-    tmux new-session -ds $selected_name -c $selected
+    # tmux new-session -ds $selected_name -c $selected
+    # echo $selected_name
+    # tmux new-session -ds $selected_name -c "cd $selected"
+    tmux new-session -ds $selected_name 
 fi
 
 tmux switch-client -t $selected_name

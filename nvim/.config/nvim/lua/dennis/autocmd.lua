@@ -62,10 +62,3 @@ autocmd({ "TextYankPost" }, {
 	end,
 })
 
-
---Remove Trailing whitespace
-autocmd({ "BufWritePre" }, {
-	group = DennisGroup,
-	pattern = "*",
-	command = [[%s/\s\+$//e]],
-})
