@@ -130,6 +130,7 @@ window#waybar {
 	padding-left: 16px;
 	margin-right: 6px;
 	padding-right: 16px;
+	border-radius: 26px;
 	transition: none;
 	color: white;
 	background: #1c591c;

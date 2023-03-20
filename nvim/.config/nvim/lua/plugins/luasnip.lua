@@ -17,7 +17,7 @@ return {
 			updateevents = "TextChanged,TextChangedI", --> update changes as you type
 			enable_autosnippets = true,
 			ext_opts = {
-					[types.choiceNode] = {
+				[types.choiceNode] = {
 					active = {
 						virt_text = { { "●", "GruvboxOrange" } },
 					},
@@ -171,12 +171,19 @@ return {
 			})),
 		})
 
+		local sameCap = function(index)
+			return f(function(arg)
+				local input = arg[1][1]
+				return input:sub(1, 1):upper() .. input:sub(2)
+			end, { index })
+		end
+
 		for _, lang in ipairs({ "typescriptreact", "javascriptreact" }) do
 			ls.add_snippets(lang, {
 				s("us", fmt("const [{}, set{}] = useState({});", {
 					i(1, "var"),
-					i(2, "Var"),
-					i(3)
+					sameCap(1), -- Pass an empty string to the returned function
+					i(2)
 				})),
 				s("class", fmt("className=\"{}\"", {
 					i(1)

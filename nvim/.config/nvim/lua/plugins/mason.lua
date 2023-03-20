@@ -47,7 +47,7 @@ return {
 							"handlebars" },
 					}),
 					null_ls.builtins.diagnostics.eslint_d.with({
-						diagnostics_format = '[eslint] #{m}\n(#{c})'
+						diagnostics_format = '[eslint] #{m}\n(#{c})',
 					}),
 				}
 			})
@@ -74,6 +74,9 @@ return {
 			local status_lsp, lsp = pcall(require, "lspconfig")
 			if (not status_lsp) then return end
 
+			require('lspconfig.ui.windows').default_options.border = 'single'
+
+
 			local capabilities = require('cmp_nvim_lsp').default_capabilities()
 			capabilities.offsetEncoding = { "utf-16" }
 
@@ -88,17 +91,17 @@ return {
 				keymap('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', bufopts)
 				keymap("n", "<leader>k", "<cmd>Lspsaga hover_doc ++keep<CR>", bufopts)
 
-				keymap('n', 'ld', builtin.lsp_definitions, bufopts)
+				keymap('n', '<leader>ld', builtin.lsp_definitions, bufopts)
 
-				keymap('n', 'lr', builtin.lsp_references, bufopts)
+				keymap('n', '<leader>lfr', builtin.lsp_references, bufopts)
 
-				keymap("n", "lp", "<cmd>Lspsaga diagnostic_jump_prev<CR>", bufopts)
-				keymap("n", "ln", "<cmd>Lspsaga diagnostic_jump_next<CR>", bufopts)
+				keymap("n", "<leader>lp", "<cmd>Lspsaga diagnostic_jump_prev<CR>", bufopts)
+				keymap("n", "<leader>ln", "<cmd>Lspsaga diagnostic_jump_next<CR>", bufopts)
 
-				-- keymap("n", "<leader>ld", vim.diagnostic.open_float, bufopts)
+				keymap("n", "<leader>lvd", vim.diagnostic.open_float, bufopts)
 				keymap("n", "<leader>sc", "<cmd>Lspsaga show_cursor_diagnostics<CR>", bufopts)
 				keymap("n", "<leader>sb", "<cmd>Lspsaga show_buf_diagnostics<CR>", bufopts)
-				keymap("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>",bufopts)
+				keymap("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>", bufopts)
 
 				keymap('n', '<leader>lr', vim.lsp.buf.rename, bufopts)
 				keymap({ "n", "v" }, "<leader>la", "<cmd>Lspsaga code_action<CR>", bufopts)

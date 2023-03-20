@@ -12,427 +12,353 @@
      0.000 D | Application root path      :  "/usr"
      0.000 D | <> Paths set.
      0.000 D | Copied settings from "polymc.cfg" to "prismlauncher.cfg"
-     0.008 D | Detected default console font: "DejaVu Sans Mono" , substitutions: ""
-     0.011 D | <> Settings loaded.
-     0.011 D | Detecting proxy settings...
-     0.012 D | Using no proxy is an option!
-     0.012 D | <> Network done.
-     0.013 D | Your language is "en_US"
-     0.013 D | <> Translations loaded.
-     0.015 D | Started watching  "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/icons"
-     0.015 D | Sorting icon list...
-     0.019 D | <> Instance icons intialized.
-     0.019 D | [Theme] <> Icon themes initialized.
-     0.019 D | [Theme] <> Initializing Widget Themes
-     0.019 D | [Theme] Determining System Theme...
-     0.019 D | [Theme] System theme seems to be: "qt6ct-style"
-     0.019 D | [Theme] Considering theme from theme factory: "qt6ct-style"
-     0.019 D | [Theme] System theme has been determined to be: "qt6ct-style"
-     0.019 D | [Theme] Loading Built-in Theme: "system"
-     0.019 D | [Theme] Loading Built-in Theme: "dark"
-     0.019 D | [Theme] Loading Built-in Theme: "bright"
-     0.019 D | [Theme] Theme Folder Path:  "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/themes"
-     0.020 D | [Theme] Loading JSON Theme from: "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/themes/custom/theme.json"
-     0.020 D | [Theme] <> Widget themes initialized.
-     0.020 D | Instance path              :  "instances"
-     0.021 D | Loading Instances...
-     0.021 D | Discovering instances in "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/instances"
-     0.021 D | Found instance ID "1.19.3"
-     0.021 D | Found instance ID "1.8.9"
-     0.021 D | Will load group list now.
-     0.021 D | Group list loaded.
+     0.009 D | Detected default console font: "FreeMono" , substitutions: ""
+     0.014 D | <> Settings loaded.
+     0.014 D | Detecting proxy settings...
+     0.015 D | Using no proxy is an option!
+     0.015 D | <> Network done.
+     0.016 D | Your language is "en_US"
+     0.016 D | <> Translations loaded.
+     0.018 D | Started watching  "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/icons"
+     0.018 D | Sorting icon list...
+     0.018 D | <> Instance icons intialized.
+     0.018 D | [Theme] <> Icon themes initialized.
+     0.018 D | [Theme] <> Initializing Widget Themes
+     0.018 D | [Theme] Determining System Theme...
+     0.018 D | [Theme] System theme seems to be: "qt6ct-style"
+     0.018 D | [Theme] Considering theme from theme factory: "qt6ct-style"
+     0.018 D | [Theme] System theme has been determined to be: "qt6ct-style"
+     0.018 D | [Theme] Loading Built-in Theme: "system"
+     0.018 D | [Theme] Loading Built-in Theme: "dark"
+     0.018 D | [Theme] Loading Built-in Theme: "bright"
+     0.018 D | [Theme] Theme Folder Path:  "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/themes"
+     0.018 D | [Theme] Loading JSON Theme from: "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/themes/custom/theme.json"
+     0.019 D | [Theme] <> Widget themes initialized.
+     0.019 D | Instance path              :  "instances"
+     0.019 D | Loading Instances...
+     0.019 D | Discovering instances in "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/instances"
+     0.020 D | Found instance ID "1.8.9"
+     0.020 D | Found instance ID "1.19.3"
+     0.020 D | Will load group list now.
+     0.020 D | Group list loaded.
+     0.020 D | Loaded instance  "Skyblock 1.8.9"  from  "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/instances/1.8.9"
      0.021 D | Loaded instance  "Survival 1.19.3"  from  "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/instances/1.19.3"
-     0.022 D | Loaded instance  "Skyblock 1.8.9"  from  "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/instances/1.8.9"
-     0.022 D | <> Instances loaded.
-     0.022 D | Loading accounts...
-     0.022 D | AccountList: Queued default account with internal ID  "aef207ddd6fc4d5cb0e519924779cdf8"  to refresh first
-     0.022 D | Task "MSASilent(0x55a8f4691e00)" starting for the first time
+     0.021 D | <> Instances loaded.
+     0.021 D | Loading accounts...
+     0.021 D | AccountList: Queued default account with internal ID  "4da2db5092d5405bb1de136cb14e35ca"  to refresh first
+     0.022 D | Task "MSASilent(0x561729bb3950)" starting for the first time
      0.022 D | AuthFlow: "Logging in with Microsoft account."
-     0.022 D | DeviceFlow::refresh: Token: ... "jub3g$$"
-     0.027 D | RefreshSchedule: Processing account  "Speed6511"  with internal ID  "aef207ddd6fc4d5cb0e519924779cdf8"
-     0.027 D | <> Accounts loaded.
-     0.028 D | <> Cache initialized.
-     0.028 D | Downloading Translations Index...
-     0.028 D | Task "NetJob(Translations Index)" starting for the first time
-     0.029 D | <> Icon theme set.
-     0.029 D | [Theme] applying theme "Dark"
-     0.029 D | <> Application theme set.
-     0.055 D | Reloading news.
-     0.055 D | Task "NetJob(News RSS Feed)" starting for the first time
-     0.055 D | Task "ComponentUpdateTask(0x55a8f4853260)" starting for the first time
-     0.055 D | Loading components
-     0.056 D | Component list save is scheduled for "Skyblock 1.8.9"
-     0.058 D | Resolving dependencies
-     0.058 D | "Req: net.minecraft == 1.8.9" Is met.
-     0.058 D | "Req: org.lwjgl" Is met.
-     0.058 D | Task "ComponentUpdateTask(0x55a8f4853260)" succeeded
-     0.058 D | Component list update/resolve task succeeded for "Skyblock 1.8.9"
-     0.064 D | <> Main window shown.
-     0.075 D | Task "Net::Download(0x55a8f48327d0)" starting for the first time
-     0.075 D | Downloading  "https://prismlauncher.org/feed/feed.xml"
-     0.075 D | Task "Net::Download(0x55a8f46593c0)" starting for the first time
-     0.075 D | Downloading  "https://i18n.prismlauncher.org/index_v2.json"
-     0.075 D | Dir changed: "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/translations"
-     0.157 D | Download succeeded: "https://i18n.prismlauncher.org/index_v2.json"
-     0.157 D | Task "NetJob(Translations Index)" succeeded
-     0.157 D | Got translations index!
-     0.544 D | Download succeeded: "https://prismlauncher.org/feed/feed.xml"
-     0.544 D | Task "NetJob(News RSS Feed)" succeeded
-     0.544 D | Finished loading RSS feed.
-     0.547 D | Loaded news entry "[SECURITY UPDATE] Prism Launcher Release 6.3, now available"
-     0.547 D | Loaded news entry "Prism Launcher Release 6.2, now available"
-     0.547 D | Loaded news entry "Prism Launcher Release 6.1, now available"
-     0.547 D | Loaded news entry "Prism Launcher Release 6.0, now available"
-     0.547 D | Loaded news entry "Prism Launcher Release 5.2, now available"
-     0.547 D | Loaded news entry "Prism Launcher Release 5.1, now available"
-     0.547 D | Loaded news entry "Prism Launcher Release 5.0, now available"
-     0.547 D | Loaded news entry "PolyMC Update 1.4.2, now available"
-     0.547 D | Loaded news entry "PolyMC Update 1.4.1, now available"
-     0.547 D | Loaded news entry "PolyMC Update 1.4.0, now available"
-     0.547 D | Loaded news entry "PolyMC Update 1.3.2, now available"
-     0.547 D | Loaded news entry "PolyMC Update 1.3.1, now available"
-     0.547 D | Loaded news entry "PolyMC Update 1.3.0, now available"
-     0.547 D | Loaded news entry "PolyMC Update 1.2.2, now available (CurseForge Hotfix)"
-     0.547 D | Loaded news entry "PolyMC Update 1.2.1, now available"
-     0.547 D | Loaded news entry "PolyMC Update 1.2.0, now available"
-     0.547 D | Loaded news entry "PolyMC Update 1.1.1, now available"
-     0.547 D | Loaded news entry "PolyMC Update 1.1.0, now available"
-     0.547 D | Loaded news entry "Moving on"
-     0.547 D | Loaded news entry "Modrinth support and Mod downloading"
-     0.547 D | Loaded news entry "New maintainers and step down."
-     0.547 D | News loading succeeded.
-     0.629 D | DeviceFlow::setLinked: true
-     0.629 D | AuthFlow: "Logging in as an Xbox user."
-     0.629 D | First layer of XBox auth ... commencing.
-     0.629 D | New token expires in QDateTime(2023-02-24 09:33:03.107 UTC Qt::UTC) seconds
-     1.033 D | Parsing "UToken" :
-     1.033 D | "UToken" is valid.
-     1.033 D | AuthFlow: "Getting authorization to access Xbox services."
-     1.033 D | Getting authorization token for  "http://xboxlive.com"
-     1.274 D | Parsing "Xbox" :
-     1.274 D | "Xbox" is valid.
-     1.274 D | AuthFlow: "Getting authorization to access Mojang services."
-     1.274 D | Getting authorization token for  "rp://api.minecraftservices.com/"
-     1.374 D | Parsing "Mojang" :
-     1.374 D | "Mojang" is valid.
-     1.374 D | AuthFlow: "Accessing Mojang services."
-     1.374 D | Getting Minecraft access token...
-     1.716 D | Parsing Mojang response...
-     1.716 D | Mojang response is valid.
-     1.716 D | AuthFlow: "Fetching Xbox profile."
-     1.716 D | Getting Xbox profile...
-     1.783 D | Task "LaunchController(0x55a8f4881170)" starting for the first time
-     1.786 D | Instance-type specific settings were loaded!
-     2.227 D | AuthFlow: "Determining game ownership."
-     2.228 D | Getting entitlements...
-     2.843 D | Parsing Minecraft entitlements...
-     2.843 D | AuthFlow: "Fetching the Minecraft profile."
-     3.047 D | Parsing Minecraft profile...
-     3.047 D | AuthFlow: "Getting skin."
-     3.126 D | Task "MSASilent(0x55a8f4691e00)" succeeded
-     3.126 D | Writing account list to "accounts.json"
-     3.126 D | Building JSON data structure.
-     3.126 D | Building account array.
-     3.126 D | Writing account list to file.
-     3.129 D | Saved account list to "accounts.json"
-     3.130 D | RefreshSchedule: Background account refresh succeeded
-     3.386 D | Task "LaunchTask(0x55a8f4726220)" starting for the first time
-     3.386 D | Task "TextPrint(0x55a8f492c970)" starting for the first time
-     3.388 D | Task "TextPrint(0x55a8f492c970)" succeeded
-     3.388 D | Task "TextPrint(0x55a8f492c8c0)" starting for the first time
-     3.388 D | Task "TextPrint(0x55a8f492c8c0)" succeeded
-     3.388 D | Task "TextPrint(0x55a8f492c520)" starting for the first time
-     3.388 D | Task "TextPrint(0x55a8f492c520)" succeeded
-     3.388 D | Task "TextPrint(0x55a8f486fca0)" starting for the first time
-     3.388 D | Task "TextPrint(0x55a8f486fca0)" succeeded
-     3.388 D | Task "CheckJava(0x55a8f48fd9e0)" starting for the first time
-     3.391 D | "Running java checker: /usr/lib/jvm/java-8-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
-     3.466 D | STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
-     3.466 W | STDERR ""
-     3.466 D | Java checker finished with status  QProcess::NormalExit  exit code  0
-     3.467 D | Java checker succeeded.
-     3.469 C | "Error changing setting JavaVendor. Setting doesn't exist."
-     3.470 D | Task "CheckJava(0x55a8f48fd9e0)" succeeded
-     3.470 D | Task "CreateGameFolders(0x55a8f46f00f0)" starting for the first time
-     3.470 D | Task "CreateGameFolders(0x55a8f46f00f0)" succeeded
-     3.470 D | Task "ClaimAccount(0x55a8f48facf0)" starting for the first time
-     3.470 D | Writing account list to "accounts.json"
-     3.470 D | Building JSON data structure.
-     3.470 D | Building account array.
-     3.470 D | Writing account list to file.
-     3.471 D | Saved account list to "accounts.json"
-     3.471 W | Profile "b7ce62bf7d6b4e11bd0c2d73b7b0d869" is now in use.
-     3.471 D | Task "ClaimAccount(0x55a8f48facf0)" succeeded
-     3.471 D | Task "Update(0x55a8f48622a0)" starting for the first time
-     3.471 D | Task "MinecraftUpdate(0x7f5338005db0)" starting for the first time
-     3.471 D | Component list save performed now for "Skyblock 1.8.9"
-     3.472 D | Task "ComponentUpdateTask(0x55a8f49e25a0)" starting for the first time
-     3.472 D | Loading components
-     3.472 D | Index is already loaded
-     3.472 D | Component list save is scheduled for "Skyblock 1.8.9"
-     3.472 D | Resolving dependencies
-     3.472 D | "Req: net.minecraft == 1.8.9" Is met.
-     3.472 D | "Req: org.lwjgl" Is met.
-     3.472 D | Task "ComponentUpdateTask(0x55a8f49e25a0)" succeeded
-     3.472 D | Component list update/resolve task succeeded for "Skyblock 1.8.9"
-     3.472 D | Task "FoldersTask(0x55a8f4942f90)" starting for the first time
-     3.472 D | Task "FoldersTask(0x55a8f4942f90)" succeeded
-     3.472 D | Task "LibrariesTask(0x55a8f49e2c20)" starting for the first time
-     3.472 D | "Skyblock 1.8.9" : downloading libraries
-     3.472 D | Applying "org.lwjgl" GOOD
-     3.472 D | Applying "net.minecraft" GOOD
-     3.472 D | Applying "net.minecraftforge" GOOD
-     3.483 D | Task "NetJob(Libraries for instance Skyblock 1.8.9)" starting for the first time
-     3.483 D | Task "NetJob(Libraries for instance Skyblock 1.8.9)" succeeded
-     3.483 D | Task "LibrariesTask(0x55a8f49e2c20)" succeeded
-     3.483 D | Task "FMLLibrariesTask(0x55a8f461d7b0)" starting for the first time
-     3.483 D | Task "FMLLibrariesTask(0x55a8f461d7b0)" succeeded
-     3.483 D | Task "AssetUpdateTask(0x55a8f4943120)" starting for the first time
-     3.483 D | Asset index SHA1: "f6ad102bcaa53b1a58358f16e376d548d44933ec"
-     3.483 D | "Skyblock 1.8.9" : Starting asset index download
-     3.483 D | Task "NetJob(Asset index for Skyblock 1.8.9)" starting for the first time
-     3.484 D | Task "Net::Download(0x55a8f46d4840)" starting for the first time
-     3.484 D | Downloading  "https://piston-meta.mojang.com/v1/packages/f6ad102bcaa53b1a58358f16e376d548d44933ec/1.8.json"
-     3.740 D | Download succeeded: "https://piston-meta.mojang.com/v1/packages/f6ad102bcaa53b1a58358f16e376d548d44933ec/1.8.json"
-     3.740 D | Task "NetJob(Asset index for Skyblock 1.8.9)" succeeded
-     3.740 D | "Skyblock 1.8.9" : Finished asset index download
-     3.767 D | Task "AssetUpdateTask(0x55a8f4943120)" succeeded
-     3.767 D | Task "MinecraftUpdate(0x7f5338005db0)" succeeded
-     3.767 D | Task "Update(0x55a8f48622a0)" succeeded
-     3.767 D | Task "ModMinecraftJar(0x55a8f492d400)" starting for the first time
-     3.767 D | Task "ModMinecraftJar(0x55a8f492d400)" succeeded
-     3.767 D | Task "ScanModFolders(0x55a8f49347f0)" starting for the first time
-     3.768 D | Task "ConcurrentTask(0x55a8f48dc688)" starting for the first time
-     3.768 D | Task "ConcurrentTask(0x55a8f48dc688)" starting for the first time
-     3.768 D | Task "ScanModFolders(0x55a8f49347f0)" succeeded
-     3.768 D | Task "ConcurrentTask(0x55a8f48dc688)" starting for the first time
-     3.768 D | Task "ScanModFolders(0x55a8f49347f0)" succeeded
-     3.768 D | Task "ConcurrentTask(0x55a8f48dc688)" starting for the first time
-     3.768 D | Task "ConcurrentTask(0x55a8f48dc688)" starting for the first time
-     3.768 D | Task "ScanModFolders(0x55a8f49347f0)" succeeded
-     3.768 D | Task "ConcurrentTask(0x55a8f48dc688)" starting for the first time
-     3.768 D | Task "ConcurrentTask(0x55a8f48dc688)" starting for the first time
-     3.768 D | Task "ConcurrentTask(0x55a8f48dc688)" starting for the first time
-     3.768 D | Task "ConcurrentTask(0x55a8f48dc688)" starting for the first time
-     3.768 D | Task "ConcurrentTask(0x55a8f48dc688)" starting for the first time
-     3.768 D | Task "ConcurrentTask(0x55a8f48dc688)" starting for the first time
-     3.768 D | Task "ScanModFolders(0x55a8f49347f0)" succeeded
-     3.768 D | Task "ConcurrentTask(0x55a8f48dc688)" starting for the first time
-     3.768 D | Task "ConcurrentTask(0x55a8f48dc688)" starting for the first time
-     3.768 D | Task "ConcurrentTask(0x55a8f48dc688)" starting for the first time
-k "LauncherPartLaunch(0x55a8f48dce70)" starting for the first time
-     4.253 D | "-Xms512m -Xmx4096m -Duser.language=en -Djava.library.path=/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/instances/1.8.9/natives -cp /usr/share/prismlauncher/NewLaunch.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/jinput/jinput/2.0.5/jinput-2.0.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/jutils/jutils/1.0.0/jutils-1.0.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl/lwjgl/2.9.4-nightly-20150209/lwjgl-2.9.4-nightly-20150209.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl/lwjgl_util/2.9.4-nightly-20150209/lwjgl_util-2.9.4-nightly-20150209.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/netty/1.8.8/netty-1.8.8.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/oshi-project/oshi-core/1.1/oshi-core-1.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/dev/jna/jna/3.4.0/jna-3.4.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/dev/jna/platform/3.4.0/platform-3.4.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/ibm/icu/icu4j-core-mojang/51.2/icu4j-core-mojang-51.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/codecjorbis/20101023/codecjorbis-20101023.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/codecwav/20101023/codecwav-20101023.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/libraryjavasound/20101123/libraryjavasound-20101123.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/librarylwjglopenal/20100824/librarylwjglopenal-20100824.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/soundsystem/20120107/soundsystem-20120107.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-all/4.0.23.Final/netty-all-4.0.23.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/google/guava/guava/17.0/guava-17.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/authlib/1.5.21/authlib-1.5.21.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/realms/1.7.59/realms-1.7.59.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/httpcomponents/httpclient/4.3.3/httpclient-4.3.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-api/2.0-beta9-fixed/log4j-api-2.0-beta9-fixed.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-core/2.0-beta9-fixed/log4j-core-2.0-beta9-fixed.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/tv/twitch/twitch/6.5/twitch-6.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/minecraftforge/forge/1.8.9-11.15.1.2318-1.8.9/forge-1.8.9-11.15.1.2318-1.8.9-universal.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/minecraft/launchwrapper/1.12/launchwrapper-1.12.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/ow2/asm/asm-all/5.0.3/asm-all-5.0.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/jline/jline/2.13/jline-2.13.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/typesafe/akka/akka-actor_2.11/2.3.3/akka-actor_2.11-2.3.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/typesafe/config/1.2.1/config-1.2.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-actors-migration_2.11/1.1.0/scala-actors-migration_2.11-1.1.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-compiler/2.11.1/scala-compiler-2.11.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/plugins/scala-continuations-library_2.11/1.0.2/scala-continuations-library_2.11-1.0.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/plugins/scala-continuations-plugin_2.11.1/1.0.2/scala-continuations-plugin_2.11.1-1.0.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-library/2.11.1/scala-library-2.11.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-parser-combinators_2.11/1.0.1/scala-parser-combinators_2.11-1.0.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-reflect/2.11.1/scala-reflect-2.11.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/lzma/lzma/0.0.1/lzma-0.0.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/java3d/vecmath/1.5.2/vecmath-1.5.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/minecraft/1.8.9/minecraft-1.8.9-client.jar org.prismlauncher.EntryPoint"
-     4.294 D | Task "ConcurrentTask(0x55a8f48dc688)" succeeded
-     8.304 D | Component list save performed now for "Skyblock 1.8.9"
-    33.303 D | [HttpMetaCache] Saving metacache with 20 entries
-   492.748 D | Task "LauncherPartLaunch(0x55a8f48dce70)" succeeded
-   492.748 D | Writing account list to "accounts.json"
-   492.748 D | Building JSON data structure.
-   492.748 D | Building account array.
-   492.748 D | Writing account list to file.
-   492.750 D | Saved account list to "accounts.json"
-   492.750 W | Profile "b7ce62bf7d6b4e11bd0c2d73b7b0d869" is no longer in use.
-   492.753 D | Task "LaunchTask(0x55a8f4726220)" succeeded
-   492.753 D | Task "LaunchController(0x55a8f4881170)" succeeded
-   494.661 D | Task "LaunchController(0x55a8f4bf9b80)" starting for the first time
-   495.139 D | Task "LaunchTask(0x55a8f4bf9510)" starting for the first time
-   495.139 D | Task "TextPrint(0x55a8f4b5d000)" starting for the first time
-   495.141 D | Task "TextPrint(0x55a8f4b5d000)" succeeded
-   495.141 D | Task "TextPrint(0x55a8f4bfe530)" starting for the first time
-   495.141 D | Task "TextPrint(0x55a8f4bfe530)" succeeded
-   495.141 D | Task "TextPrint(0x55a8f47e2410)" starting for the first time
-   495.141 D | Task "TextPrint(0x55a8f47e2410)" succeeded
-   495.141 D | Task "TextPrint(0x55a8f48f0de0)" starting for the first time
-   495.141 D | Task "TextPrint(0x55a8f48f0de0)" succeeded
-   495.141 D | Task "CheckJava(0x55a8f48fea40)" starting for the first time
-   495.141 D | "Running java checker: /usr/lib/jvm/java-8-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
-   495.176 D | STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
-   495.176 W | STDERR ""
-   495.176 D | Java checker finished with status  QProcess::NormalExit  exit code  0
-   495.176 D | Java checker succeeded.
-   495.180 C | "Error changing setting JavaVendor. Setting doesn't exist."
-   495.182 D | Task "CheckJava(0x55a8f48fea40)" succeeded
-   495.182 D | Task "CreateGameFolders(0x55a8f4bf1920)" starting for the first time
-   495.182 D | Task "CreateGameFolders(0x55a8f4bf1920)" succeeded
-   495.182 D | Task "ClaimAccount(0x55a8f4bf7a10)" starting for the first time
-   495.182 D | Writing account list to "accounts.json"
-   495.182 D | Building JSON data structure.
-   495.182 D | Building account array.
-   495.182 D | Writing account list to file.
-   495.183 D | Saved account list to "accounts.json"
-   495.183 W | Profile "b7ce62bf7d6b4e11bd0c2d73b7b0d869" is now in use.
-   495.183 D | Task "ClaimAccount(0x55a8f4bf7a10)" succeeded
-   495.183 D | Task "Update(0x55a8f4996610)" starting for the first time
-   495.183 D | Task "MinecraftUpdate(0x7f53300086b0)" starting for the first time
-   495.184 D | Task "ComponentUpdateTask(0x55a8f49e2100)" starting for the first time
-   495.184 D | Loading components
-   495.184 D | Index is already loaded
-   495.184 D | Component list save is scheduled for "Skyblock 1.8.9"
-   495.184 D | Resolving dependencies
-   495.184 D | "Req: net.minecraft == 1.8.9" Is met.
-   495.184 D | "Req: org.lwjgl" Is met.
-   495.184 D | Task "ComponentUpdateTask(0x55a8f49e2100)" succeeded
-   495.184 D | Component list update/resolve task succeeded for "Skyblock 1.8.9"
-   495.184 D | Task "FoldersTask(0x55a8f46dd130)" starting for the first time
-   495.184 D | Task "FoldersTask(0x55a8f46dd130)" succeeded
-   495.184 D | Task "LibrariesTask(0x55a8f49585b0)" starting for the first time
-   495.184 D | "Skyblock 1.8.9" : downloading libraries
-   495.184 D | Applying "org.lwjgl" GOOD
-   495.184 D | Applying "net.minecraft" GOOD
-   495.184 D | Applying "net.minecraftforge" GOOD
-   495.184 D | Task "NetJob(Libraries for instance Skyblock 1.8.9)" starting for the first time
-   495.184 D | Task "NetJob(Libraries for instance Skyblock 1.8.9)" succeeded
-   495.184 D | Task "LibrariesTask(0x55a8f49585b0)" succeeded
-   495.184 D | Task "FMLLibrariesTask(0x55a8f492dac0)" starting for the first time
-   495.184 D | Task "FMLLibrariesTask(0x55a8f492dac0)" succeeded
-   495.184 D | Task "AssetUpdateTask(0x55a8f48fcd00)" starting for the first time
-   495.184 D | Asset index SHA1: "f6ad102bcaa53b1a58358f16e376d548d44933ec"
-   495.184 D | "Skyblock 1.8.9" : Starting asset index download
-   495.184 D | Task "NetJob(Asset index for Skyblock 1.8.9)" starting for the first time
-   495.185 D | Task "Net::Download(0x55a8f47e33a0)" starting for the first time
-   495.185 D | Downloading  "https://piston-meta.mojang.com/v1/packages/f6ad102bcaa53b1a58358f16e376d548d44933ec/1.8.json"
-   495.390 D | Download succeeded: "https://piston-meta.mojang.com/v1/packages/f6ad102bcaa53b1a58358f16e376d548d44933ec/1.8.json"
-   495.391 D | Task "NetJob(Asset index for Skyblock 1.8.9)" succeeded
-   495.391 D | "Skyblock 1.8.9" : Finished asset index download
-   495.396 D | Task "AssetUpdateTask(0x55a8f48fcd00)" succeeded
-   495.396 D | Task "MinecraftUpdate(0x7f53300086b0)" succeeded
-   495.396 D | Task "Update(0x55a8f4996610)" succeeded
-   495.396 D | Task "ModMinecraftJar(0x55a8f4914d90)" starting for the first time
-   495.396 D | Task "ModMinecraftJar(0x55a8f4914d90)" succeeded
-   495.396 D | Task "ScanModFolders(0x55a8f461d920)" starting for the first time
-   495.396 D | Task "ConcurrentTask(0x55a8f48dc688)" restarting for after succeeding at first
-   495.396 D | Task "ScanModFolders(0x55a8f461d920)" succeeded
-   495.397 W | The launcher tried to start task "ConcurrentTask(0x55a8f48dc688)" while it was already running!
-   495.397 D | Task "ConcurrentTask(0x55a8f48dc688)" restarting for after succeeding at first
-   495.397 D | Task "PrintInstanceInfo(0x55a8f48f6c10)" starting for the first time
-   495.857 D | Task "PrintInstanceInfo(0x55a8f48f6c10)" succeeded
-   495.857 D | Task "ExtractNatives(0x55a8f4c00690)" starting for the first time
-   495.872 D | Task "ExtractNatives(0x55a8f4c00690)" succeeded
-   495.872 D | Task "ReconstructAssets(0x55a8f497ae20)" starting for the first time
-   495.872 D | reconstructAssets "assets" "assets/indexes" "assets/objects" "assets/virtual" "assets/virtual/1.8"
-   495.874 D | Task "ReconstructAssets(0x55a8f497ae20)" succeeded
-   495.874 D | Task "VerifyJavaInstall(0x55a8f4a76be0)" starting for the first time
-   495.874 D | Task "VerifyJavaInstall(0x55a8f4a76be0)" succeeded
-   495.874 D | Task "LauncherPartLaunch(0x55a8f4b67b70)" starting for the first time
-   495.878 D | "-Xms512m -Xmx4096m -Duser.language=en -Djava.library.path=/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/instances/1.8.9/natives -cp /usr/share/prismlauncher/NewLaunch.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/jinput/jinput/2.0.5/jinput-2.0.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/jutils/jutils/1.0.0/jutils-1.0.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl/lwjgl/2.9.4-nightly-20150209/lwjgl-2.9.4-nightly-20150209.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl/lwjgl_util/2.9.4-nightly-20150209/lwjgl_util-2.9.4-nightly-20150209.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/netty/1.8.8/netty-1.8.8.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/oshi-project/oshi-core/1.1/oshi-core-1.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/dev/jna/jna/3.4.0/jna-3.4.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/dev/jna/platform/3.4.0/platform-3.4.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/ibm/icu/icu4j-core-mojang/51.2/icu4j-core-mojang-51.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/codecjorbis/20101023/codecjorbis-20101023.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/codecwav/20101023/codecwav-20101023.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/libraryjavasound/20101123/libraryjavasound-20101123.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/librarylwjglopenal/20100824/librarylwjglopenal-20100824.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/soundsystem/20120107/soundsystem-20120107.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-all/4.0.23.Final/netty-all-4.0.23.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/google/guava/guava/17.0/guava-17.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/authlib/1.5.21/authlib-1.5.21.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/realms/1.7.59/realms-1.7.59.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/httpcomponents/httpclient/4.3.3/httpclient-4.3.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-api/2.0-beta9-fixed/log4j-api-2.0-beta9-fixed.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-core/2.0-beta9-fixed/log4j-core-2.0-beta9-fixed.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/tv/twitch/twitch/6.5/twitch-6.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/minecraftforge/forge/1.8.9-11.15.1.2318-1.8.9/forge-1.8.9-11.15.1.2318-1.8.9-universal.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/minecraft/launchwrapper/1.12/launchwrapper-1.12.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/ow2/asm/asm-all/5.0.3/asm-all-5.0.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/jline/jline/2.13/jline-2.13.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/typesafe/akka/akka-actor_2.11/2.3.3/akka-actor_2.11-2.3.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/typesafe/config/1.2.1/config-1.2.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-actors-migration_2.11/1.1.0/scala-actors-migration_2.11-1.1.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-compiler/2.11.1/scala-compiler-2.11.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/plugins/scala-continuations-library_2.11/1.0.2/scala-continuations-library_2.11-1.0.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/plugins/scala-continuations-plugin_2.11.1/1.0.2/scala-continuations-plugin_2.11.1-1.0.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-library/2.11.1/scala-library-2.11.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-parser-combinators_2.11/1.0.1/scala-parser-combinators_2.11-1.0.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-reflect/2.11.1/scala-reflect-2.11.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/lzma/lzma/0.0.1/lzma-0.0.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/java3d/vecmath/1.5.2/vecmath-1.5.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/minecraft/1.8.9/minecraft-1.8.9-client.jar org.prismlauncher.EntryPoint"
-   495.895 D | Task "ConcurrentTask(0x55a8f48dc688)" succeeded
-   500.303 D | Component list save performed now for "Skyblock 1.8.9"
-   525.306 D | [HttpMetaCache] Saving metacache with 20 entries
-  2601.579 C | Task "LauncherPartLaunch(0x55a8f4b67b70)" failed:  "Game crashed."
-  2601.579 D | Writing account list to "accounts.json"
-  2601.579 D | Building JSON data structure.
-  2601.579 D | Building account array.
-  2601.579 D | Writing account list to file.
-  2601.580 D | Saved account list to "accounts.json"
-  2601.581 W | Profile "b7ce62bf7d6b4e11bd0c2d73b7b0d869" is no longer in use.
-  2601.584 C | Task "LaunchTask(0x55a8f4bf9510)" failed:  "Game crashed."
-  2605.813 D | Task "ComponentUpdateTask(0x55a8f4627770)" starting for the first time
-  2605.813 D | Loading components
-  2605.813 D | Index is already loaded
-  2605.813 D | Component list save is scheduled for "Skyblock 1.8.9"
-  2605.813 D | Resolving dependencies
-  2605.813 D | "Req: net.minecraft == 1.8.9" Is met.
-  2605.813 D | "Req: org.lwjgl" Is met.
-  2605.813 D | Task "ComponentUpdateTask(0x55a8f4627770)" succeeded
-  2605.813 D | Component list update/resolve task succeeded for "Skyblock 1.8.9"
-  2605.814 W | Removing cache entry because of old age!
-  2605.814 D | Task "NetJob(Download of meta file org.lwjgl/index.json)" starting for the first time
-  2605.876 D | Applying "org.lwjgl" GOOD
-  2605.876 D | Applying "net.minecraft" GOOD
-  2605.876 D | Applying "net.minecraftforge" GOOD
-  2605.890 C | Task "LaunchController(0x55a8f4bf9b80)" failed:  "Game crashed."
-  2606.261 D | Task "Net::Download(0x55a8f475b000)" starting for the first time
-  2606.262 D | Downloading  "https://meta.prismlauncher.org/v1/org.lwjgl/index.json"
-  2606.919 D | Download succeeded: "https://meta.prismlauncher.org/v1/org.lwjgl/index.json"
-  2606.919 D | Task "NetJob(Download of meta file org.lwjgl/index.json)" succeeded
-  2611.068 D | Component list save performed now for "Skyblock 1.8.9"
-  2637.304 D | [HttpMetaCache] Saving metacache with 20 entries
-  2783.165 D | Task "LaunchController(0x55a8fd6678c0)" starting for the first time
-  2783.467 D | Task "LaunchTask(0x55a8fcecf8f0)" starting for the first time
-  2783.470 D | Task "TextPrint(0x55a8f49eb500)" starting for the first time
-  2783.470 D | Task "TextPrint(0x55a8f49eb500)" succeeded
-  2783.471 D | Task "TextPrint(0x55a8f47a7bf0)" starting for the first time
-  2783.471 D | Task "TextPrint(0x55a8f47a7bf0)" succeeded
-  2783.471 D | Task "TextPrint(0x55a8f48d5bd0)" starting for the first time
-  2783.471 D | Task "TextPrint(0x55a8f48d5bd0)" succeeded
-  2783.471 D | Task "TextPrint(0x55a8f49eaaf0)" starting for the first time
-  2783.471 D | Task "TextPrint(0x55a8f49eaaf0)" succeeded
-  2783.471 D | Task "CheckJava(0x55a8fcae5b60)" starting for the first time
-  2783.471 D | "Running java checker: /usr/lib/jvm/java-8-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
-  2783.506 D | STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
-  2783.506 W | STDERR ""
-  2783.506 D | Java checker finished with status  QProcess::NormalExit  exit code  0
-  2783.506 D | Java checker succeeded.
-  2783.509 C | "Error changing setting JavaVendor. Setting doesn't exist."
-  2783.510 D | Task "CheckJava(0x55a8fcae5b60)" succeeded
-  2783.510 D | Task "CreateGameFolders(0x55a8f49341c0)" starting for the first time
-  2783.510 D | Task "CreateGameFolders(0x55a8f49341c0)" succeeded
-  2783.510 D | Task "ClaimAccount(0x55a8fca38f40)" starting for the first time
-  2783.510 D | Writing account list to "accounts.json"
-  2783.510 D | Building JSON data structure.
-  2783.510 D | Building account array.
-  2783.510 D | Writing account list to file.
-  2783.511 D | Saved account list to "accounts.json"
-  2783.511 W | Profile "b7ce62bf7d6b4e11bd0c2d73b7b0d869" is now in use.
-  2783.511 D | Task "ClaimAccount(0x55a8fca38f40)" succeeded
-  2783.511 D | Task "Update(0x55a8f48c3a90)" starting for the first time
-  2783.511 D | Task "MinecraftUpdate(0x7f5338008470)" starting for the first time
-  2783.511 D | Task "ComponentUpdateTask(0x55a8f491c860)" starting for the first time
-  2783.511 D | Loading components
-  2783.511 D | Index is already loaded
-  2783.511 D | Component list save is scheduled for "Skyblock 1.8.9"
-  2783.511 D | Resolving dependencies
-  2783.511 D | "Req: net.minecraft == 1.8.9" Is met.
-  2783.511 D | "Req: org.lwjgl" Is met.
-  2783.511 D | Task "ComponentUpdateTask(0x55a8f491c860)" succeeded
-  2783.511 D | Component list update/resolve task succeeded for "Skyblock 1.8.9"
-  2783.511 D | Task "FoldersTask(0x55a8f4e13800)" starting for the first time
-  2783.512 D | Task "FoldersTask(0x55a8f4e13800)" succeeded
-  2783.512 D | Task "LibrariesTask(0x55a8f4639740)" starting for the first time
-  2783.512 D | "Skyblock 1.8.9" : downloading libraries
-  2783.512 D | Applying "org.lwjgl" GOOD
-  2783.512 D | Applying "net.minecraft" GOOD
-  2783.512 D | Applying "net.minecraftforge" GOOD
-  2783.512 D | Task "NetJob(Libraries for instance Skyblock 1.8.9)" starting for the first time
-  2783.512 D | Task "NetJob(Libraries for instance Skyblock 1.8.9)" succeeded
-  2783.512 D | Task "LibrariesTask(0x55a8f4639740)" succeeded
-  2783.512 D | Task "FMLLibrariesTask(0x55a8f479de30)" starting for the first time
-  2783.512 D | Task "FMLLibrariesTask(0x55a8f479de30)" succeeded
-  2783.512 D | Task "AssetUpdateTask(0x55a8f47b1c60)" starting for the first time
-  2783.512 D | Asset index SHA1: "f6ad102bcaa53b1a58358f16e376d548d44933ec"
-  2783.512 D | "Skyblock 1.8.9" : Starting asset index download
-  2783.512 D | Task "NetJob(Asset index for Skyblock 1.8.9)" starting for the first time
-  2783.513 D | Task "Net::Download(0x55a8fcfa8860)" starting for the first time
-  2783.513 D | Downloading  "https://piston-meta.mojang.com/v1/packages/f6ad102bcaa53b1a58358f16e376d548d44933ec/1.8.json"
-  2783.717 D | Download succeeded: "https://piston-meta.mojang.com/v1/packages/f6ad102bcaa53b1a58358f16e376d548d44933ec/1.8.json"
-  2783.718 D | Task "NetJob(Asset index for Skyblock 1.8.9)" succeeded
-  2783.718 D | "Skyblock 1.8.9" : Finished asset index download
-  2783.722 D | Task "AssetUpdateTask(0x55a8f47b1c60)" succeeded
-  2783.722 D | Task "MinecraftUpdate(0x7f5338008470)" succeeded
-  2783.722 D | Task "Update(0x55a8f48c3a90)" succeeded
-  2783.722 D | Task "ModMinecraftJar(0x55a8f4e0f360)" starting for the first time
-  2783.722 D | Task "ModMinecraftJar(0x55a8f4e0f360)" succeeded
-  2783.722 D | Task "ScanModFolders(0x55a8fd6b7970)" starting for the first time
-  2783.722 D | Task "ScanModFolders(0x55a8fd6b7970)" succeeded
-  2783.722 D | Task "PrintInstanceInfo(0x55a8f4784e80)" starting for the first time
-  2784.211 D | Task "PrintInstanceInfo(0x55a8f4784e80)" succeeded
-  2784.211 D | Task "ExtractNatives(0x55a8f4931b80)" starting for the first time
-  2784.218 D | Task "ExtractNatives(0x55a8f4931b80)" succeeded
-  2784.218 D | Task "ReconstructAssets(0x55a8fd667a90)" starting for the first time
-  2784.218 D | reconstructAssets "assets" "assets/indexes" "assets/objects" "assets/virtual" "assets/virtual/1.8"
-  2784.220 D | Task "ReconstructAssets(0x55a8fd667a90)" succeeded
-  2784.220 D | Task "VerifyJavaInstall(0x7f5338006790)" starting for the first time
-  2784.220 D | Task "VerifyJavaInstall(0x7f5338006790)" succeeded
-  2784.220 D | Task "LauncherPartLaunch(0x55a8fcdfcc90)" starting for the first time
-  2784.222 D | "-Xms512m -Xmx4096m -Duser.language=en -Djava.library.path=/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/instances/1.8.9/natives -cp /usr/share/prismlauncher/NewLaunch.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/jinput/jinput/2.0.5/jinput-2.0.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/jutils/jutils/1.0.0/jutils-1.0.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl/lwjgl/2.9.4-nightly-20150209/lwjgl-2.9.4-nightly-20150209.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl/lwjgl_util/2.9.4-nightly-20150209/lwjgl_util-2.9.4-nightly-20150209.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/netty/1.8.8/netty-1.8.8.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/oshi-project/oshi-core/1.1/oshi-core-1.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/dev/jna/jna/3.4.0/jna-3.4.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/dev/jna/platform/3.4.0/platform-3.4.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/ibm/icu/icu4j-core-mojang/51.2/icu4j-core-mojang-51.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/codecjorbis/20101023/codecjorbis-20101023.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/codecwav/20101023/codecwav-20101023.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/libraryjavasound/20101123/libraryjavasound-20101123.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/librarylwjglopenal/20100824/librarylwjglopenal-20100824.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/soundsystem/20120107/soundsystem-20120107.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-all/4.0.23.Final/netty-all-4.0.23.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/google/guava/guava/17.0/guava-17.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/authlib/1.5.21/authlib-1.5.21.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/realms/1.7.59/realms-1.7.59.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/httpcomponents/httpclient/4.3.3/httpclient-4.3.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-api/2.0-beta9-fixed/log4j-api-2.0-beta9-fixed.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-core/2.0-beta9-fixed/log4j-core-2.0-beta9-fixed.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/tv/twitch/twitch/6.5/twitch-6.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/minecraftforge/forge/1.8.9-11.15.1.2318-1.8.9/forge-1.8.9-11.15.1.2318-1.8.9-universal.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/minecraft/launchwrapper/1.12/launchwrapper-1.12.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/ow2/asm/asm-all/5.0.3/asm-all-5.0.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/jline/jline/2.13/jline-2.13.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/typesafe/akka/akka-actor_2.11/2.3.3/akka-actor_2.11-2.3.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/typesafe/config/1.2.1/config-1.2.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-actors-migration_2.11/1.1.0/scala-actors-migration_2.11-1.1.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-compiler/2.11.1/scala-compiler-2.11.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/plugins/scala-continuations-library_2.11/1.0.2/scala-continuations-library_2.11-1.0.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/plugins/scala-continuations-plugin_2.11.1/1.0.2/scala-continuations-plugin_2.11.1-1.0.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-library/2.11.1/scala-library-2.11.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-parser-combinators_2.11/1.0.1/scala-parser-combinators_2.11-1.0.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-reflect/2.11.1/scala-reflect-2.11.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/lzma/lzma/0.0.1/lzma-0.0.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/java3d/vecmath/1.5.2/vecmath-1.5.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/minecraft/1.8.9/minecraft-1.8.9-client.jar org.prismlauncher.EntryPoint"
-  2788.303 D | Component list save performed now for "Skyblock 1.8.9"
-  2813.305 D | [HttpMetaCache] Saving metacache with 20 entries
-  3269.899 D | Task "LauncherPartLaunch(0x55a8fcdfcc90)" succeeded
-  3269.899 D | Writing account list to "accounts.json"
-  3269.899 D | Building JSON data structure.
-  3269.899 D | Building account array.
-  3269.899 D | Writing account list to file.
-  3269.901 D | Saved account list to "accounts.json"
-  3269.902 W | Profile "b7ce62bf7d6b4e11bd0c2d73b7b0d869" is no longer in use.
-  3269.904 D | Task "LaunchTask(0x55a8fcecf8f0)" succeeded
-  3269.904 D | Task "LaunchController(0x55a8fd6678c0)" succeeded
+     0.022 D | DeviceFlow::refresh: Token: ... "*FxbA$$"
+     0.033 D | RefreshSchedule: Processing account  "Speed6511"  with internal ID  "4da2db5092d5405bb1de136cb14e35ca"
+     0.033 D | <> Accounts loaded.
+     0.035 D | <> Cache initialized.
+     0.035 D | Downloading Translations Index...
+     0.035 W | Removing cache entry because of old age!
+     0.035 D | Task "NetJob(Translations Index)" starting for the first time
+     0.035 D | <> Icon theme set.
+     0.035 D | [Theme] applying theme "Dark"
+     0.035 D | <> Application theme set.
+     0.046 D | Task "JavaListLoadTask(0x561729d60200)" starting for the first time
+     0.046 D | Linux Java detection incomplete - defaulting to "java"
+     0.047 D | Probing the following Java paths: 
+     0.047 D |   "java"
+     0.047 D |   "/usr/lib/jvm/java-17-openjdk/jre/bin/java"
+     0.047 D |   "/usr/lib/jvm/java-17-openjdk/bin/java"
+     0.047 D |   "/usr/lib/jvm/java-19-openjdk/jre/bin/java"
+     0.047 D |   "/usr/lib/jvm/java-19-openjdk/bin/java"
+     0.047 D |   "/usr/lib/jvm/java-8-openjdk/jre/bin/java"
+     0.047 D |   "/usr/lib/jvm/java-8-openjdk/bin/java"
+     0.047 D |   "/usr/lib64/jvm/java-17-openjdk/jre/bin/java"
+     0.047 D |   "/usr/lib64/jvm/java-17-openjdk/bin/java"
+     0.047 D |   "/usr/lib64/jvm/java-19-openjdk/jre/bin/java"
+     0.047 D |   "/usr/lib64/jvm/java-19-openjdk/bin/java"
+     0.047 D |   "/usr/lib64/jvm/java-8-openjdk/jre/bin/java"
+     0.047 D |   "/usr/lib64/jvm/java-8-openjdk/bin/java"
+     0.047 D |   ""
+     0.047 D | Task "JavaCheckerJob(0x561729bae630)" starting for the first time
+     0.047 D | "Java detection"  started.
+     0.047 D | "Running java checker: java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     0.050 D | "Running java checker: /usr/lib/jvm/java-17-openjdk/jre/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     0.051 D | "Running java checker: /usr/lib/jvm/java-17-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     0.052 D | "Running java checker: /usr/lib/jvm/java-19-openjdk/jre/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     0.055 D | "Running java checker: /usr/lib/jvm/java-19-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     0.056 D | "Running java checker: /usr/lib/jvm/java-8-openjdk/jre/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     0.059 D | "Running java checker: /usr/lib/jvm/java-8-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     0.059 D | "Running java checker: /usr/lib64/jvm/java-17-openjdk/jre/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     0.065 D | "Running java checker: /usr/lib64/jvm/java-17-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     0.065 D | "Running java checker: /usr/lib64/jvm/java-19-openjdk/jre/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     0.065 D | "Running java checker: /usr/lib64/jvm/java-19-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     0.066 D | "Running java checker: /usr/lib64/jvm/java-8-openjdk/jre/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     0.066 D | "Running java checker: /usr/lib64/jvm/java-8-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     0.069 D | "Running java checker: -jar /usr/share/prismlauncher/JavaCheck.jar"
+     0.069 D | Java checker has failed to start.
+     0.069 D | Process environment:
+     0.069 D | QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DISPLAY=:0", "EDITOR=nvim", "GBM_BACKEND=nvidia-drm", "GDK_BACKEND=wayland,x11", "GTK_THEME=Nordic", "HOME=/home/dennis", "HYPRLAND_CMD=Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=_1679190469", "INVOCATION_ID=48c2875ea9d747ca933e8952be3b61fc", "LANG=en_US.UTF-8", "LD_LIBRARY_PATH=", "LIBVA_DRIVER_NAME=nvidia", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "PATH=/home/dennis/.local/share/bob/nvim-bin:/home/dennis/.local/bin:/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_AUTO_SCREEN_SCALE_FACTOR=1", "QT_QPA_PLATFORM=wayland;xcb", "QT_QPA_PLATFORMTHEME=qt5ct", "QT_WAYLAND_DISABLE_WINDOWDECORATION=1", "SDL_VIDEODRIVER=wayland", "SHELL=/usr/bin/fish", "SHLVL=1", "SUDO_EDITOR=/home/user/.local/share/bob/nvim-bin/nvim", "SYSTEMD_EXEC_PID=4132", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "WLR_NO_HARDWARE_CURSORS=1", "XCURSOR_SIZE=24", "XCURSOR_THEME=Fluent-dark-cursors", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_RUNTIME_DIR=/run/user/1000/", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=Hyprland", "XDG_SESSION_ID=3", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONEREPARENTING=1", "_JAVA_AWT_WM_NONREPARENTING=1", "__GLX_VENDOR_LIBRARY_NAME=nvidia")
+     0.069 D | Native environment:
+     0.070 D | QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DISPLAY=:0", "EDITOR=nvim", "GBM_BACKEND=nvidia-drm", "GDK_BACKEND=wayland,x11", "GTK_THEME=Nordic", "HOME=/home/dennis", "HYPRLAND_CMD=Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=_1679190469", "INVOCATION_ID=48c2875ea9d747ca933e8952be3b61fc", "LANG=en_US.UTF-8", "LIBVA_DRIVER_NAME=nvidia", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "PATH=/home/dennis/.local/share/bob/nvim-bin:/home/dennis/.local/bin:/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_AUTO_SCREEN_SCALE_FACTOR=1", "QT_QPA_PLATFORM=wayland;xcb", "QT_QPA_PLATFORMTHEME=qt5ct", "QT_WAYLAND_DISABLE_WINDOWDECORATION=1", "SDL_VIDEODRIVER=wayland", "SHELL=/usr/bin/fish", "SHLVL=1", "SUDO_EDITOR=/home/user/.local/share/bob/nvim-bin/nvim", "SYSTEMD_EXEC_PID=4132", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "WLR_NO_HARDWARE_CURSORS=1", "XCURSOR_SIZE=24", "XCURSOR_THEME=Fluent-dark-cursors", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_RUNTIME_DIR=/run/user/1000/", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=Hyprland", "XDG_SESSION_ID=3", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONEREPARENTING=1", "_JAVA_AWT_WM_NONREPARENTING=1", "__GLX_VENDOR_LIBRARY_NAME=nvidia")
+     0.070 D | "Java detection" progress: 1 / 14
+     0.097 D | Java checker has failed to start.
+     0.106 D | Process environment:
+     0.106 D | QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DISPLAY=:0", "EDITOR=nvim", "GBM_BACKEND=nvidia-drm", "GDK_BACKEND=wayland,x11", "GTK_THEME=Nordic", "HOME=/home/dennis", "HYPRLAND_CMD=Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=_1679190469", "INVOCATION_ID=48c2875ea9d747ca933e8952be3b61fc", "LANG=en_US.UTF-8", "LD_LIBRARY_PATH=", "LIBVA_DRIVER_NAME=nvidia", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "PATH=/home/dennis/.local/share/bob/nvim-bin:/home/dennis/.local/bin:/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_AUTO_SCREEN_SCALE_FACTOR=1", "QT_QPA_PLATFORM=wayland;xcb", "QT_QPA_PLATFORMTHEME=qt5ct", "QT_WAYLAND_DISABLE_WINDOWDECORATION=1", "SDL_VIDEODRIVER=wayland", "SHELL=/usr/bin/fish", "SHLVL=1", "SUDO_EDITOR=/home/user/.local/share/bob/nvim-bin/nvim", "SYSTEMD_EXEC_PID=4132", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "WLR_NO_HARDWARE_CURSORS=1", "XCURSOR_SIZE=24", "XCURSOR_THEME=Fluent-dark-cursors", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_RUNTIME_DIR=/run/user/1000/", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=Hyprland", "XDG_SESSION_ID=3", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONEREPARENTING=1", "_JAVA_AWT_WM_NONREPARENTING=1", "__GLX_VENDOR_LIBRARY_NAME=nvidia")
+     0.106 D | Native environment:
+     0.127 D | QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DISPLAY=:0", "EDITOR=nvim", "GBM_BACKEND=nvidia-drm", "GDK_BACKEND=wayland,x11", "GTK_THEME=Nordic", "HOME=/home/dennis", "HYPRLAND_CMD=Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=_1679190469", "INVOCATION_ID=48c2875ea9d747ca933e8952be3b61fc", "LANG=en_US.UTF-8", "LIBVA_DRIVER_NAME=nvidia", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "PATH=/home/dennis/.local/share/bob/nvim-bin:/home/dennis/.local/bin:/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_AUTO_SCREEN_SCALE_FACTOR=1", "QT_QPA_PLATFORM=wayland;xcb", "QT_QPA_PLATFORMTHEME=qt5ct", "QT_WAYLAND_DISABLE_WINDOWDECORATION=1", "SDL_VIDEODRIVER=wayland", "SHELL=/usr/bin/fish", "SHLVL=1", "SUDO_EDITOR=/home/user/.local/share/bob/nvim-bin/nvim", "SYSTEMD_EXEC_PID=4132", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "WLR_NO_HARDWARE_CURSORS=1", "XCURSOR_SIZE=24", "XCURSOR_THEME=Fluent-dark-cursors", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_RUNTIME_DIR=/run/user/1000/", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=Hyprland", "XDG_SESSION_ID=3", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONEREPARENTING=1", "_JAVA_AWT_WM_NONREPARENTING=1", "__GLX_VENDOR_LIBRARY_NAME=nvidia")
+     0.127 D | "Java detection" progress: 2 / 14
+     0.127 D | Java checker has failed to start.
+     0.127 D | Process environment:
+     0.127 D | QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DISPLAY=:0", "EDITOR=nvim", "GBM_BACKEND=nvidia-drm", "GDK_BACKEND=wayland,x11", "GTK_THEME=Nordic", "HOME=/home/dennis", "HYPRLAND_CMD=Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=_1679190469", "INVOCATION_ID=48c2875ea9d747ca933e8952be3b61fc", "LANG=en_US.UTF-8", "LD_LIBRARY_PATH=", "LIBVA_DRIVER_NAME=nvidia", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "PATH=/home/dennis/.local/share/bob/nvim-bin:/home/dennis/.local/bin:/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_AUTO_SCREEN_SCALE_FACTOR=1", "QT_QPA_PLATFORM=wayland;xcb", "QT_QPA_PLATFORMTHEME=qt5ct", "QT_WAYLAND_DISABLE_WINDOWDECORATION=1", "SDL_VIDEODRIVER=wayland", "SHELL=/usr/bin/fish", "SHLVL=1", "SUDO_EDITOR=/home/user/.local/share/bob/nvim-bin/nvim", "SYSTEMD_EXEC_PID=4132", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "WLR_NO_HARDWARE_CURSORS=1", "XCURSOR_SIZE=24", "XCURSOR_THEME=Fluent-dark-cursors", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_RUNTIME_DIR=/run/user/1000/", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=Hyprland", "XDG_SESSION_ID=3", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONEREPARENTING=1", "_JAVA_AWT_WM_NONREPARENTING=1", "__GLX_VENDOR_LIBRARY_NAME=nvidia")
+     0.127 D | Native environment:
+     0.127 D | QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DISPLAY=:0", "EDITOR=nvim", "GBM_BACKEND=nvidia-drm", "GDK_BACKEND=wayland,x11", "GTK_THEME=Nordic", "HOME=/home/dennis", "HYPRLAND_CMD=Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=_1679190469", "INVOCATION_ID=48c2875ea9d747ca933e8952be3b61fc", "LANG=en_US.UTF-8", "LIBVA_DRIVER_NAME=nvidia", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "PATH=/home/dennis/.local/share/bob/nvim-bin:/home/dennis/.local/bin:/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_AUTO_SCREEN_SCALE_FACTOR=1", "QT_QPA_PLATFORM=wayland;xcb", "QT_QPA_PLATFORMTHEME=qt5ct", "QT_WAYLAND_DISABLE_WINDOWDECORATION=1", "SDL_VIDEODRIVER=wayland", "SHELL=/usr/bin/fish", "SHLVL=1", "SUDO_EDITOR=/home/user/.local/share/bob/nvim-bin/nvim", "SYSTEMD_EXEC_PID=4132", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "WLR_NO_HARDWARE_CURSORS=1", "XCURSOR_SIZE=24", "XCURSOR_THEME=Fluent-dark-cursors", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_RUNTIME_DIR=/run/user/1000/", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=Hyprland", "XDG_SESSION_ID=3", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONEREPARENTING=1", "_JAVA_AWT_WM_NONREPARENTING=1", "__GLX_VENDOR_LIBRARY_NAME=nvidia")
+     0.131 D | "Java detection" progress: 3 / 14
+     0.131 D | Java checker has failed to start.
+     0.131 D | Process environment:
+     0.131 D | QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DISPLAY=:0", "EDITOR=nvim", "GBM_BACKEND=nvidia-drm", "GDK_BACKEND=wayland,x11", "GTK_THEME=Nordic", "HOME=/home/dennis", "HYPRLAND_CMD=Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=_1679190469", "INVOCATION_ID=48c2875ea9d747ca933e8952be3b61fc", "LANG=en_US.UTF-8", "LD_LIBRARY_PATH=", "LIBVA_DRIVER_NAME=nvidia", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "PATH=/home/dennis/.local/share/bob/nvim-bin:/home/dennis/.local/bin:/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_AUTO_SCREEN_SCALE_FACTOR=1", "QT_QPA_PLATFORM=wayland;xcb", "QT_QPA_PLATFORMTHEME=qt5ct", "QT_WAYLAND_DISABLE_WINDOWDECORATION=1", "SDL_VIDEODRIVER=wayland", "SHELL=/usr/bin/fish", "SHLVL=1", "SUDO_EDITOR=/home/user/.local/share/bob/nvim-bin/nvim", "SYSTEMD_EXEC_PID=4132", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "WLR_NO_HARDWARE_CURSORS=1", "XCURSOR_SIZE=24", "XCURSOR_THEME=Fluent-dark-cursors", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_RUNTIME_DIR=/run/user/1000/", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=Hyprland", "XDG_SESSION_ID=3", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONEREPARENTING=1", "_JAVA_AWT_WM_NONREPARENTING=1", "__GLX_VENDOR_LIBRARY_NAME=nvidia")
+     0.131 D | Native environment:
+     0.131 D | QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DISPLAY=:0", "EDITOR=nvim", "GBM_BACKEND=nvidia-drm", "GDK_BACKEND=wayland,x11", "GTK_THEME=Nordic", "HOME=/home/dennis", "HYPRLAND_CMD=Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=_1679190469", "INVOCATION_ID=48c2875ea9d747ca933e8952be3b61fc", "LANG=en_US.UTF-8", "LIBVA_DRIVER_NAME=nvidia", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "PATH=/home/dennis/.local/share/bob/nvim-bin:/home/dennis/.local/bin:/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_AUTO_SCREEN_SCALE_FACTOR=1", "QT_QPA_PLATFORM=wayland;xcb", "QT_QPA_PLATFORMTHEME=qt5ct", "QT_WAYLAND_DISABLE_WINDOWDECORATION=1", "SDL_VIDEODRIVER=wayland", "SHELL=/usr/bin/fish", "SHLVL=1", "SUDO_EDITOR=/home/user/.local/share/bob/nvim-bin/nvim", "SYSTEMD_EXEC_PID=4132", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "WLR_NO_HARDWARE_CURSORS=1", "XCURSOR_SIZE=24", "XCURSOR_THEME=Fluent-dark-cursors", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_RUNTIME_DIR=/run/user/1000/", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=Hyprland", "XDG_SESSION_ID=3", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONEREPARENTING=1", "_JAVA_AWT_WM_NONREPARENTING=1", "__GLX_VENDOR_LIBRARY_NAME=nvidia")
+     0.131 D | "Java detection" progress: 4 / 14
+     0.131 D | Java checker has failed to start.
+     0.131 D | Process environment:
+     0.131 D | QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DISPLAY=:0", "EDITOR=nvim", "GBM_BACKEND=nvidia-drm", "GDK_BACKEND=wayland,x11", "GTK_THEME=Nordic", "HOME=/home/dennis", "HYPRLAND_CMD=Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=_1679190469", "INVOCATION_ID=48c2875ea9d747ca933e8952be3b61fc", "LANG=en_US.UTF-8", "LD_LIBRARY_PATH=", "LIBVA_DRIVER_NAME=nvidia", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "PATH=/home/dennis/.local/share/bob/nvim-bin:/home/dennis/.local/bin:/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_AUTO_SCREEN_SCALE_FACTOR=1", "QT_QPA_PLATFORM=wayland;xcb", "QT_QPA_PLATFORMTHEME=qt5ct", "QT_WAYLAND_DISABLE_WINDOWDECORATION=1", "SDL_VIDEODRIVER=wayland", "SHELL=/usr/bin/fish", "SHLVL=1", "SUDO_EDITOR=/home/user/.local/share/bob/nvim-bin/nvim", "SYSTEMD_EXEC_PID=4132", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "WLR_NO_HARDWARE_CURSORS=1", "XCURSOR_SIZE=24", "XCURSOR_THEME=Fluent-dark-cursors", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_RUNTIME_DIR=/run/user/1000/", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=Hyprland", "XDG_SESSION_ID=3", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONEREPARENTING=1", "_JAVA_AWT_WM_NONREPARENTING=1", "__GLX_VENDOR_LIBRARY_NAME=nvidia")
+     0.131 D | Native environment:
+     0.131 D | QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DISPLAY=:0", "EDITOR=nvim", "GBM_BACKEND=nvidia-drm", "GDK_BACKEND=wayland,x11", "GTK_THEME=Nordic", "HOME=/home/dennis", "HYPRLAND_CMD=Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=_1679190469", "INVOCATION_ID=48c2875ea9d747ca933e8952be3b61fc", "LANG=en_US.UTF-8", "LIBVA_DRIVER_NAME=nvidia", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "PATH=/home/dennis/.local/share/bob/nvim-bin:/home/dennis/.local/bin:/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_AUTO_SCREEN_SCALE_FACTOR=1", "QT_QPA_PLATFORM=wayland;xcb", "QT_QPA_PLATFORMTHEME=qt5ct", "QT_WAYLAND_DISABLE_WINDOWDECORATION=1", "SDL_VIDEODRIVER=wayland", "SHELL=/usr/bin/fish", "SHLVL=1", "SUDO_EDITOR=/home/user/.local/share/bob/nvim-bin/nvim", "SYSTEMD_EXEC_PID=4132", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "WLR_NO_HARDWARE_CURSORS=1", "XCURSOR_SIZE=24", "XCURSOR_THEME=Fluent-dark-cursors", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_RUNTIME_DIR=/run/user/1000/", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=Hyprland", "XDG_SESSION_ID=3", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONEREPARENTING=1", "_JAVA_AWT_WM_NONREPARENTING=1", "__GLX_VENDOR_LIBRARY_NAME=nvidia")
+     0.131 D | "Java detection" progress: 5 / 14
+     0.258 D | Task "Net::Download(0x561729cf03e0)" starting for the first time
+     0.258 D | Downloading  "https://i18n.prismlauncher.org/index_v2.json"
+     0.258 D | Dir changed: "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/translations"
+     0.344 D | STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
+     0.345 W | STDERR ""
+     0.345 D | Java checker finished with status  QProcess::NormalExit  exit code  0
+     0.345 D | Java checker succeeded.
+     0.345 D | "Java detection" progress: 6 / 14
+     0.355 D | STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
+     0.355 W | STDERR ""
+     0.355 D | Java checker finished with status  QProcess::NormalExit  exit code  0
+     0.355 D | Java checker succeeded.
+     0.355 D | "Java detection" progress: 7 / 14
+     0.360 D | STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
+     0.360 W | STDERR ""
+     0.360 D | Java checker finished with status  QProcess::NormalExit  exit code  0
+     0.360 D | Java checker succeeded.
+     0.360 D | "Java detection" progress: 8 / 14
+     0.362 D | STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
+     0.362 W | STDERR ""
+     0.362 D | Java checker finished with status  QProcess::NormalExit  exit code  0
+     0.362 D | Java checker succeeded.
+     0.362 D | "Java detection" progress: 9 / 14
+     0.383 D | STDOUT "os.arch=amd64\njava.version=17.0.6\njava.vendor=N/A\n"
+     0.383 W | STDERR ""
+     0.383 D | Java checker finished with status  QProcess::NormalExit  exit code  0
+     0.383 D | Java checker succeeded.
+     0.383 D | "Java detection" progress: 10 / 14
+     0.393 D | STDOUT "os.arch=amd64\njava.version=17.0.6\njava.vendor=N/A\n"
+     0.393 W | STDERR ""
+     0.393 D | Java checker finished with status  QProcess::NormalExit  exit code  0
+     0.393 D | Java checker succeeded.
+     0.393 D | "Java detection" progress: 11 / 14
+     0.395 D | STDOUT "os.arch=amd64\njava.version=19.0.2\njava.vendor=N/A\n"
+     0.395 W | STDERR ""
+     0.396 D | Java checker finished with status  QProcess::NormalExit  exit code  0
+     0.396 D | Java checker succeeded.
+     0.396 D | "Java detection" progress: 12 / 14
+     0.397 D | STDOUT "os.arch=amd64\njava.version=19.0.2\njava.vendor=N/A\n"
+     0.397 W | STDERR ""
+     0.397 D | Java checker finished with status  QProcess::NormalExit  exit code  0
+     0.397 D | Java checker succeeded.
+     0.397 D | "Java detection" progress: 13 / 14
+     0.410 D | STDOUT "os.arch=amd64\njava.version=19.0.2\njava.vendor=N/A\n"
+     0.411 W | STDERR ""
+     0.411 D | Java checker finished with status  QProcess::NormalExit  exit code  0
+     0.411 D | Java checker succeeded.
+     0.411 D | "Java detection" progress: 14 / 14
+     0.412 D | Task "JavaCheckerJob(0x561729bae630)" succeeded
+     0.412 D | Found the following valid Java installations:
+     0.412 D |   "19.0.2" "amd64" "java"
+     0.412 D |   "17.0.6" "amd64" "/usr/lib/jvm/java-17-openjdk/bin/java"
+     0.412 D |   "19.0.2" "amd64" "/usr/lib/jvm/java-19-openjdk/bin/java"
+     0.412 D |   "1.8.0_362" "amd64" "/usr/lib/jvm/java-8-openjdk/jre/bin/java"
+     0.412 D |   "1.8.0_362" "amd64" "/usr/lib/jvm/java-8-openjdk/bin/java"
+     0.412 D |   "17.0.6" "amd64" "/usr/lib64/jvm/java-17-openjdk/bin/java"
+     0.412 D |   "19.0.2" "amd64" "/usr/lib64/jvm/java-19-openjdk/bin/java"
+     0.412 D |   "1.8.0_362" "amd64" "/usr/lib64/jvm/java-8-openjdk/jre/bin/java"
+     0.412 D |   "1.8.0_362" "amd64" "/usr/lib64/jvm/java-8-openjdk/bin/java"
+     0.412 D | Task "JavaListLoadTask(0x561729d60200)" succeeded
+     0.415 D | "Running java checker: /usr/lib/jvm/java-19-openjdk/bin/java-Xms512m -Xmx8192m -jar /usr/share/prismlauncher/JavaCheck.jar"
+     0.505 D | STDOUT "os.arch=amd64\njava.version=19.0.2\njava.vendor=N/A\n"
+     0.505 W | STDERR ""
+     0.505 D | Java checker finished with status  QProcess::NormalExit  exit code  0
+     0.506 D | Java checker succeeded.
+     0.649 D | Download succeeded: "https://i18n.prismlauncher.org/index_v2.json"
+     0.649 D | Task "NetJob(Translations Index)" succeeded
+     0.649 D | Got translations index!
+     0.649 D | Dir changed: "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/translations"
+     0.718 D | DeviceFlow::setLinked: true
+     0.718 D | AuthFlow: "Logging in as an Xbox user."
+     0.718 D | First layer of XBox auth ... commencing.
+     0.718 D | New token expires in QDateTime(2023-03-19 03:07:13.309 UTC Qt::UTC) seconds
+     0.956 D | Parsing "UToken" :
+     0.956 D | "UToken" is valid.
+     0.956 D | AuthFlow: "Getting authorization to access Xbox services."
+     0.956 D | Getting authorization token for  "http://xboxlive.com"
+     1.138 D | Parsing "Xbox" :
+     1.139 D | "Xbox" is valid.
+     1.139 D | AuthFlow: "Getting authorization to access Mojang services."
+     1.139 D | Getting authorization token for  "rp://api.minecraftservices.com/"
+     1.272 D | Parsing "Mojang" :
+     1.272 D | "Mojang" is valid.
+     1.272 D | AuthFlow: "Accessing Mojang services."
+     1.272 D | Getting Minecraft access token...
+     1.534 D | Parsing Mojang response...
+     1.534 D | Mojang response is valid.
+     1.534 D | AuthFlow: "Fetching Xbox profile."
+     1.534 D | Getting Xbox profile...
+     1.900 D | AuthFlow: "Determining game ownership."
+     1.900 D | Getting entitlements...
+     2.739 D | Parsing Minecraft entitlements...
+     2.740 D | AuthFlow: "Fetching the Minecraft profile."
+     2.875 D | Parsing Minecraft profile...
+     2.875 D | AuthFlow: "Getting skin."
+     3.010 D | Task "MSASilent(0x561729bb3950)" succeeded
+     3.010 D | Writing account list to "accounts.json"
+     3.010 D | Building JSON data structure.
+     3.010 D | Building account array.
+     3.010 D | Writing account list to file.
+     3.020 D | Saved account list to "accounts.json"
+     3.020 D | RefreshSchedule: Background account refresh succeeded
+     3.235 D | "Running java checker: /usr/lib/jvm/java-8-openjdk/bin/java-Xms512m -Xmx8192m -jar /usr/share/prismlauncher/JavaCheck.jar"
+     3.290 D | STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
+     3.290 W | STDERR ""
+     3.290 D | Java checker finished with status  QProcess::NormalExit  exit code  0
+     3.291 D | Java checker succeeded.
+     7.345 D | Wizard result = 1
+     7.357 D | Reloading news.
+     7.357 D | Task "NetJob(News RSS Feed)" starting for the first time
+     7.357 D | Task "ComponentUpdateTask(0x561729fc6fc0)" starting for the first time
+     7.357 D | Loading components
+     7.358 D | Component list save is scheduled for "Skyblock 1.8.9"
+     7.362 D | Resolving dependencies
+     7.362 D | "Req: net.minecraft == 1.8.9" Is met.
+     7.362 D | "Req: org.lwjgl" Is met.
+     7.362 D | Task "ComponentUpdateTask(0x561729fc6fc0)" succeeded
+     7.362 D | Component list update/resolve task succeeded for "Skyblock 1.8.9"
+     7.369 D | <> Main window shown.
+     7.369 D | Task "Net::Download(0x561729d35450)" starting for the first time
+     7.369 D | Downloading  "https://prismlauncher.org/feed/feed.xml"
+     7.642 D | Download succeeded: "https://prismlauncher.org/feed/feed.xml"
+     7.642 D | Task "NetJob(News RSS Feed)" succeeded
+     7.642 D | Finished loading RSS feed.
+     7.644 D | Loaded news entry "[SECURITY UPDATE] Prism Launcher Release 6.3, now available"
+     7.644 D | Loaded news entry "Prism Launcher Release 6.2, now available"
+     7.644 D | Loaded news entry "Prism Launcher Release 6.1, now available"
+     7.644 D | Loaded news entry "Prism Launcher Release 6.0, now available"
+     7.645 D | Loaded news entry "Prism Launcher Release 5.2, now available"
+     7.645 D | Loaded news entry "Prism Launcher Release 5.1, now available"
+     7.645 D | Loaded news entry "Prism Launcher Release 5.0, now available"
+     7.645 D | Loaded news entry "PolyMC Update 1.4.2, now available"
+     7.645 D | Loaded news entry "PolyMC Update 1.4.1, now available"
+     7.645 D | Loaded news entry "PolyMC Update 1.4.0, now available"
+     7.645 D | Loaded news entry "PolyMC Update 1.3.2, now available"
+     7.645 D | Loaded news entry "PolyMC Update 1.3.1, now available"
+     7.645 D | Loaded news entry "PolyMC Update 1.3.0, now available"
+     7.645 D | Loaded news entry "PolyMC Update 1.2.2, now available (CurseForge Hotfix)"
+     7.645 D | Loaded news entry "PolyMC Update 1.2.1, now available"
+     7.645 D | Loaded news entry "PolyMC Update 1.2.0, now available"
+     7.645 D | Loaded news entry "PolyMC Update 1.1.1, now available"
+     7.645 D | Loaded news entry "PolyMC Update 1.1.0, now available"
+     7.645 D | Loaded news entry "Moving on"
+     7.645 D | Loaded news entry "Modrinth support and Mod downloading"
+     7.645 D | Loaded news entry "New maintainers and step down."
+     7.645 D | News loading succeeded.
+     9.692 D | Task "LaunchController(0x561729ff5670)" starting for the first time
+     9.702 D | Instance-type specific settings were loaded!
+    10.000 D | Task "LaunchTask(0x7f6b60002980)" starting for the first time
+    10.000 D | Task "TextPrint(0x56172a09c5b0)" starting for the first time
+    10.001 D | Task "TextPrint(0x56172a09c5b0)" succeeded
+    10.001 D | Task "TextPrint(0x56172a09b630)" starting for the first time
+    10.001 D | Task "TextPrint(0x56172a09b630)" succeeded
+    10.001 D | Task "TextPrint(0x56172a076950)" starting for the first time
+    10.001 D | Task "TextPrint(0x56172a076950)" succeeded
+    10.001 D | Task "TextPrint(0x56172a072b80)" starting for the first time
+    10.001 D | Task "TextPrint(0x56172a072b80)" succeeded
+    10.001 D | Task "CheckJava(0x56172a049bd0)" starting for the first time
+    10.002 D | "Running java checker: /usr/lib/jvm/java-8-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+    10.053 D | STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
+    10.053 W | STDERR ""
+    10.053 D | Java checker finished with status  QProcess::NormalExit  exit code  0
+    10.053 D | Java checker succeeded.
+    10.078 C | "Error changing setting JavaVendor. Setting doesn't exist."
+    10.084 D | Task "CheckJava(0x56172a049bd0)" succeeded
+    10.084 D | Task "CreateGameFolders(0x56172a072370)" starting for the first time
+    10.084 D | Task "CreateGameFolders(0x56172a072370)" succeeded
+    10.084 D | Task "ClaimAccount(0x56172a072d00)" starting for the first time
+    10.084 D | Writing account list to "accounts.json"
+    10.084 D | Building JSON data structure.
+    10.084 D | Building account array.
+    10.084 D | Writing account list to file.
+    10.088 D | Saved account list to "accounts.json"
+    10.088 W | Profile "b7ce62bf7d6b4e11bd0c2d73b7b0d869" is now in use.
+    10.088 D | Task "ClaimAccount(0x56172a072d00)" succeeded
+    10.088 D | Task "Update(0x56172a06ba80)" starting for the first time
+    10.089 D | Task "MinecraftUpdate(0x7f6b58001980)" starting for the first time
+    10.089 D | Component list save performed now for "Skyblock 1.8.9"
+    10.092 D | Task "ComponentUpdateTask(0x56172a0e4050)" starting for the first time
+    10.092 D | Loading components
+    10.092 D | Index is already loaded
+    10.092 D | Component list save is scheduled for "Skyblock 1.8.9"
+    10.092 D | Resolving dependencies
+    10.092 D | "Req: net.minecraft == 1.8.9" Is met.
+    10.092 D | "Req: org.lwjgl" Is met.
+    10.092 D | Task "ComponentUpdateTask(0x56172a0e4050)" succeeded
+    10.092 D | Component list update/resolve task succeeded for "Skyblock 1.8.9"
+    10.092 D | Task "FoldersTask(0x56172a083b10)" starting for the first time
+    10.092 D | Task "FoldersTask(0x56172a083b10)" succeeded
+    10.092 D | Task "LibrariesTask(0x56172a0e3ab0)" starting for the first time
+    10.092 D | "Skyblock 1.8.9" : downloading libraries
+    10.092 D | Applying "org.lwjgl" GOOD
+    10.093 D | Applying "net.minecraft" GOOD
+    10.093 D | Applying "net.minecraftforge" GOOD
+    10.243 D | Task "NetJob(Libraries for instance Skyblock 1.8.9)" starting for the first time
+    10.244 D | Task "NetJob(Libraries for instance Skyblock 1.8.9)" succeeded
+    10.244 D | Task "LibrariesTask(0x56172a0e3ab0)" succeeded
+    10.244 D | Task "FMLLibrariesTask(0x56172a073f80)" starting for the first time
+    10.244 D | Task "FMLLibrariesTask(0x56172a073f80)" succeeded
+    10.244 D | Task "AssetUpdateTask(0x56172a0e3bb0)" starting for the first time
+    10.244 W | Removing cache entry because of old age!
+    10.244 D | Asset index SHA1: "f6ad102bcaa53b1a58358f16e376d548d44933ec"
+    10.244 D | "Skyblock 1.8.9" : Starting asset index download
+    10.244 D | Task "NetJob(Asset index for Skyblock 1.8.9)" starting for the first time
+    10.245 D | Task "Net::Download(0x561729cc14c0)" starting for the first time
+    10.245 D | Downloading  "https://piston-meta.mojang.com/v1/packages/f6ad102bcaa53b1a58358f16e376d548d44933ec/1.8.json"
+    10.390 D | Download succeeded: "https://piston-meta.mojang.com/v1/packages/f6ad102bcaa53b1a58358f16e376d548d44933ec/1.8.json"
+    10.390 D | Task "NetJob(Asset index for Skyblock 1.8.9)" succeeded
+    10.390 D | "Skyblock 1.8.9" : Finished asset index download
+    10.394 D | Task "AssetUpdateTask(0x56172a0e3bb0)" succeeded
+    10.394 D | Task "MinecraftUpdate(0x7f6b58001980)" succeeded
+    10.394 D | Task "Update(0x56172a06ba80)" succeeded
+    10.394 D | Task "ModMinecraftJar(0x56172a072ee0)" starting for the first time
+    10.394 D | Task "ModMinecraftJar(0x56172a072ee0)" succeeded
+    10.394 D | Task "ScanModFolders(0x56172a072250)" starting for the first time
+    10.395 D | Task "ConcurrentTask(0x561729db5bc8)" starting for the first time
+    10.395 D | Task "ConcurrentTask(0x561729db5bc8)" starting for the first time
+    10.395 D | Task "ConcurrentTask(0x561729db5bc8)" starting for the first time
+k "PrintInstanceInfo(0x56172a06ea80)" starting for the first time
+    10.415 D | Task "PrintInstanceInfo(0x56172a06ea80)" succeeded
+    10.415 D | Task "ExtractNatives(0x56172a073080)" starting for the first time
+    10.424 D | Task "ExtractNatives(0x56172a073080)" succeeded
+    10.424 D | Task "ReconstructAssets(0x56172a0721c0)" starting for the first time
+    10.424 D | reconstructAssets "assets" "assets/indexes" "assets/objects" "assets/virtual" "assets/virtual/1.8"
+    10.426 D | Task "ReconstructAssets(0x56172a0721c0)" succeeded
+    10.426 D | Task "VerifyJavaInstall(0x56172a06c1e0)" starting for the first time
+    10.426 D | Task "VerifyJavaInstall(0x56172a06c1e0)" succeeded
+    10.426 D | Task "LauncherPartLaunch(0x561729db5170)" starting for the first time
+    10.430 D | "-Xms512m -Xmx4096m -Duser.language=en -Djava.library.path=/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/instances/1.8.9/natives -cp /usr/share/prismlauncher/NewLaunch.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/jinput/jinput/2.0.5/jinput-2.0.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/jutils/jutils/1.0.0/jutils-1.0.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl/lwjgl/2.9.4-nightly-20150209/lwjgl-2.9.4-nightly-20150209.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl/lwjgl_util/2.9.4-nightly-20150209/lwjgl_util-2.9.4-nightly-20150209.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/netty/1.8.8/netty-1.8.8.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/oshi-project/oshi-core/1.1/oshi-core-1.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/dev/jna/jna/3.4.0/jna-3.4.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/dev/jna/platform/3.4.0/platform-3.4.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/ibm/icu/icu4j-core-mojang/51.2/icu4j-core-mojang-51.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/codecjorbis/20101023/codecjorbis-20101023.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/codecwav/20101023/codecwav-20101023.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/libraryjavasound/20101123/libraryjavasound-20101123.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/librarylwjglopenal/20100824/librarylwjglopenal-20100824.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/paulscode/soundsystem/20120107/soundsystem-20120107.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-all/4.0.23.Final/netty-all-4.0.23.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/google/guava/guava/17.0/guava-17.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/authlib/1.5.21/authlib-1.5.21.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/realms/1.7.59/realms-1.7.59.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/httpcomponents/httpclient/4.3.3/httpclient-4.3.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-api/2.0-beta9-fixed/log4j-api-2.0-beta9-fixed.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-core/2.0-beta9-fixed/log4j-core-2.0-beta9-fixed.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/tv/twitch/twitch/6.5/twitch-6.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/minecraftforge/forge/1.8.9-11.15.1.2318-1.8.9/forge-1.8.9-11.15.1.2318-1.8.9-universal.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/minecraft/launchwrapper/1.12/launchwrapper-1.12.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/ow2/asm/asm-all/5.0.3/asm-all-5.0.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/jline/jline/2.13/jline-2.13.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/typesafe/akka/akka-actor_2.11/2.3.3/akka-actor_2.11-2.3.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/typesafe/config/1.2.1/config-1.2.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-actors-migration_2.11/1.1.0/scala-actors-migration_2.11-1.1.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-compiler/2.11.1/scala-compiler-2.11.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/plugins/scala-continuations-library_2.11/1.0.2/scala-continuations-library_2.11-1.0.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/plugins/scala-continuations-plugin_2.11.1/1.0.2/scala-continuations-plugin_2.11.1-1.0.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-library/2.11.1/scala-library-2.11.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-parser-combinators_2.11/1.0.1/scala-parser-combinators_2.11-1.0.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-reflect/2.11.1/scala-reflect-2.11.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/scala-lang/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/lzma/lzma/0.0.1/lzma-0.0.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/java3d/vecmath/1.5.2/vecmath-1.5.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/minecraft/1.8.9/minecraft-1.8.9-client.jar org.prismlauncher.EntryPoint"
+    10.490 D | Task "ConcurrentTask(0x561729db5bc8)" succeeded
+    14.843 D | Component list save performed now for "Skyblock 1.8.9"
+    40.639 D | [HttpMetaCache] Saving metacache with 20 entries
+   101.491 D | Task "LauncherPartLaunch(0x561729db5170)" succeeded
+   101.492 D | Writing account list to "accounts.json"
+   101.492 D | Building JSON data structure.
+   101.492 D | Building account array.
+   101.492 D | Writing account list to file.
+   101.501 D | Saved account list to "accounts.json"
+   101.502 W | Profile "b7ce62bf7d6b4e11bd0c2d73b7b0d869" is no longer in use.
+   101.514 D | Task "LaunchTask(0x7f6b60002980)" succeeded
+   101.514 D | Task "LaunchController(0x561729ff5670)" succeeded

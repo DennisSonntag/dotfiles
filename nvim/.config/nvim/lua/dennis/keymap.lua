@@ -12,20 +12,27 @@ keymap("n", "<Right>", "<Nop>")
 vim.g.NetrwIsOpen = false
 
 -- Define a function to toggle netrw
+-- Define a function to toggle netrw
 function ToggleNetrw()
-	if vim.g.NetrwIsOpen then
-		local i = vim.fn.bufnr("$")
-		while i >= 1 do
-			if vim.fn.getbufvar(i, "&filetype") == "netrw" then
-				vim.cmd("bwipeout " .. i)
-			end
-			i = i - 1
-		end
-		vim.g.NetrwIsOpen = false
+	-- Check if any buffers exist
+
+	if vim.g.alpha_menu then
+		vim.cmd("Alpha explorer")
 	else
-		vim.g.NetrwIsOpen = true
-		vim.cmd("silent ex")
-		vim.cmd("Explore")
+		if vim.g.NetrwIsOpen then
+			local i = vim.fn.bufnr("$")
+			while i >= 1 do
+				if vim.fn.getbufvar(i, "&filetype") == "netrw" then
+					vim.cmd("bwipeout " .. i)
+				end
+				i = i - 1
+			end
+			vim.g.NetrwIsOpen = false
+		else
+			vim.cmd("silent ex")
+			vim.cmd("Explore")
+			vim.g.NetrwIsOpen = true
+		end
 	end
 end
 
@@ -98,7 +105,7 @@ keymap("n", "<leader>ss", "<C-w>R")
 keymap("n", "<leader>stv", "<C-w>t<C-w>H")
 keymap("n", "<leader>sth", "<C-w>t<C-w>K")
 
-keymap("n", "<A-Left>", "3 0 <C-w>>")
-keymap("n", "<A-Right>", "3 0 <C-w><")
+keymap("n", "<A-Right>", "3 0 <C-w>>")
+keymap("n", "<A-Left>", "3 0 <C-w><")
 keymap("n", "<A-Down>", "3 0 <C-w>-")
 keymap("n", "<A-Up>", "3 0 <C-w>+")

@@ -1,5 +1,5 @@
-    0.013 D <> Log initialized.
-    0.013 D <> No migration needed from "PolyMC"
+    0.012 D <> Log initialized.
+    0.012 D <> No migration needed from "PolyMC"
     0.013 D <> No migration needed from "MultiMC"
     0.013 D "Prism Launcher" , (c) 2013-2021  "Prism Launcher Contributors\n© 2021-2022 PolyMC Contributors \n© 2012-2021 MultiMC Contributors"
     0.013 D Version                    :  "6.1"
@@ -33,7 +33,7 @@
     0.029 D [Theme] Loading Built-in Theme: "bright"
     0.029 D [Theme] Theme Folder Path:  "/home/dennis/.local/share/PrismLauncher/themes"
     0.029 D [Theme] Loading JSON Theme from: "/home/dennis/.local/share/PrismLauncher/themes/custom/theme.json"
-    0.029 D [Theme] <> Widget themes initialized.
+    0.030 D [Theme] <> Widget themes initialized.
     0.030 D Instance path              :  "instances"
     0.030 D Loading Instances...
     0.030 D Discovering instances in "/home/dennis/.local/share/PrismLauncher/instances"
@@ -42,221 +42,339 @@
     0.030 D Will load group list now.
     0.030 D Group list loaded.
     0.030 D Loaded instance  "Skyblock 1.8.9"  from  "/home/dennis/.local/share/PrismLauncher/instances/1.8.9"
-    0.030 D Loaded instance  "Survival 1.19.3"  from  "/home/dennis/.local/share/PrismLauncher/instances/1.19.3"
+    0.031 D Loaded instance  "Survival 1.19.3"  from  "/home/dennis/.local/share/PrismLauncher/instances/1.19.3"
     0.031 D <> Instances loaded.
     0.031 D Loading accounts...
-    0.031 D AccountList: Queued default account with internal ID  "f3b59f297c5140bcbb600ce7fe557161"  to refresh first
-    0.031 D Task "MSASilent(0x563ab8369400)" starting for the first time
+    0.031 D AccountList: Queued default account with internal ID  "1056ea1ac2c0473ea6252c195a6261bc"  to refresh first
+    0.031 D Task "MSASilent(0x55cf8b395130)" starting for the first time
     0.031 D AuthFlow: "Logging in with Microsoft account."
-    0.031 D DeviceFlow::refresh: Token: ... "rm2kQ$$"
-    0.036 D RefreshSchedule: Processing account  "Speed6511"  with internal ID  "f3b59f297c5140bcbb600ce7fe557161"
-    0.036 D <> Accounts loaded.
-    0.038 D <> Cache initialized.
-    0.038 D Downloading Translations Index...
-    0.038 D Task "NetJob(Translations Index)" starting for the first time
-    0.038 D <> Icon theme set.
-    0.038 D [Theme] applying theme "Dark"
-    0.038 D <> Application theme set.
-    0.057 D Reloading news.
-    0.057 D Task "NetJob(News RSS Feed)" starting for the first time
-    0.057 D Task "ComponentUpdateTask(0x563ab859c510)" starting for the first time
-    0.057 D Loading components
-    0.061 D Component list save is scheduled for "Survival 1.19.3"
-    0.065 D Resolving dependencies
-    0.065 D "Req: net.fabricmc.intermediary" Is met.
-    0.065 D "Req: net.minecraft == 1.19.3" Is met.
-    0.065 D "Req: org.lwjgl3" Is met.
-    0.065 D Task "ComponentUpdateTask(0x563ab859c510)" succeeded
-    0.065 D Component list update/resolve task succeeded for "Survival 1.19.3"
-    0.105 D <> Main window shown.
-    0.107 D Task "Net::Download(0x563ab84934e0)" starting for the first time
-    0.107 D Downloading  "https://i18n.prismlauncher.org/index_v2.json"
-    0.108 D Task "Net::Download(0x563ab84aa850)" starting for the first time
-    0.108 D Downloading  "https://prismlauncher.org/feed/feed.xml"
-    0.123 D Dir changed: "/home/dennis/.local/share/PrismLauncher/translations"
-    0.165 D Download succeeded: "https://i18n.prismlauncher.org/index_v2.json"
-    0.165 D Task "NetJob(Translations Index)" succeeded
-    0.165 D Got translations index!
-    0.167 D Dir changed: "/home/dennis/.local/share/PrismLauncher/translations"
-    0.373 D Download succeeded: "https://prismlauncher.org/feed/feed.xml"
-    0.373 D Task "NetJob(News RSS Feed)" succeeded
-    0.373 D Finished loading RSS feed.
-    0.375 D Loaded news entry "Prism Launcher Release 6.1, now available"
-    0.375 D Loaded news entry "Prism Launcher Release 6.0, now available"
-    0.375 D Loaded news entry "Prism Launcher Release 5.2, now available"
-    0.375 D Loaded news entry "Prism Launcher Release 5.1, now available"
-    0.375 D Loaded news entry "Prism Launcher Release 5.0, now available"
-    0.375 D Loaded news entry "PolyMC Update 1.4.2, now available"
-    0.375 D Loaded news entry "PolyMC Update 1.4.1, now available"
-    0.375 D Loaded news entry "PolyMC Update 1.4.0, now available"
-    0.375 D Loaded news entry "PolyMC Update 1.3.2, now available"
-    0.375 D Loaded news entry "PolyMC Update 1.3.1, now available"
-    0.375 D Loaded news entry "PolyMC Update 1.3.0, now available"
-    0.375 D Loaded news entry "PolyMC Update 1.2.2, now available (CurseForge Hotfix)"
-    0.375 D Loaded news entry "PolyMC Update 1.2.1, now available"
-    0.375 D Loaded news entry "PolyMC Update 1.2.0, now available"
-    0.375 D Loaded news entry "PolyMC Update 1.1.1, now available"
-    0.375 D Loaded news entry "PolyMC Update 1.1.0, now available"
-    0.375 D Loaded news entry "Moving on"
-    0.375 D Loaded news entry "Modrinth support and Mod downloading"
-    0.375 D Loaded news entry "New maintainers and step down."
-    0.375 D News loading succeeded.
-    0.668 D DeviceFlow::setLinked: true
-    0.668 D AuthFlow: "Logging in as an Xbox user."
-    0.669 D First layer of XBox auth ... commencing.
-    0.669 D New token expires in QDateTime(2023-01-28 22:22:03.937 UTC Qt::UTC) seconds
-    1.035 D Parsing "UToken" :
-    1.035 D "UToken" is valid.
-    1.035 D AuthFlow: "Getting authorization to access Xbox services."
-    1.035 D Getting authorization token for  "http://xboxlive.com"
-    1.196 D Parsing "Xbox" :
-    1.196 D "Xbox" is valid.
-    1.196 D AuthFlow: "Getting authorization to access Mojang services."
-    1.196 D Getting authorization token for  "rp://api.minecraftservices.com/"
-    1.264 D Parsing "Mojang" :
-    1.264 D "Mojang" is valid.
-    1.264 D AuthFlow: "Accessing Mojang services."
-    1.264 D Getting Minecraft access token...
-    1.487 D Parsing Mojang response...
-    1.487 D Mojang response is valid.
-    1.487 D AuthFlow: "Fetching Xbox profile."
-    1.487 D Getting Xbox profile...
-    1.800 D Task "LaunchController(0x563ab85cd1d0)" starting for the first time
-    1.811 D Instance-type specific settings were loaded!
-    1.874 D AuthFlow: "Determining game ownership."
-    1.874 D Getting entitlements...
-    2.164 D Parsing Minecraft entitlements...
-    2.165 D AuthFlow: "Fetching the Minecraft profile."
-    2.270 D Parsing Minecraft profile...
-    2.271 D AuthFlow: "Getting skin."
-    2.315 D Task "MSASilent(0x563ab8369400)" succeeded
-    2.315 D Writing account list to "accounts.json"
-    2.315 D Building JSON data structure.
-    2.315 D Building account array.
-    2.315 D Writing account list to file.
-    2.318 D Saved account list to "accounts.json"
-    2.319 D RefreshSchedule: Background account refresh succeeded
-    2.533 D Task "LaunchTask(0x563ab839b530)" starting for the first time
-    2.533 D Task "TextPrint(0x563ab8713ce0)" starting for the first time
-    2.534 D Task "TextPrint(0x563ab8713ce0)" succeeded
-    2.534 D Task "TextPrint(0x563ab84b8440)" starting for the first time
-    2.534 D Task "TextPrint(0x563ab84b8440)" succeeded
-    2.534 D Task "TextPrint(0x563ab85d43e0)" starting for the first time
-    2.534 D Task "TextPrint(0x563ab85d43e0)" succeeded
-    2.534 D Task "TextPrint(0x563ab85bdc00)" starting for the first time
-    2.534 D Task "TextPrint(0x563ab85bdc00)" succeeded
-    2.534 D Task "CheckJava(0x563ab8704010)" starting for the first time
-    2.534 C Task "CheckJava(0x563ab8704010)" failed:  "Java path is not valid."
-    2.550 C Task "LaunchTask(0x563ab839b530)" failed:  "Java path is not valid."
-    2.567 D Component list save performed now for "Survival 1.19.3"
-    2.571 D Task "ComponentUpdateTask(0x563ab889e0f0)" starting for the first time
-    2.571 D Loading components
-    2.571 D Index is already loaded
-    2.571 D Component list save is scheduled for "Survival 1.19.3"
-    2.571 D Resolving dependencies
-    2.571 D "Req: net.fabricmc.intermediary" Is met.
-    2.571 D "Req: net.minecraft == 1.19.3" Is met.
-    2.571 D "Req: org.lwjgl3" Is met.
-    2.571 D Task "ComponentUpdateTask(0x563ab889e0f0)" succeeded
-    2.571 D Component list update/resolve task succeeded for "Survival 1.19.3"
-    2.573 D Task "NetJob(Download of meta file org.lwjgl3/index.json)" starting for the first time
-    2.657 D Applying "org.lwjgl3" GOOD
-    2.658 D Applying "net.minecraft" GOOD
-    2.658 D Applying "net.fabricmc.intermediary" GOOD
-    2.658 D Applying "net.fabricmc.fabric-loader" GOOD
-    2.676 C Task "LaunchController(0x563ab85cd1d0)" failed:  "Java path is not valid."
-    2.688 D Task "Net::Download(0x563ab886cfc0)" starting for the first time
-    2.688 D Downloading  "https://meta.prismlauncher.org/v1/org.lwjgl3/index.json"
-    2.718 D Download succeeded: "https://meta.prismlauncher.org/v1/org.lwjgl3/index.json"
-    2.718 D Task "NetJob(Download of meta file org.lwjgl3/index.json)" succeeded
-    7.320 D Component list save performed now for "Survival 1.19.3"
-   10.002 D Task "JavaListLoadTask(0x563ab8f1d2c0)" starting for the first time
-   10.002 D Linux Java detection incomplete - defaulting to "java"
-   10.002 D Probing the following Java paths: 
-   10.002 D   "java"
-   10.002 D   "/usr/lib/jvm/java-19-openjdk/jre/bin/java"
-   10.002 D   "/usr/lib/jvm/java-19-openjdk/bin/java"
-   10.002 D   "/usr/lib/jvm/java-8-openjdk/jre/bin/java"
-   10.002 D   "/usr/lib/jvm/java-8-openjdk/bin/java"
-   10.002 D   "/usr/lib64/jvm/java-19-openjdk/jre/bin/java"
-   10.002 D   "/usr/lib64/jvm/java-19-openjdk/bin/java"
-   10.002 D   "/usr/lib64/jvm/java-8-openjdk/jre/bin/java"
-   10.002 D   "/usr/lib64/jvm/java-8-openjdk/bin/java"
-   10.002 D   ""
-   10.002 D Task "JavaCheckerJob(0x563ab8c0aec0)" starting for the first time
-   10.002 D "Java detection"  started.
-   10.002 D "Running java checker: java-jar /usr/share/prismlauncher/JavaCheck.jar"
-   10.003 D "Running java checker: /usr/lib/jvm/java-19-openjdk/jre/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
-   10.034 D "Running java checker: /usr/lib/jvm/java-19-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
-   10.034 D "Running java checker: /usr/lib/jvm/java-8-openjdk/jre/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
-   10.036 D "Running java checker: /usr/lib/jvm/java-8-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
-   10.037 D "Running java checker: /usr/lib64/jvm/java-19-openjdk/jre/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
-   10.039 D "Running java checker: /usr/lib64/jvm/java-19-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
-   10.040 D "Running java checker: /usr/lib64/jvm/java-8-openjdk/jre/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
-   10.042 D "Running java checker: /usr/lib64/jvm/java-8-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
-   10.046 D "Running java checker: -jar /usr/share/prismlauncher/JavaCheck.jar"
-   10.046 D Java checker has failed to start.
-   10.046 D Process environment:
-   10.046 D QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DEBUGINFOD_URLS=https://debuginfod.archlinux.org ", "DESKTOP_STARTUP_ID=rofi/prismlauncher/11355-0-archlinux_TIME678722", "DISPLAY=:0", "GDK_BACKEND=wayland,X11", "HOME=/home/dennis", "HYPRLAND_CMD=/usr/bin/Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=af4b9700b7a1a1b36439dc51334b9aeaadcfcd41_1674940281", "INVOCATION_ID=1fcd1b39ecd141bc9c82bd231fd52c25", "LANG=en_US.UTF-8", "LD_LIBRARY_PATH=", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "OLDPWD=/home/dennis", "PATH=/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_QPA_PLATFORM=wayland", "QT_QPA_PLATFORMTHEME=qt5ct", "SHELL=/bin/bash", "SHLVL=1", "SYSTEMD_EXEC_PID=460", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "XCURSOR_SIZE=24", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_CURRENT_SESION_TYPE=wayland", "XDG_RUNTIME_DIR=/run/user/1000", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=hyprland", "XDG_SESSION_ID=1", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONREPARENTING=1")
-   10.046 D Native environment:
-   10.046 D QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DEBUGINFOD_URLS=https://debuginfod.archlinux.org ", "DESKTOP_STARTUP_ID=rofi/prismlauncher/11355-0-archlinux_TIME678722", "DISPLAY=:0", "GDK_BACKEND=wayland,X11", "HOME=/home/dennis", "HYPRLAND_CMD=/usr/bin/Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=af4b9700b7a1a1b36439dc51334b9aeaadcfcd41_1674940281", "INVOCATION_ID=1fcd1b39ecd141bc9c82bd231fd52c25", "LANG=en_US.UTF-8", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "OLDPWD=/home/dennis", "PATH=/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_QPA_PLATFORM=wayland", "QT_QPA_PLATFORMTHEME=qt5ct", "SHELL=/bin/bash", "SHLVL=1", "SYSTEMD_EXEC_PID=460", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "XCURSOR_SIZE=24", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_CURRENT_SESION_TYPE=wayland", "XDG_RUNTIME_DIR=/run/user/1000", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=hyprland", "XDG_SESSION_ID=1", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONREPARENTING=1")
-   10.046 D "Java detection" progress: 1 / 10
-   10.048 D Java checker has failed to start.
-   10.048 D Process environment:
-   10.048 D QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DEBUGINFOD_URLS=https://debuginfod.archlinux.org ", "DESKTOP_STARTUP_ID=rofi/prismlauncher/11355-0-archlinux_TIME678722", "DISPLAY=:0", "GDK_BACKEND=wayland,X11", "HOME=/home/dennis", "HYPRLAND_CMD=/usr/bin/Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=af4b9700b7a1a1b36439dc51334b9aeaadcfcd41_1674940281", "INVOCATION_ID=1fcd1b39ecd141bc9c82bd231fd52c25", "LANG=en_US.UTF-8", "LD_LIBRARY_PATH=", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "OLDPWD=/home/dennis", "PATH=/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_QPA_PLATFORM=wayland", "QT_QPA_PLATFORMTHEME=qt5ct", "SHELL=/bin/bash", "SHLVL=1", "SYSTEMD_EXEC_PID=460", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "XCURSOR_SIZE=24", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_CURRENT_SESION_TYPE=wayland", "XDG_RUNTIME_DIR=/run/user/1000", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=hyprland", "XDG_SESSION_ID=1", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONREPARENTING=1")
-   10.048 D Native environment:
-   10.048 D QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DEBUGINFOD_URLS=https://debuginfod.archlinux.org ", "DESKTOP_STARTUP_ID=rofi/prismlauncher/11355-0-archlinux_TIME678722", "DISPLAY=:0", "GDK_BACKEND=wayland,X11", "HOME=/home/dennis", "HYPRLAND_CMD=/usr/bin/Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=af4b9700b7a1a1b36439dc51334b9aeaadcfcd41_1674940281", "INVOCATION_ID=1fcd1b39ecd141bc9c82bd231fd52c25", "LANG=en_US.UTF-8", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "OLDPWD=/home/dennis", "PATH=/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_QPA_PLATFORM=wayland", "QT_QPA_PLATFORMTHEME=qt5ct", "SHELL=/bin/bash", "SHLVL=1", "SYSTEMD_EXEC_PID=460", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "XCURSOR_SIZE=24", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_CURRENT_SESION_TYPE=wayland", "XDG_RUNTIME_DIR=/run/user/1000", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=hyprland", "XDG_SESSION_ID=1", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONREPARENTING=1")
-   10.048 D "Java detection" progress: 2 / 10
-   10.048 D Java checker has failed to start.
-   10.048 D Process environment:
-   10.048 D QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DEBUGINFOD_URLS=https://debuginfod.archlinux.org ", "DESKTOP_STARTUP_ID=rofi/prismlauncher/11355-0-archlinux_TIME678722", "DISPLAY=:0", "GDK_BACKEND=wayland,X11", "HOME=/home/dennis", "HYPRLAND_CMD=/usr/bin/Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=af4b9700b7a1a1b36439dc51334b9aeaadcfcd41_1674940281", "INVOCATION_ID=1fcd1b39ecd141bc9c82bd231fd52c25", "LANG=en_US.UTF-8", "LD_LIBRARY_PATH=", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "OLDPWD=/home/dennis", "PATH=/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_QPA_PLATFORM=wayland", "QT_QPA_PLATFORMTHEME=qt5ct", "SHELL=/bin/bash", "SHLVL=1", "SYSTEMD_EXEC_PID=460", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "XCURSOR_SIZE=24", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_CURRENT_SESION_TYPE=wayland", "XDG_RUNTIME_DIR=/run/user/1000", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=hyprland", "XDG_SESSION_ID=1", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONREPARENTING=1")
-   10.048 D Native environment:
-   10.048 D QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DEBUGINFOD_URLS=https://debuginfod.archlinux.org ", "DESKTOP_STARTUP_ID=rofi/prismlauncher/11355-0-archlinux_TIME678722", "DISPLAY=:0", "GDK_BACKEND=wayland,X11", "HOME=/home/dennis", "HYPRLAND_CMD=/usr/bin/Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=af4b9700b7a1a1b36439dc51334b9aeaadcfcd41_1674940281", "INVOCATION_ID=1fcd1b39ecd141bc9c82bd231fd52c25", "LANG=en_US.UTF-8", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "OLDPWD=/home/dennis", "PATH=/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_QPA_PLATFORM=wayland", "QT_QPA_PLATFORMTHEME=qt5ct", "SHELL=/bin/bash", "SHLVL=1", "SYSTEMD_EXEC_PID=460", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "XCURSOR_SIZE=24", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_CURRENT_SESION_TYPE=wayland", "XDG_RUNTIME_DIR=/run/user/1000", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=hyprland", "XDG_SESSION_ID=1", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONREPARENTING=1")
-   10.048 D "Java detection" progress: 3 / 10
-   10.092 D STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
-   10.092 W STDERR ""
-   10.092 D Java checker finished with status  QProcess::NormalExit  exit code  0
-   10.092 D Java checker succeeded.
-   10.092 D "Java detection" progress: 4 / 10
-   10.150 D STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
-   10.150 W STDERR ""
-   10.150 D Java checker finished with status  QProcess::NormalExit  exit code  0
-   10.150 D Java checker succeeded.
-   10.150 D "Java detection" progress: 5 / 10
-   10.163 D STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
-   10.163 W STDERR ""
-   10.163 D Java checker finished with status  QProcess::NormalExit  exit code  0
-   10.164 D Java checker succeeded.
-   10.164 D "Java detection" progress: 6 / 10
-   10.213 D STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
-   10.213 W STDERR ""
-   10.213 D Java checker finished with status  QProcess::NormalExit  exit code  0
-   10.213 D Java checker succeeded.
-   10.213 D "Java detection" progress: 7 / 10
-   10.229 D STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
-   10.229 W STDERR ""
-   10.229 D Java checker finished with status  QProcess::NormalExit  exit code  0
-   10.229 D Java checker succeeded.
-   10.229 D "Java detection" progress: 8 / 10
-   10.240 D STDOUT "os.arch=amd64\njava.version=19.0.2\njava.vendor=N/A\n"
-   10.240 W STDERR ""
-   10.240 D Java checker finished with status  QProcess::NormalExit  exit code  0
-   10.240 D Java checker succeeded.
-   10.240 D "Java detection" progress: 9 / 10
-   10.252 D STDOUT "os.arch=amd64\njava.version=19.0.2\njava.vendor=N/A\n"
-   10.252 W STDERR ""
-   10.252 D Java checker finished with status  QProcess::NormalExit  exit code  0
-   10.252 D Java checker succeeded.
-   10.252 D "Java detection" progress: 10 / 10
-   10.252 D Task "JavaCheckerJob(0x563ab8c0aec0)" succeeded
-   10.252 D Found the following valid Java installations:
-   10.252 D   "1.8.0_362" "amd64" "java"
-   10.252 D   "19.0.2" "amd64" "/usr/lib/jvm/java-19-openjdk/bin/java"
-   10.252 D   "1.8.0_362" "amd64" "/usr/lib/jvm/java-8-openjdk/jre/bin/java"
-   10.252 D   "1.8.0_362" "amd64" "/usr/lib/jvm/java-8-openjdk/bin/java"
-   10.252 D   "19.0.2" "amd64" "/usr/lib64/jvm/java-19-openjdk/bin/java"
-   10.252 D   "1.8.0_362" "amd64" "/usr/lib64/jvm/java-8-openjdk/jre/bin/java"
-   10.252 D   "1.8.0_362" "amd64" "/usr/lib64/jvm/java-8-openjdk/bin/java"
-   10.252 D Task "JavaListLoadTask(0x563ab8f1d2c0)" succeeded
-   13.149 C "Error changing setting PermGenVisible. Setting doesn't exist."
-   32.253 D [HttpMetaCache] Saving metacache with 20 entries
+    0.031 D DeviceFlow::refresh: Token: ... "vQcMQ$$"
+    0.035 D RefreshSchedule: Processing account  "Speed6511"  with internal ID  "1056ea1ac2c0473ea6252c195a6261bc"
+    0.035 D <> Accounts loaded.
+    0.042 D <> Cache initialized.
+    0.042 D Downloading Translations Index...
+    0.042 D Task "NetJob(Translations Index)" starting for the first time
+    0.043 D <> Icon theme set.
+    0.043 D [Theme] applying theme "Dark"
+    0.043 D <> Application theme set.
+    0.086 D Reloading news.
+    0.086 D Task "NetJob(News RSS Feed)" starting for the first time
+    0.086 D Task "ComponentUpdateTask(0x55cf8b5c3920)" starting for the first time
+    0.086 D Loading components
+    0.090 D Component list save is scheduled for "Survival 1.19.3"
+    0.095 D Resolving dependencies
+    0.095 D "Req: net.fabricmc.intermediary" Is met.
+    0.095 D "Req: net.minecraft == 1.19.3" Is met.
+    0.095 D "Req: org.lwjgl3" Is met.
+    0.095 D Task "ComponentUpdateTask(0x55cf8b5c3920)" succeeded
+    0.095 D Component list update/resolve task succeeded for "Survival 1.19.3"
+    0.144 D <> Main window shown.
+    0.146 D Task "Net::Download(0x55cf8b423400)" starting for the first time
+    0.146 D Downloading  "https://i18n.prismlauncher.org/index_v2.json"
+    0.146 D Task "Net::Download(0x55cf8b4c6a10)" starting for the first time
+    0.146 D Downloading  "https://prismlauncher.org/feed/feed.xml"
+    0.165 D Dir changed: "/home/dennis/.local/share/PrismLauncher/translations"
+    0.171 D Download succeeded: "https://i18n.prismlauncher.org/index_v2.json"
+    0.171 D Task "NetJob(Translations Index)" succeeded
+    0.171 D Got translations index!
+    0.390 D Download succeeded: "https://prismlauncher.org/feed/feed.xml"
+    0.390 D Task "NetJob(News RSS Feed)" succeeded
+    0.390 D Finished loading RSS feed.
+    0.392 D Loaded news entry "Prism Launcher Release 6.1, now available"
+    0.392 D Loaded news entry "Prism Launcher Release 6.0, now available"
+    0.392 D Loaded news entry "Prism Launcher Release 5.2, now available"
+    0.392 D Loaded news entry "Prism Launcher Release 5.1, now available"
+    0.392 D Loaded news entry "Prism Launcher Release 5.0, now available"
+    0.392 D Loaded news entry "PolyMC Update 1.4.2, now available"
+    0.392 D Loaded news entry "PolyMC Update 1.4.1, now available"
+    0.392 D Loaded news entry "PolyMC Update 1.4.0, now available"
+    0.392 D Loaded news entry "PolyMC Update 1.3.2, now available"
+    0.392 D Loaded news entry "PolyMC Update 1.3.1, now available"
+    0.392 D Loaded news entry "PolyMC Update 1.3.0, now available"
+    0.392 D Loaded news entry "PolyMC Update 1.2.2, now available (CurseForge Hotfix)"
+    0.392 D Loaded news entry "PolyMC Update 1.2.1, now available"
+    0.392 D Loaded news entry "PolyMC Update 1.2.0, now available"
+    0.392 D Loaded news entry "PolyMC Update 1.1.1, now available"
+    0.392 D Loaded news entry "PolyMC Update 1.1.0, now available"
+    0.392 D Loaded news entry "Moving on"
+    0.392 D Loaded news entry "Modrinth support and Mod downloading"
+    0.392 D Loaded news entry "New maintainers and step down."
+    0.392 D News loading succeeded.
+    0.586 D DeviceFlow::setLinked: true
+    0.587 D AuthFlow: "Logging in as an Xbox user."
+    0.587 D First layer of XBox auth ... commencing.
+    0.587 D New token expires in QDateTime(2023-01-28 22:23:19.638 UTC Qt::UTC) seconds
+    0.938 D Parsing "UToken" :
+    0.938 D "UToken" is valid.
+    0.938 D AuthFlow: "Getting authorization to access Xbox services."
+    0.939 D Getting authorization token for  "http://xboxlive.com"
+    1.137 D Parsing "Xbox" :
+    1.137 D "Xbox" is valid.
+    1.137 D AuthFlow: "Getting authorization to access Mojang services."
+    1.137 D Getting authorization token for  "rp://api.minecraftservices.com/"
+    1.276 D Parsing "Mojang" :
+    1.276 D "Mojang" is valid.
+    1.276 D AuthFlow: "Accessing Mojang services."
+    1.276 D Getting Minecraft access token...
+    1.496 D Parsing Mojang response...
+    1.497 D Mojang response is valid.
+    1.497 D AuthFlow: "Fetching Xbox profile."
+    1.497 D Getting Xbox profile...
+    2.060 D AuthFlow: "Determining game ownership."
+    2.060 D Getting entitlements...
+    2.374 D Parsing Minecraft entitlements...
+    2.375 D AuthFlow: "Fetching the Minecraft profile."
+    2.481 D Parsing Minecraft profile...
+    2.481 D AuthFlow: "Getting skin."
+    2.524 D Task "MSASilent(0x55cf8b395130)" succeeded
+    2.524 D Writing account list to "accounts.json"
+    2.524 D Building JSON data structure.
+    2.524 D Building account array.
+    2.524 D Writing account list to file.
+    2.527 D Saved account list to "accounts.json"
+    2.528 D RefreshSchedule: Background account refresh succeeded
+    3.899 D Discovering instances in "/home/dennis/.local/share/PrismLauncher/instances"
+    3.899 D Found instance ID "1.8.9"
+    3.899 D Found instance ID "1.19.3"
+    3.899 D Should keep and soft-reload "1.8.9"
+    3.899 D Should keep and soft-reload "1.19.3"
+    5.344 D Component list save performed now for "Survival 1.19.3"
+   12.837 D Task "ComponentUpdateTask(0x55cf8b933370)" starting for the first time
+   12.837 D Loading components
+   12.837 D Index is already loaded
+   12.837 D Component list save is scheduled for "Survival 1.19.3"
+   12.837 D Resolving dependencies
+   12.837 D "Req: net.fabricmc.intermediary" Is met.
+   12.837 D "Req: net.minecraft == 1.19.3" Is met.
+   12.837 D "Req: org.lwjgl3" Is met.
+   12.837 D Task "ComponentUpdateTask(0x55cf8b933370)" succeeded
+   12.837 D Component list update/resolve task succeeded for "Survival 1.19.3"
+   12.847 D Task "NetJob(Download of meta file org.lwjgl3/index.json)" starting for the first time
+   12.902 D Instance-type specific settings were loaded!
+   12.959 D Applying "org.lwjgl3" GOOD
+   12.959 D Applying "net.minecraft" GOOD
+   12.959 D Applying "net.fabricmc.intermediary" GOOD
+   12.959 D Applying "net.fabricmc.fabric-loader" GOOD
+   12.979 D Task "Net::Download(0x55cf8b991f70)" starting for the first time
+   12.979 D Downloading  "https://meta.prismlauncher.org/v1/org.lwjgl3/index.json"
+   13.011 D Download succeeded: "https://meta.prismlauncher.org/v1/org.lwjgl3/index.json"
+   13.011 D Task "NetJob(Download of meta file org.lwjgl3/index.json)" succeeded
+   15.046 D Task "JavaListLoadTask(0x55cf8bfa4fe0)" starting for the first time
+   15.047 D Linux Java detection incomplete - defaulting to "java"
+   15.047 D Probing the following Java paths: 
+   15.047 D   "java"
+   15.047 D   "/usr/lib/jvm/java-17-openjdk/jre/bin/java"
+   15.047 D   "/usr/lib/jvm/java-17-openjdk/bin/java"
+   15.047 D   "/usr/lib/jvm/java-19-openjdk/jre/bin/java"
+   15.047 D   "/usr/lib/jvm/java-19-openjdk/bin/java"
+   15.047 D   "/usr/lib/jvm/java-8-openjdk/jre/bin/java"
+   15.047 D   "/usr/lib/jvm/java-8-openjdk/bin/java"
+   15.047 D   "/usr/lib64/jvm/java-17-openjdk/jre/bin/java"
+   15.047 D   "/usr/lib64/jvm/java-17-openjdk/bin/java"
+   15.047 D   "/usr/lib64/jvm/java-19-openjdk/jre/bin/java"
+   15.047 D   "/usr/lib64/jvm/java-19-openjdk/bin/java"
+   15.047 D   "/usr/lib64/jvm/java-8-openjdk/jre/bin/java"
+   15.047 D   "/usr/lib64/jvm/java-8-openjdk/bin/java"
+   15.047 D   ""
+   15.047 D Task "JavaCheckerJob(0x55cf8bf30080)" starting for the first time
+   15.047 D "Java detection"  started.
+   15.047 D "Running java checker: java-jar /usr/share/prismlauncher/JavaCheck.jar"
+   15.047 D "Running java checker: /usr/lib/jvm/java-17-openjdk/jre/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+   15.060 D "Running java checker: /usr/lib/jvm/java-17-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+   15.061 D "Running java checker: /usr/lib/jvm/java-19-openjdk/jre/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+   15.071 D "Running java checker: /usr/lib/jvm/java-19-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+   15.071 D "Running java checker: /usr/lib/jvm/java-8-openjdk/jre/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+   15.085 D "Running java checker: /usr/lib/jvm/java-8-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+   15.091 D "Running java checker: /usr/lib64/jvm/java-17-openjdk/jre/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+   15.098 D "Running java checker: /usr/lib64/jvm/java-17-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+   15.109 D "Running java checker: /usr/lib64/jvm/java-19-openjdk/jre/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+   15.111 D "Running java checker: /usr/lib64/jvm/java-19-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+   15.113 D "Running java checker: /usr/lib64/jvm/java-8-openjdk/jre/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+   15.116 D "Running java checker: /usr/lib64/jvm/java-8-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+   15.117 D "Running java checker: -jar /usr/share/prismlauncher/JavaCheck.jar"
+   15.117 D Java checker has failed to start.
+   15.117 D Process environment:
+   15.117 D QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DEBUGINFOD_URLS=https://debuginfod.archlinux.org ", "DESKTOP_STARTUP_ID=rofi/prismlauncher/12223-0-archlinux_TIME754499", "DISPLAY=:0", "GDK_BACKEND=wayland,X11", "HOME=/home/dennis", "HYPRLAND_CMD=/usr/bin/Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=af4b9700b7a1a1b36439dc51334b9aeaadcfcd41_1674940281", "INVOCATION_ID=1fcd1b39ecd141bc9c82bd231fd52c25", "LANG=en_US.UTF-8", "LD_LIBRARY_PATH=", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "OLDPWD=/home/dennis", "PATH=/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_QPA_PLATFORM=wayland", "QT_QPA_PLATFORMTHEME=qt5ct", "SHELL=/bin/bash", "SHLVL=1", "SYSTEMD_EXEC_PID=460", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "XCURSOR_SIZE=24", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_CURRENT_SESION_TYPE=wayland", "XDG_RUNTIME_DIR=/run/user/1000", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=hyprland", "XDG_SESSION_ID=1", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONREPARENTING=1")
+   15.117 D Native environment:
+   15.118 D QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DEBUGINFOD_URLS=https://debuginfod.archlinux.org ", "DESKTOP_STARTUP_ID=rofi/prismlauncher/12223-0-archlinux_TIME754499", "DISPLAY=:0", "GDK_BACKEND=wayland,X11", "HOME=/home/dennis", "HYPRLAND_CMD=/usr/bin/Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=af4b9700b7a1a1b36439dc51334b9aeaadcfcd41_1674940281", "INVOCATION_ID=1fcd1b39ecd141bc9c82bd231fd52c25", "LANG=en_US.UTF-8", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "OLDPWD=/home/dennis", "PATH=/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_QPA_PLATFORM=wayland", "QT_QPA_PLATFORMTHEME=qt5ct", "SHELL=/bin/bash", "SHLVL=1", "SYSTEMD_EXEC_PID=460", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "XCURSOR_SIZE=24", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_CURRENT_SESION_TYPE=wayland", "XDG_RUNTIME_DIR=/run/user/1000", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=hyprland", "XDG_SESSION_ID=1", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONREPARENTING=1")
+   15.118 D "Java detection" progress: 1 / 14
+   15.119 D Java checker has failed to start.
+   15.119 D Process environment:
+   15.119 D QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DEBUGINFOD_URLS=https://debuginfod.archlinux.org ", "DESKTOP_STARTUP_ID=rofi/prismlauncher/12223-0-archlinux_TIME754499", "DISPLAY=:0", "GDK_BACKEND=wayland,X11", "HOME=/home/dennis", "HYPRLAND_CMD=/usr/bin/Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=af4b9700b7a1a1b36439dc51334b9aeaadcfcd41_1674940281", "INVOCATION_ID=1fcd1b39ecd141bc9c82bd231fd52c25", "LANG=en_US.UTF-8", "LD_LIBRARY_PATH=", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "OLDPWD=/home/dennis", "PATH=/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_QPA_PLATFORM=wayland", "QT_QPA_PLATFORMTHEME=qt5ct", "SHELL=/bin/bash", "SHLVL=1", "SYSTEMD_EXEC_PID=460", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "XCURSOR_SIZE=24", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_CURRENT_SESION_TYPE=wayland", "XDG_RUNTIME_DIR=/run/user/1000", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=hyprland", "XDG_SESSION_ID=1", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONREPARENTING=1")
+   15.119 D Native environment:
+   15.119 D QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DEBUGINFOD_URLS=https://debuginfod.archlinux.org ", "DESKTOP_STARTUP_ID=rofi/prismlauncher/12223-0-archlinux_TIME754499", "DISPLAY=:0", "GDK_BACKEND=wayland,X11", "HOME=/home/dennis", "HYPRLAND_CMD=/usr/bin/Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=af4b9700b7a1a1b36439dc51334b9aeaadcfcd41_1674940281", "INVOCATION_ID=1fcd1b39ecd141bc9c82bd231fd52c25", "LANG=en_US.UTF-8", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "OLDPWD=/home/dennis", "PATH=/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_QPA_PLATFORM=wayland", "QT_QPA_PLATFORMTHEME=qt5ct", "SHELL=/bin/bash", "SHLVL=1", "SYSTEMD_EXEC_PID=460", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "XCURSOR_SIZE=24", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_CURRENT_SESION_TYPE=wayland", "XDG_RUNTIME_DIR=/run/user/1000", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=hyprland", "XDG_SESSION_ID=1", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONREPARENTING=1")
+   15.119 D "Java detection" progress: 2 / 14
+   15.119 D Java checker has failed to start.
+   15.119 D Process environment:
+   15.119 D QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DEBUGINFOD_URLS=https://debuginfod.archlinux.org ", "DESKTOP_STARTUP_ID=rofi/prismlauncher/12223-0-archlinux_TIME754499", "DISPLAY=:0", "GDK_BACKEND=wayland,X11", "HOME=/home/dennis", "HYPRLAND_CMD=/usr/bin/Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=af4b9700b7a1a1b36439dc51334b9aeaadcfcd41_1674940281", "INVOCATION_ID=1fcd1b39ecd141bc9c82bd231fd52c25", "LANG=en_US.UTF-8", "LD_LIBRARY_PATH=", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "OLDPWD=/home/dennis", "PATH=/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_QPA_PLATFORM=wayland", "QT_QPA_PLATFORMTHEME=qt5ct", "SHELL=/bin/bash", "SHLVL=1", "SYSTEMD_EXEC_PID=460", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "XCURSOR_SIZE=24", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_CURRENT_SESION_TYPE=wayland", "XDG_RUNTIME_DIR=/run/user/1000", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=hyprland", "XDG_SESSION_ID=1", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONREPARENTING=1")
+   15.119 D Native environment:
+   15.119 D QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DEBUGINFOD_URLS=https://debuginfod.archlinux.org ", "DESKTOP_STARTUP_ID=rofi/prismlauncher/12223-0-archlinux_TIME754499", "DISPLAY=:0", "GDK_BACKEND=wayland,X11", "HOME=/home/dennis", "HYPRLAND_CMD=/usr/bin/Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=af4b9700b7a1a1b36439dc51334b9aeaadcfcd41_1674940281", "INVOCATION_ID=1fcd1b39ecd141bc9c82bd231fd52c25", "LANG=en_US.UTF-8", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "OLDPWD=/home/dennis", "PATH=/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_QPA_PLATFORM=wayland", "QT_QPA_PLATFORMTHEME=qt5ct", "SHELL=/bin/bash", "SHLVL=1", "SYSTEMD_EXEC_PID=460", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "XCURSOR_SIZE=24", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_CURRENT_SESION_TYPE=wayland", "XDG_RUNTIME_DIR=/run/user/1000", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=hyprland", "XDG_SESSION_ID=1", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONREPARENTING=1")
+   15.119 D "Java detection" progress: 3 / 14
+   15.119 D Java checker has failed to start.
+   15.119 D Process environment:
+   15.119 D QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DEBUGINFOD_URLS=https://debuginfod.archlinux.org ", "DESKTOP_STARTUP_ID=rofi/prismlauncher/12223-0-archlinux_TIME754499", "DISPLAY=:0", "GDK_BACKEND=wayland,X11", "HOME=/home/dennis", "HYPRLAND_CMD=/usr/bin/Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=af4b9700b7a1a1b36439dc51334b9aeaadcfcd41_1674940281", "INVOCATION_ID=1fcd1b39ecd141bc9c82bd231fd52c25", "LANG=en_US.UTF-8", "LD_LIBRARY_PATH=", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "OLDPWD=/home/dennis", "PATH=/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_QPA_PLATFORM=wayland", "QT_QPA_PLATFORMTHEME=qt5ct", "SHELL=/bin/bash", "SHLVL=1", "SYSTEMD_EXEC_PID=460", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "XCURSOR_SIZE=24", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_CURRENT_SESION_TYPE=wayland", "XDG_RUNTIME_DIR=/run/user/1000", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=hyprland", "XDG_SESSION_ID=1", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONREPARENTING=1")
+   15.119 D Native environment:
+   15.119 D QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DEBUGINFOD_URLS=https://debuginfod.archlinux.org ", "DESKTOP_STARTUP_ID=rofi/prismlauncher/12223-0-archlinux_TIME754499", "DISPLAY=:0", "GDK_BACKEND=wayland,X11", "HOME=/home/dennis", "HYPRLAND_CMD=/usr/bin/Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=af4b9700b7a1a1b36439dc51334b9aeaadcfcd41_1674940281", "INVOCATION_ID=1fcd1b39ecd141bc9c82bd231fd52c25", "LANG=en_US.UTF-8", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "OLDPWD=/home/dennis", "PATH=/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_QPA_PLATFORM=wayland", "QT_QPA_PLATFORMTHEME=qt5ct", "SHELL=/bin/bash", "SHLVL=1", "SYSTEMD_EXEC_PID=460", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "XCURSOR_SIZE=24", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_CURRENT_SESION_TYPE=wayland", "XDG_RUNTIME_DIR=/run/user/1000", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=hyprland", "XDG_SESSION_ID=1", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONREPARENTING=1")
+   15.120 D "Java detection" progress: 4 / 14
+   15.120 D Java checker has failed to start.
+   15.120 D Process environment:
+   15.120 D QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DEBUGINFOD_URLS=https://debuginfod.archlinux.org ", "DESKTOP_STARTUP_ID=rofi/prismlauncher/12223-0-archlinux_TIME754499", "DISPLAY=:0", "GDK_BACKEND=wayland,X11", "HOME=/home/dennis", "HYPRLAND_CMD=/usr/bin/Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=af4b9700b7a1a1b36439dc51334b9aeaadcfcd41_1674940281", "INVOCATION_ID=1fcd1b39ecd141bc9c82bd231fd52c25", "LANG=en_US.UTF-8", "LD_LIBRARY_PATH=", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "OLDPWD=/home/dennis", "PATH=/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_QPA_PLATFORM=wayland", "QT_QPA_PLATFORMTHEME=qt5ct", "SHELL=/bin/bash", "SHLVL=1", "SYSTEMD_EXEC_PID=460", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "XCURSOR_SIZE=24", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_CURRENT_SESION_TYPE=wayland", "XDG_RUNTIME_DIR=/run/user/1000", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=hyprland", "XDG_SESSION_ID=1", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONREPARENTING=1")
+   15.120 D Native environment:
+   15.120 D QList("DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "DEBUGINFOD_URLS=https://debuginfod.archlinux.org ", "DESKTOP_STARTUP_ID=rofi/prismlauncher/12223-0-archlinux_TIME754499", "DISPLAY=:0", "GDK_BACKEND=wayland,X11", "HOME=/home/dennis", "HYPRLAND_CMD=/usr/bin/Hyprland", "HYPRLAND_INSTANCE_SIGNATURE=af4b9700b7a1a1b36439dc51334b9aeaadcfcd41_1674940281", "INVOCATION_ID=1fcd1b39ecd141bc9c82bd231fd52c25", "LANG=en_US.UTF-8", "LOGNAME=dennis", "MAIL=/var/spool/mail/dennis", "MOTD_SHOWN=pam", "MOZ_ENABLE_WAYLAND=1", "OLDPWD=/home/dennis", "PATH=/home/dennis/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl", "PWD=/home/dennis", "QT_QPA_PLATFORM=wayland", "QT_QPA_PLATFORMTHEME=qt5ct", "SHELL=/bin/bash", "SHLVL=1", "SYSTEMD_EXEC_PID=460", "TERM=linux", "USER=dennis", "WAYLAND_DISPLAY=wayland-1", "XCURSOR_SIZE=24", "XDG_BACKEND=wayland", "XDG_CURRENT_DESKTOP=Hyprland", "XDG_CURRENT_SESION_TYPE=wayland", "XDG_RUNTIME_DIR=/run/user/1000", "XDG_SEAT=seat0", "XDG_SESSION_CLASS=user", "XDG_SESSION_DESKTOP=hyprland", "XDG_SESSION_ID=1", "XDG_SESSION_TYPE=wayland", "XDG_VTNR=1", "_=/usr/bin/rofi", "_JAVA_AWT_WM_NONREPARENTING=1")
+   15.120 D "Java detection" progress: 5 / 14
+   15.120 D STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
+   15.120 W STDERR ""
+   15.120 D Java checker finished with status  QProcess::NormalExit  exit code  0
+   15.120 D Java checker succeeded.
+   15.120 D "Java detection" progress: 6 / 14
+   15.160 D STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
+   15.160 W STDERR ""
+   15.160 D Java checker finished with status  QProcess::NormalExit  exit code  0
+   15.160 D Java checker succeeded.
+   15.160 D "Java detection" progress: 7 / 14
+   15.285 D STDOUT "os.arch=amd64\njava.version=17.0.6\njava.vendor=N/A\n"
+   15.285 W STDERR ""
+   15.286 D Java checker finished with status  QProcess::NormalExit  exit code  0
+   15.286 D Java checker succeeded.
+   15.286 D "Java detection" progress: 8 / 14
+   15.288 D STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
+   15.288 W STDERR ""
+   15.288 D Java checker finished with status  QProcess::NormalExit  exit code  0
+   15.288 D Java checker succeeded.
+   15.288 D "Java detection" progress: 9 / 14
+   15.292 D STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
+   15.292 W STDERR ""
+   15.292 D Java checker finished with status  QProcess::NormalExit  exit code  0
+   15.292 D Java checker succeeded.
+   15.292 D "Java detection" progress: 10 / 14
+   15.309 D STDOUT "os.arch=amd64\njava.version=19.0.2\njava.vendor=N/A\n"
+   15.310 W STDERR ""
+   15.310 D Java checker finished with status  QProcess::NormalExit  exit code  0
+   15.310 D Java checker succeeded.
+   15.312 D "Java detection" progress: 11 / 14
+   15.340 D STDOUT "os.arch=amd64\njava.version=1.8.0_362\njava.vendor=Oracle Corporation\n"
+   15.340 W STDERR ""
+   15.340 D Java checker finished with status  QProcess::NormalExit  exit code  0
+   15.340 D Java checker succeeded.
+   15.340 D "Java detection" progress: 12 / 14
+   15.395 D STDOUT "os.arch=amd64\njava.version=17.0.6\njava.vendor=N/A\n"
+   15.395 W STDERR ""
+   15.395 D Java checker finished with status  QProcess::NormalExit  exit code  0
+   15.395 D Java checker succeeded.
+   15.395 D "Java detection" progress: 13 / 14
+   15.401 D STDOUT "os.arch=amd64\njava.version=19.0.2\njava.vendor=N/A\n"
+   15.401 W STDERR ""
+   15.401 D Java checker finished with status  QProcess::NormalExit  exit code  0
+   15.401 D Java checker succeeded.
+   15.401 D "Java detection" progress: 14 / 14
+   15.402 D Task "JavaCheckerJob(0x55cf8bf30080)" succeeded
+   15.402 D Found the following valid Java installations:
+   15.402 D   "1.8.0_362" "amd64" "java"
+   15.402 D   "17.0.6" "amd64" "/usr/lib/jvm/java-17-openjdk/bin/java"
+   15.402 D   "19.0.2" "amd64" "/usr/lib/jvm/java-19-openjdk/bin/java"
+   15.402 D   "1.8.0_362" "amd64" "/usr/lib/jvm/java-8-openjdk/jre/bin/java"
+   15.402 D   "1.8.0_362" "amd64" "/usr/lib/jvm/java-8-openjdk/bin/java"
+   15.402 D   "17.0.6" "amd64" "/usr/lib64/jvm/java-17-openjdk/bin/java"
+   15.402 D   "19.0.2" "amd64" "/usr/lib64/jvm/java-19-openjdk/bin/java"
+   15.402 D   "1.8.0_362" "amd64" "/usr/lib64/jvm/java-8-openjdk/jre/bin/java"
+   15.402 D   "1.8.0_362" "amd64" "/usr/lib64/jvm/java-8-openjdk/bin/java"
+   15.402 D Task "JavaListLoadTask(0x55cf8bfa4fe0)" succeeded
+   17.588 D Component list save performed now for "Survival 1.19.3"
+   21.601 C "Error changing setting PermGenVisible. Setting doesn't exist."
+   23.429 D Task "LaunchController(0x55cf8bf79190)" starting for the first time
+   23.788 D Task "LaunchTask(0x55cf8c006500)" starting for the first time
+   23.788 D Task "TextPrint(0x55cf8bf8f160)" starting for the first time
+   23.788 D Task "TextPrint(0x55cf8bf8f160)" succeeded
+   23.788 D Task "TextPrint(0x55cf8bfa2930)" starting for the first time
+   23.789 D Task "TextPrint(0x55cf8bfa2930)" succeeded
+   23.789 D Task "TextPrint(0x55cf8bbb6190)" starting for the first time
+   23.789 D Task "TextPrint(0x55cf8bbb6190)" succeeded
+   23.789 D Task "TextPrint(0x55cf8bfcaa50)" starting for the first time
+   23.789 D Task "TextPrint(0x55cf8bfcaa50)" succeeded
+   23.789 D Task "CheckJava(0x55cf8bda9190)" starting for the first time
+   23.790 D "Running java checker: /usr/lib/jvm/java-17-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+   23.892 D STDOUT "os.arch=amd64\njava.version=17.0.6\njava.vendor=N/A\n"
+   23.892 W STDERR ""
+   23.892 D Java checker finished with status  QProcess::NormalExit  exit code  0
+   23.892 D Java checker succeeded.
+   23.910 C "Error changing setting JavaVendor. Setting doesn't exist."
+   23.916 D Task "CheckJava(0x55cf8bda9190)" succeeded
+   23.916 D Task "CreateGameFolders(0x55cf8b558210)" starting for the first time
+   23.916 D Task "CreateGameFolders(0x55cf8b558210)" succeeded
+   23.916 D Task "ClaimAccount(0x55cf8bfebef0)" starting for the first time
+   23.916 D Writing account list to "accounts.json"
+   23.916 D Building JSON data structure.
+   23.916 D Building account array.
+   23.916 D Writing account list to file.
+   23.919 D Saved account list to "accounts.json"
+   23.919 W Profile "b7ce62bf7d6b4e11bd0c2d73b7b0d869" is now in use.
+   23.920 D Task "ClaimAccount(0x55cf8bfebef0)" succeeded
+   23.920 D Task "Update(0x55cf8bf8fae0)" starting for the first time
+   23.920 D Task "MinecraftUpdate(0x7f65ec005a80)" starting for the first time
+   23.920 D Task "ComponentUpdateTask(0x55cf8b70a850)" starting for the first time
+   23.920 D Loading components
+   23.920 D Index is already loaded
+   23.920 D Component list save is scheduled for "Survival 1.19.3"
+   23.920 D Resolving dependencies
+   23.920 D "Req: net.fabricmc.intermediary" Is met.
+   23.920 D "Req: net.minecraft == 1.19.3" Is met.
+   23.920 D "Req: org.lwjgl3" Is met.
+   23.920 D Task "ComponentUpdateTask(0x55cf8b70a850)" succeeded
+   23.920 D Component list update/resolve task succeeded for "Survival 1.19.3"
+   23.920 D Task "FoldersTask(0x55cf8bf8e370)" starting for the first time
+   23.920 D Task "FoldersTask(0x55cf8bf8e370)" succeeded
+   23.920 D Task "LibrariesTask(0x55cf8bd67950)" starting for the first time
+   23.920 D "Survival 1.19.3" : downloading libraries
+   23.920 D Applying "org.lwjgl3" GOOD
+   23.920 D Applying "net.minecraft" GOOD
+   23.921 D Applying "net.fabricmc.intermediary" GOOD
+   23.921 D Applying "net.fabricmc.fabric-loader" GOOD
+   23.921 D Task "NetJob(Libraries for instance Survival 1.19.3)" starting for the first time
+   23.922 D Task "NetJob(Libraries for instance Survival 1.19.3)" succeeded
+   23.922 D Task "LibrariesTask(0x55cf8bd67950)" succeeded
+   23.922 D Task "FMLLibrariesTask(0x55cf8b82d4a0)" starting for the first time
+   23.923 D Task "FMLLibrariesTask(0x55cf8b82d4a0)" succeeded
+   23.923 D Task "AssetUpdateTask(0x55cf8be08b30)" starting for the first time
+   23.923 W Removing cache entry because of old age!
+   23.923 D Asset index SHA1: "c492375ded5da34b646b8c5c0842a0028bc69cec"
+   23.923 D "Survival 1.19.3" : Starting asset index download
+   23.923 D Task "NetJob(Asset index for Survival 1.19.3)" starting for the first time
+   23.925 D Task "Net::Download(0x55cf8b48b6e0)" starting for the first time
+   23.925 D Downloading  "https://piston-meta.mojang.com/v1/packages/c492375ded5da34b646b8c5c0842a0028bc69cec/2.json"
+   24.277 D Download succeeded: "https://piston-meta.mojang.com/v1/packages/c492375ded5da34b646b8c5c0842a0028bc69cec/2.json"
+   24.277 D Task "NetJob(Asset index for Survival 1.19.3)" succeeded
+   24.277 D "Survival 1.19.3" : Finished asset index download
+   24.294 D Task "AssetUpdateTask(0x55cf8be08b30)" succeeded
+   24.294 D Task "MinecraftUpdate(0x7f65ec005a80)" succeeded
+   24.294 D Task "Update(0x55cf8bf8fae0)" succeeded
+   24.294 D Task "ModMinecraftJar(0x55cf8bfb9e80)" starting for the first time
+   24.295 D Task "ModMinecraftJar(0x55cf8bfb9e80)" succeeded
+   24.295 D Task "ScanModFolders(0x55cf8bfbadc0)" starting for the first time
+   24.297 D Task "ConcurrentTask(0x55cf8b8b5cf8)" starting for the first time
+   24.297 W The launcher tried to start task "ConcurrentTask(0x55cf8b8b5cf8)" while it was already running!
+   24.297 W The launcher tried to start task "ConcurrentTask(0x55cf8b8b5cf8)" while it was already running!
+   24.297 W The launcher tried to start task "ConcurrentTask(0x55cf8b8b5cf8)" while it was already running!
+   24.300 D Task "ScanModFolders(0x55cf8bfbadc0)" succeeded
+   24.300 D Task "PrintInstanceInfo(0x55cf8bf508f0)" starting for the first time
+   24.337 D Task "PrintInstanceInfo(0x55cf8bf508f0)" succeeded
+   24.337 D Task "ExtractNatives(0x55cf8bf4b9d0)" starting for the first time
+   24.338 D Task "ExtractNatives(0x55cf8bf4b9d0)" succeeded
+   24.338 D Task "ReconstructAssets(0x55cf8bfd5c60)" starting for the first time
+   24.338 D reconstructAssets "assets" "assets/indexes" "assets/objects" "assets/virtual" "assets/virtual/2"
+   24.346 D Task "ReconstructAssets(0x55cf8bfd5c60)" succeeded
+   24.346 D Task "VerifyJavaInstall(0x55cf8bfe56a0)" starting for the first time
+   24.346 D Task "VerifyJavaInstall(0x55cf8bfe56a0)" succeeded
+   24.346 D Task "LauncherPartLaunch(0x55cf8be8da90)" starting for the first time
+   24.356 D "-Xms512m -Xmx8192m -Duser.language=en -Djava.library.path=/home/dennis/.local/share/PrismLauncher/instances/1.19.3/natives -cp /usr/share/prismlauncher/NewLaunch.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-glfw-natives-linux/3.3.1/lwjgl-glfw-natives-linux-3.3.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-glfw/3.3.1/lwjgl-glfw-3.3.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-jemalloc-natives-linux/3.3.1/lwjgl-jemalloc-natives-linux-3.3.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-jemalloc/3.3.1/lwjgl-jemalloc-3.3.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-natives-linux/3.3.1/lwjgl-natives-linux-3.3.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-openal-natives-linux/3.3.1/lwjgl-openal-natives-linux-3.3.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-openal/3.3.1/lwjgl-openal-3.3.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-opengl-natives-linux/3.3.1/lwjgl-opengl-natives-linux-3.3.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-opengl/3.3.1/lwjgl-opengl-3.3.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-stb-natives-linux/3.3.1/lwjgl-stb-natives-linux-3.3.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-stb/3.3.1/lwjgl-stb-3.3.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-tinyfd-natives-linux/3.3.1/lwjgl-tinyfd-natives-linux-3.3.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-tinyfd/3.3.1/lwjgl-tinyfd-3.3.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl/3.3.1/lwjgl-3.3.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/com/github/oshi/oshi-core/6.2.2/oshi-core-6.2.2.jar:/home/dennis/.local/share/PrismLauncher/libraries/com/google/code/gson/gson/2.10/gson-2.10.jar:/home/dennis/.local/share/PrismLauncher/libraries/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar:/home/dennis/.local/share/PrismLauncher/libraries/com/ibm/icu/icu4j/71.1/icu4j-71.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/com/mojang/authlib/3.16.29/authlib-3.16.29.jar:/home/dennis/.local/share/PrismLauncher/libraries/com/mojang/blocklist/1.0.10/blocklist-1.0.10.jar:/home/dennis/.local/share/PrismLauncher/libraries/com/mojang/brigadier/1.0.18/brigadier-1.0.18.jar:/home/dennis/.local/share/PrismLauncher/libraries/com/mojang/datafixerupper/5.0.28/datafixerupper-5.0.28.jar:/home/dennis/.local/share/PrismLauncher/libraries/com/mojang/javabridge/2.0.25/javabridge-2.0.25.jar:/home/dennis/.local/share/PrismLauncher/libraries/com/mojang/logging/1.1.1/logging-1.1.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/com/mojang/patchy/2.2.10/patchy-2.2.10.jar:/home/dennis/.local/share/PrismLauncher/libraries/com/mojang/text2speech/1.13.9/text2speech-1.13.9.jar:/home/dennis/.local/share/PrismLauncher/libraries/com/mojang/text2speech-natives-linux/1.13.9/text2speech-natives-linux-1.13.9.jar:/home/dennis/.local/share/PrismLauncher/libraries/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/dennis/.local/share/PrismLauncher/libraries/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/home/dennis/.local/share/PrismLauncher/libraries/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/dennis/.local/share/PrismLauncher/libraries/io/netty/netty-buffer/4.1.82.Final/netty-buffer-4.1.82.Final.jar:/home/dennis/.local/share/PrismLauncher/libraries/io/netty/netty-codec/4.1.82.Final/netty-codec-4.1.82.Final.jar:/home/dennis/.local/share/PrismLauncher/libraries/io/netty/netty-common/4.1.82.Final/netty-common-4.1.82.Final.jar:/home/dennis/.local/share/PrismLauncher/libraries/io/netty/netty-handler/4.1.82.Final/netty-handler-4.1.82.Final.jar:/home/dennis/.local/share/PrismLauncher/libraries/io/netty/netty-resolver/4.1.82.Final/netty-resolver-4.1.82.Final.jar:/home/dennis/.local/share/PrismLauncher/libraries/io/netty/netty-transport-classes-epoll/4.1.82.Final/netty-transport-classes-epoll-4.1.82.Final.jar:/home/dennis/.local/share/PrismLauncher/libraries/io/netty/netty-transport-native-epoll/4.1.82.Final/netty-transport-native-epoll-4.1.82.Final-linux-aarch_64.jar:/home/dennis/.local/share/PrismLauncher/libraries/io/netty/netty-transport-native-epoll/4.1.82.Final/netty-transport-native-epoll-4.1.82.Final-linux-x86_64.jar:/home/dennis/.local/share/PrismLauncher/libraries/io/netty/netty-transport-native-unix-common/4.1.82.Final/netty-transport-native-unix-common-4.1.82.Final.jar:/home/dennis/.local/share/PrismLauncher/libraries/io/netty/netty-transport/4.1.82.Final/netty-transport-4.1.82.Final.jar:/home/dennis/.local/share/PrismLauncher/libraries/it/unimi/dsi/fastutil/8.5.9/fastutil-8.5.9.jar:/home/dennis/.local/share/PrismLauncher/libraries/net/java/dev/jna/jna-platform/5.12.1/jna-platform-5.12.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/net/java/dev/jna/jna/5.12.1/jna-5.12.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/apache/httpcomponents/httpcore/4.4.15/httpcore-4.4.15.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-api/2.19.0/log4j-api-2.19.0.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-core/2.19.0/log4j-core-2.19.0.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-slf4j2-impl/2.19.0/log4j-slf4j2-impl-2.19.0.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/joml/joml/1.10.5/joml-1.10.5.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/slf4j/slf4j-api/2.0.1/slf4j-api-2.0.1.jar:/home/dennis/.local/share/PrismLauncher/libraries/net/fabricmc/intermediary/1.19.3/intermediary-1.19.3.jar:/home/dennis/.local/share/PrismLauncher/libraries/net/fabricmc/tiny-mappings-parser/0.3.0+build.17/tiny-mappings-parser-0.3.0+build.17.jar:/home/dennis/.local/share/PrismLauncher/libraries/net/fabricmc/sponge-mixin/0.11.4+mixin.0.8.5/sponge-mixin-0.11.4+mixin.0.8.5.jar:/home/dennis/.local/share/PrismLauncher/libraries/net/fabricmc/tiny-remapper/0.8.2/tiny-remapper-0.8.2.jar:/home/dennis/.local/share/PrismLauncher/libraries/net/fabricmc/access-widener/2.1.0/access-widener-2.1.0.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/ow2/asm/asm/9.3/asm-9.3.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/ow2/asm/asm-analysis/9.3/asm-analysis-9.3.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/ow2/asm/asm-commons/9.3/asm-commons-9.3.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/ow2/asm/asm-tree/9.3/asm-tree-9.3.jar:/home/dennis/.local/share/PrismLauncher/libraries/org/ow2/asm/asm-util/9.3/asm-util-9.3.jar:/home/dennis/.local/share/PrismLauncher/libraries/net/fabricmc/fabric-loader/0.14.11/fabric-loader-0.14.11.jar:/home/dennis/.local/share/PrismLauncher/libraries/com/mojang/minecraft/1.19.3/minecraft-1.19.3-client.jar org.prismlauncher.EntryPoint"
+   24.418 D Task "ConcurrentTask(0x55cf8b8b5cf8)" succeeded
+   28.671 D Component list save performed now for "Survival 1.19.3"
+   54.470 D [HttpMetaCache] Saving metacache with 20 entries
+   92.500 D Task "LauncherPartLaunch(0x55cf8be8da90)" succeeded
+   92.500 D Writing account list to "accounts.json"
+   92.500 D Building JSON data structure.
+   92.500 D Building account array.
+   92.500 D Writing account list to file.
+   92.509 D Saved account list to "accounts.json"
+   92.509 W Profile "b7ce62bf7d6b4e11bd0c2d73b7b0d869" is no longer in use.
+   92.524 D Task "LaunchTask(0x55cf8c006500)" succeeded
+   92.524 D Task "LaunchController(0x55cf8bf79190)" succeeded

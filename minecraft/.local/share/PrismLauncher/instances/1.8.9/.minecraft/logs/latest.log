@@ -1,307 +1,112 @@
-[02:19:32] [Client thread/INFO]: Setting user: Dennis_mps
-[02:19:35] [Client thread/INFO]: LWJGL Version: 2.9.4
-[02:19:38] [Client thread/INFO]: Reloading ResourceManager: Essential (forge_1.8.9).jar, Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Essential, FMLFileResourcePack:Apec, FMLFileResourcePack:NotEnoughUpdates, FMLFileResourcePack:Patcher, FMLFileResourcePack:Scrollable Tooltips, FMLFileResourcePack:SkyblockAddons, FMLFileResourcePack:TimeChanger, NEU Repo Resources, MobPacket 1.8.9 1.4.zip, PacksHqx16.zip, FurfSkyReborn.zip, No_Block_Breaking_Particles_1.8.zip
-[02:19:40] [Client thread/ERROR]: Couldn't initialize twitch stream
-[02:19:40] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[02:19:40] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreaktopaz.ogg does not exist, cannot add it to event notenoughupdates:gemstoneTopaz.break
-[02:19:40] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreakruby.ogg does not exist, cannot add it to event notenoughupdates:gemstoneRuby.break
-[02:19:40] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreakamber.ogg does not exist, cannot add it to event notenoughupdates:gemstoneAmber.break
-[02:19:40] [Thread-13/INFO]: Initializing LWJGL OpenAL
-[02:19:40] [Thread-13/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[02:19:41] [Thread-13/INFO]: OpenAL initialized.
-[02:19:41] [Sound Library Loader/INFO]: Sound engine started
-[02:19:42] [Client thread/INFO]: Created: 16x16 textures-atlas
-[02:19:46] [Client thread/INFO]: Reloading ResourceManager: Essential (forge_1.8.9).jar, Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Essential, FMLFileResourcePack:Apec, FMLFileResourcePack:NotEnoughUpdates, FMLFileResourcePack:Patcher, FMLFileResourcePack:Scrollable Tooltips, FMLFileResourcePack:SkyblockAddons, FMLFileResourcePack:TimeChanger, NEU Repo Resources, MobPacket 1.8.9 1.4.zip, PacksHqx16.zip, FurfSkyReborn.zip, No_Block_Breaking_Particles_1.8.zip
-[02:19:46] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/books/dragon_tracer/dragon_tracer.png, java.io.FileNotFoundException
-[02:19:46] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/incomplete/left_to_right_incomplete_bar_green_end.png, java.io.FileNotFoundException
-[02:19:46] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/left_to_top.png, java.io.FileNotFoundException
-[02:19:46] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/complete/left_to_right_complete_bar_green_end.png, java.io.FileNotFoundException
-[02:19:46] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/grass_top.png, java.io.FileNotFoundException
-[02:19:46] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/level_60.png, java.io.FileNotFoundException
-[02:19:46] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/wardrobe/wardrobe.png, java.io.FileNotFoundException
-[02:19:46] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/top_to_right.png, java.io.FileNotFoundException
-[02:19:46] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/dungeons/tank.png, java.io.FileNotFoundException
-[02:19:46] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/mycelium_top.png, java.io.FileNotFoundException
-[02:19:46] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/partial/left_to_right_progress_bar_green_end.png, java.io.FileNotFoundException
-[02:19:46] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/grass_side.png, java.io.FileNotFoundException
-[02:19:46] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/dirt_podzol_top.png, java.io.FileNotFoundException
-[02:19:46] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/left_to_bottom.png, java.io.FileNotFoundException
-[02:19:46] [Client thread/ERROR]: Using missing texture, unable to load notenoughupdates:custom_skull_textures/missingno.png, java.io.FileNotFoundException
-[02:19:46] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/snow.png, java.io.FileNotFoundException
-[02:19:46] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/fast_travel/scrolls/blaze.png, java.io.FileNotFoundException
-[02:19:47] [Client thread/INFO]: Created: 2048x1024 custom_skull_textures-atlas
-[02:19:47] [Client thread/INFO]: SoundSystem shutting down...
-[02:19:47] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[02:19:47] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[02:19:47] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreaktopaz.ogg does not exist, cannot add it to event notenoughupdates:gemstoneTopaz.break
-[02:19:47] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreakruby.ogg does not exist, cannot add it to event notenoughupdates:gemstoneRuby.break
-[02:19:47] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreakamber.ogg does not exist, cannot add it to event notenoughupdates:gemstoneAmber.break
-[02:19:47] [Thread-23/INFO]: Initializing LWJGL OpenAL
-[02:19:47] [Thread-23/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[02:19:47] [Thread-23/INFO]: OpenAL initialized.
-[02:19:48] [Sound Library Loader/INFO]: Sound engine started
-[02:19:49] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/empty.png, java.io.FileNotFoundException
-[02:19:49] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/books/dragon_tracer/dragon_tracer.png, java.io.FileNotFoundException
-[02:19:49] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/incomplete/left_to_right_incomplete_bar_green_end.png, java.io.FileNotFoundException
-[02:19:49] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/left_to_top.png, java.io.FileNotFoundException
-[02:19:49] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/complete/left_to_right_complete_bar_green_end.png, java.io.FileNotFoundException
-[02:19:49] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/level_60.png, java.io.FileNotFoundException
-[02:19:49] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/wardrobe/wardrobe.png, java.io.FileNotFoundException
-[02:19:49] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/top_to_right.png, java.io.FileNotFoundException
-[02:19:49] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/dungeons/tank.png, java.io.FileNotFoundException
-[02:19:49] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/.png, java.io.FileNotFoundException
-[02:19:49] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/partial/left_to_right_progress_bar_green_end.png, java.io.FileNotFoundException
-[02:19:49] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/left_to_bottom.png, java.io.FileNotFoundException
-[02:19:49] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/fast_travel/scrolls/blaze.png, java.io.FileNotFoundException
-[02:19:49] [Client thread/INFO]: Created: 2048x2048 textures-atlas
-[02:19:52] [pool-13-thread-1/ERROR]: Signature is missing from textures payload
-[02:19:56] [Client thread/INFO]: Connecting to mc.hypixel.net, 25565
-[02:19:58] [Client thread/INFO]: [CHAT]                                      
-[02:19:58] [Client thread/INFO]: [CHAT]                          
-[02:20:00] [Client thread/INFO]: [CHAT] §b[MVP§c+§b] Re1L_§f §6joined the lobby!
-[02:20:00] [Client thread/INFO]: [CHAT] Sending to server mini194BB...
-[02:20:00] [Client thread/INFO]: [CHAT]   ➤ You have reached your Hype limit! Add Hype to Prototype Lobby minigames by right-clicking with the Hype Diamond!
-[02:20:02] [Client thread/INFO]: [CHAT]        
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 152122, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 227078, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 227078, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 3/WARN]: Biome ID is out of bounds: 151720, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 2/WARN]: Biome ID is out of bounds: 2563, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 2/WARN]: Biome ID is out of bounds: 2563, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 2/WARN]: Biome ID is out of bounds: 2563, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 2/WARN]: Biome ID is out of bounds: 2563, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 2/WARN]: Biome ID is out of bounds: 2563, defaulting to 0 (Ocean)
-[02:20:02] [Chunk Batcher 4/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:02] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:02] [Chunk Batcher 2/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:02] [Chunk Batcher 4/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:02] [Chunk Batcher 4/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:02] [Chunk Batcher 3/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:02] [Chunk Batcher 2/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:02] [Chunk Batcher 4/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:02] [Chunk Batcher 2/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:02] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:03] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:03] [Chunk Batcher 5/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:03] [Chunk Batcher 3/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:03] [Chunk Batcher 3/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:03] [Chunk Batcher 4/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:03] [Chunk Batcher 5/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:03] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:03] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:03] [Chunk Batcher 4/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:03] [Chunk Batcher 5/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:03] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:03] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:03] [Chunk Batcher 5/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:03] [Chunk Batcher 4/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:04] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:04] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:04] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:04] [Client thread/INFO]: [CHAT] 
-[02:20:05] [Client thread/INFO]: [CHAT] Welcome to Hypixel SkyBlock!
-[02:20:05] [Client thread/INFO]: [CHAT] 
-[02:20:05] [Chunk Batcher 2/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:05] [Chunk Batcher 4/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:05] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:05] [Chunk Batcher 2/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:05] [Chunk Batcher 4/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:05] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:05] [Chunk Batcher 5/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:05] [Chunk Batcher 3/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:05] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:05] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:06] [Chunk Batcher 4/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:06] [Chunk Batcher 2/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:06] [Chunk Batcher 3/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:06] [Chunk Batcher 3/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:06] [Chunk Batcher 3/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:07] [Chunk Batcher 3/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:09] [Chunk Batcher 3/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:14] [Chunk Batcher 3/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:17] [Chunk Batcher 3/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:20:40] [Client thread/INFO]: [CHAT] Warping...
-[02:20:40] [Client thread/INFO]: [CHAT] Sending to server mini80AE...
-[02:20:41] [Client thread/INFO]: [CHAT]        
-[02:21:11] [Client thread/INFO]: [CHAT] §7TheFan64§7: how much u want?
-[02:21:11] [Client thread/INFO]: [CHAT] Putting coins in escrow...
-[02:21:11] [Client thread/INFO]: [CHAT] Processing purchase...
-[02:21:12] [Client thread/INFO]: [CHAT] You purchased Builder's Ruler for 97,000 coins!
-[02:21:12] [Client thread/INFO]: [CHAT] Claiming BIN auction...
-[02:21:12] [Client thread/INFO]: [CHAT] You claimed Builder's Ruler from [VIP] _Datenschutz_'s auction!
-[02:21:18] [Client thread/INFO]: [CHAT] §a[VIP] xqcsx§f: 800k per
-[02:21:20] [Client thread/INFO]: [CHAT] Sending to server mini150AC...
-[02:21:21] [Client thread/INFO]: [CHAT]        
-[02:21:22] [Chunk Batcher 4/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:21:23] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[02:22:20] [Client thread/INFO]: [CHAT] Mining Speed Boost is now available!
-[02:22:28] [Client thread/INFO]: [CHAT] You used your Mining Speed Boost Pickaxe Ability!
-[02:22:43] [Client thread/INFO]: [CHAT] Your Mining Speed Boost has expired!
-[02:22:56] [Client thread/INFO]: [CHAT] Warping...
-[02:22:56] [Client thread/INFO]: [CHAT] Sending to server mini85DW...
-[02:22:57] [Client thread/INFO]: [CHAT]        
-[02:23:08] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!
-[02:23:08] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (2)
-[02:23:08] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (3)
-[02:23:08] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (4)
-[02:23:08] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (5)
-[02:23:09] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (6)
-[02:23:09] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (7)
-[02:23:09] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (8)
-[02:23:09] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (9)
-[02:23:10] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (10)
-[02:23:10] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (11)
-[02:23:10] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (12)
-[02:23:10] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (13)
-[02:23:10] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (14)
-[02:23:10] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (15)
-[02:23:10] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (16)
-[02:23:11] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (17)
-[02:23:11] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (18)
-[02:23:11] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (19)
-[02:23:11] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (20)
-[02:23:11] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (21)
-[02:23:12] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (22)
-[02:23:12] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (23)
-[02:23:12] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (24)
-[02:23:12] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (25)
-[02:23:13] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (26)
-[02:23:13] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (27)
-[02:23:13] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (28)
-[02:23:13] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (29)
-[02:23:13] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (30)
-[02:23:14] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (31)
-[02:23:14] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (32)
-[02:23:14] [Client thread/INFO]: [CHAT] Your inventory is full!
-[02:23:14] [Client thread/INFO]: [CHAT] You don't have enough inventory space!
-[02:23:16] [Client thread/INFO]: [CHAT] You cannot use this item on a public island!
-[02:23:21] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (33)
-[02:23:22] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (34)
-[02:23:22] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (35)
-[02:23:22] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (36)
-[02:23:22] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (37)
-[02:23:23] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (38)
-[02:23:23] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (39)
-[02:23:23] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (40)
-[02:23:23] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (41)
-[02:23:23] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (42)
-[02:23:24] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (43)
-[02:23:24] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (44)
-[02:23:24] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (45)
-[02:23:24] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (46)
-[02:23:25] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (47)
-[02:23:25] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (48)
-[02:23:25] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (49)
-[02:23:25] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (50)
-[02:23:25] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (51)
-[02:23:26] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (52)
-[02:23:26] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (53)
-[02:23:26] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (54)
-[02:23:26] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (55)
-[02:23:26] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (56)
-[02:23:27] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (57)
-[02:23:27] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (58)
-[02:23:27] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (59)
-[02:23:27] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (60)
-[02:23:27] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (61)
-[02:23:28] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (62)
-[02:23:28] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (63)
-[02:23:28] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (64)
-[02:23:28] [Client thread/INFO]: [CHAT] You don't have enough inventory space!§7 (2)
-[02:23:28] [Client thread/INFO]: [CHAT] You don't have enough inventory space!§7 (3)
-[02:23:29] [Client thread/INFO]: [CHAT] You cannot use this item on a public island!§7 (2)
-[02:23:35] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (65)
-[02:23:35] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (66)
-[02:23:36] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (67)
-[02:23:36] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (68)
-[02:23:36] [Client thread/INFO]: [CHAT] Please wait a bit before doing this!
-[02:23:36] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (69)
-[02:23:36] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (70)
-[02:23:37] [Client thread/INFO]: [CHAT] You bought Sea Lantern for 90 Coins!
-[02:23:37] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (71)
-[02:23:38] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (72)
-[02:23:38] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (73)
-[02:23:38] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (74)
-[02:23:38] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (75)
-[02:23:38] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (76)
-[02:23:39] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (77)
-[02:23:39] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (78)
-[02:23:39] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (79)
-[02:23:39] [Client thread/INFO]: [CHAT] You bought Sea Lantern x64 for 5,760 Coins!§7 (80)
-[02:23:39] [Client thread/INFO]: [CHAT] You don't have enough inventory space!§7 (4)
-[02:23:42] [Client thread/INFO]: [CHAT] Warping you to your SkyBlock island...
-[02:23:42] [Client thread/INFO]: [CHAT] Warping...§7 (2)
-[02:23:43] [Client thread/INFO]: [CHAT] Sending to server mini86CA...
-[02:23:44] [Client thread/INFO]: [CHAT]        
-[02:23:44] [Client thread/INFO]: [CHAT] Your inventory is full!§7 (2)
-[02:24:12] [Client thread/INFO]: [CHAT] §eYou built §a240 §eblocks! §a§lUNDO
-[02:24:17] [Client thread/INFO]: [CHAT] §eYou built §a240 §eblocks! §a§lUNDO§7 (2)
-[02:24:20] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO
-[02:24:23] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (2)
-[02:24:26] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (3)
-[02:24:28] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (4)
-[02:24:31] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (5)
-[02:24:35] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (6)
-[02:24:38] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (7)
-[02:24:40] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (8)
-[02:24:43] [Client thread/INFO]: [CHAT] Mining Speed Boost is now available!
-[02:24:44] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (9)
-[02:24:45] [Client thread/INFO]: [CHAT] You used your Mining Speed Boost Pickaxe Ability!
-[02:24:50] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (10)
-[02:24:53] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (11)
-[02:24:56] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (12)
-[02:24:59] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (13)
-[02:25:00] [Client thread/INFO]: [CHAT] Your Mining Speed Boost has expired!
-[02:25:06] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (14)
-[02:25:09] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (15)
-[02:25:13] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (16)
-[02:25:15] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (17)
-[02:25:18] [Client thread/INFO]: [CHAT] §eYou built §a23 §eblocks! §a§lUNDO
-[02:25:21] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (18)
-[02:25:24] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (19)
-[02:25:27] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (20)
-[02:25:30] [Client thread/INFO]: [CHAT] §eYou built §a22 §eblocks! §a§lUNDO§7 (21)
-[02:25:33] [Client thread/INFO]: [CHAT] §eYou built §a240 §eblocks! §a§lUNDO
-[02:25:36] [Client thread/INFO]: [CHAT] §eYou built §a240 §eblocks! §a§lUNDO§7 (2)
-[02:25:38] [Client thread/INFO]: [CHAT] §eYou built §a240 §eblocks! §a§lUNDO§7 (3)
-[02:26:09] [Client thread/INFO]: [CHAT] Out of sync, check your internet connection!
-[02:26:10] [Client thread/INFO]: [CHAT] You were spawned in Limbo.
-[02:26:10] [Client thread/INFO]: [CHAT] /limbo for more information.
-[02:26:12] [pool-13-thread-3/ERROR]: Signature is missing from textures payload
-[02:26:14] [Client thread/INFO]: Connecting to mc.hypixel.net, 25565
-[02:26:15] [Client thread/INFO]: [CHAT]                                      
-[02:26:15] [Client thread/INFO]: [CHAT]                          
-[02:26:17] [Client thread/INFO]: [CHAT] Sending to server mini86CA...
-[02:26:18] [Client thread/INFO]: [CHAT]        
-[02:26:21] [Client thread/INFO]: [CHAT] 
-[02:26:21] [Client thread/INFO]: [CHAT] Welcome to Hypixel SkyBlock!
-[02:26:21] [Client thread/INFO]: [CHAT] 
-[02:26:46] [Client thread/INFO]: [CHAT] Mining Speed Boost is now available!
-[02:27:27] [Client thread/INFO]: [CHAT] Mining Speed Boost is now available!§7 (2)
-[02:27:27] [Client thread/INFO]: [CHAT] Out of sync, check your internet connection!
-[02:27:28] [Client thread/INFO]: [CHAT] You were spawned in Limbo.
-[02:27:28] [Client thread/INFO]: [CHAT] /limbo for more information.
-[02:27:29] [pool-13-thread-4/ERROR]: Signature is missing from textures payload
-[02:27:31] [pool-13-thread-4/ERROR]: Signature is missing from textures payload
-[02:27:31] [Client thread/INFO]: Stopping!
-[02:27:31] [Client thread/INFO]: SoundSystem shutting down...
-[02:27:31] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[20:07:34] [Client thread/INFO]: Setting user: Dennis_mps
+[20:07:40] [Client thread/INFO]: LWJGL Version: 2.9.4
+[20:07:46] [Client thread/INFO]: Reloading ResourceManager: Essential (forge_1.8.9).jar, Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Essential, FMLFileResourcePack:Apec, FMLFileResourcePack:NotEnoughUpdates, FMLFileResourcePack:Patcher, FMLFileResourcePack:Scrollable Tooltips, FMLFileResourcePack:SkyblockAddons, FMLFileResourcePack:TimeChanger, NEU Repo Resources, MobPacket 1.8.9 1.4.zip, PacksHqx16.zip, FurfSkyReborn.zip, No_Block_Breaking_Particles_1.8.zip
+[20:07:49] [Client thread/ERROR]: Couldn't initialize twitch stream
+[20:07:50] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[20:07:50] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreaktopaz.ogg does not exist, cannot add it to event notenoughupdates:gemstoneTopaz.break
+[20:07:50] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreakruby.ogg does not exist, cannot add it to event notenoughupdates:gemstoneRuby.break
+[20:07:50] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreakamber.ogg does not exist, cannot add it to event notenoughupdates:gemstoneAmber.break
+[20:07:50] [Thread-13/INFO]: Initializing LWJGL OpenAL
+[20:07:50] [Thread-13/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[20:07:50] [Thread-13/INFO]: OpenAL initialized.
+[20:07:50] [Sound Library Loader/INFO]: Sound engine started
+[20:07:54] [Client thread/INFO]: Created: 16x16 textures-atlas
+[20:08:01] [Client thread/INFO]: Reloading ResourceManager: Essential (forge_1.8.9).jar, Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Essential, FMLFileResourcePack:Apec, FMLFileResourcePack:NotEnoughUpdates, FMLFileResourcePack:Patcher, FMLFileResourcePack:Scrollable Tooltips, FMLFileResourcePack:SkyblockAddons, FMLFileResourcePack:TimeChanger, NEU Repo Resources, MobPacket 1.8.9 1.4.zip, PacksHqx16.zip, FurfSkyReborn.zip, No_Block_Breaking_Particles_1.8.zip
+[20:08:02] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/books/dragon_tracer/dragon_tracer.png, java.io.FileNotFoundException
+[20:08:02] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/incomplete/left_to_right_incomplete_bar_green_end.png, java.io.FileNotFoundException
+[20:08:02] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/left_to_top.png, java.io.FileNotFoundException
+[20:08:02] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/complete/left_to_right_complete_bar_green_end.png, java.io.FileNotFoundException
+[20:08:02] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/grass_top.png, java.io.FileNotFoundException
+[20:08:02] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/level_60.png, java.io.FileNotFoundException
+[20:08:02] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/wardrobe/wardrobe.png, java.io.FileNotFoundException
+[20:08:02] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/top_to_right.png, java.io.FileNotFoundException
+[20:08:02] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/dungeons/tank.png, java.io.FileNotFoundException
+[20:08:02] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/mycelium_top.png, java.io.FileNotFoundException
+[20:08:02] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/partial/left_to_right_progress_bar_green_end.png, java.io.FileNotFoundException
+[20:08:02] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/grass_side.png, java.io.FileNotFoundException
+[20:08:02] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/dirt_podzol_top.png, java.io.FileNotFoundException
+[20:08:02] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/left_to_bottom.png, java.io.FileNotFoundException
+[20:08:02] [Client thread/ERROR]: Using missing texture, unable to load notenoughupdates:custom_skull_textures/missingno.png, java.io.FileNotFoundException
+[20:08:02] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/snow.png, java.io.FileNotFoundException
+[20:08:02] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/fast_travel/scrolls/blaze.png, java.io.FileNotFoundException
+[20:08:03] [Client thread/INFO]: Created: 2048x1024 custom_skull_textures-atlas
+[20:08:03] [Client thread/INFO]: SoundSystem shutting down...
+[20:08:03] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[20:08:03] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[20:08:03] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreaktopaz.ogg does not exist, cannot add it to event notenoughupdates:gemstoneTopaz.break
+[20:08:03] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreakruby.ogg does not exist, cannot add it to event notenoughupdates:gemstoneRuby.break
+[20:08:03] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreakamber.ogg does not exist, cannot add it to event notenoughupdates:gemstoneAmber.break
+[20:08:03] [Thread-22/INFO]: Initializing LWJGL OpenAL
+[20:08:03] [Thread-22/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[20:08:03] [Thread-22/INFO]: OpenAL initialized.
+[20:08:04] [Sound Library Loader/INFO]: Sound engine started
+[20:08:06] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/empty.png, java.io.FileNotFoundException
+[20:08:06] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/books/dragon_tracer/dragon_tracer.png, java.io.FileNotFoundException
+[20:08:06] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/incomplete/left_to_right_incomplete_bar_green_end.png, java.io.FileNotFoundException
+[20:08:06] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/left_to_top.png, java.io.FileNotFoundException
+[20:08:06] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/complete/left_to_right_complete_bar_green_end.png, java.io.FileNotFoundException
+[20:08:06] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/level_60.png, java.io.FileNotFoundException
+[20:08:06] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/wardrobe/wardrobe.png, java.io.FileNotFoundException
+[20:08:06] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/top_to_right.png, java.io.FileNotFoundException
+[20:08:06] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/dungeons/tank.png, java.io.FileNotFoundException
+[20:08:06] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/.png, java.io.FileNotFoundException
+[20:08:06] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/partial/left_to_right_progress_bar_green_end.png, java.io.FileNotFoundException
+[20:08:06] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/left_to_bottom.png, java.io.FileNotFoundException
+[20:08:06] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/fast_travel/scrolls/blaze.png, java.io.FileNotFoundException
+[20:08:07] [Client thread/INFO]: Created: 2048x2048 textures-atlas
+[20:08:12] [pool-13-thread-1/ERROR]: Signature is missing from textures payload
+[20:08:21] [Client thread/INFO]: Connecting to mc.hypixel.net, 25565
+[20:08:23] [pool-13-thread-1/ERROR]: Signature is missing from textures payload
+[20:08:23] [Client thread/INFO]: [CHAT]                                      
+[20:08:23] [Client thread/INFO]: [CHAT]                          
+[20:08:23] [Client thread/INFO]: [CHAT]  §b>§c>§a>§r §6[MVP§c++§6] ImperialSniper6§f §6joined the lobby! §a<§c<§b<
+[20:08:24] [pool-13-thread-1/ERROR]: Signature is missing from textures payload
+[20:08:24] [Client thread/INFO]: [CHAT] §aYou have §b1 §aunclaimed leveling reward!
+[20:08:24] [Client thread/INFO]: [CHAT] §eClick here to view it!
+[20:08:24] [Client thread/INFO]: [CHAT] §e§l≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+§6§lHYPIXEL§e is hosting a §b§lBLITZ DUO§e tournament!
+§6Compete, climb the leaderboard and earn free rewards!
+§eTo participate, visit the hall §bon March 24th
+§e§lClick §b§lHERE §e§lto read the announcement!
+§e§l≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+
+[20:08:25] [Client thread/INFO]: [CHAT]   ➤ You have reached your Hype limit! Add Hype to Prototype Lobby minigames by right-clicking with the Hype Diamond!
+[20:08:27] [Client thread/INFO]: [CHAT] 
+➔ Welcome to the Prototype Lobby
+All games in this lobby are currently in development.
+Click here to leave feedback! ➤ https://hypixel.net/PTL
+
+[20:08:28] [Client thread/INFO]: [CHAT] §b[MVP§a+§b] Zystixe§f §6joined the lobby!
+[20:08:28] [Client thread/INFO]: [CHAT] Sending to server mini76AV...
+[20:08:29] [Client thread/INFO]: [CHAT]        
+[20:08:29] [Client thread/INFO]: [CHAT] Since you've been away you earned 0 coins as interest in your personal bank account!
+[20:08:29] [Client thread/INFO]: [CHAT] -----------------------------------------------------
+[20:08:29] [Client thread/INFO]: [CHAT] You have just received 600,000 coins as interest in your co-op bank account!
+[20:08:29] [Client thread/INFO]: [CHAT] -----------------------------------------------------
+[20:08:29] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[20:08:29] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[20:08:30] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[20:08:31] [pool-13-thread-1/ERROR]: Signature is missing from textures payload
+[20:08:31] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[20:08:31] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[20:08:31] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[20:08:32] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[20:08:32] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[20:08:32] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[20:08:32] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[20:08:32] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[20:08:32] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[20:08:32] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[20:08:33] [Client thread/INFO]: [CHAT] 
+[20:08:33] [Client thread/INFO]: [CHAT] Welcome to Hypixel SkyBlock!
+[20:08:33] [Client thread/INFO]: [CHAT] 
+[20:08:33] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[20:08:33] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[20:08:33] [Client thread/INFO]: [CHAT] ALLOWANCE! You earned 50,000 coins!
+[20:08:33] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[20:08:40] [pool-13-thread-1/ERROR]: Signature is missing from textures payload
+[20:08:51] [pool-13-thread-1/ERROR]: Signature is missing from textures payload
+[20:08:52] [pool-13-thread-1/ERROR]: Signature is missing from textures payload
+[20:08:53] [Client thread/INFO]: Stopping!
+[20:08:53] [Client thread/INFO]: SoundSystem shutting down...
+[20:08:53] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

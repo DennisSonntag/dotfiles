@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+installed_version=$(pacman -Qet | rg linux-zen | awk '{print $2}' | sed 's/\.zen1-1$//')
+latest_version=$(pacman -Ss linux-zen | rg "linux-zen " | awk '{print $2}' | sed 's/\.zen1-1$//')
+
+if [ $installed_version == $latest_version ]; then
+    echo  "No updates needed"
+else
+    echo "update from $installed_version to $latest_version"
+
+fi
