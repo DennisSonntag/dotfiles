@@ -2,8 +2,8 @@ return {
 	"andweeb/presence.nvim",
 	event = "VeryLazy",
 	config = function()
-		local status, presence = pcall(require, "presence")
-		if (not status) then return end
+		local presence_status, presence = pcall(require, "presence")
+		if (not presence_status) then return end
 
 		presence:setup({
 			-- General options

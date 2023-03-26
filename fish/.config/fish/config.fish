@@ -70,6 +70,13 @@ alias lsl="lsd -1"
 alias la="lsd -A"
 alias lal="lsd -1A"
 
+# kill anything running on local host 3000
+function killport
+    set port $argv[1]
+    kill -9 (lsof -i tcp:$port | sed -n 2p | awk '{print $2}')
+end
+
+
 
 # Git
 alias ga="git add"

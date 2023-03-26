@@ -3,28 +3,48 @@ return {
 	version = false,
 	event = 'BufRead',
 	dependencies = { "echasnovski/mini.cursorword", "echasnovski/mini.move", "echasnovski/mini.surround",
+		"echasnovski/mini.surround",
 		"echasnovski/mini.pairs" },
 	config = function()
-		local status, cursorword = pcall(require, "mini.cursorword")
-		if (not status) then return end
+		local cursorword_status, cursorword = pcall(require, "mini.cursorword")
+		if (not cursorword_status) then return end
 
 		cursorword.setup({
-			-- Delay (in ms) between when cursor moved and when highlighting appeared
 			delay = 10,
 		})
 
-		local status2, move = pcall(require, "mini.move")
-		if (not status2) then return end
+		local move_status, move = pcall(require, "mini.move")
+		if (not move_status) then return end
 
 		move.setup()
 
-		local status4, pairs = pcall(require, "mini.pairs")
-		if (not status4) then return end
+		local ai_status, ai = pcall(require, "mini.ai")
+		if (not ai_status) then return end
+
+		-- local spec_treesitter = require('mini.ai').gen_spec.treesitter
+		ai.setup({
+			custom_textobjects = {
+				--Camel case
+				s = {
+					{
+						'%u[%l%d]+%f[^%l%d]',
+						'%f[%S][%l%d]+%f[^%l%d]',
+						'%f[%P][%l%d]+%f[^%l%d]',
+						'^[%l%d]+%f[^%l%d]',
+					},
+					'^().*()$'
+				}
+			}
+		})
+
+
+		local pairs_status, pairs = pcall(require, "mini.pairs")
+		if (not pairs_status) then return end
 
 		pairs.setup()
 
-		local status3, surround = pcall(require, "mini.surround")
-		if (not status3) then return end
+		local surround_status, surround = pcall(require, "mini.surround")
+		if (not surround_status) then return end
 
 		surround.setup({
 			-- Add custom surroundings to be used on top of builtin ones. For more

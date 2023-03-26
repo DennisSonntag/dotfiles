@@ -1,5 +1,6 @@
 return {
 	"nvim-tree/nvim-web-devicons",
+	after = "neo-tree",
 	config = function()
 		local status, web_devicons = pcall(require, "nvim-web-devicons")
 		if (not status) then return end

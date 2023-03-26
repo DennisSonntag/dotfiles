@@ -1,10 +1,10 @@
 return {
 	--Required for a bunch of plugins
 	"nvim-lua/plenary.nvim",
-	{
-		"NTBBloodbath/color-converter.nvim",
-		event = 'BufRead',
-	},
+	-- {
+	-- 	"NTBBloodbath/color-converter.nvim",
+	-- 	event = 'BufRead',
+	-- },
 	"tpope/vim-fugitive",
 	"MunifTanjim/nui.nvim",
 

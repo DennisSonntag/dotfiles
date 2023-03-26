@@ -2,8 +2,8 @@ return {
 	"nvim-lualine/lualine.nvim",
 	event = { "BufReadPost", "BufNewFile" },
 	config = function()
-		local status, lualine = pcall(require, "lualine")
-		if (not status) then return end
+		local lualine_status, lualine = pcall(require, "lualine")
+		if (not lualine_status) then return end
 
 		local statusline = require("plugins.lualine.default")
 

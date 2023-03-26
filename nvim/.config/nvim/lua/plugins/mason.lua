@@ -68,14 +68,48 @@ return {
 		event = 'BufRead',
 		dependencies = { "neovim/nvim-lspconfig" },
 		config = function()
-			local status2, mason_lsp = pcall(require, "mason-lspconfig")
-			if (not status2) then return end
+			local status_mason_lsp, mason_lsp = pcall(require, "mason-lspconfig")
+			if (not status_mason_lsp) then return end
 
 			local status_lsp, lsp = pcall(require, "lspconfig")
 			if (not status_lsp) then return end
 
 			require('lspconfig.ui.windows').default_options.border = 'single'
 
+			vim.cmd("autocmd! ColorScheme * highlight NormalFloat guibg=#1f2335")
+			vim.cmd("autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335")
+			-- ┌ : used to outline the top-left corner of the floating window.
+			-- ─ : used to outline the top and bottom edges of the floating window.
+			-- ┐ : used to outline the top-right corner of the floating window.
+			-- │ : used to outline the left and right edges of the floating window.
+			-- └ : used to outline the bottom-left corner of the floating window.
+			-- ┘ :
+
+			local border = {
+				{ "┌", "FloatBorder" },
+
+				{ "─", "FloatBorder" },
+
+				{ "┐", "FloatBorder" },
+
+				{ "│", "FloatBorder" },
+
+				{ "┘", "FloatBorder" },
+
+				{ "─", "FloatBorder" },
+
+				{ "└", "FloatBorder" },
+
+				{ "│", "FloatBorder" },
+			}
+
+			-- To instead override globally
+			local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+			function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+				opts = opts or {}
+				opts.border = opts.border or border
+				return orig_util_open_floating_preview(contents, syntax, opts, ...)
+			end
 
 			local capabilities = require('cmp_nvim_lsp').default_capabilities()
 			capabilities.offsetEncoding = { "utf-16" }
@@ -88,23 +122,21 @@ return {
 
 				local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
-				keymap('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', bufopts)
-				keymap("n", "<leader>k", "<cmd>Lspsaga hover_doc ++keep<CR>", bufopts)
+				keymap('n', 'K', vim.lsp.buf.hover, bufopts)
 
-				keymap('n', '<leader>ld', builtin.lsp_definitions, bufopts)
+				keymap('n', 'gd', builtin.lsp_definitions, bufopts)
 
 				keymap('n', '<leader>lfr', builtin.lsp_references, bufopts)
 
-				keymap("n", "<leader>lp", "<cmd>Lspsaga diagnostic_jump_prev<CR>", bufopts)
-				keymap("n", "<leader>ln", "<cmd>Lspsaga diagnostic_jump_next<CR>", bufopts)
+				keymap("n", "[d", function() vim.diagnostic.goto_next() end, bufopts)
+				keymap("n", "]d", function() vim.diagnostic.goto_prev() end, bufopts)
+
 
 				keymap("n", "<leader>lvd", vim.diagnostic.open_float, bufopts)
-				keymap("n", "<leader>sc", "<cmd>Lspsaga show_cursor_diagnostics<CR>", bufopts)
-				keymap("n", "<leader>sb", "<cmd>Lspsaga show_buf_diagnostics<CR>", bufopts)
-				keymap("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>", bufopts)
+
 
 				keymap('n', '<leader>lr', vim.lsp.buf.rename, bufopts)
-				keymap({ "n", "v" }, "<leader>la", "<cmd>Lspsaga code_action<CR>", bufopts)
+				keymap('n', '<space>lca', vim.lsp.buf.code_action, bufopts)
 				keymap("n", "<leader>lf", function() vim.lsp.buf.format { async = true } end, bufopts)
 			end
 

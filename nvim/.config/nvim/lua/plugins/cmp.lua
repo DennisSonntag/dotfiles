@@ -12,20 +12,20 @@ return {
 			"f3fora/cmp-spell",
 		},
 		config = function()
-			local status, cmp = pcall(require, "cmp")
-			if (not status) then return end
+			local cmp_status, cmp = pcall(require, "cmp")
+			if (not cmp_status) then return end
+				
 
-			local status2, lspkind = pcall(require, "lspkind")
-			if (not status2) then return end
+			local lspkind_status, lspkind = pcall(require, "lspkind")
+			if (not lspkind_status) then return end
 
-			local status3, npm = pcall(require, "cmp-npm")
-			if (not status3) then return end
+			local npm_status, npm = pcall(require, "cmp-npm")
+			if (not npm_status) then return end
 
 			npm.setup({})
 
-			local status4, luasnip = pcall(require, "luasnip")
-
-			if (not status4) then return end
+			local luasnip_status_ok, luasnip = pcall(require, "luasnip")
+			if (not luasnip_status_ok) then return end
 
 			local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
@@ -37,12 +37,12 @@ return {
 				end
 				return false
 			end
+
 			local border_opts = {
 				border = "single",
 				winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
 				scrollbar = false,
 			}
-
 
 
 			cmp.setup({

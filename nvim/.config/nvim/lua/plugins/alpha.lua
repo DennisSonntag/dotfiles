@@ -1,8 +1,8 @@
 return {
 	"goolord/alpha-nvim",
 	config = function()
-		local status, alpha = pcall(require, "alpha")
-		if (not status) then return end
+		local alpha_status, alpha = pcall(require, "alpha")
+		if (not alpha_status) then return end
 
 		local dashboard = require("alpha.themes.dashboard")
 		dashboard.section.header.val = {

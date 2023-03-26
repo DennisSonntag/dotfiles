@@ -5,8 +5,8 @@ return {
 		"SmiteshP/nvim-navic",
 	},
 	config = function()
-		local status, barbecue = pcall(require, "barbecue")
-		if (not status) then return end
+		local barbecue_status, barbecue = pcall(require, "barbecue")
+		if (not barbecue_status) then return end
 
 		barbecue.setup({
 				---whether to show/use navic in the winbar
