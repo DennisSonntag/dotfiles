@@ -122,9 +122,9 @@ function full-update
 	cargo install-update -a
 	bob install nightly
 	bob use nightly
-	nvm install latest
-	nvm install lts
-	nvm use lts
+	# nvm install latest
+	# nvm install lts
+	# nvm use lts
 	clear-cache
 end
 
@@ -180,6 +180,6 @@ starship init fish | source
 zoxide init fish | source
 fish_ssh_agent
 # nvm use latest > /dev/null
-nvm use lts > /dev/null
+# nvm use lts > /dev/null
 
 

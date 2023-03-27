@@ -1,0 +1,32 @@
+/* Hides the tab bar */
+#TabsToolbar {
+	visibility: collapse !important;
+}
+
+#browser {
+	padding: 0.5rem;
+	/* Created with https://www.css-gradient.com */
+	background: #2b6596;
+	background: -webkit-linear-gradient(top left, #2b6596, #c9866f);
+	background: -moz-linear-gradient(top left, #2b6596, #c9866f);
+	background: linear-gradient(to bottom right, #2b6596, #c9866f);
+}
+
+#browser > #appcontent,#sidebar-box {
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+#sidebar-splitter {
+	background: transparent !important;
+	opacity: 0 !important;
+}
+
+#sidebar-box[sidebarcommand='treestyletab_piro_sakura_ne_jp-sidebar-action'] #sidebar-header {
+	display: none;
+}
+
+#sidebar-header {
+	display: none;
+}

@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
-installed_version=$(pacman -Qet | rg linux-zen | awk '{print $2}' | sed 's/\.zen1-1$//')
-latest_version=$(pacman -Ss linux-zen | rg "linux-zen " | awk '{print $2}' | sed 's/\.zen1-1$//')
+# Update the package index
+doas pacman -Sy
 
-if [ $installed_version == $latest_version ]; then
-    echo  "No updates needed"
+# Check if an update is available for the linux-zen package
+if doas pacman -Qu | rg -q linux-zen; then
+  echo "Update available"
 else
-    echo "update from $installed_version to $latest_version"
-
+  echo "No update available"
 fi
+
