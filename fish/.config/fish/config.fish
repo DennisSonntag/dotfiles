@@ -122,9 +122,9 @@ function full-update
 	cargo install-update -a
 	bob install nightly
 	bob use nightly
-	# nvm install latest
-	# nvm install lts
-	# nvm use lts
+	nvim --headless "+Lazy! sync" +qa
+	fnm install --latest
+	fnm install --lts
 	clear-cache
 end
 

@@ -1,8 +1,8 @@
 return {
 	"nvim-neo-tree/neo-tree.nvim",
 	config = function()
-		local status, neo_tree = pcall(require, "neo-tree")
-		if (not status) then return end
+		local neo_tree_status, neo_tree = pcall(require, "neo-tree")
+		if (not neo_tree_status) then return end
 
 		neo_tree.setup({
 			popup_border_style = "rounded",
@@ -65,7 +65,7 @@ return {
 			},
 			window = {
 				position = "left",
-				width = 40,
+				width = 80,
 				mapping_options = {
 					noremap = true,
 					nowait = true,
