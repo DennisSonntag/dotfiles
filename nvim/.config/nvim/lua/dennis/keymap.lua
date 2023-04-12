@@ -71,6 +71,7 @@ keymap("n", "<leader>ss", "<C-w>R")
 keymap("n", "<leader>stv", "<C-w>t<C-w>H")
 keymap("n", "<leader>sth", "<C-w>t<C-w>K")
 
-
-
-
+keymap("n", "<A-Right>", "3 0 <C-w>>")
+keymap("n", "<A-Left>", "3 0 <C-w><")
+keymap("n", "<A-Down>", "3 0 <C-w>-")
+keymap("n", "<A-Up>", "3 0 <C-w>+")

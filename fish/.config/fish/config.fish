@@ -95,6 +95,10 @@ alias bu="doas brillo -u 150000 -q -A 10"
 alias mirror="doas reflector -p https -l 50 --sort rate --verbose --save /etc/pacman.d/mirrorlist"
 alias prc="wget -O .prettierrc.json https://pastebin.com/raw/qhk1hkEB"
 
+alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
+alias nvim-chad="NVIM_APPNAME=NvChad nvim"
+alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
+
 function gfpull
 	git fetch --all
 	git reset --hard origin/master
@@ -183,3 +187,7 @@ fish_ssh_agent
 # nvm use lts > /dev/null
 
 
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
