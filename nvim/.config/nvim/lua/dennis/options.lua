@@ -49,3 +49,4 @@ o.cmdheight = 1
 o.hidden = true
 o.wrap = false
 o.mouse = "a"
+

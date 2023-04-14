@@ -11,6 +11,7 @@ return {
 	--Get good kid
 	{ "ThePrimeagen/vim-be-good", event = "VeryLazy" },
 
+
 	--Urgent deadline approaches? Don't worry. With this plugin you can procrastinate even more!
 	-- { "eandrju/cellular-automaton.nvim", event = "VeryLazy" },
 

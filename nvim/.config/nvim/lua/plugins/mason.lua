@@ -25,16 +25,6 @@ return {
 				ensure_installed = { "black", "prettierd", "eslint_d", "clang-format" }
 			})
 
-			mason_null_ls.setup_handlers {
-				function(source_name, methods)
-					-- all sources with no handler get passed here
-
-					-- To keep the original functionality of `automatic_setup = true`,
-					-- please add the below.
-					require("mason-null-ls.automatic_setup")(source_name, methods)
-				end,
-			}
-
 			null_ls.setup({
 				sources = {
 					null_ls.builtins.formatting.prettierd.with({
@@ -141,10 +131,16 @@ return {
 			end
 
 			mason_lsp.setup({
-				automatic_installation = true,
+				automatic_installation = false,
 				ensure_installed = { "astro", "clangd", "prismals", "bashls", "cssls", "html", "jsonls", "lua_ls",
 					"tailwindcss", "tsserver",
 					"pyright", "jdtls" },
+			})
+
+			lsp.rust_analyzer.setup({
+				on_attach = on_attach,
+				capabilities = capabilities,
+				cmd = { "rustup", "run", "stable", "rust-analyzer" }
 			})
 
 			mason_lsp.setup_handlers({
