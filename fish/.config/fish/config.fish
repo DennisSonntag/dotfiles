@@ -127,7 +127,7 @@ function full-update
 	bob install nightly
 	bob use nightly
 	nvim --headless "+Lazy! sync" +qa
-	nvim --headless "+MasonUpdateAll" +qa
+	nvim --headless -c 'autocmd User MasonUpdateAllComplete quitall' -c 'MasonUpdateAll'
 	fnm install --latest
 	fnm install --lts
 	clear-cache
