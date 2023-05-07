@@ -32,7 +32,7 @@ return {
 							PRETTIERD_DEFAULT_CONFIG = vim.fn.expand("~/.prettierrc.json"),
 						},
 						filetypes = { "astro", "javascript", "javascriptreact", "typescript", "typescriptreact", "vue",
-							"css", "scss", "less", "html", "json", "jsonc", "yaml", "markdown", "markdown.mdx",
+							"css", "scss", "less", "html", "json", "jsonc", "yaml", "markdown", "markdown.mdx", "svelte",
 							"graphql",
 							"handlebars" },
 					}),

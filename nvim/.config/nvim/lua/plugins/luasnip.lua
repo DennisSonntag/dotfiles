@@ -201,7 +201,7 @@ return {
 			})
 		end
 
-		for _, lang in ipairs({ "typescriptreact", "javascriptreact", "html", "astro" }) do
+		for _, lang in ipairs({ "typescriptreact", "javascriptreact", "html", "astro", "svelte" }) do
 			ls.add_snippets(lang, {
 				s("doctype",
 					fmt("<!DOCTYPE>{}", { i(1), })),
