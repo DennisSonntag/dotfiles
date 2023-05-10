@@ -140,7 +140,13 @@ return {
 			lsp.rust_analyzer.setup({
 				on_attach = on_attach,
 				capabilities = capabilities,
-				cmd = { "rustup", "run", "stable", "rust-analyzer" }
+				filetypes = {"rust"},
+				cmd = { "rustup", "run", "stable", "rust-analyzer" },
+				['rust-analyzer'] = {
+					cargo = {
+						allFeatures = true,
+					}
+				}
 			})
 
 			mason_lsp.setup_handlers({

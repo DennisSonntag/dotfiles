@@ -14,10 +14,11 @@ return {
 		config = function()
 			local cmp_status, cmp = pcall(require, "cmp")
 			if (not cmp_status) then return end
-				
+
 
 			local lspkind_status, lspkind = pcall(require, "lspkind")
 			if (not lspkind_status) then return end
+
 
 			local npm_status, npm = pcall(require, "cmp-npm")
 			if (not npm_status) then return end
@@ -105,6 +106,15 @@ return {
 								if contains({ "println!", "print!" }, entry:get_word()) then
 									return false
 								end
+							end
+							return true
+						end
+					},
+					{
+						name = "crates",
+						entry_filter = function(entry, ctx)
+							if not contains({ "toml", "rust" }, ctx.filetype) then
+								return false
 							end
 							return true
 						end
