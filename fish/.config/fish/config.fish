@@ -130,6 +130,8 @@ function full-update
 	nvim --headless -c 'autocmd User MasonUpdateAllComplete quitall' -c 'MasonUpdateAll'
 	fnm install --latest
 	fnm install --lts
+	npm i -g npm@latest
+	npm i -g pnpm
 	clear-cache
 end
 
@@ -164,11 +166,6 @@ function __history_previous_command_arguments
 	end
 end
 
-function beans
-	tmux-sessionizer
-end
-
-
 # The bindings for !! and !$
 if [ "$fish_key_bindings" = "fish_vi_key_bindings" ];
   bind -Minsert ! __history_previous_command
@@ -184,11 +181,3 @@ bind -M insert \cf tmux-sessionizer
 starship init fish | source
 zoxide init fish | source
 fish_ssh_agent
-# nvm use latest > /dev/null
-# nvm use lts > /dev/null
-
-
-
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
