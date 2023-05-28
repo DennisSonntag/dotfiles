@@ -4,7 +4,7 @@ return {
 	event = 'BufRead',
 	dependencies = { "echasnovski/mini.cursorword", "echasnovski/mini.move", "echasnovski/mini.surround",
 		"echasnovski/mini.surround",
-		"echasnovski/mini.pairs" },
+		"echasnovski/mini.pairs", "echasnovski/mini.indentscope" },
 	config = function()
 		local cursorword_status, cursorword = pcall(require, "mini.cursorword")
 		if (not cursorword_status) then return end
@@ -12,6 +12,11 @@ return {
 		cursorword.setup({
 			delay = 10,
 		})
+
+		local indentscope_status, indentscope = pcall(require, "mini.indentscope")
+		if (not indentscope_status) then return end
+
+		indentscope.setup()
 
 		local move_status, move = pcall(require, "mini.move")
 		if (not move_status) then return end

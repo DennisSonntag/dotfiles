@@ -14,7 +14,8 @@ return {
 		local keymap = vim.keymap.set
 
 		keymap('n', '<C-p>', function() builtin.git_files({ hidden = true }) end)
-		keymap('n', 'F', function() builtin.find_files({ hidden = true }) end)
+		-- keymap('n', 'F', function() builtin.find_files({ hidden = true }) end)
+		keymap('n', '<leader>ff', function() builtin.find_files({ hidden = true }) end)
 
 		keymap("n", "<leader>fg", " <cmd>Telescope live_grep<CR>")
 		keymap("n", "<leader>fb", " <cmd>Telescope buffers<CR>")
