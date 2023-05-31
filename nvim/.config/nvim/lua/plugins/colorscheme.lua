@@ -10,8 +10,8 @@ return {
 			floats = "transparent", -- style for floating windows
 		},
 	},
-	config = function(_, opts)
-		require("tokyonight").setup(opts)
+	config = true,
+	init = function()
 		vim.cmd.colorscheme("tokyonight")
 		vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ffffff", bold = true })
 

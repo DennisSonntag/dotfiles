@@ -5,6 +5,7 @@ return {
 	},
 	{
 		"jay-babu/mason-null-ls.nvim",
+		event = 'BufRead',
 		opts = {
 			automatic_setup = true,
 			automatic_installation = true,
@@ -33,9 +34,8 @@ return {
 				}
 			}
 		end,
-		config = function(_, opts)
-			require("null-ls").setup(opts)
-
+		config = true,
+		init = function()
 			local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 			vim.api.nvim_create_user_command(

@@ -1,8 +1,8 @@
 return {
 	--Required for a bunch of plugins
 	"nvim-lua/plenary.nvim",
-	"tpope/vim-fugitive",
 	"MunifTanjim/nui.nvim",
+	{ "tpope/vim-fugitive",       lazy = true },
 	{
 		"Pocco81/auto-save.nvim",
 		event = 'BufRead',
@@ -25,5 +25,4 @@ return {
 
 	--Urgent deadline approaches? Don't worry. With this plugin you can procrastinate even more!
 	-- { "eandrju/cellular-automaton.nvim", event = "VeryLazy" },
-
 }

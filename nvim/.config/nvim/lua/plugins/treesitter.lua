@@ -32,7 +32,8 @@ return {
 		},
 		indent = { enable = true },
 	},
-	config = function(_, opts)
+	main = "nvim-treesitter.configs",
+	init = function()
 		vim.filetype.add({ extension = { wgsl = "wgsl" } })
 
 		local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
@@ -42,7 +43,5 @@ return {
 				files = { "src/parser.c" }
 			},
 		}
-
-		require("nvim-treesitter.configs").setup(opts)
 	end
 }

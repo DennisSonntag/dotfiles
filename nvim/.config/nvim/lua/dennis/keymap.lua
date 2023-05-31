@@ -13,7 +13,7 @@ keymap("n", "<C-k>", "<C-w>k")
 keymap("n", "<C-l>", "<C-w>l")
 
 --File tree
-keymap("n", "<leader>e", "<cmd>Neotree toggle float<CR>")
+keymap("n", "<leader>e", "<cmd>NeoTreeFloatToggle<CR>")
 
 
 -- Toggle Spelling

@@ -1,5 +1,6 @@
 return {
 	"nvim-neo-tree/neo-tree.nvim",
+	cmd = "NeoTreeFloatToggle",
 	opts = {
 		popup_border_style = "rounded",
 

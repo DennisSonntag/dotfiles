@@ -29,9 +29,7 @@ return {
 			},
 		}
 	end,
-	config = function(_, opts)
-		require("telescope").setup(opts)
-	end,
+	config = true,
 	keys = {
 		{ '<C-p>',      function() require("telescope.builtin").git_files({ hidden = true }) end },
 		{ '<leader>ff', function() require("telescope.builtin").find_files({ hidden = true }) end },
