@@ -1,9 +1,6 @@
 return {
 	"goolord/alpha-nvim",
-	config = function()
-		local alpha_status, alpha = pcall(require, "alpha")
-		if (not alpha_status) then return end
-
+	opts = function()
 		local dashboard = require("alpha.themes.dashboard")
 		dashboard.section.header.val = {
 			[[                                               _______  ________  ______  __    __                                                         ]],
@@ -35,17 +32,16 @@ return {
 			dashboard.button("m", "" .. " Mason", "<cmd>Mason<CR>"),
 			dashboard.button("q", "" .. " Quit", "<cmd>qa<CR>"),
 		}
-		local function footer()
-			return "MORE BEANZZ ANYONE?!"
-		end
 
-		dashboard.section.footer.val = footer()
-
+		dashboard.section.footer.val = "MORE BEANZZ ANYONE?!"
 		dashboard.section.footer.opts.hl = "Type"
 		dashboard.section.header.opts.hl = "Include"
 		dashboard.section.buttons.opts.hl = "Keyword"
 
 		dashboard.opts.opts.noautocmd = true
-		alpha.setup(dashboard.opts)
+		return dashboard.opts
+	end,
+	config = function(_, opts)
+		require("alpha").setup(opts)
 	end
 }

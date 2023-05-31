@@ -1,31 +1,22 @@
 return {
 	{
 		"williamboman/mason.nvim",
-		config = function()
-			local status, mason = pcall(require, "mason")
-			if (not status) then return end
-
-			mason.setup()
-		end
+		config = true
 	},
 	{
 		"jay-babu/mason-null-ls.nvim",
+		opts = {
+			automatic_setup = true,
+			automatic_installation = true,
+			ensure_installed = { "black", "prettierd", "eslint_d", "clang-format" }
+		}
+	},
+	{
+		"jose-elias-alvarez/null-ls.nvim",
 		event = 'BufRead',
-		dependencies = { "jose-elias-alvarez/null-ls.nvim" },
-		config = function()
-			local status, mason_null_ls = pcall(require, "mason-null-ls")
-			if (not status) then return end
-
-			local status2, null_ls = pcall(require, "null-ls")
-			if (not status2) then return end
-
-			mason_null_ls.setup({
-				automatic_setup = true,
-				automatic_installation = true,
-				ensure_installed = { "black", "prettierd", "eslint_d", "clang-format" }
-			})
-
-			null_ls.setup({
+		opts = function()
+			local null_ls = require("null-ls")
+			return {
 				sources = {
 					null_ls.builtins.formatting.prettierd.with({
 						env = {
@@ -40,7 +31,10 @@ return {
 						diagnostics_format = '[eslint] #{m}\n(#{c})',
 					}),
 				}
-			})
+			}
+		end,
+		config = function(_, opts)
+			require("null-ls").setup(opts)
 
 			local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
@@ -140,7 +134,7 @@ return {
 			lsp.rust_analyzer.setup({
 				on_attach = on_attach,
 				capabilities = capabilities,
-				filetypes = {"rust"},
+				filetypes = { "rust" },
 				cmd = { "rustup", "run", "stable", "rust-analyzer" },
 				['rust-analyzer'] = {
 					cargo = {
@@ -189,5 +183,9 @@ return {
 				end
 			})
 		end
+	},
+	{
+		'RubixDev/mason-update-all',
+		config = true,
 	}
 }

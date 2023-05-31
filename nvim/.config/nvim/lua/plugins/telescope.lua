@@ -1,28 +1,10 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	config = function()
-		local builtin_status, builtin = pcall(require, "telescope.builtin")
-		if (not builtin_status) then return end
-
-		local telescope_status, telescope = pcall(require, "telescope")
-		if (not telescope_status) then return end
-
+	opts = function()
 		local actions_status, actions = pcall(require, "telescope.actions")
 		if (not actions_status) then return end
 
-
-		local keymap = vim.keymap.set
-
-		keymap('n', '<C-p>', function() builtin.git_files({ hidden = true }) end)
-		-- keymap('n', 'F', function() builtin.find_files({ hidden = true }) end)
-		keymap('n', '<leader>ff', function() builtin.find_files({ hidden = true }) end)
-
-		keymap("n", "<leader>fg", " <cmd>Telescope live_grep<CR>")
-		keymap("n", "<leader>fb", " <cmd>Telescope buffers<CR>")
-		keymap("n", "<leader>fh", " <cmd>Telescope help_tags<CR>")
-		keymap("n", "<leader>fs", " <cmd>Telescope spell_suggest<CR>")
-
-		telescope.setup({
+		return {
 			defaults = {
 				layout_config = {
 					horizontal = {
@@ -45,6 +27,17 @@ return {
 					}
 				}
 			},
-		})
-	end
+		}
+	end,
+	config = function(_, opts)
+		require("telescope").setup(opts)
+	end,
+	keys = {
+		{ '<C-p>',      function() require("telescope.builtin").git_files({ hidden = true }) end },
+		{ '<leader>ff', function() require("telescope.builtin").find_files({ hidden = true }) end },
+		{ "<leader>fg", " <cmd>Telescope live_grep<CR>" },
+		{ "<leader>fb", " <cmd>Telescope buffers<CR>" },
+		{ "<leader>fh", " <cmd>Telescope help_tags<CR>" },
+		{ "<leader>fs", " <cmd>Telescope spell_suggest<CR>" },
+	}
 }

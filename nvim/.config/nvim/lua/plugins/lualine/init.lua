@@ -1,13 +1,9 @@
 return {
 	"nvim-lualine/lualine.nvim",
 	event = { "BufReadPost", "BufNewFile" },
-	config = function()
-		local lualine_status, lualine = pcall(require, "lualine")
-		if (not lualine_status) then return end
-
+	opts = function()
 		local statusline = require("plugins.lualine.default")
-
-		lualine.setup({
+		return {
 			options = {
 				globalstatus = true,
 				icons_enabled = true,
@@ -49,6 +45,9 @@ return {
 				lualine_y = {},
 				lualine_z = {},
 			},
-		})
+		}
+	end,
+	config = function(_, opts)
+		require("lualine").setup(opts)
 	end,
 }

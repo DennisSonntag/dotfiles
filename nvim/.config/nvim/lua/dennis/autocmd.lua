@@ -1,14 +1,4 @@
 local autocmd = vim.api.nvim_create_autocmd
-local keymap = vim.keymap.set
-
--- Use 'q' to quit from common plugins
--- autocmd({ "FileType" }, {
--- 	pattern = { "qf", "help", "man", "lspinfo", "spectre_panel", "lir" },
--- 	callback = function()
--- 		keymap("n", "q", "<cmd>close<CR>", { silent = true })
--- 		vim.opt.nobuflisted = true
--- 	end,
--- })
 
 -- Remove statusline and tabline when in Alpha
 autocmd({ "User" }, {
@@ -26,7 +16,7 @@ autocmd({ "BufUnload" }, {
 
 -- Set wrap and spell in markdown and gitcommit
 autocmd({ "FileType" }, {
-	pattern = { "gitcommit", "markdown" , "text" },
+	pattern = { "gitcommit", "markdown", "text" },
 	callback = function()
 		vim.opt_local.wrap = true
 		vim.opt_local.spell = true

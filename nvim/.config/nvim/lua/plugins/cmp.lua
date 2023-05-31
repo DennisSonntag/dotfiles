@@ -6,7 +6,7 @@ return {
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-path",
-			"David-Kunz/cmp-npm",
+			{ "David-Kunz/cmp-npm", config = true },
 			"saadparwaiz1/cmp_luasnip",
 			"hrsh7th/cmp-nvim-lua",
 			"f3fora/cmp-spell",
@@ -15,22 +15,13 @@ return {
 			local cmp_status, cmp = pcall(require, "cmp")
 			if (not cmp_status) then return end
 
-
 			local lspkind_status, lspkind = pcall(require, "lspkind")
 			if (not lspkind_status) then return end
-
-
-			local npm_status, npm = pcall(require, "cmp-npm")
-			if (not npm_status) then return end
-
-			npm.setup({})
 
 			local luasnip_status_ok, luasnip = pcall(require, "luasnip")
 			if (not luasnip_status_ok) then return end
 
 			local cmp_select = { behavior = cmp.SelectBehavior.Select }
-
-
 
 			local function contains(list, x)
 				for _, v in pairs(list) do
@@ -163,6 +154,7 @@ return {
 		"onsails/lspkind.nvim",
 		event = 'BufRead',
 		after = "hrsh7th/nvim-cmp",
+
 		config = function()
 			local status, lspkind = pcall(require, "lspkind")
 			if (not status) then return end

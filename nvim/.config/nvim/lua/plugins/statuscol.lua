@@ -6,6 +6,7 @@ return {
 		if (not status) then return end
 
 		statuscol.setup()
+
 		if _G.StatusColumn then
 			return
 		end

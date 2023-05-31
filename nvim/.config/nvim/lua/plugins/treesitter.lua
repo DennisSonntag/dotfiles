@@ -1,43 +1,48 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	event = 'BufRead',
+	lazy = false,
+	priority = 1000,
 	dependencies = {
 		"p00f/nvim-ts-rainbow",
-		"windwp/nvim-ts-autotag"
+		{ "windwp/nvim-ts-autotag", config = true }
 	},
 	build = ":TSUpdate",
-	config = function()
-		local status, auto_tag = pcall(require, "nvim-ts-autotag")
-		if (not status) then return end
-
-		auto_tag.setup()
-
-		local status2, treesitter = pcall(require, "nvim-treesitter.configs")
-		if (not status2) then return end
-
-		treesitter.setup({
-			ensure_installed = { "javascript", "typescript", "lua", "c", "cpp",
-				"css", "json", "bash", "rust", "html", "java", "prisma", "python", "dockerfile", "toml", "tsx", "make",
-				"markdown", "markdown_inline", "vim", "yaml", "toml", "fish", "astro", "comment" },
-			autotag = {
-				enable = true,
+	opts = {
+		ensure_installed = { "javascript", "typescript", "lua", "c", "cpp",
+			"css", "json", "bash", "rust", "html", "java", "prisma", "python", "dockerfile", "toml", "tsx", "make",
+			"markdown", "markdown_inline", "vim", "yaml", "toml", "fish", "astro", "comment", "wgsl", "wgsl_bevy" },
+		autotag = {
+			enable = true,
+		},
+		highlight = {
+			enable = true,
+			additional_vim_regex_highlighting = false,
+		},
+		rainbow = {
+			enable = true,
+			disable = { "html" },
+			extended_mode = true,
+			max_file_lines = nil,
+			colors = {
+				"#179FFF",
+				"#EBC703",
+				"#C768C3"
 			},
-			highlight = {
-				enable = true,
-				additional_vim_regex_highlighting = false,
+		},
+		indent = { enable = true },
+	},
+	config = function(_, opts)
+		vim.filetype.add({ extension = { wgsl = "wgsl" } })
+
+		local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+		parser_config.wgsl = {
+			install_info = {
+				url = "https://github.com/szebniok/tree-sitter-wgsl",
+				files = { "src/parser.c" }
 			},
-			rainbow = {
-				enable = true,
-				disable = { "html" },
-				extended_mode = true,
-				max_file_lines = nil,
-				colors = {
-					"#179FFF",
-					"#EBC703",
-					"#C768C3"
-				},
-			},
-			indent = { enable = true },
-		})
+		}
+
+		require("nvim-treesitter.configs").setup(opts)
 	end
 }
