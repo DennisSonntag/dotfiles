@@ -4,4 +4,4 @@ umt.toml
 ub_spaces = 4
 hard_tabs = true
 control_style = "Rfc"
-max_width = 999
+# max_width = 999

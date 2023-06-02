@@ -1,4 +1,40 @@
 return {
+	-- inlay hints
+	{
+		"lvimuser/lsp-inlayhints.nvim",
+		branch = "anticonceal",
+		event = "LspAttach",
+		main = "lsp-inlayhints",
+		keys = {
+			{
+				"<leader>lth", function()
+				require('lsp-inlayhints').toggle()
+			end
+			}
+
+		},
+		config = true,
+	},
+	{
+		"glepnir/lspsaga.nvim",
+		event = "LspAttach",
+		opts = {
+			ui = {
+				-- This option only works in Neovim 0.9
+				title = true,
+				-- Border type can be single, double, rounded, solid, shadow.
+				border = "rounded",
+				winblend = 0,
+				expand = "",
+				collapse = "",
+				code_action = "💡",
+				incoming = " ",
+				outgoing = " ",
+				hover = ' ',
+				kind = {},
+			},
+		},
+	},
 	{
 		"williamboman/mason.nvim",
 		config = true
@@ -48,52 +84,28 @@ return {
 		end
 	},
 	{
+		"neovim/nvim-lspconfig",
+		init = function()
+			-- disable lsp watcher. Too slow on linux
+			local ok, wf = pcall(require, "vim.lsp._watchfiles")
+			if ok then
+				wf._watchfunc = function()
+					return function()
+					end
+				end
+			end
+		end,
+
+	},
+	{
 		"williamboman/mason-lspconfig.nvim",
 		event = 'BufRead',
-		dependencies = { "neovim/nvim-lspconfig" },
 		config = function()
 			local status_mason_lsp, mason_lsp = pcall(require, "mason-lspconfig")
 			if (not status_mason_lsp) then return end
 
 			local status_lsp, lsp = pcall(require, "lspconfig")
 			if (not status_lsp) then return end
-
-			require('lspconfig.ui.windows').default_options.border = 'single'
-
-			vim.cmd("autocmd! ColorScheme * highlight NormalFloat guibg=#1f2335")
-			vim.cmd("autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335")
-			-- ┌ : used to outline the top-left corner of the floating window.
-			-- ─ : used to outline the top and bottom edges of the floating window.
-			-- ┐ : used to outline the top-right corner of the floating window.
-			-- │ : used to outline the left and right edges of the floating window.
-			-- └ : used to outline the bottom-left corner of the floating window.
-			-- ┘ :
-
-			local border = {
-				{ "┌", "FloatBorder" },
-
-				{ "─", "FloatBorder" },
-
-				{ "┐", "FloatBorder" },
-
-				{ "│", "FloatBorder" },
-
-				{ "┘", "FloatBorder" },
-
-				{ "─", "FloatBorder" },
-
-				{ "└", "FloatBorder" },
-
-				{ "│", "FloatBorder" },
-			}
-
-			-- To instead override globally
-			local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
-			function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
-				opts = opts or {}
-				opts.border = opts.border or border
-				return orig_util_open_floating_preview(contents, syntax, opts, ...)
-			end
 
 			local capabilities = require('cmp_nvim_lsp').default_capabilities()
 			capabilities.offsetEncoding = { "utf-16" }
@@ -106,7 +118,10 @@ return {
 
 				local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
-				keymap('n', 'K', vim.lsp.buf.hover, bufopts)
+				require("lsp-inlayhints").on_attach(client, bufnr)
+
+
+				keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", bufopts)
 
 				keymap('n', 'gd', builtin.lsp_definitions, bufopts)
 
@@ -116,11 +131,11 @@ return {
 				keymap("n", "]d", function() vim.diagnostic.goto_prev() end, bufopts)
 
 
-				keymap("n", "<leader>lvd", vim.diagnostic.open_float, bufopts)
 
+				keymap("n", "<leader>lvd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", bufopts)
 
 				keymap('n', '<leader>lr', vim.lsp.buf.rename, bufopts)
-				keymap('n', '<space>lca', vim.lsp.buf.code_action, bufopts)
+				keymap('n', '<space>lca', "<cmd>Lspsaga code_action<CR>", bufopts)
 				keymap("n", "<leader>lf", function() vim.lsp.buf.format { async = true } end, bufopts)
 			end
 
@@ -137,9 +152,12 @@ return {
 				filetypes = { "rust" },
 				cmd = { "rustup", "run", "stable", "rust-analyzer" },
 				['rust-analyzer'] = {
-					cargo = {
-						allFeatures = true,
-					}
+					procMacro = { enable = true },
+					cargo = { allFeatures = true },
+					checkOnSave = {
+						command = "clippy",
+						extraArgs = { "--no-deps" },
+					},
 				}
 			})
 

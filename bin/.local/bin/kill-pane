@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Get the number of panes and windows in the session
+pane_count=$(tmux list-panes -F "#{session_windows} #{window_panes}" | awk '{print $2}')
+window_count=$(tmux list-panes -F "#{session_windows} #{window_panes}" | awk '{print $1}')
+
+# Check if it's the last pane/window in the session
+if [ "$pane_count" -eq 1 ] && [ "$window_count" -eq 1 ]; then
+  # Display a message indicating the last pane/window cannot be killed
+  tmux display-message "Cannot kill the last pane/window in the session"
+else
+  # Kill the current pane
+  tmux kill-pane
+fi
+
