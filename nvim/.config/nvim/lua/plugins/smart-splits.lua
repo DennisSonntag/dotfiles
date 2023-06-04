@@ -1,38 +1,42 @@
 return {
 	'mrjones2014/smart-splits.nvim',
 	main = "smart-splits",
-	keys = {
-		-- window shmovment
-		{ '<C-h>',       function() require('smart-splits').move_cursor_left() end },
-		{ '<C-j>',       function() require('smart-splits').move_cursor_down() end },
-		{ '<C-k>',       function() require('smart-splits').move_cursor_up() end },
-		{ '<C-l>',       function() require('smart-splits').move_cursor_right() end },
+	keys = function()
+		local smart_splits = require('smart-splits')
 
-		-- window resizing
-		{ '<A-Left>',    function() require('smart-splits').resize_left() end },
-		{ '<A-Down>',    function() require('smart-splits').resize_down() end },
-		{ '<A-Up>',      function() require('smart-splits').resize_up() end },
-		{ '<A-Right>',   function() require('smart-splits').resize_right() end },
+		return {
+			-- window shmovment
+			{ '<C-h>',             smart_splits.move_cursor_left },
+			{ '<C-j>',             smart_splits.move_cursor_down },
+			{ '<C-k>',             smart_splits.move_cursor_up },
+			{ '<C-l>',             smart_splits.move_cursor_right },
 
-		-- creating splits
+			-- window resizing
+			{ '<A-Left>',          smart_splits.resize_left },
+			{ '<A-Down>',          smart_splits.resize_down },
+			{ '<A-Up>',            smart_splits.resize_up },
+			{ '<A-Right>',         smart_splits.resize_right },
 
-		{ "<leader>sv",  "<cmd>vsplit<CR>" },
-		{ "<leader>sh",  "<cmd>split<CR>" },
+			-- creating splits
 
-		-- managing splits
+			{ "<leader>sv",        "<cmd>vsplit<CR>" },
+			{ "<leader>sh",        "<cmd>split<CR>" },
 
-		{ "<leader>se",  "<C-w>=" },
-		{ "<leader>ss",  "<C-w>R" },
-		{ "<leader>stv", "<C-w>t<C-w>H" },
-		{ "<leader>sth", "<C-w>t<C-w>K" },
+			-- managing splits
 
-		-- swapping buffers between windows,
-		-- { '<leader><leader>h', require('smart-splits').swap_buf_left },
-		-- { '<leader><leader>j', require('smart-splits').swap_buf_down },
-		-- { '<leader><leader>k', require('smart-splits').swap_buf_up },
-		-- { '<leader><leader>l', require('smart-splits').swap_buf_right },
+			{ "<leader>se",        "<C-w>=" },
+			{ "<leader>ss",        "<C-w>R" },
+			{ "<leader>stv",       "<C-w>t<C-w>H" },
+			{ "<leader>sth",       "<C-w>t<C-w>K" },
 
-	},
+			-- swapping buffers between windows,
+			{ '<leader><leader>h', smart_splits.swap_buf_left },
+			{ '<leader><leader>j', smart_splits.swap_buf_down },
+			{ '<leader><leader>k', smart_splits.swap_buf_up },
+			{ '<leader><leader>l', smart_splits.swap_buf_right },
+
+		}
+	end,
 	opts = {
 		-- Ignored filetypes (only while resizing)
 		ignored_filetypes = {

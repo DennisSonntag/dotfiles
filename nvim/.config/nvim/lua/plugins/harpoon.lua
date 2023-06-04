@@ -1,47 +1,18 @@
 return {
 	"ThePrimeagen/harpoon",
-	keys = {
-		{
-			"<C-e>",
-			function()
-				require("harpoon.ui").toggle_quick_menu()
-			end,
-		},
-		{
-			"<leader>a",
-			function()
-				require("harpoon.mark").add_file()
-			end,
-		},
-		{
-			"<A-1>",
-			function()
-				require("harpoon.ui").nav_file(1)
-			end,
-		},
-		{
-			"<A-2>",
-			function()
-				require("harpoon.ui").nav_file(2)
-			end,
-		},
-		{
-			"<A-3>",
-			function()
-				require("harpoon.ui").nav_file(3)
-			end,
-		},
-		{
-			"<A-4>",
-			function()
-				require("harpoon.ui").nav_file(4)
-			end,
-		},
-		{
-			"<A-5>",
-			function()
-				require("harpoon.ui").nav_file(5)
-			end,
-		},
-	},
+	keys = function()
+		local ui = require("harpoon.ui")
+		local mark = require("harpoon.mark")
+
+		local keymaps = {
+			{ "<leader>a", mark.add_file },
+			{ "<C-e>",     ui.toggle_quick_menu },
+		}
+
+		for i = 1, 5 do
+			table.insert(keymaps, { "<A-" .. i .. ">", function() ui.nav_file(i) end, })
+		end
+
+		return keymaps
+	end,
 }

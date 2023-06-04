@@ -1,17 +1,15 @@
 return {
-	-- inlay hints
+	{
+		'RubixDev/mason-update-all',
+		config = true,
+	},
 	{
 		"lvimuser/lsp-inlayhints.nvim",
 		branch = "anticonceal",
 		event = "LspAttach",
 		main = "lsp-inlayhints",
 		keys = {
-			{
-				"<leader>lth", function()
-				require('lsp-inlayhints').toggle()
-			end
-			}
-
+			{ "<leader>lth", function() require('lsp-inlayhints').toggle() end }
 		},
 		config = true,
 	},
@@ -22,8 +20,7 @@ return {
 			ui = {
 				-- This option only works in Neovim 0.9
 				title = true,
-				-- Border type can be single, double, rounded, solid, shadow.
-				border = "rounded",
+				border = "rounded",-- single | double | rounded | solid | shadow
 				winblend = 0,
 				expand = "",
 				collapse = "",
@@ -41,7 +38,7 @@ return {
 	},
 	{
 		"jay-babu/mason-null-ls.nvim",
-		event = 'BufRead',
+		event = "LspAttach",
 		opts = {
 			automatic_setup = true,
 			automatic_installation = true,
@@ -50,7 +47,7 @@ return {
 	},
 	{
 		"jose-elias-alvarez/null-ls.nvim",
-		event = 'BufRead',
+		event = "LspAttach",
 		opts = function()
 			local null_ls = require("null-ls")
 			return {
@@ -85,6 +82,7 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+		event = 'BufRead',
 		init = function()
 			-- disable lsp watcher. Too slow on linux
 			local ok, wf = pcall(require, "vim.lsp._watchfiles")
@@ -120,23 +118,16 @@ return {
 
 				require("lsp-inlayhints").on_attach(client, bufnr)
 
-
 				keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", bufopts)
-
 				keymap('n', 'gd', builtin.lsp_definitions, bufopts)
-
+				keymap('n', 'gi', builtin.lsp_implementations, bufopts)
 				keymap('n', '<leader>lfr', builtin.lsp_references, bufopts)
-
-				keymap("n", "[d", function() vim.diagnostic.goto_next() end, bufopts)
-				keymap("n", "]d", function() vim.diagnostic.goto_prev() end, bufopts)
-
-
-
+				keymap("n", "[d", vim.diagnostic.goto_next, bufopts)
+				keymap("n", "]d", vim.diagnostic.goto_prev, bufopts)
 				keymap("n", "<leader>lvd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", bufopts)
-
 				keymap('n', '<leader>lr', vim.lsp.buf.rename, bufopts)
 				keymap('n', '<space>lca', "<cmd>Lspsaga code_action<CR>", bufopts)
-				keymap("n", "<leader>lf", function() vim.lsp.buf.format { async = true } end, bufopts)
+				keymap("n", "<leader>lf", function() vim.lsp.buf.format({ async = true }) end, bufopts)
 			end
 
 			mason_lsp.setup({
@@ -152,7 +143,6 @@ return {
 				filetypes = { "rust" },
 				cmd = { "rustup", "run", "stable", "rust-analyzer" },
 				['rust-analyzer'] = {
-					procMacro = { enable = true },
 					cargo = { allFeatures = true },
 					checkOnSave = {
 						command = "clippy",
@@ -201,9 +191,5 @@ return {
 				end
 			})
 		end
-	},
-	{
-		'RubixDev/mason-update-all',
-		config = true,
 	}
 }

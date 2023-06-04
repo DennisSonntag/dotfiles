@@ -3,23 +3,30 @@ return {
 	lazy = false,
 	priority = 1000,
 	opts = {
-		style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
+		style = "storm", -- storm | moon | night | day
 		transparent = true,
 		styles = {
 			sidebars = "transparent", -- style for sidebars, see below
 			floats = "transparent", -- style for floating windows
 		},
+		on_highlights = function(hl, _color)
+			hl.CursorLineNr = {
+				fg = "#ffffff",
+				bold = true,
+			}
+			hl.LineNr = {
+				fg = "#555f8c",
+			}
+			hl.CursorLine = {
+				bg = "#2d3349",
+				bold = true,
+			}
+			hl.MatchParen = {
+				bg = "#3b4261",
+			}
+		end,
 	},
-	config = true,
 	init = function()
 		vim.cmd.colorscheme("tokyonight")
-		vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ffffff", bold = true })
-
-		vim.api.nvim_set_hl(0, "LineNr", { fg = "#555f8c" })
-		vim.api.nvim_set_hl(0, "CursorLine", { bg = "#2d3349", bold = true })
-
-		vim.api.nvim_set_hl(0, "MatchParen", {
-			bg = "#3b4261",
-		})
 	end
 }

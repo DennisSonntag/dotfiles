@@ -1,9 +1,7 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	opts = function()
-		local actions_status, actions = pcall(require, "telescope.actions")
-		if (not actions_status) then return end
-
+		local actions = require("telescope.actions")
 		return {
 			defaults = {
 				layout_config = {
@@ -31,7 +29,7 @@ return {
 	end,
 	config = true,
 	keys = {
-		{ '<C-p>',      function() require("telescope.builtin").git_files({ hidden = true }) end },
+		-- { '<C-p>',      function() require("telescope.builtin").git_files({ hidden = true }) end },
 		{ '<leader>ff', function() require("telescope.builtin").find_files({ hidden = true }) end },
 		{ "<leader>fg", " <cmd>Telescope live_grep<CR>" },
 		{ "<leader>fb", " <cmd>Telescope buffers<CR>" },
