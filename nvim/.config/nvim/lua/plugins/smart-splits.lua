@@ -2,7 +2,8 @@ return {
 	'mrjones2014/smart-splits.nvim',
 	main = "smart-splits",
 	keys = function()
-		local smart_splits = require('smart-splits')
+		local split_status,smart_splits = pcall(require,'smart-splits')
+		if not split_status then return end
 
 		return {
 			-- window shmovment

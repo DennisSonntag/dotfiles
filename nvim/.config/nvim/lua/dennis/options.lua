@@ -27,7 +27,7 @@ o.copyindent = true
 o.relativenumber = true
 o.nu = true
 
-o.signcolumn = "yes"
+o.signcolumn = "number"
 o.cursorline = true
 
 o.fillchars = { eob = " " }

@@ -1,8 +1,10 @@
 return {
 	"ThePrimeagen/harpoon",
 	keys = function()
-		local ui = require("harpoon.ui")
-		local mark = require("harpoon.mark")
+		local ui_status, ui = pcall(require, "harpoon.ui")
+		if not ui_status then return end
+		local mark_staus, mark = pcall(require, "harpoon.mark")
+		if not mark_staus then return end
 
 		local keymaps = {
 			{ "<leader>a", mark.add_file },
