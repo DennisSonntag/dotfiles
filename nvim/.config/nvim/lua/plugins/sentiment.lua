@@ -1,10 +1,8 @@
 return {
 	"utilyre/sentiment.nvim",
-	event = "VeryLazy", -- keep for lazy loading
+	event = 'BufRead',
 	config = true,
 	init = function()
-		-- `matchparen.vim` needs to be disabled manually in case of lazy loading
-		vim.g.loaded_matchparen = 1
+		vim.g.loaded_matchparen = 1 -- `matchparen.vim` needs to be disabled manually in case of lazy loading
 	end,
 }
-

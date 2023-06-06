@@ -25,32 +25,37 @@ return {
 			inc_rename = true,
 		},
 	},
-	keys = {
-		{
-			"<S-Enter>",
-			function() require("noice").redirect(vim.fn.getcmdline()) end,
-			mode = "c",
-			desc = "Redirect Cmdline"
-		},
-		{
-			"<leader>snl",
-			function() require("noice").cmd("last") end,
-			desc = "Noice Last Message"
-		},
-		{
-			"<leader>snh",
-			function() require("noice").cmd("history") end,
-			desc = "Noice History"
-		},
-		{
-			"<leader>sna",
-			function() require("noice").cmd("all") end,
-			desc = "Noice All"
-		},
-		{
-			"<leader>snd",
-			function() require("noice").cmd("dismiss") end,
-			desc = "Dismiss All"
-		},
-	},
+	keys = function()
+		local noice_status, noice = pcall(require, "noice")
+		if not noice_status then return end
+
+		return {
+			{
+				"<S-Enter>",
+				function() noice.redirect(vim.fn.getcmdline()) end,
+				mode = "c",
+				desc = "Redirect Cmdline"
+			},
+			{
+				"<leader>snl",
+				function() noice.cmd("last") end,
+				desc = "Noice Last Message"
+			},
+			{
+				"<leader>snh",
+				function() noice.cmd("history") end,
+				desc = "Noice History"
+			},
+			{
+				"<leader>sna",
+				function() noice.cmd("all") end,
+				desc = "Noice All"
+			},
+			{
+				"<leader>snd",
+				function() noice.cmd("dismiss") end,
+				desc = "Dismiss All"
+			},
+		}
+	end,
 }

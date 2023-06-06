@@ -11,9 +11,6 @@ keymap("n", "<leader>ts", function()
 	vim.opt.spell = not (vim.opt.spell:get())
 end)
 
--- Tmux go brrrrrrrrrrrrrr
-keymap("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer-tmux<CR>")
-
 --Centering shizzzzzzzzz
 keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
@@ -26,7 +23,6 @@ keymap("x", "<leader>p", [["_dP]])
 
 -- "Capital Q is the worst place in the universe"-ThePrimeagen
 keymap("n", "Q", "<nop>")
-
 
 -- next greatest remap ever : asbjornHaland
 keymap({ "n", "v" }, "<leader>y", [["+y]])

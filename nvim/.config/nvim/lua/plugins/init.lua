@@ -14,13 +14,12 @@ return {
 	},
 	{
 		"mbbill/undotree",
-		event = 'BufRead',
+		cmd = "UndotreeToggle",
 		keys = { { "<leader>u", vim.cmd.UndotreeToggle } },
 	},
 
 	--Get good kid
-	{ "ThePrimeagen/vim-be-good", event = "VeryLazy" },
-
+	{ "ThePrimeagen/vim-be-good", cmd = "VimBeGood" },
 
 	--Urgent deadline approaches? Don't worry. With this plugin you can procrastinate even more!
 	-- { "eandrju/cellular-automaton.nvim", event = "VeryLazy" },

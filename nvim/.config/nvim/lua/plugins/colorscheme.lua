@@ -9,7 +9,7 @@ return {
 			sidebars = "transparent", -- style for sidebars, see below
 			floats = "transparent", -- style for floating windows
 		},
-		on_highlights = function(hl, _color)
+		on_highlights = function(hl, _)
 			hl.CursorLineNr = {
 				fg = "#ffffff",
 				bold = true,

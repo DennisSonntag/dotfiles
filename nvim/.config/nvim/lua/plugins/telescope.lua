@@ -27,7 +27,6 @@ return {
 			},
 		}
 	end,
-	config = true,
 	keys = {
 		{ '<leader>ff', function() require("telescope.builtin").find_files({ hidden = true }) end },
 		{ "<leader>fg", " <cmd>Telescope live_grep<CR>" },

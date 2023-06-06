@@ -1,6 +1,8 @@
 return {
 	{
 		'RubixDev/mason-update-all',
+		main = "mason-update-all",
+		cmd = "MasonUpdateAll",
 		config = true,
 	},
 	{
@@ -16,24 +18,30 @@ return {
 	{
 		"glepnir/lspsaga.nvim",
 		event = "LspAttach",
-		opts = {
-			ui = {
-				-- This option only works in Neovim 0.9
-				title = true,
-				border = "rounded",-- single | double | rounded | solid | shadow
-				winblend = 0,
-				expand = "",
-				collapse = "",
-				code_action = "💡",
-				incoming = " ",
-				outgoing = " ",
-				hover = ' ',
-				kind = {},
-			},
-		},
+		opts =
+			function()
+				local icons = require("config.icons")
+
+				return {
+					ui = {
+						-- This option only works in Neovim 0.9
+						title = true,
+						border = "rounded", -- single | double | rounded | solid | shadow
+						winblend = 0,
+						expand = "",
+						collapse = "",
+						code_action = icons.diagnostics.hint,
+						incoming = " ",
+						outgoing = " ",
+						hover = ' ',
+						kind = {},
+					},
+				}
+			end
 	},
 	{
 		"williamboman/mason.nvim",
+		cmd = "Mason",
 		config = true
 	},
 	{
@@ -67,7 +75,6 @@ return {
 				}
 			}
 		end,
-		config = true,
 		init = function()
 			local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
@@ -134,7 +141,7 @@ return {
 				automatic_installation = false,
 				ensure_installed = { "astro", "clangd", "prismals", "bashls", "cssls", "html", "jsonls", "lua_ls",
 					"tailwindcss", "tsserver",
-					"pyright", "jdtls" },
+					"pyright", "jdtls", "wgsl_analyzer" },
 			})
 
 			lsp.rust_analyzer.setup({

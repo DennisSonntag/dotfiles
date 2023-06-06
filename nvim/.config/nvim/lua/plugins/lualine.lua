@@ -40,6 +40,11 @@ local mode_names = {
 	["!"] = "SHELL",
 	["t"] = "TERMINAL",
 }
+local icons = require("config.icons")
+local seperator = {
+	left = "",
+	right = "",
+}
 
 local statusline = {
 	mode = {
@@ -49,9 +54,6 @@ local statusline = {
 				return mode_name
 			end
 			return mode_names[mode_name]
-			-- return ""
-			-- return ""
-			-- return ""
 		end,
 		color = function()
 			local mode_color = {
@@ -99,7 +101,7 @@ local statusline = {
 		"diagnostics",
 		sources = { "nvim_diagnostic" },
 		sections = { "error", "warn", "hint" },
-		symbols = { error = " ", warn = " ", hint = " " },
+		symbols = { error = icons.diagnostics.error, warn = icons.diagnostics.warn, hint = icons.diagnostics.hint },
 		diagnostics_color = {
 			error = { fg = "#DB4B4B" },
 			warn = { fg = "#ECBE7B" },
@@ -108,12 +110,12 @@ local statusline = {
 		update_in_insert = false,
 		always_visible = true,
 		color = { fg = "#BBC2CF", bg = "#000F10" },
-		separator = { right = "" },
+		separator = { right = seperator.right },
 	},
 
 	diff = {
 		"diff",
-		symbols = { added = " ", modified = " ", removed = " " },
+		symbols = { added = icons.git.add, modified = icons.git.change, removed = icons.git.delete },
 		diff_color = {
 			added = { fg = "#98BE65" },
 			modified = { fg = "#7AA2F7" },
@@ -121,7 +123,7 @@ local statusline = {
 		},
 		cond = hide_in_width,
 		color = { fg = "#BBC2CF", bg = "#000F10" },
-		separator = { left = "" },
+		separator = { left = seperator.left },
 	},
 	branch = {
 		"branch",
@@ -173,7 +175,7 @@ local statusline = {
 		end,
 
 		color = { fg = "#BBC2CF", bg = "#000F10" },
-		separator = { left = '', right = '' },
+		separator = { left = seperator.left, right = seperator.right },
 	},
 
 	progress = {
@@ -186,7 +188,7 @@ local statusline = {
 			return chars[index]
 		end,
 		color = { fg = "#BBC2CF", bg = "#000F10" },
-		separator = { left = "" },
+		separator = { left = seperator.left },
 	},
 
 
@@ -206,7 +208,7 @@ local statusline = {
 		"filetype",
 		color = { fg = "#BBC2CF", bg = "#000F10" },
 		pading = 0,
-		separator = { left = "" },
+		separator = { left = seperator.left },
 	},
 
 }
@@ -217,8 +219,7 @@ local statusline = {
 return {
 	"nvim-lualine/lualine.nvim",
 	event = { "BufReadPost", "BufNewFile" },
-	opts =
-	{
+	opts = {
 		options = {
 			globalstatus = true,
 			icons_enabled = true,

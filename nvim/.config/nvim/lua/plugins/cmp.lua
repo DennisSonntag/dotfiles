@@ -11,38 +11,21 @@ return {
 			"hrsh7th/cmp-nvim-lua",
 			"f3fora/cmp-spell",
 		},
-		config = function()
-			local cmp_status, cmp = pcall(require, "cmp")
-			if (not cmp_status) then return end
-
-			local lspkind_status, lspkind = pcall(require, "lspkind")
-			if (not lspkind_status) then return end
-
-			local luasnip_status_ok, luasnip = pcall(require, "luasnip")
-			if (not luasnip_status_ok) then return end
-
+		opts = function()
+			local cmp = require("cmp")
+			local luasnip = require("luasnip")
 			local cmp_select = { behavior = cmp.SelectBehavior.Select }
-
 			local function contains(list, x)
 				for _, v in pairs(list) do
 					if v == x then return true end
 				end
 				return false
 			end
-
-			local border_opts = {
-				border = "single",
-				winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
-				scrollbar = false,
-			}
-
-
-			cmp.setup({
+			local icons = require("config.icons")
+			return {
 				window = {
-					-- completion = cmp.config.window.bordered({ scrollbar = false, side_padding = 1 }),
-					-- documentation = cmp.config.window.bordered(),
-					completion = cmp.config.window.bordered(border_opts),
-					documentation = cmp.config.window.bordered(border_opts),
+					completion = cmp.config.window.bordered({ scrollbar = false, side_padding = 1 }),
+					documentation = cmp.config.window.bordered(),
 				},
 				snippet = {
 					expand = function(args)
@@ -103,7 +86,7 @@ return {
 					},
 					{
 						name = "crates",
-						entry_filter = function(entry, ctx)
+						entry_filter = function(_, ctx)
 							if not contains({ "toml", "rust" }, ctx.filetype) then
 								return false
 							end
@@ -126,82 +109,26 @@ return {
 					{ name = 'path' },
 				}),
 				formatting = {
-					format = lspkind.cmp_format({
-						with_text = false,
-						menu = {
-							buffer = "[buf]",
+					format = function(entry, item)
+						-- Kind icons
+						item.kind = string.format('%s %s', icons.kinds[item.kind], item.kind) -- This concatonates the icons with the name of the item kind
+						-- Source
+						item.menu = ({
+							buffer = "[Buffer]",
 							nvim_lsp = "[LSP]",
-							spell = "[spell]",
-							nvim_lua = "[vim]",
-							path = "[path]",
-							luasnip = "[snip]",
-						}
-					})
+							luasnip = "[LuaSnip]",
+							nvim_lua = "[Lua]",
+							latex_symbols = "[LaTeX]",
+						})[entry.source.name]
+						return item
+					end
 				},
 				experimental = {
 					native_menu = false,
 					ghost_text = true,
 				}
-			})
 
-			vim.cmd([[
-				set completeopt=menuone,noinsert,noselect
-				highlight! default link CmpItemKind CmpItemMenuDefault
-			]])
-		end
-	},
-	{
-		"onsails/lspkind.nvim",
-		event = 'BufRead',
-		after = "hrsh7th/nvim-cmp",
-
-		config = function()
-			local status, lspkind = pcall(require, "lspkind")
-			if (not status) then return end
-
-			lspkind.init({
-				-- enables text annotations
-				--
-				-- default: true
-				mode = 'symbol',
-				-- default symbol map
-				-- can be either 'default' (requires nerd-fonts font) or
-				-- 'codicons' for codicon preset (requires vscode-codicons font)
-				--
-				-- default: 'default'
-				preset = 'codicons',
-				-- override preset symbols
-				--
-				-- default: {}
-				symbol_map = {
-					Text = "(Text)",
-					Method = "(Method)",
-					Function = "(Function)",
-					Constructor = "(Constructor)",
-					Field = "ﰠ(Field)",
-					Variable = "(Variable)",
-					Class = "ﴯ(Class)",
-					Interface = "(Interface)",
-					Module = "(Module)",
-					Property = "ﰠ(Property)",
-					Unit = "塞(Unit)",
-					Value = "(Value)",
-					Enum = "(Enum)",
-					Keyword = "(Keyword)",
-					Snippet = "(Snippet)",
-					Color = "(Color)",
-					File = "(File)",
-					Reference = "(Reference)",
-					Folder = "(Folder)",
-					EnumMember = "(EnumMember)",
-					Constant = "(Constant)",
-					Struct = "פּ(Struct)",
-					Event = "(Event)",
-					Operator = "(Operator)",
-					TypeParameter = "(TypeParameter)"
-				},
-			})
-		end
+			}
+		end,
 	}
-
 }

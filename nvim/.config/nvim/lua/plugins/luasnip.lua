@@ -1,5 +1,6 @@
 return {
 	"L3MON4D3/LuaSnip",
+	after = "nvim-cmp",
 	event = 'InsertEnter',
 	config = function()
 		local ls_status, ls = pcall(require, "luasnip")

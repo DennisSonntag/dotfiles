@@ -1,14 +1,4 @@
 local o = vim.opt
-local g = vim.g
-
-g.netrw_banner = 0
-g.netrw_liststyle = 3
-g.netrw_show_icons = 1
--- g.WebDevIconsUnicodeDecorateFolderNodes = 1
--- g.WebDevIconsUnicodeDecorateFileNodes = 1
--- g.WebDevIconsUnicodeGlyphDoubleWidth = 1
-
-
 
 o.undodir = os.getenv("HOME") .. "/.vim/undodir"
 o.undofile = true
@@ -17,6 +7,8 @@ o.backup = false
 
 o.scrolloff = 8
 o.sidescrolloff = 8
+
+o.completeopt = "menu,menuone,noselect"
 
 o.smartindent = true
 o.softtabstop = 4
@@ -27,7 +19,7 @@ o.copyindent = true
 o.relativenumber = true
 o.nu = true
 
-o.signcolumn = "number"
+o.signcolumn = "yes"
 o.cursorline = true
 
 o.fillchars = { eob = " " }
@@ -49,4 +41,3 @@ o.cmdheight = 1
 o.hidden = true
 o.wrap = false
 o.mouse = "a"
-

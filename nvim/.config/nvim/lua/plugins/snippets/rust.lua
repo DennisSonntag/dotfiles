@@ -1,3 +1,4 @@
+
 local ls_status_ok, ls = pcall(require, "luasnip")
 if (not ls_status_ok) then return end
 
@@ -68,7 +69,7 @@ local function cs(trigger, nodes, opts) --{{{
 	end
 
 	table.insert(target_table, snippet) -- insert snippet into appropriate table
-end --}}}
+end                                  --}}}
 
 -- Start Refactoring --
 cs("print", fmt('print!("{}");', { i(1, "") }))
