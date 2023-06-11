@@ -1,26 +1,7 @@
 return {
-	{
-		"echasnovski/mini.cursorword",
-		event = 'BufRead',
-		opts = {
-			delay = 10,
-		}
-	},
-	{
-		"echasnovski/mini.indentscope",
-		event = 'BufRead',
-		config = true
-	},
-	{
-		"echasnovski/mini.move",
-		event = 'BufRead',
-		config = true
-	},
-	{
-		"echasnovski/mini.pairs",
-		event = 'BufRead',
-		config = true
-	},
+	{ "echasnovski/mini.cursorword", event = 'BufRead', opts = { delay = 10, } },
+	{ "echasnovski/mini.move",       event = 'BufRead', config = true },
+	{ "echasnovski/mini.pairs",      event = 'BufRead', config = true },
 	{
 		"echasnovski/mini.hipatterns",
 		event = 'BufRead',

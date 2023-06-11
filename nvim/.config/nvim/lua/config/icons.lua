@@ -1,4 +1,11 @@
 local icons = {
+	extra = {
+		sleep = " ",
+		settings=" ",
+		exit=" ",
+		bean=" ",
+
+	},
 	ui = {
 		cmd = "",
 		search_up = " ",
@@ -31,9 +38,10 @@ local icons = {
 		terminate = " ",
 	},
 	file = {
-		file = "",
+		file = " ",
 		modified = " ",
 		readonly = " ",
+		find = " ",
 		new = " ",
 	},
 	test = {

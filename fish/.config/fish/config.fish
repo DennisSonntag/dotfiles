@@ -59,6 +59,8 @@ set fish_cursor_insert line
 abbr -a p doas pacman
 abbr -a pa paru
 
+alias kill-lua="kill (pgrep lua-language-se)"
+alias kill-rust="kill (pgrep rust-analyzer)"
 alias nm="doas nmtui"
 alias np="ping 1.1.1.1"
 alias n="pnpm"

@@ -10,9 +10,7 @@ return {
 		branch = "anticonceal",
 		event = "LspAttach",
 		main = "lsp-inlayhints",
-		keys = {
-			{ "<leader>lth", function() require('lsp-inlayhints').toggle() end }
-		},
+		keys = { { "<leader>lth", function() require('lsp-inlayhints').toggle() end } },
 		config = true,
 	},
 	{
@@ -23,13 +21,19 @@ return {
 				local icons = require("config.icons")
 
 				return {
+					symbol_in_winbar = {
+						enable = false,
+					},
+					lightbulb = {
+						enable = false,
+					},
 					ui = {
 						-- This option only works in Neovim 0.9
 						title = true,
 						border = "rounded", -- single | double | rounded | solid | shadow
 						winblend = 0,
-						expand = "",
-						collapse = "",
+						expand = icons.folder.expanded,
+						collapse = icons.folder.collapsed,
 						code_action = icons.diagnostics.hint,
 						incoming = " ",
 						outgoing = " ",
@@ -88,29 +92,27 @@ return {
 		end
 	},
 	{
-		"neovim/nvim-lspconfig",
-		event = 'BufRead',
-		init = function()
-			-- disable lsp watcher. Too slow on linux
-			local ok, wf = pcall(require, "vim.lsp._watchfiles")
-			if ok then
-				wf._watchfunc = function()
-					return function()
+		"williamboman/mason-lspconfig.nvim",
+		dependencies = { {
+			"neovim/nvim-lspconfig",
+			event = 'BufRead',
+			init = function()
+				-- disable lsp watcher. Too slow on linux
+				local ok, wf = pcall(require, "vim.lsp._watchfiles")
+				if ok then
+					wf._watchfunc = function()
+						return function()
+						end
 					end
 				end
-			end
-		end,
+			end,
 
-	},
-	{
-		"williamboman/mason-lspconfig.nvim",
-		event = 'BufRead',
-		config = function()
-			local status_mason_lsp, mason_lsp = pcall(require, "mason-lspconfig")
-			if (not status_mason_lsp) then return end
+		} },
+		event        = 'BufRead',
+		config       = function()
+			local mason_lsp = require("mason-lspconfig")
 
-			local status_lsp, lsp = pcall(require, "lspconfig")
-			if (not status_lsp) then return end
+			local lsp = require("lspconfig")
 
 			local capabilities = require('cmp_nvim_lsp').default_capabilities()
 			capabilities.offsetEncoding = { "utf-16" }
@@ -124,6 +126,7 @@ return {
 				local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
 				require("lsp-inlayhints").on_attach(client, bufnr)
+				require("nvim-navic").attach(client, bufnr)
 
 				keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", bufopts)
 				keymap('n', 'gd', builtin.lsp_definitions, bufopts)

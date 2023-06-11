@@ -19,12 +19,10 @@ return {
 			{ '<A-Right>',   smart_splits.resize_right },
 
 			-- creating splits
-
 			{ "<leader>sv",  "<cmd>vsplit<CR>" },
 			{ "<leader>sh",  "<cmd>split<CR>" },
 
 			-- managing splits
-
 			{ "<leader>se",  "<C-w>=" },
 			{ "<leader>ss",  "<C-w>R" },
 			{ "<leader>stv", "<C-w>t<C-w>H" },

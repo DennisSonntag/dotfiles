@@ -1,5 +1,7 @@
 local o = vim.opt
 
+-- vim.wo.syntax = 'default'
+
 o.undodir = os.getenv("HOME") .. "/.vim/undodir"
 o.undofile = true
 o.swapfile = false

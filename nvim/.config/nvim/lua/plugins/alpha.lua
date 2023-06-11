@@ -2,6 +2,7 @@ return {
 	"goolord/alpha-nvim",
 	lazy = false,
 	opts = function()
+		local icons = require("config.icons")
 		local dashboard = require("alpha.themes.dashboard")
 		dashboard.section.header.val = {
 			[[ ▄▄▌  ▄▄▄ . ▄▄ • ▄• ▄▌• ▌ ▄ ·. ▄▄▄ .]],
@@ -16,15 +17,16 @@ return {
 		}
 
 		dashboard.section.buttons.val = {
-			dashboard.button("n", "" .. " New file", "<cmd>ene <BAR> startinsert <CR>"),
-			dashboard.button("e", "" .. " File tree", "<cmd>Neotree toggle float<CR>"),
-			dashboard.button("f", "" .. " Find file", "<cmd>Telescope find_files <CR>"),
-			dashboard.button("l", "" .. " Lazy", "<cmd>Lazy<CR>"),
-			dashboard.button("m", "" .. " Mason", "<cmd>Mason<CR>"),
-			dashboard.button("q", "" .. " Quit", "<cmd>qa<CR>"),
+			dashboard.button("n", icons.file.new .. " New file", "<cmd>ene <BAR> startinsert <CR>"),
+			dashboard.button("e", icons.folder.closed .. " File tree", "<cmd>Neotree toggle float<CR>"),
+			dashboard.button("f", icons.file.find .. " Find file",
+				"<cmd>lua require('telescope.builtin').find_files({ hidden = true })<CR>"),
+			dashboard.button("l", icons.extra.sleep .. " Lazy", "<cmd>Lazy<CR>"),
+			dashboard.button("m", icons.extra.settings .. " Mason", "<cmd>Mason<CR>"),
+			dashboard.button("q", icons.extra.exit .. " Quit", "<cmd>qa<CR>"),
 		}
 
-		dashboard.section.footer.val = "MORE BEANZZ ANYONE?!"
+		dashboard.section.footer.val = icons.extra.bean .. "NEVER LEND OR BORROW A MANS LEGUMES" .. icons.extra.bean
 		dashboard.section.footer.opts.hl = "Type"
 		dashboard.section.header.opts.hl = "Include"
 		dashboard.section.buttons.opts.hl = "Keyword"
