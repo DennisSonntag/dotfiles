@@ -7,8 +7,5 @@ return {
 		end
 	},
 	ft           = 'qf',
-	opts         = {
-
-	}
-	-- beanzz
+	config       = true,
 }
