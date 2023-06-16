@@ -1,6 +1,294 @@
 {
     "entries": [
         {
+            "base": "ATLauncherPacks",
+            "current_age": 0,
+            "etag": "\"6482e30c-180c4\"",
+            "last_changed_timestamp": 1686854529638,
+            "max_age": 3600,
+            "md5sum": "beb10f8519763069a35dfa30708d0cec",
+            "path": "logos/AllTheFabric4",
+            "remote_changed_timestamp": "Fri, 09 Jun 2023 08:30:04 GMT"
+        },
+        {
+            "base": "ATLauncherPacks",
+            "current_age": 0,
+            "etag": "\"62a3228c-a4c3\"",
+            "last_changed_timestamp": 1686854529633,
+            "max_age": 3600,
+            "md5sum": "902cf9002c90754456038ce0857d4c08",
+            "path": "logos/AllTheForge9",
+            "remote_changed_timestamp": "Fri, 10 Jun 2022 10:53:00 GMT"
+        },
+        {
+            "base": "ATLauncherPacks",
+            "current_age": 0,
+            "etag": "\"5f4acc8a-41f5\"",
+            "last_changed_timestamp": 1686854529419,
+            "max_age": 3600,
+            "md5sum": "7935552be89092c71a964a10379b51dc",
+            "path": "logos/ForsakenSouls",
+            "remote_changed_timestamp": "Sat, 29 Aug 2020 21:45:46 GMT"
+        },
+        {
+            "base": "ATLauncherPacks",
+            "current_age": 0,
+            "etag": "\"5f7cc09c-d0fa\"",
+            "last_changed_timestamp": 1686854529428,
+            "max_age": 3600,
+            "md5sum": "a5392f2085704cef2eafc51cad309f9c",
+            "path": "logos/HexxRewritten3",
+            "remote_changed_timestamp": "Tue, 06 Oct 2020 19:08:12 GMT"
+        },
+        {
+            "base": "ATLauncherPacks",
+            "current_age": 0,
+            "etag": "\"5c296c81-706f\"",
+            "last_changed_timestamp": 1686854529400,
+            "max_age": 3600,
+            "md5sum": "0865075c0736a4848633f00e3aac34a7",
+            "path": "logos/LyingsPatronPack",
+            "remote_changed_timestamp": "Mon, 31 Dec 2018 01:10:25 GMT"
+        },
+        {
+            "base": "ATLauncherPacks",
+            "current_age": 0,
+            "etag": "\"57d43d7d-10c13\"",
+            "last_changed_timestamp": 1686854529414,
+            "max_age": 3600,
+            "md5sum": "62ae8e13f68ec327cbf463d246479532",
+            "path": "logos/MaterialEnergyNaturalCapital",
+            "remote_changed_timestamp": "Sat, 10 Sep 2016 17:06:05 GMT"
+        },
+        {
+            "base": "ATLauncherPacks",
+            "current_age": 0,
+            "etag": "\"63b052c5-34e6\"",
+            "last_changed_timestamp": 1686854529473,
+            "max_age": 3600,
+            "md5sum": "f2cab95d3b46a6b1d81d67170a1be52e",
+            "path": "logos/MetroidCubed",
+            "remote_changed_timestamp": "Sat, 31 Dec 2022 15:18:29 GMT"
+        },
+        {
+            "base": "ATLauncherPacks",
+            "current_age": 0,
+            "etag": "\"5e8f7273-9ccd\"",
+            "last_changed_timestamp": 1686854529555,
+            "max_age": 3600,
+            "md5sum": "27c84dc45dfc638e5f4de269a0bae715",
+            "path": "logos/MysticsCubicChunksModpack",
+            "remote_changed_timestamp": "Thu, 09 Apr 2020 19:07:31 GMT"
+        },
+        {
+            "base": "ATLauncherPacks",
+            "current_age": 0,
+            "etag": "\"5f2b45b8-684a\"",
+            "last_changed_timestamp": 1686854529590,
+            "max_age": 3600,
+            "md5sum": "2b03d3755a033946c044b82d5454896a",
+            "path": "logos/OceanOutlast",
+            "remote_changed_timestamp": "Wed, 05 Aug 2020 23:50:16 GMT"
+        },
+        {
+            "base": "ATLauncherPacks",
+            "current_age": 0,
+            "etag": "\"5f6bbb9c-a77a\"",
+            "last_changed_timestamp": 1686854529645,
+            "max_age": 3600,
+            "md5sum": "32aecfd02cde802dafa362abcec56c91",
+            "path": "logos/PixelmonMod",
+            "remote_changed_timestamp": "Wed, 23 Sep 2020 21:18:20 GMT"
+        },
+        {
+            "base": "ATLauncherPacks",
+            "current_age": 0,
+            "etag": "\"5f8f6171-5604\"",
+            "last_changed_timestamp": 1686854529360,
+            "max_age": 3600,
+            "md5sum": "1a9dd6a9c2e16900faf5c8b4144d324d",
+            "path": "logos/PlayersAssembly",
+            "remote_changed_timestamp": "Tue, 20 Oct 2020 22:15:13 GMT"
+        },
+        {
+            "base": "ATLauncherPacks",
+            "current_age": 0,
+            "etag": "\"5f60a4b2-156f5\"",
+            "last_changed_timestamp": 1686854529581,
+            "max_age": 3600,
+            "md5sum": "bf3aa708d7b4be9fcef439c138e9eee7",
+            "path": "logos/PokehaanCraft",
+            "remote_changed_timestamp": "Tue, 15 Sep 2020 11:25:38 GMT"
+        },
+        {
+            "base": "ATLauncherPacks",
+            "current_age": 0,
+            "etag": "\"5d3e36e3-b21\"",
+            "last_changed_timestamp": 1686854529567,
+            "max_age": 3600,
+            "md5sum": "b6c5046231cd718a275aab6e82a8539b",
+            "path": "logos/ResonantRise",
+            "remote_changed_timestamp": "Sun, 28 Jul 2019 23:59:31 GMT"
+        },
+        {
+            "base": "ATLauncherPacks",
+            "current_age": 0,
+            "etag": "\"5360600d-b172\"",
+            "last_changed_timestamp": 1686854529490,
+            "max_age": 3600,
+            "md5sum": "bc8e72f72426c07261977d52481d3e69",
+            "path": "logos/ResonantRiseLite",
+            "remote_changed_timestamp": "Wed, 30 Apr 2014 02:29:33 GMT"
+        },
+        {
+            "base": "ATLauncherPacks",
+            "current_age": 0,
+            "etag": "\"5ab5e73e-13418\"",
+            "last_changed_timestamp": 1686854529545,
+            "max_age": 3600,
+            "md5sum": "f0157ce24e7aa07cd3bf1de7a03a75a1",
+            "path": "logos/SevTechAges",
+            "remote_changed_timestamp": "Sat, 24 Mar 2018 05:50:54 GMT"
+        },
+        {
+            "base": "ATLauncherPacks",
+            "current_age": 0,
+            "etag": "\"54a4e2e0-15577\"",
+            "last_changed_timestamp": 1686854529562,
+            "max_age": 3600,
+            "md5sum": "fdcea0d8e5f6a9ee5e475ce89ebd190d",
+            "path": "logos/SkyFactory",
+            "remote_changed_timestamp": "Thu, 01 Jan 2015 06:02:08 GMT"
+        },
+        {
+            "base": "ATLauncherPacks",
+            "current_age": 0,
+            "etag": "\"5cb371b4-b1ad\"",
+            "last_changed_timestamp": 1686854529507,
+            "max_age": 3600,
+            "md5sum": "4b3e0485e307c91f4919bb3a9b2165d1",
+            "path": "logos/SkyFactory4",
+            "remote_changed_timestamp": "Sun, 14 Apr 2019 17:45:24 GMT"
+        },
+        {
+            "base": "ATLauncherPacks",
+            "current_age": 0,
+            "etag": "\"56c5c585-bc53\"",
+            "last_changed_timestamp": 1686854529313,
+            "max_age": 3600,
+            "md5sum": "b0accec122eac613d00d66bbc631baa1",
+            "path": "logos/SolitaryCraft",
+            "remote_changed_timestamp": "Thu, 18 Feb 2016 13:22:13 GMT"
+        },
+        {
+            "base": "ModrinthModpacks",
+            "current_age": 0,
+            "last_changed_timestamp": 1686854538107,
+            "max_age": 315360000,
+            "md5sum": "98cf0177bcb93b3c4588821c638c5897",
+            "path": "images/438ab319c3953f7628f559bacd460ac1a6880213",
+            "remote_changed_timestamp": "Thu, 27 Apr 2023 16:33:43 GMT"
+        },
+        {
+            "base": "ModrinthModpacks",
+            "current_age": 956,
+            "etag": "\"1611606905\"",
+            "last_changed_timestamp": 1686854539259,
+            "max_age": 7200,
+            "md5sum": "f80cfedb6d65d33fd16e190c3d0db744",
+            "path": "images/5895f029cee2e7cd66d18e663415ac3921d5a793"
+        },
+        {
+            "base": "ModrinthModpacks",
+            "current_age": 1322,
+            "etag": "\"50febb2ce856c891cf56bf707ff675aa\"",
+            "last_changed_timestamp": 1686854535375,
+            "max_age": 2678400,
+            "md5sum": "66de800add7655c2ed3e3a40783bd59c",
+            "path": "logos/modrinth_additive",
+            "remote_changed_timestamp": "Tue, 28 Feb 2023 03:54:31 GMT"
+        },
+        {
+            "base": "ModrinthModpacks",
+            "current_age": 1322,
+            "etag": "\"a63d054f34a27d60c274dd8a0a978c32\"",
+            "last_changed_timestamp": 1686854535421,
+            "max_age": 2678400,
+            "md5sum": "95ec2cc514a98686acdcd6cad70a7a71",
+            "path": "logos/modrinth_adrenaline",
+            "remote_changed_timestamp": "Tue, 28 Feb 2023 03:54:24 GMT"
+        },
+        {
+            "base": "ModrinthModpacks",
+            "current_age": 1322,
+            "etag": "\"aba12e8445b486c4c1648677fe4e98e8\"",
+            "last_changed_timestamp": 1686854535366,
+            "max_age": 2678400,
+            "md5sum": "50d5d09d52322d6c4c18cbd0f42dca08",
+            "path": "logos/modrinth_cobblemon-fabric",
+            "remote_changed_timestamp": "Mon, 28 Nov 2022 05:41:44 GMT"
+        },
+        {
+            "base": "ModrinthModpacks",
+            "current_age": 1325,
+            "etag": "\"92cf394de21b7135f44d38a3992077a3\"",
+            "last_changed_timestamp": 1686854538311,
+            "max_age": 2678400,
+            "md5sum": "92cf394de21b7135f44d38a3992077a3",
+            "path": "logos/modrinth_create-extra",
+            "remote_changed_timestamp": "Sun, 23 Oct 2022 06:11:14 GMT"
+        },
+        {
+            "base": "ModrinthModpacks",
+            "current_age": 1322,
+            "etag": "\"5550152d3af6949a74fb9c95907d8a75\"",
+            "last_changed_timestamp": 1686854535347,
+            "max_age": 2678400,
+            "md5sum": "33cc3a8e60dc336a79dfaaac1d2fa8e9",
+            "path": "logos/modrinth_fabulously-optimized",
+            "remote_changed_timestamp": "Mon, 31 Oct 2022 17:38:40 GMT"
+        },
+        {
+            "base": "ModrinthModpacks",
+            "current_age": 1322,
+            "etag": "\"bf7f25f1d910e7410c52238348e5c52c\"",
+            "last_changed_timestamp": 1686854535412,
+            "max_age": 2678400,
+            "md5sum": "2e8220ac771bb2e275e4d6bc5c8dbedf",
+            "path": "logos/modrinth_moon-luseban",
+            "remote_changed_timestamp": "Sun, 23 Oct 2022 06:08:01 GMT"
+        },
+        {
+            "base": "ModrinthModpacks",
+            "current_age": 1322,
+            "etag": "\"384cd90db1cee6d515288a8f46033291\"",
+            "last_changed_timestamp": 1686854535390,
+            "max_age": 2678400,
+            "md5sum": "e9a038cd9e081ff81a30903baa0ae767",
+            "path": "logos/modrinth_realisticcraft",
+            "remote_changed_timestamp": "Sun, 23 Oct 2022 06:08:15 GMT"
+        },
+        {
+            "base": "ModrinthModpacks",
+            "current_age": 1322,
+            "etag": "\"1967bfe7af27d1558e2ed0fac47043d1\"",
+            "last_changed_timestamp": 1686854535396,
+            "max_age": 2678400,
+            "md5sum": "706c32b4c67201ba94ffe98cdcf96bd8",
+            "path": "logos/modrinth_sodiumplus",
+            "remote_changed_timestamp": "Sun, 23 Oct 2022 06:10:06 GMT"
+        },
+        {
+            "base": "ModrinthModpacks",
+            "current_age": 445,
+            "etag": "\"7c9875964f94101a330d1d0c198c9a51\"",
+            "last_changed_timestamp": 1686854535477,
+            "max_age": 2678400,
+            "md5sum": "7c9875964f94101a330d1d0c198c9a51",
+            "path": "logos/modrinth_sop",
+            "remote_changed_timestamp": "Wed, 24 May 2023 13:40:26 GMT"
+        },
+        {
             "base": "ModrinthPacks",
             "current_age": 0,
             "etag": "\"cc9add6a9e55c42754e68051df65e5dc\"",
@@ -1699,12 +1987,12 @@
         {
             "base": "meta",
             "current_age": 0,
-            "etag": "W/\"64884ca2-53cfe\"",
-            "last_changed_timestamp": 1686690555653,
+            "etag": "W/\"648b520f-53cfe\"",
+            "last_changed_timestamp": 1686853130661,
             "max_age": 600,
             "md5sum": "39f6ebd13bfa14355274f424385b319b",
             "path": "net.minecraft/index.json",
-            "remote_changed_timestamp": "Tue, 13 Jun 2023 11:01:54 GMT"
+            "remote_changed_timestamp": "Thu, 15 Jun 2023 18:01:51 GMT"
         },
         {
             "base": "meta",
@@ -1749,22 +2037,22 @@
         {
             "base": "meta",
             "current_age": 0,
-            "etag": "W/\"64884ca2-864\"",
-            "last_changed_timestamp": 1686690577672,
+            "etag": "W/\"648b520f-864\"",
+            "last_changed_timestamp": 1686861305995,
             "max_age": 600,
             "md5sum": "f4ae14cfbec0bb5483104a9af73ab709",
             "path": "org.lwjgl3/index.json",
-            "remote_changed_timestamp": "Tue, 13 Jun 2023 11:01:54 GMT"
+            "remote_changed_timestamp": "Thu, 15 Jun 2023 18:01:51 GMT"
         },
         {
             "base": "translations",
-            "current_age": 339,
-            "etag": "W/\"6488ae21-5253\"",
-            "last_changed_timestamp": 1686694773930,
+            "current_age": 117,
+            "etag": "W/\"648c4faf-5252\"",
+            "last_changed_timestamp": 1686938057613,
             "max_age": 600,
-            "md5sum": "1419813046d0f572956a1b4aef6290c4",
+            "md5sum": "9ff46705fb95ba575f6333e656d838b5",
             "path": "index_v2.json",
-            "remote_changed_timestamp": "Tue, 13 Jun 2023 17:57:53 GMT"
+            "remote_changed_timestamp": "Fri, 16 Jun 2023 12:03:59 GMT"
         }
     ],
     "version": "1"
