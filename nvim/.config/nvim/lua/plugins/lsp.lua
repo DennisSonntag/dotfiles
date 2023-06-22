@@ -6,14 +6,6 @@ return {
 		config = true,
 	},
 	{
-		"lvimuser/lsp-inlayhints.nvim",
-		branch = "anticonceal",
-		event = "LspAttach",
-		main = "lsp-inlayhints",
-		keys = { { "<leader>lth", function() require('lsp-inlayhints').toggle() end } },
-		config = true,
-	},
-	{
 		"glepnir/lspsaga.nvim",
 		event = "LspAttach",
 		opts =
@@ -125,8 +117,14 @@ return {
 
 				local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
-				require("lsp-inlayhints").on_attach(client, bufnr)
+				vim.lsp.buf.inlay_hint(0, vim.g.inlaytoggle)
+
 				require("nvim-navic").attach(client, bufnr)
+
+				keymap("n", "<leader>lth", function()
+					vim.g.inlaytoggle = not vim.g.inlaytoggle
+					vim.lsp.buf.inlay_hint(0, vim.g.inlaytoggle)
+				end, bufopts)
 
 				keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", bufopts)
 				keymap('n', 'gd', builtin.lsp_definitions, bufopts)

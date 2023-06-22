@@ -1,14 +1,14 @@
 return {
-	{ "echasnovski/mini.cursorword", event = 'BufRead', opts = { delay = 10, } },
-	{ "echasnovski/mini.move",       event = 'BufRead', config = true },
-	{ "echasnovski/mini.pairs",      event = 'BufRead', config = true },
+	{ "echasnovski/mini.cursorword", event = "BufRead", opts = { delay = 10, } },
+	{ "echasnovski/mini.move",       event = "BufRead", config = true },
+	{ "echasnovski/mini.pairs",      event = "BufRead", config = true },
 	{
 		"echasnovski/mini.hipatterns",
-		event = 'BufRead',
+		event = "BufRead",
 		opts = function()
-			local hipatterns = require('mini.hipatterns')
+			local hipatterns = require("mini.hipatterns")
 
-			local words = { red = '#ff0000', green = '#00ff00', blue = '#0000ff', purple = "#ff00ff", black = "#000000" }
+			local words = { red = "#ff0000", green = "#00ff00", blue = "#0000ff", purple = "#ff00ff", black = "#000000" }
 			local keys = {}
 			for key, _ in pairs(words) do
 				table.insert(keys, key)
@@ -18,25 +18,25 @@ return {
 				match = string.lower(match)
 				local hex = words[match]
 				if hex == nil then return nil end
-				return hipatterns.compute_hex_color_group(hex, 'bg')
+				return hipatterns.compute_hex_color_group(hex, "bg")
 			end
 
 			local function rgbToHex(rgb)
-				local hexadecimal = ''
+				local hexadecimal = ""
 
 				for _, value in pairs(rgb) do
-					local hex = ''
+					local hex = ""
 
 					while (value > 0) do
 						local index = math.fmod(value, 16) + 1
 						value = math.floor(value / 16)
-						hex = string.sub('0123456789ABCDEF', index, index) .. hex
+						hex = string.sub("0123456789ABCDEF", index, index) .. hex
 					end
 
 					if (string.len(hex) == 0) then
-						hex = '00'
+						hex = "00"
 					elseif (string.len(hex) == 1) then
-						hex = '0' .. hex
+						hex = "0" .. hex
 					end
 
 					hexadecimal = hexadecimal .. hex
@@ -52,7 +52,7 @@ return {
 				b = tonumber(b)
 				local hex = "#" .. rgbToHex({ r, g, b })
 				if hex == nil then return nil end
-				return hipatterns.compute_hex_color_group(hex, 'bg')
+				return hipatterns.compute_hex_color_group(hex, "bg")
 			end
 			local rgb_float_group = function(_, match)
 				local r, g, b = match:match("rgb%s*%((%s*%d*%.?%d+%s*),(%s*%d*%.?%d+%s*),(%s*%d*%.?%d+%s*)%)")
@@ -69,20 +69,20 @@ return {
 				end
 
 				if hex == nil then return nil end
-				return hipatterns.compute_hex_color_group(hex, 'bg')
+				return hipatterns.compute_hex_color_group(hex, "bg")
 			end
 
 			return {
 				highlighters = {
-					-- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
-					fixme          = { pattern = '%f[%w]()FIXME()%f[%W]', group = 'MiniHipatternsFixme' },
-					hack           = { pattern = '%f[%w]()HACK()%f[%W]', group = 'MiniHipatternsHack' },
-					todo           = { pattern = '%f[%w]()TODO()%f[%W]', group = 'MiniHipatternsTodo' },
-					note           = { pattern = '%f[%w]()NOTE()%f[%W]', group = 'MiniHipatternsNote' },
-					-- word_color     = { pattern = '%S+', group = word_color_group },
+					-- Highlight standalone "FIXME", "HACK", "TODO", "NOTE"
+					fixme          = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
+					hack           = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
+					todo           = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
+					note           = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
+					-- word_color     = { pattern = "%S+", group = word_color_group },
 					word_color     = { pattern = "(.*)(" .. table.concat(keys, "|") .. ")(.*)", group = word_color_group },
-					bevy_rgb_u8    = { pattern = 'rgb_u8%b()', group = rgb_u8_group },
-					bevy_rgb_float = { pattern = 'rgb%b()', group = rgb_float_group },
+					bevy_rgb_u8    = { pattern = "rgb_u8%b()", group = rgb_u8_group },
+					bevy_rgb_float = { pattern = "rgb%b()", group = rgb_float_group },
 
 					-- Highlight hex color strings (`#rrggbb`) using that color
 					hex_color      = hipatterns.gen_highlighter.hex_color(),
@@ -93,8 +93,8 @@ return {
 	},
 	{
 		"echasnovski/mini.comment",
-		event = 'BufRead',
-		dependencies = { 'JoosepAlviste/nvim-ts-context-commentstring', lazy = true },
+		event = "BufRead",
+		dependencies = { "JoosepAlviste/nvim-ts-context-commentstring", lazy = true },
 		opts = {
 			options = {
 				custom_commentstring = function()
@@ -106,18 +106,18 @@ return {
 	},
 	{
 		"echasnovski/mini.ai",
-		event = 'BufRead',
+		event = "BufRead",
 		opts = {
 			custom_textobjects = {
 				--Camel case
 				s = {
 					{
-						'%u[%l%d]+%f[^%l%d]',
-						'%f[%S][%l%d]+%f[^%l%d]',
-						'%f[%P][%l%d]+%f[^%l%d]',
-						'^[%l%d]+%f[^%l%d]',
+						"%u[%l%d]+%f[^%l%d]",
+						"%f[%S][%l%d]+%f[^%l%d]",
+						"%f[%P][%l%d]+%f[^%l%d]",
+						"^[%l%d]+%f[^%l%d]",
 					},
-					'^().*()$'
+					"^().*()$"
 				}
 			}
 
@@ -125,16 +125,16 @@ return {
 	},
 	{
 		"echasnovski/mini.surround",
-		event = 'BufRead',
+		event = "BufRead",
 		opts = {
 			mappings = {
-				add = 'msa', -- Add surrounding in Normal and Visual modes
-				delete = 'msd', -- Delete surrounding
-				find = 'msf', -- Find surrounding (to the right)
-				find_left = 'msF', -- Find surrounding (to the left)
-				highlight = 'msh', -- Highlight surrounding
-				replace = 'msr', -- Replace surrounding
-				update_n_lines = 'msn', -- Update `n_lines`
+				add = "msa", -- Add surrounding in Normal and Visual modes
+				delete = "msd", -- Delete surrounding
+				find = "msf", -- Find surrounding (to the right)
+				find_left = "msF", -- Find surrounding (to the left)
+				highlight = "msh", -- Highlight surrounding
+				replace = "msr", -- Replace surrounding
+				update_n_lines = "msn", -- Update `n_lines`
 			},
 		}
 	},

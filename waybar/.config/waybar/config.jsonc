@@ -3,9 +3,11 @@
 	"modules-left": [
 		"battery",
 		"cpu",
-		"custom/cap-left",
+		// "custom/cap-left",
+		"custom/cap-left-dark-light",
 		"memory",
-		"custom/cap-left-mid",
+		// "custom/cap-left-mid",
+		"custom/cap-left-light",
 		"hyprland/window"
 	],
 	"modules-center": [
@@ -133,6 +135,10 @@
 		"format": ""
 	},
 	"custom/cap-left-light": {
+		"tooltip": false,
+		"format": ""
+	},
+	"custom/cap-left-dark-light": {
 		"tooltip": false,
 		"format": ""
 	}

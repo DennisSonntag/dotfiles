@@ -4,12 +4,12 @@ return {
 	"MunifTanjim/nui.nvim",
 	{
 		"Pocco81/auto-save.nvim",
-		event = 'BufRead',
+		event = "BufRead",
 		config = true
 	},
 	{
 		"lewis6991/gitsigns.nvim",
-		event = 'BufRead',
+		event = "BufRead",
 		config = true,
 	},
 	{
@@ -21,6 +21,6 @@ return {
 	--Get good kid
 	{ "ThePrimeagen/vim-be-good", cmd = "VimBeGood" },
 
-	--Urgent deadline approaches? Don't worry. With this plugin you can procrastinate even more!
+	--Urgent deadline approaches? Don"t worry. With this plugin you can procrastinate even more!
 	-- { "eandrju/cellular-automaton.nvim", event = "VeryLazy" },
 }

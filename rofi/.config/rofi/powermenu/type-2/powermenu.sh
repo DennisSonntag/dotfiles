@@ -12,7 +12,7 @@
 
 # Current Theme
 dir="$HOME/.config/rofi/powermenu/type-2"
-theme='style-1'
+theme='style-7'
 
 # CMDs
 uptime="`uptime -p | sed -e 's/up //g'`"
@@ -79,7 +79,11 @@ run_cmd() {
 				i3-msg exit
 			elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
 				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
+			elif [[ "$XDG_SESSION_DESKTOP" == 'Hyprland' ]]; then
+				# hyprctl dispatch exit
+				killall Hyprland
 			fi
+
 		fi
 	else
 		exit 0
@@ -100,6 +104,8 @@ case ${chosen} in
 			betterlockscreen -l
 		elif [[ -x '/usr/bin/i3lock' ]]; then
 			i3lock
+		elif [[ -x '/usr/bin/swaylock' ]]; then
+			swaylock --grace 0
 		fi
         ;;
     $suspend)

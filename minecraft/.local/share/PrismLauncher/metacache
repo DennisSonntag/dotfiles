@@ -2036,23 +2036,23 @@
         },
         {
             "base": "meta",
-            "current_age": 0,
-            "etag": "W/\"648b520f-864\"",
-            "last_changed_timestamp": 1686861305995,
+            "current_age": 216,
+            "etag": "W/\"6491cd7c-864\"",
+            "last_changed_timestamp": 1687285521887,
             "max_age": 600,
             "md5sum": "f4ae14cfbec0bb5483104a9af73ab709",
             "path": "org.lwjgl3/index.json",
-            "remote_changed_timestamp": "Thu, 15 Jun 2023 18:01:51 GMT"
+            "remote_changed_timestamp": "Tue, 20 Jun 2023 16:02:04 GMT"
         },
         {
             "base": "translations",
-            "current_age": 117,
-            "etag": "W/\"648c4faf-5252\"",
-            "last_changed_timestamp": 1686938057613,
+            "current_age": 325,
+            "etag": "W/\"64937f42-5262\"",
+            "last_changed_timestamp": 1687410389301,
             "max_age": 600,
-            "md5sum": "9ff46705fb95ba575f6333e656d838b5",
+            "md5sum": "06c57e52f22302c412eec0f32198147e",
             "path": "index_v2.json",
-            "remote_changed_timestamp": "Fri, 16 Jun 2023 12:03:59 GMT"
+            "remote_changed_timestamp": "Wed, 21 Jun 2023 22:52:50 GMT"
         }
     ],
     "version": "1"

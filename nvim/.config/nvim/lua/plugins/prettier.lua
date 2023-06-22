@@ -1,7 +1,7 @@
 return {
 	"MunifTanjim/prettier.nvim",
-	event = 'BufRead',
-	ft = { 'tsx', 'jsx', 'js', 'ts', 'css', 'css' },
+	event = "BufRead",
+	ft = { "tsx", "jsx", "js", "ts", "css", "css" },
 	opts = {
 		bin = "prettierd",
 		filetypes = {

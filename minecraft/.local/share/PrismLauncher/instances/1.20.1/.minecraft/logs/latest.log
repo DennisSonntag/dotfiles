@@ -1,8 +1,5 @@
-[15:32:58] [main/INFO]: Loading Minecraft 1.20.1 with Fabric Loader 0.14.21
-[15:32:59] [main/WARN]: Warnings were found!
- - Mod 'Reese's Sodium Options' (reeses-sodium-options) 1.5.1+mc1.20-build.74 recommends version 0.4.2 or later of sodium-extra, which is missing!
-	 - You should install version 0.4.2 or later of sodium-extra for the optimal experience.
-[15:32:59] [main/INFO]: Loading 81 mods:
+[01:16:57] [main/INFO]: Loading Minecraft 1.20.1 with Fabric Loader 0.14.21
+[01:16:58] [main/INFO]: Loading 96 mods:
 	- collective 6.57
 	- fabric-api 0.83.1+1.20.1
 	   |-- fabric-api-base 0.4.29+b04edc7a77
@@ -54,16 +51,31 @@
 	   |-- fabric-sound-api-v1 1.0.12+b3afc78b77
 	   |-- fabric-transfer-api-v1 3.2.2+b3afc78b77
 	   \-- fabric-transitive-access-wideners-v1 4.2.0+b3afc78b77
+	- fabric-language-kotlin 1.9.5+kotlin.1.8.22
+	   |-- org_jetbrains_kotlin_kotlin-reflect 1.8.22
+	   |-- org_jetbrains_kotlin_kotlin-stdlib 1.8.22
+	   |-- org_jetbrains_kotlin_kotlin-stdlib-jdk7 1.8.22
+	   |-- org_jetbrains_kotlin_kotlin-stdlib-jdk8 1.8.22
+	   |-- org_jetbrains_kotlinx_atomicfu-jvm 0.20.2
+	   |-- org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm 1.7.1
+	   |-- org_jetbrains_kotlinx_kotlinx-coroutines-jdk8 1.7.1
+	   |-- org_jetbrains_kotlinx_kotlinx-datetime-jvm 0.4.0
+	   |-- org_jetbrains_kotlinx_kotlinx-serialization-cbor-jvm 1.5.1
+	   |-- org_jetbrains_kotlinx_kotlinx-serialization-core-jvm 1.5.1
+	   \-- org_jetbrains_kotlinx_kotlinx-serialization-json-jvm 1.5.1
 	- fabricloader 0.14.21
-	- fullbrightnesstoggle 3.0
 	- iris 1.6.4
 	   |-- io_github_douira_glsl-transformer 2.0.0-pre13
 	   |-- org_anarres_jcpp 1.4.14
 	   \-- org_antlr_antlr4-runtime 4.11.1
 	- java 17
 	- jei 14.0.0.11
+	- libipn 3.0.2
+	- litematica 0.15.0
 	- lithium 0.11.2
 	- logical_zoom 0.0.20
+	- malilib 0.16.0
+	   \-- fabric-resource-loader-v0 0.11.7+f7923f6d77
 	- minecraft 1.20.1
 	- modmenu 7.0.1
 	- mousewheelie 1.11.1+mc1.20-pre2
@@ -79,48 +91,52 @@
 	- presencefootsteps 1.9.0
 	   \-- kirin 1.15.0
 	- reeses-sodium-options 1.5.1+mc1.20-build.74
-	- shulkerboxtooltip 4.0.2+1.20
-	   \-- cloth-config 11.0.99
-	        \-- cloth-basic-math 0.6.1
 	- sodium 0.4.10+build.27
+	- sodium-extra 0.4.20+mc1.20-build.103
+	   |-- caffeineconfig 1.1.0+1.17
+	   \-- crowdin-translate 1.4+1.19.3
 	- sound_physics_remastered 1.20.1-1.1.1
-[15:32:59] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/fabricmc/sponge-mixin/0.12.5+mixin.0.8.5/sponge-mixin-0.12.5+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
-[15:32:59] [main/INFO]: Compatibility level set to JAVA_17
-[15:32:59] [main/INFO]: Loaded configuration file for Lithium: 115 options available, 0 override(s) found
-[15:32:59] [main/INFO]: Loaded configuration file for Sodium: 33 options available, 3 override(s) found
-[15:33:00] [main/WARN]: Force-disabling mixin 'features.entity.fast_render.MixinCuboid' as rule 'mixin.features.entity.fast_render' (added by mods [iris]) disables it and children
-[15:33:00] [main/WARN]: Force-disabling mixin 'features.entity.fast_render.MixinModelPart' as rule 'mixin.features.entity.fast_render' (added by mods [iris]) disables it and children
-[15:33:00] [main/WARN]: Force-disabling mixin 'features.gui.font.MixinGlyphRenderer' as rule 'mixin.features.gui.font' (added by mods [iris]) disables it and children
-[15:33:00] [main/WARN]: Force-disabling mixin 'features.sky.MixinWorldRenderer' as rule 'mixin.features.sky' (added by mods [iris]) disables it and children
-[15:33:06] [Datafixer Bootstrap/INFO]: 188 Datafixer optimizations took 282 milliseconds
-[15:33:08] [Render thread/INFO]: Launching a new process to probe the system configuration!
-[15:33:09] [Render thread/INFO]: OpenGL Vendor: NVIDIA Corporation
-[15:33:09] [Render thread/INFO]: OpenGL Renderer: NVIDIA GeForce GTX 1060 3GB/PCIe/SSE2
-[15:33:09] [Render thread/INFO]: OpenGL Version: 3.3.0 NVIDIA 530.41.03
-[15:33:09] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[15:33:10] [Render thread/INFO]: Setting user: Dennis_mps
-[15:33:10] [Render thread/INFO]: Loading Collective version 6.57.
-[15:33:10] [Render thread/INFO]: [ShulkerBoxTooltip] Could not find configuration file, creating default file
-[15:33:10] [Render thread/INFO]: Reloading reverb parameters
-[15:33:11] [Render thread/INFO]: [Indigo] Different rendering plugin detected; not applying Indigo.
-[15:33:11] [Render thread/INFO]: Sending ConfigManager...
-[15:33:11] [Render thread/INFO]: Sending ConfigManager took 3.679 ms
-[15:33:11] [Render thread/WARN]: Using Cloth Config GUI
-[15:33:11] [Worker-Main-1/INFO]: Checking mod updates...
-[15:33:11] [Render thread/INFO]: Reloaded configs for mousewheelie (universal/highest)
-[15:33:11] [Render thread/INFO]: Backend library: LWJGL version 3.3.1 SNAPSHOT
-[15:33:12] [Render thread/INFO]: Debug functionality is disabled.
-[15:33:12] [Render thread/INFO]: ARB_direct_state_access detected, enabling DSA.
-[15:33:12] [Render thread/INFO]: Shaders are disabled because enableShaders is set to false in iris.properties
-[15:33:12] [Render thread/INFO]: Shaders are disabled
-[15:33:12] [Render thread/WARN]: Missing metadata in pack file/xeadas-glass-bottom-boats-1-20.zip
-[15:33:12] [ForkJoinPool.commonPool-worker-1/WARN]: [Iris Update Check] This version doesn't have an update index, skipping.
-[15:33:12] [Render thread/WARN]: Static binding violation: PRIVATE @Overwrite method method_23182 in sodium.mixins.json:features.item.MixinItemRenderer from mod sodium cannot reduce visibiliy of PUBLIC target method, visibility will be upgraded.
-[15:33:12] [Render thread/INFO]: Hardware information:
-[15:33:12] [Render thread/INFO]: CPU: 4x AMD Ryzen 3 3200G with Radeon Vega Graphics
-[15:33:12] [Render thread/INFO]: GPU: NVIDIA GeForce GTX 1060 3GB/PCIe/SSE2 (Supports OpenGL 3.2.0 NVIDIA 530.41.03)
-[15:33:12] [Render thread/INFO]: OS: Linux (6.3.7-zen1-1-zen)
-[15:33:13] [Render thread/ERROR]: Error while loading the narrator
+	- tweakeroo 0.17.0
+[01:16:58] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/fabricmc/sponge-mixin/0.12.5+mixin.0.8.5/sponge-mixin-0.12.5+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
+[01:16:58] [main/INFO]: Compatibility level set to JAVA_17
+[01:16:58] [main/INFO]: Loaded configuration file for Lithium: 115 options available, 0 override(s) found
+[01:16:58] [main/INFO]: Loaded configuration file for Sodium: 33 options available, 3 override(s) found
+[01:16:58] [main/INFO]: Loaded configuration file for Sodium Extra: 28 options available, 0 override(s) found
+[01:16:59] [main/WARN]: Force-disabling mixin 'features.entity.fast_render.MixinCuboid' as rule 'mixin.features.entity.fast_render' (added by mods [iris]) disables it and children
+[01:16:59] [main/WARN]: Force-disabling mixin 'features.entity.fast_render.MixinModelPart' as rule 'mixin.features.entity.fast_render' (added by mods [iris]) disables it and children
+[01:16:59] [main/WARN]: Force-disabling mixin 'features.gui.font.MixinGlyphRenderer' as rule 'mixin.features.gui.font' (added by mods [iris]) disables it and children
+[01:16:59] [main/WARN]: Force-disabling mixin 'features.sky.MixinWorldRenderer' as rule 'mixin.features.sky' (added by mods [iris]) disables it and children
+[01:17:06] [Datafixer Bootstrap/INFO]: 188 Datafixer optimizations took 322 milliseconds
+[01:17:06] [main/WARN]: @Redirect conflict. Skipping mixins.tweakeroo.json:MixinServerPlayNetworkHandler from mod tweakeroo->@Redirect::tweakeroo_removeHitPosCheck(Lnet/minecraft/class_243;Lnet/minecraft/class_243;)Lnet/minecraft/class_243; with priority 1005, already redirected by mixins.litematica.json:MixinServerPlayNetworkHandler from mod litematica->@Redirect::litematica_removeHitPosCheck(Lnet/minecraft/class_243;Lnet/minecraft/class_243;)Lnet/minecraft/class_243; with priority 1010
+[01:17:07] [Render thread/INFO]: Launching a new process to probe the system configuration!
+[01:17:08] [Render thread/INFO]: OpenGL Vendor: NVIDIA Corporation
+[01:17:08] [Render thread/INFO]: OpenGL Renderer: NVIDIA GeForce GTX 1060 3GB/PCIe/SSE2
+[01:17:08] [Render thread/INFO]: OpenGL Version: 3.3.0 NVIDIA 535.54.03
+[01:17:08] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[01:17:09] [Render thread/INFO]: Setting user: Dennis_mps
+[01:17:09] [Render thread/INFO]: Loading Collective version 6.57.
+[01:17:09] [Render thread/INFO]: Reloading reverb parameters
+[01:17:09] [Render thread/INFO]: [Indigo] Different rendering plugin detected; not applying Indigo.
+[01:17:09] [Render thread/INFO]: Sending ConfigManager...
+[01:17:09] [Render thread/INFO]: Sending ConfigManager took 3.342 ms
+[01:17:09] [Worker-Main-1/INFO]: Checking mod updates...
+[01:17:10] [Render thread/INFO]: Reloaded configs for mousewheelie (universal/highest)
+[01:17:10] [Render thread/INFO]: Backend library: LWJGL version 3.3.1 SNAPSHOT
+[01:17:10] [Worker-Main-1/INFO]: Update available for 'modmenu@7.0.1', (-> 7.1.0)
+[01:17:10] [Worker-Main-1/INFO]: Update available for 'fabric-api@0.83.1+1.20.1', (-> 0.84.0+1.20.1)
+[01:17:10] [Worker-Main-1/INFO]: Update available for 'collective@6.57', (-> 1.20.1-6.62-forge+fabric)
+[01:17:10] [Render thread/INFO]: Debug functionality is disabled.
+[01:17:10] [Render thread/INFO]: ARB_direct_state_access detected, enabling DSA.
+[01:17:10] [Render thread/INFO]: Shaders are disabled because enableShaders is set to false in iris.properties
+[01:17:10] [Render thread/INFO]: Shaders are disabled
+[01:17:10] [ForkJoinPool.commonPool-worker-1/WARN]: [Iris Update Check] This version doesn't have an update index, skipping.
+[01:17:10] [Render thread/WARN]: Missing metadata in pack file/xeadas-glass-bottom-boats-1-20.zip
+[01:17:11] [Render thread/WARN]: Static binding violation: PRIVATE @Overwrite method method_23182 in sodium.mixins.json:features.item.MixinItemRenderer from mod sodium cannot reduce visibiliy of PUBLIC target method, visibility will be upgraded.
+[01:17:11] [Render thread/INFO]: Hardware information:
+[01:17:11] [Render thread/INFO]: CPU: 4x AMD Ryzen 3 3200G with Radeon Vega Graphics
+[01:17:11] [Render thread/INFO]: GPU: NVIDIA GeForce GTX 1060 3GB/PCIe/SSE2 (Supports OpenGL 3.2.0 NVIDIA 535.54.03)
+[01:17:11] [Render thread/INFO]: OS: Linux (6.3.8-zen1-1-zen)
+[01:17:11] [Render thread/ERROR]: Error while loading the narrator
 com.mojang.text2speech.Narrator$InitializeException: Failed to load library flite
 	at com.mojang.text2speech.NarratorLinux$FliteLibrary.loadNative(NarratorLinux.java:69) ~[text2speech-1.17.9.jar:?]
 	at com.mojang.text2speech.NarratorLinux.<init>(NarratorLinux.java:18) ~[text2speech-1.17.9.jar:?]
@@ -194,375 +210,294 @@ Native library (linux-x86-64/libflite.so) not found in resource path (/usr/share
 		at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:88) ~[NewLaunch.jar:?]
 		at org.prismlauncher.EntryPoint.listen(EntryPoint.java:126) ~[NewLaunch.jar:?]
 		at org.prismlauncher.EntryPoint.main(EntryPoint.java:71) ~[NewLaunch.jar:?]
-[15:33:13] [Render thread/INFO]: Reloading ResourceManager: vanilla, fabric (amecsapi, cloth-config, coat, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-containers-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-crash-report-info-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-events-lifecycle-v0, fabric-game-rule-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-tables-v1, fabric-message-api-v1, fabric-mining-level-api-v1, fabric-models-v0, fabric-networking-api-v1, fabric-networking-v0, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-renderer-registries-v1, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, fullbrightnesstoggle, iris, jei, lithium, logical_zoom, modmenu, mousewheelie, presencefootsteps, reeses-sodium-options, shulkerboxtooltip, sodium, sound_physics_remastered, tweed4_annotated, tweed4_base, tweed4_data, tweed4_data_hjson, tweed4_tailor_coat, tweed4_tailor_lang_json_descriptions, tweed4_tailor_screen), file/Stay_True_1.19.zip, file/VanillaTweaks1.20_Minimal.zip
-[15:33:13] [Worker-Main-3/INFO]: Found unifont_all_no_pua-15.0.06.hex, loading
-[15:33:13] [Render thread/INFO]: Creating pipeline for dimension OVERWORLD
-[15:33:14] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_axe.png, ignoring
-[15:33:14] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_boots.png, ignoring
-[15:33:14] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_chestplate.png, ignoring
-[15:33:14] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_helmet.png, ignoring
-[15:33:14] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_hoe.png, ignoring
-[15:33:14] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_leggings.png, ignoring
-[15:33:14] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_pickaxe.png, ignoring
-[15:33:14] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_shovel.png, ignoring
-[15:33:14] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_sword.png, ignoring
-[15:33:14] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/pack.png, ignoring
-[15:33:14] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/readme.txt, ignoring
-[15:33:14] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/netherite no gold/netherite_boots.png, ignoring
-[15:33:14] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/netherite no gold/netherite_chestplate.png, ignoring
-[15:33:14] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/netherite no gold/netherite_helmet.png, ignoring
-[15:33:14] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/netherite no gold/netherite_leggings.png, ignoring
-[15:33:14] [Worker-Main-1/WARN]: Exception loading blockstate definition: 'minecraft:blockstates/cut_sandstone.json' in resourcepack: 'file/Stay_True_1.19.zip' for variant: 'axis=z': Unknown blockstate property: 'axis'
-[15:33:14] [Worker-Main-1/WARN]: Exception loading blockstate definition: 'minecraft:blockstates/cut_sandstone.json' in resourcepack: 'file/Stay_True_1.19.zip' for variant: 'axis=x': Unknown blockstate property: 'axis'
-[15:33:14] [Worker-Main-1/WARN]: Exception loading blockstate definition: 'minecraft:blockstates/cut_sandstone.json' in resourcepack: 'file/Stay_True_1.19.zip' for variant: 'axis=y': Unknown blockstate property: 'axis'
-[15:33:15] [Worker-Main-2/WARN]: Missing textures in model minecraft:grass_block#snowy=false:
+[01:17:12] [Render thread/INFO]: Reloading ResourceManager: vanilla, fabric (amecsapi, caffeineconfig, coat, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-containers-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-crash-report-info-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-events-lifecycle-v0, fabric-game-rule-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-tables-v1, fabric-message-api-v1, fabric-mining-level-api-v1, fabric-models-v0, fabric-networking-api-v1, fabric-networking-v0, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-renderer-registries-v1, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, jei, libipn, litematica, lithium, logical_zoom, malilib, modmenu, mousewheelie, presencefootsteps, reeses-sodium-options, sodium, sodium-extra, sound_physics_remastered, tweakeroo, tweed4_annotated, tweed4_base, tweed4_data, tweed4_data_hjson, tweed4_tailor_coat, tweed4_tailor_lang_json_descriptions, tweed4_tailor_screen), file/Stay_True_1.19.zip, file/VanillaTweaks1.20_Minimal.zip
+[01:17:12] [Render thread/INFO]: Creating pipeline for dimension OVERWORLD
+[01:17:12] [Worker-Main-1/INFO]: Found unifont_all_no_pua-15.0.06.hex, loading
+[01:17:12] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_axe.png, ignoring
+[01:17:12] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_boots.png, ignoring
+[01:17:12] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_chestplate.png, ignoring
+[01:17:12] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_helmet.png, ignoring
+[01:17:12] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_hoe.png, ignoring
+[01:17:12] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_leggings.png, ignoring
+[01:17:12] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_pickaxe.png, ignoring
+[01:17:12] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_shovel.png, ignoring
+[01:17:12] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_sword.png, ignoring
+[01:17:12] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/pack.png, ignoring
+[01:17:12] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/readme.txt, ignoring
+[01:17:12] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/netherite no gold/netherite_boots.png, ignoring
+[01:17:12] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/netherite no gold/netherite_chestplate.png, ignoring
+[01:17:12] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/netherite no gold/netherite_helmet.png, ignoring
+[01:17:12] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/netherite no gold/netherite_leggings.png, ignoring
+[01:17:13] [Worker-Main-3/WARN]: Exception loading blockstate definition: 'minecraft:blockstates/cut_sandstone.json' in resourcepack: 'file/Stay_True_1.19.zip' for variant: 'axis=z': Unknown blockstate property: 'axis'
+[01:17:13] [Worker-Main-3/WARN]: Exception loading blockstate definition: 'minecraft:blockstates/cut_sandstone.json' in resourcepack: 'file/Stay_True_1.19.zip' for variant: 'axis=x': Unknown blockstate property: 'axis'
+[01:17:13] [Worker-Main-3/WARN]: Exception loading blockstate definition: 'minecraft:blockstates/cut_sandstone.json' in resourcepack: 'file/Stay_True_1.19.zip' for variant: 'axis=y': Unknown blockstate property: 'axis'
+[01:17:15] [Worker-Main-3/WARN]: Missing textures in model minecraft:grass_block#snowy=false:
     minecraft:textures/atlas/blocks.png:minecraft:block/dirts
-[15:33:15] [Render thread/WARN]: Missing sound for event: minecraft:item.goat_horn.play
-[15:33:15] [Render thread/WARN]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[15:33:15] [Render thread/INFO]: OpenAL initialized on device JACK Default
-[15:33:15] [Render thread/INFO]: Initializing Sound Physics
-[15:33:15] [Render thread/INFO]: EFX Extension recognized
-[15:33:15] [Render thread/INFO]: Max auxiliary sends: 4
-[15:33:15] [Render thread/INFO]: Aux slot 1 created
-[15:33:15] [Render thread/INFO]: Aux slot 2 created
-[15:33:15] [Render thread/INFO]: Aux slot 3 created
-[15:33:15] [Render thread/INFO]: Aux slot 4 created
-[15:33:15] [Render thread/INFO]: EFX ready
-[15:33:15] [Render thread/INFO]: Sound engine started
-[15:33:16] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
-[15:33:16] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[15:33:16] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[15:33:16] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[15:33:16] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[15:33:16] [Render thread/INFO]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[15:33:16] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[15:33:16] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[15:33:16] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[15:33:16] [Render thread/WARN]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[15:33:16] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[15:33:16] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[15:33:16] [Render thread/INFO]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[15:33:16] [Render thread/INFO]: Created: 256x128x0 jei:textures/atlas/gui.png-atlas
-[15:33:16] [Render thread/INFO]: Skipping non-result value minecraft:lantern=UNASSIGNED
-[15:33:16] [Render thread/INFO]: Skipping non-result value minecraft:soul_lantern=UNASSIGNED
-[15:33:16] [Render thread/INFO]: Reloaded configs for mousewheelie (client/smallest)
-[15:33:34] [Render thread/INFO]: Stopping JEI
-[15:33:34] [Render thread/INFO]: Stopping JEI
-[15:33:34] [Render thread/INFO]: Sending Runtime Unavailable...
-[15:33:34] [Render thread/INFO]: Stopping JEI GUI
-[15:33:34] [Render thread/INFO]: Sending Runtime Unavailable took 637.7 μs
-[15:33:34] [Render thread/INFO]: Connecting to theserver.servegame.com, 25565
-[15:33:35] [Render thread/INFO]: Started 1 worker threads
-[15:33:36] [Render thread/INFO]: Starting JEI...
-[15:33:36] [Render thread/INFO]: Registering item subtypes...
-[15:33:36] [Render thread/INFO]: Registering item subtypes took 6.259 ms
-[15:33:36] [Render thread/INFO]: Registering fluid subtypes...
-[15:33:36] [Render thread/INFO]: Registering fluid subtypes took 1.612 ms
-[15:33:36] [Render thread/INFO]: Registering ingredients...
-[15:33:36] [Render thread/INFO]: Registering ingredients: jei:minecraft took 49.70 milliseconds
-[15:33:36] [Render thread/INFO]: Registering ingredients took 53.02 ms
-[15:33:36] [Render thread/INFO]: Registering categories...
-[15:33:36] [Render thread/INFO]: Registering categories: jei:minecraft took 20.68 milliseconds
-[15:33:36] [Render thread/INFO]: Registering categories took 23.49 ms
-[15:33:36] [Render thread/INFO]: Registering vanilla category extensions...
-[15:33:36] [Render thread/INFO]: Registering vanilla category extensions took 1.717 ms
-[15:33:36] [Render thread/INFO]: Registering recipe catalysts...
-[15:33:36] [Render thread/INFO]: Registering recipe catalysts took 2.926 ms
-[15:33:36] [Render thread/INFO]: Registering advanced plugins...
-[15:33:36] [Render thread/INFO]: Registering advanced plugins took 862.2 μs
-[15:33:36] [Render thread/INFO]: Building recipe registry...
-[15:33:36] [Render thread/INFO]: Building recipe registry took 11.85 ms
-[15:33:36] [Render thread/INFO]: Registering recipes...
-[15:33:37] [Render thread/INFO]: Registering recipes: jei:minecraft took 475.2 milliseconds
-[15:33:37] [Render thread/INFO]: Registering recipes took 477.4 ms
-[15:33:37] [Render thread/INFO]: Registering recipes transfer handlers...
-[15:33:37] [Render thread/INFO]: Registering recipes transfer handlers took 3.868 ms
-[15:33:37] [Render thread/INFO]: Building runtime...
-[15:33:37] [Render thread/INFO]: Registering gui handlers...
-[15:33:37] [Render thread/INFO]: Registering gui handlers: jei:minecraft took 12.66 milliseconds
-[15:33:37] [Render thread/INFO]: Registering gui handlers took 22.10 ms
-[15:33:37] [Render thread/INFO]: Registering Runtime...
-[15:33:37] [Render thread/INFO]: Starting JEI GUI
-[15:33:37] [Render thread/INFO]: Building ingredient list...
-[15:33:37] [Render thread/INFO]: Building ingredient list took 6.230 ms
-[15:33:37] [Render thread/INFO]: Building ingredient filter...
-[15:33:37] [Render thread/INFO]: Adding 1439 ingredients
-[15:33:37] [Render thread/INFO]: Added 1439 ingredients
-[15:33:37] [Render thread/INFO]: Building ingredient filter took 283.1 ms
-[15:33:37] [Render thread/INFO]: Registering Runtime: jei:fabric_gui took 399.5 milliseconds
-[15:33:37] [Render thread/INFO]: Registering Runtime took 401.5 ms
-[15:33:37] [Render thread/INFO]: Building runtime took 447.5 ms
-[15:33:37] [Render thread/INFO]: Sending Runtime...
-[15:33:37] [Render thread/INFO]: Sending Runtime took 284.2 μs
-[15:33:37] [Render thread/INFO]: Starting JEI took 1.108 s
-[15:33:38] [Render thread/INFO]: [System] [CHAT] Dennis_mps joined the game
-[15:33:38] [Render thread/INFO]: Loaded 888 advancements
-[15:33:39] [Render thread/INFO]: [ShulkerBoxTooltip Plugins] Loading 1 plugin: shulkerboxtooltip
-[15:33:39] [Render thread/INFO]: [ShulkerBoxTooltip Plugins] Registered 19 color keys for mod shulkerboxtooltip
-[15:33:39] [Render thread/INFO]: [ShulkerBoxTooltip Plugins] Registered 7 providers for mod shulkerboxtooltip
-[15:34:11] [Render thread/INFO]: Stopping worker threads
-[15:34:11] [Render thread/INFO]: Started 1 worker threads
-[15:34:11] [Render thread/INFO]: Flushed changes to Minecraft configuration
-[15:35:17] [Render thread/WARN]: Unable to play empty soundEvent: minecraft:entity.snow_golem.ambient
-[15:38:43] [Render thread/INFO]: Loaded 890 advancements
-[15:41:56] [Render thread/WARN]: Reclaimed 1920 bytes at address 139824918007808 that were leaked from an unknown location (logging is disabled)
-[15:41:56] [Render thread/WARN]: Reclaimed 576 bytes at address 139824919386880 that were leaked from an unknown location (logging is disabled)
-[15:41:56] [Render thread/WARN]: Reclaimed 5976 bytes at address 139824919173120 that were leaked from an unknown location (logging is disabled)
-[15:41:56] [Render thread/WARN]: Reclaimed 19920 bytes at address 139824916647168 that were leaked from an unknown location (logging is disabled)
-[15:41:56] [Render thread/WARN]: Reclaimed 2080 bytes at address 139824919061504 that were leaked from an unknown location (logging is disabled)
-[15:41:56] [Render thread/WARN]: Reclaimed 624 bytes at address 139824919387520 that were leaked from an unknown location (logging is disabled)
-[15:41:56] [Render thread/WARN]: Reclaimed 73360 bytes at address 139824855064384 that were leaked from an unknown location (logging is disabled)
-[15:41:56] [Render thread/WARN]: Reclaimed 22008 bytes at address 139824915210240 that were leaked from an unknown location (logging is disabled)
-[15:42:46] [Render thread/INFO]: [CHAT] <Dennis_mps> sleep plz
-[15:42:50] [Render thread/INFO]: [System] [CHAT] Respawn point set
-[15:50:24] [Render thread/INFO]: Loaded 891 advancements
-[15:51:17] [Render thread/INFO]: Stopping worker threads
-[15:51:17] [Render thread/INFO]: Started 1 worker threads
-[15:51:17] [Render thread/INFO]: Flushed changes to Sodium configuration
-[15:51:55] [Render thread/WARN]: Reclaimed 11760 bytes at address 139824920117248 that were leaked from an unknown location (logging is disabled)
-[15:51:55] [Render thread/WARN]: Reclaimed 40320 bytes at address 139824852880576 that were leaked from an unknown location (logging is disabled)
-[15:51:55] [Render thread/WARN]: Reclaimed 11808 bytes at address 139824917917696 that were leaked from an unknown location (logging is disabled)
-[15:51:55] [Render thread/WARN]: Reclaimed 39360 bytes at address 139824853689920 that were leaked from an unknown location (logging is disabled)
-[15:51:55] [Render thread/WARN]: Reclaimed 12096 bytes at address 139824920170496 that were leaked from an unknown location (logging is disabled)
-[15:51:55] [Render thread/WARN]: Reclaimed 39200 bytes at address 139824852221248 that were leaked from an unknown location (logging is disabled)
-[15:53:48] [Render thread/INFO]: [System] [CHAT] Respawn point set
-[15:56:42] [Render thread/INFO]: [System] [CHAT] tv_odyssey joined the game
-[16:06:15] [Render thread/INFO]: Stopping JEI
-[16:06:15] [Render thread/INFO]: Stopping JEI
-[16:06:15] [Render thread/INFO]: Sending Runtime Unavailable...
-[16:06:15] [Render thread/INFO]: Stopping JEI GUI
-[16:06:15] [Render thread/INFO]: Sending Runtime Unavailable took 288.5 μs
-[16:06:15] [Render thread/INFO]: Stopping worker threads
-[16:07:49] [Render thread/INFO]: Stopping JEI
-[16:07:49] [Render thread/INFO]: Stopping JEI
-[16:07:49] [Render thread/INFO]: Sending Runtime Unavailable...
-[16:07:49] [Render thread/INFO]: Stopping JEI GUI
-[16:07:49] [Render thread/INFO]: Sending Runtime Unavailable took 296.7 μs
-[16:07:49] [Render thread/INFO]: Connecting to theserver.servegame.com, 25565
-[16:07:50] [Render thread/INFO]: Started 1 worker threads
-[16:07:50] [Render thread/INFO]: Starting JEI...
-[16:07:50] [Render thread/INFO]: Registering item subtypes...
-[16:07:50] [Render thread/INFO]: Registering item subtypes took 240.4 μs
-[16:07:50] [Render thread/INFO]: Registering fluid subtypes...
-[16:07:50] [Render thread/INFO]: Registering fluid subtypes took 248.2 μs
-[16:07:50] [Render thread/INFO]: Registering ingredients...
-[16:07:50] [Render thread/INFO]: Registering ingredients took 4.278 ms
-[16:07:50] [Render thread/INFO]: Registering categories...
-[16:07:50] [Render thread/INFO]: Registering categories took 1.685 ms
-[16:07:50] [Render thread/INFO]: Registering vanilla category extensions...
-[16:07:50] [Render thread/INFO]: Registering vanilla category extensions took 230.7 μs
-[16:07:50] [Render thread/INFO]: Registering recipe catalysts...
-[16:07:50] [Render thread/INFO]: Registering recipe catalysts took 939.0 μs
-[16:07:50] [Render thread/INFO]: Registering advanced plugins...
-[16:07:50] [Render thread/INFO]: Registering advanced plugins took 758.9 μs
-[16:07:50] [Render thread/INFO]: Building recipe registry...
-[16:07:50] [Render thread/INFO]: Building recipe registry took 247.4 μs
-[16:07:50] [Render thread/INFO]: Registering recipes...
-[16:07:50] [Render thread/INFO]: Registering recipes: jei:minecraft took 107.4 milliseconds
-[16:07:50] [Render thread/INFO]: Registering recipes took 108.5 ms
-[16:07:50] [Render thread/INFO]: Registering recipes transfer handlers...
-[16:07:50] [Render thread/INFO]: Registering recipes transfer handlers took 1.041 ms
-[16:07:50] [Render thread/INFO]: Building runtime...
-[16:07:50] [Render thread/INFO]: Registering gui handlers...
-[16:07:50] [Render thread/INFO]: Registering gui handlers took 1.611 ms
-[16:07:50] [Render thread/INFO]: Registering Runtime...
-[16:07:50] [Render thread/INFO]: Starting JEI GUI
-[16:07:50] [Render thread/INFO]: Building ingredient list...
-[16:07:50] [Render thread/INFO]: Building ingredient list took 945.5 μs
-[16:07:50] [Render thread/INFO]: Building ingredient filter...
-[16:07:50] [Render thread/INFO]: Adding 1439 ingredients
-[16:07:50] [Render thread/INFO]: Added 1439 ingredients
-[16:07:50] [Render thread/INFO]: Building ingredient filter took 73.68 ms
-[16:07:50] [Render thread/INFO]: Registering Runtime: jei:fabric_gui took 106.4 milliseconds
-[16:07:50] [Render thread/INFO]: Registering Runtime took 109.5 ms
-[16:07:50] [Render thread/INFO]: Building runtime took 111.9 ms
-[16:07:50] [Render thread/INFO]: Sending Runtime...
-[16:07:50] [Render thread/INFO]: Sending Runtime took 214.1 μs
-[16:07:50] [Render thread/INFO]: Starting JEI took 238.5 ms
-[16:07:50] [Render thread/INFO]: Stopping JEI
-[16:07:50] [Render thread/INFO]: Stopping JEI
-[16:07:50] [Render thread/INFO]: Sending Runtime Unavailable...
-[16:07:50] [Render thread/INFO]: Stopping JEI GUI
-[16:07:50] [Render thread/INFO]: Sending Runtime Unavailable took 2.071 ms
-[16:07:50] [Render thread/INFO]: Starting JEI...
-[16:07:50] [Render thread/INFO]: Registering item subtypes...
-[16:07:50] [Render thread/INFO]: Registering item subtypes took 909.3 μs
-[16:07:50] [Render thread/INFO]: Registering fluid subtypes...
-[16:07:50] [Render thread/INFO]: Registering fluid subtypes took 486.4 μs
-[16:07:50] [Render thread/INFO]: Registering ingredients...
-[16:07:50] [Render thread/INFO]: Registering ingredients took 6.466 ms
-[16:07:50] [Render thread/INFO]: Registering categories...
-[16:07:50] [Render thread/INFO]: Registering categories took 674.5 μs
-[16:07:50] [Render thread/INFO]: Registering vanilla category extensions...
-[16:07:50] [Render thread/INFO]: Registering vanilla category extensions took 291.8 μs
-[16:07:50] [Render thread/INFO]: Registering recipe catalysts...
-[16:07:50] [Render thread/INFO]: Registering recipe catalysts took 542.6 μs
-[16:07:50] [Render thread/INFO]: Registering advanced plugins...
-[16:07:50] [Render thread/INFO]: Registering advanced plugins took 1.072 ms
-[16:07:50] [Render thread/INFO]: Building recipe registry...
-[16:07:50] [Render thread/INFO]: Building recipe registry took 248.0 μs
-[16:07:50] [Render thread/INFO]: Registering recipes...
-[16:07:50] [Render thread/INFO]: Registering recipes: jei:minecraft took 84.57 milliseconds
-[16:07:50] [Render thread/INFO]: Registering recipes took 86.29 ms
-[16:07:50] [Render thread/INFO]: Registering recipes transfer handlers...
-[16:07:50] [Render thread/INFO]: Registering recipes transfer handlers took 1.134 ms
-[16:07:50] [Render thread/INFO]: Building runtime...
-[16:07:50] [Render thread/INFO]: Registering gui handlers...
-[16:07:50] [Render thread/INFO]: Registering gui handlers took 3.327 ms
-[16:07:50] [Render thread/INFO]: Registering Runtime...
-[16:07:50] [Render thread/INFO]: Starting JEI GUI
-[16:07:50] [Render thread/INFO]: Building ingredient list...
-[16:07:50] [Render thread/INFO]: Building ingredient list took 1.214 ms
-[16:07:50] [Render thread/INFO]: Building ingredient filter...
-[16:07:50] [Render thread/INFO]: Adding 1439 ingredients
-[16:07:50] [Render thread/INFO]: Added 1439 ingredients
-[16:07:50] [Render thread/INFO]: Building ingredient filter took 54.62 ms
-[16:07:50] [Render thread/INFO]: Registering Runtime: jei:fabric_gui took 69.52 milliseconds
-[16:07:50] [Render thread/INFO]: Registering Runtime took 74.79 ms
-[16:07:50] [Render thread/INFO]: Building runtime took 78.84 ms
-[16:07:50] [Render thread/INFO]: Sending Runtime...
-[16:07:50] [Render thread/INFO]: Sending Runtime took 1.278 ms
-[16:07:50] [Render thread/INFO]: Starting JEI took 181.9 ms
-[16:07:51] [Render thread/INFO]: [System] [CHAT] Dennis_mps joined the game
-[16:07:51] [Render thread/WARN]: Received passengers for unknown entity
-[16:07:51] [Render thread/INFO]: Loaded 891 advancements
-[16:11:02] [Render thread/INFO]: [System] [CHAT] tv_odyssey left the game
-[16:16:08] [Render thread/WARN]: Received passengers for unknown entity
-[16:17:33] [Render thread/INFO]: [System] [CHAT] Respawn point set
-[16:18:00] [Render thread/INFO]: Reloading pipeline on dimension change: OVERWORLD => NETHER
-[16:18:00] [Render thread/INFO]: Destroying pipeline OVERWORLD
-[16:18:00] [Render thread/INFO]: Creating pipeline for dimension NETHER
-[16:18:00] [Render thread/INFO]: Stopping worker threads
-[16:18:00] [Render thread/INFO]: Started 1 worker threads
-[16:18:00] [Render thread/INFO]: Stopping worker threads
-[16:18:00] [Render thread/INFO]: Started 1 worker threads
-[16:18:00] [Render thread/INFO]: Stopping worker threads
-[16:18:00] [Render thread/INFO]: Started 1 worker threads
-[16:19:31] [Render thread/INFO]: [Not Secure] [CHAT] <HeeHoo2k> -4451,754
-[16:21:40] [Render thread/INFO]: Reloading pipeline on dimension change: NETHER => OVERWORLD
-[16:21:40] [Render thread/INFO]: Destroying pipeline NETHER
-[16:21:40] [Render thread/INFO]: Creating pipeline for dimension OVERWORLD
-[16:21:40] [Render thread/INFO]: Stopping worker threads
-[16:21:40] [Render thread/INFO]: Started 1 worker threads
-[16:21:40] [Render thread/INFO]: Stopping worker threads
-[16:21:40] [Render thread/INFO]: Started 1 worker threads
-[16:21:40] [Render thread/INFO]: Stopping worker threads
-[16:21:40] [Render thread/INFO]: Started 1 worker threads
-[16:21:40] [Render thread/INFO]: Loaded 891 advancements
-[16:22:06] [Render thread/INFO]: [CHAT] <Dennis_mps> -4447, __, 759
-[16:23:19] [Render thread/WARN]: Unable to play unknown soundEvent: presencefootstepsmono:pf_presence.crumbly_stone.crumbly_stone_walk
-[16:24:21] [Render thread/WARN]: Unable to play empty soundEvent: minecraft:entity.salmon.ambient
-[16:25:44] [Render thread/INFO]: Reloading pipeline on dimension change: OVERWORLD => NETHER
-[16:25:44] [Render thread/INFO]: Destroying pipeline OVERWORLD
-[16:25:44] [Render thread/INFO]: Creating pipeline for dimension NETHER
-[16:25:44] [Render thread/INFO]: Stopping worker threads
-[16:25:44] [Render thread/INFO]: Started 1 worker threads
-[16:25:44] [Render thread/INFO]: Stopping worker threads
-[16:25:44] [Render thread/INFO]: Started 1 worker threads
-[16:25:44] [Render thread/INFO]: Stopping worker threads
-[16:25:44] [Render thread/INFO]: Started 1 worker threads
-[16:25:52] [Render thread/INFO]: Reloading pipeline on dimension change: NETHER => OVERWORLD
-[16:25:52] [Render thread/INFO]: Destroying pipeline NETHER
-[16:25:52] [Render thread/INFO]: Creating pipeline for dimension OVERWORLD
-[16:25:52] [Render thread/INFO]: Stopping worker threads
-[16:25:52] [Render thread/INFO]: Started 1 worker threads
-[16:25:52] [Render thread/INFO]: Stopping worker threads
-[16:25:52] [Render thread/INFO]: Started 1 worker threads
-[16:25:52] [Render thread/INFO]: Stopping worker threads
-[16:25:52] [Render thread/INFO]: Started 1 worker threads
-[16:29:12] [Render thread/INFO]: [System] [CHAT] Respawn point set
-[16:40:14] [Render thread/INFO]: [System] [CHAT] Respawn point set
-[16:42:01] [Render thread/INFO]: Reloading pipeline on dimension change: OVERWORLD => NETHER
-[16:42:01] [Render thread/INFO]: Destroying pipeline OVERWORLD
-[16:42:01] [Render thread/INFO]: Creating pipeline for dimension NETHER
-[16:42:01] [Render thread/INFO]: Stopping worker threads
-[16:42:01] [Render thread/INFO]: Started 1 worker threads
-[16:42:01] [Render thread/INFO]: Stopping worker threads
-[16:42:01] [Render thread/INFO]: Started 1 worker threads
-[16:42:01] [Render thread/INFO]: Stopping worker threads
-[16:42:01] [Render thread/INFO]: Started 1 worker threads
-[16:42:09] [Render thread/INFO]: [System] [CHAT] Saved screenshot as 2023-06-16_16.42.09.png
-[16:43:56] [Render thread/WARN]: Received passengers for unknown entity
-[16:44:04] [Render thread/WARN]: Received passengers for unknown entity
-[16:44:18] [Render thread/INFO]: Reloading pipeline on dimension change: NETHER => OVERWORLD
-[16:44:18] [Render thread/INFO]: Destroying pipeline NETHER
-[16:44:18] [Render thread/INFO]: Creating pipeline for dimension OVERWORLD
-[16:44:18] [Render thread/INFO]: Stopping worker threads
-[16:44:18] [Render thread/INFO]: Started 1 worker threads
-[16:44:18] [Render thread/INFO]: Stopping worker threads
-[16:44:18] [Render thread/INFO]: Started 1 worker threads
-[16:44:18] [Render thread/INFO]: Stopping worker threads
-[16:44:18] [Render thread/INFO]: Started 1 worker threads
-[16:44:18] [Render thread/INFO]: [System] [CHAT] Dennis_mps has completed the challenge [Subspace Bubble]
-[16:44:19] [Render thread/INFO]: Loaded 891 advancements
-[16:44:19] [Render thread/WARN]: Unable to play empty soundEvent: minecraft:entity.tropical_fish.ambient
-[16:44:29] [Render thread/WARN]: Unable to play empty soundEvent: minecraft:entity.cod.ambient
-[16:46:39] [Render thread/INFO]: Reloading pipeline on dimension change: OVERWORLD => NETHER
-[16:46:39] [Render thread/INFO]: Destroying pipeline OVERWORLD
-[16:46:39] [Render thread/INFO]: Creating pipeline for dimension NETHER
-[16:46:39] [Render thread/INFO]: Stopping worker threads
-[16:46:39] [Render thread/INFO]: Started 1 worker threads
-[16:46:39] [Render thread/INFO]: Stopping worker threads
-[16:46:39] [Render thread/INFO]: Started 1 worker threads
-[16:46:39] [Render thread/INFO]: Stopping worker threads
-[16:46:39] [Render thread/INFO]: Started 1 worker threads
-[16:47:19] [Render thread/INFO]: Reloading pipeline on dimension change: NETHER => OVERWORLD
-[16:47:19] [Render thread/INFO]: Destroying pipeline NETHER
-[16:47:19] [Render thread/INFO]: Creating pipeline for dimension OVERWORLD
-[16:47:19] [Render thread/INFO]: Stopping worker threads
-[16:47:19] [Render thread/INFO]: Started 1 worker threads
-[16:47:19] [Render thread/INFO]: Stopping worker threads
-[16:47:19] [Render thread/INFO]: Started 1 worker threads
-[16:47:19] [Render thread/INFO]: Stopping worker threads
-[16:47:19] [Render thread/INFO]: Started 1 worker threads
-[16:48:30] [Render thread/INFO]: Loaded 900 advancements
-[16:49:13] [Render thread/INFO]: Reloading pipeline on dimension change: OVERWORLD => NETHER
-[16:49:13] [Render thread/INFO]: Destroying pipeline OVERWORLD
-[16:49:13] [Render thread/INFO]: Creating pipeline for dimension NETHER
-[16:49:13] [Render thread/INFO]: Stopping worker threads
-[16:49:13] [Render thread/INFO]: Started 1 worker threads
-[16:49:13] [Render thread/INFO]: Stopping worker threads
-[16:49:13] [Render thread/INFO]: Started 1 worker threads
-[16:49:13] [Render thread/INFO]: Stopping worker threads
-[16:49:13] [Render thread/INFO]: Started 1 worker threads
-[16:49:38] [Render thread/INFO]: [CHAT] <Dennis_mps> 69
-[16:53:51] [Render thread/INFO]: Reloading pipeline on dimension change: NETHER => OVERWORLD
-[16:53:51] [Render thread/INFO]: Destroying pipeline NETHER
-[16:53:51] [Render thread/INFO]: Creating pipeline for dimension OVERWORLD
-[16:53:51] [Render thread/INFO]: Stopping worker threads
-[16:53:51] [Render thread/INFO]: Started 1 worker threads
-[16:53:51] [Render thread/INFO]: Stopping worker threads
-[16:53:51] [Render thread/INFO]: Started 1 worker threads
-[16:53:51] [Render thread/INFO]: Stopping worker threads
-[16:53:51] [Render thread/INFO]: Started 1 worker threads
-[16:53:57] [Render thread/INFO]: Reloading pipeline on dimension change: OVERWORLD => NETHER
-[16:53:57] [Render thread/INFO]: Destroying pipeline OVERWORLD
-[16:53:57] [Render thread/INFO]: Creating pipeline for dimension NETHER
-[16:53:57] [Render thread/INFO]: Stopping worker threads
-[16:53:57] [Render thread/INFO]: Started 1 worker threads
-[16:53:57] [Render thread/INFO]: Stopping worker threads
-[16:53:57] [Render thread/INFO]: Started 1 worker threads
-[16:53:57] [Render thread/INFO]: Stopping worker threads
-[16:53:57] [Render thread/INFO]: Started 1 worker threads
-[16:56:45] [Render thread/INFO]: [System] [CHAT] HeeHoo2k left the game
-[17:01:19] [Render thread/INFO]: Reloading pipeline on dimension change: NETHER => OVERWORLD
-[17:01:19] [Render thread/INFO]: Destroying pipeline NETHER
-[17:01:19] [Render thread/INFO]: Creating pipeline for dimension OVERWORLD
-[17:01:19] [Render thread/INFO]: Stopping worker threads
-[17:01:19] [Render thread/INFO]: Started 1 worker threads
-[17:01:19] [Render thread/INFO]: Stopping worker threads
-[17:01:19] [Render thread/INFO]: Started 1 worker threads
-[17:01:19] [Render thread/INFO]: Stopping worker threads
-[17:01:19] [Render thread/INFO]: Started 1 worker threads
-[17:01:26] [Render thread/INFO]: Stopping JEI
-[17:01:26] [Render thread/INFO]: Stopping JEI
-[17:01:26] [Render thread/INFO]: Sending Runtime Unavailable...
-[17:01:26] [Render thread/INFO]: Stopping JEI GUI
-[17:01:26] [Render thread/INFO]: Sending Runtime Unavailable took 224.1 μs
-[17:01:26] [Render thread/INFO]: Stopping worker threads
-[17:01:28] [Render thread/INFO]: Stopping!
-[17:01:28] [Render thread/INFO]: Stopping JEI
-[17:01:28] [Render thread/INFO]: Stopping JEI
-[17:01:28] [Render thread/INFO]: Sending Runtime Unavailable...
-[17:01:28] [Render thread/INFO]: Stopping JEI GUI
-[17:01:28] [Render thread/INFO]: Sending Runtime Unavailable took 546.4 μs
+[01:17:15] [Render thread/WARN]: Missing sound for event: minecraft:item.goat_horn.play
+[01:17:15] [Render thread/WARN]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[01:17:15] [Render thread/INFO]: OpenAL initialized on device JACK Default
+[01:17:15] [Render thread/INFO]: Initializing Sound Physics
+[01:17:15] [Render thread/INFO]: EFX Extension recognized
+[01:17:15] [Render thread/INFO]: Max auxiliary sends: 4
+[01:17:15] [Render thread/INFO]: Aux slot 1 created
+[01:17:15] [Render thread/INFO]: Aux slot 2 created
+[01:17:15] [Render thread/INFO]: Aux slot 3 created
+[01:17:15] [Render thread/INFO]: Aux slot 4 created
+[01:17:15] [Render thread/INFO]: EFX ready
+[01:17:15] [Render thread/INFO]: Sound engine started
+[01:17:15] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[01:17:15] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[01:17:15] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[01:17:15] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[01:17:15] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[01:17:15] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[01:17:15] [Render thread/INFO]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[01:17:15] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[01:17:15] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[01:17:15] [Render thread/WARN]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[01:17:16] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[01:17:16] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[01:17:16] [Render thread/INFO]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[01:17:16] [Render thread/INFO]: Created: 256x128x0 jei:textures/atlas/gui.png-atlas
+[01:17:16] [Render thread/INFO]: Skipping non-result value minecraft:lantern=UNASSIGNED
+[01:17:16] [Render thread/INFO]: Skipping non-result value minecraft:soul_lantern=UNASSIGNED
+[01:17:16] [Render thread/INFO]: Reloaded configs for mousewheelie (client/smallest)
+[01:18:38] [Render thread/INFO]: Stopping JEI
+[01:18:38] [Render thread/INFO]: Stopping JEI
+[01:18:38] [Render thread/INFO]: Sending Runtime Unavailable...
+[01:18:38] [Render thread/INFO]: Stopping JEI GUI
+[01:18:38] [Render thread/INFO]: Sending Runtime Unavailable took 506.4 μs
+[01:18:38] [Render thread/INFO]: Connecting to theserver.servegame.com, 25565
+[01:18:39] [Render thread/INFO]: Started 1 worker threads
+[01:18:39] [Render thread/INFO]: Using 3 total BufferBuilder caches
+[01:18:39] [Render thread/WARN]: Unable to read property: west with value: false for blockstate: {Name:"minecraft:cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
+[01:18:39] [Render thread/WARN]: Unable to read property: east with value: false for blockstate: {Name:"minecraft:cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
+[01:18:39] [Render thread/WARN]: Unable to read property: south with value: false for blockstate: {Name:"minecraft:cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
+[01:18:39] [Render thread/WARN]: Unable to read property: north with value: false for blockstate: {Name:"minecraft:cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
+[01:18:39] [Render thread/WARN]: Unable to read property: west with value: false for blockstate: {Name:"minecraft:mossy_cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
+[01:18:39] [Render thread/WARN]: Unable to read property: east with value: false for blockstate: {Name:"minecraft:mossy_cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
+[01:18:39] [Render thread/WARN]: Unable to read property: south with value: false for blockstate: {Name:"minecraft:mossy_cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
+[01:18:39] [Render thread/WARN]: Unable to read property: north with value: false for blockstate: {Name:"minecraft:mossy_cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
+[01:18:39] [Render thread/INFO]: Starting JEI...
+[01:18:39] [Render thread/INFO]: Registering item subtypes...
+[01:18:39] [Render thread/INFO]: Registering item subtypes took 2.053 ms
+[01:18:39] [Render thread/INFO]: Registering fluid subtypes...
+[01:18:39] [Render thread/INFO]: Registering fluid subtypes took 1.192 ms
+[01:18:39] [Render thread/INFO]: Registering ingredients...
+[01:18:39] [Render thread/INFO]: Registering ingredients: jei:minecraft took 37.45 milliseconds
+[01:18:39] [Render thread/INFO]: Registering ingredients took 38.06 ms
+[01:18:39] [Render thread/INFO]: Registering categories...
+[01:18:39] [Render thread/INFO]: Registering categories: jei:minecraft took 14.56 milliseconds
+[01:18:39] [Render thread/INFO]: Registering categories took 16.25 ms
+[01:18:39] [Render thread/INFO]: Registering vanilla category extensions...
+[01:18:39] [Render thread/INFO]: Registering vanilla category extensions took 4.801 ms
+[01:18:39] [Render thread/INFO]: Registering recipe catalysts...
+[01:18:39] [Render thread/INFO]: Registering recipe catalysts took 1.336 ms
+[01:18:39] [Render thread/INFO]: Registering advanced plugins...
+[01:18:39] [Render thread/INFO]: Registering advanced plugins took 294.4 μs
+[01:18:39] [Render thread/INFO]: Building recipe registry...
+[01:18:39] [Render thread/INFO]: Building recipe registry took 11.61 ms
+[01:18:39] [Render thread/INFO]: Registering recipes...
+[01:18:40] [Render thread/INFO]: Registering recipes: jei:minecraft took 265.8 milliseconds
+[01:18:40] [Render thread/INFO]: Registering recipes took 267.3 ms
+[01:18:40] [Render thread/INFO]: Registering recipes transfer handlers...
+[01:18:40] [Render thread/INFO]: Registering recipes transfer handlers took 2.424 ms
+[01:18:40] [Render thread/INFO]: Building runtime...
+[01:18:40] [Render thread/INFO]: Registering gui handlers...
+[01:18:40] [Render thread/INFO]: Registering gui handlers took 13.35 ms
+[01:18:40] [Render thread/INFO]: Registering Runtime...
+[01:18:40] [Render thread/INFO]: Starting JEI GUI
+[01:18:40] [Render thread/INFO]: Building ingredient list...
+[01:18:40] [Render thread/INFO]: Building ingredient list took 4.663 ms
+[01:18:40] [Render thread/INFO]: Building ingredient filter...
+[01:18:40] [Render thread/INFO]: Adding 1439 ingredients
+[01:18:40] [Render thread/INFO]: Added 1439 ingredients
+[01:18:40] [Render thread/INFO]: Building ingredient filter took 236.9 ms
+[01:18:40] [Render thread/INFO]: Registering Runtime: jei:fabric_gui took 320.5 milliseconds
+[01:18:40] [Render thread/INFO]: Registering Runtime took 321.2 ms
+[01:18:40] [Render thread/INFO]: Building runtime took 352.0 ms
+[01:18:40] [Render thread/INFO]: Sending Runtime...
+[01:18:40] [Render thread/INFO]: Sending Runtime took 3.497 ms
+[01:18:40] [Render thread/INFO]: Starting JEI took 755.3 ms
+[01:18:41] [Render thread/INFO]: [System] [CHAT] Dennis_mps joined the game
+[01:18:41] [Render thread/INFO]: Loaded 904 advancements
+[01:18:54] [Render thread/INFO]: [System] [CHAT] Hyperzoink joined the game
+[01:19:37] [Render thread/INFO]: Reloading pipeline on dimension change: OVERWORLD => NETHER
+[01:19:37] [Render thread/INFO]: Destroying pipeline OVERWORLD
+[01:19:37] [Render thread/INFO]: Creating pipeline for dimension NETHER
+[01:19:38] [Render thread/INFO]: Stopping worker threads
+[01:19:38] [Render thread/INFO]: Started 1 worker threads
+[01:19:38] [Render thread/INFO]: Stopping worker threads
+[01:19:38] [Render thread/INFO]: Started 1 worker threads
+[01:19:38] [Render thread/INFO]: Stopping worker threads
+[01:19:38] [Render thread/INFO]: Started 1 worker threads
+[01:20:02] [Render thread/INFO]: Reloading pipeline on dimension change: NETHER => OVERWORLD
+[01:20:02] [Render thread/INFO]: Destroying pipeline NETHER
+[01:20:02] [Render thread/INFO]: Creating pipeline for dimension OVERWORLD
+[01:20:02] [Render thread/INFO]: Stopping worker threads
+[01:20:02] [Render thread/INFO]: Started 1 worker threads
+[01:20:02] [Render thread/INFO]: Stopping worker threads
+[01:20:02] [Render thread/INFO]: Started 1 worker threads
+[01:20:02] [Render thread/INFO]: Stopping worker threads
+[01:20:02] [Render thread/INFO]: Started 1 worker threads
+[01:20:10] [Render thread/INFO]: [CHAT] You whisper to Azurit3: art thou too scared to unmute?
+[01:20:16] [Render thread/INFO]: [CHAT] You whisper to Azurit3: or no perms?
+[01:20:23] [Render thread/INFO]: [CHAT] <Azurit3> perms
+[01:20:37] [Render thread/INFO]: [CHAT] You whisper to Azurit3: i have you perms
+[01:20:42] [Render thread/WARN]: Unable to play empty soundEvent: minecraft:entity.snow_golem.ambient
+[01:20:47] [Render thread/INFO]: [CHAT] <Azurit3> im ur biggest fan hyperzoink
+[01:20:54] [Render thread/INFO]: [CHAT] <Hyperzoink> danks dawg
+[01:21:09] [Render thread/INFO]: [CHAT] <Azurit3> i still cant :I
+[01:21:32] [Render thread/INFO]: [CHAT] <Azurit3> I CANT
+[01:22:47] [Render thread/INFO]: Reloading pipeline on dimension change: OVERWORLD => NETHER
+[01:22:47] [Render thread/INFO]: Destroying pipeline OVERWORLD
+[01:22:47] [Render thread/INFO]: Creating pipeline for dimension NETHER
+[01:22:47] [Render thread/INFO]: Stopping worker threads
+[01:22:47] [Render thread/INFO]: Started 1 worker threads
+[01:22:47] [Render thread/INFO]: Stopping worker threads
+[01:22:47] [Render thread/INFO]: Started 1 worker threads
+[01:22:47] [Render thread/INFO]: Stopping worker threads
+[01:22:47] [Render thread/INFO]: Started 1 worker threads
+[01:23:17] [Render thread/INFO]: Reloading pipeline on dimension change: NETHER => OVERWORLD
+[01:23:17] [Render thread/INFO]: Destroying pipeline NETHER
+[01:23:17] [Render thread/INFO]: Creating pipeline for dimension OVERWORLD
+[01:23:17] [Render thread/INFO]: Stopping worker threads
+[01:23:17] [Render thread/INFO]: Started 1 worker threads
+[01:23:17] [Render thread/INFO]: Stopping worker threads
+[01:23:17] [Render thread/INFO]: Started 1 worker threads
+[01:23:17] [Render thread/INFO]: Stopping worker threads
+[01:23:17] [Render thread/INFO]: Started 1 worker threads
+[01:23:17] [Render thread/WARN]: Received passengers for unknown entity
+[01:23:30] [Render thread/INFO]: [System] [CHAT] A420madarauchiha was slain by Guardian
+[01:23:37] [Render thread/INFO]: [System] [CHAT] Hyperzoink was slain by Dennis_mps
+[01:23:51] [Render thread/INFO]: [System] [CHAT] Hyperzoink has made the advancement [Stone Age]
+[01:24:39] [Render thread/INFO]: [System] [CHAT] A420madarauchiha was shot by Skeleton
+[01:26:02] [Render thread/INFO]: Reloading pipeline on dimension change: OVERWORLD => NETHER
+[01:26:02] [Render thread/INFO]: Destroying pipeline OVERWORLD
+[01:26:02] [Render thread/INFO]: Creating pipeline for dimension NETHER
+[01:26:02] [Render thread/INFO]: Stopping worker threads
+[01:26:02] [Render thread/INFO]: Started 1 worker threads
+[01:26:02] [Render thread/INFO]: Stopping worker threads
+[01:26:02] [Render thread/INFO]: Started 1 worker threads
+[01:26:02] [Render thread/INFO]: Stopping worker threads
+[01:26:02] [Render thread/INFO]: Started 1 worker threads
+[01:26:20] [Render thread/INFO]: Reloading pipeline on dimension change: NETHER => OVERWORLD
+[01:26:20] [Render thread/INFO]: Destroying pipeline NETHER
+[01:26:20] [Render thread/INFO]: Creating pipeline for dimension OVERWORLD
+[01:26:20] [Render thread/INFO]: Stopping worker threads
+[01:26:20] [Render thread/INFO]: Started 1 worker threads
+[01:26:20] [Render thread/INFO]: Stopping worker threads
+[01:26:20] [Render thread/INFO]: Started 1 worker threads
+[01:26:20] [Render thread/INFO]: Stopping worker threads
+[01:26:20] [Render thread/INFO]: Started 1 worker threads
+[01:26:36] [Render thread/WARN]: Unable to play empty soundEvent: minecraft:entity.cod.ambient
+[01:26:50] [Render thread/INFO]: Reloading pipeline on dimension change: OVERWORLD => NETHER
+[01:26:50] [Render thread/INFO]: Destroying pipeline OVERWORLD
+[01:26:50] [Render thread/INFO]: Creating pipeline for dimension NETHER
+[01:26:50] [Render thread/INFO]: Stopping worker threads
+[01:26:50] [Render thread/INFO]: Started 1 worker threads
+[01:26:50] [Render thread/INFO]: Stopping worker threads
+[01:26:50] [Render thread/INFO]: Started 1 worker threads
+[01:26:50] [Render thread/INFO]: Stopping worker threads
+[01:26:50] [Render thread/INFO]: Started 1 worker threads
+[01:27:23] [Render thread/INFO]: Reloading pipeline on dimension change: NETHER => OVERWORLD
+[01:27:23] [Render thread/INFO]: Destroying pipeline NETHER
+[01:27:23] [Render thread/INFO]: Creating pipeline for dimension OVERWORLD
+[01:27:23] [Render thread/INFO]: Stopping worker threads
+[01:27:23] [Render thread/INFO]: Started 1 worker threads
+[01:27:23] [Render thread/INFO]: Stopping worker threads
+[01:27:23] [Render thread/INFO]: Started 1 worker threads
+[01:27:23] [Render thread/INFO]: Stopping worker threads
+[01:27:23] [Render thread/INFO]: Started 1 worker threads
+[01:27:33] [Render thread/INFO]: Reloading pipeline on dimension change: OVERWORLD => NETHER
+[01:27:33] [Render thread/INFO]: Destroying pipeline OVERWORLD
+[01:27:33] [Render thread/INFO]: Creating pipeline for dimension NETHER
+[01:27:33] [Render thread/INFO]: Stopping worker threads
+[01:27:33] [Render thread/INFO]: Started 1 worker threads
+[01:27:33] [Render thread/INFO]: Stopping worker threads
+[01:27:33] [Render thread/INFO]: Started 1 worker threads
+[01:27:33] [Render thread/INFO]: Stopping worker threads
+[01:27:33] [Render thread/INFO]: Started 1 worker threads
+[01:28:02] [Render thread/INFO]: Reloading pipeline on dimension change: NETHER => OVERWORLD
+[01:28:02] [Render thread/INFO]: Destroying pipeline NETHER
+[01:28:02] [Render thread/INFO]: Creating pipeline for dimension OVERWORLD
+[01:28:02] [Render thread/INFO]: Stopping worker threads
+[01:28:02] [Render thread/INFO]: Started 1 worker threads
+[01:28:02] [Render thread/INFO]: Stopping worker threads
+[01:28:02] [Render thread/INFO]: Started 1 worker threads
+[01:28:02] [Render thread/INFO]: Stopping worker threads
+[01:28:02] [Render thread/INFO]: Started 1 worker threads
+[01:28:44] [Render thread/INFO]: Reloading pipeline on dimension change: OVERWORLD => NETHER
+[01:28:44] [Render thread/INFO]: Destroying pipeline OVERWORLD
+[01:28:44] [Render thread/INFO]: Creating pipeline for dimension NETHER
+[01:28:44] [Render thread/INFO]: Stopping worker threads
+[01:28:44] [Render thread/INFO]: Started 1 worker threads
+[01:28:44] [Render thread/INFO]: Stopping worker threads
+[01:28:44] [Render thread/INFO]: Started 1 worker threads
+[01:28:44] [Render thread/INFO]: Stopping worker threads
+[01:28:44] [Render thread/INFO]: Started 1 worker threads
+[01:29:02] [Render thread/INFO]: Reloading pipeline on dimension change: NETHER => OVERWORLD
+[01:29:02] [Render thread/INFO]: Destroying pipeline NETHER
+[01:29:02] [Render thread/INFO]: Creating pipeline for dimension OVERWORLD
+[01:29:02] [Render thread/INFO]: Stopping worker threads
+[01:29:02] [Render thread/INFO]: Started 1 worker threads
+[01:29:02] [Render thread/INFO]: Stopping worker threads
+[01:29:02] [Render thread/INFO]: Started 1 worker threads
+[01:29:02] [Render thread/INFO]: Stopping worker threads
+[01:29:02] [Render thread/INFO]: Started 1 worker threads
+[01:30:06] [Render thread/INFO]: Reloading pipeline on dimension change: OVERWORLD => NETHER
+[01:30:06] [Render thread/INFO]: Destroying pipeline OVERWORLD
+[01:30:06] [Render thread/INFO]: Creating pipeline for dimension NETHER
+[01:30:07] [Render thread/INFO]: Stopping worker threads
+[01:30:07] [Render thread/INFO]: Started 1 worker threads
+[01:30:07] [Render thread/INFO]: Stopping worker threads
+[01:30:07] [Render thread/INFO]: Started 1 worker threads
+[01:30:07] [Render thread/INFO]: Stopping worker threads
+[01:30:07] [Render thread/INFO]: Started 1 worker threads
+[01:30:20] [Render thread/INFO]: Reloading pipeline on dimension change: NETHER => OVERWORLD
+[01:30:20] [Render thread/INFO]: Destroying pipeline NETHER
+[01:30:20] [Render thread/INFO]: Creating pipeline for dimension OVERWORLD
+[01:30:20] [Render thread/INFO]: Stopping worker threads
+[01:30:20] [Render thread/INFO]: Started 1 worker threads
+[01:30:20] [Render thread/INFO]: Stopping worker threads
+[01:30:20] [Render thread/INFO]: Started 1 worker threads
+[01:30:20] [Render thread/INFO]: Stopping worker threads
+[01:30:20] [Render thread/INFO]: Started 1 worker threads
+[01:30:32] [Render thread/WARN]: Received passengers for unknown entity
+[01:31:37] [Render thread/INFO]: [System] [CHAT] greatpower42 was slain by Dennis_mps
+[01:32:09] [Render thread/INFO]: [System] [CHAT] Azurit3 has made the advancement [Not Today, Thank You]
+[01:32:25] [Render thread/INFO]: Reloading pipeline on dimension change: OVERWORLD => NETHER
+[01:32:25] [Render thread/INFO]: Destroying pipeline OVERWORLD
+[01:32:25] [Render thread/INFO]: Creating pipeline for dimension NETHER
+[01:32:25] [Render thread/INFO]: Stopping worker threads
+[01:32:25] [Render thread/INFO]: Started 1 worker threads
+[01:32:25] [Render thread/INFO]: Stopping worker threads
+[01:32:25] [Render thread/INFO]: Started 1 worker threads
+[01:32:25] [Render thread/INFO]: Stopping worker threads
+[01:32:25] [Render thread/INFO]: Started 1 worker threads
+[01:32:41] [Render thread/INFO]: Reloading pipeline on dimension change: NETHER => OVERWORLD
+[01:32:41] [Render thread/INFO]: Destroying pipeline NETHER
+[01:32:41] [Render thread/INFO]: Creating pipeline for dimension OVERWORLD
+[01:32:41] [Render thread/INFO]: Stopping worker threads
+[01:32:41] [Render thread/INFO]: Started 1 worker threads
+[01:32:41] [Render thread/INFO]: Stopping worker threads
+[01:32:41] [Render thread/INFO]: Started 1 worker threads
+[01:32:41] [Render thread/INFO]: Stopping worker threads
+[01:32:41] [Render thread/INFO]: Started 1 worker threads
+[01:33:16] [Render thread/INFO]: [System] [CHAT] Hyperzoink has made the advancement [A Throwaway Joke]
+[01:33:36] [Render thread/INFO]: [System] [CHAT] Hyperzoink was slain by Dennis_mps
+[01:33:59] [Render thread/INFO]: [System] [CHAT] Hyperzoink was slain by A420madarauchiha using [悪魔]
+[01:34:15] [Render thread/INFO]: [System] [CHAT] Hyperzoink was slain by A420madarauchiha using [ファックマイニング]
+[01:35:57] [Render thread/INFO]: [System] [CHAT] Hyperzoink was slain by greatpower42
+[01:37:28] [Render thread/INFO]: Stopping JEI
+[01:37:28] [Render thread/INFO]: Stopping JEI
+[01:37:28] [Render thread/INFO]: Sending Runtime Unavailable...
+[01:37:28] [Render thread/INFO]: Stopping JEI GUI
+[01:37:28] [Render thread/INFO]: Sending Runtime Unavailable took 657.8 μs
+[01:37:28] [Render thread/INFO]: Stopping worker threads
+[01:37:29] [Render thread/INFO]: Stopping!
+[01:37:29] [Render thread/INFO]: Stopping JEI
+[01:37:29] [Render thread/INFO]: Stopping JEI
+[01:37:29] [Render thread/INFO]: Sending Runtime Unavailable...
+[01:37:29] [Render thread/INFO]: Stopping JEI GUI
+[01:37:29] [Render thread/INFO]: Sending Runtime Unavailable took 343.2 μs

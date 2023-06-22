@@ -59,6 +59,7 @@ set fish_cursor_insert line
 abbr -a p doas pacman
 abbr -a pa paru
 
+alias wget="wget --hsts-file=\"$XDG_DATA_HOME/wget-hsts\""
 alias kill-lua="kill (pgrep lua-language-se)"
 alias kill-rust="kill (pgrep rust-analyzer)"
 alias nm="doas nmtui"
@@ -139,6 +140,28 @@ function full-update
 end
 
 set PATH $HOME/.cargo/bin $PATH
+set -x XDG_DATA_HOME $HOME/.local/share
+set -x XDG_CONFIG_HOME $HOME/.config
+set -x XDG_STATE_HOME $HOME/.local/state
+set -x XDG_CACHE_HOME $HOME/.cache
+
+set -x RUSTUP_HOME $XDG_DATA_HOME/rustup
+set -x NUGET_PACKAGES $XDG_CACHE_HOME/NuGetPackages
+
+set -x NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
+set -x GNUPGHOME $XDG_DATA_HOME/gnupg
+set -x LESSHISTFILE $XDG_CACHE_HOME/less/history
+set -x GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
+set -x CUDA_CACHE_PATH $XDG_CACHE_HOME/nv
+set -x HISTFILE $XDG_STATE_HOME/bash/history
+
+
+
+
+
+
+
+
 
 fish_add_path -m ~/.local/bin
 fish_add_path -m ~/.local/share/bob/nvim-bin
@@ -177,9 +200,6 @@ else
   bind ! __history_previous_command
   bind '$' __history_previous_command_arguments
 end
-
-
-bind -M insert \cf tmux-sessionizer
 
 starship init fish | source
 zoxide init fish | source

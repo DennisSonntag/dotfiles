@@ -72,8 +72,8 @@ local function cs(trigger, nodes, opts) --{{{
 end                                  --}}}
 
 -- Start Refactoring --
-cs("print", fmt('print!("{}");', { i(1, "") }))
-cs("println", fmt('println!("{}");', { i(1, "") }))
+cs("print", fmt("print!(\"{}\");", { i(1, "") }))
+cs("println", fmt("println!(\"{}\");", { i(1, "") }))
 
 -- End Refactoring --
 

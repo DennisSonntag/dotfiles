@@ -1,7 +1,7 @@
 return {
 	"L3MON4D3/LuaSnip",
 	after = "nvim-cmp",
-	event = 'InsertEnter',
+	event = "InsertEnter",
 	config = function()
 		local ls_status, ls = pcall(require, "luasnip")
 		if (not ls_status) then return end
@@ -28,12 +28,12 @@ return {
 
 		local s = ls.s
 		local i = ls.i
-		local t = ls.t
+		-- local t = ls.t
 
-		local d = ls.dynamic_node
-		local c = ls.choice_node
+		-- local d = ls.dynamic_node
+		-- local c = ls.choice_node
 		local f = ls.function_node
-		local sn = ls.snippet_node
+		-- local sn = ls.snippet_node
 
 
 		local fmt = require("luasnip.extras.fmt").fmt
@@ -127,7 +127,7 @@ return {
 					}}, {});"
 				]], { i(1), i(2, "timeout") })),
 				s("imp", fmt([[
-					import {} from '{}';
+					import {} from "{}";
 				]], { i(1, "item"), i(2, "lib") })),
 				s("case", fmt([[
 					case {}:
@@ -148,7 +148,7 @@ return {
 		end
 		ls.add_snippets("typescriptreact", {
 			s("comp", fmt([[
-				import type {{ FC }} from 'react';
+				import type {{ FC }} from "react";
 
 				type PropTypes = {{
 					{}: {};

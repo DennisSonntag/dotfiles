@@ -3,7 +3,6 @@ return {
 	lazy = false,
 	priority = 1000,
 	dependencies = {
-		-- "p00f/nvim-ts-rainbow",
 		"HiPhish/nvim-ts-rainbow2",
 		"nvim-treesitter/playground",
 		{ "windwp/nvim-ts-autotag", config = true }
@@ -19,16 +18,16 @@ return {
 					updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
 					persist_queries = false, -- Whether the query persists across vim sessions
 					keybindings = {
-						toggle_query_editor = 'o',
-						toggle_hl_groups = 'i',
-						toggle_injected_languages = 't',
-						toggle_anonymous_nodes = 'a',
-						toggle_language_display = 'I',
-						focus_language = 'f',
-						unfocus_language = 'F',
-						update = 'R',
-						goto_node = '<cr>',
-						show_help = '?',
+						toggle_query_editor = "o",
+						toggle_hl_groups = "i",
+						toggle_injected_languages = "t",
+						toggle_anonymous_nodes = "a",
+						toggle_language_display = "I",
+						focus_language = "f",
+						unfocus_language = "F",
+						update = "R",
+						goto_node = "<cr>",
+						show_help = "?",
 					},
 				},
 				ensure_installed = { "javascript", "typescript", "lua", "c", "cpp",
@@ -45,23 +44,12 @@ return {
 				rainbow = {
 					enable = true,
 					-- list of languages you want to disable the plugin for
-					disable = { 'jsx', 'cpp', 'html' },
+					disable = { "jsx", "cpp", "html" },
 					-- Which query to use for finding delimiters
-					query = 'rainbow-parens',
+					query = "rainbow-parens",
 					-- Highlight the entire buffer all at once
 					strategy = rainbow.strategy.global,
 				},
-				-- rainbow = {
-				-- 	enable = true,
-				-- 	disable = { "html" },
-				-- 	extended_mode = true,
-				-- 	max_file_lines = nil,
-				-- 	colors = {
-				-- 		"#179FFF",
-				-- 		"#EBC703",
-				-- 		"#C768C3"
-				-- 	},
-				-- },
 				indent = { enable = true },
 
 			}

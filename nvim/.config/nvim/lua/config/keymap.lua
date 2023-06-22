@@ -35,14 +35,3 @@ keymap("n", "<C-q>", "<cmd>q<CR>")
 keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 keymap("n", "<C-s>", [[:%s/\(.*\)/\1]])
 
--- keymap('n', '<leader>c', '<cmd>lua PrintParenColor()<CR>')
-
-keymap('n', '<leader>c', function()
-	local info = vim.cmd("hi rainbowcol1")
-
-	if info then
-		vim.print(info.guifg)
-		-- local color = string.sub(info, -2, -1)
-		-- vim.print(color)
-	end
-end)

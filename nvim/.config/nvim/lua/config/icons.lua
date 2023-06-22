@@ -104,7 +104,8 @@ local icons = {
 		error = " ",
 		warn = " ",
 		hint = "󰌶 ",
-		info = " ",
+		info = " ",
+		LinkThing = " "
 	},
 	kinds = {
 		Array = " ",

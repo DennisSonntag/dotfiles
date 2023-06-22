@@ -159,8 +159,8 @@ local statusline = {
 
 	lsp = {
 		function()
-			local msg = 'No Active Lsp'
-			local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
+			local msg = "No Active Lsp"
+			local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
 			local clients = vim.lsp.get_active_clients()
 			if next(clients) == nil then
 				return msg
@@ -225,7 +225,7 @@ return {
 			icons_enabled = true,
 			component_separators = { left = "", right = "" },
 			section_separators = { left = "", right = "" },
-			theme = 'tokyonight',
+			theme = "tokyonight",
 			disabled_filetypes = {
 				"dashboard",
 				"lspinfo",

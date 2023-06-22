@@ -1,6 +1,7 @@
 local o = vim.opt
 
--- vim.wo.syntax = 'default'
+-- vim.wo.syntax = "default"
+vim.g.inlaytoggle = true
 
 o.undodir = os.getenv("HOME") .. "/.vim/undodir"
 o.undofile = true
@@ -25,7 +26,7 @@ o.signcolumn = "yes"
 o.cursorline = true
 
 o.fillchars = { eob = " " }
-o.spelllang = { 'en_us' }
+o.spelllang = { "en_us" }
 o.termguicolors = true
 o.errorbells = false
 

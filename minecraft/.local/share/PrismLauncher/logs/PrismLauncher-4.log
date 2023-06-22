@@ -1,0 +1,332 @@
+     0.000 D | Testing "/home/dennis/.local/share/PrismLauncher/qtlogging.ini" ...
+     0.000 D | Testing "/usr/qtlogging.ini" ...
+     0.000 D | <> Log initialized.
+     0.000 D | <> No migration needed from "PolyMC"
+     0.000 D | <> No migration needed from "MultiMC"
+     0.001 D | "Prism Launcher" , (c) 2013-2021  "Prism Launcher Contributors\n© 2021-2022 PolyMC Contributors \n© 2012-2021 MultiMC Contributors"
+     0.001 D | Version                    :  "7.0"
+     0.001 D | Git commit                 :  "bfe7e3afed286de02dfc1ec4cc2b39f31972d295"
+     0.001 D | Git refspec                :  "refs/heads/stable"
+     0.001 D | Work dir before adjustment :  "/home/dennis"
+     0.001 D | Work dir after adjustment  :  "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher"
+     0.001 D | Adjusted by                :  "Persistent data path"
+     0.001 D | Binary path                :  "/usr/bin"
+     0.001 D | Application root path      :  "/usr"
+     0.001 D | <> Paths set.
+     0.001 D | Copied settings from "polymc.cfg" to "prismlauncher.cfg"
+     0.006 D | Detected default console font: "Nimbus Mono PS" , substitutions: ""
+     0.016 D | <> Settings loaded.
+     0.032 D | Detecting proxy settings...
+     0.032 D | Using no proxy is an option!
+     0.032 D | <> Network done.
+     0.034 D | Your language is "en_US"
+     0.034 D | <> Translations loaded.
+     0.036 D | Started watching  "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/icons"
+     0.036 D | Sorting icon list...
+     0.036 D | <> Instance icons intialized.
+     0.037 D | [Theme] <> Icon themes initialized.
+     0.037 D | [Theme] <> Initializing Widget Themes
+     0.037 D | [Theme] Determining System Theme...
+     0.037 D | [Theme] System theme seems to be: "qt5ct-style"
+     0.037 D | [Theme] Considering theme from theme factory: "qt5ct-style"
+     0.037 D | [Theme] System theme has been determined to be: "qt5ct-style"
+     0.037 D | [Theme] Loading Built-in Theme: "system"
+     0.037 D | [Theme] Loading Built-in Theme: "dark"
+     0.037 D | [Theme] Loading Built-in Theme: "bright"
+     0.037 D | [Theme] Theme Folder Path:  "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/themes"
+     0.037 D | [Theme] Loading JSON Theme from: "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/themes/custom/theme.json"
+     0.038 D | [Theme] <> Widget themes initialized.
+     0.038 D | Instance path              :  "instances"
+     0.038 D | Loading Instances...
+     0.039 D | Discovering instances in "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/instances"
+     0.039 D | Found instance ID "1.8.9"
+     0.040 D | Found instance ID "1.20.1"
+     0.040 D | Found instance ID "1.19.3"
+     0.040 D | Will load group list now.
+     0.040 D | Group list loaded.
+     0.041 D | Loaded instance  "Skyblock 1.8.9"  from  "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/instances/1.8.9"
+     0.041 D | Loaded instance  "1.20.1 "  from  "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/instances/1.20.1"
+     0.042 D | Loaded instance  "Survival 1.19.3"  from  "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/instances/1.19.3"
+     0.042 D | <> Instances loaded.
+     0.042 D | Loading accounts...
+     0.043 D | AccountList: Queued default account with internal ID  "50caaf4284f443e4ae7326de0e8d5050"  to refresh first
+     0.043 D | [launcher.task]: Task "MSASilent(0x55da6d882fa0 ID: b2a1ef4e-8de1-4414-82dc-dd6e01cafa54)" starting for the first time
+     0.043 D | AuthFlow: "Logging in with Microsoft account."
+     0.043 D | DeviceFlow::refresh: Token: ... "VmeUQ$$"
+     0.047 D | RefreshSchedule: Processing account  "Speed6511"  with internal ID  "50caaf4284f443e4ae7326de0e8d5050"
+     0.047 D | <> Accounts loaded.
+     0.049 D | <> Cache initialized.
+     0.049 D | Downloading Translations Index...
+     0.049 W | [launcher.task.net]: [HttpMetaCache] Removing cache entry because of old age!
+     0.049 D | [launcher.task]: Task "NetJob(Translations Index ID: fc804685-3f9f-4a50-982f-0f5d0c479456)" starting for the first time
+     0.049 D | [Theme] <> Icon theme set.
+     0.049 D | [Theme] applying theme "Dark"
+     0.050 D | [Theme] <> Application theme set.
+     0.083 D | Reloading news.
+     0.083 D | [launcher.task]: Task "NetJob(News RSS Feed ID: a6944ffa-ab0e-469b-b647-6d027e4337bc)" starting for the first time
+     0.084 D | [launcher.task]: Task "ComponentUpdateTask(0x55da6d9a6820 ID: 43e468f3-5573-4949-b26e-0eb5ca69cb86)" starting for the first time
+     0.084 D | Loading components
+     0.089 D | Component list save is scheduled for "1.20.1 "
+     0.094 D | Resolving dependencies
+     0.094 D | "Req: net.fabricmc.intermediary" Is met.
+     0.094 D | "Req: net.minecraft == 1.20.1" Is met.
+     0.094 D | "Req: org.lwjgl3" Is met.
+     0.094 D | [launcher.task]: Task "ComponentUpdateTask(0x55da6d9a6820 ID: 43e468f3-5573-4949-b26e-0eb5ca69cb86)" succeeded
+     0.094 D | Component list update/resolve task succeeded for "1.20.1 "
+     0.121 D | <> Main window shown.
+     0.140 D | [launcher.task]: Task "Net::Download(BYTES:https://prismlauncher.org/feed/feed.xml ID: 94b3a2d8-f8c1-451b-b64b-34c7e564eccf)" starting for the first time
+     0.140 D | [launcher.task.net.download]: "{94b3a2d8-f8c1-451b-b64b-34c7e564eccf}" Downloading  "https://prismlauncher.org/feed/feed.xml"
+     0.140 D | [launcher.task]: Task "Net::Download(CACHE:https://i18n.prismlauncher.org/index_v2.json ID: fc89c233-b5b7-4618-a6ad-bddcba81d40a)" starting for the first time
+     0.141 D | [launcher.task.net.download]: "{fc89c233-b5b7-4618-a6ad-bddcba81d40a}" Downloading  "https://i18n.prismlauncher.org/index_v2.json"
+     0.145 D | Dir changed: "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/translations"
+     0.295 D | [launcher.task.net.metacache]: Parsing 'Cache-Control' header with "max-age=600"
+     0.295 D | [launcher.task.net.metacache]: Parsing 'Age' header with "0"
+     0.295 D | [launcher.task.net.download]: "{fc89c233-b5b7-4618-a6ad-bddcba81d40a}" Download succeeded: "https://i18n.prismlauncher.org/index_v2.json"
+     0.295 D | [launcher.task]: Task "NetJob(Translations Index ID: fc804685-3f9f-4a50-982f-0f5d0c479456)" succeeded
+     0.295 D | Got translations index!
+     0.295 D | Dir changed: "/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/translations"
+     0.415 D | [launcher.task.net.download]: "{94b3a2d8-f8c1-451b-b64b-34c7e564eccf}" Download succeeded: "https://prismlauncher.org/feed/feed.xml"
+     0.415 D | [launcher.task]: Task "NetJob(News RSS Feed ID: a6944ffa-ab0e-469b-b647-6d027e4337bc)" succeeded
+     0.415 D | Finished loading RSS feed.
+     0.421 D | Loaded news entry "Prism Launcher Release 7.1, now available"
+     0.421 D | Loaded news entry "Prism Launcher Release 7.0, now available"
+     0.421 D | Loaded news entry "FTB Modpack Downloading Removal."
+     0.421 D | Loaded news entry "[MALWARE WARNING] \"fractureiser\" malware in many popular Minecraft mods and modpacks"
+     0.421 D | Loaded news entry "Happy Pride Month!"
+     0.421 D | Loaded news entry "[SECURITY UPDATE] Prism Launcher Release 6.3, now available"
+     0.421 D | Loaded news entry "Prism Launcher Release 6.2, now available"
+     0.421 D | Loaded news entry "Prism Launcher Release 6.1, now available"
+     0.421 D | Loaded news entry "Prism Launcher Release 6.0, now available"
+     0.421 D | Loaded news entry "Prism Launcher Release 5.2, now available"
+     0.421 D | Loaded news entry "Prism Launcher Release 5.1, now available"
+     0.421 D | Loaded news entry "Prism Launcher Release 5.0, now available"
+     0.421 D | Loaded news entry "PolyMC Update 1.4.2, now available"
+     0.421 D | Loaded news entry "PolyMC Update 1.4.1, now available"
+     0.421 D | Loaded news entry "PolyMC Update 1.4.0, now available"
+     0.421 D | Loaded news entry "PolyMC Update 1.3.2, now available"
+     0.421 D | Loaded news entry "PolyMC Update 1.3.1, now available"
+     0.421 D | Loaded news entry "PolyMC Update 1.3.0, now available"
+     0.421 D | Loaded news entry "PolyMC Update 1.2.2, now available (CurseForge Hotfix)"
+     0.422 D | Loaded news entry "PolyMC Update 1.2.1, now available"
+     0.422 D | Loaded news entry "PolyMC Update 1.2.0, now available"
+     0.422 D | Loaded news entry "PolyMC Update 1.1.1, now available"
+     0.422 D | Loaded news entry "PolyMC Update 1.1.0, now available"
+     0.422 D | Loaded news entry "Moving on"
+     0.422 D | Loaded news entry "Modrinth support and Mod downloading"
+     0.422 D | Loaded news entry "New maintainers and step down."
+     0.422 D | News loading succeeded.
+     0.731 D | DeviceFlow::setLinked: true
+     0.731 D | AuthFlow: "Logging in as an Xbox user."
+     0.732 D | First layer of XBox auth ... commencing.
+     0.732 D | New token expires in QDateTime(2023-06-21 02:07:34.073 UTC Qt::UTC) seconds
+     0.967 D | Parsing "UToken" :
+     0.967 D | "UToken" is valid.
+     0.967 D | AuthFlow: "Getting authorization to access Xbox services."
+     0.967 D | Getting authorization token for  "http://xboxlive.com"
+     1.178 D | Parsing "Xbox" :
+     1.178 D | "Xbox" is valid.
+     1.178 D | AuthFlow: "Getting authorization to access Mojang services."
+     1.178 D | Getting authorization token for  "rp://api.minecraftservices.com/"
+     1.272 D | Parsing "Mojang" :
+     1.272 D | "Mojang" is valid.
+     1.272 D | AuthFlow: "Accessing Mojang services."
+     1.272 D | Getting Minecraft access token...
+     1.504 D | Parsing Mojang response...
+     1.504 D | Mojang response is valid.
+     1.504 D | AuthFlow: "Fetching Xbox profile."
+     1.504 D | Getting Xbox profile...
+     1.886 D | AuthFlow: "Determining game ownership."
+     1.886 D | Getting entitlements...
+     2.402 D | Parsing Minecraft entitlements...
+     2.402 D | AuthFlow: "Fetching the Minecraft profile."
+     2.518 D | Parsing Minecraft profile...
+     2.518 D | AuthFlow: "Getting skin."
+     2.593 D | [launcher.task]: Task "MSASilent(0x55da6d882fa0 ID: b2a1ef4e-8de1-4414-82dc-dd6e01cafa54)" succeeded
+     2.593 D | Writing account list to "accounts.json"
+     2.593 D | Building JSON data structure.
+     2.593 D | Building account array.
+     2.593 D | Writing account list to file.
+     2.603 D | Saved account list to "accounts.json"
+     2.603 D | RefreshSchedule: Background account refresh succeeded
+     2.944 D | [launcher.task]: Task "LaunchController(0x55da6dbba0d0 ID: 60b6c17f-1e5c-400d-b13d-dbc373526179)" starting for the first time
+     2.958 D | Instance-type specific settings were loaded!
+     3.540 D | [launcher.task]: Task "LaunchTask(0x55da6dbcf1b0 ID: 34d3dd9f-5c61-4d73-b4fa-1ece91998a0b)" starting for the first time
+     3.540 D | [launcher.task]: Task "TextPrint(0x55da6dbd1bb0 ID: 1952f801-f1d6-4e9d-9d69-3a96a8ee9e3c)" starting for the first time
+     3.541 D | [launcher.task]: Task "TextPrint(0x55da6dbd1bb0 ID: 1952f801-f1d6-4e9d-9d69-3a96a8ee9e3c)" succeeded
+     3.541 D | [launcher.task]: Task "TextPrint(0x55da6db8a670 ID: 29982b99-daf9-4c0f-9376-35d3b226cfec)" starting for the first time
+     3.541 D | [launcher.task]: Task "TextPrint(0x55da6db8a670 ID: 29982b99-daf9-4c0f-9376-35d3b226cfec)" succeeded
+     3.541 D | [launcher.task]: Task "TextPrint(0x55da6dbbddd0 ID: f7c9a3a7-0814-4ae2-91cf-547ae5543620)" starting for the first time
+     3.541 D | [launcher.task]: Task "TextPrint(0x55da6dbbddd0 ID: f7c9a3a7-0814-4ae2-91cf-547ae5543620)" succeeded
+     3.541 D | [launcher.task]: Task "TextPrint(0x55da6dbd3680 ID: 9d87332a-f6e2-4f92-a794-83e1ba9ac86a)" starting for the first time
+     3.541 D | [launcher.task]: Task "TextPrint(0x55da6dbd3680 ID: 9d87332a-f6e2-4f92-a794-83e1ba9ac86a)" succeeded
+     3.541 D | [launcher.task]: Task "CheckJava(0x55da6dbd39c0 ID: ba3276e8-f443-4d77-89ab-4d3a8e3ce284)" starting for the first time
+     3.543 D | "Running java checker: /usr/lib/jvm/java-17-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+     3.650 D | STDOUT "os.arch=amd64\njava.version=17.0.7\njava.vendor=N/A\n"
+     3.651 W | STDERR ""
+     3.651 D | Java checker finished with status  QProcess::NormalExit  exit code  0
+     3.651 D | Java checker succeeded.
+     3.685 C | "Error changing setting JavaVendor. Setting doesn't exist."
+     3.701 D | [launcher.task]: Task "CheckJava(0x55da6dbd39c0 ID: ba3276e8-f443-4d77-89ab-4d3a8e3ce284)" succeeded
+     3.701 D | [launcher.task]: Task "CreateGameFolders(0x55da6d884380 ID: 7448ceb8-b202-44a4-a72b-cc1d2b39e765)" starting for the first time
+     3.701 D | [launcher.task]: Task "CreateGameFolders(0x55da6d884380 ID: 7448ceb8-b202-44a4-a72b-cc1d2b39e765)" succeeded
+     3.702 D | [launcher.task]: Task "ClaimAccount(0x55da6dbd3440 ID: a09c54f3-2ec0-40e4-81d4-6134f3c2121d)" starting for the first time
+     3.702 D | Writing account list to "accounts.json"
+     3.702 D | Building JSON data structure.
+     3.702 D | Building account array.
+     3.702 D | Writing account list to file.
+     3.705 D | Saved account list to "accounts.json"
+     3.705 W | Profile "b7ce62bf7d6b4e11bd0c2d73b7b0d869" is now in use.
+     3.705 D | [launcher.task]: Task "ClaimAccount(0x55da6dbd3440 ID: a09c54f3-2ec0-40e4-81d4-6134f3c2121d)" succeeded
+     3.705 D | [launcher.task]: Task "Update(0x55da6dbce110 ID: ba0f419d-d2d3-49bf-b32e-660a65598ea1)" starting for the first time
+     3.706 D | [launcher.task]: Task "MinecraftUpdate(0x55da6dc5e630 ID: 432a20bc-8091-4c6e-967a-bef178d50545)" starting for the first time
+     3.706 D | Component list save performed now for "1.20.1 "
+     3.710 D | [launcher.task]: Task "ComponentUpdateTask(0x55da6d9a7610 ID: 8e4f06df-80bb-436a-8d0f-25af8b355b97)" starting for the first time
+     3.710 D | Loading components
+     3.710 D | Index is already loaded
+     3.710 D | Component list save is scheduled for "1.20.1 "
+     3.710 D | Resolving dependencies
+     3.710 D | "Req: net.fabricmc.intermediary" Is met.
+     3.710 D | "Req: net.minecraft == 1.20.1" Is met.
+     3.710 D | "Req: org.lwjgl3" Is met.
+     3.710 D | [launcher.task]: Task "ComponentUpdateTask(0x55da6d9a7610 ID: 8e4f06df-80bb-436a-8d0f-25af8b355b97)" succeeded
+     3.710 D | Component list update/resolve task succeeded for "1.20.1 "
+     3.710 D | [launcher.task]: Task "FoldersTask(0x55da6dc5e440 ID: de2eea5c-370d-4fa5-9849-55689648ee72)" starting for the first time
+     3.710 D | [launcher.task]: Task "FoldersTask(0x55da6dc5e440 ID: de2eea5c-370d-4fa5-9849-55689648ee72)" succeeded
+     3.710 D | [launcher.task]: Task "LibrariesTask(0x55da6de9cac0 ID: 8e38c9a3-0216-4ab4-9041-8d3237adb317)" starting for the first time
+     3.710 D | "1.20.1 " : downloading libraries
+     3.710 D | Applying "org.lwjgl3" GOOD
+     3.710 D | Applying "net.minecraft" GOOD
+     3.710 D | Applying "net.fabricmc.intermediary" GOOD
+     3.710 D | Applying "net.fabricmc.fabric-loader" GOOD
+     3.727 D | [launcher.task]: Task "NetJob(Libraries for instance 1.20.1  ID: f0523f53-6311-4390-8204-0a983fc9cf55)" starting for the first time
+     3.728 D | [launcher.task]: Task "NetJob(Libraries for instance 1.20.1  ID: f0523f53-6311-4390-8204-0a983fc9cf55)" succeeded
+     3.728 D | [launcher.task]: Task "LibrariesTask(0x55da6de9cac0 ID: 8e38c9a3-0216-4ab4-9041-8d3237adb317)" succeeded
+     3.728 D | [launcher.task]: Task "FMLLibrariesTask(0x55da6de9b930 ID: 1c1281ac-14e7-4e98-b44b-07c4fabd21f4)" starting for the first time
+     3.728 D | [launcher.task]: Task "FMLLibrariesTask(0x55da6de9b930 ID: 1c1281ac-14e7-4e98-b44b-07c4fabd21f4)" succeeded
+     3.728 D | [launcher.task]: Task "AssetUpdateTask(0x55da6de9c8d0 ID: 525712a7-2439-41ce-a0a3-ba37a64198e7)" starting for the first time
+     3.729 D | Asset index SHA1: "9d58fdd2538c6877fb5c5c558ebc60ee0b6d0e84"
+     3.729 D | "1.20.1 " : Starting asset index download
+     3.729 D | [launcher.task]: Task "NetJob(Asset index for 1.20.1  ID: 395bdf77-19c3-43ae-b6c6-e15183284abf)" starting for the first time
+     3.730 D | [launcher.task]: Task "Net::Download(CACHE:https://piston-meta.mojang.com/v1/packages/9d58fdd2538c6877fb5c5c558ebc60ee0b6d0e84/5.json ID: fe69cd1a-5b67-4efc-93e1-c5301a8a3468)" starting for the first time
+     3.730 D | [launcher.task.net.download]: "{fe69cd1a-5b67-4efc-93e1-c5301a8a3468}" Downloading  "https://piston-meta.mojang.com/v1/packages/9d58fdd2538c6877fb5c5c558ebc60ee0b6d0e84/5.json"
+     3.850 D | [launcher.task.net.metacache]: Parsing 'Cache-Control' header with "public, max-age=1209600"
+     3.850 D | [launcher.task.net.download]: "{fe69cd1a-5b67-4efc-93e1-c5301a8a3468}" Download succeeded: "https://piston-meta.mojang.com/v1/packages/9d58fdd2538c6877fb5c5c558ebc60ee0b6d0e84/5.json"
+     3.851 D | [launcher.task]: Task "NetJob(Asset index for 1.20.1  ID: 395bdf77-19c3-43ae-b6c6-e15183284abf)" succeeded
+     3.851 D | "1.20.1 " : Finished asset index download
+     3.914 D | [launcher.task]: Task "AssetUpdateTask(0x55da6de9c8d0 ID: 525712a7-2439-41ce-a0a3-ba37a64198e7)" succeeded
+     3.914 D | [launcher.task]: Task "MinecraftUpdate(0x55da6dc5e630 ID: 432a20bc-8091-4c6e-967a-bef178d50545)" succeeded
+     3.914 D | [launcher.task]: Task "Update(0x55da6dbce110 ID: ba0f419d-d2d3-49bf-b32e-660a65598ea1)" succeeded
+     3.914 D | [launcher.task]: Task "ModMinecraftJar(0x55da6d9a5290 ID: 5f5411d3-e94e-4727-87fc-13dce6a25966)" starting for the first time
+     3.914 D | [launcher.task]: Task "ModMinecraftJar(0x55da6d9a5290 ID: 5f5411d3-e94e-4727-87fc-13dce6a25966)" succeeded
+     3.914 D | [launcher.task]: Task "ScanModFolders(0x55da6d9f7e80 ID: da74e995-a36d-4f02-a883-c3ba3925f219)" starting for the first time
+     3.916 D | [launcher.task]: Task "ConcurrentTask(0x55da6dea8440 ID: aedbd303-d7c7-4df6-82cf-056e1a11b52b)" starting for the first time
+     3.916 W | [launcher.task]: The launcher tried to start task "ConcurrentTask(0x55da6dea8440 ID: aedbd303-d7c7-4df6-82cf-056e1a11b52b)" while it was already running!
+     3.916 W | [launcher.task]: The launcher tried to start task "ConcurrentTask(0x55da6dea8440 ID: aedbd303-d7c7-4df6-82cf-056e1a11b52b)" while it was already running!
+     3.917 D | [launcher.task]: Task "ScanModFolders(0x55da6d9f7e80 ID: da74e995-a36d-4f02-a883-c3ba3925f219)" succeeded
+     3.917 D | [launcher.task]: Task "PrintInstanceInfo(0x55da6dbb5920 ID: 51fe3070-801f-4842-9266-dae7b0ff00c8)" starting for the first time
+     3.919 W | [launcher.task]: The launcher tried to start task "ConcurrentTask(0x55da6dea8440 ID: aedbd303-d7c7-4df6-82cf-056e1a11b52b)" while it was already running!
+     3.952 D | [launcher.task]: Task "PrintInstanceInfo(0x55da6dbb5920 ID: 51fe3070-801f-4842-9266-dae7b0ff00c8)" succeeded
+     3.952 D | [launcher.task]: Task "ExtractNatives(0x55da6d874d50 ID: 44ae1722-af38-4f76-bd6d-80c2a05b0e10)" starting for the first time
+     3.953 D | [launcher.task]: Task "ExtractNatives(0x55da6d874d50 ID: 44ae1722-af38-4f76-bd6d-80c2a05b0e10)" succeeded
+     3.953 D | [launcher.task]: Task "ReconstructAssets(0x55da6dbad420 ID: a496538e-9cb0-4d1c-a65a-908d7ffb507d)" starting for the first time
+     3.953 D | reconstructAssets "assets" "assets/indexes" "assets/objects" "assets/virtual" "assets/virtual/5"
+     3.962 D | [launcher.task]: Task "ReconstructAssets(0x55da6dbad420 ID: a496538e-9cb0-4d1c-a65a-908d7ffb507d)" succeeded
+     3.962 D | [launcher.task]: Task "VerifyJavaInstall(0x55da6db8abc0 ID: f516d2b3-fddb-483c-bf9b-135a33c91b4a)" starting for the first time
+     3.962 D | [launcher.task]: Task "VerifyJavaInstall(0x55da6db8abc0 ID: f516d2b3-fddb-483c-bf9b-135a33c91b4a)" succeeded
+     3.962 D | [launcher.task]: Task "LauncherPartLaunch(0x55da6d9df810 ID: ec34fd8a-7cff-4f2d-8a4a-7cc1ccc12cee)" starting for the first time
+     3.973 D | "-Xms512m -Xmx8192m -Duser.language=en -Djava.library.path=/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/instances/1.20.1/natives -cp /usr/share/prismlauncher/NewLaunch.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-glfw-natives-linux/3.3.2-lwjgl.1/lwjgl-glfw-natives-linux-3.3.2-lwjgl.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-glfw/3.3.1/lwjgl-glfw-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-jemalloc-natives-linux/3.3.1/lwjgl-jemalloc-natives-linux-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-jemalloc/3.3.1/lwjgl-jemalloc-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-natives-linux/3.3.1/lwjgl-natives-linux-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-openal-natives-linux/3.3.1/lwjgl-openal-natives-linux-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-openal/3.3.1/lwjgl-openal-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-opengl-natives-linux/3.3.1/lwjgl-opengl-natives-linux-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-opengl/3.3.1/lwjgl-opengl-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-stb-natives-linux/3.3.1/lwjgl-stb-natives-linux-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-stb/3.3.1/lwjgl-stb-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-tinyfd-natives-linux/3.3.1/lwjgl-tinyfd-natives-linux-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-tinyfd/3.3.1/lwjgl-tinyfd-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl/3.3.1/lwjgl-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/github/oshi/oshi-core/6.2.2/oshi-core-6.2.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/google/code/gson/gson/2.10/gson-2.10.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/ibm/icu/icu4j/71.1/icu4j-71.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/authlib/4.0.43/authlib-4.0.43.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/blocklist/1.0.10/blocklist-1.0.10.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/brigadier/1.1.8/brigadier-1.1.8.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/datafixerupper/6.0.8/datafixerupper-6.0.8.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/logging/1.1.1/logging-1.1.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/patchy/2.2.10/patchy-2.2.10.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/text2speech/1.17.9/text2speech-1.17.9.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-buffer/4.1.82.Final/netty-buffer-4.1.82.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-codec/4.1.82.Final/netty-codec-4.1.82.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-common/4.1.82.Final/netty-common-4.1.82.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-handler/4.1.82.Final/netty-handler-4.1.82.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-resolver/4.1.82.Final/netty-resolver-4.1.82.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-transport-classes-epoll/4.1.82.Final/netty-transport-classes-epoll-4.1.82.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-transport-native-epoll/4.1.82.Final/netty-transport-native-epoll-4.1.82.Final-linux-aarch_64.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-transport-native-epoll/4.1.82.Final/netty-transport-native-epoll-4.1.82.Final-linux-x86_64.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-transport-native-unix-common/4.1.82.Final/netty-transport-native-unix-common-4.1.82.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-transport/4.1.82.Final/netty-transport-4.1.82.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/it/unimi/dsi/fastutil/8.5.9/fastutil-8.5.9.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/dev/jna/jna-platform/5.12.1/jna-platform-5.12.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/dev/jna/jna/5.12.1/jna-5.12.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/httpcomponents/httpcore/4.4.15/httpcore-4.4.15.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-api/2.19.0/log4j-api-2.19.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-core/2.19.0/log4j-core-2.19.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-slf4j2-impl/2.19.0/log4j-slf4j2-impl-2.19.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/joml/joml/1.10.5/joml-1.10.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/slf4j/slf4j-api/2.0.1/slf4j-api-2.0.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/fabricmc/intermediary/1.20.1/intermediary-1.20.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/fabricmc/tiny-mappings-parser/0.3.0+build.17/tiny-mappings-parser-0.3.0+build.17.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/fabricmc/sponge-mixin/0.12.5+mixin.0.8.5/sponge-mixin-0.12.5+mixin.0.8.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/fabricmc/tiny-remapper/0.8.2/tiny-remapper-0.8.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/fabricmc/access-widener/2.1.0/access-widener-2.1.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/ow2/asm/asm/9.5/asm-9.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/ow2/asm/asm-analysis/9.5/asm-analysis-9.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/ow2/asm/asm-commons/9.5/asm-commons-9.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/ow2/asm/asm-tree/9.5/asm-tree-9.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/ow2/asm/asm-util/9.5/asm-util-9.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/fabricmc/fabric-loader/0.14.21/fabric-loader-0.14.21.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/minecraft/1.20.1/minecraft-1.20.1-client.jar org.prismlauncher.EntryPoint"
+     4.063 D | [launcher.task]: Task "ConcurrentTask(0x55da6dea8440 ID: aedbd303-d7c7-4df6-82cf-056e1a11b52b)" succeeded
+     8.854 D | Component list save performed now for "1.20.1 "
+    33.853 D | [launcher.task.net.metacache.http]: Saving metacache with 20 entries
+ 10777.066 D | [launcher.task]: Task "LauncherPartLaunch(0x55da6d9df810 ID: ec34fd8a-7cff-4f2d-8a4a-7cc1ccc12cee)" succeeded
+ 10777.066 D | Writing account list to "accounts.json"
+ 10777.066 D | Building JSON data structure.
+ 10777.066 D | Building account array.
+ 10777.066 D | Writing account list to file.
+ 10777.069 D | Saved account list to "accounts.json"
+ 10777.069 W | Profile "b7ce62bf7d6b4e11bd0c2d73b7b0d869" is no longer in use.
+ 10777.092 D | [launcher.task]: Task "LaunchTask(0x55da6dbcf1b0 ID: 34d3dd9f-5c61-4d73-b4fa-1ece91998a0b)" succeeded
+ 10777.092 D | [launcher.task]: Task "LaunchController(0x55da6dbba0d0 ID: 60b6c17f-1e5c-400d-b13d-dbc373526179)" succeeded
+ 10798.414 D | [launcher.task]: Task "LaunchController(0x55da6e2ab660 ID: 6e0042c4-352a-4d89-8692-e52f8f601797)" starting for the first time
+ 10798.980 D | [launcher.task]: Task "LaunchTask(0x55da6dc7ccd0 ID: 041e84d0-6a51-4904-9a97-57c6723d29d5)" starting for the first time
+ 10798.980 D | [launcher.task]: Task "TextPrint(0x55da6d9b2280 ID: 45bd267d-9119-4242-a25b-b479f63b9369)" starting for the first time
+ 10798.981 D | [launcher.task]: Task "TextPrint(0x55da6d9b2280 ID: 45bd267d-9119-4242-a25b-b479f63b9369)" succeeded
+ 10798.981 D | [launcher.task]: Task "TextPrint(0x55da6dec4780 ID: 4d34e53e-34f7-4d4d-bbf5-041ade556f85)" starting for the first time
+ 10798.981 D | [launcher.task]: Task "TextPrint(0x55da6dec4780 ID: 4d34e53e-34f7-4d4d-bbf5-041ade556f85)" succeeded
+ 10798.981 D | [launcher.task]: Task "TextPrint(0x55da6dea6260 ID: 4be6b6b0-e748-461f-a6bd-03486a303b0b)" starting for the first time
+ 10798.981 D | [launcher.task]: Task "TextPrint(0x55da6dea6260 ID: 4be6b6b0-e748-461f-a6bd-03486a303b0b)" succeeded
+ 10798.981 D | [launcher.task]: Task "TextPrint(0x55da6e0de0f0 ID: 33919f2d-7452-44ac-8030-66b32b46b9aa)" starting for the first time
+ 10798.981 D | [launcher.task]: Task "TextPrint(0x55da6e0de0f0 ID: 33919f2d-7452-44ac-8030-66b32b46b9aa)" succeeded
+ 10798.981 D | [launcher.task]: Task "CheckJava(0x55da6d848a30 ID: 83e68b40-5123-42c8-be8d-b931c39eee59)" starting for the first time
+ 10798.982 D | "Running java checker: /usr/lib/jvm/java-17-openjdk/bin/java-jar /usr/share/prismlauncher/JavaCheck.jar"
+ 10799.067 D | STDOUT "os.arch=amd64\njava.version=17.0.7\njava.vendor=N/A\n"
+ 10799.067 W | STDERR ""
+ 10799.067 D | Java checker finished with status  QProcess::NormalExit  exit code  0
+ 10799.067 D | Java checker succeeded.
+ 10799.115 C | "Error changing setting JavaVendor. Setting doesn't exist."
+ 10799.128 D | [launcher.task]: Task "CheckJava(0x55da6d848a30 ID: 83e68b40-5123-42c8-be8d-b931c39eee59)" succeeded
+ 10799.128 D | [launcher.task]: Task "CreateGameFolders(0x55da6dbb7090 ID: fa8248a6-6c2e-4b6b-a80e-38f61d1b62fd)" starting for the first time
+ 10799.129 D | [launcher.task]: Task "CreateGameFolders(0x55da6dbb7090 ID: fa8248a6-6c2e-4b6b-a80e-38f61d1b62fd)" succeeded
+ 10799.129 D | [launcher.task]: Task "ClaimAccount(0x55da6d848490 ID: 92acedee-8777-4b81-b9a4-05563ff491b8)" starting for the first time
+ 10799.129 D | Writing account list to "accounts.json"
+ 10799.129 D | Building JSON data structure.
+ 10799.129 D | Building account array.
+ 10799.129 D | Writing account list to file.
+ 10799.132 D | Saved account list to "accounts.json"
+ 10799.132 W | Profile "b7ce62bf7d6b4e11bd0c2d73b7b0d869" is now in use.
+ 10799.132 D | [launcher.task]: Task "ClaimAccount(0x55da6d848490 ID: 92acedee-8777-4b81-b9a4-05563ff491b8)" succeeded
+ 10799.132 D | [launcher.task]: Task "Update(0x55da6d848010 ID: bf8227ac-932e-4d6e-b1dd-8244745ec8a8)" starting for the first time
+ 10799.133 D | [launcher.task]: Task "MinecraftUpdate(0x55da6e0c5fd0 ID: 861e4651-be9b-46ae-afa7-d9f97e9989a1)" starting for the first time
+ 10799.133 D | [launcher.task]: Task "ComponentUpdateTask(0x55da6db97200 ID: dc332717-1c02-40bd-993c-95aa5d942092)" starting for the first time
+ 10799.133 D | Loading components
+ 10799.133 D | Index is already loaded
+ 10799.133 D | Component list save is scheduled for "1.20.1 "
+ 10799.133 D | Resolving dependencies
+ 10799.133 D | "Req: net.fabricmc.intermediary" Is met.
+ 10799.133 D | "Req: net.minecraft == 1.20.1" Is met.
+ 10799.133 D | "Req: org.lwjgl3" Is met.
+ 10799.133 D | [launcher.task]: Task "ComponentUpdateTask(0x55da6db97200 ID: dc332717-1c02-40bd-993c-95aa5d942092)" succeeded
+ 10799.133 D | Component list update/resolve task succeeded for "1.20.1 "
+ 10799.133 D | [launcher.task]: Task "FoldersTask(0x55da6e0f36e0 ID: b89c8dec-b8b0-42e8-b3d9-70a754ba4670)" starting for the first time
+ 10799.133 D | [launcher.task]: Task "FoldersTask(0x55da6e0f36e0 ID: b89c8dec-b8b0-42e8-b3d9-70a754ba4670)" succeeded
+ 10799.133 D | [launcher.task]: Task "LibrariesTask(0x55da6d971380 ID: f29b2588-4b70-467e-bf20-342eb4d559cf)" starting for the first time
+ 10799.133 D | "1.20.1 " : downloading libraries
+ 10799.133 D | Applying "org.lwjgl3" GOOD
+ 10799.133 D | Applying "net.minecraft" GOOD
+ 10799.133 D | Applying "net.fabricmc.intermediary" GOOD
+ 10799.133 D | Applying "net.fabricmc.fabric-loader" GOOD
+ 10799.134 D | [launcher.task]: Task "NetJob(Libraries for instance 1.20.1  ID: 5eeb630d-7181-40a9-b179-ca0d1b8cead1)" starting for the first time
+ 10799.135 D | [launcher.task]: Task "NetJob(Libraries for instance 1.20.1  ID: 5eeb630d-7181-40a9-b179-ca0d1b8cead1)" succeeded
+ 10799.135 D | [launcher.task]: Task "LibrariesTask(0x55da6d971380 ID: f29b2588-4b70-467e-bf20-342eb4d559cf)" succeeded
+ 10799.135 D | [launcher.task]: Task "FMLLibrariesTask(0x55da6e0da710 ID: 55447a80-b789-4392-970b-d75e72066771)" starting for the first time
+ 10799.135 D | [launcher.task]: Task "FMLLibrariesTask(0x55da6e0da710 ID: 55447a80-b789-4392-970b-d75e72066771)" succeeded
+ 10799.135 D | [launcher.task]: Task "AssetUpdateTask(0x55da6d971260 ID: ecea3480-fbce-4a32-a534-e7e757b2af8e)" starting for the first time
+ 10799.135 D | Asset index SHA1: "9d58fdd2538c6877fb5c5c558ebc60ee0b6d0e84"
+ 10799.135 D | "1.20.1 " : Starting asset index download
+ 10799.135 D | [launcher.task]: Task "NetJob(Asset index for 1.20.1  ID: 2f6b2901-d32f-4db3-bc41-02a41cc4a4ec)" starting for the first time
+ 10799.136 D | [launcher.task]: Task "Net::Download(CACHE:https://piston-meta.mojang.com/v1/packages/9d58fdd2538c6877fb5c5c558ebc60ee0b6d0e84/5.json ID: 277cab19-9edc-443b-9a13-98099aa2bba4)" starting for the first time
+ 10799.137 D | [launcher.task.net.download]: "{277cab19-9edc-443b-9a13-98099aa2bba4}" Downloading  "https://piston-meta.mojang.com/v1/packages/9d58fdd2538c6877fb5c5c558ebc60ee0b6d0e84/5.json"
+ 10799.253 D | [launcher.task.net.metacache]: Parsing 'Cache-Control' header with "public, max-age=1209600"
+ 10799.253 D | [launcher.task.net.download]: "{277cab19-9edc-443b-9a13-98099aa2bba4}" Download succeeded: "https://piston-meta.mojang.com/v1/packages/9d58fdd2538c6877fb5c5c558ebc60ee0b6d0e84/5.json"
+ 10799.254 D | [launcher.task]: Task "NetJob(Asset index for 1.20.1  ID: 2f6b2901-d32f-4db3-bc41-02a41cc4a4ec)" succeeded
+ 10799.254 D | "1.20.1 " : Finished asset index download
+ 10799.282 D | [launcher.task]: Task "AssetUpdateTask(0x55da6d971260 ID: ecea3480-fbce-4a32-a534-e7e757b2af8e)" succeeded
+ 10799.282 D | [launcher.task]: Task "MinecraftUpdate(0x55da6e0c5fd0 ID: 861e4651-be9b-46ae-afa7-d9f97e9989a1)" succeeded
+ 10799.282 D | [launcher.task]: Task "Update(0x55da6d848010 ID: bf8227ac-932e-4d6e-b1dd-8244745ec8a8)" succeeded
+ 10799.282 D | [launcher.task]: Task "ModMinecraftJar(0x55da6e143270 ID: 5d412358-f873-4005-aae8-139fa794c1bb)" starting for the first time
+ 10799.283 D | [launcher.task]: Task "ModMinecraftJar(0x55da6e143270 ID: 5d412358-f873-4005-aae8-139fa794c1bb)" succeeded
+ 10799.283 D | [launcher.task]: Task "ScanModFolders(0x55da6dec0500 ID: f59e9041-8b9d-4fd2-ad3c-2e056c2b393d)" starting for the first time
+ 10799.285 D | [launcher.task]: Task "ScanModFolders(0x55da6dec0500 ID: f59e9041-8b9d-4fd2-ad3c-2e056c2b393d)" succeeded
+ 10799.286 D | [launcher.task]: Task "PrintInstanceInfo(0x55da6d849210 ID: d21b3b47-1cbb-46c6-9986-981c6a13aa00)" starting for the first time
+ 10799.328 D | [launcher.task]: Task "PrintInstanceInfo(0x55da6d849210 ID: d21b3b47-1cbb-46c6-9986-981c6a13aa00)" succeeded
+ 10799.328 D | [launcher.task]: Task "ExtractNatives(0x55da6e0d6f30 ID: 8e8db826-9fb5-4403-b32b-5ea99a878814)" starting for the first time
+ 10799.328 D | [launcher.task]: Task "ExtractNatives(0x55da6e0d6f30 ID: 8e8db826-9fb5-4403-b32b-5ea99a878814)" succeeded
+ 10799.328 D | [launcher.task]: Task "ReconstructAssets(0x55da6d884790 ID: 18b49e64-c6c7-40ce-beb9-166f3415a216)" starting for the first time
+ 10799.328 D | reconstructAssets "assets" "assets/indexes" "assets/objects" "assets/virtual" "assets/virtual/5"
+ 10799.339 D | [launcher.task]: Task "ReconstructAssets(0x55da6d884790 ID: 18b49e64-c6c7-40ce-beb9-166f3415a216)" succeeded
+ 10799.340 D | [launcher.task]: Task "VerifyJavaInstall(0x55da6dc7d350 ID: c7f70f72-ef1d-4a9c-8601-0ca3edc6d1af)" starting for the first time
+ 10799.340 D | [launcher.task]: Task "VerifyJavaInstall(0x55da6dc7d350 ID: c7f70f72-ef1d-4a9c-8601-0ca3edc6d1af)" succeeded
+ 10799.340 D | [launcher.task]: Task "LauncherPartLaunch(0x55da6e2a6120 ID: 378e604e-61b6-4412-9b3e-b2c89ab2b974)" starting for the first time
+ 10799.351 D | "-Xms512m -Xmx8192m -Duser.language=en -Djava.library.path=/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/instances/1.20.1/natives -cp /usr/share/prismlauncher/NewLaunch.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-glfw-natives-linux/3.3.2-lwjgl.1/lwjgl-glfw-natives-linux-3.3.2-lwjgl.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-glfw/3.3.1/lwjgl-glfw-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-jemalloc-natives-linux/3.3.1/lwjgl-jemalloc-natives-linux-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-jemalloc/3.3.1/lwjgl-jemalloc-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-natives-linux/3.3.1/lwjgl-natives-linux-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-openal-natives-linux/3.3.1/lwjgl-openal-natives-linux-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-openal/3.3.1/lwjgl-openal-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-opengl-natives-linux/3.3.1/lwjgl-opengl-natives-linux-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-opengl/3.3.1/lwjgl-opengl-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-stb-natives-linux/3.3.1/lwjgl-stb-natives-linux-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-stb/3.3.1/lwjgl-stb-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-tinyfd-natives-linux/3.3.1/lwjgl-tinyfd-natives-linux-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl-tinyfd/3.3.1/lwjgl-tinyfd-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/lwjgl/lwjgl/3.3.1/lwjgl-3.3.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/github/oshi/oshi-core/6.2.2/oshi-core-6.2.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/google/code/gson/gson/2.10/gson-2.10.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/ibm/icu/icu4j/71.1/icu4j-71.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/authlib/4.0.43/authlib-4.0.43.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/blocklist/1.0.10/blocklist-1.0.10.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/brigadier/1.1.8/brigadier-1.1.8.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/datafixerupper/6.0.8/datafixerupper-6.0.8.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/logging/1.1.1/logging-1.1.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/patchy/2.2.10/patchy-2.2.10.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/text2speech/1.17.9/text2speech-1.17.9.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-buffer/4.1.82.Final/netty-buffer-4.1.82.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-codec/4.1.82.Final/netty-codec-4.1.82.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-common/4.1.82.Final/netty-common-4.1.82.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-handler/4.1.82.Final/netty-handler-4.1.82.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-resolver/4.1.82.Final/netty-resolver-4.1.82.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-transport-classes-epoll/4.1.82.Final/netty-transport-classes-epoll-4.1.82.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-transport-native-epoll/4.1.82.Final/netty-transport-native-epoll-4.1.82.Final-linux-aarch_64.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-transport-native-epoll/4.1.82.Final/netty-transport-native-epoll-4.1.82.Final-linux-x86_64.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-transport-native-unix-common/4.1.82.Final/netty-transport-native-unix-common-4.1.82.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/io/netty/netty-transport/4.1.82.Final/netty-transport-4.1.82.Final.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/it/unimi/dsi/fastutil/8.5.9/fastutil-8.5.9.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/dev/jna/jna-platform/5.12.1/jna-platform-5.12.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/java/dev/jna/jna/5.12.1/jna-5.12.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/httpcomponents/httpcore/4.4.15/httpcore-4.4.15.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-api/2.19.0/log4j-api-2.19.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-core/2.19.0/log4j-core-2.19.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-slf4j2-impl/2.19.0/log4j-slf4j2-impl-2.19.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/joml/joml/1.10.5/joml-1.10.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/slf4j/slf4j-api/2.0.1/slf4j-api-2.0.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/fabricmc/intermediary/1.20.1/intermediary-1.20.1.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/fabricmc/tiny-mappings-parser/0.3.0+build.17/tiny-mappings-parser-0.3.0+build.17.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/fabricmc/sponge-mixin/0.12.5+mixin.0.8.5/sponge-mixin-0.12.5+mixin.0.8.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/fabricmc/tiny-remapper/0.8.2/tiny-remapper-0.8.2.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/fabricmc/access-widener/2.1.0/access-widener-2.1.0.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/ow2/asm/asm/9.5/asm-9.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/ow2/asm/asm-analysis/9.5/asm-analysis-9.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/ow2/asm/asm-commons/9.5/asm-commons-9.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/ow2/asm/asm-tree/9.5/asm-tree-9.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/org/ow2/asm/asm-util/9.5/asm-util-9.5.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/fabricmc/fabric-loader/0.14.21/fabric-loader-0.14.21.jar:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/com/mojang/minecraft/1.20.1/minecraft-1.20.1-client.jar org.prismlauncher.EntryPoint"
+ 10803.883 D | Component list save performed now for "1.20.1 "
+ 10828.858 D | [launcher.task.net.metacache.http]: Saving metacache with 20 entries

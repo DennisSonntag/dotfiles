@@ -1,7 +1,7 @@
 return { {
 	"hrsh7th/nvim-cmp",
 	dependencies = {
-		event = 'InsertEnter',
+		event = "InsertEnter",
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-path",
@@ -32,12 +32,12 @@ return { {
 				end,
 			},
 			mapping = cmp.mapping.preset.insert({
-				['<C-d>'] = cmp.mapping.scroll_docs(-4),
-				['<C-f>'] = cmp.mapping.scroll_docs(4),
-				['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
-				['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
-				['<C-Space>'] = cmp.mapping.complete(),
-				['<C-e>'] = cmp.mapping.close(),
+				["<C-d>"] = cmp.mapping.scroll_docs(-4),
+				["<C-f>"] = cmp.mapping.scroll_docs(4),
+				["<C-k>"] = cmp.mapping.select_prev_item(cmp_select),
+				["<C-j>"] = cmp.mapping.select_next_item(cmp_select),
+				["<C-Space>"] = cmp.mapping.complete(),
+				["<C-e>"] = cmp.mapping.close(),
 				["<C-n>"] = cmp.mapping(function(fallback)
 					-- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
 					-- they way you will only jump inside the snippet region
@@ -56,7 +56,7 @@ return { {
 						fallback()
 					end
 				end, { "i", "s" }),
-				['<Tab>'] = cmp.mapping.confirm({
+				["<Tab>"] = cmp.mapping.confirm({
 					behavior = cmp.ConfirmBehavior.Replace,
 					select = true
 				}),
@@ -92,25 +92,25 @@ return { {
 						return true
 					end
 				},
-				{ name = 'luasnip' },
-				{ name = 'buffer',  keyword_length = 5 },
-				{ name = 'npm' },
-				{ name = 'nvim_lua' },
+				{ name = "luasnip" },
+				{ name = "buffer",  keyword_length = 5 },
+				{ name = "npm" },
+				{ name = "nvim_lua" },
 				{
-					name = 'spell',
+					name = "spell",
 					option = {
 						keep_all_entries = false,
 						enable_in_context = function()
-							return require('cmp.config.context').in_treesitter_capture('spell')
+							return require("cmp.config.context").in_treesitter_capture("spell")
 						end,
 					},
 				},
-				{ name = 'path' },
+				{ name = "path" },
 			}),
 			formatting = {
 				format = function(entry, item)
 					-- Kind icons
-					item.kind = string.format('%s %s', icons.kinds[item.kind], item.kind) -- This concatonates the icons with the name of the item kind
+					item.kind = string.format("%s %s", icons.kinds[item.kind], item.kind) -- This concatonates the icons with the name of the item kind
 					-- Source
 					item.menu = ({
 						buffer = "[Buffer]",

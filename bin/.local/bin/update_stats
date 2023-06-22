@@ -4,9 +4,10 @@
 doas pacman -Sy
 
 # Check if an update is available for the linux-zen package
-if doas pacman -Qu | rg -q linux-zen; then
+if [[ -n $version ]]; then
   echo "Update available"
 else
   echo "No update available"
 fi
+
 

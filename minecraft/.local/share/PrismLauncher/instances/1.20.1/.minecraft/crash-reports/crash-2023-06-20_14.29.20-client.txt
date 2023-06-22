@@ -1,0 +1,252 @@
+---- Minecraft Crash Report ----
+// But it works on my machine.
+
+Time: 2023-06-20 14:29:20
+Description: mouseClicked event handler
+
+java.lang.NullPointerException: Cannot invoke "net.minecraft.class_1735.method_7677()" because "slot" is null
+	at net.minecraft.class_465.modify$znd000$inventory_control_tweaks$preMouseClickSlot(class_465.java:730)
+	at net.minecraft.class_465.method_25402(class_465.java:340)
+	at net.minecraft.class_492.method_25402(class_492.java:307)
+	at net.minecraft.class_312.method_1611(class_312.java:98)
+	at net.minecraft.class_437.method_25412(class_437.java:409)
+	at net.minecraft.class_312.method_1601(class_312.java:98)
+	at net.minecraft.class_312.method_22686(class_312.java:169)
+	at net.minecraft.class_1255.execute(class_1255.java:102)
+	at net.minecraft.class_312.method_22684(class_312.java:169)
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43)
+	at org.lwjgl.system.JNI.invokeV(Native Method)
+	at org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3403)
+	at com.mojang.blaze3d.systems.RenderSystem.pollEvents(RenderSystem.java:201)
+	at com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:212)
+	at net.minecraft.class_1041.method_15998(class_1041.java:288)
+	at net.minecraft.class_310.method_1523(class_310.java:1241)
+	at net.minecraft.class_310.method_1514(class_310.java:802)
+	at net.minecraft.client.main.Main.main(Main.java:250)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:468)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:88)
+	at org.prismlauncher.EntryPoint.listen(EntryPoint.java:126)
+	at org.prismlauncher.EntryPoint.main(EntryPoint.java:71)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at net.minecraft.class_465.modify$znd000$inventory_control_tweaks$preMouseClickSlot(class_465.java:730)
+	at net.minecraft.class_465.method_25402(class_465.java:340)
+	at net.minecraft.class_492.method_25402(class_492.java:307)
+	at net.minecraft.class_312.method_1611(class_312.java:98)
+	at net.minecraft.class_437.method_25412(class_437.java:409)
+	at net.minecraft.class_312.method_1601(class_312.java:98)
+	at net.minecraft.class_312.method_22686(class_312.java:169)
+	at net.minecraft.class_1255.execute(class_1255.java:102)
+	at net.minecraft.class_312.method_22684(class_312.java:169)
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43)
+	at org.lwjgl.system.JNI.invokeV(Native Method)
+	at org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3403)
+	at com.mojang.blaze3d.systems.RenderSystem.pollEvents(RenderSystem.java:201)
+	at com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:212)
+
+-- Affected screen --
+Details:
+	Screen name: net.minecraft.class_492
+Stacktrace:
+	at net.minecraft.class_437.method_25412(class_437.java:409)
+	at net.minecraft.class_312.method_1601(class_312.java:98)
+	at net.minecraft.class_312.method_22686(class_312.java:169)
+	at net.minecraft.class_1255.execute(class_1255.java:102)
+	at net.minecraft.class_312.method_22684(class_312.java:169)
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43)
+	at org.lwjgl.system.JNI.invokeV(Native Method)
+	at org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3403)
+	at com.mojang.blaze3d.systems.RenderSystem.pollEvents(RenderSystem.java:201)
+	at com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:212)
+	at net.minecraft.class_1041.method_15998(class_1041.java:288)
+	at net.minecraft.class_310.method_1523(class_310.java:1241)
+	at net.minecraft.class_310.method_1514(class_310.java:802)
+	at net.minecraft.client.main.Main.main(Main.java:250)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:468)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:88)
+	at org.prismlauncher.EntryPoint.listen(EntryPoint.java:126)
+	at org.prismlauncher.EntryPoint.main(EntryPoint.java:71)
+
+-- Affected level --
+Details:
+	All players: 2 total; [class_746['Dennis_mps'/1149162, l='ClientLevel', x=-55.34, y=65.00, z=16.86], class_745['Solstice_Fox'/1101617, l='ClientLevel', x=-55.55, y=65.00, z=7.21]]
+	Chunk stats: 1024, 381
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (-32,71,48), Section: (at 0,7,0 in -2,4,3; chunk contains blocks -32,-64,48 to -17,319,63), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,-64,0 to -1,319,511)
+	Level time: 341512368 game time, 348968853 day time
+	Server brand: Paper
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.class_638.method_8538(class_638.java:458)
+	at net.minecraft.class_310.method_1587(class_310.java:2406)
+	at net.minecraft.class_310.method_1514(class_310.java:821)
+	at net.minecraft.client.main.Main.main(Main.java:250)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:468)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:88)
+	at org.prismlauncher.EntryPoint.listen(EntryPoint.java:126)
+	at org.prismlauncher.EntryPoint.main(EntryPoint.java:71)
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: Yes
+	Packs: vanilla, fabric, file/Stay_True_1.19.zip, file/VanillaTweaks1.20_Minimal.zip
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.1
+	Minecraft Version ID: 1.20.1
+	Operating System: Linux (amd64) version 6.3.7-zen1-1-zen
+	Java Version: 17.0.7, N/A
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 347224504 bytes (331 MiB) / 1358954496 bytes (1296 MiB) up to 8589934592 bytes (8192 MiB)
+	CPUs: 4
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 3 3200G with Radeon Vega Graphics
+	Identifier: AuthenticAMD Family 23 Model 24 Stepping 1
+	Microarchitecture: Zen / Zen+
+	Frequency (GHz): -0.00
+	Number of physical packages: 1
+	Number of physical CPUs: 4
+	Number of logical CPUs: 4
+	Graphics card #0 name: GP106 [GeForce GTX 1060 3GB]
+	Graphics card #0 vendor: NVIDIA Corporation (0x10de)
+	Graphics card #0 VRAM (MB): 288.00
+	Graphics card #0 deviceId: 0x1c02
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MB): 7958.36
+	Virtual memory used (MB): 10614.98
+	Swap memory total (MB): 0.00
+	Swap memory used (MB): 0.00
+	JVM Flags: 2 total; -Xms512m -Xmx8192m
+	Fabric Mods: 
+		collective: Collective 6.57
+		fabric-api: Fabric API 0.83.1+1.20.1
+			fabric-api-base: Fabric API Base 0.4.29+b04edc7a77
+			fabric-api-lookup-api-v1: Fabric API Lookup API (v1) 1.6.34+4d8536c977
+			fabric-biome-api-v1: Fabric Biome API (v1) 13.0.10+b3afc78b77
+			fabric-block-api-v1: Fabric Block API (v1) 1.0.9+e022e5d177
+			fabric-blockrenderlayer-v1: Fabric BlockRenderLayer Registration (v1) 1.1.39+b3afc78b77
+			fabric-client-tags-api-v1: Fabric Client Tags 1.0.20+b3afc78b77
+			fabric-command-api-v1: Fabric Command API (v1) 1.2.32+f71b366f77
+			fabric-command-api-v2: Fabric Command API (v2) 2.2.11+b3afc78b77
+			fabric-commands-v0: Fabric Commands (v0) 0.2.49+df3654b377
+			fabric-containers-v0: Fabric Containers (v0) 0.1.61+df3654b377
+			fabric-content-registries-v0: Fabric Content Registries (v0) 4.0.7+b3afc78b77
+			fabric-convention-tags-v1: Fabric Convention Tags 1.5.3+b3afc78b77
+			fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.2.18+aeb40ebe77
+			fabric-data-generation-api-v1: Fabric Data Generation API (v1) 12.1.11+b3afc78b77
+			fabric-dimensions-v1: Fabric Dimensions API (v1) 2.1.51+b3afc78b77
+			fabric-entity-events-v1: Fabric Entity Events (v1) 1.5.21+b3afc78b77
+			fabric-events-interaction-v0: Fabric Events Interaction (v0) 0.6.0+b3afc78b77
+			fabric-events-lifecycle-v0: Fabric Events Lifecycle (v0) 0.2.61+df3654b377
+			fabric-game-rule-api-v1: Fabric Game Rule API (v1) 1.0.38+b04edc7a77
+			fabric-item-api-v1: Fabric Item API (v1) 2.1.26+b3afc78b77
+			fabric-item-group-api-v1: Fabric Item Group API (v1) 4.0.7+b3afc78b77
+			fabric-key-binding-api-v1: Fabric Key Binding API (v1) 1.0.36+fb8d95da77
+			fabric-keybindings-v0: Fabric Key Bindings (v0) 0.2.34+df3654b377
+			fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 2.2.20+b3afc78b77
+			fabric-loot-api-v2: Fabric Loot API (v2) 1.1.37+b3afc78b77
+			fabric-loot-tables-v1: Fabric Loot Tables (v1) 1.1.41+9e7660c677
+			fabric-message-api-v1: Fabric Message API (v1) 5.1.6+b3afc78b77
+			fabric-mining-level-api-v1: Fabric Mining Level API (v1) 2.1.47+b3afc78b77
+			fabric-models-v0: Fabric Models (v0) 0.3.35+b3afc78b77
+			fabric-networking-api-v1: Fabric Networking API (v1) 1.3.8+b3afc78b77
+			fabric-networking-v0: Fabric Networking (v0) 0.3.48+df3654b377
+			fabric-object-builder-api-v1: Fabric Object Builder API (v1) 11.0.6+b3afc78b77
+			fabric-particles-v1: Fabric Particles (v1) 1.0.28+b3afc78b77
+			fabric-recipe-api-v1: Fabric Recipe API (v1) 1.0.18+b3afc78b77
+			fabric-registry-sync-v0: Fabric Registry Sync (v0) 2.2.6+b3afc78b77
+			fabric-renderer-api-v1: Fabric Renderer API (v1) 3.0.1+b3afc78b77
+			fabric-renderer-indigo: Fabric Renderer - Indigo 1.3.1+b3afc78b77
+			fabric-renderer-registries-v1: Fabric Renderer Registries (v1) 3.2.44+df3654b377
+			fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.3.33+b3afc78b77
+			fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 3.0.26+b3afc78b77
+			fabric-rendering-v0: Fabric Rendering (v0) 1.1.47+df3654b377
+			fabric-rendering-v1: Fabric Rendering (v1) 3.0.6+b3afc78b77
+			fabric-resource-conditions-api-v1: Fabric Resource Conditions API (v1) 2.3.5+ea08f9d877
+			fabric-screen-api-v1: Fabric Screen API (v1) 2.0.6+b3afc78b77
+			fabric-screen-handler-api-v1: Fabric Screen Handler API (v1) 1.3.27+b3afc78b77
+			fabric-sound-api-v1: Fabric Sound API (v1) 1.0.12+b3afc78b77
+			fabric-transfer-api-v1: Fabric Transfer API (v1) 3.2.2+b3afc78b77
+			fabric-transitive-access-wideners-v1: Fabric Transitive Access Wideners (v1) 4.2.0+b3afc78b77
+		fabric-language-kotlin: Fabric Language Kotlin 1.9.5+kotlin.1.8.22
+			org_jetbrains_kotlin_kotlin-reflect: kotlin-reflect 1.8.22
+			org_jetbrains_kotlin_kotlin-stdlib: kotlin-stdlib 1.8.22
+			org_jetbrains_kotlin_kotlin-stdlib-jdk7: kotlin-stdlib-jdk7 1.8.22
+			org_jetbrains_kotlin_kotlin-stdlib-jdk8: kotlin-stdlib-jdk8 1.8.22
+			org_jetbrains_kotlinx_atomicfu-jvm: atomicfu-jvm 0.20.2
+			org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm: kotlinx-coroutines-core-jvm 1.7.1
+			org_jetbrains_kotlinx_kotlinx-coroutines-jdk8: kotlinx-coroutines-jdk8 1.7.1
+			org_jetbrains_kotlinx_kotlinx-datetime-jvm: kotlinx-datetime-jvm 0.4.0
+			org_jetbrains_kotlinx_kotlinx-serialization-cbor-jvm: kotlinx-serialization-cbor-jvm 1.5.1
+			org_jetbrains_kotlinx_kotlinx-serialization-core-jvm: kotlinx-serialization-core-jvm 1.5.1
+			org_jetbrains_kotlinx_kotlinx-serialization-json-jvm: kotlinx-serialization-json-jvm 1.5.1
+		fabricloader: Fabric Loader 0.14.21
+		inventory_control_tweaks: Inventory Control Tweaks 1.3.23
+			com_github_llamalad7_mixinextras: MixinExtras 0.2.0-beta.8
+			crowdin-translate: CrowdinTranslate 1.4+1.19.3
+		inventoryprofilesnext: Inventory Profiles Next 1.10.4
+		iris: Iris 1.6.4
+			io_github_douira_glsl-transformer: glsl-transformer 2.0.0-pre13
+			org_anarres_jcpp: jcpp 1.4.14
+			org_antlr_antlr4-runtime: antlr4-runtime 4.11.1
+		java: OpenJDK 64-Bit Server VM 17
+		jei: Just Enough Items 14.0.0.11
+		libipn: libIPN 3.0.2
+		litematica: Litematica 0.15.0
+		lithium: Lithium 0.11.2
+		logical_zoom: Logical Zoom 0.0.20
+		malilib: MaLiLib 0.16.0
+			fabric-resource-loader-v0: Fabric Resource Loader (v0) 0.11.7+f7923f6d77
+		minecraft: Minecraft 1.20.1
+		modmenu: Mod Menu 7.0.1
+		mousewheelie: Mouse Wheelie 1.11.1+mc1.20-pre2
+			amecsapi: Amecs API 1.4.0+mc1.20-pre1
+			coat: Coat 1.0.0-beta.20+mc1.20-pre1
+			tweed4_annotated: tweed4_annotated 1.3.1+mc1.20-pre1
+			tweed4_base: tweed4_base 1.7.1+mc1.20-pre1
+			tweed4_data: tweed4_data 1.2.1+mc1.20-pre1
+			tweed4_data_hjson: tweed4_data_hjson 1.1.1+mc1.20-pre1
+			tweed4_tailor_coat: tweed4_tailor_coat 1.1.3+mc1.20-pre1
+			tweed4_tailor_lang_json_descriptions: tweed4_tailor_lang_json_descriptions 1.1.0+mc1.20-pre1
+			tweed4_tailor_screen: tweed4_tailor_screen 1.1.4+mc1.20-pre1
+		presencefootsteps: Presence Footsteps 1.9.0
+			kirin: Kirin UI 1.15.0
+		reeses-sodium-options: Reese's Sodium Options 1.5.1+mc1.20-build.74
+		shulkerboxtooltip: Shulker Box Tooltip 4.0.2+1.20
+			cloth-config: Cloth Config v11 11.0.99
+				cloth-basic-math: cloth-basic-math 0.6.1
+		sodium: Sodium 0.4.10+build.27
+		sodium-extra: Sodium Extra 0.4.20+mc1.20-build.103
+			caffeineconfig: CaffeineConfig 1.1.0+1.17
+		sound_physics_remastered: Sound Physics Remastered 1.20.1-1.1.1
+		tweakeroo: Tweakeroo 0.17.0
+	Loaded Shaderpack: (off)
+	NEC status: No NEC detected
+	Launched Version: 1.20.1
+	Backend library: LWJGL version 3.3.1 SNAPSHOT
+	Backend API: NVIDIA GeForce GTX 1060 3GB/PCIe/SSE2 GL version 3.2.0 NVIDIA 530.41.03, NVIDIA Corporation
+	Window size: 1910x1040
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fabric'
+	Type: Client (map_client.txt)
+	Graphics mode: fancy
+	Resource Packs: vanilla, fabric, file/Stay_True_1.19.zip (incompatible), file/VanillaTweaks1.20_Minimal.zip
+	Current Language: en_us
+	CPU: 4x AMD Ryzen 3 3200G with Radeon Vega Graphics

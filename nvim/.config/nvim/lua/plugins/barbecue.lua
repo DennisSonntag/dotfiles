@@ -1,6 +1,6 @@
 return {
 	"utilyre/barbecue.nvim",
-	event = 'BufRead',
+	event = "BufRead",
 	dependencies = {
 		"SmiteshP/nvim-navic",
 	},
@@ -8,7 +8,7 @@ return {
 		local icons = require("config.icons")
 
 		return {
-			theme = 'tokyonight',
+			theme = "tokyonight",
 			symbols = {
 				modified = icons.file.modified,
 				ellipsis = "…",
