@@ -204,3 +204,10 @@ end
 starship init fish | source
 zoxide init fish | source
 fish_ssh_agent
+
+# pnpm
+set -gx PNPM_HOME "/home/dennis/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end

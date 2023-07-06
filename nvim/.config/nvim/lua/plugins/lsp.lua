@@ -70,34 +70,34 @@ return {
 					}),
 				}
 			}
-		end,
-		init = function()
-			local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-
-			vim.api.nvim_create_user_command(
-				'DisableLspFormatting',
-				function()
-					vim.api.nvim_clear_autocmds({ group = augroup, buffer = 0 })
-				end,
-				{ nargs = 0 }
-			)
 		end
+		-- init = function()
+		-- 	local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+		--
+		-- 	vim.api.nvim_create_user_command(
+		-- 		'DisableLspFormatting',
+		-- 		function()
+		-- 			vim.api.nvim_clear_autocmds({ group = augroup, buffer = 0 })
+		-- 		end,
+		-- 		{ nargs = 0 }
+		-- 	)
+		-- end
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = { {
 			"neovim/nvim-lspconfig",
 			event = 'BufRead',
-			init = function()
-				-- disable lsp watcher. Too slow on linux
-				local ok, wf = pcall(require, "vim.lsp._watchfiles")
-				if ok then
-					wf._watchfunc = function()
-						return function()
-						end
-					end
-				end
-			end,
+			-- init = function()
+			-- 	-- disable lsp watcher. Too slow on linux
+			-- 	local ok, wf = pcall(require, "vim.lsp._watchfiles")
+			-- 	if ok then
+			-- 		wf._watchfunc = function()
+			-- 			return function()
+			-- 			end
+			-- 		end
+			-- 	end
+			-- end,
 
 		} },
 		event        = 'BufRead',
@@ -106,8 +106,18 @@ return {
 
 			local lsp = require("lspconfig")
 
-			local capabilities = require('cmp_nvim_lsp').default_capabilities()
-			capabilities.offsetEncoding = { "utf-16" }
+			-- local capabilities = require('cmp_nvim_lsp').default_capabilities()
+			-- capabilities.offsetEncoding = { "utf-16" }
+
+			local capabilities = vim.lsp.protocol.make_client_capabilities()
+			capabilities.textDocument.completion.completionItem.snippetSupport = true
+			capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = false
+
+			-- Completion configuration
+			vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+			capabilities.textDocument.completion.completionItem.insertReplaceSupport = false
+
+			capabilities.textDocument.codeLens = { dynamicRegistration = false }
 
 			local on_attach = function(client, bufnr)
 				local keymap = vim.keymap.set
@@ -117,7 +127,7 @@ return {
 
 				local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
-				vim.lsp.buf.inlay_hint(0, vim.g.inlaytoggle)
+				-- vim.lsp.buf.inlay_hint(0, vim.g.inlaytoggle)
 
 				require("nvim-navic").attach(client, bufnr)
 
@@ -145,12 +155,15 @@ return {
 					"pyright", "jdtls", "wgsl_analyzer" },
 			})
 
+			-- local rust_analyzer_cmd = { "rustup", "run", "nightly", "rust-analyzer" }
+			local rust_analyzer_cmd = { "rustup", "run", "stable", "rust-analyzer" }
+
 			lsp.rust_analyzer.setup({
 				on_attach = on_attach,
 				capabilities = capabilities,
-				filetypes = { "rust" },
-				cmd = { "rustup", "run", "stable", "rust-analyzer" },
+				cmd = rust_analyzer_cmd,
 				['rust-analyzer'] = {
+					procMacro = { enable = true },
 					cargo = { allFeatures = true },
 					checkOnSave = {
 						command = "clippy",
