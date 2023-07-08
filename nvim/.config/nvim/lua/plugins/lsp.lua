@@ -133,7 +133,7 @@ return {
 
 				keymap("n", "<leader>lth", function()
 					vim.g.inlaytoggle = not vim.g.inlaytoggle
-					vim.lsp.buf.inlay_hint(0, vim.g.inlaytoggle)
+					vim.lsp.inlay_hint(0, vim.g.inlaytoggle)
 				end, bufopts)
 
 				keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", bufopts)
@@ -167,7 +167,11 @@ return {
 					cargo = { allFeatures = true },
 					checkOnSave = {
 						command = "clippy",
-						extraArgs = { "--no-deps" },
+						extraArgs = { "--no-deps",
+							"--", "-W", "clippy::pedantic",
+							"-W", "clippy::nursery",
+							"-W", "clippy::unwrap_used"
+						},
 					},
 				}
 			})
