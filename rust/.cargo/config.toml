@@ -4,3 +4,4 @@ rustflags = ["-C", "link-arg=--ld-path=/usr/bin/mold"]
 
 [build]
 rustc-wrapper = "/home/dennis/.cargo/bin/sccache"
+jobs = 8

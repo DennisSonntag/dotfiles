@@ -1,6 +1,6 @@
 return {
 	{
-		'RubixDev/mason-update-all',
+		"RubixDev/mason-update-all",
 		main = "mason-update-all",
 		cmd = "MasonUpdateAll",
 		config = true,
@@ -19,6 +19,9 @@ return {
 					lightbulb = {
 						enable = false,
 					},
+					code_action = {
+						extend_gitsigns = false,
+					},
 					ui = {
 						-- This option only works in Neovim 0.9
 						title = true,
@@ -29,7 +32,7 @@ return {
 						code_action = icons.diagnostics.hint,
 						incoming = " ",
 						outgoing = " ",
-						hover = ' ',
+						hover = " ",
 						kind = {},
 					},
 				}
@@ -66,47 +69,25 @@ return {
 							"handlebars" },
 					}),
 					null_ls.builtins.diagnostics.eslint_d.with({
-						diagnostics_format = '[eslint] #{m}\n(#{c})',
+						diagnostics_format = "[eslint] #{m}\n(#{c})",
 					}),
 				}
 			}
 		end
-		-- init = function()
-		-- 	local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-		--
-		-- 	vim.api.nvim_create_user_command(
-		-- 		'DisableLspFormatting',
-		-- 		function()
-		-- 			vim.api.nvim_clear_autocmds({ group = augroup, buffer = 0 })
-		-- 		end,
-		-- 		{ nargs = 0 }
-		-- 	)
-		-- end
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = { {
 			"neovim/nvim-lspconfig",
-			event = 'BufRead',
-			-- init = function()
-			-- 	-- disable lsp watcher. Too slow on linux
-			-- 	local ok, wf = pcall(require, "vim.lsp._watchfiles")
-			-- 	if ok then
-			-- 		wf._watchfunc = function()
-			-- 			return function()
-			-- 			end
-			-- 		end
-			-- 	end
-			-- end,
-
+			event = "BufRead",
 		} },
-		event        = 'BufRead',
+		event        = "BufRead",
 		config       = function()
 			local mason_lsp = require("mason-lspconfig")
 
 			local lsp = require("lspconfig")
 
-			-- local capabilities = require('cmp_nvim_lsp').default_capabilities()
+			-- local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			-- capabilities.offsetEncoding = { "utf-16" }
 
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -122,12 +103,10 @@ return {
 			local on_attach = function(client, bufnr)
 				local keymap = vim.keymap.set
 
-				local status3, builtin = pcall(require, "telescope.builtin")
-				if (not status3) then return end
+				local builtin_status, builtin = pcall(require, "telescope.builtin")
+				if (not builtin_status) then return end
 
 				local bufopts = { noremap = true, silent = true, buffer = bufnr }
-
-				-- vim.lsp.buf.inlay_hint(0, vim.g.inlaytoggle)
 
 				require("nvim-navic").attach(client, bufnr)
 
@@ -137,20 +116,21 @@ return {
 				end, bufopts)
 
 				keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", bufopts)
-				keymap('n', 'gd', builtin.lsp_definitions, bufopts)
-				keymap('n', 'gi', builtin.lsp_implementations, bufopts)
-				keymap('n', '<leader>lfr', builtin.lsp_references, bufopts)
-				keymap("n", "[d", vim.diagnostic.goto_next, bufopts)
-				keymap("n", "]d", vim.diagnostic.goto_prev, bufopts)
+				keymap("n", "gd", builtin.lsp_definitions, bufopts)
+				keymap("n", "gi", builtin.lsp_implementations, bufopts)
+				keymap("n", "<leader>lfr", builtin.lsp_references, bufopts)
+				keymap("n", "[d", vim.diagnostic.goto_prev, bufopts)
+				keymap("n", "]d", vim.diagnostic.goto_next, bufopts)
 				keymap("n", "<leader>lvd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", bufopts)
-				keymap('n', '<leader>lr', vim.lsp.buf.rename, bufopts)
-				keymap('n', '<space>lca', "<cmd>Lspsaga code_action<CR>", bufopts)
+				keymap("n", "<leader>lr", vim.lsp.buf.rename, bufopts)
+				keymap({ "n", "v" }, "<space>lca", "<cmd>Lspsaga code_action<CR>", bufopts)
+
 				keymap("n", "<leader>lf", function() vim.lsp.buf.format({ async = true }) end, bufopts)
 			end
 
 			mason_lsp.setup({
 				automatic_installation = false,
-				ensure_installed = { "astro", "clangd", "prismals", "bashls", "cssls", "html", "jsonls", "lua_ls",
+				ensure_installed = { "clangd", "prismals", "bashls", "cssls", "html", "jsonls", "lua_ls",
 					"tailwindcss", "tsserver",
 					"pyright", "jdtls", "wgsl_analyzer" },
 			})
@@ -162,7 +142,7 @@ return {
 				on_attach = on_attach,
 				capabilities = capabilities,
 				cmd = rust_analyzer_cmd,
-				['rust-analyzer'] = {
+				["rust-analyzer"] = {
 					procMacro = { enable = true },
 					cargo = { allFeatures = true },
 					checkOnSave = {
@@ -203,7 +183,7 @@ return {
 							Lua = {
 								diagnostics = {
 									--Get the language server to recongnize the "vim" global
-									globals = { 'vim' }
+									globals = { "vim" }
 								},
 								workspace = {
 									-- Make the server aware of the Neovim runtime files

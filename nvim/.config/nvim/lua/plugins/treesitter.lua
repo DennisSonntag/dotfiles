@@ -3,14 +3,12 @@ return {
 	lazy = false,
 	priority = 1000,
 	dependencies = {
-		"HiPhish/nvim-ts-rainbow2",
 		"nvim-treesitter/playground",
 		{ "windwp/nvim-ts-autotag", config = true }
 	},
 	build = ":TSUpdate",
 	opts =
 		function()
-			local rainbow = require("ts-rainbow")
 			return {
 				playground = {
 					enable = true,
@@ -33,22 +31,13 @@ return {
 				ensure_installed = { "javascript", "typescript", "lua", "c", "cpp",
 					"css", "json", "bash", "rust", "html", "java", "prisma", "python", "dockerfile", "toml", "tsx",
 					"make",
-					"markdown", "markdown_inline", "vim", "yaml", "toml", "fish", "astro", "comment", "wgsl", "wgsl_bevy", "yuck"},
+					"markdown", "markdown_inline", "vim", "yaml", "toml", "fish", "comment", "wgsl", "wgsl_bevy", "yuck" },
 				autotag = {
 					enable = true,
 				},
 				highlight = {
 					enable = true,
 					additional_vim_regex_highlighting = false,
-				},
-				rainbow = {
-					enable = true,
-					-- list of languages you want to disable the plugin for
-					disable = { "jsx", "cpp", "html" },
-					-- Which query to use for finding delimiters
-					query = "rainbow-parens",
-					-- Highlight the entire buffer all at once
-					strategy = rainbow.strategy.global,
 				},
 				indent = { enable = true },
 
@@ -58,7 +47,7 @@ return {
 	init = function()
 		vim.filetype.add({ extension = { wgsl = "wgsl" } })
 
-		local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+		local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
 		parser_config.wgsl = {
 			install_info = {
 				url = "https://github.com/szebniok/tree-sitter-wgsl",

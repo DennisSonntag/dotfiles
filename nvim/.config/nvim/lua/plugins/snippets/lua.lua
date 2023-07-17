@@ -1,5 +1,5 @@
-local status, ls = pcall(require, "luasnip")
-if (not status) then return end
+local ls_status, ls = pcall(require, "luasnip")
+if (not ls_status) then return end
 local s = ls.s
 local i = ls.i
 local t = ls.t
@@ -12,12 +12,12 @@ local sn = ls.snippet_node
 local fmt = require("luasnip.extras.fmt").fmt
 local rep = require("luasnip.extras").rep
 
-local snippets, autosnippets = {}, {} --}}}
+local snippets, autosnippets = {}, {}
 
 local group = vim.api.nvim_create_augroup("Lua Snippets", { clear = true })
 local file_pattern = "*.lua"
 
-local function cs(trigger, nodes, opts) --{{{
+local function cs(trigger, nodes, opts)
 	local snippet = s(trigger, nodes)
 	local target_table = snippets
 

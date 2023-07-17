@@ -1,5 +1,5 @@
-local status, ls = pcall(require, "luasnip")
-if (not status) then return end
+local ls_status, ls = pcall(require, "luasnip")
+if (not ls_status) then return end
 
 local s = ls.s
 local i = ls.i
