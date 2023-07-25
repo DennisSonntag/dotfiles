@@ -80,12 +80,12 @@ return {
 					todo           = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
 					note           = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
 					-- word_color     = { pattern = "%S+", group = word_color_group },
-					word_color     = { pattern = "(.*)(" .. table.concat(keys, "|") .. ")(.*)", group = word_color_group },
-					bevy_rgb_u8    = { pattern = "rgb_u8%b()", group = rgb_u8_group },
-					bevy_rgb_float = { pattern = "rgb%b()", group = rgb_float_group },
+					-- word_color     = { pattern = "(.*)(" .. table.concat(keys, "|") .. ")(.*)", group = word_color_group },
+					-- bevy_rgb_u8    = { pattern = "rgb_u8%b()", group = rgb_u8_group },
+					-- bevy_rgb_float = { pattern = "rgb%b()", group = rgb_float_group },
 
 					-- Highlight hex color strings (`#rrggbb`) using that color
-					hex_color      = hipatterns.gen_highlighter.hex_color(),
+					-- hex_color      = hipatterns.gen_highlighter.hex_color(),
 				},
 			}
 		end

@@ -1,7 +1,13 @@
 return {
 	"saecki/crates.nvim",
-	event = "BufRead",
+	ft = { "rust", "toml" },
 	opts = {
+		src = {
+			coq = {
+				enabled = true,
+				name = "Crates",
+			},
+		},
 		null_ls = {
 			enabled = true,
 			name = "crates.nvim",

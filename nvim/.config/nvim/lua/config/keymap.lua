@@ -33,5 +33,5 @@ keymap("n", "<C-q>", "<cmd>q<CR>")
 
 --Replace hovering word
 keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-keymap("n", "<C-s>", [[:%s/\(.*\)/\1]])
+-- keymap("n", "<C-s>", [[:%s/\(.*\)/\1]])
 

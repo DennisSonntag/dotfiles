@@ -6,7 +6,7 @@ return {
 		config = true,
 	},
 	{
-		"glepnir/lspsaga.nvim",
+		'nvimdev/lspsaga.nvim',
 		event = "LspAttach",
 		opts =
 			function()
@@ -130,7 +130,7 @@ return {
 
 			mason_lsp.setup({
 				automatic_installation = false,
-				ensure_installed = { "clangd", "prismals", "bashls", "cssls", "html", "jsonls", "lua_ls",
+				ensure_installed = { "astro", "clangd", "prismals", "bashls", "cssls", "html", "jsonls", "lua_ls",
 					"tailwindcss", "tsserver",
 					"pyright", "jdtls", "wgsl_analyzer" },
 			})
