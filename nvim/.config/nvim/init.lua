@@ -47,9 +47,6 @@ require("lazy").setup({
 require("config")
 
 local run_formatter = function(text)
-	-- local split = vim.split(text, "\n")
-	-- local result = table.concat(vim.list_slice(split, 2, #split - 1), "\n")
-
 	-- Finds sql-format-via-python somewhere in your nvim config path
 	local bin = vim.api.nvim_get_runtime_file("bin/format_prettier_stdio.py", false)[1]
 	text = string.sub(text, 4, -3)
@@ -95,7 +92,6 @@ local format_dat_html = function(bufnr)
 			local indentation = string.rep(" ", range[2])
 
 			local formatted = run_formatter(vim.treesitter.get_node_text(node, bufnr))
-			-- vim.print(formatted)
 
 			for idx, line in ipairs(formatted) do
 				formatted[idx] = indentation .. line

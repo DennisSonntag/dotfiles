@@ -1,4 +1,3 @@
-
 local ls_status, ls = pcall(require, "luasnip")
 if (not ls_status) then return end
 
@@ -14,12 +13,12 @@ local sn = ls.snippet_node
 local fmt = require("luasnip.extras.fmt").fmt
 local rep = require("luasnip.extras").rep
 
-local snippets, autosnippets = {}, {} --}}}
+local snippets, autosnippets = {}, {}
 
 local group = vim.api.nvim_create_augroup("Lua Snippets", { clear = true })
 local file_pattern = "*.lua"
 
-local function cs(trigger, nodes, opts) --{{{
+local function cs(trigger, nodes, opts)
 	local snippet = s(trigger, nodes)
 	local target_table = snippets
 
@@ -69,7 +68,7 @@ local function cs(trigger, nodes, opts) --{{{
 	end
 
 	table.insert(target_table, snippet) -- insert snippet into appropriate table
-end                                  --}}}
+end
 
 -- Start Refactoring --
 cs("print", fmt("print!(\"{}\");", { i(1, "") }))

@@ -353,8 +353,8 @@ return {
 				s("hr",
 					fmt("<hr>", {})),
 
-				-- s("html",
-				-- 	fmt("<html>{}</html>", { i(1), })),
+				s("html",
+					fmt("<html>{}</html>", { i(1), })),
 
 				s("!", fmt([[
 						<!DOCTYPE html>

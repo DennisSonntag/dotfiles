@@ -6,39 +6,6 @@ return {
 		config = true,
 	},
 	{
-		'nvimdev/lspsaga.nvim',
-		event = "LspAttach",
-		opts =
-			function()
-				local icons = require("config.icons")
-
-				return {
-					symbol_in_winbar = {
-						enable = false,
-					},
-					lightbulb = {
-						enable = false,
-					},
-					code_action = {
-						extend_gitsigns = false,
-					},
-					ui = {
-						-- This option only works in Neovim 0.9
-						title = true,
-						border = "rounded", -- single | double | rounded | solid | shadow
-						winblend = 0,
-						expand = icons.folder.expanded,
-						collapse = icons.folder.collapsed,
-						code_action = icons.diagnostics.hint,
-						incoming = " ",
-						outgoing = " ",
-						hover = " ",
-						kind = {},
-					},
-				}
-			end
-	},
-	{
 		"williamboman/mason.nvim",
 		cmd = "Mason",
 		config = true
@@ -87,9 +54,6 @@ return {
 
 			local lsp = require("lspconfig")
 
-			-- local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			-- capabilities.offsetEncoding = { "utf-16" }
-
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities.textDocument.completion.completionItem.snippetSupport = true
 			capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = false
@@ -106,26 +70,26 @@ return {
 				local builtin_status, builtin = pcall(require, "telescope.builtin")
 				if (not builtin_status) then return end
 
-				local bufopts = { noremap = true, silent = true, buffer = bufnr }
-
-				require("nvim-navic").attach(client, bufnr)
+				local opts = { buffer = bufnr, remap = false }
 
 				keymap("n", "<leader>lth", function()
 					vim.g.inlaytoggle = not vim.g.inlaytoggle
 					vim.lsp.inlay_hint(0, vim.g.inlaytoggle)
-				end, bufopts)
+				end, opts)
 
-				keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", bufopts)
-				keymap("n", "gd", builtin.lsp_definitions, bufopts)
-				keymap("n", "gi", builtin.lsp_implementations, bufopts)
-				keymap("n", "<leader>lfr", builtin.lsp_references, bufopts)
-				keymap("n", "[d", vim.diagnostic.goto_prev, bufopts)
-				keymap("n", "]d", vim.diagnostic.goto_next, bufopts)
-				keymap("n", "<leader>lvd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", bufopts)
-				keymap("n", "<leader>lr", vim.lsp.buf.rename, bufopts)
-				keymap({ "n", "v" }, "<space>lca", "<cmd>Lspsaga code_action<CR>", bufopts)
+				keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
+				keymap("n", "gd", function() builtin.lsp_definitions({ reuse_win = true }) end, opts)
+				keymap("n", "gi", function() builtin.lsp_implementations({ reuse_win = true }) end, opts)
 
-				keymap("n", "<leader>lf", function() vim.lsp.buf.format({ async = true }) end, bufopts)
+				keymap("n", "<leader>lfr", builtin.lsp_references, opts)
+				keymap("n", "[d", vim.diagnostic.goto_prev, opts)
+				keymap("n", "]d", vim.diagnostic.goto_next, opts)
+				keymap('n', '<leader>lvd', vim.diagnostic.open_float, opts)
+				keymap("n", "<leader>lr", vim.lsp.buf.rename, opts)
+
+				keymap({ "n", "v" }, "<leader>lca", vim.lsp.buf.code_action, opts)
+
+				keymap("n", "<leader>lf", function() vim.lsp.buf.format({ async = true }) end, opts)
 			end
 
 			mason_lsp.setup({
@@ -135,7 +99,6 @@ return {
 					"pyright", "jdtls", "wgsl_analyzer" },
 			})
 
-			-- local rust_analyzer_cmd = { "rustup", "run", "nightly", "rust-analyzer" }
 			local rust_analyzer_cmd = { "rustup", "run", "stable", "rust-analyzer" }
 
 			lsp.rust_analyzer.setup({

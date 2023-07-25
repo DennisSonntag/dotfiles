@@ -124,27 +124,6 @@ return { {
 				}),
 			}),
 			sources = cmp.config.sources({
-				-- {
-				-- 	name = "nvim_lsp",
-				-- 	entry_filter = function(entry, ctx)
-				-- 		if contains({ "javascript", "typescript", "typescriptreact", "javascriptreact" }, ctx.filetype) then
-				-- 			if contains({ "log", "switch", "case" }, entry:get_word()) then
-				-- 				return false
-				-- 			end
-				-- 		end
-				-- 		if contains({ "typescriptreact", "javascriptreact" }, ctx.filetype) then
-				-- 			if entry:get_word() == "class" then
-				-- 				return false
-				-- 			end
-				-- 		end
-				-- 		if ctx.filetype == "rust" then
-				-- 			if contains({ "println!", "print!" }, entry:get_word()) then
-				-- 				return false
-				-- 			end
-				-- 		end
-				-- 		return true
-				-- 	end
-				-- },
 				{ name = "nvim_lsp" },
 				{ name = "crates" },
 				{ name = "luasnip" },
