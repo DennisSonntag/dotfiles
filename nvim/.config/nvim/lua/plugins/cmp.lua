@@ -14,12 +14,6 @@ return { {
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
 		local cmp_select = { behavior = cmp.SelectBehavior.Select }
-		local function contains(list, x)
-			for _, v in pairs(list) do
-				if v == x then return true end
-			end
-			return false
-		end
 		local icons = require("config.icons")
 
 		local lspkind_comparator = function(conf)
