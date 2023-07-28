@@ -17,10 +17,10 @@ return { {
 		local icons = require("config.icons")
 
 		local lspkind_comparator = function(conf)
-			local lsp_types = require('cmp.types').lsp
+			local lsp_types = require("cmp.types").lsp
 			return function(entry1, entry2)
-				if entry1.source.name ~= 'nvim_lsp' then
-					if entry2.source.name == 'nvim_lsp' then
+				if entry1.source.name ~= "nvim_lsp" then
+					if entry2.source.name == "nvim_lsp" then
 						return false
 					else
 						return nil

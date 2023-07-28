@@ -64,7 +64,7 @@ return {
 
 			capabilities.textDocument.codeLens = { dynamicRegistration = false }
 
-			local on_attach = function(client, bufnr)
+			local on_attach = function(_, bufnr)
 				local keymap = vim.keymap.set
 
 				local builtin_status, builtin = pcall(require, "telescope.builtin")
@@ -77,14 +77,14 @@ return {
 					vim.lsp.inlay_hint(0, vim.g.inlaytoggle)
 				end, opts)
 
-				keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
+				keymap("n", "K", vim.lsp.buf.hover, opts)
 				keymap("n", "gd", function() builtin.lsp_definitions({ reuse_win = true }) end, opts)
 				keymap("n", "gi", function() builtin.lsp_implementations({ reuse_win = true }) end, opts)
 
 				keymap("n", "<leader>lfr", builtin.lsp_references, opts)
 				keymap("n", "[d", vim.diagnostic.goto_prev, opts)
 				keymap("n", "]d", vim.diagnostic.goto_next, opts)
-				keymap('n', '<leader>lvd', vim.diagnostic.open_float, opts)
+				keymap("n", "<leader>lvd", vim.diagnostic.open_float, opts)
 				keymap("n", "<leader>lr", vim.lsp.buf.rename, opts)
 
 				keymap({ "n", "v" }, "<leader>lca", vim.lsp.buf.code_action, opts)
@@ -110,11 +110,7 @@ return {
 					cargo = { allFeatures = true },
 					checkOnSave = {
 						command = "clippy",
-						extraArgs = { "--no-deps",
-							"--", "-W", "clippy::pedantic",
-							"-W", "clippy::nursery",
-							"-W", "clippy::unwrap_used"
-						},
+						extraArgs = { "--no-deps" },
 					},
 				}
 			})
