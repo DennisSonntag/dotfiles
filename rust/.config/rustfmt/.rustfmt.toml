@@ -1,4 +1,12 @@
 tab_spaces = 4
 hard_tabs = true
-control_style = "Rfc"
-# max_width = 999
+reorder_impl_items = true
+# merge_imports = true
+imports_granularity = "Crate"
+normalize_comments = true
+group_imports = "StdExternalCrate"
+trailing_comma = "Never"
+trailing_semicolon = false
+use_field_init_shorthand = true
+use_try_shorthand = true
+unstable_features = true
