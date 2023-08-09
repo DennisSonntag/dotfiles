@@ -10,7 +10,7 @@
         "maxXP": 2.535323E7,
         "levelPercentage": 1.0,
         "levelXp": 1886700.0,
-        "totalXp": 6.3560548E7
+        "totalXp": 7.4374024E7
       },
       "petXpType": "mining",
       "candyUsed": 0
@@ -23,9 +23,9 @@
         "maxLevel": 100.0,
         "currentLevelRequirement": 1286700.0,
         "maxXP": 2.535323E7,
-        "levelPercentage": 0.7244066,
-        "levelXp": 932094.0,
-        "totalXp": 1.6865124E7
+        "levelPercentage": 0.93846583,
+        "levelXp": 1207524.0,
+        "totalXp": 1.7140554E7
       },
       "petXpType": "farming",
       "petItem": "PET_ITEM_FARMING_SKILL_BOOST_EPIC",
@@ -39,9 +39,9 @@
         "maxLevel": 100.0,
         "currentLevelRequirement": 1286700.0,
         "maxXP": 2.535323E7,
-        "levelPercentage": 0.15757674,
-        "levelXp": 202754.0,
-        "totalXp": 1.6135784E7
+        "levelPercentage": 0.18234864,
+        "levelXp": 234628.0,
+        "totalXp": 1.6167658E7
       },
       "petXpType": "farming",
       "petItem": "PET_ITEM_FARMING_SKILL_BOOST_EPIC",
@@ -109,7 +109,7 @@
       "candyUsed": 0
     }
   },
-  "selectedPet": 1,
+  "selectedPet": 2,
   "selectedPet2": 0,
   "tamingLevel": 38,
   "beastMultiplier": 0.0

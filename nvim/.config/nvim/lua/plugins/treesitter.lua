@@ -48,7 +48,7 @@ return {
 				},
 				ensure_installed = { "astro", "javascript", "typescript", "lua", "c", "cpp", "css", "json", "bash",
 					"rust", "html", "java", "prisma", "python", "dockerfile", "toml", "tsx", "make", "markdown",
-					"markdown_inline", "vim", "yaml", "toml", "fish", "comment", "wgsl", "wgsl_bevy", "yuck" },
+					"markdown_inline", "vim", "yaml", "toml", "fish", "comment", "wgsl", "wgsl_bevy", "yuck", "regex" },
 				autotag = {
 					enable = true,
 				},
@@ -63,6 +63,8 @@ return {
 	main = "nvim-treesitter.configs",
 	init = function()
 		vim.filetype.add({ extension = { wgsl = "wgsl" } })
+
+		vim.filetype.add({ extension = { qml = "qml" } })
 
 		local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
 		parser_config.wgsl = {

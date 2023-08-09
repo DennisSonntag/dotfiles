@@ -1,9 +1,9 @@
 local icons = {
 	extra = {
 		sleep = " ",
-		settings=" ",
-		exit=" ",
-		bean=" ",
+		settings = " ",
+		exit = " ",
+		bean = " ",
 
 	},
 	ui = {

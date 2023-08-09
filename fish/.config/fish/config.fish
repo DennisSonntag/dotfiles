@@ -80,7 +80,16 @@ function killport
     kill -9 (lsof -i tcp:$port | sed -n 2p | awk '{print $2}')
 end
 
+# kill anything running on local host 3000
+function clean_mem
+	doas killall nvim
+	doas killall nvim
+	doas kill (pgrep rust-analyzer)
+	doas kill (pgrep lua-language-se)
+end
 
+
+alias clippy_better="cargo clippy --no-deps --all-targets --color always -- -W clippy::pedantic -W clippy::nursery"
 
 # Git
 alias ga="git add"
@@ -134,8 +143,7 @@ function full-update
 	nvim --headless -c 'autocmd User MasonUpdateAllComplete quitall' -c 'MasonUpdateAll'
 	fnm install --latest
 	fnm install --lts
-	npm i -g npm@latest
-	npm i -g pnpm
+	pnpm i -g pnpm
 	clear-cache
 end
 

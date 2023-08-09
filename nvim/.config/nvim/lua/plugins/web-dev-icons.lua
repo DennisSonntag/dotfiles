@@ -1,6 +1,6 @@
 return {
 	"nvim-tree/nvim-web-devicons",
-	after = "neo-tree",
+	dependencies = { "nvim-neo-tree/neo-tree.nvim" },
 	opts = {
 		override_by_extension = {
 			["rs"] = {

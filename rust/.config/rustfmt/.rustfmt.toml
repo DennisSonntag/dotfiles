@@ -1,7 +1,6 @@
 tab_spaces = 4
 hard_tabs = true
 reorder_impl_items = true
-# merge_imports = true
 imports_granularity = "Crate"
 normalize_comments = true
 group_imports = "StdExternalCrate"

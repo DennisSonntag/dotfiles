@@ -1,7 +1,7 @@
 local o = vim.opt
 
--- vim.wo.syntax = "default"
-vim.g.inlaytoggle = true
+vim.g.inlaytoggle = false
+
 
 o.undodir = os.getenv("HOME") .. "/.vim/undodir"
 o.undofile = true

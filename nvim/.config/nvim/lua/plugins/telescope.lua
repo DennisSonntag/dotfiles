@@ -2,10 +2,13 @@ return {
 	"nvim-telescope/telescope.nvim",
 	dependencies = {
 		{
-			"nvim-telescope/telescope-fzf-native.nvim",
-			build =
-			"cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build"
-		} },
+			'nvim-telescope/telescope-fzf-native.nvim',
+			build = 'make',
+			cond = function()
+				return vim.fn.executable 'make' == 1
+			end,
+		},
+	},
 	opts         = function()
 		local actions = require("telescope.actions")
 		return {
@@ -47,9 +50,10 @@ return {
 		telescope.load_extension("fzf")
 	end,
 	keys         = {
-		{ "<leader>ff", function() require("telescope.builtin").find_files({ hidden = true }) end },
+		{ "<leader>fF", function() require("telescope.builtin").find_files({ hidden = true }) end },
+		{ "<leader>ff", " <cmd>Telescope git_files<CR>" },
 		{ "<leader>fg", " <cmd>Telescope live_grep<CR>" },
-		{ "<leader>fb", " <cmd>Telescope buffers<CR>" },
+		{ "<leader>fb", " <cmd>Telescope current_buffer_fuzzy_find<CR>" },
 		{ "<leader>fh", " <cmd>Telescope help_tags<CR>" },
 		{ "<leader>fs", " <cmd>Telescope spell_suggest<CR>" },
 	}

@@ -24,7 +24,7 @@ chatLinks:true
 chatLinksPrompt:true
 chatOpacity:1.0
 snooperEnabled:true
-fullscreen:true
+fullscreen:false
 enableVsync:false
 useVbo:false
 hideServerAddress:false
@@ -95,7 +95,6 @@ key_Open Friends Gui:35
 key_Open Cosmetic Studio:48
 key_keybind.name.SCREENSHOT_MANAGER:23
 key_Cosmetic Visibility Toggle:24
-key_Add Friend:0
 key_Chat Peek:44
 key_Invite Friends:0
 key_keybind.name.EMOTE_WHEEL:19
