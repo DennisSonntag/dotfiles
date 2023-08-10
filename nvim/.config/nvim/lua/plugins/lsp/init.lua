@@ -17,12 +17,9 @@ return {
 				underline = true,
 				update_in_insert = false,
 				virtual_text = {
-					spacing = 4,
+					spacing = 0,
 					source = "if_many",
-					prefix = "●",
-					-- this will set set the prefix to a function that returns the diagnostics icon based on the severity
-					-- this only works on a recent 0.10.0 build. Will be set to "●" when not supported
-					-- prefix = "icons",
+					prefix = "",
 				},
 				severity_sort = true,
 			},
@@ -67,7 +64,7 @@ return {
 			vim.diagnostic.config(vim.deepcopy(opts.diagnostics))
 
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
-			capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+			capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 
 			vim.api.nvim_create_autocmd("LspAttach", {
@@ -126,7 +123,7 @@ return {
 				mlsp.setup({ automatic_installation = false, ensure_installed = ensure_installed, handlers = { setup } })
 			end
 
-			require('neodev').setup()
+			require("neodev").setup()
 
 
 			local rt = require("rust-tools")
@@ -144,12 +141,49 @@ return {
 					end,
 				},
 				server = {
+					settings = {
+						["rust-analyzer"] = {
+							cargo = {
+								allFeatures = true,
+								loadOutDirsFromCheck = true,
+								runBuildScripts = true,
+							},
+							-- Add clippy lints for Rust.
+							checkOnSave = {
+								allFeatures = true,
+								command = "clippy",
+								extraArgs = { "--no-deps", "--", "-W", "clippy::pedantic", "-W", "clippy::nursery" },
+							},
+							procMacro = {
+								enable = true,
+								ignored = {
+									["async-trait"] = { "async_trait" },
+									["napi-derive"] = { "napi" },
+									["async-recursion"] = { "async_recursion" },
+								},
+							},
+						},
+					},
 					standalone = false,
 					on_attach = function(_, bufnr)
+						rt.inlay_hints.disable()
+						-- Inlay hints
+						vim.keymap.set("n", "<leader>ltr",
+							function()
+								if vim.g.rustinlaytoggle then
+									rt.inlay_hints.disable()
+									vim.g.rustinlaytoggle = false
+								else
+									rt.inlay_hints.enable()
+									vim.g.rustinlaytoggle = true
+								end
+							end
+							, { buffer = bufnr })
+
 						-- Hover actions
 						vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
 						-- Code action groups
-						vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+						-- vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
 					end,
 				},
 			})

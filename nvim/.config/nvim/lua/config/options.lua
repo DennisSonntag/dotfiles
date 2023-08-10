@@ -1,6 +1,7 @@
 local o = vim.opt
 
 vim.g.inlaytoggle = false
+vim.g.rustinlaytoggle = false
 
 
 o.undodir = os.getenv("HOME") .. "/.vim/undodir"

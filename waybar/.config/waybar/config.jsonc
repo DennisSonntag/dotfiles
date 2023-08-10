@@ -36,11 +36,11 @@
 		},
 		"format": "{capacity}% {icon}",
 		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			""
+			" ",
+			" ",
+			" ",
+			" ",
+			" "
 		],
 		"max-length": 25
 	},
@@ -58,7 +58,7 @@
 		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
 	},
 	"custom/spotify": {
-		"format": "{}  ",
+		"format": "{}   ",
 		"max-length": 60,
 		"interval": 1,
 		"return-type": "json",
@@ -78,16 +78,16 @@
 		"on-scroll-down": "pamixer -d 5",
 		"scroll-step": 5,
 		"format-icons": {
-			"headphone": "",
-			"hands-free": "",
-			"headset": "",
-			"phone": "",
-			"portable": "",
-			"car": "",
+			"headphone": " ",
+			"hands-free": " ",
+			"headset": " ",
+			"phone": " ",
+			"portable": " ",
+			"car": " ",
 			"default": [
-				"奄",
-				"奔",
-				"墳"
+				"󰕿 ",
+				"󰖀 ",
+				"󰕾 "
 			]
 		}
 	},
@@ -98,11 +98,11 @@
 	"network": {
 		"tooltip": false,
 		"format-wifi": " {essid} {ipaddr}",
-		"format-ethernet": " {ipaddr}"
+		"format-ethernet": "󰈀  {ipaddr}"
 	},
 	"cpu": {
 		"tooltip": false,
-		"format": " {}%"
+		"format": "  {}%"
 	},
 	"memory": {
 		"tooltip": false,
