@@ -652,7 +652,7 @@
             "base": "asset_indexes",
             "current_age": 0,
             "etag": "0x8DA1CDD8ED7C0B7",
-            "last_changed_timestamp": 1690336050634,
+            "last_changed_timestamp": 1691993527804,
             "max_age": 1209600,
             "md5sum": "6155398ec2c908bed2764d752030d8ce",
             "path": "1.8.json",
@@ -670,8 +670,7 @@
         {
             "base": "asset_indexes",
             "current_age": 0,
-            "etag": "0x8DB6B49EFAF1FD3",
-            "last_changed_timestamp": 1690336050637,
+            "last_changed_timestamp": 1691992852692,
             "max_age": 1209600,
             "md5sum": "82411ad7b0fb610cc4c8d4a6f1bb79d7",
             "path": "5.json",
@@ -1986,13 +1985,13 @@
         },
         {
             "base": "meta",
-            "current_age": 547,
-            "etag": "W/\"64ca9a31-53ea5\"",
-            "last_changed_timestamp": 1691123971581,
+            "current_age": 0,
+            "etag": "W/\"64d99931-5404c\"",
+            "last_changed_timestamp": 1691993464521,
             "max_age": 600,
-            "md5sum": "34a647616e8fb695d764a6e440a73e3a",
+            "md5sum": "6739a23844e68b44be38d84969b176f9",
             "path": "net.minecraft/index.json",
-            "remote_changed_timestamp": "Wed, 02 Aug 2023 18:02:25 GMT"
+            "remote_changed_timestamp": "Mon, 14 Aug 2023 03:02:09 GMT"
         },
         {
             "base": "meta",
@@ -2046,13 +2045,13 @@
         },
         {
             "base": "translations",
-            "current_age": 590,
-            "etag": "W/\"64cbec11-537e\"",
-            "last_changed_timestamp": 1691123968735,
+            "current_age": 80,
+            "etag": "W/\"64d9bead-55ad\"",
+            "last_changed_timestamp": 1691993461315,
             "max_age": 600,
-            "md5sum": "eaec6418c27b7143797524907418cfec",
+            "md5sum": "2d2f6d8e9a9f9ddad50f5e6ccd43a05c",
             "path": "index_v2.json",
-            "remote_changed_timestamp": "Thu, 03 Aug 2023 18:04:01 GMT"
+            "remote_changed_timestamp": "Mon, 14 Aug 2023 05:42:05 GMT"
         }
     ],
     "version": "1"

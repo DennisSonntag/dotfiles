@@ -81,7 +81,7 @@ function killport
 end
 
 # kill anything running on local host 3000
-function clean_mem
+function memc
 	doas killall nvim
 	doas killall nvim
 	doas kill (pgrep rust-analyzer)

@@ -3,11 +3,11 @@ return {
 	lazy = false,
 	priority = 1000,
 	opts = {
-		style = "storm", -- storm | moon | night | day
+		style = "storm",
 		transparent = true,
 		styles = {
-			sidebars = "transparent", -- style for sidebars, see below
-			floats = "transparent", -- style for floating windows
+			sidebars = "transparent",
+			floats = "transparent",
 		},
 		on_highlights = function(hl, _)
 			hl.CursorLineNr = {
@@ -26,7 +26,9 @@ return {
 			}
 		end,
 	},
-	init = function()
+	init = function(_, opts)
 		vim.cmd.colorscheme("tokyonight")
+		local colors = require("tokyonight.colors").setup(opts)
+		vim.api.nvim_set_hl(0, "BqfPreviewFloat", { bg = colors.bg })
 	end
 }

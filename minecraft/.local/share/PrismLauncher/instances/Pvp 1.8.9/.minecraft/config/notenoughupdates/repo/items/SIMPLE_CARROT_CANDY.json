@@ -1,0 +1,41 @@
+{
+  "itemid": "minecraft:carrot",
+  "displayname": "§aSimple Carrot Candy",
+  "nbttag": "{HideFlags:254,display:{Lore:[0:\"§8Brewing Ingredient\",1:\"§7Feeding carrot candy to your\",2:\"§7pets gives them a boost of exp\",3:\"§7but pets can only eat §a10\",4:\"§a§7candy in their lifetime so\",5:\"§7choose your candy wisely!\",6:\"\",7:\"§7Grants §a20,000 §7pet exp.\",8:\"\",9:\"§7§eRight click on your summoned\",10:\"§epet to feed it this candy!\",11:\"\",12:\"§a§lUNCOMMON\"],Name:\"§aSimple Carrot Candy\"},ExtraAttributes:{id:\"SIMPLE_CARROT_CANDY\"}}",
+  "damage": 0,
+  "lore": [
+    "§8Brewing Ingredient",
+    "§7Feeding carrot candy to your",
+    "§7pets gives them a boost of exp",
+    "§7but pets can only eat §a10",
+    "§a§7candy in their lifetime so",
+    "§7choose your candy wisely!",
+    "",
+    "§7Grants §a20,000 §7pet exp.",
+    "",
+    "§7§eRight click on your summoned",
+    "§epet to feed it this candy!",
+    "",
+    "§a§lUNCOMMON"
+  ],
+  "recipe": {
+    "A1": "CARROT_ITEM:64",
+    "A2": "CARROT_ITEM:64",
+    "A3": "CARROT_ITEM:64",
+    "B1": "CARROT_ITEM:64",
+    "B2": "CARROT_ITEM:64",
+    "B3": "CARROT_ITEM:64",
+    "C1": "CARROT_ITEM:64",
+    "C2": "CARROT_ITEM:64",
+    "C3": "CARROT_ITEM:64"
+  },
+  "internalname": "SIMPLE_CARROT_CANDY",
+  "clickcommand": "viewrecipe",
+  "modver": "2.1.1-PRE",
+  "crafttext": "Requires: Carrot II",
+  "infoType": "WIKI_URL",
+  "info": [
+    "https://hypixel-skyblock.fandom.com/wiki/Simple_Carrot_Candy",
+    "https://wiki.hypixel.net/Simple_Carrot_Candy"
+  ]
+}

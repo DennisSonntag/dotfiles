@@ -150,6 +150,11 @@ return { {
 					return item
 				end
 			},
+			-- experimental = {
+			-- 	ghost_text = {
+			-- 		hl_group = "CmpGhostText",
+			-- 	},
+			-- },
 			experimental = {
 				native_menu = false,
 				ghost_text = true,

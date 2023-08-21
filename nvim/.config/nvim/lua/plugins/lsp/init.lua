@@ -11,54 +11,70 @@ return {
 
 		},
 		---@class PluginLspOpts
-		opts         = {
-			-- options for vim.diagnostic.config()
-			diagnostics = {
-				underline = true,
-				update_in_insert = false,
-				virtual_text = {
-					spacing = 0,
-					source = "if_many",
-					prefix = "",
-				},
-				severity_sort = true,
-			},
-			servers = {
-				qml_lsp = {
-					cmd = { "qml-lsp" },
-					filetypes = { "qmljs", "qml" }
+		opts         = function()
+			local util = require("lspconfig/util")
 
+			return {
+				-- options for vim.diagnostic.config()
+				diagnostics = {
+					underline = true,
+					update_in_insert = false,
+					virtual_text = {
+						spacing = 0,
+						source = "if_many",
+						prefix = "",
+					},
+					severity_sort = true,
 				},
-				pyright = {
-					python = {
-						analysis = {
-							autoSearchPaths = true,
-							diagnosticMode = "workspace",
-							useLibraryCodeForTypes = true
-						}
-					}
-
-				},
-				lua_ls = {
-					settings = {
-						Lua = {
-							diagnostics = {
-								--Get the language server to recongnize the "vim" global
-								globals = { "vim" }
-							},
-							workspace = {
-								telemetry = { enable = false },
-								-- Make the server aware of the Neovim runtime files
-								library = vim.api.nvim_get_runtime_file("", true),
-								checkThirdParty = false
+				servers = {
+					gopls = {
+						cmd = { "gopls" },
+						filetypes = { "go", "gomod", "gowork", "gotmpl" },
+						root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+						settings = {
+							completeUnimported = true,
+							usePlaceholders = true,
+							analyses = {
+								unusedparams = true
 							}
 						}
-					}
+					},
+					qml_lsp = {
+						cmd = { "qml-lsp" },
+						filetypes = { "qmljs", "qml" }
+
+					},
+					pyright = {
+						python = {
+							analysis = {
+								autoSearchPaths = true,
+								diagnosticMode = "workspace",
+								useLibraryCodeForTypes = true
+							}
+						}
+
+					},
+					lua_ls = {
+						settings = {
+							Lua = {
+								diagnostics = {
+									--Get the language server to recongnize the "vim" global
+									globals = { "vim" }
+								},
+								workspace = {
+									telemetry = { enable = false },
+									-- Make the server aware of the Neovim runtime files
+									library = vim.api.nvim_get_runtime_file("", true),
+									checkThirdParty = false
+								}
+							}
+						}
+					},
 				},
-			},
 
 
-		},
+			}
+		end,
 
 		config       = function(_, opts)
 			vim.diagnostic.config(vim.deepcopy(opts.diagnostics))
@@ -87,6 +103,7 @@ return {
 			end
 
 
+
 			local servers = opts.servers
 
 			local function setup(server)
@@ -106,7 +123,7 @@ return {
 
 			local ensure_installed = { "astro", "clangd", "prismals", "bashls", "cssls", "html", "jsonls", "lua_ls",
 				"tailwindcss", "tsserver",
-				"pyright", "jdtls", "wgsl_analyzer" } ---@type string[]
+				"pyright", "jdtls", "wgsl_analyzer", "gopls" } ---@type string[]
 			for server, server_opts in pairs(servers) do
 				if server_opts then
 					server_opts = server_opts == true and {} or server_opts
@@ -181,8 +198,9 @@ return {
 							, { buffer = bufnr })
 
 						-- Hover actions
-						vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+						-- vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
 						-- Code action groups
+						--
 						-- vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
 					end,
 				},

@@ -1,5 +1,5 @@
-[22:39:41] [main/INFO]: Loading Minecraft 1.20.1 with Fabric Loader 0.14.21
-[22:39:42] [main/INFO]: Loading 96 mods:
+[00:00:54] [main/INFO]: Loading Minecraft 1.20.1 with Fabric Loader 0.14.21
+[00:00:54] [main/INFO]: Loading 89 mods:
 	- collective 6.57
 	- fabric-api 0.83.1+1.20.1
 	   |-- fabric-api-base 0.4.29+b04edc7a77
@@ -71,13 +71,10 @@
 	- java 17
 	- jei 14.0.0.11
 	- libipn 3.0.2
-	- litematica 0.15.0
-	- lithium 0.11.2
 	- logical_zoom 0.0.20
 	- malilib 0.16.0
 	   \-- fabric-resource-loader-v0 0.11.7+f7923f6d77
 	- minecraft 1.20.1
-	- modmenu 7.0.1
 	- mousewheelie 1.11.1+mc1.20-pre2
 	   |-- amecsapi 1.4.0+mc1.20-pre1
 	   |-- coat 1.0.0-beta.20+mc1.20-pre1
@@ -88,60 +85,46 @@
 	   |-- tweed4_tailor_coat 1.1.3+mc1.20-pre1
 	   |-- tweed4_tailor_lang_json_descriptions 1.1.0+mc1.20-pre1
 	   \-- tweed4_tailor_screen 1.1.4+mc1.20-pre1
-	- presencefootsteps 1.9.0
-	   \-- kirin 1.15.0
 	- reeses-sodium-options 1.5.1+mc1.20-build.74
 	- sodium 0.4.10+build.27
 	- sodium-extra 0.4.20+mc1.20-build.103
 	   |-- caffeineconfig 1.1.0+1.17
 	   \-- crowdin-translate 1.4+1.19.3
-	- sound_physics_remastered 1.20.1-1.1.1
-	- tweakeroo 0.17.0
-[22:39:42] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/fabricmc/sponge-mixin/0.12.5+mixin.0.8.5/sponge-mixin-0.12.5+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
-[22:39:42] [main/INFO]: Compatibility level set to JAVA_17
-[22:39:42] [main/INFO]: Loaded configuration file for Lithium: 115 options available, 0 override(s) found
-[22:39:42] [main/INFO]: Loaded configuration file for Sodium: 33 options available, 3 override(s) found
-[22:39:42] [main/INFO]: Loaded configuration file for Sodium Extra: 28 options available, 0 override(s) found
-[22:39:44] [main/WARN]: Force-disabling mixin 'features.entity.fast_render.MixinCuboid' as rule 'mixin.features.entity.fast_render' (added by mods [iris]) disables it and children
-[22:39:44] [main/WARN]: Force-disabling mixin 'features.entity.fast_render.MixinModelPart' as rule 'mixin.features.entity.fast_render' (added by mods [iris]) disables it and children
-[22:39:44] [main/WARN]: Force-disabling mixin 'features.gui.font.MixinGlyphRenderer' as rule 'mixin.features.gui.font' (added by mods [iris]) disables it and children
-[22:39:44] [main/WARN]: Force-disabling mixin 'features.sky.MixinWorldRenderer' as rule 'mixin.features.sky' (added by mods [iris]) disables it and children
-[22:39:51] [Datafixer Bootstrap/INFO]: 188 Datafixer optimizations took 383 milliseconds
-[22:39:52] [main/WARN]: @Redirect conflict. Skipping mixins.tweakeroo.json:MixinServerPlayNetworkHandler from mod tweakeroo->@Redirect::tweakeroo_removeHitPosCheck(Lnet/minecraft/class_243;Lnet/minecraft/class_243;)Lnet/minecraft/class_243; with priority 1005, already redirected by mixins.litematica.json:MixinServerPlayNetworkHandler from mod litematica->@Redirect::litematica_removeHitPosCheck(Lnet/minecraft/class_243;Lnet/minecraft/class_243;)Lnet/minecraft/class_243; with priority 1010
-[22:39:54] [Render thread/INFO]: Launching a new process to probe the system configuration!
-[22:39:54] [Render thread/INFO]: OpenGL Vendor: NVIDIA Corporation
-[22:39:54] [Render thread/INFO]: OpenGL Renderer: NVIDIA GeForce GTX 1060 3GB/PCIe/SSE2
-[22:39:54] [Render thread/INFO]: OpenGL Version: 3.3.0 NVIDIA 535.86.05
-[22:39:54] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[22:39:55] [Render thread/INFO]: Setting user: Dennis_mps
-[22:39:55] [Render thread/INFO]: Loading Collective version 6.57.
-[22:39:55] [Render thread/INFO]: Reloading reverb parameters
-[22:39:56] [Render thread/INFO]: [Indigo] Different rendering plugin detected; not applying Indigo.
-[22:39:56] [Render thread/INFO]: Sending ConfigManager...
-[22:39:56] [Render thread/INFO]: Sending ConfigManager took 1.729 ms
-[22:39:56] [Worker-Main-1/INFO]: Checking mod updates...
-[22:39:56] [Render thread/INFO]: Reloaded configs for mousewheelie (universal/highest)
-[22:39:56] [Render thread/INFO]: Backend library: LWJGL version 3.3.1 SNAPSHOT
-[22:39:57] [Worker-Main-1/INFO]: Update available for 'sound_physics_remastered@1.20.1-1.1.1', (-> fabric-1.20.1-1.1.2)
-[22:39:57] [Worker-Main-1/INFO]: Update available for 'fabric-api@0.83.1+1.20.1', (-> 0.86.1+1.20.1)
-[22:39:57] [Worker-Main-1/INFO]: Update available for 'reeses-sodium-options@1.5.1+mc1.20-build.74', (-> mc1.20.1-1.6.3)
-[22:39:57] [Worker-Main-1/INFO]: Update available for 'fabric-language-kotlin@1.9.5+kotlin.1.8.22', (-> 1.10.8+kotlin.1.9.0)
-[22:39:57] [Worker-Main-1/INFO]: Update available for 'modmenu@7.0.1', (-> 7.2.1)
-[22:39:57] [Worker-Main-1/INFO]: Update available for 'mousewheelie@1.11.1+mc1.20-pre2', (-> 1.12.0+mc1.20.1)
-[22:39:57] [Worker-Main-1/INFO]: Update available for 'collective@6.57', (-> 1.20.1-6.65-forge+fabric)
-[22:39:57] [Worker-Main-1/INFO]: Update available for 'sodium-extra@0.4.20+mc1.20-build.103', (-> mc1.20.1-0.4.25)
-[22:39:57] [ForkJoinPool.commonPool-worker-1/WARN]: [Iris Update Check] This version doesn't have an update index, skipping.
-[22:39:57] [Render thread/INFO]: Debug functionality is disabled.
-[22:39:57] [Render thread/INFO]: ARB_direct_state_access detected, enabling DSA.
-[22:39:57] [Render thread/INFO]: Shaders are disabled because enableShaders is set to false in iris.properties
-[22:39:57] [Render thread/INFO]: Shaders are disabled
-[22:39:57] [Render thread/WARN]: Missing metadata in pack file/xeadas-glass-bottom-boats-1-20.zip
-[22:39:57] [Render thread/WARN]: Static binding violation: PRIVATE @Overwrite method method_23182 in sodium.mixins.json:features.item.MixinItemRenderer from mod sodium cannot reduce visibiliy of PUBLIC target method, visibility will be upgraded.
-[22:39:57] [Render thread/INFO]: Hardware information:
-[22:39:57] [Render thread/INFO]: CPU: 4x AMD Ryzen 3 3200G with Radeon Vega Graphics
-[22:39:57] [Render thread/INFO]: GPU: NVIDIA GeForce GTX 1060 3GB/PCIe/SSE2 (Supports OpenGL 3.2.0 NVIDIA 535.86.05)
-[22:39:57] [Render thread/INFO]: OS: Linux (6.4.7-zen1-3-zen)
-[22:39:58] [Render thread/ERROR]: Error while loading the narrator
+[00:00:54] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/home/dennis/.dotfiles/minecraft/.local/share/PrismLauncher/libraries/net/fabricmc/sponge-mixin/0.12.5+mixin.0.8.5/sponge-mixin-0.12.5+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
+[00:00:54] [main/INFO]: Compatibility level set to JAVA_17
+[00:00:54] [main/INFO]: Loaded configuration file for Sodium: 33 options available, 3 override(s) found
+[00:00:55] [main/INFO]: Loaded configuration file for Sodium Extra: 28 options available, 0 override(s) found
+[00:00:55] [main/WARN]: Force-disabling mixin 'features.entity.fast_render.MixinCuboid' as rule 'mixin.features.entity.fast_render' (added by mods [iris]) disables it and children
+[00:00:55] [main/WARN]: Force-disabling mixin 'features.entity.fast_render.MixinModelPart' as rule 'mixin.features.entity.fast_render' (added by mods [iris]) disables it and children
+[00:00:55] [main/WARN]: Force-disabling mixin 'features.gui.font.MixinGlyphRenderer' as rule 'mixin.features.gui.font' (added by mods [iris]) disables it and children
+[00:00:55] [main/WARN]: Force-disabling mixin 'features.sky.MixinWorldRenderer' as rule 'mixin.features.sky' (added by mods [iris]) disables it and children
+[00:01:01] [Datafixer Bootstrap/INFO]: 188 Datafixer optimizations took 244 milliseconds
+[00:01:03] [Render thread/INFO]: Launching a new process to probe the system configuration!
+[00:01:04] [Render thread/INFO]: OpenGL Vendor: NVIDIA Corporation
+[00:01:04] [Render thread/INFO]: OpenGL Renderer: NVIDIA GeForce GTX 1060 3GB/PCIe/SSE2
+[00:01:04] [Render thread/INFO]: OpenGL Version: 3.3.0 NVIDIA 535.98
+[00:01:04] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[00:01:04] [Render thread/INFO]: Setting user: Dennis_mps
+[00:01:04] [Render thread/INFO]: Loading Collective version 6.57.
+[00:01:05] [Render thread/INFO]: [Indigo] Different rendering plugin detected; not applying Indigo.
+[00:01:05] [Render thread/INFO]: Sending ConfigManager...
+[00:01:05] [Render thread/INFO]: Sending ConfigManager took 1.797 ms
+[00:01:05] [Render thread/INFO]: Reloaded configs for mousewheelie (universal/highest)
+[00:01:05] [Render thread/WARN]: [Amecs API] Unknown keybinding identifier in Amecs API options file: key.modmenu.open_menu
+[00:01:05] [Render thread/WARN]: [Amecs API] Unknown keybinding identifier in Amecs API options file: key.presencefootsteps.settings
+[00:01:05] [Render thread/INFO]: Backend library: LWJGL version 3.3.1 SNAPSHOT
+[00:01:06] [Render thread/INFO]: Debug functionality is disabled.
+[00:01:06] [Render thread/INFO]: ARB_direct_state_access detected, enabling DSA.
+[00:01:06] [Render thread/INFO]: Shaders are disabled because enableShaders is set to false in iris.properties
+[00:01:06] [Render thread/INFO]: Shaders are disabled
+[00:01:06] [Render thread/WARN]: Missing metadata in pack file/xeadas-glass-bottom-boats-1-20.zip
+[00:01:06] [Render thread/WARN]: Static binding violation: PRIVATE @Overwrite method method_23182 in sodium.mixins.json:features.item.MixinItemRenderer from mod sodium cannot reduce visibiliy of PUBLIC target method, visibility will be upgraded.
+[00:01:06] [Render thread/INFO]: Hardware information:
+[00:01:06] [Render thread/INFO]: CPU: 4x AMD Ryzen 3 3200G with Radeon Vega Graphics
+[00:01:06] [Render thread/INFO]: GPU: NVIDIA GeForce GTX 1060 3GB/PCIe/SSE2 (Supports OpenGL 3.2.0 NVIDIA 535.98)
+[00:01:06] [Render thread/INFO]: OS: Linux (6.4.7-zen1-1-zen)
+[00:01:07] [ForkJoinPool.commonPool-worker-1/INFO]: [Iris Update Check] New update detected, showing update message!
+[00:01:07] [Render thread/ERROR]: Error while loading the narrator
 com.mojang.text2speech.Narrator$InitializeException: Failed to load library flite
 	at com.mojang.text2speech.NarratorLinux$FliteLibrary.loadNative(NarratorLinux.java:69) ~[text2speech-1.17.9.jar:?]
 	at com.mojang.text2speech.NarratorLinux.<init>(NarratorLinux.java:18) ~[text2speech-1.17.9.jar:?]
@@ -215,229 +198,239 @@ Native library (linux-x86-64/libflite.so) not found in resource path (/usr/share
 		at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:88) ~[NewLaunch.jar:?]
 		at org.prismlauncher.EntryPoint.listen(EntryPoint.java:126) ~[NewLaunch.jar:?]
 		at org.prismlauncher.EntryPoint.main(EntryPoint.java:71) ~[NewLaunch.jar:?]
-[22:39:58] [Render thread/INFO]: Reloading ResourceManager: vanilla, fabric (amecsapi, caffeineconfig, coat, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-containers-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-crash-report-info-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-events-lifecycle-v0, fabric-game-rule-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-tables-v1, fabric-message-api-v1, fabric-mining-level-api-v1, fabric-models-v0, fabric-networking-api-v1, fabric-networking-v0, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-renderer-registries-v1, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, jei, libipn, litematica, lithium, logical_zoom, malilib, modmenu, mousewheelie, presencefootsteps, reeses-sodium-options, sodium, sodium-extra, sound_physics_remastered, tweakeroo, tweed4_annotated, tweed4_base, tweed4_data, tweed4_data_hjson, tweed4_tailor_coat, tweed4_tailor_lang_json_descriptions, tweed4_tailor_screen), file/Stay_True_1.19.zip, file/VanillaTweaks1.20_Minimal.zip
-[22:39:58] [Render thread/INFO]: Creating pipeline for dimension OVERWORLD
-[22:39:58] [Worker-Main-3/INFO]: Found unifont_all_no_pua-15.0.06.hex, loading
-[22:39:59] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_axe.png, ignoring
-[22:39:59] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_boots.png, ignoring
-[22:39:59] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_chestplate.png, ignoring
-[22:39:59] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_helmet.png, ignoring
-[22:39:59] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_hoe.png, ignoring
-[22:39:59] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_leggings.png, ignoring
-[22:39:59] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_pickaxe.png, ignoring
-[22:39:59] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_shovel.png, ignoring
-[22:39:59] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_sword.png, ignoring
-[22:39:59] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/pack.png, ignoring
-[22:39:59] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/readme.txt, ignoring
-[22:39:59] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/netherite no gold/netherite_boots.png, ignoring
-[22:39:59] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/netherite no gold/netherite_chestplate.png, ignoring
-[22:39:59] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/netherite no gold/netherite_helmet.png, ignoring
-[22:39:59] [Worker-Main-2/WARN]: Invalid path in datapack: minecraft:textures/item/netherite no gold/netherite_leggings.png, ignoring
-[22:39:59] [Worker-Main-1/WARN]: Exception loading blockstate definition: 'minecraft:blockstates/cut_sandstone.json' in resourcepack: 'file/Stay_True_1.19.zip' for variant: 'axis=z': Unknown blockstate property: 'axis'
-[22:39:59] [Worker-Main-1/WARN]: Exception loading blockstate definition: 'minecraft:blockstates/cut_sandstone.json' in resourcepack: 'file/Stay_True_1.19.zip' for variant: 'axis=x': Unknown blockstate property: 'axis'
-[22:39:59] [Worker-Main-1/WARN]: Exception loading blockstate definition: 'minecraft:blockstates/cut_sandstone.json' in resourcepack: 'file/Stay_True_1.19.zip' for variant: 'axis=y': Unknown blockstate property: 'axis'
-[22:40:01] [Worker-Main-1/WARN]: Missing textures in model minecraft:grass_block#snowy=false:
+[00:01:07] [Render thread/INFO]: Reloading ResourceManager: vanilla, fabric (amecsapi, caffeineconfig, coat, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-containers-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-crash-report-info-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-events-lifecycle-v0, fabric-game-rule-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-tables-v1, fabric-message-api-v1, fabric-mining-level-api-v1, fabric-models-v0, fabric-networking-api-v1, fabric-networking-v0, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-renderer-registries-v1, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, iris, jei, libipn, logical_zoom, malilib, mousewheelie, reeses-sodium-options, sodium, sodium-extra, tweed4_annotated, tweed4_base, tweed4_data, tweed4_data_hjson, tweed4_tailor_coat, tweed4_tailor_lang_json_descriptions, tweed4_tailor_screen), file/Stay_True_1.19.zip, file/VanillaTweaks1.20_Minimal.zip
+[00:01:07] [Render thread/INFO]: Creating pipeline for dimension OVERWORLD
+[00:01:07] [Worker-Main-2/INFO]: Found unifont_all_no_pua-15.0.06.hex, loading
+[00:01:08] [Worker-Main-3/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_axe.png, ignoring
+[00:01:08] [Worker-Main-3/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_boots.png, ignoring
+[00:01:08] [Worker-Main-3/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_chestplate.png, ignoring
+[00:01:08] [Worker-Main-3/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_helmet.png, ignoring
+[00:01:08] [Worker-Main-3/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_hoe.png, ignoring
+[00:01:08] [Worker-Main-3/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_leggings.png, ignoring
+[00:01:08] [Worker-Main-3/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_pickaxe.png, ignoring
+[00:01:08] [Worker-Main-3/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_shovel.png, ignoring
+[00:01:08] [Worker-Main-3/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/netherite_sword.png, ignoring
+[00:01:08] [Worker-Main-3/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/pack.png, ignoring
+[00:01:08] [Worker-Main-3/WARN]: Invalid path in datapack: minecraft:textures/item/cool netherrite/readme.txt, ignoring
+[00:01:08] [Worker-Main-3/WARN]: Invalid path in datapack: minecraft:textures/item/netherite no gold/netherite_boots.png, ignoring
+[00:01:08] [Worker-Main-3/WARN]: Invalid path in datapack: minecraft:textures/item/netherite no gold/netherite_chestplate.png, ignoring
+[00:01:08] [Worker-Main-3/WARN]: Invalid path in datapack: minecraft:textures/item/netherite no gold/netherite_helmet.png, ignoring
+[00:01:08] [Worker-Main-3/WARN]: Invalid path in datapack: minecraft:textures/item/netherite no gold/netherite_leggings.png, ignoring
+[00:01:08] [Worker-Main-1/WARN]: Exception loading blockstate definition: 'minecraft:blockstates/cut_sandstone.json' in resourcepack: 'file/Stay_True_1.19.zip' for variant: 'axis=z': Unknown blockstate property: 'axis'
+[00:01:08] [Worker-Main-1/WARN]: Exception loading blockstate definition: 'minecraft:blockstates/cut_sandstone.json' in resourcepack: 'file/Stay_True_1.19.zip' for variant: 'axis=x': Unknown blockstate property: 'axis'
+[00:01:08] [Worker-Main-1/WARN]: Exception loading blockstate definition: 'minecraft:blockstates/cut_sandstone.json' in resourcepack: 'file/Stay_True_1.19.zip' for variant: 'axis=y': Unknown blockstate property: 'axis'
+[00:01:10] [Worker-Main-1/WARN]: Missing textures in model minecraft:grass_block#snowy=false:
     minecraft:textures/atlas/blocks.png:minecraft:block/dirts
-[22:40:01] [Render thread/WARN]: Missing sound for event: minecraft:item.goat_horn.play
-[22:40:01] [Render thread/WARN]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[22:40:01] [Render thread/INFO]: OpenAL initialized on device JACK Default
-[22:40:01] [Render thread/INFO]: Initializing Sound Physics
-[22:40:01] [Render thread/INFO]: EFX Extension recognized
-[22:40:01] [Render thread/INFO]: Max auxiliary sends: 4
-[22:40:01] [Render thread/INFO]: Aux slot 1 created
-[22:40:01] [Render thread/INFO]: Aux slot 2 created
-[22:40:01] [Render thread/INFO]: Aux slot 3 created
-[22:40:01] [Render thread/INFO]: Aux slot 4 created
-[22:40:01] [Render thread/INFO]: EFX ready
-[22:40:01] [Render thread/INFO]: Sound engine started
-[22:40:02] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
-[22:40:02] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[22:40:02] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[22:40:02] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[22:40:02] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[22:40:02] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[22:40:02] [Render thread/INFO]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[22:40:02] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[22:40:02] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[22:40:02] [Render thread/WARN]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[22:40:03] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[22:40:03] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[22:40:03] [Render thread/INFO]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[22:40:03] [Render thread/INFO]: Created: 256x128x0 jei:textures/atlas/gui.png-atlas
-[22:40:03] [Render thread/INFO]: Skipping non-result value minecraft:lantern=UNASSIGNED
-[22:40:03] [Render thread/INFO]: Skipping non-result value minecraft:soul_lantern=UNASSIGNED
-[22:40:03] [Render thread/INFO]: Reloaded configs for mousewheelie (client/smallest)
-[22:40:15] [Render thread/INFO]: Loaded 7 recipes
-[22:40:15] [Render thread/INFO]: Loaded 1271 advancements
-[22:40:15] [Render thread/INFO]: Reloaded configs for mousewheelie (server/smallest)
-[22:43:16] [Render thread/INFO]: Stopping JEI
-[22:43:16] [Render thread/INFO]: Stopping JEI
-[22:43:16] [Render thread/INFO]: Sending Runtime Unavailable...
-[22:43:16] [Render thread/INFO]: Stopping JEI GUI
-[22:43:16] [Render thread/INFO]: Sending Runtime Unavailable took 416.0 μs
-[22:43:16] [Render thread/INFO]: Applied 0 biome modifications to 0 of 64 new biomes in 2.128 ms
-[22:43:16] [Server thread/INFO]: Starting integrated minecraft server version 1.20.1
-[22:43:16] [Server thread/INFO]: Generating keypair
-[22:43:23] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[22:43:24] [Render thread/INFO]: Preparing spawn area: 0%
-[22:43:24] [Render thread/INFO]: Preparing spawn area: 0%
-[22:43:24] [Render thread/INFO]: Preparing spawn area: 0%
-[22:43:25] [Render thread/INFO]: Preparing spawn area: 0%
-[22:43:25] [Render thread/INFO]: Preparing spawn area: 0%
-[22:43:25] [Render thread/INFO]: Preparing spawn area: 0%
-[22:43:26] [Render thread/INFO]: Preparing spawn area: 1%
-[22:43:26] [Render thread/INFO]: Preparing spawn area: 2%
-[22:43:28] [Render thread/INFO]: Preparing spawn area: 3%
-[22:43:28] [Render thread/INFO]: Preparing spawn area: 3%
-[22:43:28] [Render thread/INFO]: Preparing spawn area: 3%
-[22:43:28] [Render thread/INFO]: Preparing spawn area: 3%
-[22:43:29] [Render thread/INFO]: Preparing spawn area: 4%
-[22:43:29] [Render thread/INFO]: Preparing spawn area: 5%
-[22:43:30] [Render thread/INFO]: Preparing spawn area: 6%
-[22:43:32] [Render thread/INFO]: Preparing spawn area: 6%
-[22:43:32] [Render thread/INFO]: Preparing spawn area: 6%
-[22:43:32] [Render thread/INFO]: Preparing spawn area: 6%
-[22:43:32] [Render thread/INFO]: Preparing spawn area: 6%
-[22:43:32] [Render thread/INFO]: Preparing spawn area: 7%
-[22:43:33] [Render thread/INFO]: Preparing spawn area: 8%
-[22:43:33] [Render thread/INFO]: Preparing spawn area: 9%
-[22:43:34] [Render thread/INFO]: Preparing spawn area: 10%
-[22:43:34] [Render thread/INFO]: Preparing spawn area: 12%
-[22:43:35] [Render thread/INFO]: Preparing spawn area: 14%
-[22:43:35] [Render thread/INFO]: Preparing spawn area: 16%
-[22:43:36] [Render thread/INFO]: Preparing spawn area: 18%
-[22:43:36] [Render thread/INFO]: Preparing spawn area: 20%
-[22:43:37] [Render thread/INFO]: Preparing spawn area: 22%
-[22:43:37] [Render thread/INFO]: Preparing spawn area: 24%
-[22:43:38] [Render thread/INFO]: Preparing spawn area: 27%
-[22:43:38] [Render thread/INFO]: Preparing spawn area: 29%
-[22:43:39] [Render thread/INFO]: Preparing spawn area: 31%
-[22:43:39] [Render thread/INFO]: Preparing spawn area: 33%
-[22:43:40] [Render thread/INFO]: Preparing spawn area: 36%
-[22:43:40] [Render thread/INFO]: Preparing spawn area: 38%
-[22:43:41] [Render thread/INFO]: Preparing spawn area: 42%
-[22:43:41] [Render thread/INFO]: Preparing spawn area: 44%
-[22:43:42] [Render thread/INFO]: Preparing spawn area: 46%
-[22:43:42] [Render thread/INFO]: Preparing spawn area: 49%
-[22:43:43] [Render thread/INFO]: Preparing spawn area: 52%
-[22:43:43] [Render thread/INFO]: Preparing spawn area: 55%
-[22:43:44] [Render thread/INFO]: Preparing spawn area: 56%
-[22:43:44] [Render thread/INFO]: Preparing spawn area: 59%
-[22:43:45] [Render thread/INFO]: Preparing spawn area: 63%
-[22:43:45] [Render thread/INFO]: Preparing spawn area: 67%
-[22:43:46] [Render thread/INFO]: Preparing spawn area: 68%
-[22:43:46] [Render thread/INFO]: Preparing spawn area: 72%
-[22:43:47] [Render thread/INFO]: Preparing spawn area: 74%
-[22:43:47] [Render thread/INFO]: Preparing spawn area: 77%
-[22:43:48] [Render thread/INFO]: Preparing spawn area: 81%
-[22:43:48] [Render thread/INFO]: Preparing spawn area: 83%
-[22:43:49] [Render thread/INFO]: Preparing spawn area: 85%
-[22:43:49] [Render thread/INFO]: Preparing spawn area: 88%
-[22:43:50] [Render thread/INFO]: Preparing spawn area: 90%
-[22:43:50] [Render thread/INFO]: Preparing spawn area: 93%
-[22:43:51] [Render thread/INFO]: Preparing spawn area: 95%
-[22:43:51] [Render thread/INFO]: Preparing spawn area: 99%
-[22:43:52] [Render thread/INFO]: Time elapsed: 28599 ms
-[22:43:52] [Server thread/INFO]: Reloaded configs for mousewheelie (universal/world)
-[22:43:52] [Server thread/INFO]: Changing view distance to 32, from 10
-[22:43:52] [Server thread/INFO]: Changing simulation distance to 8, from 0
-[22:43:52] [Server thread/INFO]: Dennis_mps[local:E:25dbeec6] logged in with entity id 319 at (4.5, 65.0, -1.5)
-[22:43:52] [Server thread/INFO]: Dennis_mps joined the game
-[22:43:53] [Render thread/INFO]: Started 1 worker threads
-[22:43:53] [Render thread/INFO]: Using 3 total BufferBuilder caches
-[22:43:53] [Render thread/WARN]: Unable to read property: west with value: false for blockstate: {Name:"minecraft:cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
-[22:43:53] [Render thread/WARN]: Unable to read property: east with value: false for blockstate: {Name:"minecraft:cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
-[22:43:53] [Render thread/WARN]: Unable to read property: south with value: false for blockstate: {Name:"minecraft:cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
-[22:43:53] [Render thread/WARN]: Unable to read property: north with value: false for blockstate: {Name:"minecraft:cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
-[22:43:53] [Render thread/WARN]: Unable to read property: west with value: false for blockstate: {Name:"minecraft:mossy_cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
-[22:43:53] [Render thread/WARN]: Unable to read property: east with value: false for blockstate: {Name:"minecraft:mossy_cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
-[22:43:53] [Render thread/WARN]: Unable to read property: south with value: false for blockstate: {Name:"minecraft:mossy_cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
-[22:43:53] [Render thread/WARN]: Unable to read property: north with value: false for blockstate: {Name:"minecraft:mossy_cobblestone_wall",Properties:{east:"false",north:"false",south:"false",up:"false",west:"false"}}
-[22:43:54] [Render thread/INFO]: Starting JEI...
-[22:43:54] [Render thread/INFO]: Registering item subtypes...
-[22:43:54] [Render thread/INFO]: Registering item subtypes took 1.786 ms
-[22:43:54] [Render thread/INFO]: Registering fluid subtypes...
-[22:43:54] [Render thread/INFO]: Registering fluid subtypes took 11.30 ms
-[22:43:54] [Render thread/INFO]: Registering ingredients...
-[22:43:54] [Render thread/INFO]: Registering ingredients: jei:minecraft took 67.25 milliseconds
-[22:43:54] [Render thread/INFO]: Registering ingredients took 69.30 ms
-[22:43:54] [Render thread/INFO]: Registering categories...
-[22:43:54] [Render thread/INFO]: Registering categories: jei:minecraft took 21.68 milliseconds
-[22:43:54] [Render thread/INFO]: Registering categories took 32.32 ms
-[22:43:54] [Render thread/INFO]: Registering vanilla category extensions...
-[22:43:54] [Render thread/INFO]: Registering vanilla category extensions took 1.890 ms
-[22:43:54] [Render thread/INFO]: Registering recipe catalysts...
-[22:43:54] [Render thread/INFO]: Registering recipe catalysts took 2.278 ms
-[22:43:54] [Render thread/INFO]: Registering advanced plugins...
-[22:43:54] [Render thread/INFO]: Registering advanced plugins took 3.198 ms
-[22:43:54] [Render thread/INFO]: Building recipe registry...
-[22:43:54] [Render thread/INFO]: Building recipe registry took 28.09 ms
-[22:43:54] [Render thread/INFO]: Registering recipes...
-[22:43:54] [Render thread/INFO]: Registering recipes: jei:minecraft took 599.7 milliseconds
-[22:43:54] [Render thread/INFO]: Registering recipes took 607.4 ms
-[22:43:54] [Render thread/INFO]: Registering recipes transfer handlers...
-[22:43:54] [Render thread/INFO]: Registering recipes transfer handlers took 2.839 ms
-[22:43:55] [Render thread/INFO]: Building runtime...
-[22:43:55] [Render thread/INFO]: Registering gui handlers...
-[22:43:55] [Render thread/INFO]: Registering gui handlers took 19.32 ms
-[22:43:55] [Render thread/INFO]: Registering Runtime...
-[22:43:55] [Render thread/INFO]: Starting JEI GUI
-[22:43:55] [Render thread/INFO]: Building ingredient list...
-[22:43:55] [Render thread/INFO]: Building ingredient list took 4.070 ms
-[22:43:55] [Render thread/INFO]: Building ingredient filter...
-[22:43:55] [Render thread/INFO]: Adding 1440 ingredients
-[22:43:55] [Render thread/INFO]: Added 1440 ingredients
-[22:43:55] [Render thread/INFO]: Building ingredient filter took 499.9 ms
-[22:43:55] [Render thread/INFO]: Registering Runtime: jei:fabric_gui took 678.8 milliseconds
-[22:43:55] [Render thread/INFO]: Registering Runtime took 684.3 ms
-[22:43:55] [Render thread/INFO]: Building runtime took 727.7 ms
-[22:43:55] [Render thread/INFO]: Sending Runtime...
-[22:43:55] [Render thread/INFO]: Sending Runtime took 10.62 ms
-[22:43:55] [Render thread/INFO]: Starting JEI took 1.591 s
-[22:43:57] [Render thread/INFO]: Loaded 2 advancements
-[22:44:01] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 2024ms or 40 ticks behind
-[22:44:17] [Render thread/INFO]: [System] [CHAT] Saved screenshot as 2023-08-03_22.44.17.png
-[22:44:18] [Render thread/INFO]: [System] [CHAT] Saved screenshot as 2023-08-03_22.44.17_2.png
-[22:44:24] [Render thread/INFO]: [System] [CHAT] Saved screenshot as 2023-08-03_22.44.23.png
-[22:44:29] [Server thread/INFO]: [Dennis_mps: Set own game mode to Spectator Mode]
-[22:44:29] [Render thread/INFO]: [System] [CHAT] Set own game mode to Spectator Mode
-[22:46:23] [Server thread/INFO]: Locating element minecraft:lush_caves took 211 ms
-[22:46:23] [Render thread/INFO]: [System] [CHAT] The nearest minecraft:lush_caves is at [-608, 12, 821] (1028 blocks away)
-[22:46:26] [Server thread/INFO]: [Dennis_mps: Teleported Dennis_mps to -607.500000, 12.000000, 821.500000]
-[22:46:26] [Render thread/INFO]: [System] [CHAT] Teleported Dennis_mps to -607.500000, 12.000000, 821.500000
-[22:46:30] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 3465ms or 69 ticks behind
-[22:47:09] [Server thread/INFO]: [Dennis_mps: Teleported Dennis_mps to 0.500000, 100.000000, 0.500000]
-[22:47:09] [Render thread/INFO]: [System] [CHAT] Teleported Dennis_mps to 0.500000, 100.000000, 0.500000
-[22:47:20] [Server thread/INFO]: Locating element minecraft:lush_caves took 184 ms
-[22:47:20] [Render thread/INFO]: [System] [CHAT] The nearest minecraft:lush_caves is at [-704, -21, 832] (1097 blocks away)
-[22:47:25] [Server thread/INFO]: [Dennis_mps: Teleported Dennis_mps to -703.500000, -21.000000, 832.500000]
-[22:47:25] [Render thread/INFO]: [System] [CHAT] Teleported Dennis_mps to -703.500000, -21.000000, 832.500000
-[22:50:46] [Server thread/INFO]: Saving and pausing game...
-[22:50:46] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[22:50:46] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[22:50:46] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[22:55:24] [Render thread/INFO]: Stopping JEI
-[22:55:24] [Render thread/INFO]: Stopping JEI
-[22:55:24] [Render thread/INFO]: Sending Runtime Unavailable...
-[22:55:24] [Render thread/INFO]: Stopping JEI GUI
-[22:55:24] [Render thread/INFO]: Sending Runtime Unavailable took 378.5 μs
-[22:55:24] [Server thread/INFO]: Dennis_mps lost connection: Disconnected
-[22:55:24] [Server thread/INFO]: Dennis_mps left the game
-[22:55:24] [Server thread/INFO]: Stopping singleplayer server as player logged out
-[22:55:24] [Server thread/INFO]: Stopping server
-[22:55:24] [Server thread/INFO]: Saving players
-[22:55:24] [Server thread/INFO]: Saving worlds
-[22:55:25] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[22:55:26] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[22:55:26] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[22:55:26] [Server thread/INFO]: ThreadedAnvilChunkStorage (New World): All chunks are saved
-[22:55:26] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[22:55:26] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[22:55:26] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
-[22:55:26] [Render thread/INFO]: Stopping worker threads
-[22:55:27] [Render thread/INFO]: Stopping!
-[22:55:27] [Render thread/INFO]: Stopping JEI
-[22:55:27] [Render thread/INFO]: Stopping JEI
-[22:55:27] [Render thread/INFO]: Sending Runtime Unavailable...
-[22:55:27] [Render thread/INFO]: Stopping JEI GUI
-[22:55:27] [Render thread/INFO]: Sending Runtime Unavailable took 256.3 μs
+[00:01:10] [Render thread/WARN]: Missing sound for event: minecraft:item.goat_horn.play
+[00:01:10] [Render thread/WARN]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[00:01:10] [Render thread/INFO]: OpenAL initialized on device JACK Default
+[00:01:10] [Render thread/INFO]: Sound engine started
+[00:01:10] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[00:01:10] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[00:01:10] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[00:01:10] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[00:01:10] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[00:01:10] [Render thread/INFO]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[00:01:10] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[00:01:10] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[00:01:10] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[00:01:11] [Render thread/WARN]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[00:01:11] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[00:01:11] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[00:01:11] [Render thread/INFO]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[00:01:11] [Render thread/INFO]: Created: 256x128x0 jei:textures/atlas/gui.png-atlas
+[00:01:11] [Render thread/INFO]: Reloaded configs for mousewheelie (client/smallest)
+[00:01:25] [Render thread/INFO]: Stopping JEI
+[00:01:25] [Render thread/INFO]: Stopping JEI
+[00:01:25] [Render thread/INFO]: Sending Runtime Unavailable...
+[00:01:25] [Render thread/INFO]: Stopping JEI GUI
+[00:01:25] [Render thread/INFO]: Sending Runtime Unavailable took 571.4 μs
+[00:01:25] [Render thread/INFO]: Connecting to mc.hypixel.net, 25565
+[00:01:26] [Render thread/INFO]: Started 1 worker threads
+[00:01:26] [Render thread/INFO]: [System] [CHAT] Iris 1.6.7 has released, with performance improvements and bug fixes, along with some minor features. Download it at: Modrinth
+[00:01:26] [Render thread/INFO]: Starting JEI...
+[00:01:26] [Render thread/INFO]: Registering item subtypes...
+[00:01:26] [Render thread/INFO]: Registering item subtypes took 1.913 ms
+[00:01:26] [Render thread/INFO]: Registering fluid subtypes...
+[00:01:26] [Render thread/INFO]: Registering fluid subtypes took 1.311 ms
+[00:01:26] [Render thread/INFO]: Registering ingredients...
+[00:01:26] [Render thread/INFO]: Registering ingredients: jei:minecraft took 37.84 milliseconds
+[00:01:26] [Render thread/INFO]: Registering ingredients took 38.50 ms
+[00:01:26] [Render thread/INFO]: Registering categories...
+[00:01:26] [Render thread/INFO]: Registering categories: jei:minecraft took 11.74 milliseconds
+[00:01:26] [Render thread/INFO]: Registering categories took 13.57 ms
+[00:01:26] [Render thread/INFO]: Registering vanilla category extensions...
+[00:01:26] [Render thread/INFO]: Registering vanilla category extensions took 1.788 ms
+[00:01:26] [Render thread/INFO]: Registering recipe catalysts...
+[00:01:26] [Render thread/INFO]: Registering recipe catalysts took 1.446 ms
+[00:01:26] [Render thread/INFO]: Registering advanced plugins...
+[00:01:26] [Render thread/INFO]: Registering advanced plugins took 301.0 μs
+[00:01:26] [Render thread/INFO]: Building recipe registry...
+[00:01:27] [Render thread/INFO]: Building recipe registry took 10.36 ms
+[00:01:27] [Render thread/INFO]: Registering recipes...
+[00:01:27] [Render thread/INFO]: Registering recipes: jei:minecraft took 220.1 milliseconds
+[00:01:27] [Render thread/INFO]: Registering recipes took 221.3 ms
+[00:01:27] [Render thread/INFO]: Registering recipes transfer handlers...
+[00:01:27] [Render thread/INFO]: Registering recipes transfer handlers took 6.011 ms
+[00:01:27] [Render thread/INFO]: Building runtime...
+[00:01:27] [Render thread/INFO]: Registering gui handlers...
+[00:01:27] [Render thread/INFO]: Registering gui handlers took 16.19 ms
+[00:01:27] [Render thread/INFO]: Registering Runtime...
+[00:01:27] [Render thread/INFO]: Starting JEI GUI
+[00:01:27] [Render thread/INFO]: Building ingredient list...
+[00:01:27] [Render thread/INFO]: Building ingredient list took 3.948 ms
+[00:01:27] [Render thread/INFO]: Building ingredient filter...
+[00:01:27] [Render thread/INFO]: Adding 1439 ingredients
+[00:01:27] [Render thread/INFO]: Added 1439 ingredients
+[00:01:27] [Render thread/INFO]: Building ingredient filter took 244.4 ms
+[00:01:27] [Render thread/INFO]: Registering Runtime: jei:fabric_gui took 334.0 milliseconds
+[00:01:27] [Render thread/INFO]: Registering Runtime took 335.3 ms
+[00:01:27] [Render thread/INFO]: Building runtime took 371.0 ms
+[00:01:27] [Render thread/INFO]: Sending Runtime...
+[00:01:27] [Render thread/INFO]: Sending Runtime took 259.5 μs
+[00:01:27] [Render thread/INFO]: Starting JEI took 721.4 ms
+[00:01:28] [Render thread/INFO]: [System] [CHAT]                                      
+[00:01:28] [Render thread/INFO]: [System] [CHAT]                          
+[00:01:28] [Render thread/INFO]: [System] [CHAT] §aYou have §b1 §aunclaimed leveling reward!
+[00:01:28] [Render thread/INFO]: [System] [CHAT] §eClick here to view it!
+[00:01:28] [Render thread/WARN]: Unknown custom packed identifier: badlion:mods
+[00:01:28] [Render thread/INFO]: [System] [CHAT] §b[MVP§f+§b] ifeoa§f §6joined the lobby!
+[00:01:38] [Render thread/INFO]: [System] [CHAT]  §b>§c>§a>§r §6[MVP§1++§6] zepyr§f §6joined the lobby! §a<§c<§b<
+[00:01:38] [Render thread/INFO]: [System] [CHAT]  §b>§c>§a>§r §6[MVP§0++§6] Praxzz§f §6joined the lobby! §a<§c<§b<
+[00:01:39] [Render thread/INFO]: [System] [CHAT] ✦ [VIP] fd8b found a ✰✰✰✰✰ Mystery Box!
+[00:01:43] [Render thread/ERROR]: Failed to recreate fishing hook on client. null (id: 29741483) is not a valid owner.
+[00:01:43] [Render thread/INFO]: [System] [CHAT] ✦ angle_tacos found a ✰✰✰✰✰ Mystery Box!
+[00:01:48] [Render thread/INFO]: [System] [CHAT] §b[MVP§a+§b] Smile_§f §6joined the lobby!
+[00:01:50] [Render thread/INFO]: [System] [CHAT]  §b>§c>§a>§r §6[MVP§0++§6] axstra§f §6joined the lobby! §a<§c<§b<
+[00:01:59] [Render thread/INFO]: [System] [CHAT] §7[23✫] §a[VIP] Kwya_Linn§f: 66
+[00:02:01] [Render thread/INFO]: [System] [CHAT] 
+[00:02:01] [Render thread/INFO]: [System] [CHAT] [WATCHDOG ANNOUNCEMENT]
+[00:02:01] [Render thread/INFO]: [System] [CHAT] Watchdog has banned 16,499 players in the last 7 days.
+[00:02:01] [Render thread/INFO]: [System] [CHAT] Staff have banned an additional 13,531 in the last 7 days.
+[00:02:01] [Render thread/INFO]: [System] [CHAT] Blacklisted modifications are a bannable offense!
+[00:02:01] [Render thread/INFO]: [System] [CHAT] 
+[00:02:02] [Render thread/INFO]: [System] [CHAT] ✦ 1rez7y found a ✰✰✰✰✰ Mystery Box!
+[00:02:02] [Render thread/INFO]: [System] [CHAT] §b[MVP§2+§b] Poosif§f §6joined the lobby!
+[00:02:06] [Render thread/INFO]: [System] [CHAT] ✦ [MVP+] chimescrimes found an Epic Wizard Wand Gadget in a Mystery Box!
+[00:02:07] [Render thread/INFO]: [System] [CHAT] §b[MVP§d+§b] NinjaTrunks§f §6joined the lobby!
+[00:02:08] [Render thread/INFO]: [System] [CHAT] §b[MVP§8+§b] xWilson§f §6joined the lobby!
+[00:02:10] [Render thread/INFO]: [System] [CHAT]  §b>§c>§a>§r §6[MVP§2++§6] 6law§f §6joined the lobby! §a<§c<§b<
+[00:02:10] [Render thread/INFO]: [System] [CHAT]  §b>§c>§a>§r §6[MVP§c++§6] vowzo§f §6joined the lobby! §a<§c<§b<
+[00:02:15] [Render thread/INFO]: Stopping JEI
+[00:02:15] [Render thread/INFO]: Stopping JEI
+[00:02:15] [Render thread/INFO]: Sending Runtime Unavailable...
+[00:02:15] [Render thread/INFO]: Stopping JEI GUI
+[00:02:15] [Render thread/INFO]: Sending Runtime Unavailable took 801.6 μs
+[00:02:15] [Render thread/INFO]: Stopping worker threads
+[00:06:48] [Render thread/INFO]: Stopping JEI
+[00:06:48] [Render thread/INFO]: Stopping JEI
+[00:06:48] [Render thread/INFO]: Sending Runtime Unavailable...
+[00:06:48] [Render thread/INFO]: Stopping JEI GUI
+[00:06:48] [Render thread/INFO]: Sending Runtime Unavailable took 407.0 μs
+[00:06:48] [Render thread/INFO]: Connecting to Dennyboy282.aternos.me, 25565
+[00:06:49] [Render thread/INFO]: Started 1 worker threads
+[00:06:49] [Render thread/INFO]: [System] [CHAT] Iris 1.6.7 has released, with performance improvements and bug fixes, along with some minor features. Download it at: Modrinth
+[00:06:49] [Render thread/INFO]: Stopping worker threads
+[00:06:49] [Render thread/INFO]: Started 1 worker threads
+[00:06:49] [Render thread/INFO]: Starting JEI...
+[00:06:49] [Render thread/INFO]: Registering item subtypes...
+[00:06:49] [Render thread/INFO]: Registering item subtypes took 252.6 μs
+[00:06:49] [Render thread/INFO]: Registering fluid subtypes...
+[00:06:49] [Render thread/INFO]: Registering fluid subtypes took 257.7 μs
+[00:06:49] [Render thread/INFO]: Registering ingredients...
+[00:06:49] [Render thread/INFO]: Registering ingredients took 6.207 ms
+[00:06:49] [Render thread/INFO]: Registering categories...
+[00:06:49] [Render thread/INFO]: Registering categories took 1.947 ms
+[00:06:49] [Render thread/INFO]: Registering vanilla category extensions...
+[00:06:49] [Render thread/INFO]: Registering vanilla category extensions took 195.1 μs
+[00:06:49] [Render thread/INFO]: Registering recipe catalysts...
+[00:06:49] [Render thread/INFO]: Registering recipe catalysts took 232.9 μs
+[00:06:49] [Render thread/INFO]: Registering advanced plugins...
+[00:06:49] [Render thread/INFO]: Registering advanced plugins took 266.8 μs
+[00:06:49] [Render thread/INFO]: Building recipe registry...
+[00:06:49] [Render thread/INFO]: Building recipe registry took 307.9 μs
+[00:06:49] [Render thread/INFO]: Registering recipes...
+[00:06:49] [Render thread/INFO]: Registering recipes: jei:minecraft took 142.8 milliseconds
+[00:06:49] [Render thread/INFO]: Registering recipes took 144.8 ms
+[00:06:49] [Render thread/INFO]: Registering recipes transfer handlers...
+[00:06:49] [Render thread/INFO]: Registering recipes transfer handlers took 677.0 μs
+[00:06:49] [Render thread/INFO]: Building runtime...
+[00:06:49] [Render thread/INFO]: Registering gui handlers...
+[00:06:49] [Render thread/INFO]: Registering gui handlers took 1.848 ms
+[00:06:49] [Render thread/INFO]: Registering Runtime...
+[00:06:49] [Render thread/INFO]: Starting JEI GUI
+[00:06:49] [Render thread/INFO]: Building ingredient list...
+[00:06:49] [Render thread/INFO]: Building ingredient list took 871.1 μs
+[00:06:49] [Render thread/INFO]: Building ingredient filter...
+[00:06:49] [Render thread/INFO]: Adding 1439 ingredients
+[00:06:50] [Render thread/INFO]: Added 1439 ingredients
+[00:06:50] [Render thread/INFO]: Building ingredient filter took 78.10 ms
+[00:06:50] [Render thread/INFO]: Registering Runtime: jei:fabric_gui took 107.6 milliseconds
+[00:06:50] [Render thread/INFO]: Registering Runtime took 108.6 ms
+[00:06:50] [Render thread/INFO]: Building runtime took 111.2 ms
+[00:06:50] [Render thread/INFO]: Sending Runtime...
+[00:06:50] [Render thread/INFO]: Sending Runtime took 1.205 ms
+[00:06:50] [Render thread/INFO]: Starting JEI took 273.7 ms
+[00:06:50] [Render thread/INFO]: Stopping JEI
+[00:06:50] [Render thread/INFO]: Stopping JEI
+[00:06:50] [Render thread/INFO]: Sending Runtime Unavailable...
+[00:06:50] [Render thread/INFO]: Stopping JEI GUI
+[00:06:50] [Render thread/INFO]: Sending Runtime Unavailable took 305.2 μs
+[00:06:50] [Render thread/INFO]: Starting JEI...
+[00:06:50] [Render thread/INFO]: Registering item subtypes...
+[00:06:50] [Render thread/INFO]: Registering item subtypes took 1.188 ms
+[00:06:50] [Render thread/INFO]: Registering fluid subtypes...
+[00:06:50] [Render thread/INFO]: Registering fluid subtypes took 813.0 μs
+[00:06:50] [Render thread/INFO]: Registering ingredients...
+[00:06:50] [Render thread/INFO]: Registering ingredients took 5.373 ms
+[00:06:50] [Render thread/INFO]: Registering categories...
+[00:06:50] [Render thread/INFO]: Registering categories took 653.6 μs
+[00:06:50] [Render thread/INFO]: Registering vanilla category extensions...
+[00:06:50] [Render thread/INFO]: Registering vanilla category extensions took 220.1 μs
+[00:06:50] [Render thread/INFO]: Registering recipe catalysts...
+[00:06:50] [Render thread/INFO]: Registering recipe catalysts took 1.297 ms
+[00:06:50] [Render thread/INFO]: Registering advanced plugins...
+[00:06:50] [Render thread/INFO]: Registering advanced plugins took 215.9 μs
+[00:06:50] [Render thread/INFO]: Building recipe registry...
+[00:06:50] [Render thread/INFO]: Building recipe registry took 548.0 μs
+[00:06:50] [Render thread/INFO]: Registering recipes...
+[00:06:50] [Render thread/INFO]: Registering recipes: jei:minecraft took 102.1 milliseconds
+[00:06:50] [Render thread/INFO]: Registering recipes took 102.8 ms
+[00:06:50] [Render thread/INFO]: Registering recipes transfer handlers...
+[00:06:50] [Render thread/INFO]: Registering recipes transfer handlers took 2.834 ms
+[00:06:50] [Render thread/INFO]: Building runtime...
+[00:06:50] [Render thread/INFO]: Registering gui handlers...
+[00:06:50] [Render thread/INFO]: Registering gui handlers took 1.484 ms
+[00:06:50] [Render thread/INFO]: Registering Runtime...
+[00:06:50] [Render thread/INFO]: Starting JEI GUI
+[00:06:50] [Render thread/INFO]: Building ingredient list...
+[00:06:50] [Render thread/INFO]: Building ingredient list took 685.4 μs
+[00:06:50] [Render thread/INFO]: Building ingredient filter...
+[00:06:50] [Render thread/INFO]: Adding 1439 ingredients
+[00:06:50] [Render thread/INFO]: Added 1439 ingredients
+[00:06:50] [Render thread/INFO]: Building ingredient filter took 59.83 ms
+[00:06:50] [Render thread/INFO]: Registering Runtime: jei:fabric_gui took 78.99 milliseconds
+[00:06:50] [Render thread/INFO]: Registering Runtime took 80.10 ms
+[00:06:50] [Render thread/INFO]: Building runtime took 83.15 ms
+[00:06:50] [Render thread/INFO]: Sending Runtime...
+[00:06:50] [Render thread/INFO]: Sending Runtime took 2.250 ms
+[00:06:50] [Render thread/INFO]: Starting JEI took 211.5 ms
+[00:06:50] [Render thread/INFO]: [System] [CHAT] Dennis_mps joined the game
+[00:06:50] [Render thread/INFO]: Loaded 2 advancements
+[00:06:57] [Render thread/INFO]: [System] [CHAT] Hyperzoink joined the game
+[00:07:06] [Render thread/INFO]: Loaded 5 advancements
+[00:08:00] [Render thread/INFO]: [System] [CHAT] Hyperzoink was slain by Dennis_mps
+[00:08:00] [Render thread/INFO]: Loaded 33 advancements
+[00:08:09] [Render thread/INFO]: Loaded 37 advancements
+[00:08:09] [Render thread/INFO]: Stopping JEI
+[00:08:09] [Render thread/INFO]: Stopping JEI
+[00:08:09] [Render thread/INFO]: Sending Runtime Unavailable...
+[00:08:09] [Render thread/INFO]: Stopping JEI GUI
+[00:08:09] [Render thread/INFO]: Sending Runtime Unavailable took 296.3 μs
+[00:08:09] [Render thread/INFO]: Stopping worker threads
+[00:08:11] [Render thread/INFO]: Stopping!
+[00:08:11] [Render thread/INFO]: Stopping JEI
+[00:08:11] [Render thread/INFO]: Stopping JEI
+[00:08:11] [Render thread/INFO]: Sending Runtime Unavailable...
+[00:08:11] [Render thread/INFO]: Stopping JEI GUI
+[00:08:11] [Render thread/INFO]: Sending Runtime Unavailable took 395.8 μs

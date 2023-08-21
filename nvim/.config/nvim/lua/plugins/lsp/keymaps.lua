@@ -17,10 +17,7 @@ function M.get()
 		{ "gI", function() require("telescope.builtin").lsp_implementations({ reuse_win = true }) end, desc = "Goto Implementation" },
 		{ "gy", function() require("telescope.builtin").lsp_type_definitions({ reuse_win = true }) end, desc = "Goto T[y]pe Definition" },
 		{ "K", vim.lsp.buf.hover, desc = "Hover" },
-		{ "<leader>lth", function()
-			vim.g.inlaytoggle = not vim.g.inlaytoggle
-			vim.lsp.inlay_hint(0, vim.g.inlaytoggle)
-     	end, desc = "toggle inlay" },
+		{ "<leader>lth", function() vim.lsp.inlay_hint(0, nil) end, desc = "toggle inlay hint" },
 		{ "gK", vim.lsp.buf.signature_help, desc = "Signature Help", has = "signatureHelp" },
 		{ "<c-k>", vim.lsp.buf.signature_help, mode = "i", desc = "Signature Help", has = "signatureHelp" },
 		{ "]d", M.diagnostic_goto(true), desc = "Next Diagnostic" },

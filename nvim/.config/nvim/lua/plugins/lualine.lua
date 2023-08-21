@@ -41,10 +41,6 @@ local mode_names = {
 	["t"] = "TERMINAL",
 }
 local icons = require("config.icons")
-local seperator = {
-	left = "",
-	right = "",
-}
 
 local statusline = {
 	mode = {
@@ -110,7 +106,6 @@ local statusline = {
 		update_in_insert = false,
 		always_visible = true,
 		color = { fg = "#BBC2CF", bg = "#000F10" },
-		separator = { right = seperator.right },
 	},
 
 	diff = {
@@ -123,7 +118,6 @@ local statusline = {
 		},
 		cond = hide_in_width,
 		color = { fg = "#BBC2CF", bg = "#000F10" },
-		separator = { left = seperator.left },
 	},
 	filename = {
 		"filename",
@@ -135,7 +129,6 @@ local statusline = {
 		},
 		cond = hide_in_width,
 		color = { fg = "#BBC2CF", bg = "#000F10" },
-		separator = { left = seperator.left },
 	},
 	branch = {
 		"branch",
@@ -146,7 +139,9 @@ local statusline = {
 
 	filesize = {
 		function()
-			local function format_file_size(file) local size = vim.fn.getfsize(file) if size <= 0 then
+			local function format_file_size(file)
+				local size = vim.fn.getfsize(file)
+				if size <= 0 then
 					return ""
 				end
 				local sufixes = { " B", " KB", " MB", " GB" }
@@ -171,7 +166,7 @@ local statusline = {
 		function()
 			local msg = "No Active Lsp"
 			local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-			local clients = vim.lsp.get_active_clients()
+			local clients = vim.lsp.get_clients()
 			if next(clients) == nil then
 				return msg
 			end
@@ -185,32 +180,11 @@ local statusline = {
 		end,
 
 		color = { fg = "#BBC2CF", bg = "#000F10" },
-		separator = { left = seperator.left, right = seperator.right },
-	},
-
-	progress = {
-		function()
-			local current_line = vim.fn.line "."
-			local total_lines = vim.fn.line "$"
-			local chars = { "__", "▁▁", "▂▂", "▃▃", "▄▄", "▅▅", "▆▆", "▇▇", "██" }
-			local line_ratio = current_line / total_lines
-			local index = math.ceil(line_ratio * #chars)
-			return chars[index]
-		end,
-		color = { fg = "#BBC2CF", bg = "#000F10" },
-		separator = { left = seperator.left },
-	},
-
-
-	total_lines = {
-		function()
-			return "%L"
-		end,
-		color = { fg = "#BBC2CF", bg = "#000F10" },
 	},
 
 	percent = {
 		"progress",
+		pading = 0,
 		color = { fg = "#BBC2CF", bg = "#000F10" },
 	},
 
@@ -218,59 +192,67 @@ local statusline = {
 		"filetype",
 		color = { fg = "#BBC2CF", bg = "#000F10" },
 		pading = 0,
-		separator = { left = seperator.left },
 	},
 
+	location = {
+		"location",
+		color = { fg = "#BBC2CF", bg = "#000F10" },
+		pading = 0,
+		icon = "󰓾 ",
+	},
 }
-
-
-
 
 return {
 	"nvim-lualine/lualine.nvim",
 	event = { "BufReadPost", "BufNewFile" },
-	opts = {
-		options = {
-			globalstatus = true,
-			icons_enabled = true,
-			component_separators = { left = "", right = "" },
-			section_separators = { left = "", right = "" },
-			theme = "tokyonight",
-			disabled_filetypes = {
-				"dashboard",
-				"lspinfo",
-				"mason",
-				"startuptime",
-				"checkhealth",
-				"help",
-				"TelescopePrompt",
-				"toggleterm",
-				"alpha",
-				"lazy",
-			},
-			always_divide_middle = true,
-		},
-		sections = {
-			lualine_a = {},
-			lualine_b = {},
-			lualine_c = {
-				statusline.branch,
-				statusline.mode,
-				statusline.diagnostics,
-				"%=",
-				statusline.lsp,
-			},
-			lualine_x = {
-				statusline.filename,
-				statusline.diff,
-				statusline.filetype,
-				statusline.filesize,
-				statusline.progress,
-				statusline.percent,
-				statusline.total_lines,
-			},
-			lualine_y = {},
-			lualine_z = {},
-		},
-	},
+	opts =
+		function()
+			local custom_nightfly = require("lualine.themes.nightfly")
+			custom_nightfly.normal.c.bg = "#000F10"
+
+
+			return {
+				options = {
+					globalstatus = true,
+					icons_enabled = true,
+					component_separators = { left = "", right = "" },
+					section_separators = { left = "", right = "" },
+					theme = custom_nightfly,
+					disabled_filetypes = {
+						"dashboard",
+						"lspinfo",
+						"mason",
+						"startuptime",
+						"checkhealth",
+						"help",
+						"TelescopePrompt",
+						"toggleterm",
+						"alpha",
+						"lazy",
+					},
+					always_divide_middle = true,
+				},
+				sections = {
+					lualine_a = {},
+					lualine_b = {},
+					lualine_c = {
+						statusline.mode,
+						statusline.diagnostics,
+						statusline.branch,
+						"%=",
+						statusline.lsp,
+					},
+					lualine_x = {
+						statusline.diff,
+						statusline.filetype,
+						statusline.filename,
+						statusline.filesize,
+						statusline.location,
+						statusline.percent,
+					},
+					lualine_y = {},
+					lualine_z = {},
+				},
+			}
+		end
 }

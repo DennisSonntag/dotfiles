@@ -110,4 +110,22 @@ vim.api.nvim_create_user_command("FormatHtml", function()
 	format_dat_html()
 end, {})
 
+vim.api.nvim_create_user_command("GotoPos", function(raw_args)
+	local args = {}
+	for _, arg in ipairs(raw_args['fargs']) do
+		table.insert(args, tonumber(arg))
+	end
 
+	if #args == 2 then
+		vim.cmd(string.format("cal cursor(%d, %d)", args[1], args[2]))
+	else
+		vim.ui.input({ prompt = 'Enter row and col: ' }, function(input)
+			local words = {}
+
+			for word in string.gmatch(input, "%S+") do
+				table.insert(words, tonumber(word))
+			end
+			vim.cmd(string.format("cal cursor(%d, %d)", words[1], words[2]))
+		end)
+	end
+end, { nargs = '*' })
