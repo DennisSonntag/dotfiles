@@ -7,8 +7,6 @@ return {
 			"mason.nvim",
 			"simrat39/rust-tools.nvim",
 			"williamboman/mason-lspconfig.nvim",
-			{ "folke/neodev.nvim", opts = {} },
-
 		},
 		---@class PluginLspOpts
 		opts         = function()
@@ -19,7 +17,7 @@ return {
 				diagnostics = {
 					underline = true,
 					update_in_insert = false,
-					virtual_text = {
+					virtual_text = {	
 						spacing = 0,
 						source = "if_many",
 						prefix = "",
@@ -139,8 +137,6 @@ return {
 			if have_mason then
 				mlsp.setup({ automatic_installation = false, ensure_installed = ensure_installed, handlers = { setup } })
 			end
-
-			require("neodev").setup()
 
 
 			local rt = require("rust-tools")

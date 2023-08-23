@@ -19,6 +19,4 @@ return {
 
 			return { { "-", oil.open } }
 		end
-	-- Optional dependencies
-	-- dependencies = { "nvim-tree/nvim-web-devicons" },
 }

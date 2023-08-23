@@ -1,9 +1,9 @@
 return {
 	"lukas-reineke/indent-blankline.nvim",
 	event = "BufRead",
-	ft = function(_, filetypes)
-		vim.print(filetypes)
-	end,
+	-- ft = function(_, filetypes)
+	-- 	vim.print(filetypes)
+	-- end,
 	opts = function()
 		local char = "▎"
 		return {
