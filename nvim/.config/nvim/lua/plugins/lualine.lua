@@ -108,17 +108,6 @@ local statusline = {
 		color = { fg = "#BBC2CF", bg = "#000F10" },
 	},
 
-	diff = {
-		"diff",
-		symbols = { added = icons.git.add, modified = icons.git.change, removed = icons.git.delete },
-		diff_color = {
-			added = { fg = "#98BE65" },
-			modified = { fg = "#7AA2F7" },
-			removed = { fg = "#DB4B4B" },
-		},
-		cond = hide_in_width,
-		color = { fg = "#BBC2CF", bg = "#000F10" },
-	},
 	filename = {
 		"filename",
 		symbols = { added = icons.git.add, modified = icons.git.change, removed = icons.git.delete },
@@ -135,31 +124,6 @@ local statusline = {
 		icons_enabled = true,
 		color = { fg = "#BBC2CF", bg = "#000F10" },
 		icon = " ",
-	},
-
-	filesize = {
-		function()
-			local function format_file_size(file)
-				local size = vim.fn.getfsize(file)
-				if size <= 0 then
-					return ""
-				end
-				local sufixes = { " B", " KB", " MB", " GB" }
-				local i = 1
-				while size > 1024 do
-					size = size / 1024
-					i = i + 1
-				end
-				return string.format("%.1f%s", size, sufixes[i])
-			end
-
-			local file = vim.fn.expand "%:p"
-			if string.len(file) == 0 then
-				return ""
-			end
-			return format_file_size(file)
-		end,
-		color = { fg = "#BBC2CF", bg = "#000F10" },
 	},
 
 	lsp = {
@@ -243,10 +207,8 @@ return {
 						statusline.lsp,
 					},
 					lualine_x = {
-						statusline.diff,
 						statusline.filetype,
 						statusline.filename,
-						statusline.filesize,
 						statusline.location,
 						statusline.percent,
 					},

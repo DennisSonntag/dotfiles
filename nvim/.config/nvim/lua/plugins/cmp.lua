@@ -1,4 +1,4 @@
-return { {
+return {
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
 	dependencies = {
@@ -43,9 +43,8 @@ return { {
 		end
 
 		return {
-			window = {
-				completion = cmp.config.window.bordered({ scrollbar = false, side_padding = 1 }),
-				documentation = cmp.config.window.bordered(),
+			view = {
+				entries = { name = "custom", selection_order = "near_cursor" },
 			},
 			snippet = {
 				expand = function(args)
@@ -150,11 +149,6 @@ return { {
 					return item
 				end
 			},
-			-- experimental = {
-			-- 	ghost_text = {
-			-- 		hl_group = "CmpGhostText",
-			-- 	},
-			-- },
 			experimental = {
 				native_menu = false,
 				ghost_text = true,
@@ -162,5 +156,4 @@ return { {
 
 		}
 	end,
-}
 }

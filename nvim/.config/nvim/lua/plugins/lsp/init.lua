@@ -17,7 +17,7 @@ return {
 				diagnostics = {
 					underline = true,
 					update_in_insert = false,
-					virtual_text = {	
+					virtual_text = {
 						spacing = 0,
 						source = "if_many",
 						prefix = "",

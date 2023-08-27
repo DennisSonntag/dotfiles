@@ -30,5 +30,10 @@ return {
 		vim.cmd.colorscheme("tokyonight")
 		local colors = require("tokyonight.colors").setup(opts)
 		vim.api.nvim_set_hl(0, "BqfPreviewFloat", { bg = colors.bg })
+
+		vim.api.nvim_set_hl(0, "Pmenu", { bg = "#2d3349" })
+		vim.api.nvim_set_hl(0, "CmpDocumentation", { bg = "#2d3349" })
+		vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#404866" })
 	end
 }
+

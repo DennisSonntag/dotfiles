@@ -15,6 +15,17 @@ return {
 				}
 			},
 			defaults = {
+				ripgrep_arguments = {
+					"rg",
+					"--color=never",
+					"--no-heading",
+					"--with-filename",
+					"--line-number",
+					"--column",
+					"--smart-case",
+				},
+				selection_strategy = "closest",
+				sorting_strategy = "descending",
 				layout_config = {
 					horizontal = {
 						preview_width = 0.55,
