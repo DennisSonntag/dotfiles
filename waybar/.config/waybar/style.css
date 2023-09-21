@@ -49,7 +49,9 @@ window#waybar {
 	transition: all 150ms ease-in-out;
 }
 
+
 #workspaces {
+	color: white;
 	background: @bgDark;
 	transition: none;
 }
@@ -60,13 +62,17 @@ window#waybar {
 
 #workspaces button {
 	transition: none;
-	color: #494949;
-	background: transparent;
+	color: #808080;
 	font-size: 16px;
 }
 
 #workspaces button.focused {
 	color: #9aedfe;
+}
+
+
+#workspaces button.empty {
+	color: #333333;
 }
 
 #workspaces button:hover {
@@ -142,6 +148,21 @@ window#waybar {
 	transition: none;
 	color: white;
 	background: #363b4f;
+}
+#custom-update {
+	padding-left: 6px;
+	padding-right: 6px;
+	transition: none;
+	color: white;
+	background: @bgMid;
+}
+
+#custom-update.update {
+	color: green;
+}
+
+#custom-update.noupdate {
+	color: red;
 }
 
 #custom-weather {
