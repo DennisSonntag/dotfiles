@@ -108,8 +108,10 @@ local statusline = {
 		color = { fg = "#BBC2CF", bg = "#000F10" },
 	},
 
+
 	filename = {
 		"filename",
+		path = 1,
 		symbols = { added = icons.git.add, modified = icons.git.change, removed = icons.git.delete },
 		diff_color = {
 			added = { fg = "#98BE65" },

@@ -114,6 +114,11 @@ alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
 
 function gfpull
 	git fetch --all
+	git reset --hard origin/main
+end
+
+function gfpullm
+	git fetch --all
 	git reset --hard origin/master
 end
 
@@ -148,6 +153,7 @@ function full-update
 end
 
 set PATH $HOME/.cargo/bin $PATH
+set PATH $HOME/.bun/bin $PATH
 set -x XDG_DATA_HOME $HOME/.local/share
 set -x XDG_CONFIG_HOME $HOME/.config
 set -x XDG_STATE_HOME $HOME/.local/state
@@ -221,3 +227,7 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

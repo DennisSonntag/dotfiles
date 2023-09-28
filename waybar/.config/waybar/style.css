@@ -56,9 +56,6 @@ window#waybar {
 	transition: none;
 }
 
-#workspaces button.active {
-	color: white;
-}
 
 #workspaces button {
 	transition: none;
@@ -75,11 +72,17 @@ window#waybar {
 	color: #333333;
 }
 
+#workspaces button.active {
+	color: white;
+}
+
 #workspaces button:hover {
+	
+	background: @bgDark;
 	transition: none;
 	box-shadow: inherit;
 	text-shadow: inherit;
-	color: #8a8b8c;
+	color: white;
 }
 
 #cpu {
