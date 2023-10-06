@@ -1,380 +1,262 @@
-[17:44:21] [Client thread/INFO]: Setting user: Dennis_mps
-[17:44:26] [Client thread/INFO]: LWJGL Version: 2.9.4
-[17:44:31] [Client thread/INFO]: Reloading ResourceManager: Essential (forge_1.8.9).jar, Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Essential, FMLFileResourcePack:Apec, FMLFileResourcePack:NotEnoughUpdates, FMLFileResourcePack:Patcher, FMLFileResourcePack:Scrollable Tooltips, FMLFileResourcePack:SkyblockAddons, FMLFileResourcePack:TimeChanger, NEU Repo Resources, MobPacket 1.8.9 1.4.zip, PacksHqx16.zip, FurfSkyReborn.zip, No_Block_Breaking_Particles_1.8.zip
-[17:44:33] [Client thread/ERROR]: Couldn't initialize twitch stream
-[17:44:33] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[17:44:33] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreaktopaz.ogg does not exist, cannot add it to event notenoughupdates:gemstoneTopaz.break
-[17:44:33] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreakruby.ogg does not exist, cannot add it to event notenoughupdates:gemstoneRuby.break
-[17:44:33] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreakamber.ogg does not exist, cannot add it to event notenoughupdates:gemstoneAmber.break
-[17:44:33] [Thread-18/INFO]: Initializing LWJGL OpenAL
-[17:44:33] [Thread-18/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[17:44:33] [Thread-18/INFO]: OpenAL initialized.
-[17:44:34] [Sound Library Loader/INFO]: Sound engine started
-[17:44:36] [Client thread/INFO]: Created: 16x16 textures-atlas
-[17:44:40] [Client thread/INFO]: Reloading ResourceManager: Essential (forge_1.8.9).jar, Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Essential, FMLFileResourcePack:Apec, FMLFileResourcePack:NotEnoughUpdates, FMLFileResourcePack:Patcher, FMLFileResourcePack:Scrollable Tooltips, FMLFileResourcePack:SkyblockAddons, FMLFileResourcePack:TimeChanger, NEU Repo Resources, MobPacket 1.8.9 1.4.zip, PacksHqx16.zip, FurfSkyReborn.zip, No_Block_Breaking_Particles_1.8.zip
-[17:44:40] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/books/dragon_tracer/dragon_tracer.png, java.io.FileNotFoundException
-[17:44:40] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/incomplete/left_to_right_incomplete_bar_green_end.png, java.io.FileNotFoundException
-[17:44:40] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/left_to_top.png, java.io.FileNotFoundException
-[17:44:40] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/complete/left_to_right_complete_bar_green_end.png, java.io.FileNotFoundException
-[17:44:40] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/grass_top.png, java.io.FileNotFoundException
-[17:44:40] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/level_60.png, java.io.FileNotFoundException
-[17:44:40] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/wardrobe/wardrobe.png, java.io.FileNotFoundException
-[17:44:40] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/top_to_right.png, java.io.FileNotFoundException
-[17:44:40] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/dungeons/tank.png, java.io.FileNotFoundException
-[17:44:41] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/mycelium_top.png, java.io.FileNotFoundException
-[17:44:41] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/partial/left_to_right_progress_bar_green_end.png, java.io.FileNotFoundException
-[17:44:41] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/grass_side.png, java.io.FileNotFoundException
-[17:44:41] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/dirt_podzol_top.png, java.io.FileNotFoundException
-[17:44:41] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/left_to_bottom.png, java.io.FileNotFoundException
-[17:44:41] [Client thread/ERROR]: Using missing texture, unable to load notenoughupdates:custom_skull_textures/missingno.png, java.io.FileNotFoundException
-[17:44:41] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/snow.png, java.io.FileNotFoundException
-[17:44:41] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/fast_travel/scrolls/blaze.png, java.io.FileNotFoundException
-[17:44:41] [Client thread/INFO]: Created: 2048x1024 custom_skull_textures-atlas
-[17:44:41] [Client thread/INFO]: SoundSystem shutting down...
-[17:44:41] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[17:44:41] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[17:44:41] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreaktopaz.ogg does not exist, cannot add it to event notenoughupdates:gemstoneTopaz.break
-[17:44:41] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreakruby.ogg does not exist, cannot add it to event notenoughupdates:gemstoneRuby.break
-[17:44:41] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreakamber.ogg does not exist, cannot add it to event notenoughupdates:gemstoneAmber.break
-[17:44:41] [Thread-23/INFO]: Initializing LWJGL OpenAL
-[17:44:41] [Thread-23/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[17:44:41] [Thread-23/INFO]: OpenAL initialized.
-[17:44:42] [Sound Library Loader/INFO]: Sound engine started
-[17:44:43] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/empty.png, java.io.FileNotFoundException
-[17:44:43] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/books/dragon_tracer/dragon_tracer.png, java.io.FileNotFoundException
-[17:44:43] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/incomplete/left_to_right_incomplete_bar_green_end.png, java.io.FileNotFoundException
-[17:44:43] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/left_to_top.png, java.io.FileNotFoundException
-[17:44:43] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/complete/left_to_right_complete_bar_green_end.png, java.io.FileNotFoundException
-[17:44:43] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/level_60.png, java.io.FileNotFoundException
-[17:44:43] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/wardrobe/wardrobe.png, java.io.FileNotFoundException
-[17:44:43] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/top_to_right.png, java.io.FileNotFoundException
-[17:44:43] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/dungeons/tank.png, java.io.FileNotFoundException
-[17:44:44] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/.png, java.io.FileNotFoundException
-[17:44:44] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/partial/left_to_right_progress_bar_green_end.png, java.io.FileNotFoundException
-[17:44:44] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/left_to_bottom.png, java.io.FileNotFoundException
-[17:44:44] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/fast_travel/scrolls/blaze.png, java.io.FileNotFoundException
-[17:44:44] [Client thread/INFO]: Created: 2048x2048 textures-atlas
-[17:44:50] [pool-13-thread-1/ERROR]: Signature is missing from textures payload
-[17:44:56] [Client thread/INFO]: Connecting to mc.hypixel.net, 25565
-[17:44:57] [Client thread/INFO]: [CHAT]                                      
-[17:44:57] [Client thread/INFO]: [CHAT]                          
-[17:44:57] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:57] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:57] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:57] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:57] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:58] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:58] [Client thread/INFO]: [CHAT] §aYou have §b1 §aunclaimed leveling reward!
-[17:44:58] [Client thread/INFO]: [CHAT] §eClick here to view it!
-[17:44:58] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:58] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:58] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:58] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:58] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:58] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:58] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:58] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:58] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:58] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:58] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:59] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:59] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:59] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:59] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:59] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:59] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:59] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:59] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:44:59] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:00] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:00] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:00] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:00] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:00] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:00] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:00] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:00] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:00] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:01] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:01] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:01] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:01] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:01] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:01] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:01] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:01] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:01] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:01] [Client thread/INFO]: [CHAT] §d[742✫] §c[§fYOUTUBE§c] BurnieGav§f: ./P Join BurnieGav | CHILL Bedwars Privates | twitch.tv/burniegav ( ﾟ◡ﾟ)/
-[17:45:02] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:02] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:02] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:02] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:02] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:02] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:02] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:02] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:02] [Client thread/INFO]: [CHAT] Sending to server mini71CU...
-[17:45:02] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:45:03] [Client thread/INFO]: [CHAT]        
-[17:45:03] [Client thread/INFO]: [CHAT] Since you've been away you earned 0 coins as interest in your personal bank account!
-[17:45:03] [Client thread/INFO]: [CHAT] -----------------------------------------------------
-[17:45:03] [Client thread/INFO]: [CHAT] You have just received 600,000 coins as interest in your co-op bank account!
-[17:45:03] [Client thread/INFO]: [CHAT] -----------------------------------------------------
-[17:45:03] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[17:45:03] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[17:45:04] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[17:45:04] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[17:45:04] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[17:45:04] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[17:45:05] [Client thread/INFO]: [CHAT] 
-[17:45:05] [Client thread/INFO]: [CHAT] Welcome to Hypixel SkyBlock!
-[17:45:05] [Client thread/INFO]: [CHAT] BONUS! Temporarily earn 5% more skill experience!
-[17:45:05] [Client thread/INFO]: [CHAT] 
-[17:45:05] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[17:45:05] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[17:45:05] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[17:45:05] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[17:45:06] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[17:45:06] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[17:45:06] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[17:45:06] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[17:45:06] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[17:45:06] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
-[17:45:07] [Client thread/INFO]: [CHAT] ALLOWANCE! You earned 50,000 coins!
-[17:45:30] [Client thread/INFO]: [CHAT] §e§ka§a>>   §aAchievement Unlocked: §6§6Cleanup Crew§a   <<§e§ka
-[17:45:30] [Client thread/INFO]: [CHAT] You can't put this item in there!
-[17:45:31] [Client thread/INFO]: [CHAT] You can't put this item in there!§7 (2)
-[17:45:32] [Client thread/INFO]: [CHAT] §e§ka§a>>   §aAchievement Unlocked: §6§6Climbing the Ranks I§a   <<§e§ka
-[17:46:03] [Client thread/INFO]: [CHAT] Mining Speed Boost is now available!
-[17:46:08] [Client thread/INFO]: [CHAT] You summoned your Silverfish!
-[17:46:47] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:46:47] [Client thread/INFO]: [CHAT]   §b§lSKILL LEVEL UP §3Taming §839➜§340
-[17:46:47] [Client thread/INFO]: [CHAT] 
-[17:46:47] [Client thread/INFO]: [CHAT]   REWARDS
-[17:46:47] [Client thread/INFO]: [CHAT]    §eZoologist 40
-[17:46:47] [Client thread/INFO]: [CHAT]      §7§fGain §839➜§a40%§f extra pet exp.
-[17:46:47] [Client thread/INFO]: [CHAT]    §7§8+§a1 §d♣ Pet Luck
-[17:46:47] [Client thread/INFO]: [CHAT]    §7§8+§645,000 §7Coins
-[17:46:47] [Client thread/INFO]: [CHAT]    §7§8+§b20 SkyBlock XP
-[17:46:47] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:46:49] [Client thread/INFO]: [CHAT]  
-[17:46:49] [Client thread/INFO]: [CHAT]                           SKYBLOCK LEVEL UP
-[17:46:49] [Client thread/INFO]: [CHAT]                               Level 56 ➡ [57]
-[17:46:49] [Client thread/INFO]: [CHAT]  
-[17:46:49] [Client thread/INFO]: [CHAT]                                   REWARDS
-[17:46:49] [Client thread/INFO]: [CHAT]                                  +5 ❤ Health
-[17:46:49] [Client thread/INFO]: [CHAT]  
-[17:46:52] [pool-13-thread-2/ERROR]: Signature is missing from textures payload
-[17:47:04] [pool-13-thread-2/ERROR]: Signature is missing from textures payload
-[17:47:41] [Client thread/INFO]: [CHAT] Your inventory is full!
-[17:47:42] [Client thread/INFO]: [CHAT] Your inventory does not have enough free space to add all items!
-[17:47:43] [Client thread/INFO]: [CHAT] Your inventory does not have enough free space to add all items!§7 (2)
-[17:49:00] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:49:00] [Client thread/INFO]: [CHAT]   §b§lSKILL LEVEL UP §3Mining §845➜§346
-[17:49:00] [Client thread/INFO]: [CHAT] 
-[17:49:00] [Client thread/INFO]: [CHAT]   REWARDS
-[17:49:00] [Client thread/INFO]: [CHAT]    §eSpelunker 46
-[17:49:00] [Client thread/INFO]: [CHAT]      §7§fGrants §a+§8180➜§a184§f §6☘ Mining Fortune§f,
-[17:49:00] [Client thread/INFO]: [CHAT]      §fwhich increases your chance for multiple ore drops.
-[17:49:00] [Client thread/INFO]: [CHAT]    §7§8+§a2 §a❈ Defense
-[17:49:00] [Client thread/INFO]: [CHAT]    §7§8+§6100,000 §7Coins
-[17:49:00] [Client thread/INFO]: [CHAT]    §7§8+§b20 SkyBlock XP
-[17:49:00] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:49:54] [Client thread/INFO]: [CHAT] Your inventory is full!
-[17:50:24] [Client thread/INFO]: [CHAT] Warping...
-[17:50:45] [Client thread/INFO]: [CHAT] Warping...§7 (2)
-[17:50:45] [Client thread/INFO]: [CHAT] Sending to server mini19AU...
-[17:50:46] [Client thread/INFO]: [CHAT]        
-[17:50:46] [Client thread/INFO]: [CHAT] Inventory full? Don't forget to check out your Storage inside the SkyBlock Menu!
-[17:50:47] [pool-13-thread-3/ERROR]: Textures payload has been tampered with (signature invalid)
-[17:50:49] [Client thread/INFO]: [CHAT] You may only use this command after 4s on the server!
-[17:50:52] [Client thread/INFO]: [CHAT] [Bazaar] Executing instant sell...
-[17:50:52] [Client thread/INFO]: [CHAT] [Bazaar] Sold 28x Enchanted Diamond Block for 5,650,971 coins!
-[17:50:52] [Client thread/INFO]: [CHAT] [Bazaar] Sold 118x Enchanted Diamond for 152,350 coins!
-[17:50:52] [Client thread/INFO]: [CHAT] [Bazaar] Sold 2,033x Diamond for 13,099 coins!
-[17:51:01] [Client thread/INFO]: [CHAT] [Bazaar] Executing instant sell...§7 (2)
-[17:51:01] [Client thread/INFO]: [CHAT] [Bazaar] Sold 64x Enchanted Melon for 17,395 coins!
-[17:51:01] [Client thread/INFO]: [CHAT] [Bazaar] Sold 307x Enchanted Diamond Block for 61,958,350 coins!
-[17:51:07] [Client thread/INFO]: [CHAT] Depositing coins...
-[17:51:07] [Client thread/INFO]: [CHAT] Deposited 14M coins! There's now 100M coins in the account!
-[17:51:11] [Client thread/INFO]: [CHAT] Depositing coins...§7 (2)
-[17:51:11] [Client thread/INFO]: [CHAT] You have deposited 19M coins! You now have 20M coins in your account!
-[17:51:19] [Client thread/INFO]: [CHAT] Sending to server mini100CB...
-[17:51:20] [Client thread/INFO]: [CHAT]        
-[17:51:27] [Client thread/INFO]: [CHAT] You summoned your Rabbit!
-[17:51:33] [Client thread/INFO]: [CHAT] Your Rabbit leveled up to level 95!
-[17:51:33] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:51:33] [Client thread/INFO]: [CHAT]   §b§lSKILL LEVEL UP §3Taming §840➜§341
-[17:51:33] [Client thread/INFO]: [CHAT] 
-[17:51:33] [Client thread/INFO]: [CHAT]   REWARDS
-[17:51:33] [Client thread/INFO]: [CHAT]    §eZoologist 41
-[17:51:33] [Client thread/INFO]: [CHAT]      §7§fGain §840➜§a41%§f extra pet exp.
-[17:51:33] [Client thread/INFO]: [CHAT]    §7§8+§a1 §d♣ Pet Luck
-[17:51:33] [Client thread/INFO]: [CHAT]    §7§8+§650,000 §7Coins
-[17:51:33] [Client thread/INFO]: [CHAT]    §7§8+§b20 SkyBlock XP
-[17:51:33] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:51:39] [Client thread/INFO]: [CHAT] Your Rabbit leveled up to level 96!
-[17:51:41] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:51:41] [Client thread/INFO]: [CHAT]   §b§lSKILL LEVEL UP §3Farming §837➜§338
-[17:51:41] [Client thread/INFO]: [CHAT] 
-[17:51:41] [Client thread/INFO]: [CHAT]   REWARDS§7 (2)
-[17:51:41] [Client thread/INFO]: [CHAT]    §eFarmhand 38
-[17:51:41] [Client thread/INFO]: [CHAT]      §7§fGrants §a+§8148➜§a152§f §6☘ Farming Fortune§f,
-[17:51:41] [Client thread/INFO]: [CHAT]      §fwhich increases your chance for multiple crops.
-[17:51:41] [Client thread/INFO]: [CHAT]    §7§8+§a5 §c❤ Health
-[17:51:41] [Client thread/INFO]: [CHAT]    §7§8+§635,000 §7Coins
-[17:51:41] [Client thread/INFO]: [CHAT]    §7§8+§b20 SkyBlock XP§7 (2)
-[17:51:41] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:51:41] [Client thread/INFO]: [CHAT] Your Rabbit leveled up to level 97!
-[17:51:43] [Client thread/INFO]: [CHAT] Your Rabbit leveled up to level 98!
-[17:51:45] [Client thread/INFO]: [CHAT] Your inventory does not have enough free space to add all items!
-[17:51:46] [Client thread/INFO]: [CHAT] Inventory full? Don't forget to check out your Storage inside the SkyBlock Menu!§7 (2)
-[17:52:17] [Client thread/INFO]: [CHAT] Your Rabbit leveled up to level 99!
-[17:52:19] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:52:19] [Client thread/INFO]: [CHAT]   §b§lSKILL LEVEL UP §3Farming §838➜§339
-[17:52:19] [Client thread/INFO]: [CHAT] 
-[17:52:19] [Client thread/INFO]: [CHAT]   REWARDS§7 (3)
-[17:52:19] [Client thread/INFO]: [CHAT]    §eFarmhand 39
-[17:52:19] [Client thread/INFO]: [CHAT]      §7§fGrants §a+§8152➜§a156§f §6☘ Farming Fortune§f,
-[17:52:19] [Client thread/INFO]: [CHAT]      §fwhich increases your chance for multiple crops.
-[17:52:19] [Client thread/INFO]: [CHAT]    §7§8+§a5 §c❤ Health§7 (2)
-[17:52:19] [Client thread/INFO]: [CHAT]    §7§8+§640,000 §7Coins
-[17:52:19] [Client thread/INFO]: [CHAT]    §7§8+§b20 SkyBlock XP§7 (3)
-[17:52:19] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:52:20] [Client thread/INFO]: [CHAT] Mining Speed Boost is now available!
-[17:52:21] [Client thread/INFO]: [CHAT] Your Rabbit leveled up to level 100!
-[17:52:21] [Client thread/INFO]: [CHAT] Your inventory does not have enough free space to add all items!§7 (2)
-[17:52:22] [Client thread/INFO]: [CHAT] Your inventory does not have enough free space to add all items!§7 (3)
-[17:52:23] [Client thread/INFO]: [CHAT] Your inventory does not have enough free space to add all items!§7 (4)
-[17:52:23] [Client thread/INFO]: [CHAT] Your inventory does not have enough free space to add all items!§7 (5)
-[17:52:32] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:52:32] [Client thread/INFO]: [CHAT]   §b§lSKILL LEVEL UP §3Taming §841➜§342
-[17:52:32] [Client thread/INFO]: [CHAT] 
-[17:52:32] [Client thread/INFO]: [CHAT]   REWARDS§7 (4)
-[17:52:32] [Client thread/INFO]: [CHAT]    §eZoologist 42
-[17:52:32] [Client thread/INFO]: [CHAT]      §7§fGain §841➜§a42%§f extra pet exp.
-[17:52:32] [Client thread/INFO]: [CHAT]    §7§8+§a1 §d♣ Pet Luck§7 (2)
-[17:52:32] [Client thread/INFO]: [CHAT]    §7§8+§660,000 §7Coins
-[17:52:32] [Client thread/INFO]: [CHAT]    §7§8+§b20 SkyBlock XP§7 (4)
-[17:52:32] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:52:34] [Client thread/INFO]: [CHAT]  
-[17:52:34] [Client thread/INFO]: [CHAT]                           SKYBLOCK LEVEL UP
-[17:52:34] [Client thread/INFO]: [CHAT]                               Level 57 ➡ [58]
-[17:52:34] [Client thread/INFO]: [CHAT]  
-[17:52:34] [Client thread/INFO]: [CHAT]                                   REWARDS
-[17:52:34] [Client thread/INFO]: [CHAT]                                  +5 ❤ Health
-[17:52:34] [Client thread/INFO]: [CHAT]  
-[17:52:38] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:52:38] [Client thread/INFO]: [CHAT]   §b§lSKILL LEVEL UP §3Farming §839➜§340
-[17:52:38] [Client thread/INFO]: [CHAT] 
-[17:52:38] [Client thread/INFO]: [CHAT]   REWARDS§7 (5)
-[17:52:38] [Client thread/INFO]: [CHAT]    §eFarmhand 40
-[17:52:38] [Client thread/INFO]: [CHAT]      §7§fGrants §a+§8156➜§a160§f §6☘ Farming Fortune§f,
-[17:52:38] [Client thread/INFO]: [CHAT]      §fwhich increases your chance for multiple crops.
-[17:52:38] [Client thread/INFO]: [CHAT]    §7§8+§a5 §c❤ Health§7 (3)
-[17:52:38] [Client thread/INFO]: [CHAT]    §7§8+§645,000 §7Coins
-[17:52:38] [Client thread/INFO]: [CHAT]    §7§8+§b20 SkyBlock XP§7 (5)
-[17:52:38] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:52:41] [Client thread/INFO]: [CHAT] Your inventory does not have enough free space to add all items!§7 (6)
-[17:53:00] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:53:00] [Client thread/INFO]: [CHAT]   §b§lSKILL LEVEL UP §3Farming §840➜§341
-[17:53:00] [Client thread/INFO]: [CHAT] 
-[17:53:00] [Client thread/INFO]: [CHAT]   REWARDS§7 (6)
-[17:53:00] [Client thread/INFO]: [CHAT]    §eFarmhand 41
-[17:53:00] [Client thread/INFO]: [CHAT]      §7§fGrants §a+§8160➜§a164§f §6☘ Farming Fortune§f,
-[17:53:00] [Client thread/INFO]: [CHAT]      §fwhich increases your chance for multiple crops.
-[17:53:00] [Client thread/INFO]: [CHAT]    §7§8+§a5 §c❤ Health§7 (4)
-[17:53:00] [Client thread/INFO]: [CHAT]    §7§8+§650,000 §7Coins
-[17:53:00] [Client thread/INFO]: [CHAT]    §7§8+§b20 SkyBlock XP§7 (6)
-[17:53:00] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:53:00] [Client thread/INFO]: [CHAT] Your inventory does not have enough free space to add all items!§7 (7)
-[17:53:03] [Client thread/INFO]: [CHAT] Your inventory does not have enough free space to add all items!§7 (8)
-[17:53:03] [Client thread/INFO]: [CHAT] Your inventory is full!
-[17:53:42] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:53:42] [Client thread/INFO]: [CHAT]   §b§lSKILL LEVEL UP §3Taming §842➜§343
-[17:53:42] [Client thread/INFO]: [CHAT] 
-[17:53:42] [Client thread/INFO]: [CHAT]   REWARDS§7 (7)
-[17:53:42] [Client thread/INFO]: [CHAT]    §eZoologist 43
-[17:53:42] [Client thread/INFO]: [CHAT]      §7§fGain §842➜§a43%§f extra pet exp.
-[17:53:42] [Client thread/INFO]: [CHAT]    §7§8+§a1 §d♣ Pet Luck
-[17:53:42] [Client thread/INFO]: [CHAT]    §7§8+§670,000 §7Coins
-[17:53:42] [Client thread/INFO]: [CHAT]    §7§8+§b20 SkyBlock XP§7 (7)
-[17:53:42] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:53:45] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:53:45] [Client thread/INFO]: [CHAT]   §b§lSKILL LEVEL UP §3Farming §841➜§342
-[17:53:45] [Client thread/INFO]: [CHAT] 
-[17:53:45] [Client thread/INFO]: [CHAT]   REWARDS§7 (8)
-[17:53:45] [Client thread/INFO]: [CHAT]    §eFarmhand 42
-[17:53:45] [Client thread/INFO]: [CHAT]      §7§fGrants §a+§8164➜§a168§f §6☘ Farming Fortune§f,
-[17:53:45] [Client thread/INFO]: [CHAT]      §fwhich increases your chance for multiple crops.
-[17:53:45] [Client thread/INFO]: [CHAT]    §7§8+§a5 §c❤ Health§7 (5)
-[17:53:45] [Client thread/INFO]: [CHAT]    §7§8+§660,000 §7Coins
-[17:53:45] [Client thread/INFO]: [CHAT]    §7§8+§b20 SkyBlock XP§7 (8)
-[17:53:45] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-[17:54:14] [Client thread/INFO]: [CHAT] Your inventory is full!
-[17:54:18] [Client thread/INFO]: [CHAT] Warping...
-[17:54:18] [Client thread/INFO]: [CHAT] Sending to server mini30CU...
-[17:54:18] [Client thread/INFO]: [CHAT]        
-[17:54:19] [Client thread/INFO]: [CHAT] Inventory full? Don't forget to check out your Storage inside the SkyBlock Menu!
-[17:54:20] [pool-13-thread-4/ERROR]: Textures payload has been tampered with (signature invalid)
-[17:54:21] [Client thread/INFO]: [CHAT] You may only use this command after 4s on the server!
-[17:54:21] [Client thread/INFO]: [CHAT] You may only use this command after 4s on the server!§7 (2)
-[17:54:26] [Client thread/INFO]: [CHAT] [Bazaar] Executing instant sell...
-[17:54:26] [Client thread/INFO]: [CHAT] [Bazaar] Sold 1,920x Enchanted Melon Block for 96,096,000 coins!
-[17:54:26] [Client thread/INFO]: [CHAT] [Bazaar] Sold 86x Diamond for 559.0 coins!
-[17:54:26] [Client thread/INFO]: [CHAT] [Bazaar] Sold 117x Melon for 152.1 coins!
-[17:54:26] [Client thread/INFO]: [CHAT] [Bazaar] Sold 1x Enchanted Melon for 271.8 coins!
-[17:54:34] [Client thread/INFO]: [CHAT] Slow down!
-[17:55:03] [Client thread/INFO]: [CHAT] [Bazaar] Executing instant sell...§7 (2)
-[17:55:04] [Client thread/INFO]: [CHAT] [Bazaar] Sold 1,438x Enchanted Melon Block for 71,971,900 coins!
-[17:55:04] [Client thread/INFO]: [CHAT] [Bazaar] Sold 225x Diamond for 1,462.5 coins!
-[17:55:17] [Client thread/INFO]: [CHAT] Sending to server mini217D...
-[17:55:17] [Client thread/INFO]: [CHAT]        
-[17:55:18] [pool-13-thread-4/ERROR]: Signature is missing from textures payload
-[17:55:26] [pool-13-thread-4/ERROR]: Signature is missing from textures payload
-[17:56:17] [Client thread/INFO]: [CHAT] Mining Speed Boost is now available!
-[17:56:21] [pool-13-thread-4/ERROR]: Signature is missing from textures payload
-[17:57:06] [Client thread/INFO]: [CHAT] Warping...
-[17:57:06] [Client thread/INFO]: [CHAT] Sending to server mini78D...
-[17:57:06] [Client thread/INFO]: [CHAT]        
-[17:57:07] [pool-13-thread-4/ERROR]: Textures payload has been tampered with (signature invalid)
-[17:57:19] [Client thread/INFO]: [CHAT] §8[§711§8] §a[VIP] zertiii_§f: what is faster travel method than grapling hook
-[17:57:23] [Client thread/INFO]: [CHAT] Sending to server mini27AH...
-[17:57:23] [Client thread/INFO]: [CHAT]        
-[17:57:24] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:57:24] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:57:24] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:57:24] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
-[17:57:49] [pool-13-thread-4/ERROR]: Signature is missing from textures payload
-[17:58:03] [pool-13-thread-4/ERROR]: Signature is missing from textures payload
-[17:58:23] [Client thread/INFO]: [CHAT] Mining Speed Boost is now available!
-[17:58:44] [Client thread/INFO]: [CHAT] Whow! Slow down there!
-[17:58:51] [Client thread/INFO]: [CHAT] 
-[17:58:51] [Client thread/INFO]: [CHAT]  NEW AREA DISCOVERED!
-[17:58:51] [Client thread/INFO]: [CHAT]   ⏣ Desert Mountain
-[17:58:51] [Client thread/INFO]: [CHAT] 
-[17:58:51] [Client thread/INFO]: [CHAT]    ■ Find Jake.
-[17:58:51] [Client thread/INFO]: [CHAT] 
-[17:59:10] [Client thread/INFO]: [CHAT] There are blocks in the way!
-[17:59:10] [Client thread/INFO]: [CHAT] There are blocks in the way!§7 (2)
-[17:59:10] [Client thread/INFO]: [CHAT] There are blocks in the way!§7 (3)
-[17:59:38] [Client thread/INFO]: [CHAT] 
-[17:59:38] [Client thread/INFO]: [CHAT]  NEW AREA DISCOVERED!§7 (2)
-[17:59:38] [Client thread/INFO]: [CHAT]   ⏣ Trapper's Den
-[17:59:38] [Client thread/INFO]: [CHAT] 
-[17:59:38] [Client thread/INFO]: [CHAT]    ■ Complete hunting tasks.
-[17:59:38] [Client thread/INFO]: [CHAT]    ■ Browse animal varieties.
-[17:59:38] [Client thread/INFO]: [CHAT]    ■ Purchase new minions!
-[17:59:38] [Client thread/INFO]: [CHAT] 
-[17:59:53] [Client thread/INFO]: [CHAT] You don't have the required items!
-[18:01:54] [Client thread/INFO]: [CHAT] 
-[18:01:54] [Client thread/INFO]: [CHAT] [WATCHDOG ANNOUNCEMENT]
-[18:01:54] [Client thread/INFO]: [CHAT] Watchdog has banned 18,116 players in the last 7 days.
-[18:01:54] [Client thread/INFO]: [CHAT] Staff have banned an additional 12,820 in the last 7 days.
-[18:01:54] [Client thread/INFO]: [CHAT] Blacklisted modifications are a bannable offense!
-[18:01:54] [Client thread/INFO]: [CHAT] 
-[18:03:18] [pool-13-thread-5/ERROR]: Signature is missing from textures payload
-[18:03:19] [pool-13-thread-5/ERROR]: Signature is missing from textures payload
-[18:03:20] [Client thread/INFO]: Stopping!
-[18:03:20] [Client thread/INFO]: SoundSystem shutting down...
-[18:03:20] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[12:04:50] [Client thread/INFO]: Setting user: Dennis_mps
+[12:04:56] [Client thread/INFO]: LWJGL Version: 2.9.4
+[12:05:02] [Client thread/INFO]: Reloading ResourceManager: Essential (forge_1.8.9).jar, Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Essential, FMLFileResourcePack:Apec, FMLFileResourcePack:NotEnoughUpdates, FMLFileResourcePack:Patcher, FMLFileResourcePack:Scrollable Tooltips, FMLFileResourcePack:SkyblockAddons, FMLFileResourcePack:TimeChanger, NEU Repo Resources, MobPacket 1.8.9 1.4.zip, PacksHqx16.zip, FurfSkyReborn.zip, No_Block_Breaking_Particles_1.8.zip
+[12:05:05] [Client thread/ERROR]: Couldn't initialize twitch stream
+[12:05:05] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[12:05:05] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreaktopaz.ogg does not exist, cannot add it to event notenoughupdates:gemstoneTopaz.break
+[12:05:05] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreakruby.ogg does not exist, cannot add it to event notenoughupdates:gemstoneRuby.break
+[12:05:05] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreakamber.ogg does not exist, cannot add it to event notenoughupdates:gemstoneAmber.break
+[12:05:05] [Thread-18/INFO]: Initializing LWJGL OpenAL
+[12:05:05] [Thread-18/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[12:05:06] [Thread-18/INFO]: OpenAL initialized.
+[12:05:06] [Sound Library Loader/INFO]: Sound engine started
+[12:05:09] [Client thread/INFO]: Created: 16x16 textures-atlas
+[12:05:14] [Client thread/INFO]: Reloading ResourceManager: Essential (forge_1.8.9).jar, Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Essential, FMLFileResourcePack:Apec, FMLFileResourcePack:NotEnoughUpdates, FMLFileResourcePack:Patcher, FMLFileResourcePack:Scrollable Tooltips, FMLFileResourcePack:SkyblockAddons, FMLFileResourcePack:TimeChanger, NEU Repo Resources, MobPacket 1.8.9 1.4.zip, PacksHqx16.zip, FurfSkyReborn.zip, No_Block_Breaking_Particles_1.8.zip
+[12:05:14] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/books/dragon_tracer/dragon_tracer.png, java.io.FileNotFoundException
+[12:05:14] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/incomplete/left_to_right_incomplete_bar_green_end.png, java.io.FileNotFoundException
+[12:05:14] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/left_to_top.png, java.io.FileNotFoundException
+[12:05:14] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/complete/left_to_right_complete_bar_green_end.png, java.io.FileNotFoundException
+[12:05:14] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/grass_top.png, java.io.FileNotFoundException
+[12:05:14] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/level_60.png, java.io.FileNotFoundException
+[12:05:14] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/wardrobe/wardrobe.png, java.io.FileNotFoundException
+[12:05:14] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/top_to_right.png, java.io.FileNotFoundException
+[12:05:14] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/dungeons/tank.png, java.io.FileNotFoundException
+[12:05:14] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/mycelium_top.png, java.io.FileNotFoundException
+[12:05:14] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/partial/left_to_right_progress_bar_green_end.png, java.io.FileNotFoundException
+[12:05:14] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/grass_side.png, java.io.FileNotFoundException
+[12:05:14] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/dirt_podzol_top.png, java.io.FileNotFoundException
+[12:05:15] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/left_to_bottom.png, java.io.FileNotFoundException
+[12:05:15] [Client thread/ERROR]: Using missing texture, unable to load notenoughupdates:custom_skull_textures/missingno.png, java.io.FileNotFoundException
+[12:05:15] [Client thread/ERROR]: Using missing texture, unable to load minecraft:custom_skull_textures/blocks/snow.png, java.io.FileNotFoundException
+[12:05:15] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/fast_travel/scrolls/blaze.png, java.io.FileNotFoundException
+[12:05:15] [Client thread/INFO]: Created: 2048x1024 custom_skull_textures-atlas
+[12:05:15] [Client thread/INFO]: SoundSystem shutting down...
+[12:05:15] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[12:05:15] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[12:05:16] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreaktopaz.ogg does not exist, cannot add it to event notenoughupdates:gemstoneTopaz.break
+[12:05:16] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreakruby.ogg does not exist, cannot add it to event notenoughupdates:gemstoneRuby.break
+[12:05:16] [Client thread/WARN]: File notenoughupdates:sounds/gemstonebreakamber.ogg does not exist, cannot add it to event notenoughupdates:gemstoneAmber.break
+[12:05:16] [Thread-23/INFO]: Initializing LWJGL OpenAL
+[12:05:16] [Thread-23/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[12:05:16] [Thread-23/INFO]: OpenAL initialized.
+[12:05:16] [Sound Library Loader/INFO]: Sound engine started
+[12:05:19] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/empty.png, java.io.FileNotFoundException
+[12:05:19] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/books/dragon_tracer/dragon_tracer.png, java.io.FileNotFoundException
+[12:05:19] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/incomplete/left_to_right_incomplete_bar_green_end.png, java.io.FileNotFoundException
+[12:05:19] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/left_to_top.png, java.io.FileNotFoundException
+[12:05:19] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/complete/left_to_right_complete_bar_green_end.png, java.io.FileNotFoundException
+[12:05:19] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/level_60.png, java.io.FileNotFoundException
+[12:05:19] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/wardrobe/wardrobe.png, java.io.FileNotFoundException
+[12:05:19] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/top_to_right.png, java.io.FileNotFoundException
+[12:05:19] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/dungeons/tank.png, java.io.FileNotFoundException
+[12:05:19] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/.png, java.io.FileNotFoundException
+[12:05:19] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skyblock_profile/skyblock_levels/partial/left_to_right_progress_bar_green_end.png, java.io.FileNotFoundException
+[12:05:19] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/properties/skyblock_menu/your_skills/skill_specific/tank/left_to_bottom.png, java.io.FileNotFoundException
+[12:05:19] [Client thread/ERROR]: Using missing texture, unable to load minecraft:mcpatcher/cit/ui/fast_travel/scrolls/blaze.png, java.io.FileNotFoundException
+[12:05:20] [Client thread/INFO]: Created: 2048x2048 textures-atlas
+[12:05:27] [pool-13-thread-1/ERROR]: Signature is missing from textures payload
+[12:05:31] [Client thread/INFO]: Connecting to mc.hypixel.net, 25565
+[12:05:32] [Client thread/INFO]: [CHAT]                                      
+[12:05:32] [Client thread/INFO]: [CHAT]                          
+[12:05:33] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:33] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:33] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:33] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:33] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:33] [Client thread/INFO]: [CHAT] §aYou have §b1 §aunclaimed leveling reward!
+[12:05:33] [Client thread/INFO]: [CHAT] §eClick here to view it!
+[12:05:33] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:33] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:33] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:33] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:33] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:33] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:33] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:33] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:33] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:33] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:34] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:34] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:34] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:34] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:34] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:34] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:34] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:34] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:34] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:34] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:35] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:35] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:35] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:35] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:35] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:35] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:35] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:35] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:35] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:35] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:36] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:36] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:36] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:36] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:36] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:36] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:36] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:36] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:37] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:37] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:37] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:37] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:37] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:37] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:37] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:37] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:37] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:37] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:38] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:38] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:38] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:38] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:38] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:38] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:38] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:38] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:38] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:39] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:39] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:39] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:39] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:39] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:39] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:39] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:39] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:40] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:40] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:40] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:40] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:40] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:40] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:40] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:40] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:40] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:40] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:41] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:41] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:41] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:41] [Client thread/WARN]: Could not spawn particle effect VILLAGER_HAPPY
+[12:05:41] [Client thread/INFO]: [CHAT] Sending to server mini29AF...
+[12:05:42] [Client thread/INFO]: [CHAT]        
+[12:05:43] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[12:05:44] [Client thread/INFO]: [CHAT] 
+[12:05:44] [Client thread/INFO]: [CHAT] Welcome to Hypixel SkyBlock!
+[12:05:44] [Client thread/INFO]: [CHAT] 
+[12:05:58] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[12:05:58] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[12:05:58] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[12:05:59] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[12:05:59] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[12:05:59] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[12:05:59] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[12:05:59] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[12:05:59] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[12:05:59] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[12:05:59] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[12:06:01] [Chunk Batcher 1/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[12:06:02] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[12:06:02] [pool-13-thread-1/ERROR]: Signature is missing from textures payload
+[12:06:04] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[12:06:05] [Chunk Batcher 0/WARN]: Needed to grow BufferBuilder buffer: Old size 524288 bytes, new size 2621440 bytes.
+[12:06:12] [pool-13-thread-1/ERROR]: Signature is missing from textures payload
+[12:06:34] [Client thread/INFO]: [CHAT] You despawned your Rabbit!
+[12:06:37] [Client thread/INFO]: [CHAT] You summoned your Rabbit!
+[12:06:41] [Client thread/INFO]: [CHAT] Mining Speed Boost is now available!
+[12:07:32] [Client thread/INFO]: [CHAT] You summoned your Silverfish!
+[12:07:53] [Client thread/INFO]: [CHAT] You cannot put this item in the Accessory Bag!
+[12:08:36] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+[12:08:36] [Client thread/INFO]: [CHAT]   §b§lSKILL LEVEL UP §3Mining §846➜§347
+[12:08:36] [Client thread/INFO]: [CHAT] 
+[12:08:36] [Client thread/INFO]: [CHAT]   REWARDS
+[12:08:36] [Client thread/INFO]: [CHAT]    §eSpelunker 47
+[12:08:36] [Client thread/INFO]: [CHAT]      §7§fGrants §a+§8184➜§a188§f §6☘ Mining Fortune§f,
+[12:08:36] [Client thread/INFO]: [CHAT]      §fwhich increases your chance for multiple ore drops.
+[12:08:36] [Client thread/INFO]: [CHAT]    §7§8+§a2 §a❈ Defense
+[12:08:36] [Client thread/INFO]: [CHAT]    §7§8+§61,000,000 §7Coins
+[12:08:36] [Client thread/INFO]: [CHAT]    §7§8+§b20 SkyBlock XP
+[12:08:36] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+[12:09:00] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+[12:09:00] [Client thread/INFO]: [CHAT]   §b§lSKILL LEVEL UP §3Taming §843➜§344
+[12:09:00] [Client thread/INFO]: [CHAT] 
+[12:09:00] [Client thread/INFO]: [CHAT]   REWARDS§7 (2)
+[12:09:00] [Client thread/INFO]: [CHAT]    §eZoologist 44
+[12:09:00] [Client thread/INFO]: [CHAT]      §7§fGain §843➜§a44%§f extra pet exp.
+[12:09:00] [Client thread/INFO]: [CHAT]    §7§8+§a1 §d♣ Pet Luck
+[12:09:00] [Client thread/INFO]: [CHAT]    §7§8+§6900,000 §7Coins
+[12:09:00] [Client thread/INFO]: [CHAT]    §7§8+§b20 SkyBlock XP§7 (2)
+[12:09:00] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+[12:09:40] [Client thread/INFO]: [CHAT] You summoned your Rabbit!
+[12:09:50] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+[12:09:50] [Client thread/INFO]: [CHAT]   §b§lSKILL LEVEL UP §3Farming §842➜§343
+[12:09:50] [Client thread/INFO]: [CHAT] 
+[12:09:50] [Client thread/INFO]: [CHAT]   REWARDS§7 (3)
+[12:09:50] [Client thread/INFO]: [CHAT]    §eFarmhand 43
+[12:09:50] [Client thread/INFO]: [CHAT]      §7§fGrants §a+§8168➜§a172§f §6☘ Farming Fortune§f,
+[12:09:50] [Client thread/INFO]: [CHAT]      §fwhich increases your chance for multiple crops.
+[12:09:50] [Client thread/INFO]: [CHAT]    §7§8+§a5 §c❤ Health
+[12:09:50] [Client thread/INFO]: [CHAT]    §7§8+§6850,000 §7Coins
+[12:09:50] [Client thread/INFO]: [CHAT]    §7§8+§b20 SkyBlock XP§7 (3)
+[12:09:50] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+[12:10:18] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+[12:10:18] [Client thread/INFO]: [CHAT]   §b§lSKILL LEVEL UP §3Farming §843➜§344
+[12:10:18] [Client thread/INFO]: [CHAT] 
+[12:10:18] [Client thread/INFO]: [CHAT]   REWARDS§7 (4)
+[12:10:18] [Client thread/INFO]: [CHAT]    §eFarmhand 44
+[12:10:18] [Client thread/INFO]: [CHAT]      §7§fGrants §a+§8172➜§a176§f §6☘ Farming Fortune§f,
+[12:10:18] [Client thread/INFO]: [CHAT]      §fwhich increases your chance for multiple crops.
+[12:10:18] [Client thread/INFO]: [CHAT]    §7§8+§a5 §c❤ Health§7 (2)
+[12:10:18] [Client thread/INFO]: [CHAT]    §7§8+§6900,000 §7Coins
+[12:10:18] [Client thread/INFO]: [CHAT]    §7§8+§b20 SkyBlock XP§7 (4)
+[12:10:18] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+[12:10:20] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+[12:10:20] [Client thread/INFO]: [CHAT]   §b§lSKILL LEVEL UP §3Taming §844➜§345
+[12:10:20] [Client thread/INFO]: [CHAT] 
+[12:10:20] [Client thread/INFO]: [CHAT]   REWARDS§7 (5)
+[12:10:20] [Client thread/INFO]: [CHAT]    §eZoologist 45
+[12:10:20] [Client thread/INFO]: [CHAT]      §7§fGain §844➜§a45%§f extra pet exp.
+[12:10:20] [Client thread/INFO]: [CHAT]    §7§8+§a1 §d♣ Pet Luck
+[12:10:20] [Client thread/INFO]: [CHAT]    §7§8+§61,000,000 §7Coins
+[12:10:20] [Client thread/INFO]: [CHAT]    §7§8+§b20 SkyBlock XP§7 (5)
+[12:10:20] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+[12:10:22] [Client thread/INFO]: [CHAT]  
+[12:10:22] [Client thread/INFO]: [CHAT]                           SKYBLOCK LEVEL UP
+[12:10:22] [Client thread/INFO]: [CHAT]                               Level 60 ➡ [61]
+[12:10:22] [Client thread/INFO]: [CHAT]  
+[12:10:22] [Client thread/INFO]: [CHAT]                                   REWARDS
+[12:10:22] [Client thread/INFO]: [CHAT]                                  +5 ❤ Health
+[12:10:22] [Client thread/INFO]: [CHAT]  
+[12:10:47] [Client thread/INFO]: [CHAT] Warping...
+[12:10:50] [Client thread/INFO]: [CHAT] Warping...§7 (2)
+[12:10:50] [Client thread/INFO]: [CHAT] Sending to server mini74BA...
+[12:10:51] [Client thread/INFO]: [CHAT]        
+[12:11:02] [Client thread/INFO]: [CHAT] [Bazaar] Executing instant sell...
+[12:11:02] [Client thread/INFO]: [CHAT] [Bazaar] Sold 1,267x Enchanted Melon Block for 63,900,765 coins!
+[12:11:02] [Client thread/INFO]: [CHAT] [Bazaar] Sold 70x Melon for 84.0 coins!
+[12:11:02] [Client thread/INFO]: [CHAT] [Bazaar] Sold 147x Enchanted Melon for 45,452 coins!
+[12:11:02] [Client thread/INFO]: [CHAT] [Bazaar] Sold 114x Diamond for 809.4 coins!
+[12:11:15] [Client thread/INFO]: [CHAT] [Bazaar] Executing instant sell...§7 (2)
+[12:11:15] [Client thread/INFO]: [CHAT] [Bazaar] Sold 27x Diamond for 191.7 coins!
+[12:11:15] [Client thread/INFO]: [CHAT] [Bazaar] Sold 126x Enchanted Diamond for 161,797 coins!
+[12:11:15] [Client thread/INFO]: [CHAT] [Bazaar] Sold 126x Enchanted Diamond Block for 25,538,096 coins!
+[12:11:26] [Client thread/INFO]: [CHAT] Sending to server mini260G...
+[12:11:27] [Client thread/INFO]: [CHAT]        
+[12:11:46] [pool-13-thread-3/ERROR]: Signature is missing from textures payload
+[12:11:47] [Client thread/INFO]: [CHAT] Warping...§7 (3)
+[12:11:47] [Client thread/INFO]: [CHAT] Sending to server mini35CV...
+[12:11:48] [Client thread/INFO]: [CHAT]        
+[12:11:51] [Client thread/INFO]: [CHAT] You may only use this command after 4s on the server!
+[12:12:30] [Client thread/INFO]: [CHAT] Sending to server mini2M...
+[12:12:31] [Client thread/INFO]: [CHAT]        
+[12:12:33] [pool-13-thread-3/ERROR]: Signature is missing from textures payload
+[12:12:34] [pool-13-thread-3/ERROR]: Signature is missing from textures payload
+[12:12:35] [Client thread/INFO]: Stopping!
+[12:12:35] [Client thread/INFO]: SoundSystem shutting down...
+[12:12:35] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

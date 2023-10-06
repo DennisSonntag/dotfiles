@@ -33,7 +33,11 @@ return {
 				enabled = true,
 				char = "▎",
 				include = {
-					node_type = { lua = { "return_statement", "table_constructor" } },
+					node_type = {
+						lua = { "return_statement", "table_constructor", "parameter", "arguments" },
+						typescript = { "return_statement", "table_constructor", "parameter", "arguments", "object_type",
+							"type_alias_declaration", "switch_body" }
+					},
 				},
 				priority = 500,
 			},

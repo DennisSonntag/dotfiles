@@ -11,9 +11,9 @@ anaglyph3d:false
 maxFps:260
 fboEnable:true
 difficulty:3
-fancyGraphics:true
-ao:2
-renderClouds:true
+fancyGraphics:false
+ao:0
+renderClouds:fast
 resourcePacks:["MobPacket 1.8.9 1.4.zip","PacksHqx16.zip","FurfSkyReborn.zip","No_Block_Breaking_Particles_1.8.zip"]
 incompatibleResourcePacks:[]
 lastServer:

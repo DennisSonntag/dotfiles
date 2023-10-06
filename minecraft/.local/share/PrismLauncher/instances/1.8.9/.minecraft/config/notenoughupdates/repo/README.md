@@ -34,7 +34,7 @@ In order to contribute to the item repo you should enable the item editor tools 
 I would also highly recommend disabling auto update if you are in the middle of making changes otherwise they will be overwritten.
 
 ```json
-"autoupdate": false,
+"autoupdate_new": false,
 ```
 
 Once you have these options enabled you can edit and add items in-game using the following keybinds:
@@ -49,4 +49,4 @@ Once you have these options enabled you can edit and add items in-game using the
 
 Once you have made the changes you would like you can find the files located in `.minecraft\config\notenoughupdates\repo`.
 
-If you need further help on how to contribute feel free to join the [discord](https://discord.gg/moulberry) or contact `IRONM00N#0001` on discord.
+If you need further help on how to contribute feel free to join the [discord](https://discord.gg/moulberry).
