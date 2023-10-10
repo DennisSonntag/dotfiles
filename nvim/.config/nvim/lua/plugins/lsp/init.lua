@@ -80,25 +80,45 @@ return {
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
+			function diagnostic_goto(next, severity)
+				local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
+				severity = severity and vim.diagnostic.severity[severity] or nil
+				return function()
+					go({ severity = severity })
+				end
+			end
 
 			vim.api.nvim_create_autocmd("LspAttach", {
 				callback = function(args)
 					local buffer = args.buf
 					local client = vim.lsp.get_client_by_id(args.data.client_id)
-					require("plugins.lsp.keymaps").on_attach(client, buffer)
+
+					vim.keymap.set("n", "<leader>lvd", vim.diagnostic.open_float)
+					vim.keymap.set("n", "<leader>cl", "<cmd>LspInfo<cr>")
+					vim.keymap.set("n", "gd",
+						function() require("telescope.builtin").lsp_definitions({ reuse_win = true }) end)
+					vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>")
+					vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
+					vim.keymap.set("n", "gI",
+						function() require("telescope.builtin").lsp_implementations({ reuse_win = true }) end)
+					vim.keymap.set("n", "gy",
+						function() require("telescope.builtin").lsp_type_definitions({ reuse_win = true }) end)
+					vim.keymap.set("n", "K", vim.lsp.buf.hover)
+					vim.keymap.set("n", "<leader>lth", function() vim.lsp.inlay_hint(0, nil) end)
+					vim.keymap.set("n", "gK", vim.lsp.buf.signature_help)
+					vim.keymap.set("i", "<c-k>", vim.lsp.buf.signature_help)
+					vim.keymap.set("n", "]d", diagnostic_goto(true))
+					vim.keymap.set("n", "[d", diagnostic_goto(false))
+					vim.keymap.set("n", "]e", diagnostic_goto(true, "ERROR"))
+					vim.keymap.set("n", "[e", diagnostic_goto(false, "ERROR"))
+					vim.keymap.set("n", "]w", diagnostic_goto(true, "WARN"))
+					vim.keymap.set("n", "[w", diagnostic_goto(false, "WARN"))
+					vim.keymap.set("n", "<leader>lf", function() vim.lsp.buf.format({ async = true }) end)
+					vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename)
+					vim.keymap.set({ "n", "v" }, "<leader>lca", vim.lsp.buf.code_action)
 				end,
 			})
 
-			local register_capability = vim.lsp.handlers["client/registerCapability"]
-
-			vim.lsp.handlers["client/registerCapability"] = function(err, res, ctx)
-				local ret = register_capability(err, res, ctx)
-				local client_id = ctx.client_id
-				local client = vim.lsp.get_client_by_id(client_id)
-				local buffer = vim.api.nvim_get_current_buf()
-				require("plugins.lsp.keymaps").on_attach(client, buffer)
-				return ret
-			end
 
 
 
@@ -192,12 +212,6 @@ return {
 								end
 							end
 							, { buffer = bufnr })
-
-						-- Hover actions
-						-- vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
-						-- Code action groups
-						--
-						-- vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
 					end,
 				},
 			})
@@ -215,23 +229,12 @@ return {
 		config = true
 	},
 	{
-		"jay-babu/mason-null-ls.nvim",
+		"nvimtools/none-ls.nvim",
 		event = { "BufReadPre", "BufNewFile" },
-		dependencies = {
-			"williamboman/mason.nvim",
-			"jose-elias-alvarez/null-ls.nvim",
-		},
-		opts = {
-			automatic_setup = true,
-			automatic_installation = true,
-			ensure_installed = { "black", "prettierd", "eslint_d", "clang-format" }
-		},
 		config = function(_, opts)
-			require("mason-null-ls").setup(opts)
 			local null_ls = require("null-ls")
 			null_ls.setup({
 				sources = {
-					null_ls.builtins.formatting.qmlformat,
 					null_ls.builtins.formatting.prettierd.with({
 						env = {
 							PRETTIERD_DEFAULT_CONFIG = vim.fn.expand("~/.prettierrc.json"),
@@ -247,5 +250,6 @@ return {
 				}
 			})
 		end
+
 	}
 }
