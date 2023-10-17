@@ -17,10 +17,11 @@
 		"custom/spotify",
 		"tray",
 		"custom/cap-right-light",
+		// "custom/cap-right-mid",
 		"pulseaudio",
-		"custom/cap-right-mid",
-		"custom/update",
-		"custom/cap-right",
+		// "custom/update",
+		// "custom/cap-right",
+		"custom/cap-right-light-bg",
 		"clock"
 	],
 	"hyprland/window": {
@@ -146,6 +147,14 @@
 	"custom/cap-left": {
 		"tooltip": false,
 		"format": ""
+	},
+	"custom/cap-right-mid-other": {
+		"tooltip": false,
+		"format": ""
+	},
+	"custom/cap-right-light-bg": {
+		"tooltip": false,
+		"format": ""
 	},
 	"custom/cap-right-mid": {
 		"tooltip": false,

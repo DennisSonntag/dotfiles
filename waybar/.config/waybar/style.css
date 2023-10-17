@@ -111,6 +111,7 @@ window#waybar {
 
 #custom-cap-left,
 #custom-cap-right,
+#custom-cap-right-light-bg,
 #custom-cap-left-light,
 #custom-cap-right-light, 
 #custom-cap-left-mid,
@@ -134,6 +135,13 @@ window#waybar {
 	color: @bgLight;
 }
 
+
+#custom-cap-right-light-bg {
+	background-color: @bgLight;
+	color: @bgDark;
+
+}
+
 #custom-spotify {
 	margin-left: 8px;
 	padding-left: 16px;
@@ -150,7 +158,8 @@ window#waybar {
 	padding-right: 6px;
 	transition: none;
 	color: white;
-	background: #363b4f;
+	/* background: #363b4f; */
+	background: @bgLight;
 }
 #custom-update {
 	padding-left: 6px;
