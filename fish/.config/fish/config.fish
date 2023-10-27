@@ -173,17 +173,16 @@ set -x HISTFILE $XDG_STATE_HOME/bash/history
 
 
 
-
-
-
-
-
-
 fish_add_path -m ~/.local/bin
 fish_add_path -m ~/.local/share/bob/nvim-bin
 
 if [ "$(tty)" = "/dev/tty1" ]
 	exec Hyprland
+end
+
+function yd
+	# yt-dlp $argv[1] --embed-chapters --sponsorblock-mark all --limit-rate 100.0M --concurrent-fragments 4 
+	yt-dlp $argv[1] --embed-chapters --sponsorblock-mark all --downloader aria2c
 end
 
 
@@ -197,6 +196,7 @@ function __history_previous_command
 		commandline -i !
 	end
 end
+
 
 function __history_previous_command_arguments
 	switch (commandline -t)
@@ -221,6 +221,7 @@ starship init fish | source
 zoxide init fish | source
 fish_ssh_agent
 
+
 # pnpm
 set -gx PNPM_HOME "/home/dennis/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
@@ -231,3 +232,4 @@ end
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
