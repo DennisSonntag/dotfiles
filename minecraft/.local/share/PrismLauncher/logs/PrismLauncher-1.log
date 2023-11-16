@@ -26,127 +26,129 @@
      0.000 D | Application root path      :  "/usr"
      0.000 D | <> Paths set.
      0.001 D | Copied settings from "polymc.cfg" to "prismlauncher.cfg"
-     0.015 D | Detected default console font: "Fantasque Sans Mono" , substitutions: ""
-     0.029 D | <> Settings loaded.
-     0.044 D | Detecting proxy settings...
-     0.044 D | Using no proxy is an option!
-     0.044 D | <> Network done.
-     0.048 D | Your language is "en_US"
-     0.048 D | <> Translations loaded.
-     0.049 D | Started watching  "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/icons"
-     0.049 D | Sorting icon list...
-     0.050 D | <> Instance icons intialized.
-     0.050 D | [Theme] <> Icon themes initialized.
-     0.050 D | [Theme] <> Initializing Widget Themes
-     0.050 D | [Theme] Determining System Theme...
-     0.050 D | [Theme] System theme seems to be: "qt5ct-style"
-     0.050 D | [Theme] Considering theme from theme factory: "highcontrastinverse"
-     0.050 D | [Theme] Considering theme from theme factory: "highcontrast"
-     0.050 D | [Theme] Considering theme from theme factory: "adwaita-highcontrastinverse"
-     0.050 D | [Theme] Considering theme from theme factory: "adwaita-highcontrast"
-     0.050 D | [Theme] Considering theme from theme factory: "adwaita-dark"
-     0.050 D | [Theme] Considering theme from theme factory: "adwaita"
-     0.050 D | [Theme] Considering theme from theme factory: "qt5ct-style"
-     0.050 D | [Theme] System theme has been determined to be: "qt5ct-style"
-     0.050 D | [Theme] Loading Built-in Theme: "system"
-     0.050 D | [Theme] Loading Built-in Theme: "dark"
-     0.050 D | [Theme] Loading Built-in Theme: "bright"
-     0.050 D | [Theme] Theme Folder Path:  "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/themes"
-     0.051 D | [Theme] Loading JSON Theme from: "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/themes/custom/theme.json"
-     0.051 D | [Theme] <> Widget themes initialized.
-     0.051 D | Instance path              :  "instances"
-     0.052 D | Loading Instances...
-     0.052 D | Discovering instances in "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/instances"
-     0.053 D | Found instance ID "Pvp 1.8.9"
-     0.053 D | Found instance ID "1.19.3"
-     0.054 D | Found instance ID "1.20.1"
-     0.054 D | Found instance ID "1.8.9"
-     0.054 D | Will load group list now.
-     0.054 D | Group list loaded.
-     0.054 D | Loaded instance  "Pvp 1.8.9"  from  "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/instances/Pvp 1.8.9"
-     0.055 D | Loaded instance  "Survival 1.19.3"  from  "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/instances/1.19.3"
-     0.055 D | Loaded instance  "\"1.20.1 \""  from  "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/instances/1.20.1"
-     0.056 D | Loaded instance  "Skyblock 1.8.9"  from  "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/instances/1.8.9"
-     0.056 D | <> Instances loaded.
-     0.056 D | Loading accounts...
-     0.056 D | AccountList: Queued default account with internal ID  "038b84e0c6ff4914bdc18a71ba56be27"  to refresh first
-     0.056 D | AuthFlow: "Logging in with Microsoft account."
-     0.056 D | DeviceFlow::refresh: Token: ... "OqsiQ$$"
-     0.060 D | RefreshSchedule: Processing account  "Speed6511"  with internal ID  "038b84e0c6ff4914bdc18a71ba56be27"
-     0.060 D | <> Accounts loaded.
-     0.062 D | <> Cache initialized.
-     0.062 D | Downloading Translations Index...
-     0.062 W | [launcher.task.net]: [HttpMetaCache] Removing cache entry because of old age!
-     0.062 D | [Theme] <> Icon theme set.
-     0.062 D | [Theme] applying theme "Dark"
-     0.062 D | [Theme] <> Application theme set.
-     0.074 D | [qt5ct]: D-Bus global menu: no
-     0.088 D | Reloading news.
-     0.089 D | Loading components
-     0.090 D | Component list save is scheduled for "Skyblock 1.8.9"
-     0.094 D | Resolving dependencies
-     0.094 D | "Req: net.minecraft == 1.8.9" Is met.
-     0.094 D | "Req: org.lwjgl" Is met.
-     0.094 D | Component list update/resolve task succeeded for "Skyblock 1.8.9"
-     0.127 D | <> Main window shown.
-     0.127 D | <> Importing from zip: (QUrl("file:///home/dennis/Calibre Library/Eiichiro Oda/Chapter 1053 (4)/Chapter 1053 - Eiichiro Oda.cbz"))
-     0.127 D | Processing QUrl("file:///home/dennis/Calibre Library/Eiichiro Oda/Chapter 1053 (4)/Chapter 1053 - Eiichiro Oda.cbz")
-     0.127 W | Invalid type for mod parse task!
-     0.127 W | Invalid type for resource pack parse task!
-     0.127 W | Invalid type for resource pack parse task!
-     0.127 W | Invalid type for data pack parse task!
-     0.127 W | Invalid type for world save parse task!
-     0.127 W | Invalid type for shader pack parse task!
-     0.127 D | Can't Identify "Chapter 1053 - Eiichiro Oda.cbz"
-     0.163 W | [launcher.task.net]: [HttpMetaCache] Removing cache entry because of old age!
-     0.176 D | [qt5ct]: palette support is disabled
-     0.219 D | Dir changed: "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/translations"
-     0.714 D | Got translations index!
-     0.715 D | Dir changed: "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/translations"
-     0.740 D | Finished loading RSS feed.
-     0.745 D | Loaded news entry "[MALWARE WARNING] RCE Vulnerability on some modded servers - Bleeding Pipe"
-     0.745 D | Loaded news entry "Prism Launcher Release 7.2, now available"
-     0.745 D | Loaded news entry "Prism Launcher Release 7.1, now available"
-     0.745 D | Loaded news entry "Prism Launcher Release 7.0, now available"
-     0.745 D | Loaded news entry "FTB Modpack Downloading Removal."
-     0.745 D | Loaded news entry "[MALWARE WARNING] \"fractureiser\" malware in many popular Minecraft mods and modpacks"
-     0.745 D | Loaded news entry "[SECURITY UPDATE] Prism Launcher Release 6.3, now available"
-     0.745 D | Loaded news entry "Prism Launcher Release 6.2, now available"
-     0.745 D | Loaded news entry "Prism Launcher Release 6.1, now available"
-     0.745 D | Loaded news entry "Prism Launcher Release 6.0, now available"
-     0.745 D | Loaded news entry "Prism Launcher Release 5.2, now available"
-     0.745 D | Loaded news entry "Prism Launcher Release 5.1, now available"
-     0.745 D | Loaded news entry "Prism Launcher Release 5.0, now available"
-     0.745 D | Loaded news entry "PolyMC Update 1.4.2, now available"
-     0.745 D | Loaded news entry "PolyMC Update 1.4.1, now available"
-     0.745 D | Loaded news entry "PolyMC Update 1.4.0, now available"
-     0.745 D | Loaded news entry "PolyMC Update 1.3.2, now available"
-     0.745 D | Loaded news entry "PolyMC Update 1.3.1, now available"
-     0.745 D | Loaded news entry "PolyMC Update 1.3.0, now available"
-     0.745 D | Loaded news entry "PolyMC Update 1.2.2, now available (CurseForge Hotfix)"
-     0.745 D | Loaded news entry "PolyMC Update 1.2.1, now available"
-     0.745 D | Loaded news entry "PolyMC Update 1.2.0, now available"
-     0.745 D | Loaded news entry "PolyMC Update 1.1.1, now available"
-     0.745 D | Loaded news entry "PolyMC Update 1.1.0, now available"
-     0.745 D | Loaded news entry "Moving on"
-     0.745 D | Loaded news entry "Modrinth support and Mod downloading"
-     0.745 D | Loaded news entry "New maintainers and step down."
-     0.745 D | News loading succeeded.
-     1.245 D | [katabasis.credentials]: new refresh token: "M.C107_BAY.-CaOsztuspoCm8kOHKDTV4Jr02GihamqJFDsuu0Ek7!2yolC4Q!2S9Y24garRB4nj4iIY6tKdr9UrmAc1TLpHmwWPlc0a!C293gSoEQZkbrQBX83zGJEJ6mSfmAABQiu08bz7YelMXUlC3*6afphQQtovfCGoL1QYUif8y11xn7FAIVtuwhNC*w5iO1X4HqVZlCvj0pvwkZo*1F4bY4h5t30m2cq7hJob!aJqH!l502hVuUro*UEFBX7gm8hvG2Qz3qNLrRQXklE7lekFH82caRZRQG3EwDVQ!JkJ3Y4YmmWIQjAfpY3M4yrZy6j2lgOZ1A$$"
-     1.245 D | DeviceFlow::setLinked: true
-     1.245 D | AuthFlow: "Logging in as an Xbox user."
-     1.245 D | First layer of XBox auth ... commencing.
-     1.245 D | New token expires in QDateTime(2023-10-25 16:38:34.382 UTC Qt::UTC) seconds
-     1.558 D | Parsing "UToken" :
-     1.558 D | "UToken" is valid.
-     1.558 D | AuthFlow: "Getting authorization to access Xbox services."
-     1.558 D | Getting authorization token for  "http://xboxlive.com"
-     1.824 D | Parsing "Xbox" :
-     1.824 D | "Xbox" is valid.
-     1.824 D | AuthFlow: "Getting authorization to access Mojang services."
-     1.824 D | Getting authorization token for  "rp://api.minecraftservices.com/"
-     1.976 D | Parsing "Mojang" :
-     1.976 D | "Mojang" is valid.
-     1.976 D | AuthFlow: "Accessing Mojang services."
-     1.976 D | Getting Minecraft access token...
-     2.202 D | Component list save performed now for "Skyblock 1.8.9"
+     0.014 D | Detected default console font: "Fantasque Sans Mono" , substitutions: ""
+     0.027 D | <> Settings loaded.
+     0.038 D | Detecting proxy settings...
+     0.038 D | Using no proxy is an option!
+     0.038 D | <> Network done.
+     0.039 D | Your language is "en_US"
+     0.039 D | <> Translations loaded.
+     0.041 D | Started watching  "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/icons"
+     0.041 D | Sorting icon list...
+     0.042 D | <> Instance icons intialized.
+     0.042 D | [Theme] <> Icon themes initialized.
+     0.042 D | [Theme] <> Initializing Widget Themes
+     0.042 D | [Theme] Determining System Theme...
+     0.042 D | [Theme] System theme seems to be: "qt5ct-style"
+     0.042 D | [Theme] Considering theme from theme factory: "highcontrastinverse"
+     0.042 D | [Theme] Considering theme from theme factory: "highcontrast"
+     0.042 D | [Theme] Considering theme from theme factory: "adwaita-highcontrastinverse"
+     0.042 D | [Theme] Considering theme from theme factory: "adwaita-highcontrast"
+     0.042 D | [Theme] Considering theme from theme factory: "adwaita-dark"
+     0.042 D | [Theme] Considering theme from theme factory: "adwaita"
+     0.042 D | [Theme] Considering theme from theme factory: "qt5ct-style"
+     0.042 D | [Theme] System theme has been determined to be: "qt5ct-style"
+     0.042 D | [Theme] Loading Built-in Theme: "system"
+     0.042 D | [Theme] Loading Built-in Theme: "dark"
+     0.042 D | [Theme] Loading Built-in Theme: "bright"
+     0.042 D | [Theme] Theme Folder Path:  "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/themes"
+     0.042 D | [Theme] Loading JSON Theme from: "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/themes/custom/theme.json"
+     0.042 D | [Theme] <> Widget themes initialized.
+     0.042 D | Instance path              :  "instances"
+     0.043 D | Loading Instances...
+     0.043 D | Discovering instances in "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/instances"
+     0.043 D | Found instance ID "Pvp 1.8.9"
+     0.043 D | Found instance ID "1.19.3"
+     0.043 D | Found instance ID "1.20.1"
+     0.043 D | Found instance ID "1.8.9"
+     0.043 D | Will load group list now.
+     0.043 D | Group list loaded.
+     0.043 D | Loaded instance  "Pvp 1.8.9"  from  "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/instances/Pvp 1.8.9"
+     0.044 D | Loaded instance  "Survival 1.19.3"  from  "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/instances/1.19.3"
+     0.044 D | Loaded instance  "\"1.20.1 \""  from  "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/instances/1.20.1"
+     0.045 D | Loaded instance  "Skyblock 1.8.9"  from  "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/instances/1.8.9"
+     0.045 D | <> Instances loaded.
+     0.045 D | Loading accounts...
+     0.045 D | AccountList: Queued default account with internal ID  "0b4e7a93de474fc0b8ea7b8702775373"  to refresh first
+     0.045 D | AuthFlow: "Logging in with Microsoft account."
+     0.045 D | DeviceFlow::refresh: Token: ... "86JZA$$"
+     0.048 D | RefreshSchedule: Processing account  "Speed6511"  with internal ID  "0b4e7a93de474fc0b8ea7b8702775373"
+     0.048 D | <> Accounts loaded.
+     0.050 D | <> Cache initialized.
+     0.050 D | Downloading Translations Index...
+     0.050 D | [Theme] <> Icon theme set.
+     0.051 D | [Theme] applying theme "Dark"
+     0.051 D | [Theme] <> Application theme set.
+     0.061 D | [qt5ct]: D-Bus global menu: no
+     0.073 D | Reloading news.
+     0.074 D | Loading components
+     0.075 D | Component list save is scheduled for "Skyblock 1.8.9"
+     0.079 D | Resolving dependencies
+     0.079 D | "Req: net.minecraft == 1.8.9" Is met.
+     0.079 D | "Req: org.lwjgl" Is met.
+     0.079 D | Component list update/resolve task succeeded for "Skyblock 1.8.9"
+     0.111 D | <> Main window shown.
+     0.111 D | <> Importing from zip: (QUrl("file:///tmp/calibre_6.29.0_tmp_fg6vs1a3/zh3lttd2_view_device_book.cbz"))
+     0.111 D | Processing QUrl("file:///tmp/calibre_6.29.0_tmp_fg6vs1a3/zh3lttd2_view_device_book.cbz")
+     0.111 W | Invalid type for mod parse task!
+     0.111 W | Invalid type for resource pack parse task!
+     0.111 W | Invalid type for resource pack parse task!
+     0.111 W | Invalid type for data pack parse task!
+     0.111 W | Invalid type for world save parse task!
+     0.111 W | Invalid type for shader pack parse task!
+     0.111 D | Can't Identify "zh3lttd2_view_device_book.cbz"
+     0.156 D | [qt5ct]: palette support is disabled
+     0.195 D | Dir changed: "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/translations"
+     0.586 D | Got translations index!
+     0.586 D | Dir changed: "/home/dennis/dotfiles/minecraft/.local/share/PrismLauncher/translations"
+     0.659 D | Finished loading RSS feed.
+     0.662 D | Loaded news entry "[MALWARE WARNING] RCE Vulnerability on some modded servers - Bleeding Pipe"
+     0.663 D | Loaded news entry "Prism Launcher Release 7.2, now available"
+     0.663 D | Loaded news entry "Prism Launcher Release 7.1, now available"
+     0.663 D | Loaded news entry "Prism Launcher Release 7.0, now available"
+     0.663 D | Loaded news entry "FTB Modpack Downloading Removal."
+     0.663 D | Loaded news entry "[MALWARE WARNING] \"fractureiser\" malware in many popular Minecraft mods and modpacks"
+     0.663 D | Loaded news entry "[SECURITY UPDATE] Prism Launcher Release 6.3, now available"
+     0.663 D | Loaded news entry "Prism Launcher Release 6.2, now available"
+     0.663 D | Loaded news entry "Prism Launcher Release 6.1, now available"
+     0.663 D | Loaded news entry "Prism Launcher Release 6.0, now available"
+     0.663 D | Loaded news entry "Prism Launcher Release 5.2, now available"
+     0.663 D | Loaded news entry "Prism Launcher Release 5.1, now available"
+     0.663 D | Loaded news entry "Prism Launcher Release 5.0, now available"
+     0.663 D | Loaded news entry "PolyMC Update 1.4.2, now available"
+     0.663 D | Loaded news entry "PolyMC Update 1.4.1, now available"
+     0.663 D | Loaded news entry "PolyMC Update 1.4.0, now available"
+     0.663 D | Loaded news entry "PolyMC Update 1.3.2, now available"
+     0.663 D | Loaded news entry "PolyMC Update 1.3.1, now available"
+     0.663 D | Loaded news entry "PolyMC Update 1.3.0, now available"
+     0.663 D | Loaded news entry "PolyMC Update 1.2.2, now available (CurseForge Hotfix)"
+     0.663 D | Loaded news entry "PolyMC Update 1.2.1, now available"
+     0.663 D | Loaded news entry "PolyMC Update 1.2.0, now available"
+     0.663 D | Loaded news entry "PolyMC Update 1.1.1, now available"
+     0.663 D | Loaded news entry "PolyMC Update 1.1.0, now available"
+     0.663 D | Loaded news entry "Moving on"
+     0.663 D | Loaded news entry "Modrinth support and Mod downloading"
+     0.663 D | Loaded news entry "New maintainers and step down."
+     0.663 D | News loading succeeded.
+     0.990 D | [katabasis.credentials]: new refresh token: "M.C107_BL2.-CdmNxsfIeJNwTMKDt7uSbXxkrFeQLx!wyylED7783q0EvMeGuP6ybWpVfnenmaEFGi51lLhKsKxAJIWFSktBmhrl*sA6nKYFExx1ae0xfM2CaACdzPj1iUwDdCjH2t2TwbLCaN6tZe2TEVUZ!SgKBVRazLCTOL4biRST53f1b4LqqsClJ57hz9MCOrhIjcNriYlcHw!vWuTSiOVKd9S1lsd78TMYCn0HKFrvQc*mBzKBm*pdyx96OyWrP!ynKnzQNHOB9Zn2S3aonREeKZz6XGF24h8rtxn58HaYhgk0ipynkux35rS7De8Xib2i!ngM*A$$"
+     0.990 D | DeviceFlow::setLinked: true
+     0.990 D | AuthFlow: "Logging in as an Xbox user."
+     0.990 D | First layer of XBox auth ... commencing.
+     0.990 D | New token expires in QDateTime(2023-10-31 16:52:34.875 UTC Qt::UTC) seconds
+     1.226 D | Parsing "UToken" :
+     1.226 D | "UToken" is valid.
+     1.226 D | AuthFlow: "Getting authorization to access Xbox services."
+     1.226 D | Getting authorization token for  "http://xboxlive.com"
+     1.493 D | Parsing "Xbox" :
+     1.493 D | "Xbox" is valid.
+     1.493 D | AuthFlow: "Getting authorization to access Mojang services."
+     1.493 D | Getting authorization token for  "rp://api.minecraftservices.com/"
+     1.643 D | Parsing "Mojang" :
+     1.643 D | "Mojang" is valid.
+     1.643 D | AuthFlow: "Accessing Mojang services."
+     1.643 D | Getting Minecraft access token...
+     1.965 D | Parsing Mojang response...
+     1.965 D | Mojang response is valid.
+     1.965 D | AuthFlow: "Fetching Xbox profile."
+     1.965 D | Getting Xbox profile...
+     2.107 D | Component list save performed now for "Skyblock 1.8.9"

@@ -59,6 +59,7 @@ set fish_cursor_insert line
 abbr -a p doas pacman
 abbr -a pa paru
 
+alias trash-size="dust ~/.local/share/Trash/"
 alias wget="wget --hsts-file=\"$XDG_DATA_HOME/wget-hsts\""
 alias kill-lua="kill (pgrep lua-language-se)"
 alias kill-rust="kill (pgrep rust-analyzer)"

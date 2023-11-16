@@ -651,8 +651,7 @@
         {
             "base": "asset_indexes",
             "current_age": 0,
-            "etag": "0x8DA1CDD8ED7C0B7",
-            "last_changed_timestamp": 1695308096830,
+            "last_changed_timestamp": 1698879881674,
             "max_age": 1209600,
             "md5sum": "6155398ec2c908bed2764d752030d8ce",
             "path": "1.8.json",
@@ -2045,13 +2044,13 @@
         },
         {
             "base": "translations",
-            "current_age": 0,
-            "etag": "W/\"6516bd4d-55b0\"",
-            "last_changed_timestamp": 1696010445250,
+            "current_age": 195,
+            "etag": "W/\"65422bd0-55c0\"",
+            "last_changed_timestamp": 1698879877906,
             "max_age": 600,
-            "md5sum": "0f749646a46113e40a9ab0026e285b8f",
+            "md5sum": "956f903db6083a0184c0d29f40b80a28",
             "path": "index_v2.json",
-            "remote_changed_timestamp": "Fri, 29 Sep 2023 12:04:29 GMT"
+            "remote_changed_timestamp": "Wed, 01 Nov 2023 10:43:28 GMT"
         }
     ],
     "version": "1"

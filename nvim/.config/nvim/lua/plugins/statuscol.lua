@@ -14,6 +14,7 @@ return {
 			local hl = "DiagnosticSign" .. type
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
+		local builtin = require("statuscol.builtin")
 
 		return {
 			segments = {
@@ -35,6 +36,7 @@ return {
 					click = "v:lua.ScLa",
 				},
 				{ text = { " " } },
+
 			}
 		}
 	end,
