@@ -1,14 +1,3 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
-
-# abbr -a gco git checkout
-# function multicd
-#     echo cd (string repeat -n (math (string length -- $argv[1]) - 1) ../)
-# end
-# abbr --add dotdot --regex '^\.\.+$' --function multicd
-
-
 # -------------------------------Tokyo night theme--------------------------------------
 # TokyoNight Color Palette
 set -l foreground c0caf5
@@ -47,16 +36,11 @@ set -g fish_pager_color_selected_background --background=$selection
 
 # ------------------------------------------------------------------------------------
 
-
-
-
-
-
 set fish_greeting
 set fish_vi_key_bindings
 set fish_cursor_insert line
 
-abbr -a p doas pacman
+abbr -a pac doas pacman
 abbr -a pa paru
 
 alias trash-size="dust ~/.local/share/Trash/"
@@ -93,6 +77,7 @@ end
 alias clippy_better="cargo clippy --no-deps --all-targets --color always -- -W clippy::pedantic -W clippy::nursery"
 
 # Git
+alias gcl="git clone --recursive"
 alias ga="git add"
 alias gc="git commit"
 alias gl="git log --graph --oneline --decorate"

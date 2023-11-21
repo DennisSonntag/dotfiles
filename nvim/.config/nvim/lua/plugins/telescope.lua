@@ -55,9 +55,27 @@ return {
 		telescope.load_extension("fzf")
 	end,
 	keys         = {
-		{ "<leader>fF", function() require("telescope.builtin").find_files({ hidden = true }) end },
-		{ "<leader>ff", " <cmd>Telescope git_files<CR>" },
-		{ "<leader>fg", " <cmd>Telescope live_grep<CR>" },
+		-- { "<leader>fF", function() require("telescope.builtin").find_files({ hidden = true }) end },
+		-- { "<leader>ff", " <cmd>Telescope git_files<CR>" },
+		-- { "<leader>fg", " <cmd>Telescope live_grep<CR>" },
+		{
+			";f",
+			function()
+				require("telescope.builtin").find_files({
+					no_ignore = false,
+					hidden = true,
+				})
+			end,
+		},
+		{
+			";;",
+			function()
+				local builtin = require("telescope.builtin")
+				builtin.resume()
+			end,
+			desc = "Resume the previous telescope picker",
+		},
+		{ "<leader>;g", " <cmd>Telescope live_grep<CR>" },
 		{ "<leader>/", function()
 			require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
 				previewer = false,

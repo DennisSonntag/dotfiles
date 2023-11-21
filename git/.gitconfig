@@ -18,3 +18,5 @@
 	colorMoved = default
 [init]
 	defaultBranch = main
+[cinnabar]
+	version-check = 1700269998
