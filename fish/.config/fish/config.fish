@@ -121,7 +121,7 @@ function clear-cache
 	doas pacman -Rcns (pacman -Qdtq)
 end
 
-function full-update
+function update
 	mirror
 	doas pacman -Syyu --noconfirm
 	paru -Syyu --noconfirm
@@ -155,19 +155,15 @@ set -x GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
 set -x CUDA_CACHE_PATH $XDG_CACHE_HOME/nv
 set -x HISTFILE $XDG_STATE_HOME/bash/history
 
-# set -x PAGER nvimpager
-
-
 
 fish_add_path -m ~/.local/bin
 fish_add_path -m ~/.local/share/bob/nvim-bin
 
-if [ "$(tty)" = "/dev/tty1" ]
-	exec Hyprland
-end
+# if [ "$(tty)" = "/dev/tty1" ]
+# 	exec Hyprland
+# end
 
 function yd
-	# yt-dlp $argv[1] --embed-chapters --sponsorblock-mark all --limit-rate 100.0M --concurrent-fragments 4 
 	yt-dlp $argv[1] --embed-chapters --sponsorblock-mark all --downloader aria2c
 end
 
