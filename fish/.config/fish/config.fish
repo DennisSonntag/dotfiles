@@ -90,8 +90,8 @@ alias gpull="git pull"
 alias c="clear"
 alias ccd="cd;clear"
 alias rm="trash"
-alias bd="doas brillo -u 150000 -q -U 10"
 alias bu="doas brillo -u 150000 -q -A 10"
+alias bd="doas brillo -u 150000 -q -U 10"
 alias mirror="doas reflector -p https -l 50 --sort rate --verbose --save /etc/pacman.d/mirrorlist"
 alias prc="wget -O .prettierrc.json https://pastebin.com/raw/qhk1hkEB"
 
@@ -160,9 +160,9 @@ set -x HISTFILE $XDG_STATE_HOME/bash/history
 fish_add_path -m ~/.local/bin
 fish_add_path -m ~/.local/share/bob/nvim-bin
 
-# if [ "$(tty)" = "/dev/tty1" ]
-# 	exec Hyprland
-# end
+if [ "$(tty)" = "/dev/tty1" ]
+	exec Hyprland
+end
 
 function yd
 	yt-dlp $argv[1] --embed-chapters --sponsorblock-mark all --downloader aria2c
