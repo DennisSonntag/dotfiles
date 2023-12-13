@@ -43,7 +43,7 @@ set fish_cursor_insert line
 abbr -a pac doas pacman
 abbr -a pa paru
 
-alias emacs-r="systemctl restart --user emacs"
+alias rle="systemctl restart --user emacs"
 alias trash-size="dust ~/.local/share/Trash/"
 alias wget="wget --hsts-file=\"$XDG_DATA_HOME/wget-hsts\""
 alias kill-lua="kill (pgrep lua-language-se)"

@@ -145,8 +145,24 @@
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config))
 
-;; general.el for setting keybinds
-(use-package general)
+(use-package general
+      :ensure t
+      :after evil
+      :config
+      (general-create-definer tyrant-def
+        :states '(normal insert motion emacs)
+        :keymaps 'override
+        :prefix "SPC"
+        :non-normal-prefix "M-SPC")
+      (tyrant-def "" nil)
+
+      (tyrant-def
+        "sv" 'evil-window-vsplit
+        "sh" 'evil-window-split
+        "y" 'clipboard-kill-ring-save
+        "p" 'clipboard-yank))
+(setq x-select-enable-clipboard nil)
+(setq x-select-enable-primary nil)
 
 ;; Vim keybinds
 (use-package evil
@@ -159,6 +175,16 @@
   (evil-mode 1)
   (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
   (define-key evil-insert-state-map (kbd "C-h") 'evil-delete-backward-char-and-join)
+
+  (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
+  (define-key evil-normal-state-map (kbd "C-h") 'evil-window-left)
+  (define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
+  (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
+
+  (define-key evil-normal-state-map (kbd "C-q") 'evil-window-delete)
+
+  (define-key evil-normal-state-map (kbd "-") 'dired-jump)
+
 
   ;; Use visual line motions even outside of visual-line-mode buffers
   (evil-global-set-key 'motion "j" 'evil-next-visual-line)
@@ -174,61 +200,61 @@
 
 ;; Org Mode Configuration ------------------------------------------------------
 
-(defun efs/org-mode-setup ()
-  (org-indent-mode)
-  (variable-pitch-mode 1)
-  (visual-line-mode 1))
+  (defun efs/org-mode-setup ()
+    (org-indent-mode)
+    (variable-pitch-mode 1)
+    (visual-line-mode 1))
 
-(defun efs/org-font-setup ()
-  ;; Replace list hyphen with dot
-  (font-lock-add-keywords 'org-mode
-                          '(("^ *\\([-]\\) "
-                             (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+  (defun efs/org-font-setup ()
+    ;; Replace list hyphen with dot
+    (font-lock-add-keywords 'org-mode
+                            '(("^ *\\([-]\\) "
+                               (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
 
-  ;; Set faces for heading levels
-  (dolist (face '((org-level-1 . 1.2)
-                  (org-level-2 . 1.1)
-                  (org-level-3 . 1.05)
-                  (org-level-4 . 1.0)
-                  (org-level-5 . 1.1)
-                  (org-level-6 . 1.1)
-                  (org-level-7 . 1.1)
-                  (org-level-8 . 1.1)))
-    (set-face-attribute (car face) nil :font "Roboto" :weight 'bold :height (cdr face)))
+    ;; Set faces for heading levels
+    (dolist (face '((org-level-1 . 1.2)
+                    (org-level-2 . 1.1)
+                    (org-level-3 . 1.05)
+                    (org-level-4 . 1.0)
+                    (org-level-5 . 1.1)
+                    (org-level-6 . 1.1)
+                    (org-level-7 . 1.1)
+                    (org-level-8 . 1.1)))
+      (set-face-attribute (car face) nil :font "Roboto" :weight 'bold :height (cdr face)))
 
-  ;; Ensure that anything that should be fixed-pitch in Org files appears that way
-  (set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
-  (set-face-attribute 'org-code nil   :inherit '(shadow fixed-pitch))
-  (set-face-attribute 'org-table nil   :inherit '(shadow fixed-pitch))
-  (set-face-attribute 'org-verbatim nil :inherit '(shadow fixed-pitch))
-  (set-face-attribute 'org-special-keyword nil :inherit '(font-lock-comment-face fixed-pitch))
-  (set-face-attribute 'org-meta-line nil :inherit '(font-lock-comment-face fixed-pitch))
-  (set-face-attribute 'org-checkbox nil :inherit 'fixed-pitch))
+    ;; Ensure that anything that should be fixed-pitch in Org files appears that way
+    (set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
+    (set-face-attribute 'org-code nil   :inherit '(shadow fixed-pitch))
+    (set-face-attribute 'org-table nil   :inherit '(shadow fixed-pitch))
+    (set-face-attribute 'org-verbatim nil :inherit '(shadow fixed-pitch))
+    (set-face-attribute 'org-special-keyword nil :inherit '(font-lock-comment-face fixed-pitch))
+    (set-face-attribute 'org-meta-line nil :inherit '(font-lock-comment-face fixed-pitch))
+    (set-face-attribute 'org-checkbox nil :inherit 'fixed-pitch))
 
-(use-package org
-  :hook (org-mode . efs/org-mode-setup)
-  :config
-  (setq org-ellipsis " ▾")
-  (efs/org-font-setup))
+  (use-package org
+    :hook (org-mode . efs/org-mode-setup)
+    :config
+    (setq org-ellipsis " ▾")
+    (efs/org-font-setup))
 
-(use-package org-bullets
-  :after org
-  :hook (org-mode . org-bullets-mode)
-  :custom
-  (org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●")))
+  (use-package org-bullets
+    :after org
+    :hook (org-mode . org-bullets-mode)
+    :custom
+    (org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●")))
 
-(defun efs/org-mode-visual-fill ()
-  (setq visual-fill-column-width 100
-        visual-fill-column-center-text t)
-  (visual-fill-column-mode 1))
+  (defun efs/org-mode-visual-fill ()
+    (setq visual-fill-column-width 100
+          visual-fill-column-center-text t)
+    (visual-fill-column-mode 1))
 
-(use-package visual-fill-column
-  :hook (org-mode . efs/org-mode-visual-fill))
+  (use-package visual-fill-column
+    :hook (org-mode . efs/org-mode-visual-fill))
 
-(org-babel-do-load-languages
-  'org-babel-load-languages
-  '((emacs-lisp . t)
-    (python . t)))
+  (org-babel-do-load-languages
+    'org-babel-load-languages
+    '((emacs-lisp . t)
+      (python . t)))
 
 ;; Automatically tangle our Emacs.org config file when we save it
 (defun efs/org-babel-tangle-config ()
@@ -242,64 +268,105 @@
 
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-ts-mode))
 
-(use-package rust-ts-mode
-  :hook ((rust-ts-mode . eglot-ensure)
-         (rust-ts-mode . corfu-mode))
-  :config
-  (add-to-list 'exec-path "/home/dennis/.cargo/bin")
-  (setenv "PATH" (concat (getenv "PATH") ":/home/dennis/.cargo/bin")))
+  (use-package rust-ts-mode
+    :hook ((rust-ts-mode . eglot-ensure)
+           (rust-ts-mode . corfu-mode))
+    :config
+    (add-to-list 'exec-path "/home/dennis/.cargo/bin")
+    (setenv "PATH" (concat (getenv "PATH") ":/home/dennis/.cargo/bin")))
 
-  (use-package corfu
-    ;; Optional customizations
-     :custom
-     (corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
-     (corfu-auto t)                 ;; Enable auto completion
-    ;; (corfu-separator ?\s)          ;; Orderless field separator
-    ;; (corfu-quit-at-boundary nil)   ;; Never quit at completion boundary
-     (corfu-quit-no-match nil)      ;; Never quit, even if there is no match
-    ;; (corfu-preview-current nil)    ;; Disable current candidate preview
-    ;; (corfu-preselect 'prompt)      ;; Preselect the prompt
-    ;; (corfu-on-exact-match nil)     ;; Configure handling of exact matches
-    ;; (corfu-scroll-margin 5)        ;; Use scroll margin
+    (use-package corfu
+      ;; Optional customizations
+       :custom
+       (corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
+       (corfu-auto t)                 ;; Enable auto completion
+      ;; (corfu-separator ?\s)          ;; Orderless field separator
+      ;; (corfu-quit-at-boundary nil)   ;; Never quit at completion boundary
+       (corfu-quit-no-match nil)      ;; Never quit, even if there is no match
+      ;; (corfu-preview-current nil)    ;; Disable current candidate preview
+      ;; (corfu-preselect 'prompt)      ;; Preselect the prompt
+      ;; (corfu-on-exact-match nil)     ;; Configure handling of exact matches
+      ;; (corfu-scroll-margin 5)        ;; Use scroll margin
 
-    ;; Enable Corfu only for certain modes.
-    ;; :hook ((prog-mode . corfu-mode)
-    ;;        (shell-mode . corfu-mode)
-    ;;        (eshell-mode . corfu-mode))
+      ;; Enable Corfu only for certain modes.
+      ;; :hook ((prog-mode . corfu-mode)
+      ;;        (shell-mode . corfu-mode)
+      ;;        (eshell-mode . corfu-mode))
 
-    ;; Recommended: Enable Corfu globally.  This is recommended since Dabbrev can
-    ;; be used globally (M-/).  See also the customization variable
-    ;; `global-corfu-modes' to exclude certain modes.
-    :init
-    (global-corfu-mode))
+      ;; Recommended: Enable Corfu globally.  This is recommended since Dabbrev can
+      ;; be used globally (M-/).  See also the customization variable
+      ;; `global-corfu-modes' to exclude certain modes.
+      :init
+      (global-corfu-mode))
 
-  ;; A few more useful configurations...
-  (use-package emacs
-    :init
-    ;; TAB cycle if there are only few candidates
-    (setq completion-cycle-threshold 3)
+    ;; A few more useful configurations...
+    (use-package emacs
+      :init
+      ;; TAB cycle if there are only few candidates
+      (setq completion-cycle-threshold 3)
 
-    ;; Emacs 28: Hide commands in M-x which do not apply to the current mode.
-    ;; Corfu commands are hidden, since they are not supposed to be used via M-x.
-    ;; (setq read-extended-command-predicate
-    ;;       #'command-completion-default-include-p)
+      ;; Emacs 28: Hide commands in M-x which do not apply to the current mode.
+      ;; Corfu commands are hidden, since they are not supposed to be used via M-x.
+      ;; (setq read-extended-command-predicate
+      ;;       #'command-completion-default-include-p)
 
-    ;; Enable indentation+completion using the TAB key.
-    ;; `completion-at-point' is often bound to M-TAB.
-    (setq tab-always-indent 'complete))
-;; Use Dabbrev with Corfu!
-(use-package dabbrev
-  ;; Swap M-/ and C-M-/
-  :bind (("M-/" . dabbrev-completion)
-         ("C-M-/" . dabbrev-expand))
-  ;; Other useful Dabbrev configurations.
-  :custom
-  (dabbrev-ignored-buffer-regexps '("\\.\\(?:pdf\\|jpe?g\\|png\\)\\'")))
+      ;; Enable indentation+completion using the TAB key.
+      ;; `completion-at-point' is often bound to M-TAB.
+      (setq tab-always-indent 'complete))
+  ;; Use Dabbrev with Corfu!
+
+  (use-package dabbrev
+    ;; Swap M-/ and C-M-/
+    :bind (("M-/" . dabbrev-completion)
+           ("C-M-/" . dabbrev-expand))
+    ;; Other useful Dabbrev configurations.
+    :custom
+    (dabbrev-ignored-buffer-regexps '("\\.\\(?:pdf\\|jpe?g\\|png\\)\\'")))
 
 
-(setq-local corfu-auto-delay  0 ;; TOO SMALL - NOT RECOMMENDED
-            corfu-auto-prefix 1 ;; TOO SMALL - NOT RECOMMENDED
-            completion-styles '(basic))
+  (setq-local corfu-auto-delay  0 ;; TOO SMALL - NOT RECOMMENDED
+              corfu-auto-prefix 1 ;; TOO SMALL - NOT RECOMMENDED
+              completion-styles '(basic))
+
+;; Add extensions
+(use-package cape
+  ;; Bind dedicated completion commands
+  ;; Alternative prefix keys: C-c p, M-p, M-+, ...
+  :bind (("C-c p p" . completion-at-point) ;; capf
+         ("C-c p t" . complete-tag)        ;; etags
+         ("C-c p d" . cape-dabbrev)        ;; or dabbrev-completion
+         ("C-c p h" . cape-history)
+         ("C-c p f" . cape-file)
+         ("C-c p k" . cape-keyword)
+         ("C-c p s" . cape-elisp-symbol)
+         ("C-c p e" . cape-elisp-block)
+         ("C-c p a" . cape-abbrev)
+         ("C-c p l" . cape-line)
+         ("C-c p w" . cape-dict)
+         ("C-c p :" . cape-emoji)
+         ("C-c p \\" . cape-tex)
+         ("C-c p _" . cape-tex)
+         ("C-c p ^" . cape-tex)
+         ("C-c p &" . cape-sgml)
+         ("C-c p r" . cape-rfc1345))
+  :init
+  ;; Add to the global default value of `completion-at-point-functions' which is
+  ;; used by `completion-at-point'.  The order of the functions matters, the
+  ;; first function returning a result wins.  Note that the list of buffer-local
+  ;; completion functions takes precedence over the global list.
+  (add-to-list 'completion-at-point-functions #'cape-dabbrev)
+  (add-to-list 'completion-at-point-functions #'cape-file)
+  (add-to-list 'completion-at-point-functions #'cape-elisp-block)
+  ;;(add-to-list 'completion-at-point-functions #'cape-history)
+  ;;(add-to-list 'completion-at-point-functions #'cape-keyword)
+  ;;(add-to-list 'completion-at-point-functions #'cape-tex)
+  ;;(add-to-list 'completion-at-point-functions #'cape-sgml)
+  ;;(add-to-list 'completion-at-point-functions #'cape-rfc1345)
+  ;;(add-to-list 'completion-at-point-functions #'cape-abbrev)
+  ;;(add-to-list 'completion-at-point-functions #'cape-dict)
+  ;;(add-to-list 'completion-at-point-functions #'cape-elisp-symbol)
+  ;;(add-to-list 'completion-at-point-functions #'cape-line)
+)
 
 (use-package evil-nerd-commenter
   :bind ("M-;" . evilnc-comment-or-uncomment-lines))
@@ -344,7 +411,8 @@
 (use-package dired
   :ensure nil
   :commands (dired dired-jump)
-  :bind (("C-x C-j" . dired-jump))
+  ;; :bind (("C-x C-j" . dired-jump))
+  ;:bind (("C-x C-j" . dired-jump))
   :custom ((dired-listing-switches "-agho --group-directories-first"))
   :config
   (evil-collection-define-key 'normal 'dired-mode-map
@@ -372,3 +440,6 @@
 (setq exec-path (append exec-path '("/run/user/1000/fnm_multishells/67954_1702151293507/bin/npm")))
 (setq exec-path (append exec-path '("/run/user/1000/fnm_multishells/67954_1702151293507/bin")))
 (setq exec-path (append exec-path '("/home/dennis/.cargo/bin/rust-analyzer")))
+
+(use-package electric-pair-mode
+  :hook (prog-mode . electric-pair-mode))
