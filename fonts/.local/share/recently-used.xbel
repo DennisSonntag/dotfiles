@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/dennis/Downloads/Winter%202024%20Course%20Request%20Form.html" added="2023-12-11T21:44:57.667446Z" modified="2023-12-11T21:44:58.422516Z" visited="2023-12-11T21:44:57.667448Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="Floorp" exec="&apos;floorp %u&apos;" modified="2023-12-11T21:44:58.422512Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/dennis/Downloads/Winter%202024%20Course%20Request%20Form.pdf" added="2023-12-11T21:45:06.324035Z" modified="2023-12-11T21:45:06.324046Z" visited="2023-12-11T21:45:06.324037Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Floorp" exec="&apos;floorp %u&apos;" modified="2023-12-11T21:45:06.324041Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/dennis/Downloads/Your%20Appointment%20Has%20Been%20Scheduled%20-%20Chinook%20Learning%20Services%20Registration%20-%20Schedule%20an%20Appointment.pdf" added="2023-12-11T21:50:26.552877Z" modified="2023-12-11T21:50:26.552898Z" visited="2023-12-11T21:50:26.552880Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Floorp" exec="&apos;floorp %u&apos;" modified="2023-12-11T21:50:26.552888Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>
