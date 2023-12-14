@@ -1,0 +1,4 @@
+;;; -*- coding: utf-8; mode: lisp-data -*-
+(("/home/dennis/dotfiles/emacs/.config/emacs/Emacs.org" . 3083)
+ ("/home/dennis/.config/emacs/"
+  (dired-filename . "/home/dennis/.config/emacs/Emacs.org")))

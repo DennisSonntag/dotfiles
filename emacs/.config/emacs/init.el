@@ -14,9 +14,23 @@
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
-; START TABS CONFIG
 ;; Create a variable for our preferred tab width
 (setq custom-tab-width 4)
+
+;; Remeber recent visted files
+(recentf-mode 1)
+;; Save last cursor position in a file
+(save-place-mode 1)
+
+;; Change where custom variables are stored
+(setq custom-file (locate-user-emacs-file "custom-vars.el"))
+(load custom-file 'noerror 'nomessage)
+
+;; Don't pop up UI diaologs when prompting
+(setq use-dialog-box nil)
+
+
+
 
 ;; Two callable functions for enabling/disabling tabs in Emacs
 (defun disable-tabs () (setq indent-tabs-mode nil))
@@ -46,17 +60,6 @@
 ;; For the vim-like motions of ">>" and "<<".
 (setq-default evil-shift-width custom-tab-width)
 
-;; ;; WARNING: This will change your life
-;; ;; (OPTIONAL) Visualize tabs as a pipe character - "|"
-;; ;; This will also show trailing characters as they are useful to spot.
-;; (setq whitespace-style '(face tabs tab-mark trailing))
-;; (custom-set-faces
-;;  '(whitespace-tab ((t (:foreground "#636363")))))
-;; (setq whitespace-display-mappings
-;;   '((tab-mark 9 [124 9] [92 9]))) ; 124 is the ascii ID for '\|'
-;; (global-whitespace-mode) ; Enable whitespace mode everywhere
-;; ; END TABS CONFIG
-
 (setq inhibit-startup-message t); Disable Startup screen
 (scroll-bar-mode -1)            ; Disable visible scrollbar
 (tool-bar-mode -1)              ; Disable the toolbar
@@ -83,7 +86,10 @@
 
   (set-face-attribute 'default nil :font "JetBrainsMono NF" :height 150)
   (set-face-attribute 'fixed-pitch nil :font "JetBrainsMono NF" :height 150)
-  (set-face-attribute 'variable-pitch nil :font "Roboto" :height 150 :weight 'regular))
+  (set-face-attribute 'variable-pitch nil :font "Roboto" :height 150 :weight 'bold))
+
+
+
 
 (if (daemonp)
     (add-hook 'after-make-frame-functions
@@ -108,7 +114,7 @@
 ;; Highlight cursorline
 (global-hl-line-mode 1)
 
-(auto-revert-mode 1)
+(global-auto-revert-mode 1)
 
 ;; Backup files
 ;; Write backups to ~/.emacs.d/backup/
@@ -119,44 +125,54 @@
       kept-new-versions      20 ; how many of the newest versions to keep
       kept-old-versions      5) ; and how many of the old
 
-(use-package counsel
-  :bind (("M-x" . counsel-M-x)
-         ("C-x b" . counsel-ibuffer)
-         ("C-x C-f" . counsel-find-file)
-         :map minibuffer-local-map
-         ("C-r" . 'counsel-minibuffer-history))
-  :config
-  (setq ivy-initial-inputs-alist nil));; Don't start searches with ^
-
-(use-package ivy
-  :diminish
-  :bind (("C-s" . swiper)
-         :map ivy-minibuffer-map
-         ("TAB" . ivy-alt-done)	
-         ("C-l" . ivy-alt-done)
-         ("C-j" . ivy-next-line)
-         ("C-k" . ivy-previous-line)
-         :map ivy-switch-buffer-map
-         ("C-k" . ivy-previous-line)
-         ("C-l" . ivy-done)
-         ("C-d" . ivy-switch-buffer-kill)
-         :map ivy-reverse-i-search-map
-         ("C-k" . ivy-previous-line)
-         ("C-d" . ivy-reverse-i-search-kill))
-  :config
-  (ivy-mode 1))
-
-(use-package ivy-rich
+(use-package vertico
+  :ensure t
+  :bind (:map vertico-map
+              ("C-j" . vertico-next)
+              ("C-k" . vertico-previous)
+              ("C-f" . vertico-exit)
+              :map minibuffer-local-map
+              ("M-h" . backward-kill-word))
+  :custom
+  (vertico-cycle t)
   :init
-  (ivy-rich-mode 1))
+  (vertico-mode))
+
+(use-package savehist
+  :init
+   (setq history-length 25)
+  (savehist-mode 1))
+
+(use-package marginalia
+  :after vertico
+  :ensure t
+  :custom
+  (marginalia-annotators '(marginalia-annotators-heavy marginalia-annotators-light nil))
+  :init
+  (marginalia-mode))
+
+(use-package consult)
+
+(use-package prescient)
+(use-package corfu-prescient
+  :after corfu
+  :config
+  (corfu-prescient-mode 1))
+(use-package vertico-prescient
+  :after vertico
+  :config
+  (vertico-prescient-mode 1))
 
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
+(use-package rainbow-mode
+  :hook (prog-mode . rainbow-mode))
+
 ;; M-X all-the-icons-install-fonts
 (use-package all-the-icons)
 
-;Install doom statusline (be sure to run `M-x nerd-icons-install-fonts`)
+;;Install doom statusline (be sure to run `M-x nerd-icons-install-fonts`)
 (use-package doom-modeline
   :ensure t
   :init (doom-modeline-mode 1)
@@ -189,29 +205,32 @@
   (doom-themes-org-config))
 
 (use-package general
-  :ensure t
   :after evil
   :config
-  (general-create-definer tyrant-def
-    :states '(normal insert motion emacs)
+  (general-evil-setup)
+  (general-create-definer efs/leader-keys
+    :states '(normal insert motion visual emacs)
     :keymaps 'override
     :prefix "SPC"
     :non-normal-prefix "M-SPC")
-  (tyrant-def "" nil)
+  (efs/leader-keys "" nil)
 
-  (tyrant-def
+  (efs/leader-keys
     "sv" 'evil-window-vsplit
     "sh" 'evil-window-split
     "y" 'clipboard-kill-ring-save
     "p" 'clipboard-yank))
+
+ ;; fix clipboard
 (setq x-select-enable-clipboard nil)
 (setq x-select-enable-primary nil)
+
+(use-package pulse :ensure t)
 
 (defun efs/evil-yank-advice (orig-fn beg end &rest args)
   (set-face-attribute 'pulse-highlight-face nil :background "#cccccc" :foreground "#ffffff")
   (pulse-momentary-highlight-region beg end 'pulse-highlight-face)
   (apply orig-fn beg end args))
-
 
 ;; Vim keybinds
 (use-package evil
@@ -225,21 +244,22 @@
   (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
   (define-key evil-insert-state-map (kbd "C-h") 'evil-delete-backward-char-and-join)
 
-  (define-key evil-normal-state-map (kbd "C-h") 'evil-window-left)
-  (define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
-  (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
-  (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
+  (evil-global-set-key 'normal (kbd "C-h") 'evil-window-left)
+  (evil-global-set-key 'normal (kbd "C-k") 'evil-window-up)
+  (evil-global-set-key 'normal (kbd "C-j") 'evil-window-down)
+  (evil-global-set-key 'normal (kbd "C-l") 'evil-window-right)
 
   (define-key evil-normal-state-map (kbd "M-h") 'evil-shift-left)
   (define-key evil-normal-state-map (kbd "M-j") 'evil-collection-unimpaired-move-text-down)
   (define-key evil-normal-state-map (kbd "M-k") 'evil-collection-unimpaired-move-text-up)
   (define-key evil-normal-state-map (kbd "M-l") 'evil-shift-right)
 
+
   (define-key evil-normal-state-map (kbd "C-q") 'evil-window-delete)
 
   (define-key evil-normal-state-map (kbd "-") 'dired-jump)
 
-  (advice-add 'evil-yank :around efs/evil-yank-advice)
+  (advice-add 'evil-yank :around 'efs/evil-yank-advice)
 
   ;; Use visual line motions even outside of visual-line-mode buffers
   (evil-global-set-key 'motion "j" 'evil-next-visual-line)
@@ -252,6 +272,10 @@
   :after evil
   :config
   (evil-collection-init))
+
+(use-package evil-surround
+  :config
+  (global-evil-surround-mode 1))
 
 (defun efs/org-mode-setup ()
   (org-indent-mode)
@@ -304,6 +328,7 @@
 (use-package visual-fill-column
   :hook (org-mode . efs/org-mode-visual-fill))
 
+
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((emacs-lisp . t)
@@ -312,7 +337,7 @@
 ;; Automatically tangle our Emacs.org config file when we save it
 (defun efs/org-babel-tangle-config ()
   (when (string-equal (buffer-file-name)
-                      (expand-file-name "~/.config/emacs/Emacs.org"))
+                      (expand-file-name "~/dotfiles/emacs/.config/emacs/Emacs.org"))
     ;; Dynamic scoping to the rescue
     (let ((org-confirm-babel-evaluate nil))
       (org-babel-tangle))))
@@ -324,7 +349,14 @@
 (use-package rust-ts-mode
   :hook ((rust-ts-mode . eglot-ensure)
          (rust-ts-mode . corfu-mode))
+
   :config
+(add-to-list 'eglot-server-programs
+             '(rust-ts-mode . ("rustup" "run" "stable" "rust-analyzer"))
+  (setq exec-path (append exec-path '("/home/dennis/.cargo/bin/rust-analyzer")))
+  ;; (setq cargo-process--custom-path-to-bin "/home/dennis/.cargo/bin/cargo")
+  ;; (setq cargo-process--rustc-cmd "/home/dennis/.cargo/bin/rustc")
+  ;; (add-to-list 'eglot-server-programs '(rust-ts-mode . ("rustup" "run" "stable" "rust-analyzer")))
   (add-to-list 'exec-path "/home/dennis/.cargo/bin")
   (setenv "PATH" (concat (getenv "PATH") ":/home/dennis/.cargo/bin")))
 
@@ -386,6 +418,12 @@
   ;; Bind dedicated completion commands
   ;; Alternative prefix keys: C-c p, M-p, M-+, ...
   :bind (("C-c p p" . completion-at-point) ;; capf
+
+
+
+
+
+
          ("C-c p t" . complete-tag)        ;; etags
          ("C-c p d" . cape-dabbrev)        ;; or dabbrev-completion
          ("C-c p h" . cape-history)
@@ -431,11 +469,6 @@
 
 (use-package evil-nerd-commenter
   :bind ("M-;" . evilnc-comment-or-uncomment-lines))
-                                        ; (use-package evil-nerd-commenter) 
-;; (use-package evil-nerd-commenter
-;;   :init
-;;   (evilnc-default-hotkeys)
-;;   (setq evilnc-comment-operator "gcc"))
 
 (use-package tree-sitter-langs)
 
@@ -472,8 +505,6 @@
 (use-package dired
   :ensure nil
   :commands (dired dired-jump)
-  ;; :bind (("C-x C-j" . dired-jump))
-                                        ;:bind (("C-x C-j" . dired-jump))
   :custom ((dired-listing-switches "-agho --group-directories-first"))
   :config
   (evil-collection-define-key 'normal 'dired-mode-map
@@ -487,14 +518,69 @@
 
 (use-package dired-open
   :config
-  ;; Doesn't work as expected!
-  ;;(add-to-list 'dired-open-functions #'dired-open-xdg t)
   (setq dired-open-extensions '(("png" . "feh")
                                 ("mkv" . "mpv"))))
 
+(use-package format-all
+  :commands format-all-mode
+  :hook (prog-mode . format-all-mode))
+  ;; :config
+  ;; (setq-default format-all-formatters '(("C"     (astyle "--mode=c"))
+  ;;                                       ("Shell" (shfmt "-i" "4" "-ci")))))
+
+;; Configure Tempel
+(use-package tempel
+  ;; Require trigger prefix before template name when completing.
+  ;; :custom
+  ;; (tempel-trigger-prefix "<")
+
+  :bind (("M-+" . tempel-complete) ;; Alternative tempel-expand
+         ("M-*" . tempel-insert))
+
+  :init
+  (setq tempel-path "/home/dennis/dotfiles/emacs/.config/emacs/templates/")
+
+  ;; Setup completion at point
+  (defun tempel-setup-capf ()
+    ;; Add the Tempel Capf to `completion-at-point-functions'.
+    ;; `tempel-expand' only triggers on exact matches. Alternatively use
+    ;; `tempel-complete' if you want to see all matches, but then you
+    ;; should also configure `tempel-trigger-prefix', such that Tempel
+    ;; does not trigger too often when you don't expect it. NOTE: We add
+    ;; `tempel-expand' *before* the main programming mode Capf, such
+    ;; that it will be tried first.
+    (setq-local completion-at-point-functions
+                (cons #'tempel-expand
+                      completion-at-point-functions)))
+
+  (add-hook 'conf-mode-hook 'tempel-setup-capf)
+  (add-hook 'org-mode-hook 'tempel-setup-capf)
+  (add-hook 'prog-mode-hook 'tempel-setup-capf)
+  (add-hook 'text-mode-hook 'tempel-setup-capf)
+  (add-hook 'fundamental-mode-hook 'tempel-setup-capf)
+
+  ;; Optionally make the Tempel templates available to Abbrev,
+  ;; either locally or globally. `expand-abbrev' is bound to C-x '.
+  ;; (add-hook 'prog-mode-hook #'tempel-abbrev-mode)
+  ;; (global-tempel-abbrev-mode)
+)
+
+;; Optional: Add tempel-collection.
+;; The package is young and doesn't have comprehensive coverage.
+;;(use-package tempel-collection)
+
 (setq exec-path (append exec-path '("/run/user/1000/fnm_multishells/67954_1702151293507/bin/npm")))
 (setq exec-path (append exec-path '("/run/user/1000/fnm_multishells/67954_1702151293507/bin")))
-(setq exec-path (append exec-path '("/home/dennis/.cargo/bin/rust-analyzer")))
 
 (use-package electric-pair-mode
-  :hook (prog-mode . electric-pair-mode))
+    :hook
+  (prog-mode . electric-pair-mode)
+  (org-mode . electric-pair-mode)
+)
+
+
+(use-package highlight-parentheses
+    :hook (prog-mode . highlight-parentheses-mode)
+    :init
+    (setq )
+  )
