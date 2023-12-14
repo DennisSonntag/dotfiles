@@ -43,6 +43,7 @@ set fish_cursor_insert line
 abbr -a pac doas pacman
 abbr -a pa paru
 
+alias clip-c="wl-copy -c"
 alias rle="systemctl restart --user emacs"
 alias trash-size="dust ~/.local/share/Trash/"
 alias wget="wget --hsts-file=\"$XDG_DATA_HOME/wget-hsts\""

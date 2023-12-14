@@ -5,7 +5,8 @@
 
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
                          ("org" . "https://orgmode.org/elpa/")
-                         ("elpa" . "https://elpa.gnu.org/packages/")))
+                         ("elpa" . "https://elpa.gnu.org/packages/")
+                         ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
 
 (setq package-enable-at-startup nil)
 (package-initialize)
@@ -14,11 +15,32 @@
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
+(use-package tab-bar
+  :ensure nil
+  :config
+  (setq tab-bar-close-button-show nil)       ;; hide tab close / X button
+  (setq tab-bar-tab-hints t)                 ;; show tab numbers
+  (setq tab-bar-format '(tab-bar-format-tabs tab-bar-separator))
+  (setq tab-bar-select-tab-modifiers "control")
+  :hook
+  (emacs-startup . tab-bar-mode))
+
+  (setq x-select-enable-clipboard nil)
+  (setq x-select-enable-primary nil)
+
 ;; Create a variable for our preferred tab width
 (setq custom-tab-width 4)
 
-;; Remeber recent visted files
-(recentf-mode 1)
+(use-package recentf
+  :ensure nil
+  :config
+  (setq ;;recentf-auto-cleanup 'never
+   ;; recentf-max-menu-items 0
+   recentf-max-saved-items 200)
+  (setq recentf-filename-handlers ;; Show home folder path as a ~
+        (append '(abbreviate-file-name) recentf-filename-handlers))
+  (recentf-mode))
+
 ;; Save last cursor position in a file
 (save-place-mode 1)
 
@@ -29,7 +51,30 @@
 ;; Don't pop up UI diaologs when prompting
 (setq use-dialog-box nil)
 
+;; A cool mode to revert window configurations.
+(winner-mode 1)
 
+;; INTERACTION -----
+(setq use-short-answers t) ;; When emacs asks for "yes" or "no", let "y" or "n" suffice
+;;(setq confirm-kill-emacs 'yes-or-no-p) ;; Confirm to quit
+
+;; WINDOW -----------
+(setq frame-resize-pixelwise t)
+(setq ns-pop-up-frames nil) ;; When opening a file (like double click) on Mac, use an existing frame
+(setq window-resize-pixelwise nil)
+
+;; Uses system trash rather than deleting forever
+(setq trash-directory (concat "/home/dennis/.local/share/Trash"))
+(setq delete-by-moving-to-trash t)
+
+;; Explicitly define a width to reduce the cost of on-the-fly computation
+(setq-default display-line-numbers-width 3)
+
+;; C-p, C-n, etc uses visual lines
+(setq line-move-visual t)
+
+;; Stop the cursor from blinking
+(blink-cursor-mode 0) 
 
 
 ;; Two callable functions for enabling/disabling tabs in Emacs
@@ -59,18 +104,19 @@
 ;; (OPTIONAL) Shift width for evil-mode users
 ;; For the vim-like motions of ">>" and "<<".
 (setq-default evil-shift-width custom-tab-width)
-
 (setq inhibit-startup-message t); Disable Startup screen
 (scroll-bar-mode -1)            ; Disable visible scrollbar
 (tool-bar-mode -1)              ; Disable the toolbar
 (tooltip-mode -1)               ; Disable tooltips
 (set-fringe-mode 0)             ; Disable Padding
 (menu-bar-mode -1)              ; Disable the menu bar
-(setq visible-bell nil)         ; Disable visible-bell
+
+;; BELL/WARNING ------------
+(setq visible-bell nil) ;; Make it ring (so no visible bell) (default)
+(setq ring-bell-function 'ignore) ;; BUT ignore it, so we see and hear nothing
 
 ;; Transparent background
 (add-to-list 'default-frame-alist '(alpha-background . 90))
-
 ;; Setup line numbers
 (setq display-line-numbers-type 'relative)
 (column-number-mode)
@@ -78,27 +124,14 @@
 ;; Disable Line numbers tor some modes
 (dolist (mode '(org-mode-hook
                 term-mode-hook
+                eat-mode-hook
                 eshell-mode-hook))
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
-(defun efs/set-font-faces ()
-  (message "Setting faces!")
-
-  (set-face-attribute 'default nil :font "JetBrainsMono NF" :height 150)
-  (set-face-attribute 'fixed-pitch nil :font "JetBrainsMono NF" :height 150)
-  (set-face-attribute 'variable-pitch nil :font "Roboto" :height 150 :weight 'bold))
-
-
-
-
-(if (daemonp)
-    (add-hook 'after-make-frame-functions
-              (lambda (frame)
-                (setq doom-modeline-icon t)
-                (with-selected-frame frame
-                  (efs/set-font-faces))))
-  (efs/set-font-faces))
-
+;; Highlight cursorline
+(add-hook 'prog-mode-hook #'hl-line-mode)
+(add-hook 'text-mode-hook #'hl-line-mode)
+;;Scroll stuff
 (setq scroll-margin 8
       scroll-conservatively 101
       scroll-up-aggressively 0.01
@@ -111,8 +144,6 @@
 ;; Make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
-;; Highlight cursorline
-(global-hl-line-mode 1)
 
 (global-auto-revert-mode 1)
 
@@ -124,6 +155,24 @@
       delete-old-versions    t  ; Automatically delete excess backups:
       kept-new-versions      20 ; how many of the newest versions to keep
       kept-old-versions      5) ; and how many of the old
+
+  (setq exec-path (append exec-path '("/run/user/1000/fnm_multishells/67954_1702151293507/bin/npm")))
+  (setq exec-path (append exec-path '("/run/user/1000/fnm_multishells/67954_1702151293507/bin")))
+
+(defun efs/set-font-faces ()
+  (message "Setting faces!")
+
+  (set-face-attribute 'default nil :font "JetBrainsMono NF" :height 150)
+  (set-face-attribute 'fixed-pitch nil :font "JetBrainsMono NF" :height 150)
+  (set-face-attribute 'variable-pitch nil :font "Roboto" :height 150 :weight 'bold))
+
+(if (daemonp)
+    (add-hook 'after-make-frame-functions
+              (lambda (frame)
+                (setq doom-modeline-icon t)
+                (with-selected-frame frame
+                  (efs/set-font-faces))))
+  (efs/set-font-faces))
 
 (use-package vertico
   :ensure t
@@ -194,38 +243,41 @@
   ([remap describe-variable] . counsl-describe-variable)
   ([remap describe-key] . helpful-key))
 
-;; Colorscheme
 (use-package doom-themes
   :config
-  ;; Global settings (defaults)
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
   (load-theme 'doom-tokyo-night t)
-  ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config))
 
 (use-package general
-  :after evil
-  :config
-  (general-evil-setup)
-  (general-create-definer efs/leader-keys
-    :states '(normal insert motion visual emacs)
-    :keymaps 'override
-    :prefix "SPC"
-    :non-normal-prefix "M-SPC")
-  (efs/leader-keys "" nil)
+    :after evil
+    :config
+    (general-evil-setup)
+    (general-create-definer efs/leader-keys
+      :states '(normal insert motion visual emacs)
+      :keymaps 'override
+      :prefix "SPC"
+      :non-normal-prefix "M-SPC")
+    (efs/leader-keys "" nil)
 
-  (efs/leader-keys
-    "sv" 'evil-window-vsplit
-    "sh" 'evil-window-split
-    "y" 'clipboard-kill-ring-save
-    "p" 'clipboard-yank))
+    (efs/leader-keys
+      "sv" 'evil-window-vsplit
+      "sh" 'evil-window-split
+      "y" 'clipboard-kill-ring-save
+      "p" 'clipboard-yank))
+ ;; tab-bar keybinds
+(general-define-key
+ :states '(normal motion visual)
+ :keymaps 'override
+ :prefix "C-a"
+    "c" 'tab-bar-new-tab
+    "r" 'tab-bar-rename-tab
+    "x" 'tab-bar-close-tab
+    "n" 'tab-bar-switch-to-next-tab
+    "p" 'tab-bar-switch-to-prev-tab)
 
- ;; fix clipboard
-(setq x-select-enable-clipboard nil)
-(setq x-select-enable-primary nil)
-
-(use-package pulse :ensure t)
+   ;; fix clipboard
 
 (defun efs/evil-yank-advice (orig-fn beg end &rest args)
   (set-face-attribute 'pulse-highlight-face nil :background "#cccccc" :foreground "#ffffff")
@@ -244,6 +296,9 @@
   (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
   (define-key evil-insert-state-map (kbd "C-h") 'evil-delete-backward-char-and-join)
 
+
+  (evil-global-set-key 'normal (kbd "C-x C-<return>") 'eat)
+
   (evil-global-set-key 'normal (kbd "C-h") 'evil-window-left)
   (evil-global-set-key 'normal (kbd "C-k") 'evil-window-up)
   (evil-global-set-key 'normal (kbd "C-j") 'evil-window-down)
@@ -253,7 +308,6 @@
   (define-key evil-normal-state-map (kbd "M-j") 'evil-collection-unimpaired-move-text-down)
   (define-key evil-normal-state-map (kbd "M-k") 'evil-collection-unimpaired-move-text-up)
   (define-key evil-normal-state-map (kbd "M-l") 'evil-shift-right)
-
 
   (define-key evil-normal-state-map (kbd "C-q") 'evil-window-delete)
 
@@ -361,110 +415,107 @@
   (setenv "PATH" (concat (getenv "PATH") ":/home/dennis/.cargo/bin")))
 
 (use-package corfu
-  ;; Optional customizations
-  :custom
-  (corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
-  (corfu-auto t)                 ;; Enable auto completion
-  ;; (corfu-separator ?\s)          ;; Orderless field separator
-  ;; (corfu-quit-at-boundary nil)   ;; Never quit at completion boundary
-  (corfu-quit-no-match nil)      ;; Never quit, even if there is no match
-  ;; (corfu-preview-current nil)    ;; Disable current candidate preview
-  ;; (corfu-preselect 'prompt)      ;; Preselect the prompt
-  ;; (corfu-on-exact-match nil)     ;; Configure handling of exact matches
-  ;; (corfu-scroll-margin 5)        ;; Use scroll margin
+    :custom
+    (corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
+    (corfu-auto t)                 ;; Enable auto completion
+    ;;(corfu-quit-no-match nil)      ;; Never quit, even if there is no match
 
-  ;; Enable Corfu only for certain modes.
-  ;; :hook ((prog-mode . corfu-mode)
-  ;;        (shell-mode . corfu-mode)
-  ;;        (eshell-mode . corfu-mode))
+        (corfu-echo-documentation t)
+        (corfu-scroll-margin 0)
+        (corfu-count 8)
+        (corfu-max-width 50)
+        (corfu-min-width corfu-max-width)
+        (corfu-auto-prefix 2)
 
-  ;; Recommended: Enable Corfu globally.  This is recommended since Dabbrev can
-  ;; be used globally (M-/).  See also the customization variable
-  ;; `global-corfu-modes' to exclude certain modes.
-  :init
-  (global-corfu-mode))
+  :config
+  ;; Make Evil and Corfu play nice
+  (evil-make-overriding-map corfu-map)
+  (advice-add 'corfu--setup :after 'evil-normalize-keymaps)
+  (advice-add 'corfu--teardown :after 'evil-normalize-keymaps)
 
-;; A few more useful configurations...
-(use-package emacs
-  :init
-  ;; TAB cycle if there are only few candidates
-  (setq completion-cycle-threshold 3)
+  (corfu-history-mode 1)
+  (savehist-mode 1)
+  (add-to-list 'savehist-additional-variables 'corfu-history)
+    :init
+    (global-corfu-mode))
 
-  ;; Emacs 28: Hide commands in M-x which do not apply to the current mode.
-  ;; Corfu commands are hidden, since they are not supposed to be used via M-x.
-  ;; (setq read-extended-command-predicate
-  ;;       #'command-completion-default-include-p)
+  ;; A few more useful configurations...
+  (use-package emacs
+    :init
+    ;; TAB cycle if there are only few candidates
+    (setq completion-cycle-threshold 3)
 
-  ;; Enable indentation+completion using the TAB key.
-  ;; `completion-at-point' is often bound to M-TAB.
-  (setq tab-always-indent 'complete))
-;; Use Dabbrev with Corfu!
+    ;; Emacs 28: Hide commands in M-x which do not apply to the current mode.
+    ;; Corfu commands are hidden, since they are not supposed to be used via M-x.
+    ;; (setq read-extended-command-predicate
+    ;;       #'command-completion-default-include-p)
 
-(use-package dabbrev
-  ;; Swap M-/ and C-M-/
-  :bind (("M-/" . dabbrev-completion)
-         ("C-M-/" . dabbrev-expand))
-  ;; Other useful Dabbrev configurations.
-  :custom
-  (dabbrev-ignored-buffer-regexps '("\\.\\(?:pdf\\|jpe?g\\|png\\)\\'")))
+    ;; Enable indentation+completion using the TAB key.
+    ;; `completion-at-point' is often bound to M-TAB.
+    (setq tab-always-indent 'complete))
+  ;; Use Dabbrev with Corfu!
 
-
-(setq-local corfu-auto-delay  0 ;; TOO SMALL - NOT RECOMMENDED
-            corfu-auto-prefix 1 ;; TOO SMALL - NOT RECOMMENDED
-            completion-styles '(basic))
-
-;; Add extensions
-(use-package cape
-  ;; Bind dedicated completion commands
-  ;; Alternative prefix keys: C-c p, M-p, M-+, ...
-  :bind (("C-c p p" . completion-at-point) ;; capf
+  (use-package dabbrev
+    ;; Swap M-/ and C-M-/
+    :bind (("M-/" . dabbrev-completion)
+           ("C-M-/" . dabbrev-expand))
+    ;; Other useful Dabbrev configurations.
+    :custom
+    (dabbrev-ignored-buffer-regexps '("\\.\\(?:pdf\\|jpe?g\\|png\\)\\'")))
 
 
+  (setq-local corfu-auto-delay  0 ;; TOO SMALL - NOT RECOMMENDED
+              corfu-auto-prefix 1 ;; TOO SMALL - NOT RECOMMENDED
+              completion-styles '(basic))
 
-
-
-
-         ("C-c p t" . complete-tag)        ;; etags
-         ("C-c p d" . cape-dabbrev)        ;; or dabbrev-completion
-         ("C-c p h" . cape-history)
-         ("C-c p f" . cape-file)
-         ("C-c p k" . cape-keyword)
-         ("C-c p s" . cape-elisp-symbol)
-         ("C-c p e" . cape-elisp-block)
-         ("C-c p a" . cape-abbrev)
-         ("C-c p l" . cape-line)
-         ("C-c p w" . cape-dict)
-         ("C-c p :" . cape-emoji)
-         ("C-c p \\" . cape-tex)
-         ("C-c p _" . cape-tex)
-         ("C-c p ^" . cape-tex)
-         ("C-c p &" . cape-sgml)
-         ("C-c p r" . cape-rfc1345))
-  :init
-  ;; Add to the global default value of `completion-at-point-functions' which is
-  ;; used by `completion-at-point'.  The order of the functions matters, the
-  ;; first function returning a result wins.  Note that the list of buffer-local
-  ;; completion functions takes precedence over the global list.
-  (add-to-list 'completion-at-point-functions #'cape-dabbrev)
-  (add-to-list 'completion-at-point-functions #'cape-file)
-  (add-to-list 'completion-at-point-functions #'cape-elisp-block)
-  ;;(add-to-list 'completion-at-point-functions #'cape-history)
-  ;;(add-to-list 'completion-at-point-functions #'cape-keyword)
-  ;;(add-to-list 'completion-at-point-functions #'cape-tex)
-  ;;(add-to-list 'completion-at-point-functions #'cape-sgml)
-  ;;(add-to-list 'completion-at-point-functions #'cape-rfc1345)
-  ;;(add-to-list 'completion-at-point-functions #'cape-abbrev)
-  ;;(add-to-list 'completion-at-point-functions #'cape-dict)
-  ;;(add-to-list 'completion-at-point-functions #'cape-elisp-symbol)
-  ;;(add-to-list 'completion-at-point-functions #'cape-line)
-  )
+  ;; Add extensions
+  (use-package cape
+    ;; Bind dedicated completion commands
+    ;; Alternative prefix keys: C-c p, M-p, M-+, ...
+    :bind (("C-c p p" . completion-at-point) ;; capf
+           ("C-c p t" . complete-tag)        ;; etags
+           ("C-c p d" . cape-dabbrev)        ;; or dabbrev-completion
+           ("C-c p h" . cape-history)
+           ("C-c p f" . cape-file)
+           ("C-c p k" . cape-keyword)
+           ("C-c p s" . cape-elisp-symbol)
+           ("C-c p e" . cape-elisp-block)
+           ("C-c p a" . cape-abbrev)
+           ("C-c p l" . cape-line)
+           ("C-c p w" . cape-dict)
+           ("C-c p :" . cape-emoji)
+           ("C-c p \\" . cape-tex)
+           ("C-c p _" . cape-tex)
+           ("C-c p ^" . cape-tex)
+           ("C-c p &" . cape-sgml)
+           ("C-c p r" . cape-rfc1345))
+    :init
+    ;; Add to the global default value of `completion-at-point-functions' which is
+    ;; used by `completion-at-point'.  The order of the functions matters, the
+    ;; first function returning a result wins.  Note that the list of buffer-local
+    ;; completion functions takes precedence over the global list.
+    (add-to-list 'completion-at-point-functions #'cape-dabbrev)
+    (add-to-list 'completion-at-point-functions #'cape-file)
+    (add-to-list 'completion-at-point-functions #'cape-elisp-block)
+    ;;(add-to-list 'completion-at-point-functions #'cape-history)
+    ;;(add-to-list 'completion-at-point-functions #'cape-keyword)
+    ;;(add-to-list 'completion-at-point-functions #'cape-tex)
+    ;;(add-to-list 'completion-at-point-functions #'cape-sgml)
+    ;;(add-to-list 'completion-at-point-functions #'cape-rfc1345)
+    ;;(add-to-list 'completion-at-point-functions #'cape-abbrev)
+    ;;(add-to-list 'completion-at-point-functions #'cape-dict)
+    ;;(add-to-list 'completion-at-point-functions #'cape-elisp-symbol)
+    ;;(add-to-list 'completion-at-point-functions #'cape-line)
+    )
 
 (use-package kind-icon
-  :ensure t
-  :after corfu
-  :custom
-  (kind-icon-default-face 'corfu-default) ; to compute blended backgrounds correctly
+    :after corfu
+    :custom
+    (kind-icon-default-face 'corfu-default) ; to compute blended backgrounds correctly
   :config
+  (setq kind-icon-default-face 'corfu-default)
+  (setq kind-icon-default-style '(:padding 0 :stroke 0 :margin 0 :radius 0 :height 0.9 :scale 1))
+  (setq kind-icon-blend-frac 0.08)
   (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
 
 (use-package evil-nerd-commenter
@@ -496,11 +547,7 @@
         (typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src")
         (yaml "https://github.com/ikatyang/tree-sitter-yaml")))
 
-(use-package vterm
-  :commands vterm
-  :config
-  (setq vterm-shell "fish")                       ;; Set this to customize the shell to launch
-  (setq vterm-max-scrollback 10000))
+(use-package eat :ensure t)
 
 (use-package dired
   :ensure nil
@@ -527,6 +574,20 @@
   ;; :config
   ;; (setq-default format-all-formatters '(("C"     (astyle "--mode=c"))
   ;;                                       ("Shell" (shfmt "-i" "4" "-ci")))))
+
+;; Change the user-emacs-directory to keep unwanted things out of ~/.emacs.d
+(setq user-emacs-directory (expand-file-name "~/.cache/emacs/")
+      url-history-file (expand-file-name "url/history" user-emacs-directory))
+
+;; Use no-littering to automatically set common paths to the new user-emacs-directory
+(use-package no-littering)
+
+;; Keep customization settings in a temporary file (thanks Ambrevar!)
+(setq custom-file
+      (if (boundp 'server-socket-dir)
+          (expand-file-name "custom.el" server-socket-dir)
+        (expand-file-name (format "emacs-custom-%s.el" (user-uid)) temporary-file-directory)))
+(load custom-file t)
 
 ;; Configure Tempel
 (use-package tempel
@@ -569,18 +630,10 @@
 ;; The package is young and doesn't have comprehensive coverage.
 ;;(use-package tempel-collection)
 
-(setq exec-path (append exec-path '("/run/user/1000/fnm_multishells/67954_1702151293507/bin/npm")))
-(setq exec-path (append exec-path '("/run/user/1000/fnm_multishells/67954_1702151293507/bin")))
-
 (use-package electric-pair-mode
-    :hook
+  :hook
   (prog-mode . electric-pair-mode)
-  (org-mode . electric-pair-mode)
-)
-
+  (org-mode . electric-pair-mode))
 
 (use-package highlight-parentheses
-    :hook (prog-mode . highlight-parentheses-mode)
-    :init
-    (setq )
-  )
+    :hook (prog-mode . highlight-parentheses-mode))
