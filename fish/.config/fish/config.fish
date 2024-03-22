@@ -54,6 +54,7 @@ alias np="ping 1.1.1.1"
 alias n="pnpm"
 alias v="nvim"
 alias lv="NVIM_APPNAME=LazyVim nvim"
+alias ov="NVIM_APPNAME=nvimOld nvim"
 alias t="tmux attach || tmux new"
 alias ..="cd .."
 alias ls="lsd"
@@ -61,11 +62,17 @@ alias lsl="lsd -1"
 alias la="lsd -A"
 alias lal="lsd -1A"
 
+
 # kill anything running on local host 3000
 function killport
     set port $argv[1]
     kill -9 (lsof -i tcp:$port | sed -n 2p | awk '{print $2}')
 end
+
+function mine
+	doas chown -R dennis $argv[1]
+end
+
 
 # kill anything running on local host 3000
 function memc
@@ -88,6 +95,7 @@ alias gpush="git push origin main"
 alias gpushm="git push origin master"
 alias gpull="git pull"
 
+alias ssh-ubuntu-server="ssh -i ~/.ssh/id_ed25519_homelab dennis@192.168.1.219"
 alias c="clear"
 alias ccd="cd;clear"
 alias rm="trash"
@@ -122,6 +130,8 @@ function clear-cache
 	trash-empty
 	doas pacman -Rcns (pacman -Qdtq)
 end
+
+alias update-stats="checkupdates | rg \"linux-zen \""
 
 function update
 	mirror

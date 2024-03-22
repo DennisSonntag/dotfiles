@@ -1,8 +1,0 @@
-#!/bin/bash
-latest_version=$(pacman -Si linux-zen | awk '/Version/ {print $3}')
-installed_version=$(pacman -Qi linux-zen | awk '/Version/ {print $3}')
-if [[ $latest_version != $installed_version ]]; then
-  echo "There is an update available for linux-zen: $latest_version"
-else
-  echo "linux-zen is up to date"
-fi

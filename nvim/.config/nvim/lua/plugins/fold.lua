@@ -1,10 +1,10 @@
 return {
 	"kevinhwang91/nvim-ufo",
-		event = "BufRead",
+	event = "BufRead",
 	dependencies = "kevinhwang91/promise-async",
 	config = function()
-		vim.o.foldcolumn = '1' -- '0' is not bad
-		vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+		vim.o.foldcolumn = '1'
+		vim.o.foldlevel = 99
 		vim.o.foldlevelstart = 99
 		vim.o.foldenable = true
 
@@ -13,7 +13,7 @@ return {
 		vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
 
 		require('ufo').setup({
-			provider_selector = function(bufnr, filetype, buftype)
+			provider_selector = function(_bufnr, _filetype, _buftype)
 				return { 'lsp', 'indent' }
 			end
 		})

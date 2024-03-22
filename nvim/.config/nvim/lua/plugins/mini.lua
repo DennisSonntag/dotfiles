@@ -1,24 +1,20 @@
 return {
-	{ "echasnovski/mini.cursorword", event = "BufRead", opts = { delay = 10, } },
-	{ "echasnovski/mini.move",       event = "BufRead", config = true },
-	{ "echasnovski/mini.pairs",      event = "BufRead", config = true },
-	{
-		"echasnovski/mini.comment",
-		event = "BufRead",
-		dependencies = { "JoosepAlviste/nvim-ts-context-commentstring", lazy = true },
-		opts = {
+	"echasnovski/mini.nvim",
+	dependencies = { "JoosepAlviste/nvim-ts-context-commentstring", lazy = true },
+	config = function()
+		require("mini.comment").setup({
 			options = {
 				custom_commentstring = function()
 					return require("ts_context_commentstring.internal").calculate_commentstring() or vim.bo
 						.commentstring
 				end,
 			},
-		},
-	},
-	{
-		"echasnovski/mini.ai",
-		event = "BufRead",
-		opts = {
+
+
+		})
+
+		require("mini.ai").setup {
+			n_lines = 500,
 			custom_textobjects = {
 				--Camel case
 				s = {
@@ -33,11 +29,9 @@ return {
 			}
 
 		}
-	},
-	{
-		"echasnovski/mini.surround",
-		event = "BufRead",
-		opts = {
+		require("mini.move").setup()
+
+		require("mini.surround").setup({
 			mappings = {
 				add = "msa", -- Add surrounding in Normal and Visual modes
 				delete = "msd", -- Delete surrounding
@@ -46,7 +40,15 @@ return {
 				highlight = "msh", -- Highlight surrounding
 				replace = "msr", -- Replace surrounding
 				update_n_lines = "msn", -- Update `n_lines`
-			},
-		}
-	},
+			}
+
+		})
+
+		local statusline = require "mini.statusline"
+		-- set use_icons to true if you have a Nerd Font
+		statusline.setup { use_icons = vim.g.have_nerd_font }
+		statusline.section_location = function()
+			return "%2l:%-2v"
+		end
+	end,
 }

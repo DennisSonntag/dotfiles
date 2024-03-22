@@ -4,7 +4,14 @@ local icons = {
 		settings = " ",
 		exit = " ",
 		bean = " ",
-
+		event = " ",
+		keys = " ",
+		plug = " ",
+		runtime = "💻",
+		require = "🌙",
+		start = "🚀",
+		task = "📌",
+		lazy = "💤 ",
 	},
 	ui = {
 		cmd = "",

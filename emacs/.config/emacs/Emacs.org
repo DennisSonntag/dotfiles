@@ -28,12 +28,12 @@
     (setq tab-bar-close-button-show nil)       ;; hide tab close / X button
     (setq tab-bar-tab-hints t)                 ;; show tab numbers
     (setq tab-bar-format '(tab-bar-format-tabs tab-bar-separator))
-    (setq tab-bar-select-tab-modifiers "control")
     :hook
     (emacs-startup . tab-bar-mode))
 
-    (setq x-select-enable-clipboard nil)
-    (setq x-select-enable-primary nil)
+   ;;Fix clipboard
+  (setq x-select-enable-clipboard nil)
+  (setq x-select-enable-primary nil)
 
   ;; Create a variable for our preferred tab width
   (setq custom-tab-width 4)
@@ -163,8 +163,8 @@
         kept-new-versions      20 ; how many of the newest versions to keep
         kept-old-versions      5) ; and how many of the old
 
-    (setq exec-path (append exec-path '("/run/user/1000/fnm_multishells/67954_1702151293507/bin/npm")))
-    (setq exec-path (append exec-path '("/run/user/1000/fnm_multishells/67954_1702151293507/bin")))
+  (setq exec-path (append exec-path '("/run/user/1000/fnm_multishells/67954_1702151293507/bin/npm")))
+  (setq exec-path (append exec-path '("/run/user/1000/fnm_multishells/67954_1702151293507/bin")))
 #+end_src
 ** Font Config
 #+begin_src emacs-lisp
@@ -173,7 +173,7 @@
 
     (set-face-attribute 'default nil :font "JetBrainsMono NF" :height 150)
     (set-face-attribute 'fixed-pitch nil :font "JetBrainsMono NF" :height 150)
-    (set-face-attribute 'variable-pitch nil :font "Roboto" :height 150 :weight 'bold))
+    (set-face-attribute 'variable-pitch nil :font "Roboto" :height 150))
 
   (if (daemonp)
       (add-hook 'after-make-frame-functions
@@ -314,6 +314,7 @@
 *** Evil mode
 
 #+begin_src emacs-lisp
+   (use-package pulse :ensure t)
   (defun efs/evil-yank-advice (orig-fn beg end &rest args)
     (set-face-attribute 'pulse-highlight-face nil :background "#cccccc" :foreground "#ffffff")
     (pulse-momentary-highlight-region beg end 'pulse-highlight-face)
@@ -706,5 +707,11 @@
       :hook (prog-mode . highlight-parentheses-mode))
 #+end_src
 
+** Desktop
+#+begin_src emacs-lisp
+  (use-package desktop
+    :ensure nil
 
-
+    :hook
+    (emacs-startup . desktop-save-mode))
+#+end_src

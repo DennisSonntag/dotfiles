@@ -28,6 +28,4 @@ return {
       -- all the sub-options of filetypes apply to buftypes
       buftypes = {},
   }
-
-
 }

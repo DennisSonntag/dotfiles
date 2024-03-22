@@ -1,3 +1,9 @@
+-- vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+-- vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+-- vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+-- vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+-- vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
 local keymap = vim.keymap.set
 
 -- Arrow keys are for plebs
@@ -38,5 +44,3 @@ keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- keymap("n", "<C-s>", [[:%s/\(.*\)/\1]])
 
 keymap("n", "<leader>;", "<cmd>GotoPos<CR>")
-
-

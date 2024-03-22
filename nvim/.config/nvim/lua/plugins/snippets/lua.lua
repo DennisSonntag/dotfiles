@@ -78,3 +78,4 @@ cs("cmd", fmt("vim.cmd({})", { i(1, "") }))
 -- End Refactoring --
 
 return snippets, autosnippets
+

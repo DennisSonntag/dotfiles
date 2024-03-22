@@ -1,6 +1,0 @@
-#!/bin/bash
-
-hyprctl setprop address:$(hyprctl activewindow -j | jq '.address' | sed "s/\"//g") forcenoblur 1 lock
-hyprctl dispatch fullscreen 0
-kitty @ --to $KITTY_LISTEN_ON set-background-opacity 1 
-
