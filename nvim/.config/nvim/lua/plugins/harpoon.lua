@@ -11,8 +11,13 @@ return {
 			return
 		end
 
+		local function mark_file()
+			mark.add_file()
+			vim.notify "󱡅  marked file"
+		end
+
 		local keymaps = {
-			{ '<leader>a', mark.add_file },
+			{ '<leader>a', mark_file },
 			{ '<C-e>',     ui.toggle_quick_menu },
 		}
 		for i = 1, 5 do
