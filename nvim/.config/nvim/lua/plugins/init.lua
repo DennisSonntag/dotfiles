@@ -92,13 +92,6 @@ return {
 				floats = "transparent",
 			},
 			on_highlights = function(hl, _)
-				hl.CursorLineNr = {
-					fg = "#ffffff",
-					bold = true,
-				}
-				hl.LineNr = {
-					fg = "#555f8c",
-				}
 				hl.CursorLine = {
 					bg = "#2d3349",
 					bold = true,

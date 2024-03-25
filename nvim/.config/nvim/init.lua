@@ -38,7 +38,12 @@ require('lazy').setup {
 			},
 		},
 	},
+	change_detection = {
+		enabled = true,
+		notify = false,
+	},
 	ui = {
+		border = "rounded",
 		icons = {
 			cmd = icons.ui.cmd,
 			config = icons.extra.settings,
