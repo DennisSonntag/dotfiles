@@ -62,4 +62,4 @@ require('lazy').setup {
 	},
 }
 
-require 'config'
+require("config")

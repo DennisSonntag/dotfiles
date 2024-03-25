@@ -4,9 +4,8 @@ return {
 	dependencies = { "windwp/nvim-ts-autotag", config = true },
 	main = "nvim-treesitter.configs",
 	opts = {
-
 		ensure_installed = { "astro", "javascript", "typescript", "lua", "c", "cpp", "css", "json", "bash",
-			"rust", "html", "java", "prisma", "python", "dockerfile", "toml", "tsx", "make", "markdown",
+			"rust", "html", "java", "prisma", "python", "dockerfile", "tsx", "make", "markdown",
 			"markdown_inline", "vim", "yaml", "toml", "fish", "comment", "wgsl", "wgsl_bevy", "yuck", "regex", "svelte" },
 
 		-- Autoinstall languages that are not installed

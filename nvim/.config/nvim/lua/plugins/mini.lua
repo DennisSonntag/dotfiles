@@ -13,7 +13,7 @@ return {
 
 		})
 
-		require("mini.ai").setup {
+		require("mini.ai").setup({
 			n_lines = 500,
 			custom_textobjects = {
 				--Camel case
@@ -28,7 +28,7 @@ return {
 				}
 			}
 
-		}
+		})
 		require("mini.move").setup()
 
 		require("mini.surround").setup({
@@ -43,12 +43,5 @@ return {
 			}
 
 		})
-
-		local statusline = require "mini.statusline"
-		-- set use_icons to true if you have a Nerd Font
-		statusline.setup { use_icons = vim.g.have_nerd_font }
-		statusline.section_location = function()
-			return "%2l:%-2v"
-		end
 	end,
 }

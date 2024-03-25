@@ -35,4 +35,3 @@ return {
 		return dashboard.opts
 	end,
 }
-

@@ -12,8 +12,6 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 	end,
 })
 
-
-
 -- Check if the contents of a buffer have changed when opening a buffer
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 	pattern = { "*" },

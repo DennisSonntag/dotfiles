@@ -7,4 +7,3 @@ return {
 		{ "<leader>gc", function() vim.cmd.Git("commit") end }
 	}
 }
-

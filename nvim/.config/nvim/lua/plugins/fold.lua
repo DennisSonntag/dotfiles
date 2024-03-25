@@ -49,7 +49,7 @@ return {
 	},
 
 	config = function()
-		local builtin = require "statuscol.builtin"
+		local builtin = require("statuscol.builtin")
 		local cfg = {
 			setopt = true,
 			relculright = true,
