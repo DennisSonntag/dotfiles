@@ -1,12 +1,11 @@
 return {
 	"L3MON4D3/LuaSnip",
-	dependencies = { "hrsh7th/nvim-cmp" },
 	event = "InsertEnter",
 	config = function()
 		local ls_status, ls = pcall(require, "luasnip")
 		if (not ls_status) then return end
 
-		require("luasnip.loaders.from_lua").load({paths = vim.fn.stdpath("config") .. "lua/plugins/snippets"})
+		require("luasnip.loaders.from_lua").load({ paths = { vim.fn.stdpath("config") .. "lua/plugins/snippets" } })
 
 		require("luasnip").config.setup({ store_selection_keys = "<A-p>" })
 
@@ -29,15 +28,10 @@ return {
 
 		local s = ls.s
 		local i = ls.i
-		-- local t = ls.t
-
-		-- local d = ls.dynamic_node
-		-- local c = ls.choice_node
+		local t = ls.t
 		local f = ls.function_node
-		-- local sn = ls.snippet_node
-
-
 		local fmt = require("luasnip.extras.fmt").fmt
+		local fmta = require("luasnip.extras.fmt").fmta
 		local rep = require("luasnip.extras").rep
 
 		for _, lang in ipairs({ "typescript", "javascript", "typescriptreact", "javascriptreact" }) do
@@ -127,6 +121,10 @@ return {
 						{}
 					}}, {});"
 				]], { i(1), i(2, "timeout") })),
+				s("func",
+					fmta([[function <name>(<param>) {
+					     <code>
+					    }]], { name = i(1), param = i(2), code = i(3) })),
 				s("imp", fmt([[
 					import {} from "{}";
 				]], { i(1, "item"), i(2, "lib") })),
@@ -187,7 +185,8 @@ return {
 					sameCap(1), -- Pass an empty string to the returned function
 					i(2)
 				})),
-				s("class", fmt("className=\"{}\"", {
+
+				s("class", fmt([[className="{}"]], {
 					i(1)
 				})),
 				s("ref", fmt("const {} = useRef({});", {
@@ -203,22 +202,84 @@ return {
 			})
 		end
 
+		for _, lang in ipairs({ "typescriptreact", "javascriptreact", "html", "astro" }) do
+			ls.add_snippets(lang, {
+				s("script",
+					fmt("<script>{}</script>", { i(1), })),
+
+				s("script:src",
+					fmt([[<script defer src="{}"></script>]], { i(1), })),
+
+			})
+		end
+
+		ls.add_snippets("svelte", {
+			s("script",
+				fmt([[<script lang="ts">{}</script>]], { i(1), })),
+
+			s("if",
+				fmta([[
+{#if <condition>}
+	<html>
+{/if}
+]], { condition = i(1), html = i(2) })),
+
+			s("if",
+				fmta([[
+{#if <condition>}
+	<html>
+{/if}
+]], { condition = i(1), html = i(2) })),
+
+			s("else", t("{:else}")),
+
+			s("else", fmta("{:else if <condition>}", { condition = i(1) })),
+
+			s("slot", fmt("<slot>{}</slot>", { i(1) })),
+
+			s("each",
+				fmta([[
+{#each <list> as <val>}
+	<html>
+{/each}
+]], { list = i(1), val = i(2), html = i(3) })),
+
+			s("await",
+				fmta([[
+{#await <val>}
+	<html>
+{/await}
+]], { val = i(1), html = i(2) })),
+
+			s("onmount",
+				fmta([[
+onMount(() =>> {
+	<code>
+})
+]], { code = i(1) })),
+
+			s("then", fmta("{:then <val>}", { val = i(1) })),
+			s("catch", fmta("{:catch <val>}", { val = i(1) })),
+
+
+		})
+
 		for _, lang in ipairs({ "typescriptreact", "javascriptreact", "html", "astro", "svelte" }) do
 			ls.add_snippets(lang, {
 				s("doctype",
 					fmt("<!DOCTYPE>{}", { i(1), })),
 
 				s("a",
-					fmt("<a href=\"{}\">{}</a>{}", { i(1), i(2), i(3), })),
+					fmt([[<a href="{}">{}</a>{}]], { i(1), i(2), i(3), })),
 
 				s("abbr",
-					fmt("<abbr title=\"{}\">{}</abbr>{}", { i(1), i(2), i(3), })),
+					fmt([[<abbr title="{}">{}</abbr>{}]], { i(1), i(2), i(3), })),
 
 				s("address",
 					fmt("<address>{}</address>", { i(1), })),
 
 				s("area",
-					fmt("<area shape=\"{}\" coords=\"{}\" href=\"{}\" alt=\"{}\">{}", { i(1), i(2), i(3), i(4), i(5), })),
+					fmt([[<area shape="{}" coords="{}" href="{}" alt="{}">{}]], { i(1), i(2), i(3), i(4), i(5), })),
 				s("article",
 					fmt("<article>{}</article>", { i(1), })),
 
@@ -477,12 +538,6 @@ return {
 
 				s("samp",
 					fmt("<samp>{}</samp>{}", { i(1), i(2), })),
-
-				s("script",
-					fmt("<script>{}</script>", { i(1), })),
-
-				s("script:src",
-					fmt("<script defer src=\"{}\"></script>", { i(1), })),
 
 				s("section",
 					fmt("<section>{}</section>", { i(1), })),

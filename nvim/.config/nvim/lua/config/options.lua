@@ -16,6 +16,10 @@ o.sidescrolloff = 8
 
 o.completeopt = "menu,menuone,noselect"
 
+if vim.fn.has("nvim-0.10") == 1 then
+  o.smoothscroll = true
+end
+
 o.smartindent = true
 o.softtabstop = 4
 o.shiftwidth = 4

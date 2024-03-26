@@ -38,7 +38,6 @@ return {
 			},
 		},
 	},
-
 	{
 		"mfussenegger/nvim-lint",
 		event = { "BufReadPre", "BufNewFile" },
@@ -336,8 +335,6 @@ return {
 			{ "hrsh7th/cmp-path",         event = "InsertEnter" },
 			{ "saadparwaiz1/cmp_luasnip", event = "InsertEnter" },
 			{ "hrsh7th/cmp-nvim-lua",     event = "InsertEnter" },
-			{ "f3fora/cmp-spell",         event = "InsertEnter" },
-			{ "David-Kunz/cmp-npm",       config = true,        event = "InsertEnter" },
 		},
 		opts = function()
 			local cmp = require("cmp")
@@ -381,6 +378,8 @@ return {
 					end,
 				},
 				sorting = {
+					priority_weight = 1.0,
+
 					-- TODO: Would be cool to add stuff like "See variable names before method names" in rust, or something like that.
 					comparators = {
 						lspkind_comparator({
@@ -405,8 +404,8 @@ return {
 								Keyword = 2,
 								Constructor = 1,
 								Interface = 1,
-								Snippet = 2,
-								Text = 10,
+								Snippet = 12,
+								Text = 3,
 								TypeParameter = 1,
 								Unit = 1,
 								Value = 1,
@@ -418,11 +417,11 @@ return {
 				mapping = cmp.mapping.preset.insert({
 					["<C-d>"] = cmp.mapping.scroll_docs(-4),
 					["<C-f>"] = cmp.mapping.scroll_docs(4),
-					["<C-k>"] = cmp.mapping.select_prev_item(cmp_select),
-					["<C-j>"] = cmp.mapping.select_next_item(cmp_select),
+					["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
+					["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
 					["<C-Space>"] = cmp.mapping.complete(),
 					["<C-e>"] = cmp.mapping.close(),
-					["<C-n>"] = cmp.mapping(function(fallback)
+					["<Tab>"] = cmp.mapping(function(fallback)
 						-- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
 						-- they way you will only jump inside the snippet region
 						if luasnip.expand_or_jumpable() then
@@ -431,7 +430,7 @@ return {
 							fallback()
 						end
 					end, { "i", "s" }),
-					["<C-p>"] = cmp.mapping(function(fallback)
+					["<S-Tab>"] = cmp.mapping(function(fallback)
 						-- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
 						-- they way you will only jump inside the snippet region
 						if luasnip.jumpable(-1) then
@@ -440,27 +439,23 @@ return {
 							fallback()
 						end
 					end, { "i", "s" }),
-					["<Tab>"] = cmp.mapping.confirm({
+					["<C-y>"] = cmp.mapping.confirm({
 						behavior = cmp.ConfirmBehavior.Replace,
 						select = true
 					}),
 				}),
 				sources = cmp.config.sources({
-					{ name = "nvim_lsp" },
-					{ name = "crates" },
-					{ name = "luasnip" },
-					{ name = "buffer",  keyword_length = 5 },
-					{ name = "npm" },
-					{ name = "nvim_lua" },
+					{ name = "luasnip", priority = 10 },
 					{
-						name = "spell",
-						option = {
-							keep_all_entries = false,
-							enable_in_context = function()
-								return require("cmp.config.context").in_treesitter_capture("spell")
-							end,
-						},
+						name = 'nvim_lsp',
+						entry_filter = function(entry)
+							-- remove lsp snippets from suggestions
+							return require("cmp").lsp.CompletionItemKind.Snippet ~= entry:get_kind()
+						end,
+						priority = 8
 					},
+					{ name = "nvim_lua" },
+					{ name = "buffer",  keyword_length = 5, priority = 1 },
 					{ name = "path" },
 				}),
 				formatting = {
