@@ -161,11 +161,14 @@ return {
 					map("<leader>D", function()
 						require("telescope.builtin").lsp_type_definitions { reuse_win = true }
 					end)
-					map("K", vim.lsp.buf.hover)
+
+
 					map("<leader>lth", function()
 						vim.lsp.inlay_hint(0, nil)
 					end)
-					map("gK", vim.lsp.buf.signature_help)
+
+					map("K", require("hover").hover)
+					map("gK", require("hover").hover_select)
 
 					vim.keymap.set("i", "<c-k>", vim.lsp.buf.signature_help)
 
@@ -334,7 +337,7 @@ return {
 			{ "saadparwaiz1/cmp_luasnip", event = "InsertEnter" },
 			{ "hrsh7th/cmp-nvim-lua",     event = "InsertEnter" },
 			{ "f3fora/cmp-spell",         event = "InsertEnter" },
-			{ "David-Kunz/cmp-npm",       config = true,         event = "InsertEnter" },
+			{ "David-Kunz/cmp-npm",       config = true,        event = "InsertEnter" },
 		},
 		opts = function()
 			local cmp = require("cmp")
@@ -482,5 +485,46 @@ return {
 
 			}
 		end,
+	},
+	{
+		"zeioth/garbage-day.nvim",
+		dependencies = "neovim/nvim-lspconfig",
+		event = "VeryLazy",
+		config = true,
+	},
+	{
+		"lewis6991/hover.nvim",
+		opts = {
+			init = function()
+				-- Require providers
+				require("hover.providers.lsp")
+				-- require('hover.providers.gh')
+				-- require('hover.providers.gh_user')
+				-- require('hover.providers.jira')
+				-- require('hover.providers.man')
+				-- require('hover.providers.dictionary')
+			end,
+			preview_opts = {
+				border = 'rounded'
+			},
+			-- Whether the contents of a currently open hover window should be moved
+			-- to a :h preview-window when pressing the hover keymap.
+			preview_window = false,
+			title = true,
+			mouse_providers = {
+				'LSP'
+			},
+			mouse_delay = 1000
+		},
+		-- keys = {
+		-- 	{ "n", "<C-p>", function() require("hover").hover_switch("previous", { bufnr = 0}) end },
+		-- 	{ "n", "<C-n>", function() require("hover").hover_switch("next", {}) end }
+		-- }
+	},
+	{
+		"ray-x/lsp_signature.nvim",
+		event = "VeryLazy",
+		main = "lsp_signature",
+		config = true
 	}
 }

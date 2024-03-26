@@ -12,7 +12,7 @@ return {
 
 
 		})
-
+		
 		require("mini.ai").setup({
 			n_lines = 500,
 			custom_textobjects = {
@@ -30,6 +30,7 @@ return {
 
 		})
 		require("mini.move").setup()
+		require('mini.splitjoin').setup()
 
 		require("mini.surround").setup({
 			mappings = {
