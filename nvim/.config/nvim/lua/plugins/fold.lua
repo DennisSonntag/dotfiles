@@ -1,46 +1,3 @@
--- return {
--- 	"luukvbaal/statuscol.nvim",
--- 	event = "BufRead",
--- 	opts = function()
--- 		local icons = require("config.icons")
--- 		local signs = {
--- 			Error = icons.diagnostics.error,
--- 			Warn = icons.diagnostics.warn,
--- 			Hint = icons.diagnostics.hint,
--- 			Info = icons.diagnostics.info
--- 		}
---
--- 		for type, icon in pairs(signs) do
--- 			local hl = "DiagnosticSign" .. type
--- 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
--- 		end
---
--- 		return {
--- 			segments = {
--- 				{ text = { "%s" } },
--- 				{
--- 					text = { function(args)
--- 						if args.relnum == 0 then
--- 							if args.lnum == 69 then
--- 								return "nice"
--- 							elseif args.lnum == 420 then
--- 								return "blaze"
--- 							else
--- 								return args.lnum
--- 							end
--- 						else
--- 							return args.relnum
--- 						end
--- 					end },
--- 					click = "v:lua.ScLa",
--- 				},
--- 				{ text = { " " } },
---
--- 			}
--- 		}
--- 	end,
--- }
-
 return {
 	"kevinhwang91/nvim-ufo",
 	dependencies = {
@@ -50,6 +7,7 @@ return {
 
 	config = function()
 		local builtin = require("statuscol.builtin")
+		local keymap = vim.keymap.set
 		local cfg = {
 			setopt = true,
 			relculright = true,
@@ -71,8 +29,8 @@ return {
 		vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 
 		-- Using ufo provider need remap `zR` and `zM`. If Neovim is 0.6.1, remap yourself
-		vim.keymap.set("n", "zR", require("ufo").openAllFolds)
-		vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
+		keymap("n", "zR", require("ufo").openAllFolds)
+		keymap("n", "zM", require("ufo").closeAllFolds)
 
 		local handler = function(virtText, lnum, endLnum, width, truncate)
 			local newVirtText = {}
@@ -103,15 +61,17 @@ return {
 		end
 
 		local ftMap = {
-			-- typescriptreact = { "lsp", "treesitter" },
-			-- python = { "indent" },
-			-- git = "",
+			typescriptreact = { "lsp", "treesitter" },
+			python = { "indent" },
+			git = "",
 		}
 
 		require("ufo").setup {
 			fold_virt_text_handler = handler,
-			close_fold_kinds = {},
-			-- close_fold_kinds = { "imports", "comment" },
+			open_fold_hl_timeout = 400,
+			enable_get_fold_virt_text = false,
+			close_fold_kinds_for_ft = {},
+			close_fold_kinds = { "imports", "comment" },
 			provider_selector = function(bufnr, filetype, buftype)
 				-- if you prefer treesitter provider rather than lsp,
 				-- return ftMap[filetype] or {'treesitter', 'indent'}
@@ -136,11 +96,11 @@ return {
 			},
 		}
 
-		vim.keymap.set("n", "zR", require("ufo").openAllFolds)
-		vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
-		vim.keymap.set("n", "zr", require("ufo").openFoldsExceptKinds)
-		vim.keymap.set("n", "zm", require("ufo").closeFoldsWith) -- closeAllFolds == closeFoldsWith(0)
-		vim.keymap.set("n", "K", function()
+		keymap("n", "zR", require("ufo").openAllFolds)
+		keymap("n", "zM", require("ufo").closeAllFolds)
+		keymap("n", "zr", require("ufo").openFoldsExceptKinds)
+		keymap("n", "zm", require("ufo").closeFoldsWith) -- closeAllFolds == closeFoldsWith(0)
+		keymap("n", "K", function()
 			local winid = require("ufo").peekFoldedLinesUnderCursor()
 			if not winid then
 				vim.lsp.buf.hover()

@@ -29,8 +29,7 @@ keymap("n", "<leader>Y", [["+Y]])
 
 --Quit
 keymap("n", "<C-Q>", "<cmd>qa<CR>")
-vim.keymap.set("n", "<C-q>", "<cmd>q<CR>")
--- keymap("n", "<leader>q", "<cmd>q<CR>")
+keymap("n", "<C-q>", "<cmd>q<CR>")
 
 --Replace hovering word
 keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])

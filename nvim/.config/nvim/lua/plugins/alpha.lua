@@ -27,7 +27,7 @@ return {
 		dashboard.opts.opts.noautocmd = true
 
 
-		local file = io.open("/home/dennis/dotfiles/nvim/.config/nvim/quotes.txt", "r")
+		local file = io.open(vim.fn.stdpath("config") .. "/quotes.txt", "r")
 		if not file then return end
 		local lines = {}
 

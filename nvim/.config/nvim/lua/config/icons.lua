@@ -25,6 +25,8 @@ local icons = {
 		remote = " ",
 		auto_format = " ",
 		conceal = " ",
+		Forward = " ",
+		Telescope = " ",
 	},
 	debug = {
 		debug = " ",

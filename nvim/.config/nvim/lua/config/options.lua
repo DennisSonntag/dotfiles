@@ -31,6 +31,7 @@ o.cursorline = true
 o.showmode = false -- Dont show mode since we have a statusline
 o.fillchars = { eob = " " }
 o.spelllang = { "en" }
+o.spell = true
 o.termguicolors = true
 o.errorbells = false
 
