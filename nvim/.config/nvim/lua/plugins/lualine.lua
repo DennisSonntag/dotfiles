@@ -4,6 +4,7 @@ end
 
 return {
 	"nvim-lualine/lualine.nvim",
+	dependencies = "letieu/harpoon-lualine"
 
 	opts = {
 		options = {
@@ -44,7 +45,7 @@ return {
 				},
 			},
 
-			lualine_x = { "location" },
+			lualine_x = { "harpoon2", "location" },
 			lualine_y = { "filetype" },
 			lualine_z = { "progress" },
 		},
