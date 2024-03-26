@@ -6,7 +6,8 @@ return {
 		local ls_status, ls = pcall(require, "luasnip")
 		if (not ls_status) then return end
 
-		require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/lua/plugins/snippets/" })
+		require("luasnip.loaders.from_lua").load({paths = vim.fn.stdpath("config") .. "lua/plugins/snippets"})
+
 		require("luasnip").config.setup({ store_selection_keys = "<A-p>" })
 
 		vim.cmd("command! LuaSnipEdit :lua requre('luasnip.loaders.from_lua').edit_snippet_files()")
