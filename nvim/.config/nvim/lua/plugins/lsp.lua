@@ -328,13 +328,13 @@ return {
 		event = "InsertEnter",
 		after = "saadparwaiz1/cmp_luasnip",
 		dependencies = {
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-path",
-			{ "David-Kunz/cmp-npm", config = true },
-			"saadparwaiz1/cmp_luasnip",
-			"hrsh7th/cmp-nvim-lua",
-			"f3fora/cmp-spell",
+			{ "hrsh7th/cmp-buffer",       event = "InsertEnter" },
+			{ "hrsh7th/cmp-nvim-lsp",     event = "InsertEnter" },
+			{ "hrsh7th/cmp-path",         event = "InsertEnter" },
+			{ "saadparwaiz1/cmp_luasnip", event = "InsertEnter" },
+			{ "hrsh7th/cmp-nvim-lua",     event = "InsertEnter" },
+			{ "f3fora/cmp-spell",         event = "InsertEnter" },
+			{ "David-Kunz/cmp-npm",       config = true,         event = "InsertEnter" },
 		},
 		opts = function()
 			local cmp = require("cmp")

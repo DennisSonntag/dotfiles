@@ -122,8 +122,6 @@ return {
 			skip_confirm_for_simple_edits = true,
 			-- Deleted files will be removed with the trash_command (below).
 			delete_to_trash = true,
-			-- Change this to customize the command used when deleting to trash
-			trash_command = "trash",
 			view_options = {
 				-- Show files and directories that start with "."
 				show_hidden = true,
