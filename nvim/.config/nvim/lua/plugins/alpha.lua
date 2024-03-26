@@ -1,20 +1,14 @@
 return {
 	"goolord/alpha-nvim",
+	dependencies = {
+		"MaximilianLloyd/ascii.nvim",
+		"MunifTanjim/nui.nvim"
+	},
 	lazy = false,
 	opts = function()
 		local icons = require("config.icons")
 		local dashboard = require("alpha.themes.dashboard")
-		dashboard.section.header.val = {
-			[[ ▄▄▌  ▄▄▄ . ▄▄ • ▄• ▄▌• ▌ ▄ ·. ▄▄▄ .]],
-			[[██•  ▀▄.▀·▐█ ▀ ▪█▪██▌·██ ▐███▪▀▄.▀· ]],
-			[[██ ▪ ▐▀▀▪▄▄█ ▀█▄█▌▐█▌▐█ ▌▐▌▐█·▐▀▀▪▄ ]],
-			[[▐█▌ ▄▐█▄▄▌▐█▄▪▐█▐█▄█▌██ ██▌▐█▌▐█▄▄▌ ]],
-			[[.▀▀▀  ▀▀▀ ·▀▀▀▀  ▀▀▀ ▀▀  █▪▀▀▀ ▀▀▀  ]],
-			[[         __   __ _                  ]],
-			[[         \ \ / /(_) _ __            ]],
-			[[          \   / | || "  \           ]],
-			[[           \_/  |_||_|_|_|          ]],
-		}
+		dashboard.section.header.val = require("ascii").get_random_global();
 
 		dashboard.section.buttons.val = {
 			dashboard.button("n", icons.file.new .. " New file", "<cmd>ene <BAR> startinsert <CR>"),
@@ -26,12 +20,26 @@ return {
 
 		}
 
-		dashboard.section.footer.val = icons.extra.bean .. "NEVER LEND OR BORROW A MANS LEGUMES" .. icons.extra.bean
 		dashboard.section.footer.opts.hl = "Type"
 		dashboard.section.header.opts.hl = "Include"
 		dashboard.section.buttons.opts.hl = "Keyword"
 
 		dashboard.opts.opts.noautocmd = true
+
+
+		local file = io.open("/home/dennis/dotfiles/nvim/.config/nvim/quotes.txt", "r")
+		if not file then return end
+		local lines = {}
+
+		for line in file:lines() do
+			table.insert(lines, line)
+		end
+
+		file:close()
+
+		local randomQuote = lines[math.random(#lines)]
+		dashboard.section.footer.val = randomQuote
+
 		return dashboard.opts
 	end,
 }
