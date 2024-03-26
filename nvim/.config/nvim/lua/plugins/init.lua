@@ -4,7 +4,7 @@ return {
 		config = true,
 	},
 	{
-		"DaikyXendo/nvim-web-devicons",
+		"nvim-tree/nvim-web-devicons",
 		config = true
 	},
 	{
