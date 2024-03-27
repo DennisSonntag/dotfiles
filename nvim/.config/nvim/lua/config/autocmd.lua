@@ -54,3 +54,12 @@ autocmd("BufReadPost", {
 		end
 	end,
 })
+
+-- make it easier to close man-files when opened inline
+vim.api.nvim_create_autocmd("FileType", {
+	group = augroup("man_unlisted"),
+	pattern = { "man" },
+	callback = function(event)
+		vim.bo[event.buf].buflisted = false
+	end,
+})

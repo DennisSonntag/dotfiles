@@ -9,6 +9,7 @@ if not vim.loop.fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
+
 local icons = require("config.icons")
 
 require('lazy').setup {
