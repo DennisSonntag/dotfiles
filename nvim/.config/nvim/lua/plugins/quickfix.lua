@@ -4,12 +4,12 @@ return {
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		opts = {},
 		config = function()
-			-- Lua
-			vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)
+			local trouble = require("trouble")
+			vim.keymap.set("n", "<leader>xx", function() trouble.toggle() end)
+			vim.keymap.set("n", "<leader>xw", function() trouble.toggle("workspace_diagnostics") end)
+			vim.keymap.set("n", "<leader>xd", function() trouble.toggle("document_diagnostics") end)
 
-			vim.keymap.set("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
-			vim.keymap.set("n", "<leader>xd", function() require("trouble").toggle("document_diagnostics") end)
-
+			-- toggle location list
 			vim.keymap.set('n', '<leader>xl', function()
 				local win = vim.api.nvim_get_current_win()
 				local qf_winid = vim.fn.getloclist(win, { winid = 0 }).winid
@@ -17,13 +17,14 @@ return {
 				vim.cmd(action)
 			end)
 
+			-- toggle quickfix list
 			vim.keymap.set('n', '<leader>xq', function()
 				local qf_winid = vim.fn.getqflist({ winid = 0 }).winid
 				local action = qf_winid > 0 and 'cclose' or 'copen'
 				vim.cmd('botright ' .. action)
 			end)
 
-			vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)
+			vim.keymap.set("n", "gR", function() trouble.toggle("lsp_references") end)
 		end
 	},
 	{

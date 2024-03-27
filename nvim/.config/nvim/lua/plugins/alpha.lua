@@ -4,7 +4,6 @@ return {
 		"MaximilianLloyd/ascii.nvim",
 		"MunifTanjim/nui.nvim"
 	},
-	lazy = false,
 	opts = function()
 		local icons = require("config.icons")
 		local dashboard = require("alpha.themes.dashboard")

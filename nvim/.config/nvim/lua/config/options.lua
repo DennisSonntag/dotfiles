@@ -17,15 +17,21 @@ o.sidescrolloff = 8
 o.completeopt = "menu,menuone,noselect"
 
 if vim.fn.has("nvim-0.10") == 1 then
-  o.smoothscroll = true
+	o.smoothscroll = true
 end
 
+
+-- Ident/Tabs
+o.autoindent = true
+o.cindent = true
 o.smartindent = true
 o.softtabstop = 4
 o.shiftwidth = 4
 o.tabstop = 4
 o.copyindent = true
 
+
+-- Line Numbers
 o.relativenumber = true
 o.nu = true
 
@@ -35,7 +41,7 @@ o.cursorline = true
 o.showmode = false -- Dont show mode since we have a statusline
 o.fillchars = { eob = " " }
 o.spelllang = { "en" }
-o.spell = true
+o.spell = false
 o.termguicolors = true
 o.errorbells = false
 
@@ -53,3 +59,10 @@ o.cmdheight = 1
 o.hidden = true
 o.wrap = false
 o.mouse = "a"
+
+
+--- folds
+vim.o.foldcolumn = "1"   -- '0' is not bad
+vim.o.foldlevel = 99     -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true

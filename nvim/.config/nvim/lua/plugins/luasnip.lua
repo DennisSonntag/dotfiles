@@ -5,8 +5,6 @@ return {
 		local ls_status, ls = pcall(require, "luasnip")
 		if (not ls_status) then return end
 
-		require("luasnip.loaders.from_lua").load({ paths = { vim.fn.stdpath("config") .. "lua/plugins/snippets" } })
-
 		require("luasnip").config.setup({ store_selection_keys = "<A-p>" })
 
 		vim.cmd("command! LuaSnipEdit :lua requre('luasnip.loaders.from_lua').edit_snippet_files()")
@@ -14,13 +12,14 @@ return {
 		-- Virtual Text
 		local types = require("luasnip.util.types")
 		ls.config.set_config({
-			history = true,                   --> keep around last snippet local to jump back
+			history = false,                   --> dont keep around last snippet local to jump back
 			updateevents = "TextChanged,TextChangedI", --> update changes as you type
 			enable_autosnippets = true,
 			ext_opts = {
 				[types.choiceNode] = {
 					active = {
-						virt_text = { { "●", "GruvboxOrange" } },
+						-- virt_text = { { "●", "GruvboxOrange" } },
+						virt_text = { { " « ", "NonTest" } },
 					},
 				},
 			},
@@ -261,6 +260,55 @@ onMount(() =>> {
 			s("then", fmta("{:then <val>}", { val = i(1) })),
 			s("catch", fmta("{:catch <val>}", { val = i(1) })),
 
+
+		})
+
+		ls.add_snippets("rust", {
+			s("print", fmt('print!("{}");', { i(1) })),
+			s("println", fmt('println!("{}");', { i(1) })),
+			s("format", fmt('format!("{}");', { i(1) })),
+			s("if",
+				fmta([[
+if <condition> {
+	<code>
+}
+]], { condition = i(1), code = i(2) })),
+			s("if-let",
+				fmta([[
+if let <name> = <expr> {
+	<code>
+}
+]], { name = i(1), expr = i(2), code = i(3) })),
+			s("for",
+				fmta([[
+for <val> in <list> {
+	<code>
+}
+]], { val = i(1), list = i(2), code = i(3) })),
+
+			s("struct",
+				fmta([[
+struct <name> {
+	<vals>
+}
+]], { name = i(1), vals = i(2) })),
+
+			s("enum",
+				fmta([[
+enum <name> {
+	<vals>
+}
+]], { name = i(1), vals = i(2) })),
+
+		})
+
+		ls.add_snippets("lua", {
+			s("cmd", fmt("vim.cmd({})", { i(1) })),
+			s("func", fmta([[
+function<name>(<param>)
+	<code>
+end
+]], { name = i(1), param = i(2), code = i(3) })),
 
 		})
 

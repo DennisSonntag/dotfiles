@@ -12,6 +12,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local icons = require("config.icons")
 
+
 require('lazy').setup {
 	spec = {
 		{ import = 'plugins' },
