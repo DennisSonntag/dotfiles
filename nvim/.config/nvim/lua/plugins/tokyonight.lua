@@ -26,5 +26,8 @@ return {
 		vim.api.nvim_set_hl(0, "Pmenu", { bg = "#2d3349" })
 		vim.api.nvim_set_hl(0, "CmpDocumentation", { bg = "#2d3349" })
 		vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#404866" })
+
+		-- For Modicator
+		vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#388bfd", bg = "NONE" })
 	end,
 }

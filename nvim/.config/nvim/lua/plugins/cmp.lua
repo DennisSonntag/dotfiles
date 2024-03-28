@@ -96,7 +96,12 @@ return {
 				["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
 				["<C-Space>"] = cmp.mapping.complete(),
 				["<C-e>"] = cmp.mapping.close(),
-				["<Tab>"] = cmp.mapping(function(fallback)
+				["<C-l>"] = cmp.mapping(function(fallback)
+					if luasnip.choice_active() then
+						luasnip.change_choice(1)
+					end
+				end, { "i", "s" }),
+				["<C-j>"] = cmp.mapping(function(fallback)
 					-- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
 					-- they way you will only jump inside the snippet region
 					if luasnip.expand_or_jumpable() then
@@ -105,7 +110,7 @@ return {
 						fallback()
 					end
 				end, { "i", "s" }),
-				["<S-Tab>"] = cmp.mapping(function(fallback)
+				["<C-k>"] = cmp.mapping(function(fallback)
 					-- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
 					-- they way you will only jump inside the snippet region
 					if luasnip.jumpable(-1) then
@@ -157,6 +162,7 @@ return {
 
 		}
 	end,
+
 	config = function(_, opts)
 		local cmp = require("cmp")
 		cmp.setup(opts)

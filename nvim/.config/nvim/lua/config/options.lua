@@ -4,9 +4,9 @@ vim.g.rustinlaytoggle = false
 
 o.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "resize" }
 
-o.list = true -- Show some invisible characters (tabs...
+o.list = false -- Don't show invisible characters (tabs...
 
-o.undodir = os.getenv "HOME" .. "/.vim/undodir"
+o.undodir = os.getenv "HOME" .. "/.local/state/nvim/undodir"
 o.undofile = true
 o.swapfile = false
 o.backup = false
@@ -62,7 +62,7 @@ o.mouse = "a"
 
 
 --- folds
-vim.o.foldcolumn = "1"   -- '0' is not bad
-vim.o.foldlevel = 99     -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldcolumn = "1"
+vim.o.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true

@@ -2,33 +2,27 @@ return {
 	"L3MON4D3/LuaSnip",
 	event = "InsertEnter",
 	config = function()
-		local ls_status, ls = pcall(require, "luasnip")
-		if (not ls_status) then return end
+		-- local ls_status, ls = pcall(require, "luasnip")
+		-- if (not ls_status) then return end
 
-		require("luasnip").config.setup({ store_selection_keys = "<A-p>" })
-
-		vim.cmd("command! LuaSnipEdit :lua requre('luasnip.loaders.from_lua').edit_snippet_files()")
+		local ls = require("luasnip")
 
 		-- Virtual Text
 		local types = require("luasnip.util.types")
 		ls.config.set_config({
-			history = false,                   --> dont keep around last snippet local to jump back
+			history = false,                  --> dont keep around last snippet local to jump back
 			updateevents = "TextChanged,TextChangedI", --> update changes as you type
 			enable_autosnippets = true,
 			ext_opts = {
 				[types.choiceNode] = {
 					active = {
-						-- virt_text = { { "●", "GruvboxOrange" } },
 						virt_text = { { " « ", "NonTest" } },
 					},
 				},
 			},
 		})
 
-		local s = ls.s
-		local i = ls.i
-		local t = ls.t
-		local f = ls.function_node
+		local s, i, t, f, c = ls.s, ls.i, ls.t, ls.function_node, ls.choice_node
 		local fmt = require("luasnip.extras.fmt").fmt
 		local fmta = require("luasnip.extras.fmt").fmta
 		local rep = require("luasnip.extras").rep
@@ -305,10 +299,20 @@ enum <name> {
 		ls.add_snippets("lua", {
 			s("cmd", fmt("vim.cmd({})", { i(1) })),
 			s("func", fmta([[
-function<name>(<param>)
-	<code>
-end
-]], { name = i(1), param = i(2), code = i(3) })),
+				function<name>(<param>)
+					<code>
+				end
+				]], { name = i(1), param = i(2), code = i(3) })),
+
+
+
+
+			s("if", fmta([[
+				if <condition> then
+					<code>
+				end
+				]], { condition = i(1), code = c(2, { i(2), fmt("{}\nthen\n {}", { i(1), i(2) }) }) })),
+
 
 		})
 

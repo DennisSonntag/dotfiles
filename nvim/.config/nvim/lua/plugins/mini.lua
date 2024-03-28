@@ -1,6 +1,9 @@
 return {
 	"echasnovski/mini.nvim",
-	dependencies = { "JoosepAlviste/nvim-ts-context-commentstring", lazy = true },
+	dependencies = {
+		"JoosepAlviste/nvim-ts-context-commentstring",
+		lazy = true
+	},
 	config = function()
 		require("mini.comment").setup({
 			options = {
@@ -9,14 +12,12 @@ return {
 						.commentstring
 				end,
 			},
-
-
 		})
-		
+
 		require("mini.ai").setup({
-			n_lines = 500,
+			n_lines = 1000,
 			custom_textobjects = {
-				--Camel case
+				--Camel case and snake case
 				s = {
 					{
 						"%u[%l%d]+%f[^%l%d]",
@@ -25,10 +26,11 @@ return {
 						"^[%l%d]+%f[^%l%d]",
 					},
 					"^().*()$"
-				}
+				},
 			}
 
 		})
+
 		require("mini.move").setup()
 		require('mini.splitjoin').setup()
 
