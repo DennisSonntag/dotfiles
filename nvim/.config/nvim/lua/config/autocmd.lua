@@ -31,11 +31,11 @@ autocmd({ "FocusGained", "TermClose", "TermLeave", "BufWinEnter" }, {
 })
 
 -- remove post line space
-autocmd({ "BufWritePre" }, {
-	group = DennisGroup,
-	pattern = "*",
-	command = [[%s/\s\+$//e]],
-})
+-- autocmd({ "BufWritePre" }, {
+-- 	group = DennisGroup,
+-- 	pattern = "*",
+-- 	command = [[%s/\s\+$//e]],
+-- })
 
 -- go to last location when opening a buffer
 autocmd("BufReadPost", {

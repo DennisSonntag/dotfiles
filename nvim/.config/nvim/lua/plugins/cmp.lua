@@ -101,6 +101,11 @@ return {
 						luasnip.change_choice(1)
 					end
 				end, { "i", "s" }),
+				["<C-i>"] = cmp.mapping(function(fallback)
+					if luasnip.choice_active() then
+						luasnip.change_choice(-1)
+					end
+				end, { "i", "s" }),
 				["<C-j>"] = cmp.mapping(function(fallback)
 					-- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
 					-- they way you will only jump inside the snippet region
@@ -130,7 +135,10 @@ return {
 					name = 'nvim_lsp',
 					entry_filter = function(entry)
 						-- remove lsp snippets from suggestions
-						return require("cmp").lsp.CompletionItemKind.Snippet ~= entry:get_kind()
+						return require("cmp").lsp.CompletionItemKind.Snippet ~= entry:get_kind() and
+							-- TODO: Remove this and disable directly in svelte-language-server options
+							-- this is to remove emmet ls completions from svelte language server
+							require("cmp").lsp.CompletionItemKind.Text ~= entry:get_kind()
 					end,
 					priority = 8
 				},

@@ -36,3 +36,5 @@ keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- keymap("n", "<C-s>", [[:%s/\(.*\)/\1]])
 
 keymap("n", "<leader>;", "<cmd>GotoPos<CR>")
+
+keymap({"i", "s"}, "<Tab>", "<Tab>")

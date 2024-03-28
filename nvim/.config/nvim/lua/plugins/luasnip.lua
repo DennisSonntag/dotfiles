@@ -23,7 +23,7 @@ return {
 		local fmta = require("luasnip.extras.fmt").fmta
 		local rep = require("luasnip.extras").rep
 
-		for _, lang in ipairs({ "typescript", "javascript", "typescriptreact", "javascriptreact" }) do
+		for _, lang in ipairs({ "typescript", "javascript", "typescriptreact", "javascriptreact", "svelte" }) do
 			ls.add_snippets(lang, {
 				s("log", fmt("console.log({});", {
 					i(1)
@@ -45,7 +45,7 @@ return {
 					for <cond> {
 						<code>
 					}
-				]], {
+					]], {
 					cond = c(1, {
 						fmt("(let {} = 0; {} < {}; {}++)", {
 							i(1, "i"),
@@ -129,9 +129,10 @@ return {
 					}}, {});"
 				]], { i(1), i(2, "timeout") })),
 				s("func",
-					fmta([[function <name>(<param>) {
-					     <code>
-					    }]], { name = i(1), param = i(2), code = i(3) })),
+					fmta([[
+					function <name>(<param>) {
+						<code>
+					}]], { name = i(1), param = i(2), code = i(3) })),
 				s("imp", fmt([[
 					import {} from "{}";
 				]], { i(1, "item"), i(2, "lib") })),
@@ -219,7 +220,10 @@ return {
 
 		ls.add_snippets("svelte", {
 			s("script",
-				fmt([[<script lang="ts">{}</script>]], { i(1), })),
+				fmt([[
+				<script lang="ts">
+					{}
+				</script>]], { i(1) })),
 			s("if",
 				fmta([[
 				{#if <condition>}
@@ -251,9 +255,9 @@ return {
 						<html>
 					{/await}
 					]], {
-						val = i(1),
-						html = i(2)
-					})),
+					val = i(1),
+					html = i(2)
+				})),
 			s("onmount",
 				fmta([[
 				onMount(() =>> {
@@ -272,9 +276,9 @@ return {
 					<code>
 				}
 				]], {
-					condition = i(1),
-					code = i(2)
-				})),
+				condition = i(1),
+				code = i(2)
+			})),
 			s("if-let",
 				fmta([[
 				if let <name> = <expr> {
@@ -300,17 +304,17 @@ return {
 					<vals>
 				}
 				]], {
-					name = i(1),
-					vals = i(2)
-				})),
+				name = i(1),
+				vals = i(2)
+			})),
 			s("enum", fmta([[
 				enum <name> {
 					<vals>
 				}
 				]], {
-					name = i(1),
-					vals = i(2)
-				})),
+				name = i(1),
+				vals = i(2)
+			})),
 		})
 
 		ls.add_snippets("lua", {
@@ -319,21 +323,21 @@ return {
 					<code>
 				end
 				]], {
-					name = i(1),
-					param = i(2),
-					code = i(3)
-				})),
+				name = i(1),
+				param = i(2),
+				code = i(3)
+			})),
 			s("if", fmta([[
 				if <condition> then
 					<code>
 				end
 				]], {
-					condition = i(1),
-					code = c(2, { i(2), fmt(
-						"{}\nelse\n {}",
-						{ i(1), i(2) }
-					) })
-				})),
+				condition = i(1),
+				code = c(2, { i(2), fmt(
+					"{}\nelse\n {}",
+					{ i(1), i(2) }
+				) })
+			})),
 		})
 
 		for _, lang in ipairs({ "typescriptreact", "javascriptreact", "html", "astro", "svelte" }) do

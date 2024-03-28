@@ -6,7 +6,7 @@ o.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "resize" }
 
 o.list = false -- Don't show invisible characters (tabs...
 
-o.undodir = os.getenv "HOME" .. "/.local/state/nvim/undodir"
+o.undodir = os.getenv("HOME") .. "/.local/state/nvim/undodir"
 o.undofile = true
 o.swapfile = false
 o.backup = false
@@ -20,16 +20,15 @@ if vim.fn.has("nvim-0.10") == 1 then
 	o.smoothscroll = true
 end
 
-
 -- Ident/Tabs
 o.autoindent = true
 o.cindent = true
 o.smartindent = true
 o.softtabstop = 4
-o.shiftwidth = 4
+o.softtabstop = 4
+o.expandtab = false
 o.tabstop = 4
 o.copyindent = true
-
 
 -- Line Numbers
 o.relativenumber = true
@@ -60,9 +59,10 @@ o.hidden = true
 o.wrap = false
 o.mouse = "a"
 
-
 --- folds
 vim.o.foldcolumn = "1"
-vim.o.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
+
+vim.g.emmet_show_expand_abbreviation = "never"

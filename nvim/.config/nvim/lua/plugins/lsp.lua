@@ -1,6 +1,7 @@
 return {
 	{
 		"stevearc/conform.nvim",
+		lazy = false,
 		keys = {
 			{
 				"<leader>lf",
@@ -12,29 +13,36 @@ return {
 		opts = {
 			notify_on_error = false,
 			formatters_by_ft = {
-				astro = { { "prettierd", "prettier" } },
 				c = { "clang_format" },
 				cpp = { "clang_format" },
-				css = { { "prettierd", "prettier" } },
 				fish = { "fish_indent" },
-				graphql = { { "prettierd", "prettier" } },
-				handlebars = { { "prettierd", "prettier" } },
-				html = { { "prettierd", "prettier" } },
-				javascript = { { "prettierd", "prettier" } },
-				javascriptreact = { { "prettierd", "prettier" } },
-				json = { { "prettierd", "prettier" } },
-				jsonc = { { "prettierd", "prettier" } },
-				less = { { "prettierd", "prettier" } },
 				lua = { "stylua" },
-				markdown = { { "prettierd", "prettier" } },
 				python = { "black" },
-				scss = { { "prettierd", "prettier" } },
 				sh = { "shfmt" },
-				svelte = { { "prettierd", "prettier" } },
-				typescript = { { "prettierd", "prettier" } },
-				typescriptreact = { { "prettierd", "prettier" } },
-				vue = { { "prettierd", "prettier" } },
-				yaml = { "yamlfmt" },
+
+				["astro"] = { "prettierd" },
+
+				-- ["svelte"] = { "prettierd" },
+				["svelte"] = { "prettier" },
+
+				["javascript"] = { "prettierd" },
+				["javascriptreact"] = { "prettierd" },
+				["typescript"] = { "prettierd" },
+				["typescriptreact"] = { "prettierd" },
+				["vue"] = { "prettierd" },
+				["css"] = { "prettierd" },
+				["scss"] = { "prettierd" },
+				["less"] = { "prettierd" },
+				["html"] = { "prettierd" },
+				["json"] = { "prettierd" },
+				["jsonc"] = { "prettierd" },
+				["yaml"] = { "prettierd" },
+				["markdown"] = { "prettierd" },
+				["markdown.mdx"] = { "prettierd" },
+				["graphql"] = { "prettierd" },
+				["handlebars"] = { "prettierd" },
+
+				["*"] = { "trim_whitespace" },
 			},
 		},
 	},
@@ -108,7 +116,7 @@ return {
 							relative = "editor", -- What the notification window position is relative to
 						},
 					},
-				}
+				},
 			},
 
 			-- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
@@ -116,7 +124,7 @@ return {
 			{ "folke/neodev.nvim", opts = {} },
 		},
 		config = function()
-			vim.diagnostic.config {
+			vim.diagnostic.config({
 				underline = true,
 				update_in_insert = false,
 				virtual_text = {
@@ -125,13 +133,13 @@ return {
 					prefix = "",
 				},
 				severity_sort = true,
-			}
+			})
 
 			local function diagnostic_goto(next, severity)
 				local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
 				severity = severity and vim.diagnostic.severity[severity] or nil
 				return function()
-					go { severity = severity }
+					go({ severity = severity })
 				end
 			end
 
@@ -150,17 +158,16 @@ return {
 					map("<leader>lvd", vim.diagnostic.open_float)
 					map("<leader>cl", "<cmd>LspInfo<cr>")
 					map("gd", function()
-						require("telescope.builtin").lsp_definitions { reuse_win = true }
+						require("telescope.builtin").lsp_definitions({ reuse_win = true })
 					end)
 					map("gr", require("telescope.builtin").lsp_references)
 					map("gD", vim.lsp.buf.declaration)
 					map("gI", function()
-						require("telescope.builtin").lsp_implementations { reuse_win = true }
+						require("telescope.builtin").lsp_implementations({ reuse_win = true })
 					end)
 					map("<leader>D", function()
-						require("telescope.builtin").lsp_type_definitions { reuse_win = true }
+						require("telescope.builtin").lsp_type_definitions({ reuse_win = true })
 					end)
-
 
 					map("<leader>lth", function()
 						vim.lsp.inlay_hint(0, nil)
@@ -177,9 +184,9 @@ return {
 					map("[e", diagnostic_goto(false, "ERROR"))
 					map("]w", diagnostic_goto(true, "WARN"))
 					map("[w", diagnostic_goto(false, "WARN"))
-					map("<leader>lf", function()
-						vim.lsp.buf.format { async = true }
-					end)
+					-- map("<leader>lf", function()
+					-- 	vim.lsp.buf.format { async = true }
+					-- end)
 					map("<leader>lr", vim.lsp.buf.rename)
 					vim.keymap.set({ "n", "v" }, "<leader>lca", vim.lsp.buf.code_action)
 
@@ -211,7 +218,9 @@ return {
 				cssls = {},
 				html = {},
 				jsonls = {},
-				tailwindcss = {},
+				tailwindcss = {
+					emmetCompletions = false,
+				},
 				jdtls = {},
 				wgsl_analyzer = {},
 				clangd = {},
@@ -227,7 +236,27 @@ return {
 						},
 					},
 				},
-				["svelte-language-server"] = {},
+				["svelte-language-server"] = {
+					-- TODO: Make this config work to disable emmet completions
+					settings = {
+						svelte = {
+							plugin = {
+								css = {
+									enabled = false,
+									emmet = {
+										enable = false,
+									},
+								},
+								html = {
+									enabled = false,
+									emmet = {
+										enable = false, -- Disable Emmet completions for HTML
+									},
+								},
+							},
+						},
+					},
+				},
 				pyright = {
 					python = {
 						analysis = {
@@ -309,9 +338,9 @@ return {
 				"hadolint",
 				"jsonlint",
 			})
-			require("mason-tool-installer").setup { ensure_installed = ensure_installed }
+			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
-			require("mason-lspconfig").setup {
+			require("mason-lspconfig").setup({
 				handlers = {
 					function(server_name)
 						local server = servers[server_name] or {}
@@ -322,7 +351,7 @@ return {
 						require("lspconfig")[server_name].setup(server)
 					end,
 				},
-			}
+			})
 		end,
 	},
 	{
@@ -344,16 +373,16 @@ return {
 				-- require('hover.providers.dictionary')
 			end,
 			preview_opts = {
-				border = 'rounded'
+				border = "rounded",
 			},
 			-- Whether the contents of a currently open hover window should be moved
 			-- to a :h preview-window when pressing the hover keymap.
 			preview_window = false,
 			title = true,
 			mouse_providers = {
-				'LSP'
+				"LSP",
 			},
-			mouse_delay = 1000
+			mouse_delay = 1000,
 		},
 		-- keys = {
 		-- 	{ "n", "<C-p>", function() require("hover").hover_switch("previous", { bufnr = 0}) end },
@@ -364,6 +393,6 @@ return {
 		"ray-x/lsp_signature.nvim",
 		event = "VeryLazy",
 		main = "lsp_signature",
-		config = true
-	}
+		config = true,
+	},
 }
