@@ -2,14 +2,13 @@ return {
 	"echasnovski/mini.nvim",
 	dependencies = {
 		"JoosepAlviste/nvim-ts-context-commentstring",
-		lazy = true
+		lazy = true,
 	},
 	config = function()
 		require("mini.comment").setup({
 			options = {
 				custom_commentstring = function()
-					return require("ts_context_commentstring.internal").calculate_commentstring() or vim.bo
-						.commentstring
+					return require("ts_context_commentstring.internal").calculate_commentstring() or vim.bo.commentstring
 				end,
 			},
 		})
@@ -25,16 +24,22 @@ return {
 						"%f[%P][%l%d]+%f[^%l%d]",
 						"^[%l%d]+%f[^%l%d]",
 					},
-					"^().*()$"
+					"^().*()$",
 				},
-			}
-
+			},
 		})
 
 		require("mini.move").setup()
-		require('mini.splitjoin').setup()
+		require("mini.splitjoin").setup()
 
 		require("mini.surround").setup({
+			custom_surroundings = {
+				["q"] = { output = { left = "'", right = "'" } },
+				["Q"] = { output = { left = '"', right = '"' } },
+				["B"] = { output = { left = "{", right = "}" } },
+				["["] = { output = { left = "[", right = "]" } },
+				["<"] = { output = { left = "<", right = ">" } },
+			},
 			mappings = {
 				add = "msa", -- Add surrounding in Normal and Visual modes
 				delete = "msd", -- Delete surrounding
@@ -43,8 +48,7 @@ return {
 				highlight = "msh", -- Highlight surrounding
 				replace = "msr", -- Replace surrounding
 				update_n_lines = "msn", -- Update `n_lines`
-			}
-
+			},
 		})
 	end,
 }

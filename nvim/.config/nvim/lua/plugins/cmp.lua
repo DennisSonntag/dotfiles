@@ -3,12 +3,12 @@ return {
 	event = "InsertEnter",
 	after = "saadparwaiz1/cmp_luasnip",
 	dependencies = {
-		{ "hrsh7th/cmp-buffer",       event = "InsertEnter" },
-		{ "hrsh7th/cmp-nvim-lsp",     event = "InsertEnter" },
-		{ "hrsh7th/cmp-path",         event = "InsertEnter" },
+		{ "hrsh7th/cmp-buffer", event = "InsertEnter" },
+		{ "hrsh7th/cmp-nvim-lsp", event = "InsertEnter" },
+		{ "hrsh7th/cmp-path", event = "InsertEnter" },
 		{ "saadparwaiz1/cmp_luasnip", event = "InsertEnter" },
-		{ "hrsh7th/cmp-nvim-lua",     event = "InsertEnter" },
-		{ "hrsh7th/cmp-cmdline" },
+		{ "hrsh7th/cmp-nvim-lua", event = "InsertEnter" },
+		-- { "hrsh7th/cmp-cmdline" },
 	},
 	opts = function()
 		local cmp = require("cmp")
@@ -38,7 +38,6 @@ return {
 			end
 		end
 
-
 		local label_comparator = function(entry1, entry2)
 			return entry1.completion_item.label < entry2.completion_item.label
 		end
@@ -46,6 +45,10 @@ return {
 		return {
 			view = {
 				entries = { name = "custom", selection_order = "near_cursor" },
+			},
+			window = {
+				completion = cmp.config.window.bordered(),
+				documentation = cmp.config.window.bordered(),
 			},
 			snippet = {
 				expand = function(args)
@@ -126,24 +129,24 @@ return {
 				end, { "i", "s" }),
 				["<C-y>"] = cmp.mapping.confirm({
 					behavior = cmp.ConfirmBehavior.Replace,
-					select = true
+					select = true,
 				}),
 			}),
 			sources = cmp.config.sources({
 				{ name = "luasnip", priority = 10 },
 				{
-					name = 'nvim_lsp',
+					name = "nvim_lsp",
 					entry_filter = function(entry)
 						-- remove lsp snippets from suggestions
-						return require("cmp").lsp.CompletionItemKind.Snippet ~= entry:get_kind() and
+						return require("cmp").lsp.CompletionItemKind.Snippet ~= entry:get_kind()
 							-- TODO: Remove this and disable directly in svelte-language-server options
 							-- this is to remove emmet ls completions from svelte language server
-							require("cmp").lsp.CompletionItemKind.Text ~= entry:get_kind()
+							and require("cmp").lsp.CompletionItemKind.Text ~= entry:get_kind()
 					end,
-					priority = 8
+					priority = 8,
 				},
 				{ name = "nvim_lua" },
-				{ name = "buffer",  keyword_length = 5, priority = 1 },
+				{ name = "buffer", keyword_length = 5, priority = 1 },
 				{ name = "path" },
 			}),
 			formatting = {
@@ -161,13 +164,12 @@ return {
 						latex_symbols = "[LaTeX]",
 					})[entry.source.name]
 					return item
-				end
+				end,
 			},
 			experimental = {
 				native_menu = false,
 				ghost_text = true,
-			}
-
+			},
 		}
 	end,
 
@@ -175,28 +177,27 @@ return {
 		local cmp = require("cmp")
 		cmp.setup(opts)
 
-
 		-- `/` cmdline setup.
-		cmp.setup.cmdline('/', {
-			mapping = cmp.mapping.preset.cmdline(),
-			sources = {
-				{ name = 'buffer' }
-			}
-		})
+		-- cmp.setup.cmdline("/", {
+		-- 	mapping = cmp.mapping.preset.cmdline(),
+		-- 	sources = {
+		-- 		{ name = "buffer" },
+		-- 	},
+		-- })
 
 		-- `:` cmdline setup.
-		cmp.setup.cmdline(':', {
-			mapping = cmp.mapping.preset.cmdline(),
-			sources = cmp.config.sources({
-				{ name = 'path' }
-			}, {
-				{
-					name = 'cmdline',
-					option = {
-						ignore_cmds = { 'Man', '!' }
-					}
-				}
-			})
-		})
-	end
+		-- cmp.setup.cmdline(":", {
+		-- 	mapping = cmp.mapping.preset.cmdline(),
+		-- 	sources = cmp.config.sources({
+		-- 		{ name = "path" },
+		-- 	}, {
+		-- 		{
+		-- 			name = "cmdline",
+		-- 			option = {
+		-- 				ignore_cmds = { "Man", "!" },
+		-- 			},
+		-- 		},
+		-- 	}),
+		-- })
+	end,
 }

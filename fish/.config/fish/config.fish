@@ -167,6 +167,12 @@ set -x GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
 set -x CUDA_CACHE_PATH $XDG_CACHE_HOME/nv
 set -x HISTFILE $XDG_STATE_HOME/bash/history
 
+set -x FZF_DEFAULT_OPTS "$FZF_DEFAULT_OPTS \
+--color=fg:#c0caf5,bg:#24283b,hl:#ff9e64 \
+--color=fg+:#c0caf5,bg+:#292e42,hl+:#ff9e64 \
+--color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff \
+--color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
+
 
 fish_add_path -m ~/.local/bin
 fish_add_path -m ~/.local/share/bob/nvim-bin

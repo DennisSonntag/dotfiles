@@ -4,6 +4,8 @@ return {
 	opts = {
 		style = "storm",
 		transparent = true,
+		dim_inactive = true, -- dims inactive windows
+		lualine_bold = true, -- When `true`, section headers in the lualine theme will be bold
 		styles = {
 			sidebars = "transparent",
 			floats = "transparent",
@@ -19,7 +21,7 @@ return {
 		end,
 	},
 	init = function(opts)
-		vim.cmd.colorscheme "tokyonight"
+		vim.cmd.colorscheme("tokyonight")
 		local colors = require("tokyonight.colors").setup(opts)
 		vim.api.nvim_set_hl(0, "BqfPreviewFloat", { bg = colors.bg })
 

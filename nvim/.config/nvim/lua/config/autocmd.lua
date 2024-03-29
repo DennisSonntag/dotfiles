@@ -1,13 +1,12 @@
 local function augroup(name)
 	return vim.api.nvim_create_augroup("neovim" .. name, { clear = true })
 end
-local DennisGroup = augroup('Dennis')
 local autocmd = vim.api.nvim_create_autocmd
 
 -- Highlight when yanking (copying) text
 autocmd({ "TextYankPost" }, {
 	callback = function()
-		vim.highlight.on_yank { higroup = "Visual", timeout = 50 }
+		vim.highlight.on_yank({ higroup = "Visual", timeout = 50 })
 	end,
 })
 
@@ -30,13 +29,6 @@ autocmd({ "FocusGained", "TermClose", "TermLeave", "BufWinEnter" }, {
 	end,
 })
 
--- remove post line space
--- autocmd({ "BufWritePre" }, {
--- 	group = DennisGroup,
--- 	pattern = "*",
--- 	command = [[%s/\s\+$//e]],
--- })
-
 -- go to last location when opening a buffer
 autocmd("BufReadPost", {
 	group = augroup("last_loc"),
@@ -56,10 +48,27 @@ autocmd("BufReadPost", {
 })
 
 -- make it easier to close man-files when opened inline
-vim.api.nvim_create_autocmd("FileType", {
+autocmd("FileType", {
 	group = augroup("man_unlisted"),
 	pattern = { "man" },
 	callback = function(event)
 		vim.bo[event.buf].buflisted = false
+	end,
+})
+
+autocmd("VimResized", {
+	group = vim.api.nvim_create_augroup("WinResize", { clear = true }),
+	pattern = "*",
+	command = "wincmd =",
+	desc = "Auto-resize windows on terminal buffer resize.",
+})
+
+autocmd("FileType", {
+	group = vim.api.nvim_create_augroup("vertical_help", { clear = true }),
+	pattern = "help",
+	callback = function()
+		vim.bo.bufhidden = "unload"
+		vim.cmd.wincmd("L")
+		vim.cmd.wincmd("=")
 	end,
 })
