@@ -57,7 +57,7 @@ o.showtabline = 0
 o.cmdheight = 1
 o.hidden = true
 o.wrap = false
-o.mouse = "a"
+-- o.mouse = "a"
 
 --- folds
 vim.o.foldcolumn = "1"
