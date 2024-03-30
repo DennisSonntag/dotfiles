@@ -1,13 +1,7 @@
-
 local o = vim.opt
 
--- vim-matchup
-vim.g.matchup_matchparen_offscreen = { method = "popup" }
-
--- sentiment.nvim
-vim.g.loaded_matchparen = 1 -- `matchparen.vim` needs to be disabled manually in case of lazy loading
-
 vim.g.rustinlaytoggle = false
+vim.g.emmet_show_expand_abbreviation = "never"
 
 o.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "resize" }
 
@@ -67,9 +61,7 @@ o.wrap = false
 -- o.mouse = "a"
 
 --- folds
-vim.o.foldcolumn = "1"
-vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
-vim.o.foldlevelstart = 99
-vim.o.foldenable = true
-
-vim.g.emmet_show_expand_abbreviation = "never"
+o.foldcolumn = "1"
+o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+o.foldlevelstart = 99
+o.foldenable = true

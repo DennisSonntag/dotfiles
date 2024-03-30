@@ -3,16 +3,9 @@ return {
 	build = ":TSUpdate",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
-		{
 			"windwp/nvim-ts-autotag",
 			event = "InsertEnter",
 			config = true,
-		},
-		{
-			"andymass/vim-matchup",
-			event = { "BufReadPre", "BufNewFile" },
-			lazy = true,
-		},
 	},
 	main = "nvim-treesitter.configs",
 	opts = {
