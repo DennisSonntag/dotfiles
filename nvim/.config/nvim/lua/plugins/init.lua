@@ -1,36 +1,48 @@
 return {
-	{ "lewis6991/gitsigns.nvim", config = true },
-	{ "nvim-tree/nvim-web-devicons", config = true },
-	{ "folke/todo-comments.nvim", event = "VimEnter", dependencies = { "nvim-lua/plenary.nvim" }, opts = { signs = false } },
+	{
+		"lewis6991/gitsigns.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		config = true,
+	},
+	-- {
+	-- 	"nvim-tree/nvim-web-devicons",
+	-- 	config = true,
+	-- 	lazy = true,
+	-- 	event = "VeryLazy",
+	-- },
+	{
+		"folke/todo-comments.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = { signs = false },
+	},
 
-	{ "okuuva/auto-save.nvim", event = { "InsertLeave", "TextChanged" }, config = true },
+	{
+		"okuuva/auto-save.nvim",
+		-- event = { "InsertLeave", "TextChanged", "BufReadPre", "BufNewFile" },
+		event = { "BufReadPre", "BufNewFile" },
+		config = true,
+		lazy = true,
+	},
 
 	{
 		"jinh0/eyeliner.nvim",
-		event = "VeryLazy",
+		event = { "BufReadPre", "BufNewFile" },
 		opts = {
 			highlight_on_key = true,
 		},
 	},
 	{
 		"windwp/nvim-autopairs",
+		event = "InsertEnter",
 		opts = {
 			check_ts = true,
 			disable_filetype = { "TelescopePrompt", "spectre_panel" },
 		},
 	},
 	{
-		"andymass/vim-matchup",
-		init = function()
-			vim.g.matchup_matchparen_offscreen = { method = "popup" }
-		end,
-	},
-	{
 		"utilyre/sentiment.nvim",
-		event = "BufRead",
+		event = { "BufReadPre", "BufNewFile", "BufRead" },
 		config = true,
-		init = function()
-			vim.g.loaded_matchparen = 1 -- `matchparen.vim` needs to be disabled manually in case of lazy loading
-		end,
 	},
 }

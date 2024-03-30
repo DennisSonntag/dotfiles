@@ -1,12 +1,13 @@
 return {
 	"kevinhwang91/nvim-ufo",
+	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		"kevinhwang91/promise-async",
 	},
 	config = function()
 		local keymap = vim.keymap.set
 
-		require("ufo").setup {
+		require("ufo").setup({
 			fold_virt_text_handler = function(virtText, lnum, endLnum, width, truncate)
 				local newVirtText = {}
 				local suffix = (" 󰡏 %d "):format(endLnum - lnum)
@@ -59,7 +60,7 @@ return {
 					jumpBot = "]",
 				},
 			},
-		}
+		})
 
 		keymap("n", "zR", require("ufo").openAllFolds)
 		keymap("n", "zM", require("ufo").closeAllFolds)
@@ -71,6 +72,5 @@ return {
 				vim.lsp.buf.hover()
 			end
 		end)
-	end
-
+	end,
 }

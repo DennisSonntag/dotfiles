@@ -1,7 +1,6 @@
 return {
 	{
 		"stevearc/conform.nvim",
-		lazy = false,
 		keys = {
 			{
 				"<leader>lf",
@@ -91,6 +90,7 @@ return {
 	},
 	{ -- LSP Configuration & Plugins
 		"neovim/nvim-lspconfig",
+		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
 			-- Automatically install LSPs and related tools to stdpath for Neovim
 			"williamboman/mason.nvim",
@@ -358,13 +358,8 @@ return {
 		end,
 	},
 	{
-		"zeioth/garbage-day.nvim",
-		dependencies = "neovim/nvim-lspconfig",
-		event = "VeryLazy",
-		config = true,
-	},
-	{
 		"lewis6991/hover.nvim",
+		event = "LspAttach",
 		opts = {
 			init = function()
 				-- Require providers
@@ -394,7 +389,7 @@ return {
 	},
 	{
 		"ray-x/lsp_signature.nvim",
-		event = "VeryLazy",
+		event = "LspAttach",
 		main = "lsp_signature",
 		config = true,
 	},

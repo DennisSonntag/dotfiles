@@ -6,6 +6,7 @@ local harpoon = require("harpoon.mark")
 
 return {
 	"nvim-lualine/lualine.nvim",
+	event = { "BufReadPre", "BufNewFile" },
 	opts = {
 		options = {
 			component_separators = { left = "", right = "" },

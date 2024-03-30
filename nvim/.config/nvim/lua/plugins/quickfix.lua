@@ -2,7 +2,7 @@ return {
 	{
 		"folke/trouble.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-		opts = {},
+		keys = { "<leader>xx", "<leader>ld", "<leader>lwd", "gR" },
 		config = function()
 			local trouble = require("trouble")
 			vim.keymap.set("n", "<leader>xx", function()
@@ -43,7 +43,8 @@ return {
 	},
 	{
 		"kevinhwang91/nvim-bqf",
-		event = "VeryLazy",
+		ft = "qf",
+		lazy = true,
 		opts = {
 			auto_enable = true,
 			magic_window = true,

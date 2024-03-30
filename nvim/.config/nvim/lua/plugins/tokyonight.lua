@@ -1,6 +1,7 @@
 return {
 	"folke/tokyonight.nvim",
 	priority = 1000,
+	lazy = true,
 	opts = {
 		style = "storm",
 		transparent = true,
@@ -10,26 +11,21 @@ return {
 			sidebars = "transparent",
 			floats = "transparent",
 		},
-		on_highlights = function(hl, _)
+		on_highlights = function(hl, colors)
+			hl.MatchParen = { bg = "#3b4261" }
+			hl.BqfPreviewFloat = { bg = colors.bg }
+			hl.Pmenu = { bg = "#2d3349" }
+			hl.CmpDocumentation = { bg = "#2d3349" }
+			hl.PmenuSel = { bg = "#404866" }
 			hl.CursorLine = {
 				bg = "#2d3349",
 				bold = true,
 			}
-			hl.MatchParen = {
-				bg = "#3b4261",
+			-- For Modicator
+			hl.CursorLineNr = {
+				fg = "#388bfd",
+				bg = "NONE",
 			}
 		end,
 	},
-	init = function(opts)
-		vim.cmd.colorscheme("tokyonight")
-		local colors = require("tokyonight.colors").setup(opts)
-		vim.api.nvim_set_hl(0, "BqfPreviewFloat", { bg = colors.bg })
-
-		vim.api.nvim_set_hl(0, "Pmenu", { bg = "#2d3349" })
-		vim.api.nvim_set_hl(0, "CmpDocumentation", { bg = "#2d3349" })
-		vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#404866" })
-
-		-- For Modicator
-		vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#388bfd", bg = "NONE" })
-	end,
 }

@@ -1,4 +1,11 @@
+
 local o = vim.opt
+
+-- vim-matchup
+vim.g.matchup_matchparen_offscreen = { method = "popup" }
+
+-- sentiment.nvim
+vim.g.loaded_matchparen = 1 -- `matchparen.vim` needs to be disabled manually in case of lazy loading
 
 vim.g.rustinlaytoggle = false
 

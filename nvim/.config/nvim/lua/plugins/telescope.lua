@@ -1,5 +1,24 @@
 return {
 	"nvim-telescope/telescope.nvim",
+
+	-- event = "VeryLazy",
+	cmd = "Telescope",
+	keys = {
+		"<leader>f.",
+		"<leader>fh",
+		"<leader>fk",
+		"<leader>ff",
+		"<leader>fs",
+		"<leader>fw",
+		"<leader>fg",
+		"<leader>fd",
+		"<leader>fr",
+		"<leader>fb",
+		"<leader>/",
+		"<leader>s/",
+		"<leader>sn",
+	},
+
 	dependencies = {
 		"nvim-telescope/telescope-ui-select.nvim",
 		"nvim-lua/plenary.nvim",
@@ -17,7 +36,6 @@ return {
 		pcall(require("telescope").load_extension, "fzf")
 		pcall(require("telescope").load_extension, "ui-select")
 
-
 		vim.api.nvim_create_autocmd("FileType", {
 			pattern = "TelescopeResults",
 			callback = function(ctx)
@@ -25,8 +43,7 @@ return {
 					vim.fn.matchadd("TelescopeParent", "\t\t.*$")
 					vim.api.nvim_set_hl(0, "TelescopeParent", { link = "Comment" })
 				end)
-			end
-
+			end,
 		})
 
 		local function filenameFirst(_, path)
@@ -71,7 +88,7 @@ return {
 				find_files = {
 					theme = "dropdown",
 					previewer = false,
-					path_display = filenameFirst
+					path_display = filenameFirst,
 				},
 
 				buffers = {
@@ -102,7 +119,7 @@ return {
 			},
 			extensions = {
 				fzf = {
-					fuzzy = true,    -- false will only do exact matching
+					fuzzy = true, -- false will only do exact matching
 					override_generic_sorter = true, -- override the generic sorter
 					override_file_sorter = true, -- override the file sorter
 					case_mode = "smart_case", -- or "ignore_case" or "respect_case"
@@ -123,29 +140,20 @@ return {
 		vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "[F]ind [D]iagnostics" })
 		vim.keymap.set("n", "<leader>fr", builtin.resume, { desc = "[F]ind [R]esume" })
 		vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "[F]ind [B]uffers" })
-		vim.keymap.set("n",
-			"<leader>/",
-			function()
-				builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
-					winblend = 0,
-					previewer = false,
-				}))
-			end,
-			{ desc = "[/] Fuzzily search in current buffer" })
-		vim.keymap.set("n",
-			"<leader>s/",
-			function()
-				builtin.live_grep({
-					grep_open_files = true,
-					prompt_title = "Live Grep in Open Files",
-				})
-			end,
-			{ desc = "[S]earch [/] in Open Files" })
-		vim.keymap.set("n",
-			"<leader>sn",
-			function()
-				builtin.find_files({ cwd = vim.fn.stdpath("config") })
-			end,
-			{ desc = "[S]earch [N]eovim files" })
+		vim.keymap.set("n", "<leader>/", function()
+			builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+				winblend = 0,
+				previewer = false,
+			}))
+		end, { desc = "[/] Fuzzily search in current buffer" })
+		vim.keymap.set("n", "<leader>s/", function()
+			builtin.live_grep({
+				grep_open_files = true,
+				prompt_title = "Live Grep in Open Files",
+			})
+		end, { desc = "[S]earch [/] in Open Files" })
+		vim.keymap.set("n", "<leader>sn", function()
+			builtin.find_files({ cwd = vim.fn.stdpath("config") })
+		end, { desc = "[S]earch [N]eovim files" })
 	end,
 }

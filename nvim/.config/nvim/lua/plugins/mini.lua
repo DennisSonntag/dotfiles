@@ -1,8 +1,9 @@
 return {
 	"echasnovski/mini.nvim",
+	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		"JoosepAlviste/nvim-ts-context-commentstring",
-		lazy = true,
+		event = { "BufReadPre", "BufNewFile" },
 	},
 	config = function()
 		require("mini.comment").setup({

@@ -1,12 +1,52 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	dependencies = { "windwp/nvim-ts-autotag", config = true },
+	event = { "BufReadPre", "BufNewFile" },
+	dependencies = {
+		{
+			"windwp/nvim-ts-autotag",
+			event = "InsertEnter",
+			config = true,
+		},
+		{
+			"andymass/vim-matchup",
+			event = { "BufReadPre", "BufNewFile" },
+			lazy = true,
+		},
+	},
 	main = "nvim-treesitter.configs",
 	opts = {
-		ensure_installed = { "astro", "javascript", "typescript", "lua", "c", "cpp", "css", "json", "bash",
-			"rust", "html", "java", "prisma", "python", "dockerfile", "tsx", "make", "markdown",
-			"markdown_inline", "vim", "yaml", "toml", "fish", "comment", "wgsl", "wgsl_bevy", "yuck", "regex", "svelte" },
+		ensure_installed = {
+			"astro",
+			"javascript",
+			"typescript",
+			"lua",
+			"c",
+			"cpp",
+			"css",
+			"json",
+			"bash",
+			"rust",
+			"html",
+			"java",
+			"prisma",
+			"python",
+			"dockerfile",
+			"tsx",
+			"make",
+			"markdown",
+			"markdown_inline",
+			"vim",
+			"yaml",
+			"toml",
+			"fish",
+			"comment",
+			"wgsl",
+			"wgsl_bevy",
+			"yuck",
+			"regex",
+			"svelte",
+		},
 
 		-- Autoinstall languages that are not installed
 		auto_install = true,
@@ -22,5 +62,5 @@ return {
 			additional_vim_regex_highlighting = { "ruby" },
 		},
 		indent = { enable = true, disable = { "ruby" } },
-	}
+	},
 }

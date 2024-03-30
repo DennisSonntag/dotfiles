@@ -1,25 +1,24 @@
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-	local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
-	vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
+	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+	vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
-
 local icons = require("config.icons")
 
-require('lazy').setup {
+require("lazy").setup({
 	spec = {
-		{ import = 'plugins' },
+		{ import = "plugins" },
 	},
 	defaults = {
 		lazy = false, -- TODO: change this to true later
 	},
-	install = { colorscheme = { 'tokyonight' } },
+	install = { colorscheme = { "tokyonight" } },
 	debug = false,
 	performance = {
 		cache = {
@@ -28,14 +27,16 @@ require('lazy').setup {
 		rtp = {
 			-- disable some rtp plugins
 			disabled_plugins = {
-				'gzip',
-				'matchit',
-				'matchparen',
-				'netrwPlugin',
-				'tarPlugin',
-				'tohtml',
-				'tutor',
-				'zipPlugin',
+				"gzip",
+				"rplugin",
+				"matchit",
+				"matchparen",
+				"netrwPlugin",
+				"tarPlugin",
+				"editorconfig",
+				"tohtml",
+				"tutor",
+				"zipPlugin",
 			},
 		},
 	},
@@ -61,6 +62,7 @@ require('lazy').setup {
 			lazy = icons.extra.lazy,
 		},
 	},
-}
+})
+vim.cmd.colorscheme("tokyonight")
 
 require("config")

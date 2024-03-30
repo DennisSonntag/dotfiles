@@ -1,6 +1,6 @@
 return {
 	"mawkler/modicator.nvim",
-	event = "BufEnter",
+	event = { "BufReadPre", "BufNewFile" },
 	opts = {
 		show_warnings = false,
 		highlights = {
