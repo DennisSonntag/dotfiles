@@ -1,0 +1,172 @@
+{
+	"layer": "top",
+	"modules-left": [
+		"battery",
+		"cpu",
+		"custom/cap-left",
+		"memory",
+		"custom/cap-left-mid",
+		"hyprland/window"
+	],
+	"modules-center": [
+		"custom/cap-right",
+		"hyprland/workspaces",
+		"custom/cap-left"
+	],
+	"modules-right": [
+		"custom/spotify",
+		"tray",
+		"custom/cap-right-light",
+		"pulseaudio",
+		"custom/cap-right-light-bg",
+		"clock"
+	],
+	"hyprland/window": {
+		"format": "{}",
+		"rewrite": {
+			"(.*) — Mozilla Firefox": "🌎 $1",
+			"(.*) - fish": "> [$1]"
+		},
+		"separate-outputs": true,
+		"max-length": 100
+	},
+	"battery": {
+		"bat": "BAT0",
+		"interval": 60,
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{capacity}% {icon}",
+		"format-icons": [
+			" ",
+			" ",
+			" ",
+			" ",
+			" "
+		],
+		"max-length": 25
+	},
+	"custom/update": {
+		"tooltip": false,
+		"format": " {} ",
+		"interval": 200,
+		"exec": "~/.config/waybar/update.py",
+		"return-type": "json"
+	},
+	"clock": {
+		"format": "{:%H:%M}  ",
+		"interval": 1,
+		"format-alt": "{:%A, %B %d, %Y (%R:%S)}  ",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+	},
+	"custom/spotify": {
+		"format": "{}   ",
+		"max-length": 60,
+		"interval": 1,
+		"return-type": "json",
+		"exec": "~/.config/waybar/meta.py",
+		"on-click": "~/.config/waybar/controls.sh",
+		"on-scroll-up": "~/.config/waybar/controls.sh next",
+		"on-scroll-down": "~/.config/waybar/controls.sh previous",
+		"signal": 5,
+		"smooth-scrolling-threshold": 1.0
+	},
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"tooltip": false,
+		"format-muted": " Muted",
+		"on-click": "pamixer -t",
+		"on-scroll-up": "pamixer -i 5",
+		"on-scroll-down": "pamixer -d 5",
+		"scroll-step": 5,
+		"format-icons": {
+			"headphone": " ",
+			"hands-free": " ",
+			"headset": " ",
+			"phone": " ",
+			"portable": " ",
+			"car": " ",
+			"default": [
+				"󰕿 ",
+				"󰖀 ",
+				"󰕾 "
+			]
+		}
+	},
+	"tray": {
+		"icon-size": 20,
+		"spacing": 10
+	},
+	"network": {
+		"tooltip": false,
+		"format-wifi": " {essid} {ipaddr}",
+		"format-ethernet": "󰈀  {ipaddr}"
+	},
+	"cpu": {
+		"tooltip": false,
+		"format": "  {}%"
+	},
+	"memory": {
+		"tooltip": false,
+		"format": " {}%"
+	},
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"1": "1",
+			"2": "2",
+			"3": "3",
+			"4": "4",
+			"5": "5",
+			"6": "6",
+			"7": "7",
+			"8": "8",
+			"9": "9",
+			"10": "1",
+			"11": "2",
+			"12": "3",
+			"13": "4",
+			"14": "5",
+			"15": "6",
+			"16": "7",
+			"17": "8",
+			"18": "9"
+		},
+		"persistent-workspaces": {
+			"*": 9
+		}
+	},
+	"custom/cap-right": {
+		"tooltip": false,
+		"format": ""
+	},
+	"custom/cap-left": {
+		"tooltip": false,
+		"format": ""
+	},
+	"custom/cap-right-mid-other": {
+		"tooltip": false,
+		"format": ""
+	},
+	"custom/cap-right-light-bg": {
+		"tooltip": false,
+		"format": ""
+	},
+	"custom/cap-right-mid": {
+		"tooltip": false,
+		"format": ""
+	},
+	"custom/cap-left-mid": {
+		"tooltip": false,
+		"format": ""
+	},
+	"custom/cap-right-light": {
+		"tooltip": false,
+		"format": ""
+	},
+	"custom/cap-left-light": {
+		"tooltip": false,
+		"format": ""
+	}
+}

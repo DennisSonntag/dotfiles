@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+output=$(hyprctl -j monitors | jq -r '.[] | select(.focused == true) | .id')
+if [ $output -eq 1 ]; then
+  result=$(($1 - 1))
+else
+  result=$1
+fi
+
+echo $output$result
+

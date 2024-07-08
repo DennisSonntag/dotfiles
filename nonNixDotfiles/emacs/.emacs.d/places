@@ -1,0 +1,10 @@
+;;; -*- coding: utf-8; mode: lisp-data -*-
+(("/home/dennis/dotfiles/emacs/.config/emacs/Emacs.org" . 24999)
+ ("/home/dennis/.config/hypr/"
+  (dired-filename . "/home/dennis/.config/hypr/hyprland.conf"))
+ ("/home/dennis/dotfiles/hyprland/.config/hypr/hyprland.conf" . 2762)
+ ("/home/dennis/.config/"
+  (dired-filename . "/home/dennis/.config/akregatorrc"))
+ ("/home/dennis/.config/emacs/"
+  (dired-filename . "/home/dennis/.config/emacs/Emacs.org"))
+ ("/home/dennis/dotfiles/emacs/.config/emacs/init.el" . 8259))

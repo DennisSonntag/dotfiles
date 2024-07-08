@@ -1,0 +1,11 @@
+UseTab: Always
+IndentWidth: 4
+TabWidth: 4
+ColumnLimit: 10000
+
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortBlocksOnASingleLine: true
+
+
