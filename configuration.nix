@@ -124,7 +124,7 @@
 	set -g fish_pager_color_selected_background --background=$selection
 
 	set fish_greeting
-	set fish_vi_key_bindings
+	set fish_key_bindings fish_vi_key_bindings
 	set fish_cursor_insert line";
 
   shellAliases = {
@@ -188,10 +188,20 @@
 
   # Enable sound.
   hardware.pulseaudio.enable = false;
+  sound.enable = true;
+  security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
+    alsa = {
+      enable = true;
+      support32Bit = true;
+    };
+    #alsa.enable = true;
+    #alsa.support32Bit = true;
     pulse.enable = true;
+    jack.enable = true;
   };
+
 
   # Enable touchpad support (enabled default in most desktopManager).
   # TODO: modularize this for laptop
@@ -207,6 +217,7 @@
 
 
   environment.systemPackages = with pkgs; [
+    #hyprland
     vim
     lsd
     bat
@@ -216,7 +227,7 @@
     wget
     curl
     starship
-    pipewire
+    #pipewire
     pavucontrol
     neovim
     firefox
