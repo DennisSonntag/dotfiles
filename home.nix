@@ -29,6 +29,7 @@ in
 
   home.file."${config.home.homeDirectory}/.config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/nonnix/nvim";
   home.file."${config.home.homeDirectory}/.config/tmux".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/nonnix/tmux";
+  home.file."${config.home.homeDirectory}/.config/mpv".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/nonnix/mpv";
 
 
   # This value determines the Home Manager release that your configuration is
