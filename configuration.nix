@@ -13,6 +13,7 @@
       ./disk-config.nix
     ];
 
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -217,8 +218,9 @@
 
 
   environment.systemPackages = with pkgs; [
-    #hyprland
     vim
+    wl-clipboard
+    bun
     lsd
     bat
     ripgrep
@@ -227,14 +229,29 @@
     wget
     curl
     starship
-    #pipewire
     pavucontrol
     neovim
     firefox
+    grimblast
     gcc
     kitty
     clang
     trash-cli
+
+	hyprpicker
+	slurp
+	wf-recorder
+	wl-clipboard
+	wayshot
+	swappy
+	supergfxctl
+
+    #ags stuff
+    dart-sass
+    fd
+    brightnessctl
+    swww
+    matugen
   ];
 
   programs.gnupg.agent = {
