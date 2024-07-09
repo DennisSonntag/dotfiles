@@ -13,6 +13,19 @@ in
   home.username = "dennis";
   home.homeDirectory = "/home/dennis";
 
+  gtk.enable = true;	
+  qt.enable = true;	
+
+  gtk.theme = {
+    package = pkgs.adw-gtk3;
+    name = "adw-gtk3";
+  }; 
+  gtk.iconTheme = {
+   package = pkgs.kora-icon-theme;
+   name = "kora";
+  }; 
+
+
   programs.ags = {
     enable = true;
 
@@ -41,16 +54,17 @@ in
   # release notes.
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
-  xresources.properties = {
-    "Xcursor.size" = 16;
-    "Xft.dpi" = 172;
-  };
+  # xresources.properties = {
+  #   "Xcursor.size" = 16;
+  #   "Xft.dpi" = 172;
+  # };
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
     prismlauncher
     neofetch
+    cinnamon.nemo
     nnn # terminal file manager
 
     tmux
@@ -269,7 +283,7 @@ in
       "wl-clipboard-history -t"
       "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-      "hyprctl setcursor Fluent-dark-cursors 24"
+      # "hyprctl setcursor Fluent-dark-cursors 24"
       "lxsession"
       "hyprpaper"
       "ags"
@@ -352,7 +366,7 @@ in
        	"ALT, Print, exec, grimblast --notify --cursor copysave screen"
        	"CTRL ALT, L, exec, swaylock"
        	"SUPER, Return, exec, kitty"
-       	"SUPER, F, exec, pcmanfm"
+       	"SUPER, F, exec, nemo"
 
        	"SUPER, P, exec, ags -t launcher"
 

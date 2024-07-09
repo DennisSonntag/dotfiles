@@ -13,6 +13,53 @@
       ./disk-config.nix
     ];
 
+  stylix.enable = true;
+
+  stylix.base16Scheme =  "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
+  stylix.polarity = "dark";
+  stylix.image = ./wallappers/kimiNoWa.png;
+
+  stylix.fonts = {
+    serif = {
+      package = pkgs.roboto-serif;
+      name = "Roboto Serif";
+    };
+
+    sansSerif = {
+      package = pkgs.roboto;
+      name = "Roboto Sans";
+    };
+
+    monospace = {
+	  package = pkgs.nerdfonts.override { fonts = ["JetBrainsMono"]; };
+      name = "JetBrainsMono Nerd Font Mono";
+    };
+
+    emoji = {
+      package = pkgs.noto-fonts-emoji;
+      name = "Noto Color Emoji";
+    };
+  };
+
+  stylix.cursor.package = pkgs.phinger-cursors;
+  stylix.cursor.name =" phinger-cursors-light";
+
+
+  # users.${user}.dennis.gtk = {
+  #   iconTheme = {
+  #  package = pkgs.kora-icon-theme;
+  #  name = "kora";
+  #   };
+  # };
+
+
+  stylix.fonts.sizes = {
+    applications = 12;
+    terminal = 14;
+    desktop = 15;
+    popups = 10;
+  };
+
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -81,8 +128,8 @@
 	_JAVA_AWT_WM_NONEREPARENTING = "1";
 	GDK_BACKEND = "wayland,x11";
 	GTK_THEME = "Nordic";
-	XCURSOR_THEME = "Fluent-dark-cursors";
-	XCURSOR_SIZE = "24";
+	# XCURSOR_THEME = "Fluent-dark-cursors";
+	# XCURSOR_SIZE = "24";
   };
 
   programs.fish = {
@@ -237,6 +284,7 @@
     kitty
     clang
     trash-cli
+    roboto
 
 	hyprpicker
 	slurp

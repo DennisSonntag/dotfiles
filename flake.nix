@@ -13,6 +13,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix.url = "github:danth/stylix";
     ags.url = "github:Aylur/ags";
 
     firefox-addons = {
@@ -21,7 +22,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, split-monitor-workspaces, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, split-monitor-workspaces, stylix, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -30,7 +31,7 @@
       nixosConfigurations = {
         archie = lib.nixosSystem {
 	  system = "x86_64-linux";
-          modules = [ ./configuration.nix ];
+          modules = [ ./configuration.nix stylix.nixosModules.stylix ];
         };
       };
       
@@ -38,10 +39,10 @@
         inherit pkgs;
 
         modules = [ 
-	  ./home.nix
-	  inputs.ags.homeManagerModules.default
-	];
-	extraSpecialArgs = { inherit inputs; inherit split-monitor-workspaces; };
+		  ./home.nix
+		  inputs.ags.homeManagerModules.default
+		];
+	    extraSpecialArgs = { inherit inputs; inherit split-monitor-workspaces; };
 
       };
     };
