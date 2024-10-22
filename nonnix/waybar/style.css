@@ -1,0 +1,193 @@
+/* waybar style.css */
+@define-color bgDark #000f10;
+@define-color bgNorm #1F2335;
+@define-color bgMid #1f2335;
+@define-color bgLight #363B4F;
+@define-color blue #7AA2F7;
+
+* {
+	border: none;
+	border-radius: 0;
+	font-family: 'JetBrainsMono NF', monospace;
+	font-weight: 900;
+	font-size: 14px;
+	min-height: 24px;
+}
+
+window#waybar {
+	background: @bgNorm;
+}
+
+#window {
+	padding-left: 16px;
+	padding-right: 16px;
+	border-top-right-radius: 26px;
+	border-bottom-right-radius: 26px;
+	transition: none;
+	color: transparent;
+	background: transparent;
+}
+
+#my-calander {
+	background-color: red;
+}
+
+#window {
+	color: white;
+	background: @bgLight;
+	transition: all 150ms ease-in-out;
+}
+
+#tray {
+	margin-left: 12px;
+	margin-right: 12px;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-radius: 26px;
+	color: white;
+	background: @bgDark;
+	transition: all 150ms ease-in-out;
+}
+
+
+#workspaces {
+	color: white;
+	background: @bgDark;
+	transition: none;
+}
+
+
+#workspaces button {
+	transition: none;
+	color: #808080;
+	font-size: 16px;
+}
+
+#workspaces button.focused {
+	color: #9aedfe;
+}
+
+
+#workspaces button.empty {
+	color: #333333;
+}
+
+#workspaces button.active {
+	color: white;
+}
+
+#workspaces button:hover {
+	
+	background: @bgDark;
+	transition: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	color: white;
+}
+
+#cpu {
+	padding-left: 10px;
+	padding-right: 10px;
+	transition: none;
+	color: @blue;
+	background: @bgDark;
+}
+
+#memory {
+	padding-left: 16px;
+	padding-right: 16px;
+	transition: none;
+	color: white;
+	background: @bgMid;
+}
+
+#battery {
+	padding-left: 20px;
+	padding-right: 20px;
+	transition: none;
+	color: @blue;
+	background: @bgDark;
+}
+
+#custom-cap-left,
+#custom-cap-right,
+#custom-cap-right-light-bg,
+#custom-cap-left-light,
+#custom-cap-right-light, 
+#custom-cap-left-mid,
+#custom-cap-right-mid {
+	padding: 0;
+	color: @bgDark;
+	font-size: 1.5rem;
+	margin: 0;
+	background-color: @bgNorm;
+}
+
+#custom-cap-left-mid,
+#custom-cap-right-mid {
+	background-color: @bgLight;
+	color: @bgNorm;
+}
+
+#custom-cap-left-light,
+#custom-cap-right-light {
+	background-color: @bgNorm;
+	color: @bgLight;
+}
+
+
+#custom-cap-right-light-bg {
+	background-color: @bgLight;
+	color: @bgDark;
+
+}
+
+#custom-spotify {
+	margin-left: 8px;
+	padding-left: 16px;
+	margin-right: 6px;
+	padding-right: 16px;
+	border-radius: 26px;
+	transition: none;
+	color: white;
+	background: #1c591c;
+}
+
+#pulseaudio {
+	padding-left: 6px;
+	padding-right: 6px;
+	transition: none;
+	color: white;
+	/* background: #363b4f; */
+	background: @bgLight;
+}
+#custom-update {
+	padding-left: 6px;
+	padding-right: 6px;
+	transition: none;
+	color: white;
+	background: @bgMid;
+}
+
+#custom-update.update {
+	color: green;
+}
+
+#custom-update.noupdate {
+	color: red;
+}
+
+#custom-weather {
+	padding-left: 6px;
+	padding-right: 6px;
+	transition: none;
+	color: white;
+	background: @bgMid;
+}
+
+#clock {
+	padding-left: 10px;
+	transition: none;
+	color: @blue;
+	background: #000f10;
+}

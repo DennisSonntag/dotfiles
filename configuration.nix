@@ -7,17 +7,26 @@
       # Download disko
       "${builtins.fetchTarball {
         url = "https://github.com/nix-community/disko/archive/master.tar.gz";
-	sha256 = "0sn6bd7nyfa2p168pway1a7yzq6bvagpww8q3j69bb6fw1xgm6yc";
+	sha256 = "136dsjk7ml9bdjpgmq9857cjdg36dp35n9hqgqq9007h56aj7sij";
+
 	}}/module.nix"
 
       ./disk-config.nix
     ];
+
+
+nix.nixPath = [
+  "nixos-config=${config.users.users.dennis.home}/nixos/configuration.nix"
+  "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
+  "/nix/var/nix/profiles/per-user/root/channels"
+];
 
   stylix.enable = true;
 
   stylix.base16Scheme =  "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
   stylix.polarity = "dark";
   stylix.image = ./wallappers/kimiNoWa.png;
+
 
   stylix.fonts = {
     serif = {
@@ -60,6 +69,14 @@
     popups = 10;
   };
 
+  environment.etc."root/.config/nvim".source = "/home/dennis/nixos/nonnix/nvim";
+  system.activationScripts.rootNvimConfig = ''
+  mkdir -p /root/.config
+  ln -sfn /etc/root/.config/nvim /root/.config/nvim
+'';
+
+
+
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -74,7 +91,7 @@
   # Set your time zone.
   time.timeZone = "America/Edmonton";
 
-  
+
   boot.initrd.kernelModules = [ "amdgpu" ];
   services.xserver.videoDrivers = [ "amdgpu" ];
 
@@ -91,10 +108,21 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
+  services.displayManager.sddm.wayland.enable = true;
+
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+	#  services.xserver.displayManager.gdm = {
+	#  	enable = true;
+	# settings = {
+	# 	greeter = {
+	# 		IncludeAll = true;
+	# 	};
+	# };
+	#  };
+
+
+  # services.xserver.desktopManager.gnome.enable = true;
 
 
   environment.sessionVariables = {
@@ -102,7 +130,7 @@
 
 	# hyprland env vars
 	EDITOR = "nvim";
-	SUDO_EDITOR = "/home/dennis/.local/share/bob/nvim-bin/nvim";
+	SUDO_EDITOR = "nvim";
 
 	WLR_NO_HARDWARE_CURSORS = "1";
 	XDG_RUNTIME_DIR = "/run/user/1000/";
@@ -185,7 +213,7 @@
     nm="doas nmtui";
     np="ping 1.1.1.1";
     n="pnpm";
-    v="nvim";
+    # v="nvim";
     lv="NVIM_APPNAME=LazyVim nvim";
     ov="NVIM_APPNAME=nvimOld nvim";
     t="tmux attach || tmux new";
@@ -195,7 +223,7 @@
     la="lsd -A";
     lal="lsd -1A";
     clippy_better="cargo clippy --no-deps --all-targets --color always -- -W clippy::pedantic -W clippy::nursery";
-    
+
     # Git;
     gcl="git clone --recursive";
     ga="git add";
@@ -206,9 +234,9 @@
     gpushm="git push origin master";
     gpull="git pull";
 
-    
+
     update-stats="checkupdates | rg \"linux-zen \"";
-    
+
     ssh-ubuntu-server="ssh -i ~/.ssh/id_ed25519_homelab dennis@192.168.1.219";
     c="clear";
     ccd="cd;clear";
@@ -226,29 +254,48 @@
   };
 
   users.defaultUserShell = pkgs.fish;
-  
 
-  # Configure keymap in X11
+
+# Configure keymap in X11
   services.xserver.xkb.layout = "us";
 
-  # Enable CUPS to print documents.
+# Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Enable sound.
-  hardware.pulseaudio.enable = false;
-  sound.enable = true;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa = {
-      enable = true;
-      support32Bit = true;
-    };
-    #alsa.enable = true;
-    #alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-  };
+
+
+# environment.systemPackages = [ pkgs.alsa-utils ];
+
+hardware.pulseaudio.enable = false;
+
+	# ALSA provides a udev rule for restoring volume settings.
+	services.udev.packages = [ pkgs.alsa-utils ];
+
+	# systemd.services.alsa-store =
+	# 	{ description = "Store Sound Card State";
+	# 		wantedBy = [ "multi-user.target" ];
+	# 		unitConfig.RequiresMountsFor = "/var/lib/alsa";
+	# 		unitConfig.ConditionVirtualization = "!systemd-nspawn";
+	# 		serviceConfig = {
+	# 			Type = "oneshot";
+	# 			RemainAfterExit = true;
+	# 			ExecStart = "${pkgs.coreutils}/bin/mkdir -p /var/lib/alsa";
+	# 			ExecStop = "${pkgs.alsa-utils}/sbin/alsactl store --ignore";
+	# 		};
+	# 	};
+
+	security.rtkit.enable = true;
+
+	services.pipewire = {
+		enable = true;
+		audio.enable = true;
+		jack.enable = true;
+		pulse.enable = true;
+		alsa = {
+			enable = true;
+			support32Bit = true;
+		};
+	};
 
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -265,6 +312,8 @@
 
 
   environment.systemPackages = with pkgs; [
+    dunst
+    alsa-utils
     vim
     wl-clipboard
     bun
@@ -277,7 +326,12 @@
     curl
     starship
     pavucontrol
+    rofi-wayland
+
+
     neovim
+    (pkgs.writeShellScriptBin "v" "nvim $@")
+
     firefox
     grimblast
     gcc
@@ -302,6 +356,8 @@
     matugen
   ];
 
+
+  programs.hyprland.enable = true;
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;

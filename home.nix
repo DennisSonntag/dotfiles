@@ -13,36 +13,75 @@ in
   home.username = "dennis";
   home.homeDirectory = "/home/dennis";
 
-  gtk.enable = true;	
-  qt.enable = true;	
-
-  gtk.theme = {
-    package = pkgs.adw-gtk3;
-    name = "adw-gtk3";
-  }; 
-  gtk.iconTheme = {
-   package = pkgs.kora-icon-theme;
-   name = "kora";
-  }; 
+  # Let Home Manager install and manage itself.
+  programs.home-manager.enable = true;
 
 
-  programs.ags = {
-    enable = true;
+    dconf.settings = {
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+      };
+    };
+
+    gtk = {
+      enable = true;
+      theme = {
+        name = "Adwaita-dark";
+        package = pkgs.gnome-themes-extra;
+      };
+    };
+
+    # Wayland, X, etc. support for session vars
+    # systemd.user.sessionVariables = config.home-manager.users.justinas.home.sessionVariables;
+
+    qt = {
+	    enable = true;
+	    platformTheme.name = "adwaita";
+	    style = {
+		    name = "adwaita-dark";
+		    package = pkgs.gnome-themes-extra;
+	    };
+    };
+
+
+
+
+
+
+  programs.waybar = {
+  	enable = true;
+  };
+
+
+  # programs.ags = {
+  #   enable = true;
 
     # null or path, leave as null if you don't want hm to manage the config
     #configDir = ./ags;
 
     # additional packages to add to gjs's runtime
-    extraPackages = with pkgs; [
-      gtksourceview
-      webkitgtk
-      accountsservice
-    ];
+  #   extraPackages = with pkgs; [
+  #     gtksourceview
+  #     webkitgtk
+  #     accountsservice
+  #   ];
+  # };
+
+  home.file = {
+	  "${config.home.homeDirectory}/.config/waybar".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/waybar";
+	  "${config.home.homeDirectory}/.clang-format".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/clang/.clang-format";
+	  "${config.home.homeDirectory}/.config/emacs".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/emacs";
+
+	  "${config.home.homeDirectory}/.config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/nvim";
+
+	  "${config.home.homeDirectory}/.config/tmux".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/tmux";
+	  "${config.home.homeDirectory}/.config/mpv".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/mpv";
+	  "${config.home.homeDirectory}/.config/rofi".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/rofi";
+	  "${config.home.homeDirectory}/.config/dunst".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/dunst";
+	  "${config.home.homeDirectory}/.gitconfig".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/git/.gitconfig";
   };
 
-  home.file."${config.home.homeDirectory}/.config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/nonnix/nvim";
-  home.file."${config.home.homeDirectory}/.config/tmux".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/nonnix/tmux";
-  home.file."${config.home.homeDirectory}/.config/mpv".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/nonnix/mpv";
+
 
 
   # This value determines the Home Manager release that your configuration is
@@ -64,7 +103,7 @@ in
   home.packages = with pkgs; [
     prismlauncher
     neofetch
-    cinnamon.nemo
+    nemo
     nnn # terminal file manager
 
     tmux
@@ -167,8 +206,6 @@ in
     EDITOR = "nvim";
   };
 
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
 
 
   programs.git = {
@@ -251,7 +288,7 @@ in
     enable = true;
     package = pkgs.kitty;
     # custom settings
-    theme = "Tokyo Night Storm";
+    # theme = "Tokyo Night Storm";
     extraConfig = "modify_font underline_thickness 200%\nmodify_font underline_position 1";
     font = {
     	size = 14;
@@ -279,23 +316,26 @@ in
     ];
 
    settings = {
+     plugin = {
+        "split-monitor-workspaces" = {
+          count = 9;
+        };
+      };
    exec-once = [
       "wl-clipboard-history -t"
       "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       # "hyprctl setcursor Fluent-dark-cursors 24"
       "lxsession"
+      "waybar"
       "hyprpaper"
       "ags"
       "otd-daemon"
    ];
 
    monitor = [
-       "HDMI-A-1 ,1920x1080@75,1920x0,1"
-       "DP-1 ,1920x1080@75,0x0,1"
-
-       #"HDMI-A-1,1920x1080@74.99,1920x0,1.0"
-       #"DP-1,1920x1080@75.0,0x0,1.0"
+       "HDMI-A-1 ,1920x1080@75,0x0,1"
+       "DP-1 ,1920x1080@75,1920x0,1"
    ];
        workspace = [
        	"1, monitor:DP-1, default:true"
@@ -308,8 +348,7 @@ in
        	"8, monitor:DP-1"
        	"9, monitor:DP-1"
 
-       	"10, monitor:HDMI-A-1, default:true"
-       	"11, monitor:HDMI-A-1"
+       	"11, monitor:HDMI-A-1, default:true"
        	"12, monitor:HDMI-A-1"
        	"13, monitor:HDMI-A-1"
        	"14, monitor:HDMI-A-1"
@@ -317,6 +356,7 @@ in
        	"16, monitor:HDMI-A-1"
        	"17, monitor:HDMI-A-1"
        	"18, monitor:HDMI-A-1"
+       	"19, monitor:HDMI-A-1"
 
        	"special:misc, on-created-empty:[tile] kitty"
        	"special:discord, on-created-empty:[tile] vencord-desktop"
@@ -357,7 +397,7 @@ in
        	"SUPER, o, exec, obsidian"
 
        	"SUPER, B, exec, firefox"
-       	"SUPER, X, exec, ags -t powermenu"
+       	"SUPER, X, exec, ${config.home.homeDirectory}/.config/rofi/powermenu/type-2/powermenu.sh"
 
        	"SUPER SHIFT, S, exec, grimblast --freeze copy area"
        	"SUPER SHIFT, P, exec, hyprpicker -f hex -a -r"
@@ -368,7 +408,7 @@ in
        	"SUPER, Return, exec, kitty"
        	"SUPER, F, exec, nemo"
 
-       	"SUPER, P, exec, ags -t launcher"
+       	"SUPER, P, exec, ${config.home.homeDirectory}/.config/rofi/launchers/type-2/launcher.sh"
 
        	"SUPER, C, killactive,"
        	"SUPER SHIFT, Q, exit,"
@@ -511,190 +551,190 @@ in
 
   };
 
-  programs.firefox = {
-    enable = true;
-      profiles = {
-        default = {
-          id = 0;
-          name = "default";
-          isDefault = true;
-	  extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
-            ublock-origin
-            bitwarden
-            darkreader
-            sidebery
-            sponsorblock
-	    return-youtube-dislikes
-          ];
-	  settings = {
-		  "browser.newtabpage.pinned" = [{
-		    title = "NixOS";
-		    url = "https://nixos.org";
-		  }];
-		  "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-		    "browser.startup.homepage" = "https://nixos.org";
-	  };
-	  #userChrome = ''
-	  #      See the above repository for updates as well as full license text. */
-
-	  #      /* Hides tabs toolbar */
-	  #      /* For OSX use hide_tabs_toolbar_osx.css instead */
-
-	  #      /* Note, if you have either native titlebar or menubar enabled, then you don't really need this style.
-	  #       * In those cases you can just use: #TabsToolbar{ visibility: collapse !important }
-	  #       */
-
-	  #      /* IMPORTANT */
-	  #      /*
-	  #      Get window_control_placeholder_support.css
-	  #      Window controls will be all wrong without it
-	  #      */
-
-	  #      :root[tabsintitlebar]{ --uc-toolbar-height: 40px; }
-	  #      :root[tabsintitlebar][uidensity="compact"]{ --uc-toolbar-height: 32px }
-	  #      #titlebar{
-	  #        will-change: unset !important;
-	  #        transition: none !important;
-	  #        opacity: 1 !important;
-	  #      }
-	  #      #TabsToolbar{ visibility: collapse !important }
-
-	  #      :root[sizemode="fullscreen"] #TabsToolbar > :is(#window-controls,.titlebar-buttonbox-container){
-	  #        visibility: visible !important;
-	  #        z-index: 2;
-	  #      }
-
-	  #      :root:not([inFullscreen]) #nav-bar{
-	  #        margin-top: calc(0px - var(--uc-toolbar-height,0px));
-	  #      }
-
-	  #      :root[tabsintitlebar] #toolbar-menubar[autohide="true"]{
-	  #        min-height: unset !important;
-	  #        height: var(--uc-toolbar-height,0px) !important;
-	  #        position: relative;
-	  #      }
-
-	  #      #toolbar-menubar[autohide="false"]{
-	  #        margin-bottom: var(--uc-toolbar-height,0px)
-	  #      }
-
-	  #      :root[tabsintitlebar] #toolbar-menubar[autohide="true"] #main-menubar{
-	  #        flex-grow: 1;
-	  #        align-items: stretch;
-	  #        background-attachment: scroll, fixed, fixed;
-	  #        background-position: 0 0, var(--lwt-background-alignment), right top;
-	  #        background-repeat: repeat-x, var(--lwt-background-tiling), no-repeat;
-	  #        background-size: auto 100%, var(--lwt-background-size, auto auto), auto auto;
-	  #        padding-right: 20px;
-	  #      }
-	  #      :root[tabsintitlebar] #toolbar-menubar[autohide="true"]:not([inactive]) #main-menubar{
-	  #        background-color: var(--lwt-accent-color);
-	  #        background-image: linear-gradient(var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor),var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor)), var(--lwt-additional-images,none), var(--lwt-header-image, none);
-	  #        mask-image: linear-gradient(to left, transparent, black 20px);
-	  #      }
-
-	  #      #toolbar-menubar:not([inactive]){ z-index: 2 }
-	  #      #toolbar-menubar[autohide="true"][inactive] > #menubar-items {
-	  #        opacity: 0;
-	  #        pointer-events: none;
-	  #        margin-left: var(--uc-window-drag-space-pre,0px)
-	  #      }
-
-	  #      See the above repository for updates as well as full license text. */
-
-	  #      /* Moves tabs toolbar, bookmarks toolbar and main toolbar to the bottom of the window, and makes tabs be the bottom-most toolbar */
-
-	  #      /* By default, menubar will stay on top with two options to select it's behavior - see below */
-
-	  #      @-moz-document url(chrome://browser/content/browser.xhtml){
-	  #
-	  #        #titlebar{ -moz-appearance: none !important; }
-
-	  #        #navigator-toolbox > div{ display: contents }
-	  #        .global-notificationbox,
-	  #        #mainPopupSet,
-	  #        #browser,
-	  #        #customization-container,
-	  #        #tab-notification-deck{
-	  #          order: -1;
-	  #        }
-
-	  #        /* Remove the next row if you want tabs to be the top-most row */
-	  #        #titlebar{
-	  #          order: 2;
-	  #        }
-
-	  #        #toolbar-menubar{
-	  #          position: fixed;
-	  #          display: flex;
-	  #          width: 100vw;
-	  #          top: 0px;
-	  #          -moz-window-dragging: drag;
-	  #        }
-	  #        /* Remove bottom border that won't do anything useful when at bottom of the window */
-	  #        #navigator-toolbox{ border-bottom: none !important; }
-
-	  #        #toolbar-menubar > spacer{ flex-grow: 1 }
-
-	  #        #urlbar[breakout][breakout-extend]{
-	  #          display: flex !important;
-	  #          flex-direction: column-reverse;
-	  #          bottom: 0px !important; /* Change to 3-5 px if using compact_urlbar_megabar.css depending on toolbar density */
-	  #          top: auto !important;
-	  #        }
-
-	  #        .urlbarView-body-inner{ border-top-style: none !important; }
-
-	  #        /* Yeah, removes window controls. Likely not wanted on bottom row  */
-	  #        #TabsToolbar > .titlebar-buttonbox-container{ display: none }
-	  #        #toolbar-menubar > .titlebar-buttonbox-container{ order: 1000 }
-
-	  #        /* Fix panels sizing */
-	  #        .panel-viewstack{ max-height: unset !important; }
-
-	  #        /* Fullscreen mode support */
-	  #        :root[sizemode="fullscreen"] #navigator-toolbox{ margin-top: 0 !important }
-	  #        :root[sizemode="fullscreen"] #navigator-toolbox[style*="margin-top"]{ visibility: collapse }
-	  #        #fullscr-toggler{ bottom: 0; top: unset !important; }
-	  #
-	  #        /* These three rules exist for compatibility with autohide_toolbox.css */
-	  #        #navigator-toolbox{ bottom: 0px; transform-origin: bottom }
-	  #        #main-window > body > box{ margin-top: 0 !important; }
-	  #        #toolbar-menubar{ z-index: 1; background-color: var(--lwt-accent-color,black); }
-	  #
-	  #        :root[BookmarksToolbarOverlapsBrowser] #navigator-toolbox{
-	  #          margin-block: calc(-1 * var(--bookmarks-toolbar-height)) 0 !important;
-	  #        }
-	  #        :root[BookmarksToolbarOverlapsBrowser] .newTabBrowserPanel{
-	  #          padding-block: 0 var(--bookmarks-toolbar-height) !important;
-	  #        }
-	  #
-	  #        /**************
-	  #        Menubar options - By default, menubar is overlayed on top of web-content
-	  #        ***************/
-
-	  #       /* Uncomment the following if you want static menubar on top of the window (make menubar enabled)
-	  #        * Use when menubar is enabled to always show it */
-	  #
-	  #        /*
-	  #        #browser,#customization-container{ padding-top: var(--uc-menubar-spacer,28px) }
-	  #        */
-	  #
-	  #        /* OR, uncomment the following if you want menubar to appear below content, above tabs toolbar */
-	  #
-	  #        /*
-	  #        #toolbar-menubar{ position: static; display: flex; margin-top: 0px !important; background-color: transparent }
-	  #        */
-
-	  #        /* set to "column-reverse" (without quotes) if you want tabs above menubar with the above option */
-	  #        #titlebar{ flex-direction: column }
-	  #      }
-
-	  #      /* Remove close button*/ .titlebar-buttonbox-container{ display:none }
-	  #'';
-        };
-     };
-  };
+  # programs.firefox = {
+  #   enable = true;
+  #     profiles = {
+  #       default = {
+  #         id = 0;
+  #         name = "default";
+  #         isDefault = true;
+  #  extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+  #           ublock-origin
+  #           bitwarden
+  #           darkreader
+  #           sidebery
+  #           sponsorblock
+  #    return-youtube-dislikes
+  #         ];
+  #  settings = {
+  #   "browser.newtabpage.pinned" = [{
+  #     title = "NixOS";
+  #     url = "https://nixos.org";
+  #   }];
+  #   "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+  #     "browser.startup.homepage" = "https://nixos.org";
+  #  };
+  #  #userChrome = ''
+  #  #      See the above repository for updates as well as full license text. */
+  #
+  #  #      /* Hides tabs toolbar */
+  #  #      /* For OSX use hide_tabs_toolbar_osx.css instead */
+  #
+  #  #      /* Note, if you have either native titlebar or menubar enabled, then you don't really need this style.
+  #  #       * In those cases you can just use: #TabsToolbar{ visibility: collapse !important }
+  #  #       */
+  #
+  #  #      /* IMPORTANT */
+  #  #      /*
+  #  #      Get window_control_placeholder_support.css
+  #  #      Window controls will be all wrong without it
+  #  #      */
+  #
+  #  #      :root[tabsintitlebar]{ --uc-toolbar-height: 40px; }
+  #  #      :root[tabsintitlebar][uidensity="compact"]{ --uc-toolbar-height: 32px }
+  #  #      #titlebar{
+  #  #        will-change: unset !important;
+  #  #        transition: none !important;
+  #  #        opacity: 1 !important;
+  #  #      }
+  #  #      #TabsToolbar{ visibility: collapse !important }
+  #
+  #  #      :root[sizemode="fullscreen"] #TabsToolbar > :is(#window-controls,.titlebar-buttonbox-container){
+  #  #        visibility: visible !important;
+  #  #        z-index: 2;
+  #  #      }
+  #
+  #  #      :root:not([inFullscreen]) #nav-bar{
+  #  #        margin-top: calc(0px - var(--uc-toolbar-height,0px));
+  #  #      }
+  #
+  #  #      :root[tabsintitlebar] #toolbar-menubar[autohide="true"]{
+  #  #        min-height: unset !important;
+  #  #        height: var(--uc-toolbar-height,0px) !important;
+  #  #        position: relative;
+  #  #      }
+  #
+  #  #      #toolbar-menubar[autohide="false"]{
+  #  #        margin-bottom: var(--uc-toolbar-height,0px)
+  #  #      }
+  #
+  #  #      :root[tabsintitlebar] #toolbar-menubar[autohide="true"] #main-menubar{
+  #  #        flex-grow: 1;
+  #  #        align-items: stretch;
+  #  #        background-attachment: scroll, fixed, fixed;
+  #  #        background-position: 0 0, var(--lwt-background-alignment), right top;
+  #  #        background-repeat: repeat-x, var(--lwt-background-tiling), no-repeat;
+  #  #        background-size: auto 100%, var(--lwt-background-size, auto auto), auto auto;
+  #  #        padding-right: 20px;
+  #  #      }
+  #  #      :root[tabsintitlebar] #toolbar-menubar[autohide="true"]:not([inactive]) #main-menubar{
+  #  #        background-color: var(--lwt-accent-color);
+  #  #        background-image: linear-gradient(var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor),var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor)), var(--lwt-additional-images,none), var(--lwt-header-image, none);
+  #  #        mask-image: linear-gradient(to left, transparent, black 20px);
+  #  #      }
+  #
+  #  #      #toolbar-menubar:not([inactive]){ z-index: 2 }
+  #  #      #toolbar-menubar[autohide="true"][inactive] > #menubar-items {
+  #  #        opacity: 0;
+  #  #        pointer-events: none;
+  #  #        margin-left: var(--uc-window-drag-space-pre,0px)
+  #  #      }
+  #
+  #  #      See the above repository for updates as well as full license text. */
+  #
+  #  #      /* Moves tabs toolbar, bookmarks toolbar and main toolbar to the bottom of the window, and makes tabs be the bottom-most toolbar */
+  #
+  #  #      /* By default, menubar will stay on top with two options to select it's behavior - see below */
+  #
+  #  #      @-moz-document url(chrome://browser/content/browser.xhtml){
+  #  #
+  #  #        #titlebar{ -moz-appearance: none !important; }
+  #
+  #  #        #navigator-toolbox > div{ display: contents }
+  #  #        .global-notificationbox,
+  #  #        #mainPopupSet,
+  #  #        #browser,
+  #  #        #customization-container,
+  #  #        #tab-notification-deck{
+  #  #          order: -1;
+  #  #        }
+  #
+  #  #        /* Remove the next row if you want tabs to be the top-most row */
+  #  #        #titlebar{
+  #  #          order: 2;
+  #  #        }
+  #
+  #  #        #toolbar-menubar{
+  #  #          position: fixed;
+  #  #          display: flex;
+  #  #          width: 100vw;
+  #  #          top: 0px;
+  #  #          -moz-window-dragging: drag;
+  #  #        }
+  #  #        /* Remove bottom border that won't do anything useful when at bottom of the window */
+  #  #        #navigator-toolbox{ border-bottom: none !important; }
+  #
+  #  #        #toolbar-menubar > spacer{ flex-grow: 1 }
+  #
+  #  #        #urlbar[breakout][breakout-extend]{
+  #  #          display: flex !important;
+  #  #          flex-direction: column-reverse;
+  #  #          bottom: 0px !important; /* Change to 3-5 px if using compact_urlbar_megabar.css depending on toolbar density */
+  #  #          top: auto !important;
+  #  #        }
+  #
+  #  #        .urlbarView-body-inner{ border-top-style: none !important; }
+  #
+  #  #        /* Yeah, removes window controls. Likely not wanted on bottom row  */
+  #  #        #TabsToolbar > .titlebar-buttonbox-container{ display: none }
+  #  #        #toolbar-menubar > .titlebar-buttonbox-container{ order: 1000 }
+  #
+  #  #        /* Fix panels sizing */
+  #  #        .panel-viewstack{ max-height: unset !important; }
+  #
+  #  #        /* Fullscreen mode support */
+  #  #        :root[sizemode="fullscreen"] #navigator-toolbox{ margin-top: 0 !important }
+  #  #        :root[sizemode="fullscreen"] #navigator-toolbox[style*="margin-top"]{ visibility: collapse }
+  #  #        #fullscr-toggler{ bottom: 0; top: unset !important; }
+  #  #
+  #  #        /* These three rules exist for compatibility with autohide_toolbox.css */
+  #  #        #navigator-toolbox{ bottom: 0px; transform-origin: bottom }
+  #  #        #main-window > body > box{ margin-top: 0 !important; }
+  #  #        #toolbar-menubar{ z-index: 1; background-color: var(--lwt-accent-color,black); }
+  #  #
+  #  #        :root[BookmarksToolbarOverlapsBrowser] #navigator-toolbox{
+  #  #          margin-block: calc(-1 * var(--bookmarks-toolbar-height)) 0 !important;
+  #  #        }
+  #  #        :root[BookmarksToolbarOverlapsBrowser] .newTabBrowserPanel{
+  #  #          padding-block: 0 var(--bookmarks-toolbar-height) !important;
+  #  #        }
+  #  #
+  #  #        /**************
+  #  #        Menubar options - By default, menubar is overlayed on top of web-content
+  #  #        ***************/
+  #
+  #  #       /* Uncomment the following if you want static menubar on top of the window (make menubar enabled)
+  #  #        * Use when menubar is enabled to always show it */
+  #  #
+  #  #        /*
+  #  #        #browser,#customization-container{ padding-top: var(--uc-menubar-spacer,28px) }
+  #  #        */
+  #  #
+  #  #        /* OR, uncomment the following if you want menubar to appear below content, above tabs toolbar */
+  #  #
+  #  #        /*
+  #  #        #toolbar-menubar{ position: static; display: flex; margin-top: 0px !important; background-color: transparent }
+  #  #        */
+  #
+  #  #        /* set to "column-reverse" (without quotes) if you want tabs above menubar with the above option */
+  #  #        #titlebar{ flex-direction: column }
+  #  #      }
+  #
+  #  #      /* Remove close button*/ .titlebar-buttonbox-container{ display:none }
+  #  #'';
+  #       };
+  #    };
+  # };
 
 
 }
