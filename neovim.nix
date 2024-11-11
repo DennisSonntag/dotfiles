@@ -6,8 +6,8 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "b-src";
       repo = "lazy-nix-helper.nvim";
-      rev = "<git commit hash>";
-      hash = "<sha256 of archive of git commit>";
+      rev = "cb1c0c4cf0ab3c1a2227dcf24abd3e430a8a9cd8";
+      hash = "sha256-HwrO32Sj1FUWfnOZQYQ4yVgf/TQZPw0Nl+df/j0Jhbc=";
     };
   };
 
@@ -21,12 +21,19 @@ let
   pluginList = plugins: lib.strings.concatMapStrings (plugin: "  [\"${sanitizePluginName plugin.name}\"] = \"${plugin.outPath}\",\n") plugins;
 
 in
+        #--local plugins = {
+        #-- ${pluginList config.programs.neovim.plugins}
+        #-- }
   {
-    xdg.configFile."nvim/lua" = {
-      source = ./nonnix/nvim/lua;
-      recursive = true;
-    };
+    #xdg.configFile."nvim/lua" = {
+    #  source = ./nonnix/nvim/lua;
+    #  recursive = true;
+    #};
+	home.file = {
 
+		"${config.home.homeDirectory}/.config/nvim/lua".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/nvim/lua";
+
+};
     programs.neovim = {
       enable = true;
       extraPackages = with pkgs; [
@@ -42,9 +49,6 @@ in
           # <other plugins>
       ];
       extraLuaConfig = ''
-        local plugins = {
-        ${pluginList config.programs.neovim.plugins}
-        }
         local lazy_nix_helper_path = "${lazy-nix-helper-nvim}"
         if not vim.loop.fs_stat(lazy_nix_helper_path) then
           lazy_nix_helper_path = vim.fn.stdpath("data") .. "/lazy_nix_helper/lazy_nix_helper.nvim"
@@ -84,6 +88,9 @@ in
 		--  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 		vim.g.mapleader = " "
 		vim.g.maplocalleader = " "
+
+
+local icons = require("config.icons")
 
 require("lazy").setup({
 	spec = {

@@ -89,12 +89,17 @@ return {
 	},
 	{ -- LSP Configuration & Plugins
 		"neovim/nvim-lspconfig",
+		  dir = require("lazy-nix-helper").get_plugin_path("nvim-lspconfig"),
 		event = { "BufReadPre", "BufNewFile" },
 		enabled = true,
 		dependencies = {
 			-- Automatically install LSPs and related tools to stdpath for Neovim
-			{ "williamboman/mason.nvim", enabled = false },
-			{ "williamboman/mason-lspconfig.nvim", enabled = false },
+			{ "williamboman/mason.nvim",
+      enable = require("lazy-nix-helper").mason_enabled(),
+						},
+			{ "williamboman/mason-lspconfig.nvim", 
+								      enable = require("lazy-nix-helper").mason_enabled(),
+						},
 			{ "WhoIsSethDaniel/mason-tool-installer.nvim", enabled = false },
 
 			-- Useful status updates for LSP.
@@ -241,6 +246,7 @@ return {
 				},
 				["svelte-language-server"] = {
 					-- TODO: Make this config work to disable emmet completions
+					cmd = { "svelteserver", "--stdio" },
 					settings = {
 						svelte = {
 							plugin = {

@@ -14,7 +14,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix.url = "github:danth/stylix";
-    ags.url = "github:Aylur/ags";
 
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
@@ -32,7 +31,7 @@
       nixosConfigurations = {
         archie = lib.nixosSystem {
 	  system = "x86_64-linux";
-          modules = [ ./configuration.nix  stylix.nixosModules.stylix ];
+          modules = [ ./configuration.nix   stylix.nixosModules.stylix ];
         };
       };
       
@@ -41,7 +40,7 @@
 
         modules = [ 
 		  ./home.nix
-		  inputs.ags.homeManagerModules.default
+		./neovim.nix
 		];
 	    extraSpecialArgs = { inherit inputs; inherit split-monitor-workspaces; };
 
