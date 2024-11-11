@@ -136,31 +136,31 @@ nix.nixPath = [
   # services.xserver.desktopManager.gnome.enable = true;
 
 
-  services.syncthing = {
-	  enable = true;
-	  user = "dennis";
-	  dataDir = "/home/dennis/Documents/";
-	  configDir = "/home/dennis/.config/syncthing";
-	  overrideDevices = true;
-	  overrideFolders = true;
-	  settings = {
-			  devices = {
-					  "syncthing-server" = { id = "MKNX4EA-AAMECG2-X26WAAE-REAMDP5-AWYPARE-SFPIBSS-F6OBIGH-BB6TUQH"; };
-			  };
-			  gui = {
-					  user = "dennis";
-					  password = "beans";
-			  };
-	  };
-	  folders = {
-			  "Vault" = {
-				  path = "/home/dennis/Vault";
-				  devices = [ "syncthing-server" ];
-# By default, Syncthing doesn't sync file permissions. This line enables it for this folder.
-				  ignorePerms = false;
-			  };
-	  };
-  };
+#   services.syncthing = {
+# 	  enable = true;
+# 	  user = "dennis";
+# 	  dataDir = "/home/dennis/Documents/";
+# 	  configDir = "/home/dennis/.config/syncthing";
+# 	  overrideDevices = true;
+# 	  overrideFolders = true;
+# 	  settings = {
+# 			  devices = {
+# 					  "syncthing-server" = { id = "MKNX4EA-AAMECG2-X26WAAE-REAMDP5-AWYPARE-SFPIBSS-F6OBIGH-BB6TUQH"; };
+# 			  };
+# 			  gui = {
+# 					  user = "dennis";
+# 					  password = "beans";
+# 			  };
+# 	  };
+# 	  folders = {
+# 			  "Vault" = {
+# 				  path = "/home/dennis/Vault";
+# 				  devices = [ "syncthing-server" ];
+# # By default, Syncthing doesn't sync file permissions. This line enables it for this folder.
+# 				  ignorePerms = false;
+# 			  };
+# 	  };
+#   };
 
 
   environment.sessionVariables = {
