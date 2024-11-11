@@ -19,28 +19,23 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # nixCats.url = "github:BirdeeHub/nixCats-nvim";
-    # nixCats.url = "github:BirdeeHub/nixCats-nvim";
-
-	 # myNeovimConfig = {
-	 #     url = "path:./nvimFinal";
-	 #     inputs.nixpkgs.follows = "nixpkgs";
-	 #   };
-    # myNixCats = import ./nvimFinal/flake.nix { inherit inputs; };
+    nixCats.url = "github:BirdeeHub/nixCats-nvim";
 
   };
 
-  outputs = { self, nixpkgs, home-manager, split-monitor-workspaces, stylix,... }@inputs:
+  outputs = { self, nixpkgs, home-manager, split-monitor-workspaces, stylix, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
+      myNixCats = import ./nvimFinal/default.nix { inherit inputs; };
+      # myNixCats = import (self + "/nvimFinal/default.nix") { inherit inputs; };
       # pkgs = import nixpkgs { system = "x86_64-linux"; };
     in {
       nixosConfigurations = {
         archie = lib.nixosSystem {
 	  system = "x86_64-linux";
-          modules = [ ./configuration.nix  myNixCats stylix.nixosModules.stylix ];
+          modules = [ ./configuration.nix myNixCats stylix.nixosModules.stylix ];
         };
       };
       

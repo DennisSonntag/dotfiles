@@ -366,6 +366,7 @@ hardware.pulseaudio.enable = false;
   environment.variables.EDITOR = "nvim";
 
 
+
   environment.systemPackages = with pkgs; [
     dunst
     alsa-utils
