@@ -38,6 +38,11 @@
     # for specific tags, branches and commits, see:
     # https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-flake.html#examples
 
+   "plugins-blink" = {
+     url = "github:Saghen/blink.cmp";
+     flake = false;
+   };
+
   };
 
   # see :help nixCats.flake.outputs
@@ -131,11 +136,7 @@
           lazydev-nvim
           fidget-nvim
           conform-nvim
-          nvim-cmp
           luasnip
-          cmp_luasnip
-          cmp-nvim-lsp
-          cmp-path
           tokyonight-nvim
           todo-comments-nvim
           mini-nvim
@@ -148,6 +149,11 @@
           #   ]
           # ))
         ];
+        custon = [
+          pkgs.neovimPlugins.blink
+
+        ];
+
         kickstart-debug = [
           nvim-dap
           nvim-dap-ui
@@ -164,7 +170,7 @@
           nvim-autopairs
         ];
         kickstart-neo-tree = [
-          neo-tree-nvim
+          # neo-tree-nvim
           nui-nvim
           # nixCats will filter out duplicate packages
           # so you can put dependencies with stuff even if they're
