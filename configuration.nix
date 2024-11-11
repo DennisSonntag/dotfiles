@@ -27,6 +27,8 @@ nix.nixPath = [
   stylix.polarity = "dark";
   stylix.image = ./wallappers/kimiNoWa.png;
 
+  nixpkgs.config.allowUnfree = true;
+
 
   stylix.fonts = {
     serif = {
@@ -95,6 +97,15 @@ nix.nixPath = [
   boot.initrd.kernelModules = [ "amdgpu" ];
   services.xserver.videoDrivers = [ "amdgpu" ];
 
+   # Enable nvidia driver support
+ # services.xserver.videoDrivers = ["nvidia"];
+
+ # hardware.nvidia = {
+ #   modesetting.enable = true;
+ #   open = false;
+ #   nvidiaSettings = true;
+ #   package = config.boot.kernelPackages.nvidiaPackages.stable;
+ # };
 
   # TODO: modularize this because this is specific to desktop config
   boot.kernelParams = [
@@ -125,7 +136,36 @@ nix.nixPath = [
   # services.xserver.desktopManager.gnome.enable = true;
 
 
+  services.syncthing = {
+	  enable = true;
+	  user = "dennis";
+	  dataDir = "/home/dennis/Documents/";
+	  configDir = "/home/dennis/.config/syncthing";
+	  overrideDevices = true;
+	  overrideFolders = true;
+	  settings = {
+			  devices = {
+					  "syncthing-server" = { id = "MKNX4EA-AAMECG2-X26WAAE-REAMDP5-AWYPARE-SFPIBSS-F6OBIGH-BB6TUQH"; };
+			  };
+			  gui = {
+					  user = "dennis";
+					  password = "beans";
+			  };
+	  };
+	  folders = {
+			  "Vault" = {
+				  path = "/home/dennis/Vault";
+				  devices = [ "syncthing-server" ];
+# By default, Syncthing doesn't sync file permissions. This line enables it for this folder.
+				  ignorePerms = false;
+			  };
+	  };
+  };
+
+
   environment.sessionVariables = {
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/user/.steam/root/compatibilitytools.d";
+
   	NIXOS_OZONE_WL = "1";
 
 	# hyprland env vars
@@ -301,12 +341,27 @@ hardware.pulseaudio.enable = false;
   # Enable touchpad support (enabled default in most desktopManager).
   # TODO: modularize this for laptop
   # services.libinput.enable = true;
+  users.users.syncthing.group = "syncthing";
+       users.groups.syncthing = {};
+
+       users.users.syncthing.isSystemUser = true;
+
+# users.users.syncthing.isNormalUser
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.dennis = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    # extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "syncthing"];
+   home = "/home/dennis";
   };
+
+
+  users.users.syncthing.extraGroups = [ "users" ];
+  systemd.services.syncthing.serviceConfig.UMask = "0007";
+  systemd.tmpfiles.rules = [
+    "d /home/dennis 0750 dennis syncthing"
+  ];
 
   environment.variables.EDITOR = "nvim";
 
@@ -328,11 +383,10 @@ hardware.pulseaudio.enable = false;
     pavucontrol
     rofi-wayland
 
-
-    neovim
     (pkgs.writeShellScriptBin "v" "nvim $@")
 
     firefox
+    brave
     grimblast
     gcc
     kitty
@@ -344,6 +398,13 @@ hardware.pulseaudio.enable = false;
 	slurp
 	wf-recorder
 	wl-clipboard
+	bottles
+
+	obsidian
+
+
+	# vinegar
+
 	wayshot
 	swappy
 	supergfxctl
@@ -354,7 +415,31 @@ hardware.pulseaudio.enable = false;
     brightnessctl
     swww
     matugen
+
+    pamixer
+
+    pnpm
+    nodejs
+
+    protonup
+	steam
+
+	localsend
+
+	gdu
+
+	# calibre
+
+	# lsp
   ];
+
+
+  programs.steam.enable = true;
+  programs.steam.gamescopeSession.enable = true;
+  programs.gamemode.enable = true;
+
+
+
 
 
   programs.hyprland.enable = true;
@@ -362,6 +447,7 @@ hardware.pulseaudio.enable = false;
     enable = true;
     enableSSHSupport = true;
   };
+
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
@@ -399,4 +485,3 @@ hardware.pulseaudio.enable = false;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 }
-

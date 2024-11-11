@@ -27,11 +27,12 @@
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
+      # pkgs = import nixpkgs { system = "x86_64-linux"; };
     in {
       nixosConfigurations = {
         archie = lib.nixosSystem {
 	  system = "x86_64-linux";
-          modules = [ ./configuration.nix stylix.nixosModules.stylix ];
+          modules = [ ./configuration.nix  stylix.nixosModules.stylix ];
         };
       };
       

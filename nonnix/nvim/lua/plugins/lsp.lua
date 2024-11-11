@@ -21,8 +21,7 @@ return {
 
 				["astro"] = { "prettierd" },
 
-				-- ["svelte"] = { "prettierd" },
-				["svelte"] = { "prettier" },
+				["svelte"] = { "prettierd" },
 
 				["javascript"] = { "prettierd" },
 				["javascriptreact"] = { "prettierd" },
@@ -52,10 +51,10 @@ return {
 			local lint = require("lint")
 			lint.linters_by_ft = {
 				markdown = { "markdownlint" },
-				javascript = { "eslint_d" },
-				typescript = { "eslint_d" },
-				javascriptreact = { "eslint_d" },
-				typescriptreact = { "eslint_d" },
+				-- javascript = { "eslint_d" },
+				-- typescript = { "eslint_d" },
+				-- javascriptreact = { "eslint_d" },
+				-- typescriptreact = { "eslint_d" },
 				cpp = { "cpplint" },
 				fish = { "fish" },
 				python = { "flake8" },
@@ -91,11 +90,11 @@ return {
 	{ -- LSP Configuration & Plugins
 		"neovim/nvim-lspconfig",
 		event = { "BufReadPre", "BufNewFile" },
-		enabled = false,
+		enabled = true,
 		dependencies = {
 			-- Automatically install LSPs and related tools to stdpath for Neovim
 			{ "williamboman/mason.nvim", enabled = false },
-			"williamboman/mason-lspconfig.nvim",
+			{ "williamboman/mason-lspconfig.nvim", enabled = false },
 			{ "WhoIsSethDaniel/mason-tool-installer.nvim", enabled = false },
 
 			-- Useful status updates for LSP.
@@ -211,7 +210,7 @@ return {
 			})
 
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
-			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+			-- capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
 			local util = require("lspconfig/util")
 
@@ -321,7 +320,7 @@ return {
 			--    :Mason
 			--
 			--  You can press `g?` for help in this menu.
-			require("mason").setup()
+			-- require("mason").setup()
 
 			-- You can add other tools here that you want Mason to install
 			-- for you, so that they are available from within Neovim.
@@ -335,27 +334,27 @@ return {
 				"black",
 				"clang-format",
 				"markdownlint",
-				"eslint_d",
+				-- "eslint_d",
 				"cpplint",
 				"flake8",
 				"vale",
 				"hadolint",
 				"jsonlint",
 			})
-			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+			-- require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
-			require("mason-lspconfig").setup({
-				handlers = {
-					function(server_name)
-						local server = servers[server_name] or {}
-						-- This handles overriding only values explicitly passed
-						-- by the server configuration above. Useful when disabling
-						-- certain features of an LSP (for example, turning off formatting for tsserver)
-						server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-						require("lspconfig")[server_name].setup(server)
-					end,
-				},
-			})
+			-- require("mason-lspconfig").setup({
+			-- 	handlers = {
+			-- 		function(server_name)
+			-- 			local server = servers[server_name] or {}
+			-- 			-- This handles overriding only values explicitly passed
+			-- 			-- by the server configuration above. Useful when disabling
+			-- 			-- certain features of an LSP (for example, turning off formatting for tsserver)
+			-- 			server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
+			-- 			require("lspconfig")[server_name].setup(server)
+			-- 		end,
+			-- 	},
+			-- })
 		end,
 	},
 	{
