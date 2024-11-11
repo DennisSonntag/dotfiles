@@ -31,10 +31,44 @@
         "type": "github"
       }
     },
+    "plugins-blink": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1731358651,
+        "narHash": "sha256-+q7tDO3zUHUhzlJwBVKIeTrek9y3pskfRU6ht4l6Rdk=",
+        "owner": "Saghen",
+        "repo": "blink.cmp",
+        "rev": "c33c7e69bb035fa92e1028adc4f6f0ea522f86fd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Saghen",
+        "repo": "blink.cmp",
+        "type": "github"
+      }
+    },
+    "plugins-sentiment": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1685109400,
+        "narHash": "sha256-0ZpqlaCIfFrcfxdp/9BVXYvwgBXsqazo0isrsYfUYyQ=",
+        "owner": "utilyre",
+        "repo": "sentiment.nvim",
+        "rev": "ecde8d877881bb78fdb90060c0991e76770dbdbc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "utilyre",
+        "repo": "sentiment.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "nixCats": "nixCats",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "plugins-blink": "plugins-blink",
+        "plugins-sentiment": "plugins-sentiment"
       }
     }
   },

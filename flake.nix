@@ -19,9 +19,18 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # nixCats.url = "github:BirdeeHub/nixCats-nvim";
+    # nixCats.url = "github:BirdeeHub/nixCats-nvim";
+
+	 # myNeovimConfig = {
+	 #     url = "path:./nvimFinal";
+	 #     inputs.nixpkgs.follows = "nixpkgs";
+	 #   };
+    # myNixCats = import ./nvimFinal/flake.nix { inherit inputs; };
+
   };
 
-  outputs = { self, nixpkgs, home-manager, split-monitor-workspaces, stylix, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, split-monitor-workspaces, stylix,... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -31,7 +40,7 @@
       nixosConfigurations = {
         archie = lib.nixosSystem {
 	  system = "x86_64-linux";
-          modules = [ ./configuration.nix   stylix.nixosModules.stylix ];
+          modules = [ ./configuration.nix  myNixCats stylix.nixosModules.stylix ];
         };
       };
       
@@ -40,7 +49,6 @@
 
         modules = [ 
 		  ./home.nix
-		./neovim.nix
 		];
 	    extraSpecialArgs = { inherit inputs; inherit split-monitor-workspaces; };
 

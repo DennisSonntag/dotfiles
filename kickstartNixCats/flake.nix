@@ -42,6 +42,10 @@
      url = "github:Saghen/blink.cmp";
      flake = false;
    };
+   "plugins-sentiment" = {
+     url = "github:utilyre/sentiment.nvim";
+     flake = false;
+   };
 
   };
 
@@ -122,11 +126,11 @@
       # This is for plugins that will load at startup without using packadd:
       startupPlugins = with pkgs.vimPlugins; {
         general = [
+        harpoon
           vim-sleuth
           lazy-nvim
-          comment-nvim
           gitsigns-nvim
-          which-key-nvim
+          # which-key-nvim
           telescope-nvim
           telescope-fzf-native-nvim
           telescope-ui-select-nvim
@@ -137,6 +141,23 @@
           fidget-nvim
           conform-nvim
           luasnip
+		  nvim-ufo
+		  promise-async
+		  vim-fugitive
+		  neogit
+		  lazygit-nvim
+		  vim-matchup
+		  modicator-nvim
+		  nvim-colorizer-lua
+		  oil-nvim
+		  eyeliner-nvim
+		  lualine-nvim
+		  nvim-ts-context-commentstring
+		  trouble-nvim
+		  nvim-bqf
+		  rainbow-delimiters-nvim
+		  smart-splits-nvim
+		  statuscol-nvim
           tokyonight-nvim
           todo-comments-nvim
           mini-nvim
@@ -151,6 +172,7 @@
         ];
         custon = [
           pkgs.neovimPlugins.blink
+          pkgs.neovimPlugins.sentiment
 
         ];
 

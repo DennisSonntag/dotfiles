@@ -71,11 +71,11 @@ nix.nixPath = [
     popups = 10;
   };
 
-  environment.etc."root/.config/nvim".source = "/home/dennis/nixos/nonnix/nvim";
-  system.activationScripts.rootNvimConfig = ''
-  mkdir -p /root/.config
-  ln -sfn /etc/root/.config/nvim /root/.config/nvim
-'';
+#   environment.etc."root/.config/nvim".source = "/home/dennis/nixos/nonnix/nvim";
+#   system.activationScripts.rootNvimConfig = ''
+#   mkdir -p /root/.config
+#   ln -sfn /etc/root/.config/nvim /root/.config/nvim
+# '';
 
 
 
@@ -286,9 +286,9 @@ nix.nixPath = [
     mirror="doas reflector -p https -l 50 --sort rate --verbose --save /etc/pacman.d/mirrorlist";
     prc="wget -O .prettierrc.json https://pastebin.com/raw/qhk1hkEB";
 
-    nvim-lazy="NVIM_APPNAME=LazyVim nvim";
-    nvim-chad="NVIM_APPNAME=NvChad nvim";
-    nvim-astro="NVIM_APPNAME=AstroNvim nvim";
+    # nvim-lazy="NVIM_APPNAME=LazyVim nvim";
+    # nvim-chad="NVIM_APPNAME=NvChad nvim";
+    # nvim-astro="NVIM_APPNAME=AstroNvim nvim";
   };
 
   };
@@ -383,7 +383,7 @@ hardware.pulseaudio.enable = false;
     pavucontrol
     rofi-wayland
 
-    (pkgs.writeShellScriptBin "v" "nvim $@")
+    # (pkgs.writeShellScriptBin "v" "nvim $@")
 
     firefox
     brave
@@ -431,6 +431,8 @@ hardware.pulseaudio.enable = false;
 	# calibre
 
 	# lsp
+
+  myNixCats.packages.${pkgs.system}.nvim
   ];
 
 
