@@ -108,11 +108,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1731297786,
-        "narHash": "sha256-YC+FPREQqPF2HNSu1PkvVps5mBzexxvCV6NXfTf/kQI=",
+        "lastModified": 1731384210,
+        "narHash": "sha256-tx0rDWEeNIJ+UIAb+4glyknpJai7HU54f8ucUr0GD9E=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "85c8db7e7e901f656072b01f89c8fffcab26bfa6",
+        "rev": "33cbf67f367cf0a1f5c5ecab5877e32cb5796681",
         "type": "gitlab"
       },
       "original": {
@@ -329,11 +329,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1731340175,
-        "narHash": "sha256-IfE7lqNFfFyzAu3pe2XTeNovU9tVzJeGLzQ2B8Segy0=",
+        "lastModified": 1731425185,
+        "narHash": "sha256-hhmwtcOncg/RMmi2KDuvQfhYeahrhc4UsL36/NNdqYI=",
         "ref": "refs/heads/main",
-        "rev": "f5fa84554ffe55e29a397014964238be89ffa54d",
-        "revCount": 5448,
+        "rev": "bb160cfe377da2d2b2e4431a3399fa60114f3911",
+        "revCount": 5450,
         "submodules": true,
         "type": "git",
         "url": "https://github.com/hyprwm/Hyprland"
@@ -465,11 +465,11 @@
     },
     "nixCats": {
       "locked": {
-        "lastModified": 1731340411,
-        "narHash": "sha256-FOqh3u8fOGQh26J7HF2cu5/jyHVIAFWBkhm4189GMiM=",
+        "lastModified": 1731435546,
+        "narHash": "sha256-LM/9mRLAADfkYCHz1RLomy+pSG1MK0RxcKIUfsP096k=",
         "owner": "BirdeeHub",
         "repo": "nixCats-nvim",
-        "rev": "d739e022ef7bc3d3ab5ca2303a8f1dff7a8aaf74",
+        "rev": "d6dbf1c905a264b725391f44e2423b972ebfa572",
         "type": "github"
       },
       "original": {
@@ -545,11 +545,11 @@
     "plugins-blink": {
       "flake": false,
       "locked": {
-        "lastModified": 1731364453,
-        "narHash": "sha256-CL6mbMChT3nK7uRRX8hNdcwDPWDjtIN3cS/h6EIfBTg=",
+        "lastModified": 1731436058,
+        "narHash": "sha256-Qa330xc6xCRR4KYBRCeCUZ8h2/11q2QWciULCffUIac=",
         "owner": "Saghen",
         "repo": "blink.cmp",
-        "rev": "0f9807bcc04fababa220d8d3b8961449f909d8d1",
+        "rev": "b2c955e3957e6e7799a5a3fa45b3ff87db99e08b",
         "type": "github"
       },
       "original": {

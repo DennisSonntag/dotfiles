@@ -3,9 +3,9 @@ return {
 	lazy = false, -- lazy loading handled internally
 	-- use a release tag to download pre-built binaries
 	dependencies = "rafamadriz/friendly-snippets",
-	-- version = false,
-	version = "v0.*",
-	-- build = 'nix run .#build-plugin',
+	version = false,
+	-- version = "v0.*",
+	build = "nix run .#build-plugin",
 	opts = {
 		-- 'default' for mappings similar to built-in completion
 		-- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
