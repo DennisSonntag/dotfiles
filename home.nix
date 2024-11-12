@@ -317,7 +317,7 @@ in {
     extraConfig = "modify_font underline_thickness 200%\nmodify_font underline_position 1";
     font = {
       size = 14;
-      name = "JetBrainsMono NF Regular";
+      name = "JetBrainsMono Nerd Font";
       package = pkgs.nerdfonts;
     };
     settings = {

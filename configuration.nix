@@ -46,7 +46,7 @@ in {
 
     monospace = {
       package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
-      name = "JetBrainsMono Nerd Font Mono";
+      name = "JetBrainsMono Nerd Font";
     };
 
     emoji = {
@@ -55,14 +55,16 @@ in {
     };
   };
 
-  fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["JetBrainsMono"];})
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-emoji
-  ];
+  fonts = {
+    packages = with pkgs; [
+      (nerdfonts.override {fonts = ["JetBrainsMono"];})
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-emoji
+    ];
 
-  fonts.fontconfig.defaultFonts.monospace = ["JetBrainsMono Nerd Font Mono"];
+    fontconfig.defaultFonts.monospace = ["JetBrainsMono Nerd Font"];
+  };
 
   stylix.cursor.package = pkgs.phinger-cursors;
   stylix.cursor.name = " phinger-cursors-light";
