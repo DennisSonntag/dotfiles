@@ -106,6 +106,13 @@ in {
   services.displayManager.sddm.wayland.enable = true;
 
   environment.sessionVariables = {
+    PATH = [
+      "\${HOME}/.npm-packages/bin"
+    ];
+    PNPM_HOME = "\${HOME}/.npm-packages/bin";
+
+    NODE_PATH = "~/.npm-packages/lib/node_modules";
+
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/user/.steam/root/compatibilitytools.d";
 
     NIXOS_OZONE_WL = "1";

@@ -85,6 +85,19 @@ in {
 
       # wallpaper = eDP-1,~/.wallpapers/macOS_Sonoma_6K.png
     '';
+    ".prettierrc".text = ''
+      {
+        "plugins": ["prettier-plugin-tailwindcss","prettier-plugin-svelte"]
+            "pluginSearchDirs": ["."], // should be removed in v3
+    "overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
+        "semi": true,
+        "singleQuote": false,
+        "tabWidth": 4,
+      }
+    '';
+    ".npmrc".text = ''
+      prefix = \$\{HOME}/.npm-packages
+    '';
   };
 
   # programs.neovim = {
@@ -488,13 +501,6 @@ in {
           passes = 3;
           special = true;
         };
-
-        drop_shadow = true;
-        shadow_ignore_window = true;
-        shadow_offset = "2 2";
-        shadow_range = 4;
-        shadow_render_power = 2;
-        "col.shadow" = "0x66000000";
 
         blurls = [
           "gtk-layer-shell"

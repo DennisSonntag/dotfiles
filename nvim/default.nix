@@ -58,7 +58,7 @@ The following is just the outputs function from the flake template.
     ...
   } @ packageDef: {
     lspsAndRuntimeDeps = with pkgs; {
-      general = [
+      lsp = [
         universal-ctags
         ripgrep
         fd
@@ -69,15 +69,17 @@ The following is just the outputs function from the flake template.
         tailwindcss-language-server
         nodePackages_latest.svelte-language-server
         nodePackages_latest.typescript-language-server
-        alejandra
-        prettierd
         nixd
+      ];
+      formatters = [
+        alejandra
         stylua
+        prettierd
       ];
       kickstart-debug = [
         delve
       ];
-      kickstart-lint = [
+      linters = [
         markdownlint-cli
       ];
     };
@@ -206,10 +208,12 @@ The following is just the outputs function from the flake template.
       # and a set of categories that you want
       # (and other information to pass to lua)
       categories = {
-        general = true;
-        gitPlugins = true;
+        lsp = true;
+        formatters = true;
+        linters = true;
         customPlugins = true;
-        test = true;
+        general = true;
+        custom = true;
 
         kickstart-autopairs = true;
         kickstart-neo-tree = true;

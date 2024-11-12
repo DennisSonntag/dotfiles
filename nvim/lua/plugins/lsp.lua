@@ -303,9 +303,9 @@ return {
 		lazy = false,
 		keys = {
 			{
-				"<leader>f",
+				"<leader>lf",
 				function()
-					require("conform").format({ async = true, lsp_fallback = true })
+					require("conform").format({ async = true, lsp_format = "fallback" })
 				end,
 				mode = "",
 				desc = "[F]ormat buffer",
