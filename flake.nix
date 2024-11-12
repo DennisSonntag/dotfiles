@@ -21,6 +21,15 @@
     };
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
 
+   "plugins-blink" = {
+     url = "github:Saghen/blink.cmp";
+     flake = false;
+   };
+   "plugins-sentiment" = {
+     url = "github:utilyre/sentiment.nvim";
+     flake = false;
+   };
+
   };
 
   outputs = { self, nixpkgs, home-manager, split-monitor-workspaces, stylix, ... }@inputs:
@@ -28,14 +37,12 @@
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
-      myNixCats = import ./nvimFinal/default.nix { inherit inputs; };
-      # myNixCats = import (self + "/nvimFinal/default.nix") { inherit inputs; };
-      # pkgs = import nixpkgs { system = "x86_64-linux"; };
     in {
       nixosConfigurations = {
         archie = lib.nixosSystem {
+		specialArgs = { inherit inputs; };
 	  system = "x86_64-linux";
-          modules = [ ./configuration.nix myNixCats stylix.nixosModules.stylix ];
+          modules = [ ./configuration.nix  stylix.nixosModules.stylix ];
         };
       };
       

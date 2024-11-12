@@ -1,5 +1,8 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, flake, inputs,  ... }:
 
+let 
+  myNixCats = import ./nvimFinal/default.nix {inherit inputs;};
+in
 {
   imports =
     [
@@ -304,25 +307,11 @@ nix.nixPath = [
 
 
 
-# environment.systemPackages = [ pkgs.alsa-utils ];
-
 hardware.pulseaudio.enable = false;
 
 	# ALSA provides a udev rule for restoring volume settings.
 	services.udev.packages = [ pkgs.alsa-utils ];
 
-	# systemd.services.alsa-store =
-	# 	{ description = "Store Sound Card State";
-	# 		wantedBy = [ "multi-user.target" ];
-	# 		unitConfig.RequiresMountsFor = "/var/lib/alsa";
-	# 		unitConfig.ConditionVirtualization = "!systemd-nspawn";
-	# 		serviceConfig = {
-	# 			Type = "oneshot";
-	# 			RemainAfterExit = true;
-	# 			ExecStart = "${pkgs.coreutils}/bin/mkdir -p /var/lib/alsa";
-	# 			ExecStop = "${pkgs.alsa-utils}/sbin/alsactl store --ignore";
-	# 		};
-	# 	};
 
 	security.rtkit.enable = true;
 
@@ -346,12 +335,9 @@ hardware.pulseaudio.enable = false;
 
        users.users.syncthing.isSystemUser = true;
 
-# users.users.syncthing.isNormalUser
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.dennis = {
     isNormalUser = true;
-    # extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     extraGroups = [ "wheel" "networkmanager" "syncthing"];
    home = "/home/dennis";
   };
@@ -384,7 +370,6 @@ hardware.pulseaudio.enable = false;
     pavucontrol
     rofi-wayland
 
-    # (pkgs.writeShellScriptBin "v" "nvim $@")
 
     firefox
     brave
@@ -415,7 +400,7 @@ hardware.pulseaudio.enable = false;
     fd
     brightnessctl
     swww
-    matugen
+    # matugen
 
     pamixer
 
@@ -431,16 +416,15 @@ hardware.pulseaudio.enable = false;
 
 	# calibre
 
-	# lsp
 
   myNixCats.packages.${pkgs.system}.nvim
+    (pkgs.writeShellScriptBin "v" "nvim $@")
   ];
 
 
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
-
 
 
 
@@ -481,6 +465,7 @@ hardware.pulseaudio.enable = false;
   #
   # Do NOT change this value unless you have manually inspected all the changes it would make to your configuration,
   # and migrated your data accordingly.
+
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "24.05"; # Did you read the comment?

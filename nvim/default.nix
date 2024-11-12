@@ -45,15 +45,107 @@
 
   categoryDefinitions = { pkgs, settings, categories, name, ... }@packageDef: {
 
-    lspsAndRuntimeDeps = {
-      general = with pkgs; [
-      ];
-    };
+      lspsAndRuntimeDeps = with pkgs; {
+        general = [
+          universal-ctags
+          ripgrep
+          fd
+          stdenv.cc.cc
+          nix-doc
+          lua-language-server
+          vscode-langservers-extracted
+          tailwindcss-language-server
+          nodePackages_latest.svelte-language-server
+          nodePackages_latest.typescript-language-server
+          alejandra
+          nixd
+          stylua
+        ];
+        kickstart-debug = [
+          delve
+        ];
+        kickstart-lint = [
+          markdownlint-cli
+        ];
+      };
 
-    startupPlugins = {
-      general = [
-      ];
-    };
+      startupPlugins = with pkgs.vimPlugins; {
+        general = [
+        harpoon
+          vim-sleuth
+          lazy-nvim
+          gitsigns-nvim
+          # which-key-nvim
+          telescope-nvim
+          telescope-fzf-native-nvim
+          telescope-ui-select-nvim
+          nvim-web-devicons
+          plenary-nvim
+          nvim-lspconfig
+          lazydev-nvim
+          fidget-nvim
+          conform-nvim
+          luasnip
+          nvim-ufo
+          promise-async
+          vim-fugitive
+          neogit
+          lazygit-nvim
+          vim-matchup
+          modicator-nvim
+          nvim-colorizer-lua
+          oil-nvim
+          eyeliner-nvim
+          lualine-nvim
+          nvim-ts-context-commentstring
+          trouble-nvim
+          nvim-bqf
+          rainbow-delimiters-nvim
+          smart-splits-nvim
+          statuscol-nvim
+          tokyonight-nvim
+          todo-comments-nvim
+          mini-nvim
+          nvim-treesitter.withAllGrammars
+          # This is for if you only want some of the grammars
+          # (nvim-treesitter.withPlugins (
+          #   plugins: with plugins; [
+          #     nix
+          #     lua
+          #   ]
+          # ))
+        ];
+        custon = [
+          pkgs.neovimPlugins.blink
+          pkgs.neovimPlugins.sentiment
+
+        ];
+
+        kickstart-debug = [
+          nvim-dap
+          nvim-dap-ui
+          nvim-dap-go
+          nvim-nio
+        ];
+        kickstart-indent_line = [
+          indent-blankline-nvim
+        ];
+        kickstart-lint = [
+          nvim-lint
+        ];
+        kickstart-autopairs = [
+          nvim-autopairs
+        ];
+        kickstart-neo-tree = [
+          # neo-tree-nvim
+          nui-nvim
+          # nixCats will filter out duplicate packages
+          # so you can put dependencies with stuff even if they're
+          # also somewhere else
+          nvim-web-devicons
+          plenary-nvim
+        ];
+      };
 
     optionalPlugins = {
       gitPlugins = with pkgs.neovimPlugins; [ ];
@@ -99,7 +191,7 @@
   };
 
   packageDefinitions = {
-    nixCats = {pkgs , ... }: {
+    nvim = {pkgs , ... }: {
       # they contain a settings set defined above
       # see :help nixCats.flake.outputs.settings
       settings = {
@@ -111,19 +203,37 @@
       };
       # and a set of categories that you want
       # (and other information to pass to lua)
-      categories = {
-        general = true;
-        test = true;
-        example = {
-          youCan = "add more than just booleans";
-          toThisSet = [
-            "and the contents of this categories set"
-            "will be accessible to your lua with"
-            "nixCats('path.to.value')"
-            "see :help nixCats"
-          ];
+        categories = {
+          general = true;
+          gitPlugins = true;
+          customPlugins = true;
+          test = true;
+
+          kickstart-autopairs = true;
+          kickstart-neo-tree = true;
+          kickstart-debug = true;
+          kickstart-lint = true;
+          kickstart-indent_line = true;
+
+          # this kickstart extra didnt require any extra plugins
+          # so it doesnt have a category above.
+          # but we can still send the info from nix to lua that we want it!
+          kickstart-gitsigns = true;
+
+          # we can pass whatever we want actually.
+          have_nerd_font = false;
+
+          example = {
+            youCan = "add more than just booleans";
+            toThisSet = [
+              "and the contents of this categories set"
+              "will be accessible to your lua with"
+              "nixCats('path.to.value')"
+              "see :help nixCats"
+              "and type :NixCats to see the categories set in nvim"
+            ];
+          };
         };
-      };
     };
   };
   # In this section, the main thing you will need to do is change the default package name
