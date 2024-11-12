@@ -80,67 +80,61 @@ The following is just the outputs function from the flake template.
       ];
     };
 
-    startupPlugins = with pkgs.vimPlugins; {
+    startupPlugins = with pkgs; {
       general = [
-        lsp_signature-nvim
-        hover-nvim
-        harpoon
-        vim-sleuth
-        lazy-nvim
-        gitsigns-nvim
-        telescope-nvim
-        telescope-fzf-native-nvim
-        telescope-ui-select-nvim
-        nvim-web-devicons
-        plenary-nvim
-        nvim-lspconfig
-        lazydev-nvim
-        fidget-nvim
-        conform-nvim
-        luasnip
-        nvim-ufo
-        promise-async
-        vim-fugitive
-        neogit
-        lazygit-nvim
-        vim-matchup
-        modicator-nvim
-        nvim-colorizer-lua
-        oil-nvim
-        eyeliner-nvim
-        lualine-nvim
-        nvim-ts-context-commentstring
-        trouble-nvim
-        nvim-bqf
-        rainbow-delimiters-nvim
-        smart-splits-nvim
-        statuscol-nvim
-        tokyonight-nvim
-        todo-comments-nvim
-        mini-nvim
-        nvim-treesitter.withAllGrammars
+        vimPlugins.lsp_signature-nvim
+        vimPlugins.hover-nvim
+        vimPlugins.harpoon
+        vimPlugins.vim-sleuth
+        vimPlugins.lazy-nvim
+        vimPlugins.gitsigns-nvim
+        vimPlugins.telescope-nvim
+        vimPlugins.telescope-fzf-native-nvim
+        vimPlugins.telescope-ui-select-nvim
+        vimPlugins.nvim-web-devicons
+        vimPlugins.plenary-nvim
+        vimPlugins.nvim-lspconfig
+        vimPlugins.lazydev-nvim
+        vimPlugins.fidget-nvim
+        vimPlugins.conform-nvim
+        vimPlugins.luasnip
+        vimPlugins.nvim-ufo
+        vimPlugins.promise-async
+        vimPlugins.vim-fugitive
+        vimPlugins.neogit
+        vimPlugins.lazygit-nvim
+        vimPlugins.vim-matchup
+        vimPlugins.modicator-nvim
+        vimPlugins.nvim-colorizer-lua
+        vimPlugins.oil-nvim
+        vimPlugins.eyeliner-nvim
+        vimPlugins.lualine-nvim
+        vimPlugins.nvim-ts-context-commentstring
+        vimPlugins.trouble-nvim
+        vimPlugins.nvim-bqf
+        vimPlugins.rainbow-delimiters-nvim
+        vimPlugins.smart-splits-nvim
+        vimPlugins.statuscol-nvim
+        vimPlugins.tokyonight-nvim
+        vimPlugins.todo-comments-nvim
+        vimPlugins.mini-nvim
+        vimPlugins.nvim-treesitter.withAllGrammars
+
+        vimPlugins.nvim-dap
+        vimPlugins.nvim-dap-ui
+        vimPlugins.indent-blankline-nvim
+        vimPlugins.nvim-dap-go
+        vimPlugins.nvim-lint
+        vimPlugins.nvim-autopairs
+        vimPlugins.nui-nvim
+        vimPlugins.nvim-web-devicons
+        vimPlugins.plenary-nvim
+        vimPlugins.nvim-nio
+
+        neovimPlugins.blink
+        neovimPlugins.sentiment
       ];
     };
-
-    optionalPlugins = {
-      gitPlugins = with pkgs.neovimPlugins; [
-        blink
-        sentiment
-      ];
-      general = with pkgs.vimPlugins; [
-        nvim-dap
-        nvim-dap-ui
-        indent-blankline-nvim
-        nvim-dap-go
-        nvim-lint
-        nvim-autopairs
-        nui-nvim
-        nvim-web-devicons
-        plenary-nvim
-        nvim-nio
-      ];
-    };
-
     # shared libraries to be added to LD_LIBRARY_PATH
     # variable available to nvim runtime
     sharedLibraries = {
@@ -194,7 +188,6 @@ The following is just the outputs function from the flake template.
       categories = {
         general = true;
         test = true;
-        gitPlugins = true;
         example = {
           youCan = "add more than just booleans";
           toThisSet = [
