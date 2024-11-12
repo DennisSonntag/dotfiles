@@ -55,6 +55,15 @@ in {
     };
   };
 
+  fonts.packages = with pkgs; [
+    (nerdfonts.override {fonts = ["JetBrainsMono"];})
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-emoji
+  ];
+
+  fonts.fontconfig.defaultFonts.monospace = ["JetBrainsMono Nerd Font Mono"];
+
   stylix.cursor.package = pkgs.phinger-cursors;
   stylix.cursor.name = " phinger-cursors-light";
 
@@ -341,6 +350,12 @@ in {
     localsend
 
     gdu
+
+    imagemagick
+
+    feh
+
+    hyprpaper
 
     # calibre
 

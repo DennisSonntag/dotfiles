@@ -86,6 +86,8 @@ The following is just the outputs function from the flake template.
 
     startupPlugins = with pkgs.vimPlugins; {
       general = [
+        lsp_signature-nvim
+        hover-nvim
         harpoon
         vim-sleuth
         lazy-nvim

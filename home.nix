@@ -72,13 +72,19 @@ in {
     "${config.home.homeDirectory}/.config/dunst".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/dunst";
     "${config.home.homeDirectory}/.gitconfig".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/git/.gitconfig";
 
-    "~/./config/hyprpaper/hyprpaper.conf".text = ''
-      # Pc stuff
-      			preload = ~/Wallappers/DualMonitor/right-half-1.jpg
-      			preload = ~/Wallappers/DualMonitor/right-half-0.jpg
+    "${config.home.homeDirectory}/.config/hypr/hyprpaper.conf".text = ''
+            # Pc stuff
+            #preload = ~/Wallappers/DualMonitor/right-half-1.jpg
+            #preload = ~/Wallappers/DualMonitor/right-half-0.jpg
 
-      			wallpaper = DP-1,~/Wallappers/DualMonitor/right-half-1.jpg
-      			wallpaper = HDMI-A-1,~/Wallappers/DualMonitor/right-half-0.jpg
+            #wallpaper = DP-1,~/Wallappers/DualMonitor/right-half-1.jpg
+            #wallpaper = HDMI-A-1,~/Wallappers/DualMonitor/right-half-0.jpg
+
+            preload = ~/Pictures/output_0.jpg
+            preload = ~/Pictures/output_1.jpg
+
+            wallpaper = HDMI-A-1,~/Pictures/output_0.jpg
+            wallpaper = DP-1, ~/Pictures/output_1.jpg
 
       # Laptop stuff
       # preload = ~/.wallpapers/macOS_Sonoma_6K.png
@@ -86,14 +92,14 @@ in {
       # wallpaper = eDP-1,~/.wallpapers/macOS_Sonoma_6K.png
     '';
     ".prettierrc".text = ''
-      {
-        "plugins": ["prettier-plugin-tailwindcss","prettier-plugin-svelte"]
-            "pluginSearchDirs": ["."], // should be removed in v3
-    "overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
-        "semi": true,
-        "singleQuote": false,
-        "tabWidth": 4,
-      }
+        {
+          "plugins": ["prettier-plugin-tailwindcss","prettier-plugin-svelte"]
+              "pluginSearchDirs": ["."], // should be removed in v3
+      "overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
+          "semi": true,
+          "singleQuote": false,
+          "tabWidth": 4,
+        }
     '';
     ".npmrc".text = ''
       prefix = \$\{HOME}/.npm-packages
