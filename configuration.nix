@@ -212,8 +212,6 @@ in {
       nm = "doas nmtui";
       np = "ping 1.1.1.1";
       n = "pnpm";
-      lv = "NVIM_APPNAME=LazyVim nvim";
-      ov = "NVIM_APPNAME=nvimOld nvim";
       t = "tmux attach || tmux new";
       ".." = "cd ..";
       ls = "lsd";
@@ -291,8 +289,6 @@ in {
   systemd.tmpfiles.rules = [
     "d /home/dennis 0750 dennis syncthing"
   ];
-
-  environment.variables.EDITOR = "nvim";
 
   environment.systemPackages = with pkgs; [
     dunst

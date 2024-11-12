@@ -57,8 +57,8 @@ The following is just the outputs function from the flake template.
     name,
     ...
   } @ packageDef: {
-    lspsAndRuntimeDeps = with pkgs; {
-      lsp = [
+    lspsAndRuntimeDeps = {
+      general = with pkgs; [
         universal-ctags
         ripgrep
         fd
@@ -70,16 +70,12 @@ The following is just the outputs function from the flake template.
         nodePackages_latest.svelte-language-server
         nodePackages_latest.typescript-language-server
         nixd
-      ];
-      formatters = [
+
         alejandra
         stylua
         prettierd
-      ];
-      kickstart-debug = [
+
         delve
-      ];
-      linters = [
         markdownlint-cli
       ];
     };
@@ -124,39 +120,25 @@ The following is just the outputs function from the flake template.
         mini-nvim
         nvim-treesitter.withAllGrammars
       ];
-      custon = [
-        pkgs.neovimPlugins.blink
-        pkgs.neovimPlugins.sentiment
-      ];
-
-      kickstart-debug = [
-        nvim-dap
-        nvim-dap-ui
-        nvim-dap-go
-        nvim-nio
-      ];
-      kickstart-indent_line = [
-        indent-blankline-nvim
-      ];
-      kickstart-lint = [
-        nvim-lint
-      ];
-      kickstart-autopairs = [
-        nvim-autopairs
-      ];
-      kickstart-neo-tree = [
-        nui-nvim
-        # nixCats will filter out duplicate packages
-        # so you can put dependencies with stuff even if they're
-        # also somewhere else
-        nvim-web-devicons
-        plenary-nvim
-      ];
     };
 
     optionalPlugins = {
-      gitPlugins = with pkgs.neovimPlugins; [];
-      general = with pkgs.vimPlugins; [];
+      gitPlugins = with pkgs.neovimPlugins; [
+        blink
+        sentiment
+      ];
+      general = with pkgs.vimPlugins; [
+        nvim-dap
+        nvim-dap-ui
+        indent-blankline-nvim
+        nvim-dap-go
+        nvim-lint
+        nvim-autopairs
+        nui-nvim
+        nvim-web-devicons
+        plenary-nvim
+        nvim-nio
+      ];
     };
 
     # shared libraries to be added to LD_LIBRARY_PATH
@@ -210,27 +192,9 @@ The following is just the outputs function from the flake template.
       # and a set of categories that you want
       # (and other information to pass to lua)
       categories = {
-        lsp = true;
-        formatters = true;
-        linters = true;
-        customPlugins = true;
         general = true;
-        custom = true;
-
-        kickstart-autopairs = true;
-        kickstart-neo-tree = true;
-        kickstart-debug = true;
-        kickstart-lint = true;
-        kickstart-indent_line = true;
-
-        # this kickstart extra didnt require any extra plugins
-        # so it doesnt have a category above.
-        # but we can still send the info from nix to lua that we want it!
-        kickstart-gitsigns = true;
-
-        # we can pass whatever we want actually.
-        have_nerd_font = false;
-
+        test = true;
+        gitPlugins = true;
         example = {
           youCan = "add more than just booleans";
           toThisSet = [
@@ -238,12 +202,12 @@ The following is just the outputs function from the flake template.
             "will be accessible to your lua with"
             "nixCats('path.to.value')"
             "see :help nixCats"
-            "and type :NixCats to see the categories set in nvim"
           ];
         };
       };
     };
   };
+
   # In this section, the main thing you will need to do is change the default package name
   # to the name of the packageDefinitions entry you wish to use as the default.
   defaultPackageName = "nvim";
