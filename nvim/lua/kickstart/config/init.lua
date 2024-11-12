@@ -1,5 +1,0 @@
-require 'kickstart.config.autocmd'
-require 'kickstart.config.options'
-require 'kickstart.config.keymap'
-require 'kickstart.config.icons'
-require 'kickstart.config.signs'

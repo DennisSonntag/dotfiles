@@ -58,6 +58,7 @@
           nodePackages_latest.svelte-language-server
           nodePackages_latest.typescript-language-server
           alejandra
+          prettierd
           nixd
           stylua
         ];

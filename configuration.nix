@@ -1,7 +1,7 @@
 { config, lib, pkgs, flake, inputs,  ... }:
 
 let 
-  myNixCats = import ./nvimFinal/default.nix {inherit inputs;};
+  myNixCats = import ./nvim/default.nix {inherit inputs;};
 in
 {
   imports =
