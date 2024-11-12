@@ -21,39 +21,49 @@
     };
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
 
-   "plugins-blink" = {
-     url = "github:Saghen/blink.cmp";
-     flake = false;
-   };
-   "plugins-sentiment" = {
-     url = "github:utilyre/sentiment.nvim";
-     flake = false;
-   };
-
+    "plugins-blink" = {
+      url = "github:Saghen/blink.cmp";
+      flake = false;
+    };
+    "plugins-sentiment" = {
+      url = "github:utilyre/sentiment.nvim";
+      flake = false;
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, split-monitor-workspaces, stylix, ... }@inputs:
-    let
-      lib = nixpkgs.lib;
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    split-monitor-workspaces,
+    stylix,
+    ...
+  } @ inputs: let
+    lib = nixpkgs.lib;
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {
       system = "x86_64-linux";
-      pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
-    in {
-      nixosConfigurations = {
-        archie = lib.nixosSystem {
-		specialArgs = { inherit inputs; };
-	  system = "x86_64-linux";
-          modules = [ ./configuration.nix  stylix.nixosModules.stylix ];
-        };
-      };
-      
-      homeConfigurations."dennis" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        modules = [ 
-		  ./home.nix
-		];
-	    extraSpecialArgs = { inherit inputs; inherit split-monitor-workspaces; };
-
+      config.allowUnfree = true;
+    };
+  in {
+    nixosConfigurations = {
+      archie = lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        system = "x86_64-linux";
+        modules = [./configuration.nix stylix.nixosModules.stylix];
       };
     };
+
+    homeConfigurations."dennis" = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+
+      modules = [
+        ./home.nix
+      ];
+      extraSpecialArgs = {
+        inherit inputs;
+        inherit split-monitor-workspaces;
+      };
+    };
+  };
 }

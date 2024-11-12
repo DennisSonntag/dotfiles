@@ -175,7 +175,10 @@ return {
 			--  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
 			--  So, we create new capabilities with nvim cmp, and then broadcast that to the servers.
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
-			-- capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+			-- config.capabilities =
+			-- capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+			capabilities =
+				vim.tbl_deep_extend("force", capabilities, require("blink.cmp").get_lsp_capabilities(capabilities))
 
 			-- Enable the following language servers
 			--  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
@@ -203,18 +206,32 @@ return {
 
 			-- NOTE: nixCats: nixd is not available on mason.
 			if require("nixCatsUtils").isNixCats then
-				servers.nixd = {}
+				servers.nixd = {
+					cmd = { "nixd" },
+					settings = {
+						nixd = {
+							nixpkgs = {
+								expr = "import <nixpkgs> {}",
+							},
+						},
+						formatting = {
+							command = { "alejandra" },
+						},
+					},
+				}
 			else
 				servers.rnix = {}
 				servers.nil_ls = {}
 			end
-			servers.servers.svelte = {}
-			servers.servers.tailwindcss = {}
-			servers.servers.cssls = {}
-			servers.servers.jsonls = {}
-			servers.servers.ts_ls = {}
-			servers.servers.html = {}
-			servers.servers.lua_ls = {
+
+			servers.svelte = {}
+			servers.tailwindcss = {}
+			servers.cssls = {}
+			servers.jsonls = {}
+			servers.ts_ls = {}
+			servers.html = {}
+
+			servers.lua_ls = {
 				-- cmd = {...},
 				-- filetypes = { ...},
 				-- capabilities = {},
@@ -314,6 +331,12 @@ return {
 				-- You can use a sub-list to tell conform to run *until* a formatter
 				-- is found.
 				javascript = { "prettierd" },
+				typescript = { "prettierd" },
+				svelte = { "prettierd" },
+				json = { "prettierd" },
+				html = { "prettierd" },
+				css = { "prettierd" },
+				nix = { "alejandra" },
 			},
 		},
 	},

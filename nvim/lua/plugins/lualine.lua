@@ -53,9 +53,9 @@ return {
 					"filename",
 					path = 1,
 					symbols = {
-						added = require("lua.config.icons").git.add,
-						modified = require("lua.config.icons").git.change,
-						removed = require("lua.config.icons").git.delete,
+						added = require("config.icons").git.add,
+						modified = require("config.icons").git.change,
+						removed = require("config.icons").git.delete,
 					},
 					diff_color = {
 						added = { fg = "#98BE65" },

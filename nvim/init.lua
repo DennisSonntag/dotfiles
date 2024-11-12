@@ -1,3 +1,7 @@
+--  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- NOTE: nixCats: this is where we define some arguments for the lazy wrapper.
 local pluginList = nil
 local nixLazyPath = nil
@@ -169,5 +173,5 @@ require("nixCatsUtils.lazyCat").setup(pluginList, nixLazyPath, {
 	{ import = "plugins" },
 }, lazyOptions)
 
-require("lua.config.init")
+require("config.init")
 vim.cmd.colorscheme("tokyonight")

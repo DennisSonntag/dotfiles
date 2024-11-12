@@ -27,7 +27,7 @@ return {
 		},
 	},
 	config = function()
-		local icons = require("lua.config.icons")
+		local icons = require("config.icons")
 		local builtin = require("telescope.builtin")
 
 		pcall(require("telescope").load_extension, "fzf")
