@@ -67,7 +67,7 @@ in {
   };
 
   stylix.cursor.package = pkgs.phinger-cursors;
-  stylix.cursor.name = " phinger-cursors-light";
+  stylix.cursor.name = "phinger-cursors-light";
 
   stylix.fonts.sizes = {
     applications = 12;

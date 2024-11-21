@@ -21,10 +21,15 @@
     };
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
 
-    "plugins-blink" = {
-      url = "github:Saghen/blink.cmp/db3d1ad8d6420ce29d548991468cc0107fe9d04b";
-      flake = false;
-    };
+    # blink-cmp = {
+    #   url = "github:Saghen/blink.cmp";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+    # "plugins-blink" = {
+    #   # url = "github:Saghen/blink.cmp/db4d1ad8d6420ce29d548991468cc0107fe9d04b";
+    #   url = "github:Saghen/blink.cmp";
+    #   flake = false;
+    # };
     "plugins-sentiment" = {
       url = "github:utilyre/sentiment.nvim";
       flake = false;

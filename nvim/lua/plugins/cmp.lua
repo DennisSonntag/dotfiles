@@ -9,7 +9,7 @@ return {
 	-- 	config = function()
 	-- end,
 	config = function()
-		require("blink").setup({
+		require("blink.cmp").setup({
 		-- 'default' for mappings similar to built-in completion
 		-- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
 		-- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept

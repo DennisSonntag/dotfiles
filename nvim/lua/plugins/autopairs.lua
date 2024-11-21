@@ -4,10 +4,10 @@
 return {
 	"windwp/nvim-autopairs",
 	-- NOTE: nixCats: return true only if category is enabled, else false
-	enabled = require("nixCatsUtils").enableForCategory("kickstart-autopairs"),
+	-- enabled = require("nixCatsUtils").enableForCategory("kickstart-autopairs"),
 	event = "InsertEnter",
 	-- Optional dependency
-	dependencies = { "hrsh7th/nvim-cmp" },
+	-- dependencies = { "hrsh7th/nvim-cmp" },
 	config = function()
 		require("nvim-autopairs").setup({})
 		-- If you want to automatically add `(` after selecting a function or method

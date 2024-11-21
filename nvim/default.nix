@@ -83,7 +83,8 @@ The following is just the outputs function from the flake template.
     startupPlugins = with pkgs; {
       general = [
 
-        neovimPlugins.blink
+        # neovimPlugins.blink
+        vimPlugins.blink-cmp
 
         vimPlugins.lsp_signature-nvim
         vimPlugins.hover-nvim
