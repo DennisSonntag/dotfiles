@@ -154,7 +154,7 @@ require("nixCatsUtils.lazyCat").setup(pluginList, nixLazyPath, {
 		config = true,
 		lazy = true,
 	},
-
+	{ "glacambre/firenvim", build = ":call firenvim#install(0)" },
 	{
 		"jinh0/eyeliner.nvim",
 		event = { "BufReadPre", "BufNewFile" },

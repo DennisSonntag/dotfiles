@@ -542,22 +542,6 @@
         "type": "github"
       }
     },
-    "plugins-blink": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1731436058,
-        "narHash": "sha256-Qa330xc6xCRR4KYBRCeCUZ8h2/11q2QWciULCffUIac=",
-        "owner": "Saghen",
-        "repo": "blink.cmp",
-        "rev": "b2c955e3957e6e7799a5a3fa45b3ff87db99e08b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Saghen",
-        "repo": "blink.cmp",
-        "type": "github"
-      }
-    },
     "plugins-sentiment": {
       "flake": false,
       "locked": {
@@ -605,7 +589,6 @@
         "hyprland": "hyprland",
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs_2",
-        "plugins-blink": "plugins-blink",
         "plugins-sentiment": "plugins-sentiment",
         "split-monitor-workspaces": "split-monitor-workspaces",
         "stylix": "stylix"

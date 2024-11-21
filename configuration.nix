@@ -355,6 +355,8 @@ in {
 
     hyprpaper
 
+    poppler_utils
+
     # calibre
 
     myNixCats.packages.${pkgs.system}.nvim

@@ -97,7 +97,6 @@ The following is just the outputs function from the flake template.
         vimPlugins.lazydev-nvim
         vimPlugins.fidget-nvim
         vimPlugins.conform-nvim
-        vimPlugins.luasnip
         vimPlugins.nvim-ufo
         vimPlugins.promise-async
         vimPlugins.vim-fugitive
@@ -120,6 +119,8 @@ The following is just the outputs function from the flake template.
         vimPlugins.mini-nvim
         vimPlugins.nvim-treesitter.withAllGrammars
 
+        vimPlugins.firenvim
+
         vimPlugins.nvim-dap
         vimPlugins.nvim-dap-ui
         vimPlugins.indent-blankline-nvim
@@ -131,7 +132,21 @@ The following is just the outputs function from the flake template.
         vimPlugins.plenary-nvim
         vimPlugins.nvim-nio
 
-        neovimPlugins.blink
+        # neovimPlugins.blink
+
+        vimPlugins.nvim-cmp
+        vimPlugins.luasnip
+        vimPlugins.friendly-snippets
+        vimPlugins.cmp_luasnip
+        vimPlugins.cmp-buffer
+        vimPlugins.cmp-path
+        vimPlugins.cmp-nvim-lua
+        vimPlugins.cmp-nvim-lsp
+        vimPlugins.cmp-cmdline
+        vimPlugins.cmp-nvim-lsp-signature-help
+        vimPlugins.cmp-cmdline-history
+        vimPlugins.lspkind-nvim
+
         neovimPlugins.sentiment
       ];
     };

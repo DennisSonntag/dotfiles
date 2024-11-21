@@ -92,14 +92,15 @@ in {
       # wallpaper = eDP-1,~/.wallpapers/macOS_Sonoma_6K.png
     '';
     ".prettierrc".text = ''
-        {
-          "plugins": ["prettier-plugin-tailwindcss","prettier-plugin-svelte"]
-              "pluginSearchDirs": ["."], // should be removed in v3
-      "overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
-          "semi": true,
-          "singleQuote": false,
-          "tabWidth": 4,
-        }
+      {
+        "plugins": ["prettier-plugin-tailwindcss","prettier-plugin-svelte"],
+        "pluginSearchDirs": ["."],
+        "overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }],
+        "semi": true,
+        "singleQuote": false,
+        "tabWidth": 4,
+        "useTabs": true,
+      }
     '';
     ".npmrc".text = ''
       prefix = \$\{HOME}/.npm-packages

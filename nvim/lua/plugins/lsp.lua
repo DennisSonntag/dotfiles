@@ -199,7 +199,7 @@ return {
 			--    https://github.com/pmizio/typescript-tools.nvim
 			--
 			-- But for many setups, the LSP (`tsserver`) will work just fine
-			-- servers.tsserver = {},
+			-- servers.tsserver = {}
 			--
 
 			-- NOTE: nixCats: nixd is not available on mason.
@@ -311,16 +311,16 @@ return {
 		},
 		opts = {
 			notify_on_error = false,
-			format_on_save = function(bufnr)
-				-- Disable "format_on_save lsp_fallback" for languages that don't
-				-- have a well standardized coding style. You can add additional
-				-- languages here or re-enable it for the disabled ones.
-				local disable_filetypes = { c = true, cpp = true }
-				return {
-					timeout_ms = 500,
-					lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
-				}
-			end,
+			-- format_on_save = function(bufnr)
+			-- Disable "format_on_save lsp_fallback" for languages that don't
+			-- have a well standardized coding style. You can add additional
+			-- languages here or re-enable it for the disabled ones.
+			-- local disable_filetypes = { c = true, cpp = true }
+			-- return {
+			-- 	timeout_ms = 2500,
+			-- 	lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
+			-- }
+			-- end,
 			formatters_by_ft = {
 				lua = { "stylua" },
 				-- Conform can also run multiple formatters sequentially
@@ -328,12 +328,12 @@ return {
 				--
 				-- You can use a sub-list to tell conform to run *until* a formatter
 				-- is found.
-				javascript = { "prettierd" },
-				typescript = { "prettierd" },
-				svelte = { "prettierd" },
-				json = { "prettierd" },
-				html = { "prettierd" },
-				css = { "prettierd" },
+				javascript = { "prettier" },
+				typescript = { "prettier" },
+				svelte = { "prettier" },
+				json = { "prettier" },
+				html = { "prettier" },
+				css = { "prettier" },
 				nix = { "alejandra" },
 			},
 		},
