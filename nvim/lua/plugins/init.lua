@@ -2,7 +2,7 @@
 -- from the categories set in your packageDefinitions in your flake or other template!
 -- This is because within them, we used nixCats to check if it should be loaded!
 require("plugins.autopairs")
-require("plugins.cmp")
+-- require("plugins.cmp")
 require("plugins.colorscheme")
 require("plugins.debug")
 require("plugins.fold")

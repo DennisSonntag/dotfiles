@@ -357,6 +357,8 @@ in {
 
     poppler_utils
 
+    python3
+
     # calibre
 
     myNixCats.packages.${pkgs.system}.nvim

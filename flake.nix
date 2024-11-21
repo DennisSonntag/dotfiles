@@ -21,10 +21,10 @@
     };
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
 
-    # "plugins-blink" = {
-    #   url = "github:Saghen/blink.cmp/db3d1ad8d6420ce29d548991468cc0107fe9d04b";
-    #   flake = false;
-    # };
+    "plugins-blink" = {
+      url = "github:Saghen/blink.cmp/db3d1ad8d6420ce29d548991468cc0107fe9d04b";
+      flake = false;
+    };
     "plugins-sentiment" = {
       url = "github:utilyre/sentiment.nvim";
       flake = false;

@@ -82,6 +82,9 @@ The following is just the outputs function from the flake template.
 
     startupPlugins = with pkgs; {
       general = [
+
+        neovimPlugins.blink
+
         vimPlugins.lsp_signature-nvim
         vimPlugins.hover-nvim
         vimPlugins.harpoon
@@ -132,20 +135,21 @@ The following is just the outputs function from the flake template.
         vimPlugins.plenary-nvim
         vimPlugins.nvim-nio
 
-        # neovimPlugins.blink
 
-        vimPlugins.nvim-cmp
-        vimPlugins.luasnip
-        vimPlugins.friendly-snippets
-        vimPlugins.cmp_luasnip
-        vimPlugins.cmp-buffer
-        vimPlugins.cmp-path
-        vimPlugins.cmp-nvim-lua
-        vimPlugins.cmp-nvim-lsp
-        vimPlugins.cmp-cmdline
-        vimPlugins.cmp-nvim-lsp-signature-help
-        vimPlugins.cmp-cmdline-history
-        vimPlugins.lspkind-nvim
+        # vimPlugins.coq_nvim
+
+        # vimPlugins.nvim-cmp
+        # vimPlugins.luasnip
+        # vimPlugins.friendly-snippets
+        # vimPlugins.cmp_luasnip
+        # vimPlugins.cmp-buffer
+        # vimPlugins.cmp-path
+        # vimPlugins.cmp-nvim-lua
+        # vimPlugins.cmp-nvim-lsp
+        # vimPlugins.cmp-cmdline
+        # vimPlugins.cmp-nvim-lsp-signature-help
+        # vimPlugins.cmp-cmdline-history
+        # vimPlugins.lspkind-nvim
 
         neovimPlugins.sentiment
       ];

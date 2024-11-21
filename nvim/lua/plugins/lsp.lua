@@ -2,7 +2,6 @@ return {
 	{ -- LSP Configuration & Plugins
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			-- Automatically install LSPs and related tools to stdpath for Neovim
 			{
 				"williamboman/mason.nvim",
 				-- NOTE: nixCats: use lazyAdd to only enable mason if nix wasnt involved.
