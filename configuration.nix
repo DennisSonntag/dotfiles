@@ -13,7 +13,7 @@ in {
     # Download disko
     "${builtins.fetchTarball {
       url = "https://github.com/nix-community/disko/archive/master.tar.gz";
-      sha256 = "136dsjk7ml9bdjpgmq9857cjdg36dp35n9hqgqq9007h56aj7sij";
+      sha256 = "014jjla3hqqhkabcgycwzgiqacg3j49j6yg2j7k13y5d067g4r3x";
     }}/module.nix"
 
     ./disk-config.nix
@@ -66,8 +66,8 @@ in {
     fontconfig.defaultFonts.monospace = ["JetBrainsMono Nerd Font"];
   };
 
-  stylix.cursor.package = pkgs.phinger-cursors;
-  stylix.cursor.name = "phinger-cursors-light";
+  # stylix.cursor.package = pkgs.rose-pine-cursor;
+  # stylix.cursor.name = "rose-pine-cursor";
 
   stylix.fonts.sizes = {
     applications = 12;
@@ -102,6 +102,7 @@ in {
   #   package = config.boot.kernelPackages.nvidiaPackages.stable;
   # };
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   # TODO: modularize this because this is specific to desktop config
   boot.kernelParams = [
     "video=DP-1:1920x1080@75"
@@ -155,8 +156,11 @@ in {
     _JAVA_AWT_WM_NONEREPARENTING = "1";
     GDK_BACKEND = "wayland,x11";
     GTK_THEME = "Nordic";
-    # XCURSOR_THEME = "Fluent-dark-cursors";
+
+    # XCURSOR_THEME = "rose-pine-hyprcursor";
     # XCURSOR_SIZE = "24";
+    HYPRCURSOR_THEME = "rose-pine-hyprcursor";
+    HYPRCURSOR_SIZE = "24";
   };
 
   programs.fish = {
@@ -291,6 +295,7 @@ in {
   ];
 
   environment.systemPackages = with pkgs; [
+    inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     dunst
     alsa-utils
     vim
@@ -356,6 +361,8 @@ in {
     hyprpaper
 
     poppler_utils
+
+    zoxide
 
     python3
 

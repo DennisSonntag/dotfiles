@@ -21,6 +21,7 @@
     };
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
 
+      rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     # blink-cmp = {
     #   url = "github:Saghen/blink.cmp";
     #   inputs.nixpkgs.follows = "nixpkgs";
