@@ -17,19 +17,31 @@ in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration= true;
+    enableFishIntegration= true;
+    options = [
+      "--cmd cd"
+    ];
+  };
+
+# programs.zoxide.enableNushellIntegration = true;
+# programs.zoxide.enableZshIntegration = true;
+
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
     };
   };
 
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Adwaita-dark";
-      package = pkgs.gnome-themes-extra;
-    };
-  };
+  # gtk = {
+  #   enable = true;
+  #   theme = {
+  #     name = "Adwaita-dark";
+  #     package = pkgs.gnome-themes-extra;
+  #   };
+  # };
 
   # Wayland, X, etc. support for session vars
   # systemd.user.sessionVariables = config.home-manager.users.justinas.home.sessionVariables;
@@ -238,6 +250,35 @@ in {
     EDITOR = "nvim";
   };
 
+  #   home.pointerCursor = {
+  #   gtk.enable = true;
+  #   # x11.enable = true;
+  #   package = inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default;
+  #   name = "rose-pine-hyprcursor";
+  #   size = 24;
+  # };
+
+  # gtk = {
+  #   enable = true;
+  #
+  #   theme = {
+  #     package = pkgs.flat-remix-gtk;
+  #     name = "Flat-Remix-GTK-Grey-Darkest";
+  #   };
+  #
+  #   iconTheme = {
+  #     package = pkgs.gnome.adwaita-icon-theme;
+  #     name = "Adwaita";
+  #   };
+  #
+  #   # font = {
+  #   #   name = "Sans";
+  #   #   size = 11;
+  #   # };
+  # };
+
+
+
   programs.git = {
     enable = true;
     userName = "Dennis Sonntag";
@@ -339,6 +380,7 @@ in {
     plugins = [
       split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
     ];
+    
 
     settings = {
       plugin = {
@@ -350,7 +392,7 @@ in {
         "wl-clipboard-history -t"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "hyprctl setcursor rose-pine-hyprcursor 24"
+        # "hyprctl setcursor rose-pine-hyprcursor 24"
         "lxsession"
         "waybar"
         "hyprpaper"

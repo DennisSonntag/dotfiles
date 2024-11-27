@@ -87,7 +87,7 @@ local lazyOptions = {
 }
 
 require("nixCatsUtils.lazyCat").setup(pluginList, nixLazyPath, {
-	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
+	-- "tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 	-- { 'numToStr/Comment.nvim', name = 'comment.nvim', opts = {} },
 	{
 		"folke/todo-comments.nvim",

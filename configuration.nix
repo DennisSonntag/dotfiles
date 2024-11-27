@@ -204,7 +204,8 @@ in {
 
 	set fish_greeting
 	set fish_key_bindings fish_vi_key_bindings
-	set fish_cursor_insert line";
+	set fish_cursor_insert line
+	zoxide init fish | source";
 
     shellAliases = {
       clip-c = "wl-copy -c";
