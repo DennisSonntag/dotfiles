@@ -17,19 +17,19 @@ in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  home.pointerCursor = {
-    gtk.enable = true;
-    x11.enable = true;
-    package = inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default;
-    name = "rose-pine-hyprcursor";
-    size = 24;
-  };
-
-  gtk.cursorTheme = {
-    package = inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default;
-    name = "rose-pine-hyprcursor";
-    size = 24;
-  };
+  # home.pointerCursor = {
+  #   gtk.enable = true;
+  #   x11.enable = true;
+  #   package = inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default;
+  #   name = "rose-pine-hyprcursor";
+  #   size = 24;
+  # };
+  #
+  # gtk.cursorTheme = {
+  #   package = inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default;
+  #   name = "rose-pine-hyprcursor";
+  #   size = 24;
+  # };
 
   programs.zoxide = {
     enable = true;
@@ -395,7 +395,7 @@ in {
         "wl-clipboard-history -t"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "hyprctl setcursor rose-pine-hyprcursor 24"
+        # "hyprctl setcursor rose-pine-hyprcursor 24"
         "lxsession"
         "waybar"
         "hyprpaper"
