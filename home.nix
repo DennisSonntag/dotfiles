@@ -26,6 +26,7 @@ in {
     ];
   };
 
+
 # programs.zoxide.enableNushellIntegration = true;
 # programs.zoxide.enableZshIntegration = true;
 

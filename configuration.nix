@@ -159,8 +159,8 @@ in {
 
     # XCURSOR_THEME = "rose-pine-hyprcursor";
     # XCURSOR_SIZE = "24";
-    HYPRCURSOR_THEME = "rose-pine-hyprcursor";
-    HYPRCURSOR_SIZE = "24";
+    # HYPRCURSOR_THEME = "rose-pine-hyprcursor";
+    # HYPRCURSOR_SIZE = "24";
   };
 
   programs.fish = {
@@ -295,8 +295,7 @@ in {
     "d /home/dennis 0750 dennis syncthing"
   ];
 
-  environment.systemPackages = with pkgs; [
-    inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+   environment.systemPackages = with pkgs; [
     dunst
     alsa-utils
     vim
@@ -321,50 +320,32 @@ in {
     clang
     trash-cli
     roboto
-
     hyprpicker
     slurp
     wf-recorder
     wl-clipboard
     bottles
-
     obsidian
-
-    # vinegar
-
     wayshot
     swappy
     supergfxctl
-
-    #ags stuff
     dart-sass
     fd
     brightnessctl
     swww
-    # matugen
-
     pamixer
-
     pnpm
     nodejs
-
     protonup
     steam
-
     localsend
-
     gdu
-
     imagemagick
-
     feh
-
     hyprpaper
-
     poppler_utils
-
     zoxide
-
+    galculator
     python3
 
     # calibre
