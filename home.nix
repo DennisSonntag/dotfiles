@@ -17,18 +17,25 @@ in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  home.pointerCursor = {
+    gtk.enable = true;
+    # x11.enable = true;
+    package = inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default;
+    name = "rose-pine-hyprcursor";
+    size = 24;
+  };
+
   programs.zoxide = {
     enable = true;
-    enableBashIntegration= true;
-    enableFishIntegration= true;
+    enableBashIntegration = true;
+    enableFishIntegration = true;
     options = [
       "--cmd cd"
     ];
   };
 
-
-# programs.zoxide.enableNushellIntegration = true;
-# programs.zoxide.enableZshIntegration = true;
+  # programs.zoxide.enableNushellIntegration = true;
+  # programs.zoxide.enableZshIntegration = true;
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
@@ -251,14 +258,6 @@ in {
     EDITOR = "nvim";
   };
 
-  #   home.pointerCursor = {
-  #   gtk.enable = true;
-  #   # x11.enable = true;
-  #   package = inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default;
-  #   name = "rose-pine-hyprcursor";
-  #   size = 24;
-  # };
-
   # gtk = {
   #   enable = true;
   #
@@ -277,8 +276,6 @@ in {
   #   #   size = 11;
   #   # };
   # };
-
-
 
   programs.git = {
     enable = true;
@@ -381,7 +378,6 @@ in {
     plugins = [
       split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
     ];
-    
 
     settings = {
       plugin = {
