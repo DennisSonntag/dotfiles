@@ -611,186 +611,98 @@ in {
 
   # programs.firefox = {
   #   enable = true;
-  #     profiles = {
-  #       default = {
-  #         id = 0;
-  #         name = "default";
-  #         isDefault = true;
-  #  extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
-  #           ublock-origin
-  #           bitwarden
-  #           darkreader
-  #           sidebery
-  #           sponsorblock
-  #    return-youtube-dislikes
-  #         ];
-  #  settings = {
-  #   "browser.newtabpage.pinned" = [{
-  #     title = "NixOS";
-  #     url = "https://nixos.org";
-  #   }];
-  #   "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-  #     "browser.startup.homepage" = "https://nixos.org";
-  #  };
-  #  #userChrome = ''
-  #  #      See the above repository for updates as well as full license text. */
+  #   profiles = {
+  #     default = {
+  #       id = 0;
+  #       name = "default";
+  #       isDefault = true;
+  #       # extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+  #       #   ublock-origin
+  #       #   bitwarden
+  #       #   darkreader
+  #       #   sidebery
+  #       #   sponsorblock
+  #       #   return-youtube-dislikes
+  #       # ];
+  #       # settings = {
+  #       #   "browser.newtabpage.pinned" = [
+  #       #     {
+  #       #       title = "NixOS";
+  #       #       url = "https://nixos.org";
+  #       #     }
+  #       #   ];
+  #       #   "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+  #       #   "browser.startup.homepage" = "https://nixos.org";
+  #       # };
+  #       userChrome = ''
+  #         See the above repository for updates as well as full license text. */
   #
-  #  #      /* Hides tabs toolbar */
-  #  #      /* For OSX use hide_tabs_toolbar_osx.css instead */
+  #         /* Hides tabs toolbar */
+  #         /* For OSX use hide_tabs_toolbar_osx.css instead */
   #
-  #  #      /* Note, if you have either native titlebar or menubar enabled, then you don't really need this style.
-  #  #       * In those cases you can just use: #TabsToolbar{ visibility: collapse !important }
-  #  #       */
+  #         /* Note, if you have either native titlebar or menubar enabled, then you don't really need this style.
+  #          * In those cases you can just use: #TabsToolbar{ visibility: collapse !important }
+  #          */
   #
-  #  #      /* IMPORTANT */
-  #  #      /*
-  #  #      Get window_control_placeholder_support.css
-  #  #      Window controls will be all wrong without it
-  #  #      */
+  #         /* IMPORTANT */
+  #         /*
+  #         Get window_control_placeholder_support.css
+  #         Window controls will be all wrong without it
+  #         */
   #
-  #  #      :root[tabsintitlebar]{ --uc-toolbar-height: 40px; }
-  #  #      :root[tabsintitlebar][uidensity="compact"]{ --uc-toolbar-height: 32px }
-  #  #      #titlebar{
-  #  #        will-change: unset !important;
-  #  #        transition: none !important;
-  #  #        opacity: 1 !important;
-  #  #      }
-  #  #      #TabsToolbar{ visibility: collapse !important }
+  #         :root[tabsintitlebar]{ --uc-toolbar-height: 40px; }
+  #         :root[tabsintitlebar][uidensity="compact"]{ --uc-toolbar-height: 32px }
+  #         #titlebar{
+  #           will-change: unset !important;
+  #           transition: none !important;
+  #           opacity: 1 !important;
+  #         }
+  #         #TabsToolbar{ visibility: collapse !important }
   #
-  #  #      :root[sizemode="fullscreen"] #TabsToolbar > :is(#window-controls,.titlebar-buttonbox-container){
-  #  #        visibility: visible !important;
-  #  #        z-index: 2;
-  #  #      }
+  #         :root[sizemode="fullscreen"] #TabsToolbar > :is(#window-controls,.titlebar-buttonbox-container){
+  #           visibility: visible !important;
+  #           z-index: 2;
+  #         }
   #
-  #  #      :root:not([inFullscreen]) #nav-bar{
-  #  #        margin-top: calc(0px - var(--uc-toolbar-height,0px));
-  #  #      }
+  #         :root:not([inFullscreen]) #nav-bar{
+  #           margin-top: calc(0px - var(--uc-toolbar-height,0px));
+  #         }
   #
-  #  #      :root[tabsintitlebar] #toolbar-menubar[autohide="true"]{
-  #  #        min-height: unset !important;
-  #  #        height: var(--uc-toolbar-height,0px) !important;
-  #  #        position: relative;
-  #  #      }
+  #         :root[tabsintitlebar] #toolbar-menubar[autohide="true"]{
+  #           min-height: unset !important;
+  #           height: var(--uc-toolbar-height,0px) !important;
+  #           position: relative;
+  #         }
   #
-  #  #      #toolbar-menubar[autohide="false"]{
-  #  #        margin-bottom: var(--uc-toolbar-height,0px)
-  #  #      }
+  #         #toolbar-menubar[autohide="false"]{
+  #           margin-bottom: var(--uc-toolbar-height,0px)
+  #         }
   #
-  #  #      :root[tabsintitlebar] #toolbar-menubar[autohide="true"] #main-menubar{
-  #  #        flex-grow: 1;
-  #  #        align-items: stretch;
-  #  #        background-attachment: scroll, fixed, fixed;
-  #  #        background-position: 0 0, var(--lwt-background-alignment), right top;
-  #  #        background-repeat: repeat-x, var(--lwt-background-tiling), no-repeat;
-  #  #        background-size: auto 100%, var(--lwt-background-size, auto auto), auto auto;
-  #  #        padding-right: 20px;
-  #  #      }
-  #  #      :root[tabsintitlebar] #toolbar-menubar[autohide="true"]:not([inactive]) #main-menubar{
-  #  #        background-color: var(--lwt-accent-color);
-  #  #        background-image: linear-gradient(var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor),var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor)), var(--lwt-additional-images,none), var(--lwt-header-image, none);
-  #  #        mask-image: linear-gradient(to left, transparent, black 20px);
-  #  #      }
+  #         :root[tabsintitlebar] #toolbar-menubar[autohide="true"] #main-menubar{
+  #           flex-grow: 1;
+  #           align-items: stretch;
+  #           background-attachment: scroll, fixed, fixed;
+  #           background-position: 0 0, var(--lwt-background-alignment), right top;
+  #           background-repeat: repeat-x, var(--lwt-background-tiling), no-repeat;
+  #           background-size: auto 100%, var(--lwt-background-size, auto auto), auto auto;
+  #           padding-right: 20px;
+  #         }
+  #         :root[tabsintitlebar] #toolbar-menubar[autohide="true"]:not([inactive]) #main-menubar{
+  #           background-color: var(--lwt-accent-color);
+  #           background-image: linear-gradient(var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor),var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor)), var(--lwt-additional-images,none), var(--lwt-header-image, none);
+  #           mask-image: linear-gradient(to left, transparent, black 20px);
+  #         }
   #
-  #  #      #toolbar-menubar:not([inactive]){ z-index: 2 }
-  #  #      #toolbar-menubar[autohide="true"][inactive] > #menubar-items {
-  #  #        opacity: 0;
-  #  #        pointer-events: none;
-  #  #        margin-left: var(--uc-window-drag-space-pre,0px)
-  #  #      }
+  #         #toolbar-menubar:not([inactive]){ z-index: 2 }
+  #         #toolbar-menubar[autohide="true"][inactive] > #menubar-items {
+  #           opacity: 0;
+  #           pointer-events: none;
+  #           margin-left: var(--uc-window-drag-space-pre,0px)
+  #         }
   #
-  #  #      See the above repository for updates as well as full license text. */
-  #
-  #  #      /* Moves tabs toolbar, bookmarks toolbar and main toolbar to the bottom of the window, and makes tabs be the bottom-most toolbar */
-  #
-  #  #      /* By default, menubar will stay on top with two options to select it's behavior - see below */
-  #
-  #  #      @-moz-document url(chrome://browser/content/browser.xhtml){
-  #  #
-  #  #        #titlebar{ -moz-appearance: none !important; }
-  #
-  #  #        #navigator-toolbox > div{ display: contents }
-  #  #        .global-notificationbox,
-  #  #        #mainPopupSet,
-  #  #        #browser,
-  #  #        #customization-container,
-  #  #        #tab-notification-deck{
-  #  #          order: -1;
-  #  #        }
-  #
-  #  #        /* Remove the next row if you want tabs to be the top-most row */
-  #  #        #titlebar{
-  #  #          order: 2;
-  #  #        }
-  #
-  #  #        #toolbar-menubar{
-  #  #          position: fixed;
-  #  #          display: flex;
-  #  #          width: 100vw;
-  #  #          top: 0px;
-  #  #          -moz-window-dragging: drag;
-  #  #        }
-  #  #        /* Remove bottom border that won't do anything useful when at bottom of the window */
-  #  #        #navigator-toolbox{ border-bottom: none !important; }
-  #
-  #  #        #toolbar-menubar > spacer{ flex-grow: 1 }
-  #
-  #  #        #urlbar[breakout][breakout-extend]{
-  #  #          display: flex !important;
-  #  #          flex-direction: column-reverse;
-  #  #          bottom: 0px !important; /* Change to 3-5 px if using compact_urlbar_megabar.css depending on toolbar density */
-  #  #          top: auto !important;
-  #  #        }
-  #
-  #  #        .urlbarView-body-inner{ border-top-style: none !important; }
-  #
-  #  #        /* Yeah, removes window controls. Likely not wanted on bottom row  */
-  #  #        #TabsToolbar > .titlebar-buttonbox-container{ display: none }
-  #  #        #toolbar-menubar > .titlebar-buttonbox-container{ order: 1000 }
-  #
-  #  #        /* Fix panels sizing */
-  #  #        .panel-viewstack{ max-height: unset !important; }
-  #
-  #  #        /* Fullscreen mode support */
-  #  #        :root[sizemode="fullscreen"] #navigator-toolbox{ margin-top: 0 !important }
-  #  #        :root[sizemode="fullscreen"] #navigator-toolbox[style*="margin-top"]{ visibility: collapse }
-  #  #        #fullscr-toggler{ bottom: 0; top: unset !important; }
-  #  #
-  #  #        /* These three rules exist for compatibility with autohide_toolbox.css */
-  #  #        #navigator-toolbox{ bottom: 0px; transform-origin: bottom }
-  #  #        #main-window > body > box{ margin-top: 0 !important; }
-  #  #        #toolbar-menubar{ z-index: 1; background-color: var(--lwt-accent-color,black); }
-  #  #
-  #  #        :root[BookmarksToolbarOverlapsBrowser] #navigator-toolbox{
-  #  #          margin-block: calc(-1 * var(--bookmarks-toolbar-height)) 0 !important;
-  #  #        }
-  #  #        :root[BookmarksToolbarOverlapsBrowser] .newTabBrowserPanel{
-  #  #          padding-block: 0 var(--bookmarks-toolbar-height) !important;
-  #  #        }
-  #  #
-  #  #        /**************
-  #  #        Menubar options - By default, menubar is overlayed on top of web-content
-  #  #        ***************/
-  #
-  #  #       /* Uncomment the following if you want static menubar on top of the window (make menubar enabled)
-  #  #        * Use when menubar is enabled to always show it */
-  #  #
-  #  #        /*
-  #  #        #browser,#customization-container{ padding-top: var(--uc-menubar-spacer,28px) }
-  #  #        */
-  #  #
-  #  #        /* OR, uncomment the following if you want menubar to appear below content, above tabs toolbar */
-  #  #
-  #  #        /*
-  #  #        #toolbar-menubar{ position: static; display: flex; margin-top: 0px !important; background-color: transparent }
-  #  #        */
-  #
-  #  #        /* set to "column-reverse" (without quotes) if you want tabs above menubar with the above option */
-  #  #        #titlebar{ flex-direction: column }
-  #  #      }
-  #
-  #  #      /* Remove close button*/ .titlebar-buttonbox-container{ display:none }
-  #  #'';
-  #       };
-  #    };
+  #         See the above repository for updates as well as full license text. */
+  #       '';
+  #     };
+    # };
   # };
 }
