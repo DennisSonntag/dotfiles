@@ -162,12 +162,12 @@ window#waybar {
 	background: @bgLight;
 }
 
-#custom-brightness {
+#custom-ddcutil {
 	padding-left: 6px;
 	padding-right: 6px;
 	transition: none;
 	color: white;
-	/* background: #363b4f; */
+	background: red;
 	background: @bgLight;
 }
 

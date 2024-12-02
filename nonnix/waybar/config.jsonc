@@ -18,7 +18,7 @@
 		"tray",
 		"custom/cap-right-light",
 		"pulseaudio",
-		"custom/brightness",
+		"custom/test",
 		"custom/cap-right-light-bg",
 		"clock"
 	],
@@ -53,6 +53,13 @@
 		"format": " {} ",
 		"interval": 200,
 		"exec": "~/.config/waybar/update.py",
+		"return-type": "json"
+	},
+	"custom/test": {
+		"tooltip": false,
+		"format": " {} ",
+		"interval": 200,
+		"exec": "testing-py",
 		"return-type": "json"
 	},
 	"custom/ddcutil": {

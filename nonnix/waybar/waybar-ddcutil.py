@@ -1,10 +1,16 @@
 import subprocess
+import math
 import json
 
 data = {}
-cmd = ["ddcutil", "getvcp", "10", "--bus", "1"]
-value = subprocess.run(cmd, stdout=subprocess.PIPE).stdout.decode('utf8')
-# output looks like this in my case: VCP code 0x10 (Brightness                    ): current value =    20, max value =   100
-percentage = value.split(":")[1].split(",")[0].split("=")[1].strip(" ")
-data['percentage'] = int(percentage)
+value1 = subprocess.run(["sudo", "ddcutil", "getvcp", "10", "-d", "1"], stdout=subprocess.PIPE).stdout.decode('utf8')
+percentage1 = value1.split(":")[1].split(",")[0].split("=")[1].strip(" ")
+
+# value2 = subprocess.run(["ddcutil", "getvcp", "10", "-d", "2"], stdout=subprocess.PIPE).stdout.decode('utf8')
+# percentage2 = value2.split(":")[1].split(",")[0].split("=")[1].strip(" ")
+# data['mon-1-percentage'] = int(percentage1)
+data['percentage'] = int(percentage1)
 print(json.dumps(data))
+
+
+

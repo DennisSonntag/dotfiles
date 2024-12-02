@@ -308,8 +308,12 @@ in {
     } (builtins.readFile ./nonnix/waybar/spotify-meta.py))
 
     (writers.writePython3Bin "waybar-ddcutil" {
-      flakeIgnore = ["E508" "W293" "E303" "E501" "E265"];
+      flakeIgnore = ["E508" "W293" "E303" "E501" "E265" "F401"];
     } (builtins.readFile ./nonnix/waybar/waybar-ddcutil.py))
+
+    (writers.writePython3Bin "testing-py" {
+      flakeIgnore = ["E508" "W293" "E303" "E501" "E265" "F401"];
+    } (builtins.readFile ./nonnix/waybar/testing.py))
 
     (writers.writePython3Bin "test-name-python" {
       } ''
@@ -317,6 +321,7 @@ in {
       '')
 
     playerctl
+    ddcutil
 
     dunst
     alsa-utils
