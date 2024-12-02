@@ -89,7 +89,10 @@ in {
   # Set your time zone.
   time.timeZone = "America/Edmonton";
 
-  boot.initrd.kernelModules = ["amdgpu"];
+  boot.initrd.kernelModules = ["amdgpu" "i2c-dev"];
+  services.udev.extraRules = ''
+        KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
+  '';
   services.xserver.videoDrivers = ["amdgpu"];
 
   # Enable nvidia driver support
@@ -285,7 +288,7 @@ in {
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.dennis = {
     isNormalUser = true;
-    extraGroups = ["wheel" "networkmanager" "syncthing"];
+    extraGroups = ["wheel" "networkmanager" "syncthing" "i2c"];
     home = "/home/dennis";
   };
 
