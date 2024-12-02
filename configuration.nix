@@ -304,16 +304,16 @@ in {
     (pkgs.writeShellScriptBin "controls.sh" (builtins.readFile ./nonnix/waybar/player-controls.sh))
 
     (writers.writePython3Bin "spotify-meta" {
-      flakeIgnore = ["E508" "W293" "E303" "E501" "E265"  "F401"  "W291" "W391"];
+      flakeIgnore = ["E508" "W293" "E303" "E501" "E265"  "F401"  "W291" "W391" "F811"];
     } (builtins.readFile ./nonnix/waybar/spotify-meta.py))
 
     (writers.writePython3Bin "waybar-ddcutil" {
-      flakeIgnore = ["E508" "W293" "E303" "E501" "E265" "F401"  "W291" "W391"];
+      flakeIgnore = ["E508" "W293" "E303" "E501" "E265" "F401"  "W291" "W391" "F811"];
     } (builtins.readFile ./nonnix/waybar/waybar-ddcutil.py))
 
-    (writers.writePython3Bin "testing-py" {
-      flakeIgnore = ["E508" "W293" "E303" "E501" "E265" "F401" "W291" "W391"];
-    } (builtins.readFile ./nonnix/waybar/testing.py))
+    (writers.writePython3Bin "brightness-py" {
+      flakeIgnore = ["E508" "W293" "E303" "E501" "E265" "F401" "W291" "W391" "F811"];
+    } (builtins.readFile ./nonnix/waybar/brightness.py))
 
     (writers.writePython3Bin "test-name-python" {
       } ''
