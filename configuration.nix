@@ -299,10 +299,12 @@ in {
   ];
 
   environment.systemPackages = with pkgs; [
-			    (pkgs.python3.pkgs.callPackage ./test-python-script.nix {})
-    # (pkgs.writers.writePython3 "test-python-script" { } ''
-    #     print("hello fucking world")
-    #   '')
+    (writers.writePython3Bin "spotify-meta" { } (builtins.readFile ./nonnix/waybar/meta.py))
+
+    (writers.writePython3Bin "test-name-python" {} ''
+      print("hello fucking world")
+    '')
+
 
     dunst
     alsa-utils
