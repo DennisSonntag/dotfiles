@@ -91,7 +91,7 @@ in {
 
   boot.initrd.kernelModules = ["amdgpu" "i2c-dev"];
   services.udev.extraRules = ''
-        KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
+    KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
   '';
   services.xserver.videoDrivers = ["amdgpu"];
 
@@ -298,7 +298,12 @@ in {
     "d /home/dennis 0750 dennis syncthing"
   ];
 
-   environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
+			    (pkgs.python3.pkgs.callPackage ./test-python-script.nix {})
+    # (pkgs.writers.writePython3 "test-python-script" { } ''
+    #     print("hello fucking world")
+    #   '')
+
     dunst
     alsa-utils
     vim
@@ -355,6 +360,20 @@ in {
 
     myNixCats.packages.${pkgs.system}.nvim
     (pkgs.writeShellScriptBin "v" "nvim $@")
+
+    # (let
+    #   python = pkgs.python3;
+    #   pythonPackages = python.pkgs;
+    #   myPythonEnv = python.withPackages (ps: with ps; [requests]);
+    # in
+    #   pkgs.writers.writePython3Bin "my-test-python-script" ''
+    #     #!${myPythonEnv.interpreter}
+    #     # import requests
+    #     import json
+    #
+    #     # Your script here
+    #     print("Hello, Fucking World!")
+    #   '')
   ];
 
   programs.steam.enable = true;

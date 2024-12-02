@@ -18,6 +18,7 @@
 		"tray",
 		"custom/cap-right-light",
 		"pulseaudio",
+		"custom/brightness",
 		"custom/cap-right-light-bg",
 		"clock"
 	],
@@ -54,6 +55,15 @@
 		"exec": "~/.config/waybar/update.py",
 		"return-type": "json"
 	},
+	"custon/brightness": {
+		"format": "{icon} fuck %",
+		"tooltip": false,
+		"format-muted": " Muted",
+		"on-click": "echo click",
+		"on-scroll-up": "echo up",
+		"on-scroll-down": "echo down",
+		"scroll-step": 5
+	},
 	"clock": {
 		"format": "{:%H:%M}  ",
 		"interval": 1,
@@ -65,10 +75,10 @@
 		"max-length": 60,
 		"interval": 1,
 		"return-type": "json",
-		"exec": "~/.config/waybar/meta.py",
-		"on-click": "~/.config/waybar/controls.sh",
-		"on-scroll-up": "~/.config/waybar/controls.sh next",
-		"on-scroll-down": "~/.config/waybar/controls.sh previous",
+		"exec": "./meta.py",
+		"on-click": "./controls.sh",
+		"on-scroll-up": "./controls.sh next",
+		"on-scroll-down": "./controls.sh previous",
 		"signal": 5,
 		"smooth-scrolling-threshold": 1.0
 	},

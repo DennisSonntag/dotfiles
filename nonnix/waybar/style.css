@@ -161,6 +161,16 @@ window#waybar {
 	/* background: #363b4f; */
 	background: @bgLight;
 }
+
+#custom-brightness {
+	padding-left: 6px;
+	padding-right: 6px;
+	transition: none;
+	color: white;
+	/* background: #363b4f; */
+	background: @bgLight;
+}
+
 #custom-update {
 	padding-left: 6px;
 	padding-right: 6px;
