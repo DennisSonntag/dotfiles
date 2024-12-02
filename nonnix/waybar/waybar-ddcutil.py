@@ -3,7 +3,8 @@ import math
 import json
 
 data = {}
-value1 = subprocess.run(["sudo", "ddcutil", "getvcp", "10", "-d", "1"], stdout=subprocess.PIPE).stdout.decode('utf8')
+monitor = 1
+value1 = subprocess.run(["sudo", "ddcutil", "getvcp", "10", "-d", str(monitor)], stdout=subprocess.PIPE).stdout.decode('utf8')
 percentage1 = value1.split(":")[1].split(",")[0].split("=")[1].strip(" ")
 
 # value2 = subprocess.run(["ddcutil", "getvcp", "10", "-d", "2"], stdout=subprocess.PIPE).stdout.decode('utf8')

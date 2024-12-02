@@ -9,13 +9,22 @@
 			"./default-config.jsonc"
 		],
 		"modules-right": [
-			"custom/test"
+			"custom/spotify",
+			"tray",
+			"custom/test",
+			"custom/cap-right-light",
+			"pulseaudio",
+			"custom/cap-right-light-bg",
+			"clock"
 		],
 		"custom/test": {
 			"tooltip": true,
 			"format": " {} ",
 			"interval": 200,
-			"exec": "testing-py 2",
+			"exec": "testing-py get 1",
+			"on-scroll-up": "testing-py up 1",
+			"on-scroll-down": "testing-py down 1",
+			"smooth-scrolling-threshold": 1.0,
 			"return-type": "json"
 		}
 	},
@@ -29,13 +38,22 @@
 			"./default-config.jsonc"
 		],
 		"modules-right": [
-			"custom/test"
+			"custom/spotify",
+			"tray",
+			"custom/test",
+			"custom/cap-right-light",
+			"pulseaudio",
+			"custom/cap-right-light-bg",
+			"clock"
 		],
 		"custom/test": {
 			"tooltip": true,
 			"format": " {} ",
 			"interval": 200,
-			"exec": "testing-py 1",
+			"exec": "testing-py get 1",
+			"on-scroll-up": "testing-py up 1",
+			"on-scroll-down": "testing-py down 1",
+			"smooth-scrolling-threshold": 1.0,
 			"return-type": "json"
 		}
 	}
