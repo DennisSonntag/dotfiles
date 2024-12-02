@@ -299,12 +299,24 @@ in {
   ];
 
   environment.systemPackages = with pkgs; [
-    (writers.writePython3Bin "spotify-meta" { } (builtins.readFile ./nonnix/waybar/meta.py))
+    (pkgs.writeShellScriptBin "v" "nvim $@")
 
-    (writers.writePython3Bin "test-name-python" {} ''
-      print("hello fucking world")
-    '')
+    (pkgs.writeShellScriptBin "controls.sh" (builtins.readFile ./nonnix/waybar/player-controls.sh))
 
+    (writers.writePython3Bin "spotify-meta" {
+      flakeIgnore = ["E508" "W293" "E303" "E501" "E265"];
+    } (builtins.readFile ./nonnix/waybar/spotify-meta.py))
+
+    (writers.writePython3Bin "waybar-ddcutil" {
+      flakeIgnore = ["E508" "W293" "E303" "E501" "E265"];
+    } (builtins.readFile ./nonnix/waybar/waybar-ddcutil.py))
+
+    (writers.writePython3Bin "test-name-python" {
+      } ''
+        print("hello fucking world")
+      '')
+
+    playerctl
 
     dunst
     alsa-utils

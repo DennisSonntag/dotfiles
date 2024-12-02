@@ -55,14 +55,16 @@
 		"exec": "~/.config/waybar/update.py",
 		"return-type": "json"
 	},
-	"custon/brightness": {
-		"format": "{icon} fuck %",
-		"tooltip": false,
-		"format-muted": " Muted",
-		"on-click": "echo click",
-		"on-scroll-up": "echo up",
-		"on-scroll-down": "echo down",
-		"scroll-step": 5
+	"custom/ddcutil": {
+		"format": "{percentage}% {icon}",
+		"interval": 1,
+		"format-icons": [
+			"",
+			"",
+			""
+		],
+		"exec": "waybar-ddcutil",
+		"return-type": "json"
 	},
 	"clock": {
 		"format": "{:%H:%M}  ",
@@ -75,10 +77,10 @@
 		"max-length": 60,
 		"interval": 1,
 		"return-type": "json",
-		"exec": "./meta.py",
-		"on-click": "./controls.sh",
-		"on-scroll-up": "./controls.sh next",
-		"on-scroll-down": "./controls.sh previous",
+		"exec": "spotify-meta",
+		"on-click": "controls.sh",
+		"on-scroll-up": "controls.sh next",
+		"on-scroll-down": "controls.sh previous",
 		"signal": 5,
 		"smooth-scrolling-threshold": 1.0
 	},
@@ -143,7 +145,7 @@
 			"16": "7",
 			"17": "8",
 			"18": "9"
-		},
+		}
 	},
 	"custom/cap-right": {
 		"tooltip": false,

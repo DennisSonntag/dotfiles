@@ -1,6 +1,3 @@
-# pylint: disable=E303,W293
-##!/usr/bin/env python3
-#
 import subprocess
 
 import math
