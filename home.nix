@@ -397,7 +397,7 @@ in {
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         # "hyprctl setcursor rose-pine-hyprcursor 24"
         "lxsession"
-        "waybar"
+        # "waybar"
         "hyprpaper"
         # "ags"
         "otd-daemon"
