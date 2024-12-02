@@ -4,7 +4,6 @@ import math
 import json
 import sys
 
-# Check if any command-line arguments were provided
 command = None
 monitor = None
 percentage = None
@@ -28,6 +27,4 @@ elif command == "up":
 elif command == "down":
     subprocess.run(["ddcutil", "setvcp", "-d", str(monitor), "10", "-", "10"], stdout=subprocess.PIPE).stdout.decode('utf8')
 
-# else:
-#     print("No command-line arguments provided.")
 

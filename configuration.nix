@@ -7,6 +7,9 @@
   ...
 }: let
   myNixCats = import ./nvim/default.nix {inherit inputs;};
+  brightness-py = pkgs.writers.writePython3Bin "brightness-py" {
+    flakeIgnore = ["E508" "W293" "E303" "E501" "E265" "F401" "W291" "W391" "F811"];
+  } (builtins.readFile ./nonnix/waybar/brightness.py);
 in {
   imports = [
     ./hardware-configuration.nix
@@ -298,27 +301,36 @@ in {
     "d /home/dennis 0750 dennis syncthing"
   ];
 
+		security.sudo.extraRules = [
+  {
+    users = ["dennis"];
+    commands = [
+      {
+        command = "${brightness-py}/bin/brightness-py";
+        options = ["NOPASSWD" "SETENV"];
+      }
+    ];
+  }
+];
+
   environment.systemPackages = with pkgs; [
+    brightness-py
     (pkgs.writeShellScriptBin "v" "nvim $@")
 
     (pkgs.writeShellScriptBin "controls.sh" (builtins.readFile ./nonnix/waybar/player-controls.sh))
 
     (writers.writePython3Bin "spotify-meta" {
-      flakeIgnore = ["E508" "W293" "E303" "E501" "E265"  "F401"  "W291" "W391" "F811"];
+      flakeIgnore = ["E508" "W293" "E303" "E501" "E265" "F401" "W291" "W391" "F811"];
     } (builtins.readFile ./nonnix/waybar/spotify-meta.py))
 
-    (writers.writePython3Bin "waybar-ddcutil" {
-      flakeIgnore = ["E508" "W293" "E303" "E501" "E265" "F401"  "W291" "W391" "F811"];
-    } (builtins.readFile ./nonnix/waybar/waybar-ddcutil.py))
+    # (writers.writePython3Bin "waybar-ddcutil" {
+    #   flakeIgnore = ["E508" "W293" "E303" "E501" "E265" "F401"  "W291" "W391" "F811"];
+    # } (builtins.readFile ./nonnix/waybar/waybar-ddcutil.py))
 
-    (writers.writePython3Bin "brightness-py" {
-      flakeIgnore = ["E508" "W293" "E303" "E501" "E265" "F401" "W291" "W391" "F811"];
-    } (builtins.readFile ./nonnix/waybar/brightness.py))
-
-    (writers.writePython3Bin "test-name-python" {
-      } ''
-        print("hello fucking world")
-      '')
+    # (writers.writePython3Bin "test-name-python" {
+    #   } ''
+    #     print("hello fucking world")
+    #   '')
 
     playerctl
     ddcutil
