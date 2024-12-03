@@ -16,7 +16,7 @@ in {
     # Download disko
     "${builtins.fetchTarball {
       url = "https://github.com/nix-community/disko/archive/master.tar.gz";
-      sha256 = "014jjla3hqqhkabcgycwzgiqacg3j49j6yg2j7k13y5d067g4r3x";
+      sha256 = "0b8fxndp7b0yqpyzlbfyg7b7m59b0yqpfl37q1lf0awzs6dsknzi";
     }}/module.nix"
 
     ./disk-config.nix
@@ -288,6 +288,7 @@ in {
 
   users.users.syncthing.isSystemUser = true;
 
+  users.groups.i2c = {};
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.dennis = {
     isNormalUser = true;
@@ -301,17 +302,17 @@ in {
     "d /home/dennis 0750 dennis syncthing"
   ];
 
-		security.sudo.extraRules = [
-  {
-    users = ["dennis"];
-    commands = [
-      {
-        command = "${brightness-py}/bin/brightness-py";
-        options = ["NOPASSWD" "SETENV"];
-      }
-    ];
-  }
-];
+  # 		security.sudo.extraRules = [
+  #   {
+  #     users = ["dennis"];
+  #     commands = [
+  #       {
+  #         command = "${brightness-py}/bin/brightness-py";
+  #         options = ["NOPASSWD" "SETENV"];
+  #       }
+  #     ];
+  #   }
+  # ];
 
   environment.systemPackages = with pkgs; [
     brightness-py
@@ -334,6 +335,7 @@ in {
 
     playerctl
     ddcutil
+    ddcui
 
     dunst
     alsa-utils

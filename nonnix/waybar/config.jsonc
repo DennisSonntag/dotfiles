@@ -11,7 +11,7 @@
 		"modules-right": [
 			"custom/spotify",
 			"tray",
-			"custom/test",
+			// "custom/test",
 			"custom/cap-right-light",
 			"pulseaudio",
 			"custom/cap-right-light-bg",
@@ -20,12 +20,19 @@
 		"custom/test": {
 			"tooltip": true,
 			"format": " {} ",
-			"interval": 200,
-			"exec": "testing-py get 1",
-			"on-scroll-up": "testing-py up 1",
-			"on-scroll-down": "testing-py down 1",
+			"exec": "brightness-py get 1",
+			"on-scroll-up": "brightness-py up 1",
+			"on-scroll-down": "brightness-py down 1",
 			"smooth-scrolling-threshold": 1.0,
-			"return-type": "json"
+			"return-type": "json",
+			"exec-if": "sleep 1", // Give enough time for `sway output` command changes to propagate so we can read them in the next `exec`
+			// "format": "{}% {icon}",
+			// "format-icons": [
+			// 	""
+			// ],
+			"interval": "once"
+			// "on-scroll-up": "ddcutil -b 18 setvcp 10 + 10",
+			// "on-scroll-down": "ddcutil -b 18 setvcp 10 - 10"
 		}
 	},
 	{
@@ -40,7 +47,7 @@
 		"modules-right": [
 			"custom/spotify",
 			"tray",
-			"custom/test",
+			// "custom/test",
 			"custom/cap-right-light",
 			"pulseaudio",
 			"custom/cap-right-light-bg",
@@ -50,9 +57,9 @@
 			"tooltip": true,
 			"format": " {} ",
 			"interval": 200,
-			"exec": "testing-py get 1",
-			"on-scroll-up": "testing-py up 1",
-			"on-scroll-down": "testing-py down 1",
+			"exec": "brightness-py get 1",
+			"on-scroll-up": "brightness-py up 1",
+			"on-scroll-down": "brightness-py down 1",
 			"smooth-scrolling-threshold": 1.0,
 			"return-type": "json"
 		}
