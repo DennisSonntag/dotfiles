@@ -10,6 +10,13 @@
   brightness-py = pkgs.writers.writePython3Bin "brightness-py" {
     flakeIgnore = ["E508" "W293" "E303" "E501" "E265" "F401" "W291" "W391" "F811"];
   } (builtins.readFile ./nonnix/waybar/brightness.py);
+  emoteWithPatch = pkgs.emote.overrideAttrs (oldAttrs: {
+    patches =
+      (oldAttrs.patches or [])
+      ++ [
+        ./emote-patch.patch
+      ];
+  });
 in {
   imports = [
     ./hardware-configuration.nix
@@ -336,6 +343,7 @@ in {
     playerctl
     ddcutil
     ddcui
+    discord-canary
 
     dunst
     alsa-utils
@@ -388,6 +396,8 @@ in {
     zoxide
     galculator
     python3
+
+    emoteWithPatch
 
     # calibre
 

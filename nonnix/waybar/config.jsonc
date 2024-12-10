@@ -6,7 +6,7 @@
 			"HDMI-A-1"
 		],
 		"include": [
-			"./default-config.jsonc"
+			"~/nixos/nonnix/waybar/default-config.jsonc"
 		],
 		"modules-right": [
 			"custom/spotify",
@@ -42,7 +42,7 @@
 			"DP-1"
 		],
 		"include": [
-			"./default-config.jsonc"
+			"~/nixos/nonnix/waybar/default-config.jsonc"
 		],
 		"modules-right": [
 			"custom/spotify",
