@@ -398,6 +398,7 @@ in {
     python3
 
     emoteWithPatch
+    ydotool
 
     # calibre
 
@@ -411,6 +412,9 @@ in {
     # in
     #   pkgs.writers.writePython3Bin "my-test-python-script" ''
     #     #!${myPythonEnv.interpreter}
+    			sonusmix
+    			anki-bin
+    			obs-studio
     #     # import requests
     #     import json
     #
