@@ -442,6 +442,13 @@ hardware.graphics.extraPackages = with pkgs; [
     			clang-tools
 
     			driversi686Linux.mesa
+    			glfw
+    			libGL
+    			libGLU
+    			clang
+    			lld
+    			glew
+
 vulkan-tools
 
 				pureref
