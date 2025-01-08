@@ -93,7 +93,7 @@ in {
     "${config.home.homeDirectory}/.config/emacs".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/emacs";
 
     "${config.home.homeDirectory}/.config/tmux".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/tmux";
-    "${config.home.homeDirectory}/.config/mpv".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/mpv";
+    # "${config.home.homeDirectory}/.config/mpv".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/mpv";
     "${config.home.homeDirectory}/.config/rofi".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/rofi";
     "${config.home.homeDirectory}/.config/dunst".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/dunst";
     "${config.home.homeDirectory}/.gitconfig".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/git/.gitconfig";
