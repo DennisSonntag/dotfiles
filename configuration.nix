@@ -108,6 +108,19 @@ in {
   # Enable nvidia driver support
   # services.xserver.videoDrivers = ["nvidia"];
 
+  		hardware.graphics.enable = true;  # Before 24.11: hardware.opengl.driSupport
+# For 32 bit applications
+hardware.graphics.enable32Bit = true;  # Before 24.11: hardware.opengl.driSupport32Bit
+hardware.graphics.extraPackages = with pkgs; [
+  rocmPackages.clr
+    vulkan-loader
+    vulkan-validation-layers
+    vulkan-extension-layer
+  amdvlk
+];
+
+
+
   # hardware.nvidia = {
   #   modesetting.enable = true;
   #   open = false;
@@ -141,6 +154,7 @@ in {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/user/.steam/root/compatibilitytools.d";
 
     NIXOS_OZONE_WL = "1";
+    VK_ICD_FILENAMES="/run/opengl-driver/share/vulkan/icd.d/radeon_icd.x86_64.json:/run/opengl-driver-32/share/vulkan/icd.d/radeon_icd.i686.json";
 
     # hyprland env vars
     EDITOR = "nvim";
@@ -396,6 +410,8 @@ in {
     zoxide
     galculator
     python3
+     
+    audacity
 
     emoteWithPatch
     ydotool
@@ -415,6 +431,21 @@ in {
     			sonusmix
     			anki-bin
     			obs-studio
+    			lutris-unwrapped
+    			wine-wayland
+    			dxvk
+    			vkd3d
+    			vulkan-loader
+    			mesa
+    			winetricks
+    			mpv
+    			clang-tools
+
+    			driversi686Linux.mesa
+vulkan-tools
+
+				pureref
+
     #     # import requests
     #     import json
     #

@@ -227,6 +227,7 @@ return {
 			servers.jsonls = {}
 			servers.ts_ls = {}
 			servers.html = {}
+			servers.clangd = {}
 
 			servers.lua_ls = {
 				-- cmd = {...},
@@ -341,6 +342,8 @@ return {
 				html = { "prettier" },
 				css = { "prettier" },
 				nix = { "alejandra" },
+				cpp = { "clang-format" },
+				c = { "clang-format" },
 			},
 		},
 	},
