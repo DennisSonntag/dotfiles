@@ -2,7 +2,7 @@
   inputs,
   config,
   pkgs,
-  split-monitor-workspaces,
+  #split-monitor-workspaces,
   utils,
   ...
 }: let
@@ -382,16 +382,16 @@ in {
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-    plugins = [
-      split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
-    ];
+    #plugins = [
+      #split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
+    #];
 
     settings = {
-      plugin = {
-        "split-monitor-workspaces" = {
-          count = 9;
-        };
-      };
+      #plugin = {
+      #  "split-monitor-workspaces" = {
+      #    count = 9;
+      #  };
+      #};
       exec-once = [
         "wl-clipboard-history -t"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
