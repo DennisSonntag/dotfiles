@@ -1,9 +1,9 @@
 return {
-  {
-    "saghen/blink.cmp",
-    enabled = false,
-    optional = true,
-  },
+  -- {
+  --   "saghen/blink.cmp",
+  --   enabled = false,
+  --   optional = true,
+  -- },
 
   -- Setup nvim-cmp
   {
