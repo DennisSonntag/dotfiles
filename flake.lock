@@ -693,22 +693,6 @@
         "type": "github"
       }
     },
-    "plugins-sentiment": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1685109400,
-        "narHash": "sha256-0ZpqlaCIfFrcfxdp/9BVXYvwgBXsqazo0isrsYfUYyQ=",
-        "owner": "utilyre",
-        "repo": "sentiment.nvim",
-        "rev": "ecde8d877881bb78fdb90060c0991e76770dbdbc",
-        "type": "github"
-      },
-      "original": {
-        "owner": "utilyre",
-        "repo": "sentiment.nvim",
-        "type": "github"
-      }
-    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -739,7 +723,6 @@
         "hyprland": "hyprland",
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs_2",
-        "plugins-sentiment": "plugins-sentiment",
         "rose-pine-hyprcursor": "rose-pine-hyprcursor",
         "split-monitor-workspaces": "split-monitor-workspaces",
         "stylix": "stylix"

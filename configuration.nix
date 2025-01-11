@@ -318,7 +318,7 @@ in {
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
 
   # ALSA provides a udev rule for restoring volume settings.
   services.udev.packages = [pkgs.alsa-utils];

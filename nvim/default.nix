@@ -152,7 +152,7 @@ The following is just the outputs function from the flake template.
         # vimPlugins.cmp-cmdline-history
         # vimPlugins.lspkind-nvim
 
-        neovimPlugins.sentiment
+        # neovimPlugins.sentiment
       ];
     };
     # shared libraries to be added to LD_LIBRARY_PATH
