@@ -31,10 +31,10 @@
     #   url = "github:Saghen/blink.cmp";
     #   flake = false;
     # };
-    "plugins-sentiment" = {
-      url = "github:utilyre/sentiment.nvim";
-      flake = false;
-    };
+    # "plugins-sentiment" = {
+    #   url = "github:utilyre/sentiment.nvim";
+    #   flake = false;
+    # };
   };
 
   outputs = {
