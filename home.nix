@@ -365,7 +365,7 @@ in {
     font = {
       size = 14;
       name = "JetBrainsMono Nerd Font";
-      package = pkgs.nerdfonts;
+      package = pkgs.nerd-fonts.jetbrains-mono;
     };
     settings = {
       bold_font = "auto";
