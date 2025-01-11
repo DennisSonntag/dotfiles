@@ -108,18 +108,18 @@ in {
   # Enable nvidia driver support
   # services.xserver.videoDrivers = ["nvidia"];
 
-  		hardware.graphics.enable = true;  # Before 24.11: hardware.opengl.driSupport
-# For 32 bit applications
-hardware.graphics.enable32Bit = true;  # Before 24.11: hardware.opengl.driSupport32Bit
-hardware.graphics.extraPackages = with pkgs; [
-  rocmPackages.clr
+  hardware.graphics.enable = true; # Before 24.11: hardware.opengl.driSupport
+  # For 32 bit applications
+  hardware.graphics.enable32Bit = true; # Before 24.11: hardware.opengl.driSupport32Bit
+  hardware.graphics.extraPackages = with pkgs; [
+    rocmPackages.clr
     vulkan-loader
     vulkan-validation-layers
     vulkan-extension-layer
-  amdvlk
-];
+    amdvlk
+  ];
 
-
+  hardware.opentabletdriver.enable = true;
 
   # hardware.nvidia = {
   #   modesetting.enable = true;
@@ -139,9 +139,39 @@ hardware.graphics.extraPackages = with pkgs; [
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
+  services.xserver = {
+    enable = true;
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+    windowManager.awesome = {
+      enable = true;
+      luaModules = with pkgs.luaPackages; [
+        luarocks # is the package manager for Lua modules
+        luadbi-mysql # Database abstraction layer
+      ];
+    };
+  };
 
-  services.displayManager.sddm.wayland.enable = true;
+  environment.gnome.excludePackages = with pkgs; [
+    atomix # puzzle game
+    cheese # webcam tool
+    epiphany # web browser
+    evince # document viewer
+    geary # email reader
+    gedit # text editor
+    gnome-characters
+    gnome-music
+    gnome-photos
+    gnome-terminal
+    gnome-tour
+    hitori # sudoku game
+    iagno # go game
+    tali # poker game
+    totem # video player
+  ];
+
+  # services.displayManager.sddm.wayland.enable = true;
 
   environment.sessionVariables = {
     PATH = [
@@ -154,7 +184,7 @@ hardware.graphics.extraPackages = with pkgs; [
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/user/.steam/root/compatibilitytools.d";
 
     NIXOS_OZONE_WL = "1";
-    VK_ICD_FILENAMES="/run/opengl-driver/share/vulkan/icd.d/radeon_icd.x86_64.json:/run/opengl-driver-32/share/vulkan/icd.d/radeon_icd.i686.json";
+    VK_ICD_FILENAMES = "/run/opengl-driver/share/vulkan/icd.d/radeon_icd.x86_64.json:/run/opengl-driver-32/share/vulkan/icd.d/radeon_icd.i686.json";
 
     # hyprland env vars
     EDITOR = "nvim";
@@ -410,7 +440,7 @@ hardware.graphics.extraPackages = with pkgs; [
     zoxide
     galculator
     python3
-     
+
     audacity
 
     emoteWithPatch
@@ -428,30 +458,35 @@ hardware.graphics.extraPackages = with pkgs; [
     # in
     #   pkgs.writers.writePython3Bin "my-test-python-script" ''
     #     #!${myPythonEnv.interpreter}
-    			sonusmix
-    			anki-bin
-    			obs-studio
-    			lutris-unwrapped
-    			wine-wayland
-    			dxvk
-    			vkd3d
-    			vulkan-loader
-    			mesa
-    			winetricks
-    			mpv
-    			clang-tools
+    sonusmix
+    anki-bin
+    obs-studio
+    lutris-unwrapped
+    wine-wayland
+    dxvk
+    vkd3d
+    vulkan-loader
+    mesa
+    winetricks
+    mpv
+    clang-tools
 
-    			driversi686Linux.mesa
-    			glfw
-    			libGL
-    			libGLU
-    			clang
-    			lld
-    			glew
+    driversi686Linux.mesa
+    glfw
+    libGL
+    libGLU
+    clang
+    lld
+    glew
+    blender
+    cloc
+    sloc
+    libcef
+    glm
 
-vulkan-tools
+    vulkan-tools
 
-				pureref
+    pureref
 
     #     # import requests
     #     import json
@@ -469,6 +504,21 @@ vulkan-tools
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
+  };
+
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [80 443 1701 9001];
+    allowedUDPPortRanges = [
+      {
+        from = 4000;
+        to = 4007;
+      }
+      {
+        from = 8000;
+        to = 8010;
+      }
+    ];
   };
 
   # Enable the OpenSSH daemon.

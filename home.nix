@@ -303,6 +303,7 @@ in {
         "$username"
         "$hostname"
         "$directory"
+        "$nix_shell"
         "$git_branch"
         "$git_state"
         "$git_status"
@@ -703,6 +704,6 @@ in {
   #         See the above repository for updates as well as full license text. */
   #       '';
   #     };
-    # };
+  # };
   # };
 }
