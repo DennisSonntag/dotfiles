@@ -103,11 +103,11 @@ return {
 			highlight_on_key = true,
 		},
 	},
-	{
-		"utilyre/sentiment.nvim",
-		event = { "BufReadPre", "BufNewFile", "BufRead" },
-		config = function()
-			vim.g.loaded_matchparen = 1 -- `matchparen.vim` needs to be disabled manually in case of lazy loading
-		end,
-	},
+	-- {
+	-- 	"utilyre/sentiment.nvim",
+	-- 	event = { "BufReadPre", "BufNewFile", "BufRead" },
+	-- 	config = function()
+	-- 		vim.g.loaded_matchparen = 1 -- `matchparen.vim` needs to be disabled manually in case of lazy loading
+	-- 	end,
+	-- },
 }
