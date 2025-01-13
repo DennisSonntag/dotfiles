@@ -65,6 +65,7 @@ The following is just the outputs function from the flake template.
         stdenv.cc.cc
         nix-doc
         lua-language-server
+        glsl_analyzer
         vscode-langservers-extracted
         tailwindcss-language-server
         nodePackages_latest.svelte-language-server
@@ -82,7 +83,6 @@ The following is just the outputs function from the flake template.
 
     startupPlugins = with pkgs; {
       general = [
-
         # neovimPlugins.blink
         vimPlugins.blink-cmp
 
@@ -135,7 +135,6 @@ The following is just the outputs function from the flake template.
         vimPlugins.nvim-web-devicons
         vimPlugins.plenary-nvim
         vimPlugins.nvim-nio
-
 
         # vimPlugins.coq_nvim
 
