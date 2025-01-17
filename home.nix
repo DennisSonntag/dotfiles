@@ -475,7 +475,8 @@ in {
         ", Print, exec, grimblast --notify --cursor copysave output"
         "ALT, Print, exec, grimblast --notify --cursor copysave screen"
         "CTRL ALT, L, exec, swaylock"
-        "SUPER, Return, exec, kitty"
+        # "SUPER, Return, exec, kitty"
+        "SUPER, Return, exec, ghostty"
         "SUPER, F, exec, nemo"
 
         "SUPER, P, exec, ${config.home.homeDirectory}/.config/rofi/launchers/type-2/launcher.sh"

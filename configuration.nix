@@ -489,6 +489,8 @@ in {
     libcef
     glm
 
+    			ghostty
+
     vulkan-tools
 
     pureref
