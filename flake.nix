@@ -5,10 +5,10 @@
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    # split-monitor-workspaces = {
-    #  url = "github:Duckonaut/split-monitor-workspaces";
-    #  inputs.hyprland.follows = "hyprland"; # <- make sure this line is present for the plugin to work as intended
-    # };
+    split-monitor-workspaces = {
+      url = "github:Duckonaut/split-monitor-workspaces";
+      inputs.hyprland.follows = "hyprland"; # <- make sure this line is present for the plugin to work as intended
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -41,7 +41,7 @@
     self,
     nixpkgs,
     home-manager,
-    # split-monitor-workspaces,
+    split-monitor-workspaces,
     stylix,
     ...
   } @ inputs: let
@@ -56,7 +56,7 @@
       archie = lib.nixosSystem {
         specialArgs = {inherit inputs;};
         system = "x86_64-linux";
-        modules = [./configuration.nix  stylix.nixosModules.stylix];
+        modules = [./configuration.nix stylix.nixosModules.stylix];
       };
     };
 
@@ -68,7 +68,7 @@
       ];
       extraSpecialArgs = {
         inherit inputs;
-        # inherit split-monitor-workspaces;
+        inherit split-monitor-workspaces;
       };
     };
   };

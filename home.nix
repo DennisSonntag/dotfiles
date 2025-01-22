@@ -2,7 +2,7 @@
   inputs,
   config,
   pkgs,
-  # split-monitor-workspaces,
+  split-monitor-workspaces,
   utils,
   ...
 }: let
@@ -382,16 +382,16 @@ in {
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-    # plugins = [
-    #   split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
-    # ];
-    #
+    plugins = [
+      split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
+    ];
+    
     settings = {
-      # plugin = {
-      #  "split-monitor-workspaces" = {
-      #    count = 9;
-      #  };
-      # };
+      plugin = {
+       "split-monitor-workspaces" = {
+         count = 9;
+       };
+      };
       exec-once = [
         "wl-clipboard-history -t"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
@@ -435,25 +435,25 @@ in {
       ];
 
       bind = [
-        "SUPER, 1, execr, hyprctl dispatch workspace 1"
-        "SUPER, 2, execr, hyprctl dispatch workspace 2"
-        "SUPER, 3, execr, hyprctl dispatch workspace 3"
-        "SUPER, 4, execr, hyprctl dispatch workspace 4"
-        "SUPER, 5, execr, hyprctl dispatch workspace 5"
-        "SUPER, 6, execr, hyprctl dispatch workspace 6"
-        "SUPER, 7, execr, hyprctl dispatch workspace 7"
-        "SUPER, 8, execr, hyprctl dispatch workspace 8"
-        "SUPER, 9, execr, hyprctl dispatch workspace 9"
+        "SUPER, 1, execr, hyprctl dispatch split-workspace 1"
+        "SUPER, 2, execr, hyprctl dispatch split-workspace 2"
+        "SUPER, 3, execr, hyprctl dispatch split-workspace 3"
+        "SUPER, 4, execr, hyprctl dispatch split-workspace 4"
+        "SUPER, 5, execr, hyprctl dispatch split-workspace 5"
+        "SUPER, 6, execr, hyprctl dispatch split-workspace 6"
+        "SUPER, 7, execr, hyprctl dispatch split-workspace 7"
+        "SUPER, 8, execr, hyprctl dispatch split-workspace 8"
+        "SUPER, 9, execr, hyprctl dispatch split-workspace 9"
 
-        "SUPER SHIFT, 1, execr, hyprctl dispatch movetoworkspacesilent 1"
-        "SUPER SHIFT, 2, execr, hyprctl dispatch movetoworkspacesilent 2"
-        "SUPER SHIFT, 3, execr, hyprctl dispatch movetoworkspacesilent 3"
-        "SUPER SHIFT, 4, execr, hyprctl dispatch movetoworkspacesilent 4"
-        "SUPER SHIFT, 5, execr, hyprctl dispatch movetoworkspacesilent 5"
-        "SUPER SHIFT, 6, execr, hyprctl dispatch movetoworkspacesilent 6"
-        "SUPER SHIFT, 7, execr, hyprctl dispatch movetoworkspacesilent 7"
-        "SUPER SHIFT, 8, execr, hyprctl dispatch movetoworkspacesilent 8"
-        "SUPER SHIFT, 9, execr, hyprctl dispatch movetoworkspacesilent 9"
+        "SUPER SHIFT, 1, execr, hyprctl dispatch split-movetoworkspacesilent 1"
+        "SUPER SHIFT, 2, execr, hyprctl dispatch split-movetoworkspacesilent 2"
+        "SUPER SHIFT, 3, execr, hyprctl dispatch split-movetoworkspacesilent 3"
+        "SUPER SHIFT, 4, execr, hyprctl dispatch split-movetoworkspacesilent 4"
+        "SUPER SHIFT, 5, execr, hyprctl dispatch split-movetoworkspacesilent 5"
+        "SUPER SHIFT, 6, execr, hyprctl dispatch split-movetoworkspacesilent 6"
+        "SUPER SHIFT, 7, execr, hyprctl dispatch split-movetoworkspacesilent 7"
+        "SUPER SHIFT, 8, execr, hyprctl dispatch split-movetoworkspacesilent 8"
+        "SUPER SHIFT, 9, execr, hyprctl dispatch split-movetoworkspacesilent 9"
 
         "SUPERSHIFT, 0, movetoworkspace, special:misc"
         "SUPER, 0, togglespecialworkspace, misc"
