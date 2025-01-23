@@ -117,7 +117,7 @@ in {
   # For 32 bit applications
   hardware.graphics.enable32Bit = true; # Before 24.11: hardware.opengl.driSupport32Bit
   hardware.graphics.extraPackages = with pkgs; [
-    rocmPackages.clr
+    # rocmPackages.clr
     vulkan-loader
     vulkan-validation-layers
     vulkan-extension-layer
@@ -483,7 +483,7 @@ in {
     clang
     lld
     glew
-    blender
+    # blender
     cloc
     sloc
     libcef
