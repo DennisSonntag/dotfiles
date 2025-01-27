@@ -24,7 +24,8 @@ in {
     "${builtins.fetchTarball {
       url = "https://github.com/nix-community/disko/archive/master.tar.gz";
       # sha256 = "0b8fxndp7b0yqpyzlbfyg7b7m59b0yqpfl37q1lf0awzs6dsknzi";
-      sha256 = "0jsa4ymxr2l9ymzx4c1z9y96qvh45sh1vdps73yb2ang5ajvqlrc";
+      # sha256 = "0jsa4ymxr2l9ymzx4c1z9y96qvh45sh1vdps73yb2ang5ajvqlrc";
+      sha256 = "1jayvmcnq4g6k0pzzz3nq9f46q7nj2knsq2jrxikhc5xms42xhdc";
 
     }}/module.nix"
 
