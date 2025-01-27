@@ -57,7 +57,7 @@ local lazyOptions = {
 				"tarPlugin",
 				"editorconfig",
 				"tohtml",
-				"tutor",
+				-- "tutor",
 				"zipPlugin",
 			},
 		},

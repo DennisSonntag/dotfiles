@@ -422,7 +422,7 @@ in {
     slurp
     wf-recorder
     wl-clipboard
-    bottles
+    # bottles
     obsidian
     wayshot
     swappy
@@ -466,7 +466,7 @@ in {
     sonusmix
     anki-bin
     obs-studio
-    lutris-unwrapped
+    # lutris-unwrapped
     wine-wayland
     dxvk
     vkd3d
