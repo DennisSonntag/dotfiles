@@ -494,7 +494,15 @@ in {
 
     vulkan-tools
 
+				scc
     pureref
+
+	exercism
+	cmake
+	bats
+	go
+		dust
+
 
     #     # import requests
     #     import json
