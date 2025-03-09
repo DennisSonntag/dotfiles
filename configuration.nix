@@ -25,7 +25,8 @@ in {
       url = "https://github.com/nix-community/disko/archive/master.tar.gz";
       # sha256 = "0b8fxndp7b0yqpyzlbfyg7b7m59b0yqpfl37q1lf0awzs6dsknzi";
       # sha256 = "0jsa4ymxr2l9ymzx4c1z9y96qvh45sh1vdps73yb2ang5ajvqlrc";
-      sha256 = "1jayvmcnq4g6k0pzzz3nq9f46q7nj2knsq2jrxikhc5xms42xhdc";
+      # sha256 = "1jayvmcnq4g6k0pzzz3nq9f46q7nj2knsq2jrxikhc5xms42xhdc";
+      sha256 = "0hizsz2f23g0hw4gqivmr0z6h5zr3371jasl16acajc5fsl397nx";
 
     }}/module.nix"
 
@@ -208,7 +209,7 @@ in {
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     QT_QPA_PLATFORM = "wayland;xcb";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-    QT_QPA_PLATFORMTHEME = "qt5ct";
+    # QT_QPA_PLATFORMTHEME = "qt5ct";
     CLUTTER_BACKEND = "wayland";
     GBM_BACKEND = "nvidia-drm";
     WLR_DRM_NO_ATOMIC = "1";
