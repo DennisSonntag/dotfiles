@@ -26,8 +26,8 @@ in {
       # sha256 = "0b8fxndp7b0yqpyzlbfyg7b7m59b0yqpfl37q1lf0awzs6dsknzi";
       # sha256 = "0jsa4ymxr2l9ymzx4c1z9y96qvh45sh1vdps73yb2ang5ajvqlrc";
       # sha256 = "1jayvmcnq4g6k0pzzz3nq9f46q7nj2knsq2jrxikhc5xms42xhdc";
-      sha256 = "0hizsz2f23g0hw4gqivmr0z6h5zr3371jasl16acajc5fsl397nx";
-
+      # sha256 = "0hizsz2f23g0hw4gqivmr0z6h5zr3371jasl16acajc5fsl397nx";
+      sha256 = "0rlzjdw5l0gcjmh34san0qb25a3xxfcwdh75ppr343nzfrj8zbsq";
     }}/module.nix"
 
     ./disk-config.nix
@@ -491,19 +491,19 @@ in {
     libcef
     glm
 
-    			ghostty
+    ghostty
 
     vulkan-tools
 
-				scc
+    scc
     pureref
 
-	exercism
-	cmake
-	bats
-	go
-		dust
-
+    exercism
+    cmake
+  		sdl3
+    bats
+    go
+    dust
 
     #     # import requests
     #     import json
