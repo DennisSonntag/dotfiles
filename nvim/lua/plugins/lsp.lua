@@ -165,6 +165,7 @@ return {
 							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 						end, "[T]oggle Inlay [H]ints")
 					end
+					vim.cmd("set shiftwidth=4")
 				end,
 			})
 
