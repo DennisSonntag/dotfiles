@@ -491,6 +491,8 @@ in {
     libcef
     glm
 
+    # tor
+    # tor-browser-bundle-bin
     ghostty
 
     vulkan-tools
@@ -500,10 +502,11 @@ in {
 
     exercism
     cmake
-  		sdl3
+    sdl3
     bats
     go
     dust
+    gdb
 
     #     # import requests
     #     import json
