@@ -110,10 +110,10 @@ in {
   services.udev.extraRules = ''
     KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
   '';
-  services.xserver.videoDrivers = ["amdgpu"];
+  # services.xserver.videoDrivers = ["amdgpu"];
 
   # Enable nvidia driver support
-  # services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = ["nvidia"];
 
   hardware.graphics.enable = true; # Before 24.11: hardware.opengl.driSupport
   # For 32 bit applications
@@ -128,12 +128,12 @@ in {
 
   hardware.opentabletdriver.enable = true;
 
-  # hardware.nvidia = {
-  #   modesetting.enable = true;
-  #   open = false;
-  #   nvidiaSettings = true;
-  #   package = config.boot.kernelPackages.nvidiaPackages.stable;
-  # };
+  hardware.nvidia = {
+    modesetting.enable = true;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
   # TODO: modularize this because this is specific to desktop config
@@ -499,6 +499,8 @@ in {
 
     scc
     pureref
+
+    osu-lazer-bin
 
     exercism
     cmake
