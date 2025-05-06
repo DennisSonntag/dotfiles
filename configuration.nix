@@ -521,7 +521,7 @@ in {
 
   nix.settings.download-buffer-size = 134217728; # 128 MiB
 
-  # programs.steam.enable = true;
+  programs.steam.enable = true;
   # programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
 
