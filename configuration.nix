@@ -27,7 +27,8 @@ in {
       # sha256 = "0jsa4ymxr2l9ymzx4c1z9y96qvh45sh1vdps73yb2ang5ajvqlrc";
       # sha256 = "1jayvmcnq4g6k0pzzz3nq9f46q7nj2knsq2jrxikhc5xms42xhdc";
       # sha256 = "0hizsz2f23g0hw4gqivmr0z6h5zr3371jasl16acajc5fsl397nx";
-      sha256 = "0rlzjdw5l0gcjmh34san0qb25a3xxfcwdh75ppr343nzfrj8zbsq";
+      # sha256 = "0rlzjdw5l0gcjmh34san0qb25a3xxfcwdh75ppr343nzfrj8zbsq";
+      sha256 = "1dcakwcvbqapvd6c321kdrhki30dn1pbnffvzhdb0ab4gman9fcq";
     }}/module.nix"
 
     ./disk-config.nix
@@ -188,7 +189,7 @@ in {
 
     NODE_PATH = "~/.npm-packages/lib/node_modules";
 
-    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/user/.steam/root/compatibilitytools.d";
+    # STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/user/.steam/root/compatibilitytools.d";
 
     NIXOS_OZONE_WL = "1";
     VK_ICD_FILENAMES = "/run/opengl-driver/share/vulkan/icd.d/radeon_icd.x86_64.json:/run/opengl-driver-32/share/vulkan/icd.d/radeon_icd.i686.json";
@@ -437,7 +438,7 @@ in {
     pnpm
     nodejs
     protonup
-    steam
+    # steam
     localsend
     gdu
     imagemagick
@@ -520,8 +521,8 @@ in {
 
   nix.settings.download-buffer-size = 134217728; # 128 MiB
 
-  programs.steam.enable = true;
-  programs.steam.gamescopeSession.enable = true;
+  # programs.steam.enable = true;
+  # programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
 
   programs.hyprland.enable = true;
