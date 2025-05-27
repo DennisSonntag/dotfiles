@@ -71,6 +71,7 @@ The following is just the outputs function from the flake template.
         nodePackages_latest.svelte-language-server
         nodePackages_latest.typescript-language-server
         nixd
+        basedpyright
 
         alejandra
         stylua
