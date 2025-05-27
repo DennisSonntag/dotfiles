@@ -324,7 +324,7 @@ in {
   services.pulseaudio.enable = false;
 
   # ALSA provides a udev rule for restoring volume settings.
-  services.udev.packages = [pkgs.alsa-utils];
+  # services.udev.packages = [pkgs.alsa-utils];
 
   security.rtkit.enable = true;
 
