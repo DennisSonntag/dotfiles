@@ -229,6 +229,7 @@ return {
 			servers.cssls = {}
 			servers.jsonls = {}
 			servers.ts_ls = {}
+			servers.basedpyright = {}
 			servers.html = {}
 			servers.clangd = {
 				-- root_dir = function(fname)
