@@ -416,7 +416,7 @@ in {
     rofi-wayland
 
     firefox
-    brave
+    # brave
     grimblast
     gcc
     kitty
