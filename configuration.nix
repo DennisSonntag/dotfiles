@@ -323,6 +323,7 @@ in {
 
   services.pulseaudio.enable = false;
 
+
   # ALSA provides a udev rule for restoring volume settings.
   # services.udev.packages = [pkgs.alsa-utils];
 
@@ -523,6 +524,8 @@ in {
   nix.settings.download-buffer-size =   524288000; # 
 
   programs.steam.enable = true;
+
+    programs.kdeconnect.enable = true;
   # programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
 
