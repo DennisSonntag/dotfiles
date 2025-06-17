@@ -149,36 +149,26 @@ in {
 
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
-  services.xserver = {
-    enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
-    windowManager.awesome = {
-      enable = true;
-      luaModules = with pkgs.luaPackages; [
-        luarocks # is the package manager for Lua modules
-        luadbi-mysql # Database abstraction layer
-      ];
-    };
-  };
 
-  environment.gnome.excludePackages = with pkgs; [
-    atomix # puzzle game
-    cheese # webcam tool
-    epiphany # web browser
-    evince # document viewer
-    geary # email reader
-    gedit # text editor
-    gnome-characters
-    gnome-music
-    gnome-photos
-    gnome-terminal
-    gnome-tour
-    hitori # sudoku game
-    iagno # go game
-    tali # poker game
-    totem # video player
-  ];
+  services.displayManager.gdm.enable = true;
+
+  # environment.gnome.excludePackages = with pkgs; [
+  #   atomix # puzzle game
+  #   cheese # webcam tool
+  #   epiphany # web browser
+  #   evince # document viewer
+  #   geary # email reader
+  #   gedit # text editor
+  #   gnome-characters
+  #   gnome-music
+  #   gnome-photos
+  #   gnome-terminal
+  #   gnome-tour
+  #   hitori # sudoku game
+  #   iagno # go game
+  #   tali # poker game
+  #   totem # video player
+  # ];
 
   # services.displayManager.sddm.wayland.enable = true;
 
@@ -323,7 +313,6 @@ in {
   services.printing.enable = true;
 
   services.pulseaudio.enable = false;
-
 
   # ALSA provides a udev rule for restoring volume settings.
   # services.udev.packages = [pkgs.alsa-utils];
@@ -522,11 +511,11 @@ in {
   ];
 
   # nix.settings.download-buffer-size = 134217728; # 128 MiB
-  nix.settings.download-buffer-size =   524288000; # 
+  nix.settings.download-buffer-size = 524288000; #
 
   programs.steam.enable = true;
 
-    programs.kdeconnect.enable = true;
+  programs.kdeconnect.enable = true;
   # programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
 
@@ -583,7 +572,8 @@ in {
 
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "24.05"; # Did you read the comment?
+  # system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 }
