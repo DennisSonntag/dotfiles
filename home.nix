@@ -161,7 +161,7 @@ in {
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    prismlauncher
+    # prismlauncher
     neofetch
     nemo
     nnn # terminal file manager
