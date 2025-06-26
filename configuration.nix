@@ -30,7 +30,8 @@ in {
       # sha256 = "0rlzjdw5l0gcjmh34san0qb25a3xxfcwdh75ppr343nzfrj8zbsq";
       # sha256 = "1dcakwcvbqapvd6c321kdrhki30dn1pbnffvzhdb0ab4gman9fcq";
       # sha256 = "1723yx071r8jcl6cb2h858wx4l5sph5wf96jfqd910sij59sma8a";
-      sha256 = "1c6qn36p85vd5jzaxs338xliqiyz9ncc4h0i70gwi6bayd7kqgwh";
+      # sha256 = "1c6qn36p85vd5jzaxs338xliqiyz9ncc4h0i70gwi6bayd7kqgwh";
+      sha256 = "0awlc32h3pdk3sx272ifpccjzv7nq6mkimxgkazdbzgr85zpw3rn";
     }}/module.nix"
 
     ./disk-config.nix
