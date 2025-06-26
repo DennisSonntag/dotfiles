@@ -479,7 +479,7 @@ in {
     clang
     lld
     glew
-    # blender
+    blender
     cloc
     sloc
     libcef
