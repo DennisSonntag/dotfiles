@@ -448,6 +448,9 @@ in {
     emoteWithPatch
     ydotool
 
+    # libreoffice-bin
+    libreoffice-qt6-fresh
+
     # calibre
 
     myNixCats.packages.${pkgs.system}.nvim
