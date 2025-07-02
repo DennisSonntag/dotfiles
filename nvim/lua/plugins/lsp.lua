@@ -259,12 +259,12 @@ return {
 					-- 	"--function-arg-placeholders",
 					-- 	"--fallback-style=llvm",
 				},
-				init_options = {
-					fallbackFlags = { "--std=c23" },
+				-- init_options = {
+					-- fallbackFlags = { "--std=c23" },
 					-- 	usePlaceholders = true,
 					-- 	completeUnimported = true,
 					-- 	clangdFileStatus = true,
-				},
+				-- },
 			}
 
 			servers.lua_ls = {
