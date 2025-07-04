@@ -231,7 +231,8 @@ return {
 			servers.ts_ls = {}
 			servers.basedpyright = {}
 			servers.html = {}
-			servers.clangd = {
+			servers.ccls = {}
+			-- servers.clangd = {
 				-- root_dir = function(fname)
 				-- 	return require("lspconfig.util").root_pattern(
 				-- 		"Makefile",
@@ -249,8 +250,8 @@ return {
 				-- capabilities = {
 				-- 	offsetEncoding = { "utf-16" },
 				-- },
-				cmd = {
-					"clangd",
+				-- cmd = {
+				-- 	"clangd",
 					-- "--std=c23",
 					-- 	"--background-index",
 					-- 	"--clang-tidy",
@@ -258,14 +259,14 @@ return {
 					-- 	"--completion-style=detailed",
 					-- 	"--function-arg-placeholders",
 					-- 	"--fallback-style=llvm",
-				},
-				-- init_options = {
-					-- fallbackFlags = { "--std=c23" },
-					-- 	usePlaceholders = true,
-					-- 	completeUnimported = true,
-					-- 	clangdFileStatus = true,
 				-- },
-			}
+				-- init_options = {
+				-- fallbackFlags = { "--std=c23" },
+				-- 	usePlaceholders = true,
+				-- 	completeUnimported = true,
+				-- 	clangdFileStatus = true,
+				-- },
+			-- }
 
 			servers.lua_ls = {
 				-- cmd = {...},
