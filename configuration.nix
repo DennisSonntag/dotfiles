@@ -492,6 +492,7 @@ in {
     # tor
     # tor-browser-bundle-bin
     ghostty
+    compiledb
 
     vulkan-tools
 
