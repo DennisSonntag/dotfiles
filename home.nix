@@ -192,6 +192,8 @@ in {
 
 
     hyprsunset
+    cef-binary
+
 
     # misc
     cowsay
