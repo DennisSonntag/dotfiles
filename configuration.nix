@@ -111,7 +111,8 @@ in {
   time.timeZone = "America/Edmonton";
 
   # boot.initrd.kernelModules = ["amdgpu" "i2c-dev"];
-  boot.initrd.kernelModules = ["i2c-dev"];
+  boot.initrd.kernelModules = ["i2c-dev" "nvidia"];
+  boot.extraModulePackages = [config.boot.kernelPackages.nvidia_x11];
   services.udev.extraRules = ''
     KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
   '';
@@ -126,6 +127,7 @@ in {
   hardware.graphics.extraPackages = with pkgs; [
     # rocmPackages.clr
     vulkan-loader
+    # vulkan-tools
     vulkan-validation-layers
     vulkan-extension-layer
     # amdvlk
