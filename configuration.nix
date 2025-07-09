@@ -121,17 +121,20 @@ in {
   # Enable nvidia driver support
   services.xserver.videoDrivers = ["nvidia"];
 
-  hardware.graphics.enable = true; # Before 24.11: hardware.opengl.driSupport
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
+
+  # hardware.graphics.enable = true; # Before 24.11: hardware.opengl.driSupport
   # For 32 bit applications
-  hardware.graphics.enable32Bit = true; # Before 24.11: hardware.opengl.driSupport32Bit
-  hardware.graphics.extraPackages = with pkgs; [
+  # hardware.graphics.enable32Bit = true; # Before 24.11: hardware.opengl.driSupport32Bit
+  # hardware.graphics.extraPackages = with pkgs; [
     # rocmPackages.clr
-    vulkan-loader
     # vulkan-tools
-    vulkan-validation-layers
-    vulkan-extension-layer
     # amdvlk
-  ];
+  # ];
 
   hardware.opentabletdriver.enable = true;
 
@@ -139,7 +142,7 @@ in {
     modesetting.enable = true;
     open = false;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    # package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -189,7 +192,7 @@ in {
     # STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/user/.steam/root/compatibilitytools.d";
 
     NIXOS_OZONE_WL = "1";
-    VK_ICD_FILENAMES = "/run/opengl-driver/share/vulkan/icd.d/radeon_icd.x86_64.json:/run/opengl-driver-32/share/vulkan/icd.d/radeon_icd.i686.json";
+    # VK_ICD_FILENAMES = "/run/opengl-driver/share/vulkan/icd.d/radeon_icd.x86_64.json:/run/opengl-driver-32/share/vulkan/icd.d/radeon_icd.i686.json";
 
     # hyprland env vars
     EDITOR = "nvim";
@@ -498,6 +501,9 @@ in {
     compiledb
 
     vulkan-tools
+
+    vulkan-validation-layers
+    vulkan-extension-layer
 
     scc
     pureref
