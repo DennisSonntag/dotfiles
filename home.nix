@@ -195,6 +195,10 @@ in {
     cef-binary
 
 
+    brave
+
+
+
     # misc
     cowsay
     file
