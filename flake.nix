@@ -22,6 +22,8 @@
     # nixCats.url = "github:BirdeeHub/nixCats-nvim";
 
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
+
+    kickstart-nix = "./kickstart-nix.nvim/flake.nix";
     # blink-cmp = {
     #   url = "github:Saghen/blink.cmp";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -56,7 +58,8 @@
       archie = lib.nixosSystem {
         specialArgs = {inherit inputs;};
         system = "x86_64-linux";
-        modules = [./configuration.nix stylix.nixosModules.stylix ./kickstart-nix.nvim/flake.nix];
+        # modules = [./configuration.nix stylix.nixosModules.stylix ./kickstart-nix.nvim/flake.nix];
+        modules = [./configuration.nix stylix.nixosModules.stylix];
       };
     };
 
@@ -65,7 +68,7 @@
 
       modules = [
         ./home.nix
-        ./kickstart-nix.nvim/flake.nix
+        # ./kickstart-nix.nvim/flake.nix
       ];
       extraSpecialArgs = {
         inherit inputs;
