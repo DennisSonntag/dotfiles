@@ -22,8 +22,9 @@
     # nixCats.url = "github:BirdeeHub/nixCats-nvim";
 
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
+    kickstart-nix-nvim.url = "github:nix-community/kickstart-nix.nvim";
 
-    kickstart-nix = "./kickstart-nix.nvim/flake.nix";
+    # kickstart-nix = "./kickstart-nix.nvim/flake.nix";
     # blink-cmp = {
     #   url = "github:Saghen/blink.cmp";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -44,6 +45,7 @@
     nixpkgs,
     home-manager,
     split-monitor-workspaces,
+    kickstart-nix-nvim,
     stylix,
     ...
   } @ inputs: let
@@ -59,7 +61,22 @@
         specialArgs = {inherit inputs;};
         system = "x86_64-linux";
         # modules = [./configuration.nix stylix.nixosModules.stylix ./kickstart-nix.nvim/flake.nix];
-        modules = [./configuration.nix stylix.nixosModules.stylix];
+        modules = [
+          ./configuration.nix
+          stylix.nixosModules.stylix
+          ({
+            config,
+            pkgs,
+            ...
+          }: {
+            nixpkgs.overlays = [
+              kickstart-nix-nvim.overlays.default
+            ];
+            environment.systemPackages = with pkgs; [
+              nvim-pkg
+            ];
+          })
+        ];
       };
     };
 
