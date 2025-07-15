@@ -19,7 +19,7 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixCats.url = "github:BirdeeHub/nixCats-nvim";
+    # nixCats.url = "github:BirdeeHub/nixCats-nvim";
 
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     # blink-cmp = {
@@ -56,7 +56,7 @@
       archie = lib.nixosSystem {
         specialArgs = {inherit inputs;};
         system = "x86_64-linux";
-        modules = [./configuration.nix stylix.nixosModules.stylix];
+        modules = [./configuration.nix stylix.nixosModules.stylix ./kickstart-nix.nvim/flake.nix];
       };
     };
 
@@ -65,6 +65,7 @@
 
       modules = [
         ./home.nix
+        ./kickstart-nix.nvim/flake.nix
       ];
       extraSpecialArgs = {
         inherit inputs;

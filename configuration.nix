@@ -6,7 +6,7 @@
   inputs,
   ...
 }: let
-  myNixCats = import ./nvim/default.nix {inherit inputs;};
+  # myNixCats = import ./nvim/default.nix {inherit inputs;};
   brightness-py = pkgs.writers.writePython3Bin "brightness-py" {
     flakeIgnore = ["E508" "W293" "E303" "E501" "E265" "F401" "W291" "W391" "F811"];
   } (builtins.readFile ./nonnix/waybar/brightness.py);
@@ -375,7 +375,7 @@ in {
 
   environment.systemPackages = with pkgs; [
     brightness-py
-    (pkgs.writeShellScriptBin "v" "nvim $@")
+    # (pkgs.writeShellScriptBin "v" "nvim $@")
 
     (pkgs.writeShellScriptBin "controls.sh" (builtins.readFile ./nonnix/waybar/player-controls.sh))
 
@@ -459,8 +459,8 @@ in {
 
     # calibre
 
-    myNixCats.packages.${pkgs.system}.nvim
-    (pkgs.writeShellScriptBin "v" "nvim $@")
+    # myNixCats.packages.${pkgs.system}.nvim
+    # (pkgs.writeShellScriptBin "v" "nvim $@")
 
     # (let
     #   python = pkgs.python3;
