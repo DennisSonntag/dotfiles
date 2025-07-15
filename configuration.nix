@@ -374,8 +374,16 @@ in {
   # ];
 
   environment.systemPackages = with pkgs; [
+
+
+  # NVIM PACKAGES
+
+
+
+
+
     brightness-py
-    # (pkgs.writeShellScriptBin "v" "nvim $@")
+    (pkgs.writeShellScriptBin "v" "nvim $@")
 
     (pkgs.writeShellScriptBin "controls.sh" (builtins.readFile ./nonnix/waybar/player-controls.sh))
 
@@ -460,7 +468,7 @@ in {
     # calibre
 
     # myNixCats.packages.${pkgs.system}.nvim
-    # (pkgs.writeShellScriptBin "v" "nvim $@")
+    (pkgs.writeShellScriptBin "v" "nvim $@")
 
     # (let
     #   python = pkgs.python3;
