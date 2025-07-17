@@ -17,19 +17,6 @@ in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  # home.pointerCursor = {
-  #   gtk.enable = true;
-  #   x11.enable = true;
-  #   package = inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default;
-  #   name = "rose-pine-hyprcursor";
-  #   size = 24;
-  # };
-  #
-  # gtk.cursorTheme = {
-  #   package = inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default;
-  #   name = "rose-pine-hyprcursor";
-  #   size = 24;
-  # };
 
   programs.zoxide = {
     enable = true;
@@ -40,8 +27,6 @@ in {
     ];
   };
 
-  # programs.zoxide.enableNushellIntegration = true;
-  # programs.zoxide.enableZshIntegration = true;
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
@@ -49,16 +34,6 @@ in {
     };
   };
 
-  # gtk = {
-  #   enable = true;
-  #   theme = {
-  #     name = "Adwaita-dark";
-  #     package = pkgs.gnome-themes-extra;
-  #   };
-  # };
-
-  # Wayland, X, etc. support for session vars
-  # systemd.user.sessionVariables = config.home-manager.users.justinas.home.sessionVariables;
 
   qt = {
     enable = true;
@@ -73,19 +48,8 @@ in {
     enable = true;
   };
 
-  # programs.ags = {
-  #   enable = true;
 
-  # null or path, leave as null if you don't want hm to manage the config
-  #configDir = ./ags;
 
-  # additional packages to add to gjs's runtime
-  #   extraPackages = with pkgs; [
-  #     gtksourceview
-  #     webkitgtk
-  #     accountsservice
-  #   ];
-  # };
 
   home.file = {
     "${config.home.homeDirectory}/.config/waybar".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/nonnix/waybar";
@@ -133,16 +97,6 @@ in {
     '';
   };
 
-  # programs.neovim = {
-  # 	enable = true;
-  # 	extraPackages = with pkgs; [
-  # 		nodePackages_latest.svelte-language-server
-  # 		nodePackages_latest.typescript-language-server
-  # 		vscode-langservers-extracted
-  # 		tailwindcss-language-server
-  # 		prettierd
-  # 	];
-  # };
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -153,10 +107,6 @@ in {
   # release notes.
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
-  # xresources.properties = {
-  #   "Xcursor.size" = 16;
-  #   "Xft.dpi" = 172;
-  # };
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -273,24 +223,6 @@ in {
     EDITOR = "nvim";
   };
 
-  # gtk = {
-  #   enable = true;
-  #
-  #   theme = {
-  #     package = pkgs.flat-remix-gtk;
-  #     name = "Flat-Remix-GTK-Grey-Darkest";
-  #   };
-  #
-  #   iconTheme = {
-  #     package = pkgs.gnome.adwaita-icon-theme;
-  #     name = "Adwaita";
-  #   };
-  #
-  #   # font = {
-  #   #   name = "Sans";
-  #   #   size = 11;
-  #   # };
-  # };
 
   programs.git = {
     enable = true;
@@ -358,18 +290,13 @@ in {
         style = "yellow";
       };
 
-      #     python = {
-      #       format = "[$virtualenv]($style) ";
-      #       style = "bright-black";
-      #     };
+
     };
   };
 
   programs.kitty = {
     enable = true;
     package = pkgs.kitty;
-    # custom settings
-    # theme = "Tokyo Night Storm";
     extraConfig = "modify_font underline_thickness 200%\nmodify_font underline_position 1";
     font = {
       size = 14;
@@ -587,135 +514,6 @@ in {
         "center, title:^(snake|Boids|raycast|floatterm|tetris|pong|maze gen|chess|Browser)$"
         "monitor HDMI-A-1, title:^(Browser)$"
         "tile, title:^(.*Minecraft.*)$"
-        # "tile, Vivaldi"
-        # "tile, firefox"
-        # "float, file_progress"
-        # "float, confirm"
-        # "float, dialog"
-        # "float, download"
-        # "float, notification"
-        # "float, error"
-        # "float, splash"
-        # "float, confirmreset"
-        # "float, title:Open File"
-        # "float, title:branchdialog"
-        # "float, Lxappearance"
-        # "float, Rofi"
-        # "noanim, Rofi"
-        # "animation none,Rofi"
-        # "float,viewnior"
-        # "float,feh"
-        # "float, pavucontrol"
-        # "center, pavucontrol"
-        # "float, title:^(Volume Control)$"
-        # "size 800 600, title:^(Volume Control)$"
-        # "move 75 44%, title:^(Volume Control)$"
-        # "float, file-roller"
-        # "fullscreen, wlogout"
-        # "float, title:wlogout"
-        # "fullscreen, title:wlogout"
-        # "idleinhibit focus, mpv"
-        # "idleinhibit fullscreen, firefox"
-        # "float, title:^(Media viewer)$"
-        # "float, title:^(Picture-in-Picture)$"
       ];
     };
   };
-
-  # programs.firefox = {
-  #   enable = true;
-  #   profiles = {
-  #     default = {
-  #       id = 0;
-  #       name = "default";
-  #       isDefault = true;
-  #       # extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
-  #       #   ublock-origin
-  #       #   bitwarden
-  #       #   darkreader
-  #       #   sidebery
-  #       #   sponsorblock
-  #       #   return-youtube-dislikes
-  #       # ];
-  #       # settings = {
-  #       #   "browser.newtabpage.pinned" = [
-  #       #     {
-  #       #       title = "NixOS";
-  #       #       url = "https://nixos.org";
-  #       #     }
-  #       #   ];
-  #       #   "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-  #       #   "browser.startup.homepage" = "https://nixos.org";
-  #       # };
-  #       userChrome = ''
-  #         See the above repository for updates as well as full license text. */
-  #
-  #         /* Hides tabs toolbar */
-  #         /* For OSX use hide_tabs_toolbar_osx.css instead */
-  #
-  #         /* Note, if you have either native titlebar or menubar enabled, then you don't really need this style.
-  #          * In those cases you can just use: #TabsToolbar{ visibility: collapse !important }
-  #          */
-  #
-  #         /* IMPORTANT */
-  #         /*
-  #         Get window_control_placeholder_support.css
-  #         Window controls will be all wrong without it
-  #         */
-  #
-  #         :root[tabsintitlebar]{ --uc-toolbar-height: 40px; }
-  #         :root[tabsintitlebar][uidensity="compact"]{ --uc-toolbar-height: 32px }
-  #         #titlebar{
-  #           will-change: unset !important;
-  #           transition: none !important;
-  #           opacity: 1 !important;
-  #         }
-  #         #TabsToolbar{ visibility: collapse !important }
-  #
-  #         :root[sizemode="fullscreen"] #TabsToolbar > :is(#window-controls,.titlebar-buttonbox-container){
-  #           visibility: visible !important;
-  #           z-index: 2;
-  #         }
-  #
-  #         :root:not([inFullscreen]) #nav-bar{
-  #           margin-top: calc(0px - var(--uc-toolbar-height,0px));
-  #         }
-  #
-  #         :root[tabsintitlebar] #toolbar-menubar[autohide="true"]{
-  #           min-height: unset !important;
-  #           height: var(--uc-toolbar-height,0px) !important;
-  #           position: relative;
-  #         }
-  #
-  #         #toolbar-menubar[autohide="false"]{
-  #           margin-bottom: var(--uc-toolbar-height,0px)
-  #         }
-  #
-  #         :root[tabsintitlebar] #toolbar-menubar[autohide="true"] #main-menubar{
-  #           flex-grow: 1;
-  #           align-items: stretch;
-  #           background-attachment: scroll, fixed, fixed;
-  #           background-position: 0 0, var(--lwt-background-alignment), right top;
-  #           background-repeat: repeat-x, var(--lwt-background-tiling), no-repeat;
-  #           background-size: auto 100%, var(--lwt-background-size, auto auto), auto auto;
-  #           padding-right: 20px;
-  #         }
-  #         :root[tabsintitlebar] #toolbar-menubar[autohide="true"]:not([inactive]) #main-menubar{
-  #           background-color: var(--lwt-accent-color);
-  #           background-image: linear-gradient(var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor),var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor)), var(--lwt-additional-images,none), var(--lwt-header-image, none);
-  #           mask-image: linear-gradient(to left, transparent, black 20px);
-  #         }
-  #
-  #         #toolbar-menubar:not([inactive]){ z-index: 2 }
-  #         #toolbar-menubar[autohide="true"][inactive] > #menubar-items {
-  #           opacity: 0;
-  #           pointer-events: none;
-  #           margin-left: var(--uc-window-drag-space-pre,0px)
-  #         }
-  #
-  #         See the above repository for updates as well as full license text. */
-  #       '';
-  #     };
-  # };
-  # };
-}

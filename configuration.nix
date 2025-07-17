@@ -6,7 +6,6 @@
   inputs,
   ...
 }: let
-  # myNixCats = import ./nvim/default.nix {inherit inputs;};
   brightness-py = pkgs.writers.writePython3Bin "brightness-py" {
     flakeIgnore = ["E508" "W293" "E303" "E501" "E265" "F401" "W291" "W391" "F811"];
   } (builtins.readFile ./nonnix/waybar/brightness.py);
@@ -23,14 +22,6 @@ in {
     # Download disko
     "${builtins.fetchTarball {
       url = "https://github.com/nix-community/disko/archive/master.tar.gz";
-      # sha256 = "0b8fxndp7b0yqpyzlbfyg7b7m59b0yqpfl37q1lf0awzs6dsknzi";
-      # sha256 = "0jsa4ymxr2l9ymzx4c1z9y96qvh45sh1vdps73yb2ang5ajvqlrc";
-      # sha256 = "1jayvmcnq4g6k0pzzz3nq9f46q7nj2knsq2jrxikhc5xms42xhdc";
-      # sha256 = "0hizsz2f23g0hw4gqivmr0z6h5zr3371jasl16acajc5fsl397nx";
-      # sha256 = "0rlzjdw5l0gcjmh34san0qb25a3xxfcwdh75ppr343nzfrj8zbsq";
-      # sha256 = "1dcakwcvbqapvd6c321kdrhki30dn1pbnffvzhdb0ab4gman9fcq";
-      # sha256 = "1723yx071r8jcl6cb2h858wx4l5sph5wf96jfqd910sij59sma8a";
-      # sha256 = "1c6qn36p85vd5jzaxs338xliqiyz9ncc4h0i70gwi6bayd7kqgwh";
       sha256 = "0awlc32h3pdk3sx272ifpccjzv7nq6mkimxgkazdbzgr85zpw3rn";
     }}/module.nix"
 
@@ -63,8 +54,6 @@ in {
     };
 
     monospace = {
-      # package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
-      # package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
       package = pkgs.nerd-fonts.jetbrains-mono;
       name = "JetBrainsMono Nerd Font";
     };
@@ -77,7 +66,6 @@ in {
 
   fonts = {
     packages = with pkgs; [
-      # (nerdfonts.override {fonts = ["JetBrainsMono"];})
       nerd-fonts.jetbrains-mono
       noto-fonts
       noto-fonts-cjk-sans
@@ -87,8 +75,6 @@ in {
     fontconfig.defaultFonts.monospace = ["JetBrainsMono Nerd Font"];
   };
 
-  # stylix.cursor.package = pkgs.rose-pine-cursor;
-  # stylix.cursor.name = "rose-pine-cursor";
 
   stylix.fonts.sizes = {
     applications = 12;
@@ -110,39 +96,19 @@ in {
   # Set your time zone.
   time.timeZone = "America/Edmonton";
 
-  # boot.initrd.kernelModules = ["amdgpu" "i2c-dev"];
   boot.initrd.kernelModules = ["i2c-dev" "nvidia"];
   boot.extraModulePackages = [config.boot.kernelPackages.nvidia_x11];
   services.udev.extraRules = ''
     KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
   '';
-  # services.xserver.videoDrivers = ["amdgpu"];
 
   # Enable nvidia driver support
   services.xserver.videoDrivers = ["nvidia"];
-
-
-
-  # hardware.opengl = {
-    # enable = true;
-    # driSupport = true;
-    # driSupport32Bit = true;
-  # };
 
   hardware.graphics = {
   	enable = true;
 	enable32Bit = true;
   };
-
-
-  # hardware.graphics.enable = true; # Before 24.11: hardware.opengl.driSupport
-  # For 32 bit applications
-  # hardware.graphics.enable32Bit = true; # Before 24.11: hardware.opengl.driSupport32Bit
-  # hardware.graphics.extraPackages = with pkgs; [
-    # rocmPackages.clr
-    # vulkan-tools
-    # amdvlk
-  # ];
 
   hardware.opentabletdriver.enable = true;
 
@@ -150,7 +116,6 @@ in {
     modesetting.enable = true;
     open = false;
     nvidiaSettings = true;
-    # package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -166,28 +131,8 @@ in {
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
-  # services.desktopManager.gnome.enable = true;
   services.displayManager.gdm.enable = true;
 
-  # environment.gnome.excludePackages = with pkgs; [
-  #   atomix # puzzle game
-  #   cheese # webcam tool
-  #   epiphany # web browser
-  #   evince # document viewer
-  #   geary # email reader
-  #   gedit # text editor
-  #   gnome-characters
-  #   gnome-music
-  #   gnome-photos
-  #   gnome-terminal
-  #   gnome-tour
-  #   hitori # sudoku game
-  #   iagno # go game
-  #   tali # poker game
-  #   totem # video player
-  # ];
-
-  # services.displayManager.sddm.wayland.enable = true;
 
   environment.sessionVariables = {
     PATH = [
@@ -197,10 +142,8 @@ in {
 
     NODE_PATH = "~/.npm-packages/lib/node_modules";
 
-    # STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/user/.steam/root/compatibilitytools.d";
 
     NIXOS_OZONE_WL = "1";
-    # VK_ICD_FILENAMES = "/run/opengl-driver/share/vulkan/icd.d/radeon_icd.x86_64.json:/run/opengl-driver-32/share/vulkan/icd.d/radeon_icd.i686.json";
 
     # hyprland env vars
     EDITOR = "nvim";
@@ -230,10 +173,6 @@ in {
     GDK_BACKEND = "wayland,x11";
     GTK_THEME = "Nordic";
 
-    # XCURSOR_THEME = "rose-pine-hyprcursor";
-    # XCURSOR_SIZE = "24";
-    # HYPRCURSOR_THEME = "rose-pine-hyprcursor";
-    # HYPRCURSOR_SIZE = "24";
   };
 
   programs.fish = {
@@ -331,9 +270,6 @@ in {
 
   services.pulseaudio.enable = false;
 
-  # ALSA provides a udev rule for restoring volume settings.
-  # services.udev.packages = [pkgs.alsa-utils];
-
   security.rtkit.enable = true;
 
   services.pipewire = {
@@ -369,32 +305,12 @@ in {
     "d /home/dennis 0750 dennis syncthing"
   ];
 
-  # 		security.sudo.extraRules = [
-  #   {
-  #     users = ["dennis"];
-  #     commands = [
-  #       {
-  #         command = "${brightness-py}/bin/brightness-py";
-  #         options = ["NOPASSWD" "SETENV"];
-  #       }
-  #     ];
-  #   }
-  # ];
 
   environment.systemPackages = with pkgs; [
 
 
-  # NVIM PACKAGES
-
-  # LSP 
-
-  # Plugins
-
-
-
-
-
     brightness-py
+
     (pkgs.writeShellScriptBin "v" "nvim $@")
 
     (pkgs.writeShellScriptBin "controls.sh" (builtins.readFile ./nonnix/waybar/player-controls.sh))
@@ -403,15 +319,6 @@ in {
       flakeIgnore = ["E508" "W293" "E303" "E501" "E265" "F401" "W291" "W391" "F811"];
     } (builtins.readFile ./nonnix/waybar/spotify-meta.py))
 
-    # (writers.writePython3Bin "waybar-ddcutil" {
-    #   flakeIgnore = ["E508" "W293" "E303" "E501" "E265" "F401"  "W291" "W391" "F811"];
-    # } (builtins.readFile ./nonnix/waybar/waybar-ddcutil.py))
-
-    # (writers.writePython3Bin "test-name-python" {
-    #   } ''
-    #     print("hello fucking world")
-    #   '')
-
     playerctl
     ddcutil
     ddcui
@@ -419,7 +326,7 @@ in {
 
     dunst
     alsa-utils
-    vim
+    # vim
     wl-clipboard
     bun
     lsd
@@ -445,7 +352,6 @@ in {
     slurp
     wf-recorder
     wl-clipboard
-    # bottles
     obsidian
     wayshot
     swappy
@@ -474,22 +380,13 @@ in {
     emoteWithPatch
     ydotool
 
-    # libreoffice-bin
     libreoffice-qt6-fresh
 
-    # calibre
 
-    # myNixCats.packages.${pkgs.system}.nvim
     (pkgs.writeShellScriptBin "v" "nvim $@")
 
-    # (let
-    #   python = pkgs.python3;
-    #   pythonPackages = python.pkgs;
-    #   myPythonEnv = python.withPackages (ps: with ps; [requests]);
-    # in
-    #   pkgs.writers.writePython3Bin "my-test-python-script" ''
-    #     #!${myPythonEnv.interpreter}
-    sonusmix
+
+    # sonusmix
     anki-bin
     obs-studio
     # lutris-unwrapped
@@ -504,19 +401,20 @@ in {
 
     driversi686Linux.mesa
     glfw
-    libGL
-    libGLU
+    # libGL
+    # libGLU
     clang
     lld
     glew
     blender
-    cloc
+    # cloc
     sloc
-    libcef
+    # libcef
     glm
 
     # tor
     # tor-browser-bundle-bin
+
     ghostty
     compiledb
 
@@ -538,12 +436,7 @@ in {
     dust
     gdb
 
-    #     # import requests
-    #     import json
-    #
-    #     # Your script here
-    #     print("Hello, Fucking World!")
-    #   '')
+
   ];
 
   # nix.settings.download-buffer-size = 134217728; # 128 MiB
