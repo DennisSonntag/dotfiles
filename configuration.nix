@@ -377,7 +377,7 @@ in {
 
     audacity
 
-    emoteWithPatch
+    # emoteWithPatch
     ydotool
 
     libreoffice-qt6-fresh
