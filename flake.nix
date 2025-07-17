@@ -23,7 +23,7 @@
 
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     # kickstart-nix-nvim.url = "github:nix-community/kickstart-nix.nvim";
-    kickstart-nix-nvim.url = "path:./kickstart-nix.nvim/";
+    kickstart-nix-nvim.url = "path:/home/dennis/nixos/kickstart-nix.nvim/";
 
     # kickstart-nix = "./kickstart-nix.nvim/flake.nix";
     # blink-cmp = {
