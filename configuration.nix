@@ -121,11 +121,19 @@ in {
   # Enable nvidia driver support
   services.xserver.videoDrivers = ["nvidia"];
 
-  hardware.opengl = {
-    enable = true;
+
+
+  # hardware.opengl = {
+    # enable = true;
     # driSupport = true;
-    driSupport32Bit = true;
+    # driSupport32Bit = true;
+  # };
+
+  hardware.graphics = {
+  	enable = true;
+	enable32Bit = true;
   };
+
 
   # hardware.graphics.enable = true; # Before 24.11: hardware.opengl.driSupport
   # For 32 bit applications
@@ -379,80 +387,8 @@ in {
   # NVIM PACKAGES
 
   # LSP 
-  universal-ctags
-  ripgrep
-  fd
-  stdenv.cc.cc
-  nix-doc
-  lua-language-server
-  glsl_analyzer
-  vscode-langservers-extracted
-  tailwindcss-language-server
-  nodePackages_latest.svelte-language-server
-  nodePackages_latest.typescript-language-server
-  nixd
-  basedpyright
-  ccls
-
-  alejandra
-  stylua
-  prettierd
-
-  delve
-  markdownlint-cli
 
   # Plugins
-  vimPlugins.blink-cmp
-
-  vimPlugins.lsp_signature-nvim
-  vimPlugins.hover-nvim
-  vimPlugins.harpoon
-  vimPlugins.vim-sleuth
-  vimPlugins.lazy-nvim
-  vimPlugins.gitsigns-nvim
-  vimPlugins.telescope-nvim
-  vimPlugins.telescope-fzf-native-nvim
-  vimPlugins.telescope-ui-select-nvim
-  vimPlugins.nvim-web-devicons
-  vimPlugins.plenary-nvim
-  vimPlugins.nvim-lspconfig
-  vimPlugins.lazydev-nvim
-  vimPlugins.fidget-nvim
-  vimPlugins.conform-nvim
-  vimPlugins.nvim-ufo
-  vimPlugins.promise-async
-  vimPlugins.vim-fugitive
-  vimPlugins.neogit
-  vimPlugins.lazygit-nvim
-  vimPlugins.vim-matchup
-  vimPlugins.modicator-nvim
-  vimPlugins.nvim-colorizer-lua
-  vimPlugins.oil-nvim
-  vimPlugins.eyeliner-nvim
-  vimPlugins.lualine-nvim
-  vimPlugins.nvim-ts-context-commentstring
-  vimPlugins.trouble-nvim
-  vimPlugins.nvim-bqf
-  vimPlugins.rainbow-delimiters-nvim
-  vimPlugins.smart-splits-nvim
-  vimPlugins.statuscol-nvim
-  vimPlugins.tokyonight-nvim
-  vimPlugins.todo-comments-nvim
-  vimPlugins.mini-nvim
-  vimPlugins.nvim-treesitter.withAllGrammars
-
-  vimPlugins.firenvim
-
-  vimPlugins.nvim-dap
-  vimPlugins.nvim-dap-ui
-  vimPlugins.indent-blankline-nvim
-  vimPlugins.nvim-dap-go
-  vimPlugins.nvim-lint
-  vimPlugins.nvim-autopairs
-  vimPlugins.nui-nvim
-  vimPlugins.nvim-web-devicons
-  vimPlugins.plenary-nvim
-  vimPlugins.nvim-nio
 
 
 

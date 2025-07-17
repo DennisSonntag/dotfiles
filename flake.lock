@@ -745,13 +745,13 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1752769162,
-        "narHash": "sha256-YaP9UQgQ4sIqSkV7oMdywODRRoCfTQ+ol0SpvfqSUOk=",
-        "path": "/home/dennis/nixos/nvim/",
+        "lastModified": 1752769697,
+        "narHash": "sha256-05g6FFFVLy0+sCFw+r+lS++t4+FIY3ODsQnr03sKcaY=",
+        "path": "/home/dennis/nixos/nvim-nix/",
         "type": "path"
       },
       "original": {
-        "path": "/home/dennis/nixos/nvim/",
+        "path": "/home/dennis/nixos/nvim-nix/",
         "type": "path"
       }
     },
