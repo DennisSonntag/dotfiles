@@ -72,7 +72,7 @@
               kickstart-nix-nvim.overlays.default
             ];
             environment.systemPackages = with pkgs; [
-            #  nvim-pkg
+              nvim-pkg
             ];
           })
         ];
