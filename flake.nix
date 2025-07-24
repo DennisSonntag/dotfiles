@@ -65,7 +65,7 @@
         modules = [
           ./configuration.nix
           stylix.nixosModules.stylix
-          {
+          ({
             config,
             pkgs,
             ...
