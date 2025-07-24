@@ -28,12 +28,25 @@ with final.pkgs.lib; let
   #   ...
   # }
   all-plugins = with pkgs.vimPlugins; [
-blink-cmp
+# blink-cmp
+
+    luasnip # snippets | https://github.com/l3mon4d3/luasnip/
+    # nvim-cmp (autocompletion) and extensions
+    nvim-cmp # https://github.com/hrsh7th/nvim-cmp
+    cmp_luasnip # snippets autocompletion extension for nvim-cmp | https://github.com/saadparwaiz1/cmp_luasnip/
+    lspkind-nvim # vscode-like LSP pictograms | https://github.com/onsails/lspkind.nvim/
+    cmp-nvim-lsp # LSP as completion source | https://github.com/hrsh7th/cmp-nvim-lsp/
+    cmp-nvim-lsp-signature-help # https://github.com/hrsh7th/cmp-nvim-lsp-signature-help/
+    cmp-buffer # current buffer as completion source | https://github.com/hrsh7th/cmp-buffer/
+    cmp-path # file paths as completion source | https://github.com/hrsh7th/cmp-path/
+    cmp-nvim-lua # neovim lua API as completion source | https://github.com/hrsh7th/cmp-nvim-lua/
+    cmp-cmdline # cmp command line suggestions
+    cmp-cmdline-history # cmp command line history suggestions
 
 lsp_signature-nvim
 hover-nvim
 harpoon
-vim-sleuth
+# vim-sleuth
 lazy-nvim
 gitsigns-nvim
 telescope-nvim
@@ -49,12 +62,12 @@ nvim-ufo
 promise-async
 vim-fugitive
 neogit
-lazygit-nvim
+# lazygit-nvim
 vim-matchup
 modicator-nvim
 nvim-colorizer-lua
 oil-nvim
-eyeliner-nvim
+# eyeliner-nvim
 lualine-nvim
 nvim-ts-context-commentstring
 trouble-nvim
@@ -67,18 +80,18 @@ todo-comments-nvim
 mini-nvim
 nvim-treesitter.withAllGrammars
 
-firenvim
+# firenvim
 
-nvim-dap
-nvim-dap-ui
+# nvim-dap
+# nvim-dap-ui
 indent-blankline-nvim
-nvim-dap-go
+# nvim-dap-go
 nvim-lint
 nvim-autopairs
 nui-nvim
 nvim-web-devicons
 plenary-nvim
-nvim-nio
+# nvim-nio
     # bleeding-edge plugins from flake inputs
     # (mkNvimPlugin inputs.wf-nvim "wf.nvim") # (example) keymap hints | https://github.com/Cassin01/wf.nvim
     # ^ bleeding-edge plugins from flake inputs

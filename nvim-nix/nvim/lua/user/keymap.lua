@@ -69,3 +69,9 @@ keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 keymap("n", "<leader>;", "<cmd>GotoPos<CR>")
 
 keymap({ "i", "s" }, "<Tab>", "<Tab>")
+
+
+vim.keymap.set('n', '<C-h>', function() require('smart-splits').move_cursor_left()end)
+vim.keymap.set('n', '<C-j>', function() require('smart-splits').move_cursor_down()end)
+vim.keymap.set('n', '<C-k>', function() require('smart-splits').move_cursor_up()end)
+vim.keymap.set('n', '<C-l>', function() require('smart-splits').move_cursor_right()end)

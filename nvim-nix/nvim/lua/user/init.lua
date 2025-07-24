@@ -1,5 +1,5 @@
-require 'config.autocmd'
-require 'config.options'
-require 'config.keymap'
-require 'config.icons'
-require 'config.signs'
+require("user.autocmd")
+require("user.options")
+require("user.keymap")
+require("user.icons")
+require("user.signs")

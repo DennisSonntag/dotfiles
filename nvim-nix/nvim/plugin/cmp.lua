@@ -1,63 +1,158 @@
-vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
-local cmp = require("cmp")
-local defaults = require("cmp.config.default")()
-local auto_select = true
+local cmp = require('cmp')
+local lspkind = require('lspkind')
+local luasnip = require('luasnip')
 
-require("hrsh7th/nvim-cmp").setup({
-  auto_brackets = {},       -- configure any filetype to auto add brackets
+vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
+
+local function has_words_before()
+  local unpack_ = unpack or table.unpack
+  local line, col = unpack_(vim.api.nvim_win_get_cursor(0))
+  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match('%s') == nil
+end
+
+---@param source string|table
+local function complete_with_source(source)
+  if type(source) == 'string' then
+    cmp.complete { config = { sources = { { name = source } } } }
+  elseif type(source) == 'table' then
+    cmp.complete { config = { sources = { source } } }
+  end
+end
+
+cmp.setup {
   completion = {
-    completeopt = "menu,menuone,noinsert" .. (auto_select and "" or ",noselect"),
+    completeopt = 'menu,menuone,noinsert',
+    -- autocomplete = false,
   },
-  preselect = auto_select and cmp.PreselectMode.Item or cmp.PreselectMode.None,
-  mapping = cmp.mapping.preset.insert({
-    ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-    ["<C-f>"] = cmp.mapping.scroll_docs(4),
-    ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-    ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
-    ["<C-Space>"] = cmp.mapping.complete(),
-    ["<C-CR>"] = function(fallback)
-      cmp.abort()
-      fallback()
-    end,
-  }),
-  sources = cmp.config.sources({
-    { name = "lazydev" },
-    { name = "nvim_lsp" },
-    { name = "path" },
-  }, {
-    { name = "buffer" },
-  }),
   formatting = {
-    format = function(entry, item)
-      -- local icons = LazyVim.config.icons.kinds
-      -- if icons[item.kind] then
-      --   item.kind = icons[item.kind] .. item.kind
-      -- end
+    format = lspkind.cmp_format {
+      mode = 'symbol_text',
+      with_text = true,
+      maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+      ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
 
-      local widths = {
-        abbr = vim.g.cmp_widths and vim.g.cmp_widths.abbr or 40,
-        menu = vim.g.cmp_widths and vim.g.cmp_widths.menu or 30,
-      }
-
-      for key, width in pairs(widths) do
-        if item[key] and vim.fn.strdisplaywidth(item[key]) > width then
-          item[key] = vim.fn.strcharpart(item[key], 0, width - 1) .. "…"
-        end
-      end
-
-      return item
+      menu = {
+        buffer = '[BUF]',
+        nvim_lsp = '[LSP]',
+        nvim_lsp_signature_help = '[LSP]',
+        nvim_lsp_document_symbol = '[LSP]',
+        nvim_lua = '[API]',
+        path = '[PATH]',
+        luasnip = '[SNIP]',
+      },
+    },
+  },
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
     end,
   },
-  experimental = {
-    -- only show ghost text when we show ai completions
-    ghost_text = vim.g.ai_cmp and {
-      hl_group = "CmpGhostText",
-    } or false,
+  mapping = {
+    ['<C-b>'] = cmp.mapping(function(_)
+      if cmp.visible() then
+        cmp.scroll_docs(-4)
+      else
+        complete_with_source('buffer')
+      end
+    end, { 'i', 'c', 's' }),
+    ['<C-f>'] = cmp.mapping(function(_)
+      if cmp.visible() then
+        cmp.scroll_docs(4)
+      else
+        complete_with_source('path')
+      end
+    end, { 'i', 'c', 's' }),
+    ['<C-n>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      -- expand_or_jumpable(): Jump outside the snippet region
+      -- expand_or_locally_jumpable(): Only jump inside the snippet region
+      elseif luasnip.expand_or_locally_jumpable() then
+        luasnip.expand_or_jump()
+      elseif has_words_before() then
+        cmp.complete()
+      else
+        fallback()
+      end
+    end, { 'i', 'c', 's' }),
+    ['<C-p>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { 'i', 'c', 's' }),
+    -- toggle completion
+    ['<C-e>'] = cmp.mapping(function(_)
+      if cmp.visible() then
+        cmp.close()
+      else
+        cmp.complete()
+      end
+    end, { 'i', 'c', 's' }),
+    ['<C-y>'] = cmp.mapping.confirm {
+      select = true,
+    },
   },
-  sorting = defaults.sorting,
+  sources = cmp.config.sources {
+    -- The insertion order influences the priority of the sources
+    { name = 'nvim_lsp', keyword_length = 3 },
+    { name = 'nvim_lsp_signature_help', keyword_length = 3 },
+    { name = 'buffer' },
+    { name = 'path' },
+  },
+  enabled = function()
+    return vim.bo[0].buftype ~= 'prompt'
+  end,
+  experimental = {
+    native_menu = false,
+    ghost_text = true,
+  },
+}
+
+cmp.setup.filetype('lua', {
+  sources = cmp.config.sources {
+    { name = 'nvim_lua' },
+    { name = 'nvim_lsp', keyword_length = 3 },
+    { name = 'path' },
+  },
 })
 
-require("hrsh7th/nvim-cmp").setup()
-require("garymjr/nvim-snippets").setup({
-  friendly_snippets = true,
+-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline({ '/', '?' }, {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = {
+    { name = 'nvim_lsp_document_symbol', keyword_length = 3 },
+    { name = 'buffer' },
+    { name = 'cmdline_history' },
+  },
+  view = {
+    entries = { name = 'wildmenu', separator = '|' },
+  },
 })
+
+-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = cmp.config.sources {
+    { name = 'cmdline' },
+    { name = 'cmdline_history' },
+    { name = 'path' },
+  },
+})
+
+vim.keymap.set({ 'i', 'c', 's' }, '<C-n>', cmp.complete, { noremap = false, desc = '[cmp] complete' })
+vim.keymap.set({ 'i', 'c', 's' }, '<C-f>', function()
+  complete_with_source('path')
+end, { noremap = false, desc = '[cmp] path' })
+vim.keymap.set({ 'i', 'c', 's' }, '<C-o>', function()
+  complete_with_source('nvim_lsp')
+end, { noremap = false, desc = '[cmp] lsp' })
+vim.keymap.set({ 'c' }, '<C-h>', function()
+  complete_with_source('cmdline_history')
+end, { noremap = false, desc = '[cmp] cmdline history' })
+vim.keymap.set({ 'c' }, '<C-c>', function()
+  complete_with_source('cmdline')
+end, { noremap = false, desc = '[cmp] cmdline' })

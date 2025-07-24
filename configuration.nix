@@ -311,7 +311,7 @@ in {
 
     brightness-py
 
-    (pkgs.writeShellScriptBin "v" "nvim $@")
+    # (pkgs.writeShellScriptBin "v" "nvim $@")
 
     (pkgs.writeShellScriptBin "controls.sh" (builtins.readFile ./nonnix/waybar/player-controls.sh))
 
@@ -383,7 +383,7 @@ in {
     libreoffice-qt6-fresh
 
 
-    (pkgs.writeShellScriptBin "v" "nvim $@")
+    # (pkgs.writeShellScriptBin "v" "nvim $@")
 
 
     # sonusmix

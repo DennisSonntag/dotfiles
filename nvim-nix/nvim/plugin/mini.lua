@@ -1,11 +1,8 @@
-return {
-  'echasnovski/mini.nvim',
-  event = { 'BufReadPre', 'BufNewFile' },
-  dependencies = {
-    'JoosepAlviste/nvim-ts-context-commentstring',
-    event = { 'BufReadPre', 'BufNewFile' },
-  },
-  config = function()
+-- local status, tokyonight = pcall(require, 'tokyonight')
+-- if not status then
+--   return
+-- end
+--
     require('mini.comment').setup {
       options = {
         custom_commentstring = function()
@@ -52,5 +49,14 @@ return {
         update_n_lines = 'msn', -- Update `n_lines`
       },
     }
-  end,
-}
+
+-- return {
+--   'echasnovski/mini.nvim',
+--   event = { 'BufReadPre', 'BufNewFile' },
+--   dependencies = {
+--     'JoosepAlviste/nvim-ts-context-commentstring',
+--     event = { 'BufReadPre', 'BufNewFile' },
+--   },
+--   config = function()
+--   end,
+-- }
