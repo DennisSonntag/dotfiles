@@ -325,7 +325,8 @@ in {
     
     settings = {
       plugin = {
-       "split-monitor-workspaces" = {
+       # "split-monitor-workspaces" = {
+       "hyprsplit" = {
          count = 9;
        };
       };
@@ -374,25 +375,45 @@ in {
       ];
 
       bind = [
-        "SUPER, 1, execr, hyprctl dispatch split-workspace 1"
-        "SUPER, 2, execr, hyprctl dispatch split-workspace 2"
-        "SUPER, 3, execr, hyprctl dispatch split-workspace 3"
-        "SUPER, 4, execr, hyprctl dispatch split-workspace 4"
-        "SUPER, 5, execr, hyprctl dispatch split-workspace 5"
-        "SUPER, 6, execr, hyprctl dispatch split-workspace 6"
-        "SUPER, 7, execr, hyprctl dispatch split-workspace 7"
-        "SUPER, 8, execr, hyprctl dispatch split-workspace 8"
-        "SUPER, 9, execr, hyprctl dispatch split-workspace 9"
+        # "SUPER, 1, execr, hyprctl dispatch split-workspace 1"
+        # "SUPER, 2, execr, hyprctl dispatch split-workspace 2"
+        # "SUPER, 3, execr, hyprctl dispatch split-workspace 3"
+        # "SUPER, 4, execr, hyprctl dispatch split-workspace 4"
+        # "SUPER, 5, execr, hyprctl dispatch split-workspace 5"
+        # "SUPER, 6, execr, hyprctl dispatch split-workspace 6"
+        # "SUPER, 7, execr, hyprctl dispatch split-workspace 7"
+        # "SUPER, 8, execr, hyprctl dispatch split-workspace 8"
+        # "SUPER, 9, execr, hyprctl dispatch split-workspace 9"
+        #
+        # "SUPER SHIFT, 1, execr, hyprctl dispatch split-movetoworkspacesilent 1"
+        # "SUPER SHIFT, 2, execr, hyprctl dispatch split-movetoworkspacesilent 2"
+        # "SUPER SHIFT, 3, execr, hyprctl dispatch split-movetoworkspacesilent 3"
+        # "SUPER SHIFT, 4, execr, hyprctl dispatch split-movetoworkspacesilent 4"
+        # "SUPER SHIFT, 5, execr, hyprctl dispatch split-movetoworkspacesilent 5"
+        # "SUPER SHIFT, 6, execr, hyprctl dispatch split-movetoworkspacesilent 6"
+        # "SUPER SHIFT, 7, execr, hyprctl dispatch split-movetoworkspacesilent 7"
+        # "SUPER SHIFT, 8, execr, hyprctl dispatch split-movetoworkspacesilent 8"
+        # "SUPER SHIFT, 9, execr, hyprctl dispatch split-movetoworkspacesilent 9"
 
-        "SUPER SHIFT, 1, execr, hyprctl dispatch split-movetoworkspacesilent 1"
-        "SUPER SHIFT, 2, execr, hyprctl dispatch split-movetoworkspacesilent 2"
-        "SUPER SHIFT, 3, execr, hyprctl dispatch split-movetoworkspacesilent 3"
-        "SUPER SHIFT, 4, execr, hyprctl dispatch split-movetoworkspacesilent 4"
-        "SUPER SHIFT, 5, execr, hyprctl dispatch split-movetoworkspacesilent 5"
-        "SUPER SHIFT, 6, execr, hyprctl dispatch split-movetoworkspacesilent 6"
-        "SUPER SHIFT, 7, execr, hyprctl dispatch split-movetoworkspacesilent 7"
-        "SUPER SHIFT, 8, execr, hyprctl dispatch split-movetoworkspacesilent 8"
-        "SUPER SHIFT, 9, execr, hyprctl dispatch split-movetoworkspacesilent 9"
+        "SUPER, 1, split:workspace, 1"
+        "SUPER, 2, split:workspace, 2"
+        "SUPER, 3, split:workspace, 3"
+        "SUPER, 4, split:workspace, 4"
+        "SUPER, 5, split:workspace, 5"
+        "SUPER, 6, split:workspace, 6"
+        "SUPER, 7, split:workspace, 7"
+        "SUPER, 8, split:workspace, 8"
+        "SUPER, 9, split:workspace, 9"
+
+        "SUPER SHIFT, 1, split:movetoworkspacesilent, 1"
+        "SUPER SHIFT, 2, split:movetoworkspacesilent, 2"
+        "SUPER SHIFT, 3, split:movetoworkspacesilent, 3"
+        "SUPER SHIFT, 4, split:movetoworkspacesilent, 4"
+        "SUPER SHIFT, 5, split:movetoworkspacesilent, 5"
+        "SUPER SHIFT, 6, split:movetoworkspacesilent, 6"
+        "SUPER SHIFT, 7, split:movetoworkspacesilent, 7"
+        "SUPER SHIFT, 8, split:movetoworkspacesilent, 8"
+        "SUPER SHIFT, 9, split:movetoworkspacesilent, 9"
 
         "SUPERSHIFT, 0, movetoworkspace, special:misc"
         "SUPER, 0, togglespecialworkspace, misc"
@@ -478,8 +499,8 @@ in {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
         mouse_move_enables_dpms = true;
-        enable_swallow = true;
-        swallow_regex = "^(kitty)$";
+        enable_swallow = false;
+        # swallow_regex = "^(kitty)$";
       };
 
       decoration = {
