@@ -22,7 +22,7 @@
 
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
 
-    # kickstart-nix-nvim.url = "path:/home/dennis/nixos/nvim-nix/";
+    kickstart-nix-nvim.url = "path:/home/dennis/nixos/nvim-nix/";
 
 
     # blink-cmp = {
@@ -46,7 +46,7 @@
     nixpkgs,
     home-manager,
     split-monitor-workspaces,
-    # kickstart-nix-nvim,
+    kickstart-nix-nvim,
     stylix,
     ...
   } @ inputs: let
@@ -65,18 +65,18 @@
         modules = [
           ./configuration.nix
           stylix.nixosModules.stylix
-          # ({
-          #   config,
-          #   pkgs,
-          #   ...
-          # }: {
-          #   nixpkgs.overlays = [
-          #     kickstart-nix-nvim.overlays.default
-          #   ];
-          #   environment.systemPackages = with pkgs; [
-          #     nvim-pkg
-          #   ];
-          # })
+          {
+            config,
+            pkgs,
+            ...
+          }: {
+            nixpkgs.overlays = [
+              kickstart-nix-nvim.overlays.default
+            ];
+            environment.systemPackages = with pkgs; [
+              nvim-pkg
+            ];
+          })
         ];
       };
     };
