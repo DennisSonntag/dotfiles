@@ -320,7 +320,8 @@ in {
     enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
     plugins = [
-      split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
+      # split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
+      split-monitor-workspaces.packages.${pkgs.system}.hyprsplit
     ];
     
     settings = {
